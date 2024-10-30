@@ -1,4 +1,6 @@
 // components/PricingCards.tsx
+import Image from 'next/image';
+import backgroundImage from "../../../public/assets/pricingPage/backgroundImage.jpeg"
 
 import React, { useState } from 'react';
 
@@ -47,10 +49,10 @@ const PricingCards: React.FC = () => {
   return (
     <div className="relative bg-gray-900 text-white h-auto md:h-[420px] px-4">
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          src="https://s3-alpha-sig.figma.com/img/a9cc/6929/3db1f6cddf03872eab454aad5671343e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V1-Qh-2cTi2DVPnP699M0Fo~0h2a4NoLTQ~ehngrhalUMU5VZx0qPThfFHzL1jAEBVYi9ypCydZt--uF7CXm-IkIEg5Q3oKNI1jGXolQFWPLOyVrckswWw8RMkEGGvhJagpJ-cJ934cTv2S9w~6GletQ~fN6YczEmJb3RWs~fq2QJvVir4QHIDRmRHaPR-pSfxQiTOTMkHbjeJBt2b-hRkAxahuAq5hTDTT3Y1X5E6uZI8HZutUyzZLQcKifVSqQ4nQPDnf9OvO0wNU-Es8gqKr3mkWNhyMxm18Chmt8bObkPdOKjMrZDmJDr48Fd1kA7ZYC823vS1h-ukBGy6X~WQ__"
+        <Image
+          src={backgroundImage}
           alt="Background"
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover "
         />
       </div>
       <div className="sm:px-6 py-24 md:py-32 relative max-w-[1440px] mx-auto container">
@@ -81,7 +83,7 @@ const PricingCards: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center space-y-3 md:gap-0">
           {plans.map((plan, index) => (
             <div
               key={index}

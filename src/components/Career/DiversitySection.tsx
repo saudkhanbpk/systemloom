@@ -1,3 +1,5 @@
+
+
 import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
 import { Instagram } from 'lucide-react';
@@ -33,8 +35,8 @@ const DiversitySection: FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="col-span-1 sm:col-span-2">
             <div className="rounded-2xl overflow-hidden h-64">
               <Image
                 src={images[0].src}
@@ -43,7 +45,7 @@ const DiversitySection: FC = () => {
               />
             </div>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <div className="rounded-2xl overflow-hidden h-64">
               <Image
                 src={images[1].src}
@@ -53,12 +55,13 @@ const DiversitySection: FC = () => {
             </div>
           </div>
 
-          <div className="bg-[#651FFF] rounded-2xl p-8 flex flex-col items-center justify-center text-white">
+          <div className="bg-[#651FFF] rounded-2xl p-8 flex flex-col items-center justify-center text-white col-span-1 sm:col-span-2 md:col-span-1">
             <Instagram className="w-12 h-12 mb-4" />
             <p className="text-lg font-medium mb-2">Follow us on</p>
             <p className="text-sm opacity-90">#IPPSIbrogueDeupload</p>
           </div>
-          <div>
+
+          <div className="col-span-1">
             <div className="rounded-2xl overflow-hidden h-64">
               <Image
                 src={images[2].src}
@@ -67,7 +70,7 @@ const DiversitySection: FC = () => {
               />
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-1 sm:col-span-2">
             <div className="rounded-2xl overflow-hidden h-64">
               <Image
                 src={images[3].src}
@@ -76,7 +79,7 @@ const DiversitySection: FC = () => {
               />
             </div>
           </div>
-          <div>
+          <div className="col-span-1">
             <div className="rounded-2xl overflow-hidden h-64">
               <Image
                 src={images[4].src}
@@ -92,3 +95,5 @@ const DiversitySection: FC = () => {
 };
 
 export default DiversitySection;
+
+

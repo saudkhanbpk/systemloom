@@ -16,12 +16,14 @@ const ProfileCard: React.FC<TeamProfile> = ({
   linkedInUrl,
 }) => {
   return (
-    <div className="relative group w-full max-w-xs mx-auto overflow-hidden">
+    <div className="relative group max-w-xs mx-auto overflow-hidden ">
       <div className="relative group">
-        <img
+        <Image
           src={imageUrl}
           alt={name}
-          className="w-[278px] h-[278px] object-cover transition-transform duration-300"
+          width={278} 
+          height={278} 
+          className="object-cover transition-transform duration-300"
         />
         <div className="absolute inset-0 flex justify-center items-center bg-[#F4F6FCD4] bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <a
@@ -34,7 +36,7 @@ const ProfileCard: React.FC<TeamProfile> = ({
           </a>
         </div>
       </div>
-      <div className="mt-4 p-4">
+      <div className="mt-2 p-4 flex flex-col items-center">
         <h2 className="text-lg font-semibold text-gray-900">{name}</h2>
         <p className="text-gray-500">{position}</p>
       </div>

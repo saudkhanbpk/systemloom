@@ -1,19 +1,25 @@
 import React from 'react';
+import Image from 'next/image';
+import portfolio1 from "../../../public/assets/portfolioImages/portfolio1.png"
+import portfolio2 from "../../../public/assets/portfolioImages/portfolio2.png"
+import portfolio3 from "../../../public/assets/portfolioImages/portfolio3.png"
+
+
 
 const StatsDisplay: React.FC = () => {
   return (
     <div>
 
-          <div className="bg-[#F1EEE4]">
-            <div className="max-w-4xl mx-auto grid grid-cols-12 grid-rows-6 gap-2 aspect-[4/3]">
+          <div className="">
+            <div className="max-w-4xl mx-auto grid grid-cols-12 grid-rows-6 gap-2 aspect-[4/3] bg-[#F1EEE4] p-4 border rounded-md my-10">
               {/* Laptop Image */}
               <div className="col-span-7 row-span-4 bg-gray-200 rounded-3xl overflow-hidden">
-                <img src="/api/placeholder/500/300" alt="Laptop" className="w-full h-full object-cover" />
+                <Image src={portfolio1} alt="Laptop" className="w-full h-full object-cover" />
               </div>
 
               {/* Phone Image */}
               <div className="col-span-3 row-span-3 bg-gray-200 rounded-3xl overflow-hidden">
-                <img src="/api/placeholder/200/300" alt="Phone" className="w-full h-full object-cover object-left" />
+                <Image src={portfolio2} alt="Phone" className="w-full h-full object-cover object-left" />
               </div>
 
               {/* Client Satisfaction */}
@@ -30,7 +36,7 @@ const StatsDisplay: React.FC = () => {
 
               {/* Desktop Setup Image */}
               <div className="col-span-7 row-span-3 bg-gray-200 rounded-3xl overflow-hidden">
-                <img src="/api/placeholder/500/200" alt="Desktop Setup" className="w-full h-full object-cover" />
+                <Image src={portfolio3} alt="Desktop Setup" className="w-full h-[200px] object-cover" />
               </div>
 
               {/* Employee Satisfaction */}

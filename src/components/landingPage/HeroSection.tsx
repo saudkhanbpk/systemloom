@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import backgroundImage from "../../../public/assets/landingPage/backgroundImage.png"
 
 function HeroSection() {
-  const imageUrl = "https://s3-alpha-sig.figma.com/img/930f/4355/0bcba6ef8b56768f41a9178e764cc5ea?...";
+  const imageUrl = backgroundImage;
 
   return (
     <div className="relative bg-gray-900 text-white pt-5">
@@ -11,7 +12,7 @@ function HeroSection() {
             src={imageUrl}
             alt="Background"
             layout="fill" 
-            className="object-cover"
+            className="object-cover opacity-50"
           />
         ) : null} 
       </div>

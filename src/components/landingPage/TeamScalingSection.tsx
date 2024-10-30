@@ -1,11 +1,14 @@
 // import React from 'react';
 import Image from 'next/image';
+import team1 from "../../../public/assets/landingPage/Rectangle 17.png"
+import person1 from "../../../public/assets/landingPage/Ellipse 185.png"
+import team2 from "../../../public/assets/landingPage/Rectangle 18.png"
 
 
 const TeamScalingSection = () => {
   return (
-    <section className="py-16 md:p-10">
-      <div className="mx-auto px-4">
+    <section className="py-16 md:p-16 ">
+      <div className="mx-10 ">
         <div className="flex flex-col lg:flex-row mb-10">
           <div className="lg:w-1/2 lg:pr-12 mb-8 leading-[44px] mt-5 lg:mb-0">
             <h2 className="text-[28px] font-semibold text-purple-600 mb-4">
@@ -31,7 +34,7 @@ const TeamScalingSection = () => {
 
             <div className="flex items-center">
               <Image
-                src="https://s3-alpha-sig.figma.com/img/b9ad/da40/9ebf32654a8f9b76dff8ea4c280bafca?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eThg5ZMSA1TDFTS5JkGSW17Oevqili4M0LOgZ1iVb1KnDcCNktabhtjDUl44HvWKpTJeHC-1wjsNELdZmRCDNP2a9uZe04nQiWXv2I0nVJ3xNgAJlewUGTON0phqt4K1sDpNKrrlwOQEHwkyUMJEw-9eQ~Nind-Xg8S92mZH7VOpNTcUqLReB5~RoYtT5YK0JVU-llZZ4ZVqyfGWYebNdre6XUvgaTBOaOh2iqYLXY9mqXJXJEy3yXs9k3NmBrd2sqviIOHmyAyWNPi34JXi3-nVw3d4VojxxN0vs~Figf9tXiWf1xDPrq8ZicSdkUfcVtlg4YhJSIBXC02umgwHHw__"
+                src={person1}
                 alt="Jeewa markram"
                 width={700}
               height={450}
@@ -43,26 +46,26 @@ const TeamScalingSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full max-w-[700px] h-auto">
+          <div className="w-full max-w-[600px]  h-[350]">
             <Image
-              src="https://s3-alpha-sig.figma.com/img/a01b/38ad/f465e575afbd6e169245a71bdb4fb796?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kq27krIrUgv6cQhsaiWlhOEIchN3FyWNP0E3V6I3BzH1YlDyk~MTjRJCXZM7aMoLbRDjzXDwHNAxwHeaNH9SIhGI5TW1atldD1~7pffb0PtPFxd2HcMVa-zgyHXHIri8adEm7U36uij0XkG3h6Ato-RKwE-hD~ad-xPvKwlN--fhBKaB9oxBOpUREmGZxfQAKn27eBPZLG3CGk7LF-anMZmT2Dme8cYnXQM0FjVvGAf2ER85aVpfWd6yt4DDE8YPO-yKs8~Z~XLc78DEJvEmoBNjmqrBnKsxW~Zf6rkk6MvU6TN~syvSXvz7Dcuyn9f6Phm-OnEwBS1CHsm0Pts~tw__"
+              src={team1}
               alt="Team meeting"
               width={700}
               height={450}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-[350px] rounded-lg shadow-lg object-cover"
             />
           </div>
 
         </div>
 
         <div className="flex flex-col gap-10 lg:flex-row mb-10">
-          <div className="w-full max-w-[700px] h-auto">
+          <div className="w-full max-w-[600px] h-[350]">
             <Image
-              src="https://s3-alpha-sig.figma.com/img/a01b/38ad/f465e575afbd6e169245a71bdb4fb796?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kq27krIrUgv6cQhsaiWlhOEIchN3FyWNP0E3V6I3BzH1YlDyk~MTjRJCXZM7aMoLbRDjzXDwHNAxwHeaNH9SIhGI5TW1atldD1~7pffb0PtPFxd2HcMVa-zgyHXHIri8adEm7U36uij0XkG3h6Ato-RKwE-hD~ad-xPvKwlN--fhBKaB9oxBOpUREmGZxfQAKn27eBPZLG3CGk7LF-anMZmT2Dme8cYnXQM0FjVvGAf2ER85aVpfWd6yt4DDE8YPO-yKs8~Z~XLc78DEJvEmoBNjmqrBnKsxW~Zf6rkk6MvU6TN~syvSXvz7Dcuyn9f6Phm-OnEwBS1CHsm0Pts~tw__"
+              src={team2}
               alt="Team meeting"
               width={700}
               height={450}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-[350px] rounded-lg shadow-lg object-cover"
             />
           </div>
 
@@ -91,7 +94,7 @@ const TeamScalingSection = () => {
 
             <div className="flex items-center">
               <Image
-                src="https://s3-alpha-sig.figma.com/img/b9ad/da40/9ebf32654a8f9b76dff8ea4c280bafca?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eThg5ZMSA1TDFTS5JkGSW17Oevqili4M0LOgZ1iVb1KnDcCNktabhtjDUl44HvWKpTJeHC-1wjsNELdZmRCDNP2a9uZe04nQiWXv2I0nVJ3xNgAJlewUGTON0phqt4K1sDpNKrrlwOQEHwkyUMJEw-9eQ~Nind-Xg8S92mZH7VOpNTcUqLReB5~RoYtT5YK0JVU-llZZ4ZVqyfGWYebNdre6XUvgaTBOaOh2iqYLXY9mqXJXJEy3yXs9k3NmBrd2sqviIOHmyAyWNPi34JXi3-nVw3d4VojxxN0vs~Figf9tXiWf1xDPrq8ZicSdkUfcVtlg4YhJSIBXC02umgwHHw__"
+                src={person1}
                 alt="Jeewa markram"
                 width={700}
               height={450}
@@ -129,7 +132,7 @@ const TeamScalingSection = () => {
 
             <div className="flex items-center">
               <Image
-                src="https://s3-alpha-sig.figma.com/img/b9ad/da40/9ebf32654a8f9b76dff8ea4c280bafca?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eThg5ZMSA1TDFTS5JkGSW17Oevqili4M0LOgZ1iVb1KnDcCNktabhtjDUl44HvWKpTJeHC-1wjsNELdZmRCDNP2a9uZe04nQiWXv2I0nVJ3xNgAJlewUGTON0phqt4K1sDpNKrrlwOQEHwkyUMJEw-9eQ~Nind-Xg8S92mZH7VOpNTcUqLReB5~RoYtT5YK0JVU-llZZ4ZVqyfGWYebNdre6XUvgaTBOaOh2iqYLXY9mqXJXJEy3yXs9k3NmBrd2sqviIOHmyAyWNPi34JXi3-nVw3d4VojxxN0vs~Figf9tXiWf1xDPrq8ZicSdkUfcVtlg4YhJSIBXC02umgwHHw__"
+                src={person1}
                 alt="Jeewa markram"
                 width={700}
               height={450}
@@ -141,13 +144,13 @@ const TeamScalingSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full max-w-[700px] h-auto">
+          <div className="w-full max-w-[600px] h-{350px}">
             <Image
-              src="https://s3-alpha-sig.figma.com/img/a01b/38ad/f465e575afbd6e169245a71bdb4fb796?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kq27krIrUgv6cQhsaiWlhOEIchN3FyWNP0E3V6I3BzH1YlDyk~MTjRJCXZM7aMoLbRDjzXDwHNAxwHeaNH9SIhGI5TW1atldD1~7pffb0PtPFxd2HcMVa-zgyHXHIri8adEm7U36uij0XkG3h6Ato-RKwE-hD~ad-xPvKwlN--fhBKaB9oxBOpUREmGZxfQAKn27eBPZLG3CGk7LF-anMZmT2Dme8cYnXQM0FjVvGAf2ER85aVpfWd6yt4DDE8YPO-yKs8~Z~XLc78DEJvEmoBNjmqrBnKsxW~Zf6rkk6MvU6TN~syvSXvz7Dcuyn9f6Phm-OnEwBS1CHsm0Pts~tw__"
+              src={team1}
               alt="Team meeting"
               width={700}
               height={450}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-[350px] rounded-lg shadow-lg object-cover"
             />
           </div>
 

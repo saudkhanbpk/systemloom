@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../../../public/assets/icons/Logo.png'; 
-// import adminIcon from "../../../public/assets/icons/🦆 icon _person_.png";
+import personIcon from "../../../public/assets/landingPage/Vector.png"
 
 
 const Header = () => {
@@ -48,13 +48,14 @@ const Header = () => {
           </div>
           <div className="hidden md:block">
             <Image
-              src=""
+              src={personIcon}
               alt="person_image"
               width={32.11}
               height={32.11}
               className="w-[32.11px] h-[32.11px]"
             />
           </div>
+          
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -67,13 +68,14 @@ const Header = () => {
                 <Menu className="block h-6 w-6" />
               )}
             </button>
+            
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#9A00FF] z-20 rounded-md">
+        <div className="md:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <Link

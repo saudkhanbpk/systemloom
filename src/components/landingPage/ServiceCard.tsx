@@ -9,7 +9,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  icon: Icon,
+  icon,
   title,
   description,
   style,
@@ -24,7 +24,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       }}
     >
       <div className="mb-4  p-3 h-[58px] w-full bg-purple-100 rounded-full">
-        <img src={Icon} alt="image" className="w-[34px] h-[34px]" />
+        <img src={icon} alt="image" className="w-[34px] h-[34px]" />
       </div>
       <div className="">
         <h3 className="text-xl font-semibold mb-2 text-[#9A00FF]">{title}</h3>

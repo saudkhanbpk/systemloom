@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import client1 from "../../../public/assets/landingPage/Ellipse 6.png"
 
 interface TestimonialCardProps {
   name: string;
@@ -18,7 +19,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   <div className="p-6 text-center">
     <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
       <Image
-        src={image}
+        src={client1}
         alt={name}
         width={80}
         height={80}

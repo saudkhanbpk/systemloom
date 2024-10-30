@@ -7,8 +7,8 @@ import image3 from '../../../public/assets/RecentWork/unsplash_m_HRfLhgABo.png';
 
 const RecentWorks: React.FC = () => {
   return (
-    <div className="bg-gray-50 py-16 px-4">
-      <div className="md:w-[92%] mx-auto">
+    <div className="bg-gray-50 py-16 px-4 ml-2 sm:ml-0">
+      <div className="md:w-[92%] mx-auto ">
         {/* Heading Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent</h2>

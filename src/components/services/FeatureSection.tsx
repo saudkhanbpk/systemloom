@@ -13,18 +13,21 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 }) => {
   return (
     <div className="w-full max-w-6xl mx-auto p-4 relative">
-      <div className="flex flex-col md:flex-row md:items-center">
-        <div className="relative md:absolute -bottom-10 z-10 md:w-[400px] md:h-[400px] w-full h-auto mb-4">
+      <div className="flex flex-col-reverse md:flex-row md:items-center">
+        {/* Image Container */}
+        <div className="relative z-10 md:w-[400px] md:h-[400px] w-full h-auto mb-4">
           <Image
             src={image}
             alt="Feature section image"
-            className="object-cover"
+            className="object-cover rounded-lg"
             layout="fill"
             priority
           />
         </div>
-        <div className="bg-[#9A00FF] relative md:left-[150px] h-auto md:h-[400px] w-full md:w-[800px] flex items-center">
-          <div className="w-full md:w-[400px] mx-auto mt-4 md:mt-20 md:mr-20 p-5">
+
+        {/* Text Container */}
+        <div className="bg-[#9A00FF] relative md:w-[800px] flex items-center p-5">
+          <div className="w-full md:w-[400px] mx-auto mt-4 md:mt-20">
             <h2 className="font-inter font-bold text-[24px] md:text-[45.25px] leading-tight md:leading-[70.4px] text-[#FFFFFF]">
               {heading}
             </h2>

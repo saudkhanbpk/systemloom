@@ -15,20 +15,20 @@ const ServicesHeroSection: React.FC<ServicesSectionType> = ({
   image2,
 }) => {
   return (
-    <div className="bg-black min-h-screen">
-      <div className="max-w-7xl mx-auto py-20">
+    <div className="bg-black w-full h-auto"> {/* Added w-full here */}
+      <div className="max-w-7xl mx-auto py-20 px-4">
         <div className="flex flex-col md:flex-row justify-between mt-10">
           <div className="text-white">
-            <h1 className="font-medium text-[32px] md:text-[48px] md:mb-6 leading-tight md:mt-32 max-w-2xl">
+            <h1 className="font-medium text-3xl md:text-5xl md:mb-6 leading-tight md:mt-32 max-w-2xl">
               {title}
             </h1>
-            <p className="text-[#FFFFFF] text-[16px] md:text-[18px] leading-relaxed max-w-2xl">
+            <p className="text-white text-lg md:text-xl leading-relaxed max-w-2xl">
               {description}
             </p>
           </div>
 
           <div className="relative mt-10">
-            <div className="relative z-10 md:left-12 transform translate-y-12 translate-x-4">
+            <div className="relative z-10 transform translate-y-12 translate-x-4">
               <Image
                 src={image}
                 alt="Portfolio preview 1"
@@ -36,6 +36,7 @@ const ServicesHeroSection: React.FC<ServicesSectionType> = ({
                 layout="responsive"
                 width={400}
                 height={300}
+                objectFit="cover"
               />
             </div>
             {image2 && (
@@ -47,6 +48,7 @@ const ServicesHeroSection: React.FC<ServicesSectionType> = ({
                   layout="responsive"
                   width={400}
                   height={300}
+                  objectFit="cover"
                 />
               </div>
             )}

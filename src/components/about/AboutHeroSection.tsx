@@ -1,12 +1,14 @@
 import React from 'react';
+import Image from 'next/image';
+import backgroundImage from "../../../public/assets/aboutImages/backgroundImage.jpeg"
 
 const AboutHeroSection: React.FC = () => {
   return (
     <div className="relative bg-gray-900 text-white h-[500px] md:h-[700px]">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          src="https://s3-alpha-sig.figma.com/img/dfdf/9fbe/8441a58290c5621ca9225a40489eb022?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YBmw9DomjAZo83XqSGg5xY1Z5LBnetf67-5RCDunE3f41h~dG-BXPFFtg8qi8LY0bqdXsql38NsKoT2UOzSGw7xeI85jVgq2VtzNKj7Zq~uDm-zJlDQBrnRA01xc7uIHJl0ZMSnRGgXTDukzmKdfakYO2c73fHdcyocbIob4z0agDt-3W6xA6KO-WVlRHX9W7YvSU8kj9wE0EaIDIoVBV0N8JQZuahzJ~NDDZLcnmajpNb~lBFsW1DxTGEBX-QU0KnOW3kbgTdq2J3-X2iZPiDO59O~t9BBjyC3FiSzpqEjTzzYaZA8bx37S0PM5bMHq9fJa1r4vdbQ3W5cyIB8cbw__"
+        <Image
+          src={backgroundImage}
           alt="Background"
           className="w-full opacity-25"
         />

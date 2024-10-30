@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import ServiceCard from '../constant/ServiceCard';
+import Image from 'next/image';
+import backgroundImage from "../../../public/assets/aboutImages/servicesBgImage.jpeg"
+
 
 
 
@@ -16,64 +19,55 @@ const ServicesSec = () => {
       id: 1,
       title: "Web Design & Development",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/ca35/a5e7/56d645cde5236656271eec20763b5aec?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDgxDhW6HJEMLSdARYUu7zSBZroIiYLfTYTpJt4mv4MzLM2f-QSt6aMqO6C~JZx51lwkIsmdbvexNchwwwBmnDq82NtcmvCv7QnM~Bq-r4JwQHY3t2qCSpB59KinyNwzMmJ8vsCaaoLDJNFoxV4uic6GMW0xKAq3rycgFzwTKHVqzQeui0Zr36HLtgfQZSklESA7EKtH-F-eHZswp8TxFkqvbEWqefJwt61EKQGW4ms61PqauZQncXMKeFzIeA5GvcxsJtnZGrDKOG~irJbOGqW7O~jf~TPI06e7JUPVTaL8rn2HQ-iW56ThfZ9nznmWwLs0qR0LYMt5Wh12rdP3Kg__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 2,
       title: "Mobile App Development",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/a793/c3c4/11dc378b97732dc27557ac5763b938b0?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jgTWS50nTnCqjADj7~Xzab0U7CeG5UvfBTB2Zpv4rC8vx26b93vWQ8YUZsQFSUGqdcWhdWypvhDOvxAHFTA8yzNedDX1opJn12YcNcpLsmSOeqgaatPWPYxOC-F-BIOetOcFMBPnqn~Gui7Msmq~l0XIptgZvNVWXpVbLCRnn3x~Dd9MH9PeaMdjRBy9P4-RF3ifuR2zjbYB7YkAauFi2zivVebuM9JtMh6rTKrAaJJ-4qjXowZ3beqPaJrGErtpgFdRs3wdjexNZ539VACamMQTDK9WeTKfbJznYHSRGuDG1QtrEbIbwPZsLBztSX08p2vWNSTe62It9I0ZkGxJSQ__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 3,
       title: "Devops",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/e876/e353/3c53223e78aa079526a49dfeb2fb09d5?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OGwSHtRIF29CUCqCwxeujZlNrqYc1urTLz39JNMO2~f0MNXzcM~EgoACKy9lUswgOLoiKvxU2rGqaZm5WfA5ONmHo-lFZVy2WwXjeUytUUUgV6n3Y24QU6XfYLnlaEYWJNRjuTLLrNCS8MDBO9s5UwRYxmgYnvuIYmZ7e8VcBUjaIUt1w5J0PjSnafXtM2Y2jsXNNml7eOvcYwNtSYXdCuRjn5itsbud320fBzm8cfHoAEW0UvMj4EllnicR0CssGcD8ZiBYvB7ztDLhg9l7wdVBLkH11In4p47H77L0y-yUqbVst1ME8v1wvJYz4s7h4Omv3LvEwAag5qANU1kTwQ__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 4,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/ca35/a5e7/56d645cde5236656271eec20763b5aec?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDgxDhW6HJEMLSdARYUu7zSBZroIiYLfTYTpJt4mv4MzLM2f-QSt6aMqO6C~JZx51lwkIsmdbvexNchwwwBmnDq82NtcmvCv7QnM~Bq-r4JwQHY3t2qCSpB59KinyNwzMmJ8vsCaaoLDJNFoxV4uic6GMW0xKAq3rycgFzwTKHVqzQeui0Zr36HLtgfQZSklESA7EKtH-F-eHZswp8TxFkqvbEWqefJwt61EKQGW4ms61PqauZQncXMKeFzIeA5GvcxsJtnZGrDKOG~irJbOGqW7O~jf~TPI06e7JUPVTaL8rn2HQ-iW56ThfZ9nznmWwLs0qR0LYMt5Wh12rdP3Kg__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 5,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/ca35/a5e7/56d645cde5236656271eec20763b5aec?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDgxDhW6HJEMLSdARYUu7zSBZroIiYLfTYTpJt4mv4MzLM2f-QSt6aMqO6C~JZx51lwkIsmdbvexNchwwwBmnDq82NtcmvCv7QnM~Bq-r4JwQHY3t2qCSpB59KinyNwzMmJ8vsCaaoLDJNFoxV4uic6GMW0xKAq3rycgFzwTKHVqzQeui0Zr36HLtgfQZSklESA7EKtH-F-eHZswp8TxFkqvbEWqefJwt61EKQGW4ms61PqauZQncXMKeFzIeA5GvcxsJtnZGrDKOG~irJbOGqW7O~jf~TPI06e7JUPVTaL8rn2HQ-iW56ThfZ9nznmWwLs0qR0LYMt5Wh12rdP3Kg__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 6,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/ca35/a5e7/56d645cde5236656271eec20763b5aec?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDgxDhW6HJEMLSdARYUu7zSBZroIiYLfTYTpJt4mv4MzLM2f-QSt6aMqO6C~JZx51lwkIsmdbvexNchwwwBmnDq82NtcmvCv7QnM~Bq-r4JwQHY3t2qCSpB59KinyNwzMmJ8vsCaaoLDJNFoxV4uic6GMW0xKAq3rycgFzwTKHVqzQeui0Zr36HLtgfQZSklESA7EKtH-F-eHZswp8TxFkqvbEWqefJwt61EKQGW4ms61PqauZQncXMKeFzIeA5GvcxsJtnZGrDKOG~irJbOGqW7O~jf~TPI06e7JUPVTaL8rn2HQ-iW56ThfZ9nznmWwLs0qR0LYMt5Wh12rdP3Kg__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 7,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/ca35/a5e7/56d645cde5236656271eec20763b5aec?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDgxDhW6HJEMLSdARYUu7zSBZroIiYLfTYTpJt4mv4MzLM2f-QSt6aMqO6C~JZx51lwkIsmdbvexNchwwwBmnDq82NtcmvCv7QnM~Bq-r4JwQHY3t2qCSpB59KinyNwzMmJ8vsCaaoLDJNFoxV4uic6GMW0xKAq3rycgFzwTKHVqzQeui0Zr36HLtgfQZSklESA7EKtH-F-eHZswp8TxFkqvbEWqefJwt61EKQGW4ms61PqauZQncXMKeFzIeA5GvcxsJtnZGrDKOG~irJbOGqW7O~jf~TPI06e7JUPVTaL8rn2HQ-iW56ThfZ9nznmWwLs0qR0LYMt5Wh12rdP3Kg__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 8,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/ca35/a5e7/56d645cde5236656271eec20763b5aec?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDgxDhW6HJEMLSdARYUu7zSBZroIiYLfTYTpJt4mv4MzLM2f-QSt6aMqO6C~JZx51lwkIsmdbvexNchwwwBmnDq82NtcmvCv7QnM~Bq-r4JwQHY3t2qCSpB59KinyNwzMmJ8vsCaaoLDJNFoxV4uic6GMW0xKAq3rycgFzwTKHVqzQeui0Zr36HLtgfQZSklESA7EKtH-F-eHZswp8TxFkqvbEWqefJwt61EKQGW4ms61PqauZQncXMKeFzIeA5GvcxsJtnZGrDKOG~irJbOGqW7O~jf~TPI06e7JUPVTaL8rn2HQ-iW56ThfZ9nznmWwLs0qR0LYMt5Wh12rdP3Kg__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 9,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:
-        "https://s3-alpha-sig.figma.com/img/ca35/a5e7/56d645cde5236656271eec20763b5aec?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JDgxDhW6HJEMLSdARYUu7zSBZroIiYLfTYTpJt4mv4MzLM2f-QSt6aMqO6C~JZx51lwkIsmdbvexNchwwwBmnDq82NtcmvCv7QnM~Bq-r4JwQHY3t2qCSpB59KinyNwzMmJ8vsCaaoLDJNFoxV4uic6GMW0xKAq3rycgFzwTKHVqzQeui0Zr36HLtgfQZSklESA7EKtH-F-eHZswp8TxFkqvbEWqefJwt61EKQGW4ms61PqauZQncXMKeFzIeA5GvcxsJtnZGrDKOG~irJbOGqW7O~jf~TPI06e7JUPVTaL8rn2HQ-iW56ThfZ9nznmWwLs0qR0LYMt5Wh12rdP3Kg__",
+      image:"/assets/landingPage/Code_perspective_matte.png",
     },
   ];
 
@@ -82,10 +76,10 @@ const ServicesSec = () => {
       <div>
         <div className="relative bg-gray-900 text-white">
           <div className="absolute inset-0 overflow-hidden">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/930f/4355/0bcba6ef8b56768f41a9178e764cc5ea?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q4w5Emi2brMKFJnvLACHgfmSX9DdtK35psqsEokLlmBJ0UIzgM5qfFf8jvuVrQtgXnsAx3pi7wYWH0Dm9hN1uD9X6u1zW5ZFRDcOCvyg8cmu1IvtI-GUkoKPnL0tI6YzbP16Bc7n~tQ2cCtmnn5o6opZabVHzTFeOO-WcVmojwec~nIWWtGNWgOyvTUIhv2QZ1cdzbprg24ynfRUgk~OSTIqEQqihNwVvPCTChx2BlPa1wS8935BrmlvaKiYNHVfHlwcmpNmLqwDu20RYqGJsEklaD9-6K7KqkLm~ZvQMz2lnd8xyrFUX9e6a3pGW9U3bUV2yC3yLMEBgekqEVNQbQ__"
+            <Image
+              src={backgroundImage}
               alt="Background"
-              className="w-full h-[871px] "
+              className="w-full  h-auto opacity-15 "
             />
           </div>
           <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">

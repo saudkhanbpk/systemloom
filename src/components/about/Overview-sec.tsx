@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import ceoProfile from '../../../public/assets/aboutImages/Rectangle 21849.png';
+import ceoProfile from '../../../public/assets/aboutImages/Rectangle.png';
 
 const OverviewSec: React.FC = () => {
   return (

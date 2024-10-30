@@ -21,8 +21,8 @@ const JobCard: FC<JobCardProps> = ({
   timeAgo = "6 months ago",
 }) => {
   return (
-    <div className="bg-[#F4F6FC] rounded-[24px] p-6 w-[360px] h-[312px] hover:shadow-lg transition-shadow">
-      <div className="flex items-center mb-3">
+    <div className="bg-[#F4F6FC] rounded-[24px] p-6 w-[360px] h-auto hover:shadow-lg transition-shadow   ">
+      <div className=" flex items-center mb-3">
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-purple-600 mr-2"></div>
           <span className="text-purple-600 text-sm font-medium">{category}</span>
@@ -44,7 +44,7 @@ const JobCard: FC<JobCardProps> = ({
         </div>
       </div>
 
-      <div className="flex items-center justify-between h-[200px]">
+      <div className="flex items-center justify-between mt-20">
         <div className="flex items-center">
           <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-2">
             <span className="text-white text-sm">T</span>
@@ -63,62 +63,63 @@ const JobCard: FC<JobCardProps> = ({
 // JobsCard component as main container
 const JobsCard: FC = () => {
   return (
-    <div className="bg-[#FFFFFF] py-12 px-10">
+    <div className="bg-[#FFFFFF] py-12 px-10 ">
       <div>
         <p className="font-inter font-semibold text-[42px]">Open positions</p>
         <p className="font-inter font-normal text-[22px] text-[#838696]">Come join the team!</p>
       </div>
-      <div className="grid grid-cols-3 grid-rows-2 py-14 gap-10">
-        <JobCard />
-        <JobCard
-          category="Design"
-          title="Senior UI/UX Designer"
-          location="New York"
-          type="Full-time"
-          company="DesignCo"
-          timeAgo="2 days ago"
-        />
-        <JobCard
-          category="Design"
-          title="Senior UI/UX Designer"
-          location="New York"
-          type="Full-time"
-          company="DesignCo"
-          timeAgo="2 days ago"
-        />
-        <JobCard
-          category="Design"
-          title="Senior UI/UX Designer"
-          location="New York"
-          type="Full-time"
-          company="DesignCo"
-          timeAgo="2 days ago"
-        />
-        <JobCard
-          category="Design"
-          title="Senior UI/UX Designer"
-          location="New York"
-          type="Full-time"
-          company="DesignCo"
-          timeAgo="2 days ago"
-        />
-        <JobCard
-          category="Design"
-          title="Senior UI/UX Designer"
-          location="New York"
-          type="Full-time"
-          company="DesignCo"
-          timeAgo="2 days ago"
-        />
-        <JobCard
-          category="Design"
-          title="Senior UI/UX Designer"
-          location="New York"
-          type="Full-time"
-          company="DesignCo"
-          timeAgo="2 days ago"
-        />
-      </div>
+      <div className="flex flex-wrap  py-14 gap-10 justify-center">
+  <JobCard />
+  <JobCard
+    category="Design"
+    title="Urgent webapp and mobile app development"
+    location="New York"
+    type="Full-time"
+    company="DesignCo"
+    timeAgo="2 days ago"
+  />
+  <JobCard
+    category="Design"
+    title="Urgent webapp and mobile app development"
+    location="New York"
+    type="Full-time"
+    company="DesignCo"
+    timeAgo="2 days ago"
+  />
+  <JobCard
+    category="Design"
+    title="Urgent webapp and mobile app development"
+    location="New York"
+    type="Full-time"
+    company="DesignCo"
+    timeAgo="2 days ago"
+  />
+  <JobCard
+    category="Design"
+    title="Urgent webapp and mobile app development"
+    location="New York"
+    type="Full-time"
+    company="DesignCo"
+    timeAgo="2 days ago"
+  />
+  <JobCard
+    category="Design"
+    title="Urgent webapp and mobile app development"
+    location="New York"
+    type="Full-time"
+    company="DesignCo"
+    timeAgo="2 days ago"
+  />
+  <JobCard
+    category="Design"
+    title="Urgent webapp and mobile app development"
+    location="New York"
+    type="Full-time"
+    company="DesignCo"
+    timeAgo="2 days ago"
+  />
+</div>
+
     </div>
   );
 };

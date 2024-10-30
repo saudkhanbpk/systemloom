@@ -1,108 +1,92 @@
 import CommonButton from "../common/Button";
 import HeroSection_BG from "../../../public/assets/contactImages/Frame 5061.png";
-import { MapPin } from "lucide-react";
-import { PhoneCall } from "lucide-react";
-import { Mail } from "lucide-react";
+import { MapPin, PhoneCall, Mail } from "lucide-react";
 import Image from "next/image";
 
 function ContactUs() {
   return (
-    <>
-      <div className="relative bg-gray-900 text-white h-[700px]">
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src={HeroSection_BG}
-            alt="Background"
-            className="w-full opacity-25"
-          />
-        </div>
-        <div className="relative max-w-[1440px]  mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <form className="flex justify-around">
-            <div>
-              <h1 className="font-inter font-semibold text-[32px] text-[#FFFFFF] leading-6">
-                Let's talk with us
-              </h1>
-              <p className="w-[360px] font-inter font-light text-[20px] mt-2">
-                Questions, comments, or suggestions? Simply fill in the form and
-                we’ll be in touch shortly.
-              </p>
-              <div className="mt-10">
-                <p className="flex gap-2">
-                  <MapPin color="#A445B8" />
-                  1055 Arthur ave Elk Groot, 67. <br />
-                  New Palmas South Carolina.
-                </p>
-              </div>
-              <div className="mt-2">
-                <p className="flex gap-2">
-                  <PhoneCall color="#A445B8" />
-                  +1 234 678 9108 99
-                </p>
-              </div>
-              <div className="mt-2">
-                <p className="flex gap-2">
-                  <Mail color="#A445B8" />
-                  Contact@moralizer.com
-                </p>
-              </div>
-            </div>
-
-            <div className="w-[565px] h-[535px] rounded-[10px] border-[1px] border-[#BDBDBD] shadow-[#0000001A] p-[50px] bg-[#FFFFFF]">
-              <div className="flex justify-between items-center gap-5">
-                <div>
-                  <input
-                    placeholder="First name*"
-                    type="text"
-                    className="
-                   rounded-[10px] border-[1px] border-[#828282] bg-[#F9F9F9] p-2 text-[black] focus:border-[#9A00FF]  focus:outline-none transition duration-200"
-                  />
-                </div>
-                <div>
-                  <input
-                    placeholder="Last name*"
-                    type="text"
-                    className="
-                   rounded-[10px] border-[1px] border-[#828282] bg-[#F9F9F9] p-2 text-[black] focus:border-[#9A00FF]  focus:outline-none transition duration-200"
-                  />
-                </div>
-              </div>
-              <div className="mt-4">
-                <input
-                  placeholder="Email*"
-                  type="text"
-                  className="w-full
-                   rounded-[10px] border-[1px] border-[#828282] bg-[#F9F9F9] p-2 text-[black] focus:border-[#9A00FF]  focus:outline-none transition duration-200"
-                />
-              </div>
-              <div className="mt-4">
-                <input
-                  placeholder="Phone Number*"
-                  type="text"
-                  className="w-full
-                   rounded-[10px] border-[1px] border-[#828282] bg-[#F9F9F9] p-2 text-[black] focus:border-[#9A00FF]  focus:outline-none transition duration-200"
-                />
-              </div>
-              <div className="mt-4">
-                <textarea
-                  placeholder="Your Message..."
-                  cols={6}
-                  rows={6}
-                  className="w-full
-                   rounded-[10px] border-[1px] border-[#828282] bg-[#F9F9F9] p-2 text-[black]"
-                />
-              </div>
-              <div className="mt-10">
-                <CommonButton
-                  handleClick={() => console.log("message sent")}
-                  title="Send Message"
-                  className="bg-[#9A00FF] w-full h-[40px] rounded-[24px] border-[1px] border-[#9A00FF] focus:border-[#9A00FF]  focus:outline-none transition duration-200"
-                />
-              </div>
-            </div>
-          </form>
-        </div>
+    <div className="relative text-white">
+      <div className="absolute inset-0 overflow-hidden bg-gray-900">
+        <Image
+          src={HeroSection_BG}
+          alt="Background"
+          className="w-full h-full object-cover  opacity-25"
+        />
       </div>
-    </>
+      <div className="relative max-w-[1440px]  mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+        <form className="flex flex-wrap justify-around items-start gap-10 mt-20">
+          <div className="max-w-lg">
+            <h1 className="font-inter font-semibold text-3xl sm:text-4xl text-white leading-snug">
+              Let's talk with us
+            </h1>
+            <p className="mt-4 font-inter font-light text-lg text-white">
+              Questions, comments, or suggestions? Simply fill in the form and we’ll be in touch shortly.
+            </p>
+            <div className="mt-8">
+              <p className="flex gap-2 items-start">
+                <MapPin color="#A445B8" />
+                <span>1055 Arthur Ave, Elk Groot, New Palmas South Carolina.</span>
+              </p>
+            </div>
+            <div className="mt-4">
+              <p className="flex gap-2 items-center">
+                <PhoneCall color="#A445B8" />
+                <span>+1 234 678 9108 99</span>
+              </p>
+            </div>
+            <div className="mt-4">
+              <p className="flex gap-2 items-center">
+                <Mail color="#A445B8" />
+                <span>Contact@moralizer.com</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="w-full sm:w-[565px] bg-white rounded-lg shadow-lg p-6 sm:p-10 mt-10 sm:mt-0">
+            <div className="flex flex-col sm:flex-row sm:gap-5 mb-4">
+              <input
+                placeholder="First name*"
+                type="text"
+                className="w-full sm:w-1/2 rounded-lg border border-gray-300 bg-gray-50 p-3 text-black focus:border-purple-700 focus:outline-none mb-4 sm:mb-0"
+              />
+              <input
+                placeholder="Last name*"
+                type="text"
+                className="w-full sm:w-1/2 rounded-lg border border-gray-300 bg-gray-50 p-3 text-black focus:border-purple-700 focus:outline-none"
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                placeholder="Email*"
+                type="email"
+                className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-black focus:border-purple-700 focus:outline-none"
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                placeholder="Phone Number*"
+                type="tel"
+                className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-black focus:border-purple-700 focus:outline-none"
+              />
+            </div>
+            <div className="mb-6">
+              <textarea
+                placeholder="Your Message..."
+                rows={4}
+                className="w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-black focus:border-purple-700 focus:outline-none"
+              />
+            </div>
+            <div>
+              <CommonButton
+                handleClick={() => console.log("message sent")}
+                title="Send Message"
+                className="bg-purple-700 text-white w-full h-12 rounded-full transition duration-200 hover:bg-purple-800 focus:outline-none"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
 

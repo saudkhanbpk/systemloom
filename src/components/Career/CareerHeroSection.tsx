@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import CommonButton from '../common/Button';
 import { FC } from 'react';
-import CareerSectionImage from '../../../public/assets/careerImages/Rectangle 402.png'
-
+import CareerSectionImage from '../../../public/assets/careerImages/Rectangle 402.png';
 
 const CareerHeroSection: FC = () => {
   return (
@@ -17,10 +16,14 @@ const CareerHeroSection: FC = () => {
               Are you at your best in an atmosphere of trust, knowhow, freedom and support,
               alongside talented and creative people just like you? That's our working style.
             </p>
-            <CommonButton className="bg-[#9A00FF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]" title='Send your resume' handleClick={() => console.log("career")} />
+            <CommonButton
+              className="bg-[#9A00FF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
+              title='Send your resume'
+              handleClick={() => console.log("career")}
+            />
           </div>
           <div className="relative">
-            <div className="absolute left-[308px] -top-20  overflow-hidden">
+            <div className="absolute lg:left-[308px] lg:-top-20 md:left-0 md:top-0 top-5 overflow-hidden w-full md:w-auto">
               <Image
                 src={CareerSectionImage}
                 alt="Team collaboration"
