@@ -117,7 +117,7 @@ const ExpertTeam: React.FC = () => {
           Expert Team
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:mx-20  ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4  md:gap-12 md:mx-20   ">
         {profiles.map((profile, index) => (
           <ProfileCard
             key={index}

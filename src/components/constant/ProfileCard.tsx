@@ -21,7 +21,7 @@ const ProfileCard: React.FC<TeamProfile> = ({
   height 
 }) => {
   return (
-    <div className="relative group max-w-xs mx-auto overflow-hidden">
+    <div className="relative group max-w-xs mx-auto overflow-hidden ">
       <div className="relative group w-[280px] ">
         <Image
           src={imageUrl}
@@ -42,7 +42,7 @@ const ProfileCard: React.FC<TeamProfile> = ({
           </a>
         </div>
       </div>
-      <div className="mt-2 p-4 flex flex-col items-center">
+      <div className="mt-2 p-4 flex flex-col  items-center">
         <h2 className="text-lg font-semibold text-gray-900">{name}</h2>
         <p className="text-gray-500">{position}</p>
       </div>

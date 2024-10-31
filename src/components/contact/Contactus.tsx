@@ -25,7 +25,7 @@ function ContactUs() {
             <div className="mt-8">
               <p className="flex gap-2 items-start">
                 <MapPin color="#A445B8" />
-                <span>1055 Arthur Ave, Elk Groot, New Palmas South Carolina.</span>
+                <span>TechCreator Software Company, Located on Mardan road Near Muneer Hospital, Swabi <br/> Swabi, Pakistan-23430</span>
               </p>
             </div>
             <div className="mt-4">
