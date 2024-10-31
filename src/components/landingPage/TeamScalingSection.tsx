@@ -46,7 +46,7 @@ const TeamScalingSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full max-w-[600px]  h-[350]">
+          <div className="w-full max-w-[600px]  h-[350] mx-auto md:mx-0">
             <Image
               src={team1}
               alt="Team meeting"
@@ -59,7 +59,7 @@ const TeamScalingSection = () => {
         </div>
 
         <div className="flex flex-col gap-10 lg:flex-row mb-10">
-          <div className="w-full max-w-[600px] h-[350]">
+          <div className="w-full max-w-[600px] h-[350] mx-auto md:mx-0">
             <Image
               src={team2}
               alt="Team meeting"
@@ -144,7 +144,7 @@ const TeamScalingSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full max-w-[600px] h-{350px}">
+          <div className="w-full max-w-[600px] h-{350px} mx-auto md:mx-0">
             <Image
               src={team1}
               alt="Team meeting"

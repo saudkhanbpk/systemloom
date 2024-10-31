@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative bg-black text-white h-[580px] overflow-hidden">
+    <div className="relative bg-black text-white h-auto py-20 overflow-hidden">
       <div className="relative max-w-[1440px] mx-auto py-24 md:py-32">
         <h1 className="text-3xl md:text-5xl px-10 font-bold mb-6">OUR PORTFOLIO</h1>
         <div className="flex flex-col md:flex-row items-center">
@@ -17,8 +17,8 @@ const HeroSection: React.FC = () => {
               us in the journey of transforming your vision into cutting-edge technology.
             </p>
           </div>
-          <div className="md:w-1/3 relative">
-            <div className="absolute -top-32 right-0">
+          <div className="md:w-1/3 relative flex justify-center md:justify-end">
+            <div className="relative md:absolute md:-top-40 md:right-0 w-1/2  md:w-[380px]">
               <Image src={staticImage} alt="Portfolio Image" layout="intrinsic" />
             </div>
           </div>

@@ -7,7 +7,7 @@ import pricing1 from "../../../public/assets/pricing_images/pricing1 (1).png"
 const PricingHeroSection: React.FC = () => {
   return (
     <div>
-      <div className="min-h-screen bg-gray-900 text-white p-4 md:p-8">
+      <div className=" text-white p-4 md:p-8">
         <div className="max-w-6xl mx-auto"></div>
       </div>
       

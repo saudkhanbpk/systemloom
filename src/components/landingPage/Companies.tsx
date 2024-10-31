@@ -12,8 +12,8 @@ import company7 from "../../../public/assets/companies/Rectangle 21848.png";
 const Companies = () => {
   return (
     <React.Fragment>
-      <div className="bg-[#FFFFFF] h-[93px] py-5 px-4 md:px-10">
-        <div className="flex flex-wrap justify-between items-center mx-auto">
+      <div className="bg-[#FFFFFF] h-[93px] py-5 px-4 md:px-10 md:mb-0 mb-8">
+        <div className="flex flex-wrap justify-between items-center gap-7 md:gap-0  mx-auto">
           <div className="flex justify-center items-center mb-2">
             <Image src={company1} alt="Company 1" width={140} height={45} />
           </div>
@@ -39,9 +39,9 @@ export default Companies;
 
 export const CTASection = () => {
   return (
-    <section className="py-16">
-      <div className="bg-[#FFFFFF] mx-auto w-[95%] h-[380px]">
-        <div className="flex flex-col md:flex-row justify-between">
+    <section className="py-16 ">
+      <div className="bg-[#FFFFFF] mx-auto w-[95%] h-auto lg:h-[300px]">
+        <div className="flex flex-col md:flex-row justify-around">
           <div className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
               "Looking for top developers and designers? Let's build something great together. Get in touch today!"
@@ -61,13 +61,13 @@ export const CTASection = () => {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2">
+          <div className="">
             <Image
               src={company7}
               alt="Team working together"
               width={500} 
               height={380}
-              className="w-full rounded-lg shadow-lg h-[380px]"
+              className="w-full rounded-lg shadow-lg h-[380px] lg:h-[330px]"
             />
           </div>
         </div>

@@ -1,58 +1,55 @@
 import React from 'react';
 import Image from 'next/image';
-import portfolio1 from "../../../public/assets/portfolioImages/portfolio1.png"
-import portfolio2 from "../../../public/assets/portfolioImages/portfolio2.png"
-import portfolio3 from "../../../public/assets/portfolioImages/portfolio3.png"
-
-
+import portfolio1 from "../../../public/assets/portfolioImages/portfolio1.png";
+import portfolio2 from "../../../public/assets/portfolioImages/portfolio2.png";
+import portfolio3 from "../../../public/assets/portfolioImages/portfolio3.png";
 
 const StatsDisplay: React.FC = () => {
   return (
-    <div>
+    <div className='my-28 flex flex-col gap-3 md:flex-row bg-[#F1EEE4] rounded-md w-full md:w-fit p-4 md:p-8 mx-auto'>
 
-          <div className="">
-            <div className="max-w-4xl mx-auto grid grid-cols-12 grid-rows-6 gap-2 aspect-[4/3] bg-[#F1EEE4] p-4 border rounded-md my-10">
-              {/* Laptop Image */}
-              <div className="col-span-7 row-span-4 bg-gray-200 rounded-3xl overflow-hidden">
-                <Image src={portfolio1} alt="Laptop" className="w-full h-full object-cover" />
-              </div>
+      {/* dev1 */}
+      <div className='flex flex-col gap-3'>
+        {/* Image Row */}
+        <div className='flex flex-wrap gap-2 w-full justify-center md:w-[500px] border-2'>
+          <Image src={portfolio1} alt='laptop_Image' width={338} height={170} className="object-cover" />
+          <Image src={portfolio2} alt='mobile_image' width={150} height={150} className="object-cover" />
+        </div>
 
-              {/* Phone Image */}
-              <div className="col-span-3 row-span-3 bg-gray-200 rounded-3xl overflow-hidden">
-                <Image src={portfolio2} alt="Phone" className="w-full h-full object-cover object-left" />
-              </div>
-
-              {/* Client Satisfaction */}
-              <div className="col-span-5 row-span-3 bg-[#006A60] text-white p-4 rounded-3xl flex flex-col justify-center items-start">
-                <div className="text-5xl font-bold leading-none">98%</div>
-                <div className="text-sm mt-1">Client Satisfaction</div>
-              </div>
-
-              {/* Training Completion */}
-              <div className="col-span-5 row-span-2 bg-[#A7B8FF] text-white p-4 rounded-3xl flex flex-col justify-center items-start">
-                <div className="text-4xl font-bold leading-none">98%</div>
-                <div className="text-sm mt-1">Training completion</div>
-              </div>
-
-              {/* Desktop Setup Image */}
-              <div className="col-span-7 row-span-3 bg-gray-200 rounded-3xl overflow-hidden">
-                <Image src={portfolio3} alt="Desktop Setup" className="w-full h-[200px] object-cover" />
-              </div>
-
-              {/* Employee Satisfaction */}
-              <div className="col-span-5 row-span-2 bg-[#5E2E53] text-white p-4 rounded-3xl flex flex-col justify-center items-start">
-                <div className="text-4xl font-bold leading-none">4.7<span className="text-yellow-300 text-2xl ml-1">★</span></div>
-                <div className="text-sm mt-1">Employee satisfaction</div>
-              </div>
-
-              {/* Success Rate */}
-              <div className="col-span-5 row-span-2 bg-[#FFD572] p-4 rounded-3xl flex flex-col justify-center items-start">
-                <div className="text-4xl font-bold leading-none text-[#006A60]">100%</div>
-                <div className="text-sm mt-1 text-[#006A60]">Success rate</div>
-              </div>
+        {/* Stats and Central Image */}
+        <div className='flex flex-col md:flex-row items-center gap-5'>
+          
+          {/* Stats Column */}
+          <div className='flex flex-col gap-4 text-center'>
+            <div className='bg-[#A7B8FF] text-white p-4 py-8 rounded-3xl w-full sm:w-auto'>
+              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>98%</h1>
+              <p className='text-sm sm:text-base'>Training Completion</p>
             </div>
+            <div className='bg-[#5E2E53] text-white p-4 py-8 rounded-3xl w-full sm:w-[250px]'>
+              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>4.7</h1>
+              <p className='text-sm sm:text-base'>Employee Satisfaction</p>
+            </div>
+          </div>
+
+          {/* Center Image */}
+          <div className='w-full sm:w-auto flex justify-center'>
+            <Image src={portfolio3} alt='computer_image' width={240} height={200} className="object-cover" />
+          </div>
         </div>
+      </div>
+
+      {/* dev2 */}
+      <div className='flex flex-col gap-3 mt-6 md:mt-0'>
+        <div className='py-2 p-2 px-2 w-full sm:w-[280px] h-[200px] sm:h-[240px] rounded-3xl bg-[#006A60] text-white text-center'>
+          <h1 className='text-5xl sm:text-6xl md:text-7xl font-bold'>98%</h1>
+          <p className='text-sm sm:text-base'>Client Satisfaction</p>
         </div>
+        <div className='py-2 p-2 px-2 w-full sm:w-[280px] h-[200px] sm:h-[240px] rounded-3xl bg-[#FFD572] text-green-900 text-center'>
+          <h1 className='text-5xl sm:text-6xl md:text-7xl font-bold'>100%</h1>
+          <p className='text-sm sm:text-base'>Success Rate</p>
+        </div>
+      </div>
+    </div>
   );
 };
 

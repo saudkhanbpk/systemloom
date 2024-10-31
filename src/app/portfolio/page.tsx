@@ -13,7 +13,7 @@ const Portfolio = () => {
     <div>
       <Layout>
       <HeroSection/>
-      {/* <ServicesSection/> */}
+      <ServicesSection/>
       <StatsDisplay/>
       <Companies/>
       <OurProjectsGrid/>

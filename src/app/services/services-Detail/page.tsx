@@ -1,9 +1,6 @@
 "use client";
 
 import ServicesHeroSection from '@/components/services/ServicesHeroSection';
-import Header from '@/components/shared/Header';
-import React from 'react';
-import Image from 'next/image';
 import webImage from '../../../../public/assets/webImages/fullStack_web_image.svg';
 import FeatureSection from '@/components/services/FeatureSection';
 import FeaturesList from '@/components/services/FeaturesList';
@@ -11,7 +8,6 @@ import DiagonalFeatureSection from '@/components/services/DiagonalFeatureSection
 import FramedFeatureSection from '@/components/services/FramedFeatureSection';
 import RecentWorks from '@/components/services/RecentWorks';
 import RelatedServices from '@/components/services/RelatedServices';
-import Footer from '@/components/shared/Footer';
 import Layout from '@/newLayout';
 
 const ServicesDetail: React.FC = () => {

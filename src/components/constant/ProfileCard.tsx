@@ -1,29 +1,35 @@
 import React from "react";
 import Image from "next/image";
-import Linkedin from "../../../public/assets/icons/Vector.png"; 
+import Linkedin from "../../../public/assets/icons/Vector.png";
 
 interface TeamProfile {
   name: string;
   position: string;
   imageUrl: string;
   linkedInUrl: string;
+  width: number; 
+  height: number; 
 }
+
 
 const ProfileCard: React.FC<TeamProfile> = ({
   name,
   position,
   imageUrl,
   linkedInUrl,
+  width, 
+  height 
 }) => {
   return (
-    <div className="relative group max-w-xs mx-auto overflow-hidden ">
-      <div className="relative group">
+    <div className="relative group max-w-xs mx-auto overflow-hidden">
+      <div className="relative group w-[280px] ">
         <Image
           src={imageUrl}
           alt={name}
-          width={278} 
-          height={278} 
-          className="object-cover transition-transform duration-300"
+          width={width}  
+          height={height} 
+          style={{ height: `${height}px`, width: `${width}px` }}
+          className="object-cover w-full h-full transition-transform duration-300"
         />
         <div className="absolute inset-0 flex justify-center items-center bg-[#F4F6FCD4] bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <a

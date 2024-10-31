@@ -6,80 +6,106 @@ interface Profile {
   position: string;
   imageUrl: string;
   linkedInUrl: string;
+  width: number;
+  height: number;
 }
 
 const profiles: Profile[] = [
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/Rectangle(1).png",
+    name: "Saud Khan",
+    position: "CEO",
+    imageUrl: "/assets/Teamimages/saudkhan.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev1.png",
+    name: "Aamad Khan",
+    position: "Admin Officer",
+    imageUrl: "/assets/Teamimages/hamdad.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev2.png",
+    name: "Hamdan Khan",
+    position: "Project Manager",
+    imageUrl: "/assets/Teamimages/hamdan.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev3.png",
+    name: "Ihtisham Khan",
+    position: "App Developer",
+    imageUrl: "/assets/Teamimages/ihtisham.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev4.png",
+    name: "Ihtizaz",
+    position: "Angular Developer",
+    imageUrl: "/assets/Teamimages/ihtizaz.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/Rectangle(1).png",
+    name: "Imran Khan",
+    position: "Mern Stack Developer",
+    imageUrl: "/assets/Teamimages/imran.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev1.png",
+    name: "Ishaq Khan",
+    position: "Frontend Developer",
+    imageUrl: "/assets/Teamimages/ishaq.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev3.png",
+    name: "Saad",
+    position: "Angular Developer ",
+    imageUrl: "/assets/Teamimages/saad.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev2.png",
+    name: "Sameer Khan",
+    position: "Mern Stack Developer",
+    imageUrl: "/assets/Teamimages/sameer.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev3.png",
+    name: "Sulaiman Khan",
+    position: "Frontend Developer",
+    imageUrl: "/assets/Teamimages/sulaiman.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/dev1.png",
+    name: "Waheed Khan",
+    position: "App Developer",
+    imageUrl: "/assets/Teamimages/waheed.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
   {
-    name: "Ammad Khan",
-    position: "Managing Director",
-    imageUrl: "/assets/aboutImages/Rectangle(1).png",
+    name: "Afaq Khan",
+    position: "App Developer ",
+    imageUrl: "/assets/Teamimages/afaq.jpg",
     linkedInUrl: "https://linkedin.com",
+    width: 300,
+    height: 300,
   },
 ];
 
@@ -87,16 +113,20 @@ const ExpertTeam: React.FC = () => {
   return (
     <div>
       <div className="py-20  text-center">
-        <p className="font-inter font-bold text-[35px] text-[#9A00FF]">Expert Team</p>
+        <p className="font-inter font-bold text-[35px] text-[#9A00FF]">
+          Expert Team
+        </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:mx-20 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:mx-20  ">
         {profiles.map((profile, index) => (
           <ProfileCard
             key={index}
             name={profile.name}
             position={profile.position}
-            imageUrl={profile.imageUrl} 
+            imageUrl={profile.imageUrl}
             linkedInUrl={profile.linkedInUrl}
+            width={profile.width}
+            height={profile.height}
           />
         ))}
       </div>

@@ -18,13 +18,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     <div
       className={`
         ${style ? "bg-white rounded-[20px] w-full max-w-[350px] p-6 md:p-8 flex flex-col mx-auto" : "bg-white rounded-lg p-6 flex flex-col justify-center items-center mx-auto"}
+        transition-transform duration-300 ease-in-out hover:translate-y-8  hover:border-2 hover:border-[#bb7fe3] cursor-pointer
       `}
       style={{
         boxShadow: `${style ? "3px 4px 5px 0px #00000040" : "0px 4px 30px 0px #0000000D"}`,
       }}
     >
-      <div className="mb-4  p-3 h-[58px] w-full bg-purple-100 rounded-full">
-        <img src={icon} alt="image" className="w-[34px] h-[34px]" />
+      <div className="mb-4 p-3 h-[58px] w-full bg-purple-100 rounded-full">
+        <img src={icon} alt="icon" className="w-[34px] h-[34px]" />
       </div>
       <div className="">
         <h3 className="text-xl font-semibold mb-2 text-[#9A00FF]">{title}</h3>

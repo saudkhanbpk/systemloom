@@ -16,7 +16,7 @@ const PricingCards: React.FC = () => {
   const plans: Plan[] = [
     {
       name: 'BASIC',
-      price: isYearly ? 180 : 15,
+      price: isYearly ? 7200 : 600,
       features: [
         'Personalized Workout',
         'Exercise Form Correction',
@@ -25,7 +25,7 @@ const PricingCards: React.FC = () => {
     },
     {
       name: 'STANDARD',
-      price: isYearly ? 120 : 10,
+      price: isYearly ? 14400 : 1200,
       features: [
         'Personalized Workout',
         'Exercise Form Correction',
@@ -35,7 +35,7 @@ const PricingCards: React.FC = () => {
     },
     {
       name: 'PREMIUM',
-      price: isYearly ? 84 : 7,
+      price: isYearly ? 21600 : 1800,
       features: [
         'Personalized Workout',
         'Exercise Form Correction',
@@ -47,12 +47,12 @@ const PricingCards: React.FC = () => {
   ];
 
   return (
-    <div className="relative bg-gray-900 text-white h-auto md:h-[420px] px-4">
+    <div className="relative  text-white h-auto  px-4">
       <div className="absolute inset-0 overflow-hidden">
         <Image
           src={backgroundImage}
           alt="Background"
-          className="w-full h-full object-cover "
+          className="w-full h-full object-cover  "
         />
       </div>
       <div className="sm:px-6 py-24 md:py-32 relative max-w-[1440px] mx-auto container">
@@ -83,7 +83,7 @@ const PricingCards: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center space-y-3 md:gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center space-y-3 md:space-y-0 md:gap-0">
           {plans.map((plan, index) => (
             <div
               key={index}

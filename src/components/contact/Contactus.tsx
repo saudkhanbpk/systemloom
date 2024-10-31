@@ -31,13 +31,13 @@ function ContactUs() {
             <div className="mt-4">
               <p className="flex gap-2 items-center">
                 <PhoneCall color="#A445B8" />
-                <span>+1 234 678 9108 99</span>
+                <span>+92-311-9265290</span>
               </p>
             </div>
             <div className="mt-4">
               <p className="flex gap-2 items-center">
                 <Mail color="#A445B8" />
-                <span>Contact@moralizer.com</span>
+                <span>saudkhanbpk@gmail.com</span>
               </p>
             </div>
           </div>

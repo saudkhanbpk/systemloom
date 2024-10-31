@@ -9,7 +9,7 @@ function AboutSection() {
     <>
       <section className="py-12 md:py-16 md:p-10">
         <div className="mx-auto px-4 flex flex-col md:flex-row gap-12 items-center">
-          <div className="flex flex-col md:flex-row items-center md:w-1/2 w-full">
+          <div className="flex flex-col sm:flex-row items-center md:w-1/2 w-full justify-center md:justify-start  gap-4">
             <div className="mb-4 md:mb-0 md:mr-2">
               <Image
                 src={group1}
