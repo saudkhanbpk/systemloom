@@ -3,71 +3,78 @@ import ServiceCard from '../constant/ServiceCard';
 import Image from 'next/image';
 import backgroundImage from "../../../public/assets/aboutImages/servicesBgImage.jpeg"
 
-
-
-
 interface Service {
   id: number;
   title: string;
   des: string;
   image: string;
+  link?: string; // Make link optional since some services may not have it
 }
 
 const ServicesSec = () => {
-  const servicesArr = [
+  const servicesArr: Service[] = [
     {
       id: 1,
       title: "Web Design & Development",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+      link: "/services/web-development"
     },
     {
       id: 2,
       title: "Mobile App Development",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+      link: "/services/mobile-app-development"
     },
     {
       id: 3,
       title: "Devops",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+       link: "/services/devops"
     },
     {
       id: 4,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+       link: "/services/web-development"
     },
     {
       id: 5,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+       link: "/services/web-development"
     },
     {
       id: 6,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+       link: "/services/web-development"
     },
     {
       id: 7,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+       link: "/services/web-development"
     },
     {
       id: 8,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+       link: "/services/web-development"
     },
     {
       id: 9,
       title: "Software Testing Service",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image:"/assets/landingPage/Code_perspective_matte.png",
+      image: "/assets/landingPage/Code_perspective_matte.png",
+       link: "/services/web-development"
     },
   ];
 
@@ -79,7 +86,7 @@ const ServicesSec = () => {
             <Image
               src={backgroundImage}
               alt="Background"
-              className="w-full  h-auto opacity-15 "
+              className="w-full h-auto opacity-15"
             />
           </div>
           <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -92,13 +99,12 @@ const ServicesSec = () => {
               </p>
             </div>
           </div>
-
         </div>
       </div>
-      <div className=" mb-10 mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 w-full px-4 sm:px-6 md:px-10 py-10">
+      <div className="mb-10 mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 w-full px-4 sm:px-6 md:px-10 py-10">
         {
-          servicesArr?.map((item) => (
-            <Link href="/services/services-Detail" key={item.id}>
+          servicesArr.map((item) => (
+            <Link href={item.link || "#"} key={item.id}>
               <ServiceCard
                 description={item.des}
                 title={item.title}
@@ -113,4 +119,4 @@ const ServicesSec = () => {
   )
 }
 
-export default ServicesSec
+export default ServicesSec;

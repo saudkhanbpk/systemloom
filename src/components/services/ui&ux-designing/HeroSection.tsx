@@ -8,14 +8,14 @@ interface ServicesSectionType {
   image2?: string | StaticImageData;
 }
 
-const ServicesHeroSection: React.FC<ServicesSectionType> = ({
+const HeroSection: React.FC<ServicesSectionType> = ({
   title,
   image,
   description,
   image2,
 }) => {
   return (
-    <div className="bg-black w-full h-auto">
+    <div className="bg-black w-full h-auto"> {/* Added w-full here */}
       <div className="max-w-7xl mx-auto py-20 px-4">
         <div className="flex flex-col md:flex-row justify-between mt-10">
           <div className="text-white">
@@ -28,30 +28,18 @@ const ServicesHeroSection: React.FC<ServicesSectionType> = ({
           </div>
 
           <div className="relative mt-10">
-            <div className="relative z-10 transform translate-y-12 translate-x-4 hidden md:block">
+            <div className="relative z-10 transform translate-y-12 translate-x-4">
               <Image
                 src={image}
                 alt="Portfolio preview 1"
-                className="rounded-lg shadow-xl opacity-75"
+                className=" shadow-xl opacity-75 bg-blue-800 rounded-full"
                 layout="responsive"
                 width={400}
                 height={300}
                 objectFit="cover"
               />
             </div>
-            {image2 && (
-              <div className="md:absolute top-0 z-20">
-                <Image
-                  src={image2}
-                  alt="Portfolio preview 2"
-                  className="w-40 h-28 md:w-full md:h-full rounded-lg shadow-2xl"
-                  layout="responsive"
-                  width={400}
-                  height={300}
-                  objectFit="cover"
-                />
-              </div>
-            )}
+          
           </div>
         </div>
       </div>
@@ -59,4 +47,4 @@ const ServicesHeroSection: React.FC<ServicesSectionType> = ({
   );
 };
 
-export default ServicesHeroSection;
+export default HeroSection;

@@ -1,35 +1,41 @@
-"use client";
+"use client"
 
-import ServicesHeroSection from '@/components/services/ServicesHeroSection';
-import webImage from '../../../../public/assets/webImages/fullStack_web_image.svg';
+import HeroSection from '@/components/services/ui&ux-designing/HeroSection'
+import Layout from '@/newLayout'
+import React from 'react'
+import webImage from "../../../../public/assets/ui&ux-designing/heroSection.png";
 import FeatureSection from '@/components/services/FeatureSection';
+import image1 from "../../../../public/assets/ui&ux-designing/image1.png"
 import FeaturesList from '@/components/services/FeaturesList';
 import DiagonalFeatureSection from '@/components/services/DiagonalFeatureSection';
 import FramedFeatureSection from '@/components/services/FramedFeatureSection';
 import RecentWorks from '@/components/services/RecentWorks';
 import RelatedServices from '@/components/services/RelatedServices';
-import Layout from '@/newLayout';
 
-const ServicesDetail: React.FC = () => {
+
+const page = () => {
   return (
     <div>
       <Layout>
-      <ServicesHeroSection
-        title="Full stack web development services"
+        <HeroSection title="Full stack web development services"
         description="At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful projects that bring concepts to life and turn ideas into digital realities. Join us in the journey of transforming your vision into cutting-edge technology."
-        image={webImage}
-        image2={webImage}
-      />
+        image={webImage}/>
 
-      <FeatureSection/>
-      <FeaturesList/>
+      <FeatureSection heading="Full stack web development services"
+      description='At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful projects that bring concepts to life and turn ideas into digital realities. Join us in the journey of transforming your vision into cutting-edge technology.'
+      image="/assets/ui&ux-designing/image1.png"
+       />
+
+
+<FeaturesList  />
       <DiagonalFeatureSection/>
       <FramedFeatureSection/>
       <RecentWorks/>
       <RelatedServices/>
+
       </Layout>
     </div>
-  );
-};
+  )
+}
 
-export default ServicesDetail;
+export default page

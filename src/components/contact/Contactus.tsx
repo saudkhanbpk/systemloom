@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function ContactUs() {
   return (
-    <div className="relative text-white">
+    <div className="relative text-white mb-[-160px]">
       <div className="absolute inset-0 overflow-hidden bg-gray-900">
         <Image
           src={HeroSection_BG}
@@ -37,7 +37,7 @@ function ContactUs() {
             <div className="mt-4">
               <p className="flex gap-2 items-center">
                 <Mail color="#A445B8" />
-                <span>saudkhanbpk@gmail.com</span>
+                <span>contact@techcreator.co</span>
               </p>
             </div>
           </div>

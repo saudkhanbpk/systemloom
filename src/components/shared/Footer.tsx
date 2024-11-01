@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link'; // Import Link from Next.js
 import Logo from '../../../public/assets/icons/Logo.png';
 import CommonButton from '../common/Button';
 import Footerbg from '../../../public/assets/footerImages/footer_bg_image.svg';
@@ -28,13 +29,13 @@ const Footer: React.FC = () => {
           </div>
 
           <div className='lg:ml-20'>
-            <h3 className="text-base md:text-lg font-semibold mb-4 ">Links</h3>
+            <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
             <ul className="space-y-2">
               {['Home', 'About', 'Services', 'Contact', 'Blog'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-xs md:text-sm hover:text-purple-500 transition-colors">
+                  <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-xs md:text-sm hover:text-purple-500 transition-colors">
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -44,18 +45,20 @@ const Footer: React.FC = () => {
             <h3 className="text-base md:text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-5">
               {[
-                'Web Development',
-                'Graphic Designing',
-                'Mobile App Development',
-                'DevOps Services & Optimization',
-                'UI/UX Designing',
-                'Software Maintenance',
-                'SEO & Content Writing',
-                'Project Management',
-                'SQA',
+                { name: 'Web Development', link: '/services/web-development' },
+                { name: 'Graphic Designing', link: '/services/web-development' },
+                { name: 'Mobile App Development', link: '/services/mobile-app-development' },
+                { name: 'DevOps Services & Optimization', link: '/services/devops' },
+                { name: 'UI/UX Designing', link: '/services/ui-ux-design' },
+                { name: 'Software Maintenance', link: '/services/mobile-app-development' },
+                { name: 'SEO & Content Writing', link: '/services/devops' },
+                { name: 'Project Management', link: '/services/mobile-app-development' },
+                { name: 'SQA', link: '/services/sqa' },
               ].map((service) => (
-                <li key={service} className="text-xs md:text-sm hover:text-purple-500 transition-colors">
-                  <a href="#">{service}</a>
+                <li key={service.name}>
+                  <Link href={service.link} className="text-xs md:text-sm hover:text-purple-500 transition-colors">
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -65,18 +68,18 @@ const Footer: React.FC = () => {
             <h3 className="text-base md:text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2">
               <p className="text-xs md:text-sm">contact@techcreator.co</p>
-              <p className="text-xs md:text-sm">092-3139832803</p>
-              <p className="text-xs md:text-sm">+1-324-407-3272</p>
+              <p className="text-xs md:text-sm">+92-311-9265290</p>
+              <p className="text-xs md:text-sm">+92-311-9265290</p>
               <div className="flex sm:flex-row flex-col gap-3 space-x-2 mt-4">
                 <CommonButton
                   className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
                   title="Consultancy"
-                  handleClick={() => console.log('hello')}
+                  handleClick={() => console.log('Consultancy Clicked')}
                 />
                 <CommonButton
                   className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
                   title="Appointment"
-                  handleClick={() => console.log('hello')}
+                  handleClick={() => console.log('Appointment Clicked')}
                 />
               </div>
             </div>
