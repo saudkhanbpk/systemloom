@@ -6,14 +6,14 @@ import Footerbg from '../../../public/assets/footerImages/footer_bg_image.svg';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-black text-white py-8 md:py-10 w-full mt-40">
+    <footer className="relative bg-black text-white py-8 md:py-10 w-full ">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
           backgroundImage: `url(${Footerbg.src})`,
         }}
       ></div>
-      <div className="relative z-10 mx-auto px-4 md:px-10">
+      <div className="relative  mx-auto px-4 md:px-10">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
           <div className="ml-2 md:ml-8">
             <div className="flex items-center gap-2">

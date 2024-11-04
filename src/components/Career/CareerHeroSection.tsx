@@ -1,11 +1,17 @@
+import React, { useState } from 'react';
 import Image from 'next/image';
 import CommonButton from '../common/Button';
 import { FC } from 'react';
 import CareerSectionImage from '../../../public/assets/careerImages/Rectangle 402.png';
 
 const CareerHeroSection: FC = () => {
+  const [isDialogOpen, setDialogOpen] = useState(false);
+
+  const handleDialogOpen = () => setDialogOpen(true);
+  const handleDialogClose = () => setDialogOpen(false);
+
   return (
-    <div>
+    <div className={`${isDialogOpen ? 'blurred' : ''}`}>
       <div className="relative bg-black text-white h-[644px]">
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
           <div className="mb-8 md:mb-12 p-10">
@@ -18,8 +24,8 @@ const CareerHeroSection: FC = () => {
             </p>
             <CommonButton
               className="bg-[#9A00FF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
-              title='Send your resume'
-              handleClick={() => console.log("career")}
+              title="Send your resume"
+              handleClick={handleDialogOpen}
             />
           </div>
           <div className="relative">
@@ -33,6 +39,87 @@ const CareerHeroSection: FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Dialog */}
+      {isDialogOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center backdrop-blur-md p-4 sm:p-6 z-50"
+          onClick={handleDialogClose}
+        >
+          <div
+            className=" text-white p-6  sm:w-[400px] md:w-[600px] max-w-full relative z-50     h-fit w-full bg-purple-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100"
+            onClick={(e) => e.stopPropagation()} // Prevent click from closing dialog
+          >
+            <h2 className="text-2xl font-semibold mb-4">Submit Your Resume</h2>
+            <form>
+              <div className="mb-4">
+                <label className="block text-gray-400">Name</label>
+                <input
+                  type="text"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400">Email</label>
+                <input
+                  type="email"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  placeholder="Your email"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400">Phone</label>
+                <input
+                  type="tel"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  placeholder="Your phone number"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400">Field</label>
+                <input
+                  type="text"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  placeholder="Your field"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400">Professional URL</label>
+                <input
+                  type="url"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  placeholder="LinkedIn or other professional link"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400">Resume</label>
+                <input
+                  type="file"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white"
+                  required
+                />
+              </div>
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg mr-2"
+                  onClick={handleDialogClose}
+                >
+                  Cancel
+                </button>
+                <button type="submit" className="bg-[#9A00FF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

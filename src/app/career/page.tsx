@@ -12,7 +12,7 @@ const Career = () => {
       <Layout>
       <CareerHeroSection/>
       <CoreValues/>
-      <JobsCard/>
+      <JobsCard />
       <DiversitySection/>
       </Layout>
     </div>
