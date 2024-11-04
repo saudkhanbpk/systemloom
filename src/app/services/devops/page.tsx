@@ -8,12 +8,10 @@ import DiagonalFeatureSection from '@/components/services/DiagonalFeatureSection
 import FramedFeatureSection from '@/components/services/FramedFeatureSection';
 import RecentWorks from '@/components/services/RecentWorks';
 import RelatedServices from '@/components/services/RelatedServices';
-import Layout from '@/newLayout';
 
 const Devops: React.FC = () => {
   return (
     <div>
-      <Layout>
       <ServicesHeroSection
         title="Devops services"
         description="At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful projects that bring concepts to life and turn ideas into digital realities. Join us in the journey of transforming your vision into cutting-edge technology."
@@ -27,7 +25,6 @@ const Devops: React.FC = () => {
       <FramedFeatureSection/>
       <RecentWorks/>
       <RelatedServices/>
-      </Layout>
     </div>
   );
 };

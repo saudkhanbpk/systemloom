@@ -6,12 +6,11 @@ import HeroSection from '@/components/landingPage/HeroSection';
 import ProjectsCount from '@/components/landingPage/ProjectsCount';
 import ServicesSection from '@/components/landingPage/ServicesSection';
 import TeamScalingSection from '@/components/landingPage/TeamScalingSection';
-import Layout from '@/newLayout';
 import React from 'react';
 
 const Page = () => {
   return (
-    <Layout>
+      <>
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -20,7 +19,7 @@ const Page = () => {
       <ProjectsCount />
       <Companies />
       <CTASection />
-    </Layout>
+      </>
   );
 };
 

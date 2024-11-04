@@ -4,10 +4,9 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../../../public/assets/icons/Logo.png'; 
-import personIcon from "../../../public/assets/landingPage/Vector.png"
+import personIcon from "../../../public/assets/landingPage/Vector.png";
 
-
-const Header = () => {
+const AdminHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     { name: "Home", href: "/" },
@@ -21,7 +20,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="text-white absolute z-10 px-4 py-2 w-full text-nowrap">
+    <nav className="bg-black text-white  z-10 px-4 py-2 w-full text-nowrap"> {/* Changed to bg-black */}
       <div className="md:pr-10 md:pl-10 mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex justify-center gap-2 items-center">
@@ -69,7 +68,6 @@ const Header = () => {
                 <Menu className="block h-6 w-6" />
               )}
             </button>
-            
           </div>
         </div>
       </div>
@@ -97,4 +95,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AdminHeader;

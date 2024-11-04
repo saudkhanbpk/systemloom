@@ -13,7 +13,6 @@ import Layout from '@/newLayout';
 const ServicesDetail: React.FC = () => {
   return (
     <div>
-      <Layout>
       <ServicesHeroSection
         title="Full stack web development services"
         description="At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful projects that bring concepts to life and turn ideas into digital realities. Join us in the journey of transforming your vision into cutting-edge technology."
@@ -27,7 +26,6 @@ const ServicesDetail: React.FC = () => {
       <FramedFeatureSection/>
       <RecentWorks/>
       <RelatedServices/>
-      </Layout>
     </div>
   );
 };

@@ -5,9 +5,9 @@ import Layout from "@/newLayout"
 const Services = () => {
   return (
     <div>
-      <Layout>
+      <>
       <ServicesSec/>
-      </Layout>
+      </>
     </div>
   )
 }

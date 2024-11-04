@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link'; // Import Link from Next.js
 import Logo from '../../../public/assets/icons/Logo.png';

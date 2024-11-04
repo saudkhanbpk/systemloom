@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import backgroundImage from "../../../public/assets/landingPage/backgroundImage.png"
+import backgroundImage from "../../../public/assets/landingPage/backgroundImage.png";
 import Link from 'next/link';
 
 function HeroSection() {
@@ -12,8 +12,9 @@ function HeroSection() {
           <Image
             src={imageUrl}
             alt="Background"
-            layout="fill" 
+            fill // Use fill instead of layout="fill"
             className="object-cover opacity-50"
+            style={{ objectFit: 'cover' }} // Ensures the image covers the container
           />
         ) : null} 
       </div>
@@ -30,12 +31,14 @@ function HeroSection() {
             empower your growth journey with cutting-edge automation and custom software
             development solutions, driving innovation and success at every stage.
           </p>
-         <Link href="/contact" > <button
-            style={{ background: "rgba(255, 255, 255, 0.24)" }}
-            className="text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
-          >
-            Automate your Business &nbsp;&nbsp; →
-          </button></Link>
+         <Link href="/contact">
+           <button
+              style={{ background: "rgba(255, 255, 255, 0.24)" }}
+              className="text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Automate your Business &nbsp;&nbsp; →
+           </button>
+         </Link>
         </div>
       </div>
     </div>
