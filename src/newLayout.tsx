@@ -3,8 +3,8 @@ import { ToastContainer } from "react-toastify";
 import Footer from "./components/shared/Footer";
 import Header from "./components/shared/Header";
 import "react-toastify/dist/ReactToastify.css"; 
-import store from "./redux/store";
-import { Provider } from "react-redux";
+// import store from "./redux/store";
+// import { Provider } from "react-redux";
 
 export const backend_url = process.env.NEXT_PUBLIC_BACKEND_URL;
 
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <html lang="en">
             <body>
-                <Provider store={store}>
+                {/* <Provider store={store}> */}
                     <ToastContainer
                         position="top-right"
                         autoClose={5000}
@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <Header />
                     <main>{children}</main>
                     <Footer />
-                </Provider>
+                {/* </Provider> */}
             </body>
         </html>
     );
