@@ -101,7 +101,7 @@ const ServicesSec = () => {
           </div>
         </div>
       </div>
-      <div className="mb-10 mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 w-full px-4 sm:px-6 md:px-10 py-10">
+      <div className="mb-10 mt-10 mx-auto flex flex-wrap justify-center  md:gap-24 gap-4 w-full px-4 sm:px-6 md:px-10 py-10">
         {
           servicesArr.map((item) => (
             <Link href={item.link || "#"} key={item.id}>

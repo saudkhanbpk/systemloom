@@ -105,7 +105,7 @@ const Login: React.FC = () => {
             </div>
 
             {/* Role Selection */}
-            <div className='mb-4'>
+            {/* <div className='mb-4'>
               <div className='flex items-center gap-4'>
                 <label className='flex items-center cursor-pointer'>
                   <input 
@@ -130,7 +130,7 @@ const Login: React.FC = () => {
                   Admin
                 </label>
               </div>
-            </div>
+            </div> */}
 
             {/* Submit Button */}
             <motion.button

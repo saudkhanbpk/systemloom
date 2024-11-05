@@ -121,7 +121,7 @@ const Register: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <div className="flex items-center gap-4">
                   <label className="flex items-center cursor-pointer">
                     <input 
@@ -146,7 +146,7 @@ const Register: React.FC = () => {
                     Admin
                   </label>
                 </div>
-              </div>
+              </div> */}
 
               <button
                 type="submit"
