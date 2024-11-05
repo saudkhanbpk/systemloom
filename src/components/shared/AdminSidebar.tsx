@@ -1,39 +1,39 @@
 "use client";
 import Link from 'next/link';
 import React from 'react';
+import { usePathname } from 'next/navigation'; // Use next/navigation for Next.js 13+
 
-// Define the assets type if you have a specific type for assets
-const assets = {
-  add_icon: '/path/to/add_icon.png', // Update with actual path
-  order_icon: '/path/to/order_icon.png', // Update with actual path
-};
+// Importing icons from Heroicons v2
+import { PlusIcon, DocumentIcon, UserIcon, InboxIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 const AdminSidebar: React.FC = () => {
+  const pathname = usePathname(); // Get the current pathname
+
+  // Define the links with their corresponding icons
+  const links = [
+    { href: "/admin/create-blog", label: "Create Blog", icon: <PlusIcon className="w-6 h-6" /> },
+    { href: "/admin/create-job", label: "Create Job", icon: <PlusIcon className="w-6 h-6" /> },
+    { href: "/admin/all-blogs", label: "All Blogs", icon: <DocumentIcon className="w-6 h-6" /> },
+    { href: "/admin/all-jobs", label: "All Jobs", icon: <DocumentIcon className="w-6 h-6" /> },
+    { href: "/admin/applicants", label: "Applicants", icon: <UserIcon className="w-6 h-6" /> },
+    { href: "/admin/contact", label: "Contact", icon: <PhoneIcon className="w-6 h-6" /> },
+  ];
+
   return (
-    <div className='w-full sm:w-[18vw] min-h-screen border-r bg-white'>
+    <div className='w-[16vw] sm:w-[12vw] min-h-screen border-r bg-white'>
       <div className='pt-6 flex flex-col gap-4'>
-
-        <Link href="/admin/create-blog" passHref>
-          <div className='flex gap-2 items-center border sm:ml-10 p-2'>
-            {/* <img src={assets.add_icon} alt="Add Items" className="w-6 h-6" /> */}
-            <p className='hidden md:block'>Create Blog</p>
-          </div>
-        </Link>
-
-        <Link href="/admin/all-blogs" passHref>
-          <div className='flex gap-2 items-center border sm:ml-10 p-2'>
-            {/* <img src={assets.order_icon} alt="List Items" className="w-6 h-6" /> */}
-            <p className='hidden md:block'>All Blogs</p>
-          </div>
-        </Link>
-
-        <Link href="/order" passHref>
-          <div className='flex gap-2 items-center border sm:ml-10 p-2'>
-            {/* <img src={assets.order_icon} alt="Orders" className="w-6 h-6" /> */}
-            <p className='hidden md:block'>Orders</p>
-          </div>
-        </Link>
-
+        {links.map(link => (
+          <Link key={link.label} href={link.href} passHref>
+            <div 
+              className={`flex gap-2 items-center border sm:ml-4 p-2 
+                ${pathname === link.href ? 'bg-gray-600 text-white' : ''} 
+              `}
+            >
+              <div className="block md:hidden">{link.icon}</div> {/* Show icon on small screens */}
+              <p className='hidden md:block'>{link.label}</p>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
