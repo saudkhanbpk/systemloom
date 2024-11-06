@@ -26,7 +26,6 @@ function ServicesSection() {
       slidesToSlide: 1,
     },
   };
-  
 
   const servicesArr = [
     {
@@ -64,20 +63,20 @@ function ServicesSection() {
         swipeable={true}
         draggable={true}
         showDots={true}
-        arrows={false}  
+        arrows={false}
         responsive={responsive}
         infinite={true}
-        autoPlay={true}               
-        autoPlaySpeed={2000}          
+        autoPlay={true}
+        autoPlaySpeed={2000}
         keyBoardControl={true}
-        customTransition="all .5s ease" 
-        transitionDuration={800}       
+        customTransition="all .5s ease"
+        transitionDuration={800}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-40-px flex justify-center" // Center the items
       >
         {servicesArr.map((item) => (
-          <div key={item.id} className="h-auto w-[333px]  mx-auto lg:mx-0 mb-14">
+          <div key={item.id} className="flex justify-center h-auto w-[333px] mx-auto lg:mx-0 mb-14">
             <ServiceCard
               title={item.title}
               description={item.des}

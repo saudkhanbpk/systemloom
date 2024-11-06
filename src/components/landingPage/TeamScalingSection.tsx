@@ -10,7 +10,7 @@ const TeamScalingSection = () => {
     <section className="py-16 md:p-16 ">
       <div className="mx-10 ">
         <div className="flex flex-col lg:flex-row mb-10">
-          <div className="lg:w-1/2 lg:pr-12 mb-8 leading-[44px] mt-5 lg:mb-0">
+          <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
             <h2 className="text-[28px] font-semibold text-purple-600 mb-4">
               Build the right team to scale
             </h2>
@@ -70,7 +70,7 @@ const TeamScalingSection = () => {
           </div>
 
 
-          <div className="lg:w-1/2 lg:pr-12 mb-8 leading-[44px] mt-5 lg:mb-0">
+          <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
             <h2 className="text-[28px] font-semibold text-purple-600 mb-4">
               Build the right team to scale
             </h2>
@@ -108,7 +108,7 @@ const TeamScalingSection = () => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-1/2 lg:pr-12 mb-8 leading-[44px] mt-5 lg:mb-0">
+          <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
             <h2 className="text-[28px] font-semibold text-purple-600 mb-4">
               Build the right team to scale
             </h2>
