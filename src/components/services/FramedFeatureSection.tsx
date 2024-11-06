@@ -13,7 +13,7 @@ const FramedFeatureSection: React.FC<FramedFeatureSectionProps> = ({
   imageSrc = defaultImage,
 }) => {
   return (
-    <div className="w-full md:w-[95%] mx-auto p-4 md:p-8">
+    <div className="w-full  mx-auto bg-white rounded-lg overflow-hidden mb-10 max-w-screen-xl">
       <div className="relative">
         <div className="flex flex-col md:flex-row items-center">
           {/* Text Section */}

@@ -1,9 +1,8 @@
 import React from 'react';
 import Image, { StaticImageData } from "next/image";
-import firstHeadingimage from "../../../public/assets/ServiceDetailsImages/firstheading.webp";
-import SecodhedingImage from "../../../public/assets/ServiceDetailsImages/secondheading.webp";
-import thirdheadingImage from "../../../public/assets/ServiceDetailsImages/thirdHeading.webp";
-
+import firstHeadingImage from "../../../public/assets/ServiceDetailsImages/firstheading.webp";
+import secondHeadingImage from "../../../public/assets/ServiceDetailsImages/secondheading.webp";
+import thirdHeadingImage from "../../../public/assets/ServiceDetailsImages/thirdheading.webp";
 
 interface Section {
   heading: string;
@@ -23,34 +22,34 @@ const DiagonalFeatureSection: React.FC<DiagonalFeatureSectionProps> = ({
   imageSrc = '',
 }) => {
   const sections: Section[] = [
-    { heading, description, imageSrc:firstHeadingimage },
-    { heading, description, imageSrc:SecodhedingImage },
-    { heading, description, imageSrc:thirdheadingImage },
+    { heading, description, imageSrc: firstHeadingImage },
+    { heading, description, imageSrc: secondHeadingImage },
+    { heading, description, imageSrc: thirdHeadingImage },
   ];
 
   return (
-    <div className="w-full md:w-[90%] py-16 mx-2 sm:mx-auto p-4 bg-white rounded-lg overflow-hidden shadow-md mb-10">
+    <div className="w-full py-16 px-4 md:px-8 mx-auto bg-white rounded-lg overflow-hidden shadow-md mb-10 max-w-screen-xl">
       {sections.map((section, index) => (
-        <div key={index} className="relative mb-32">
+        <div key={index} className="relative mb-16 md:mb-32">
           <div
-            className={`flex md:gap-32 flex-col-reverse md:flex-row ${
-              index % 2 !== 0 ? 'md:flex-row-reverse' : ''
-            }`}
-          >            <div className="relative w-full md:w-[42%] flex justify-center items-center ">
-              {/* <div className="absolute -bottom-10 md:right-24 w-[250px] h-[300px] md:w-[413px] md:h-[482px] bg-[#9A00FF]" /> */}
-              <div className="relative z-10 w-full h-full overflow-hidden">
+            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} md:gap-16 lg:gap-24`}
+          >
+            <div className="relative w-full md:w-1/2 flex justify-center items-center">
+              <div className="relative w-[250px] h-[300px] md:w-[400px] md:h-[450px] lg:w-[500px] lg:h-[600px] overflow-hidden rounded-lg">
                 <Image
                   src={section.imageSrc}
                   alt="Feature illustration"
-                  className="w-full h-full object-cover mt-16 sm:mt-0 md:w-[413px] md:h-[482px]"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg shadow-lg"
                 />
               </div>
             </div>
-            <div className="w-full md:w-1/2 mt-10 justify-center">
-              <h2 className="text-[32px] md:text-[40px] font-semibold mb-4 text-[#000000]">
+            <div className="w-full md:w-1/2 mt-10 md:mt-0 flex flex-col justify-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 text-gray-900">
                 {section.heading}
               </h2>
-              <p className="font-inter font-normal text-[#000000] text-lg">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-700">
                 {section.description}
               </p>
             </div>
