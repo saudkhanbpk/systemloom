@@ -36,9 +36,7 @@ const DiagonalFeatureSection: React.FC<DiagonalFeatureSectionProps> = ({
             className={`flex md:gap-32 flex-col-reverse md:flex-row ${
               index % 2 !== 0 ? 'md:flex-row-reverse' : ''
             }`}
-          >
-            {/* Image container */}
-            <div className="relative w-full md:w-[42%] flex justify-center items-center ">
+          >            <div className="relative w-full md:w-[42%] flex justify-center items-center ">
               {/* <div className="absolute -bottom-10 md:right-24 w-[250px] h-[300px] md:w-[413px] md:h-[482px] bg-[#9A00FF]" /> */}
               <div className="relative z-10 w-full h-full overflow-hidden">
                 <Image
@@ -48,7 +46,6 @@ const DiagonalFeatureSection: React.FC<DiagonalFeatureSectionProps> = ({
                 />
               </div>
             </div>
-            {/* Text container */}
             <div className="w-full md:w-1/2 mt-10 justify-center">
               <h2 className="text-[32px] md:text-[40px] font-semibold mb-4 text-[#000000]">
                 {section.heading}
