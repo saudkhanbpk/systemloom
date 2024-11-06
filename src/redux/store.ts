@@ -1,12 +1,39 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import authReducer from "./authSlice";
+import {
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
-// Configure the Redux store
+const persistConfig = {
+  key: 'root',
+  version: 1,
+  storage,
+}
+
+const rootReducer = combineReducers({
+  auth:authReducer,
+})
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+
 const store = configureStore({
-  reducer: {
-    auth: authReducer, // Use the authReducer in the store
-  },
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
+
 
 // Optional: Define types for RootState and AppDispatch for better TypeScript support
 export type RootState = ReturnType<typeof store.getState>;

@@ -9,11 +9,21 @@ import { CiLogout } from "react-icons/ci";
 import { IoMdLogIn } from "react-icons/io";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { FaHome, FaInfoCircle, FaServicestack, FaTags, FaBlog, FaProjectDiagram, FaBriefcase, FaEnvelope } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../redux/store";  // Import RootState for typing useSelector
+import axios from "axios";
+import { backend_url } from "@/newLayout";
+import { setUser } from "@/redux/authSlice";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
-const Header = () => {
+const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // For login state
+  
+  const router = useRouter()
+  const dispatch = useDispatch();
+  const { user } = useSelector((store: RootState) => store.auth);  // Typing store with RootState
 
   const navItems = [
     { name: "Home", href: "/", icon: <FaHome /> },
@@ -28,6 +38,22 @@ const Header = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleLogout = async () => {
+    try {
+      const res = await axios.get(`${backend_url}/api/v1/user/logout`, {withCredentials:true})
+      if (res.data.success){
+        dispatch(setUser(null))
+        router.push("/")
+        toast.success(res.data.message)
+      }
+    } catch (error: any) {
+      console.log(error);
+      toast.error(error?.response?.data?.message)
+      
+    }
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -70,12 +96,9 @@ const Header = () => {
             />
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 w-fit bg-white rounded-md shadow-lg py-2 z-20">
-                {isLoggedIn ? (
+                {user ? (
                   <button
-                    onClick={() => {
-                      setIsLoggedIn(false);
-                      setIsDropdownOpen(false);
-                    }}
+                    onClick={handleLogout}
                     className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
                   >
                     <CiLogout className="text-xl text-[#9A00FF]" /> Logout
@@ -126,9 +149,30 @@ const Header = () => {
                 {item.icon} {item.name}
               </Link>
             ))}
-            <button className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700">
-              <CiLogout className="text-white " /> Logout
-            </button>
+            {user && (
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700"
+              >
+                <CiLogout className="text-white" /> Logout
+              </button>
+            )}
+            {!user && (
+              <>
+                <Link
+                  href="/login"
+                  className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700"
+                >
+                  <IoMdLogIn className="text-white" /> Login
+                </Link>
+                <Link
+                  href="/register"
+                  className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700"
+                >
+                  <SiGnuprivacyguard className="text-white" /> Signup
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

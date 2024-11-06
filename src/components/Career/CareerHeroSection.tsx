@@ -6,6 +6,41 @@ import CareerSectionImage from '../../../public/assets/careerImages/Rectangle 40
 
 const CareerHeroSection: FC = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    jobField: '',
+    professionalUrl: '',
+    resume: null as File | null, // Explicitly define resume as File or null
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, files } = e.target;
+    if (type === 'file' && files) {
+      setFormData({ ...formData, [name]: files[0] }); // Access the first file from the FileList
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Here, add your API call logic to submit the form data
+    console.log(formData);
+
+    // Reset form after submission
+    setFormData({
+      name: '',
+      email: '',
+      phoneNumber: '',
+      jobField: '',
+      professionalUrl: '',
+      resume: null,
+    });
+    handleDialogClose(); // Close the dialog after submission
+  };
 
   const handleDialogOpen = () => setDialogOpen(true);
   const handleDialogClose = () => setDialogOpen(false);
@@ -47,15 +82,18 @@ const CareerHeroSection: FC = () => {
           onClick={handleDialogClose}
         >
           <div
-            className=" text-white p-6  sm:w-[400px] md:w-[600px] max-w-full relative z-50     h-fit w-full bg-purple-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100"
+            className="text-white p-6 sm:w-[400px] md:w-[600px] max-w-full relative z-50 h-fit w-full bg-purple-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100"
             onClick={(e) => e.stopPropagation()} // Prevent click from closing dialog
           >
             <h2 className="text-2xl font-semibold mb-4">Submit Your Resume</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-400">Name</label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
                   placeholder="Your name"
                   required
@@ -65,6 +103,9 @@ const CareerHeroSection: FC = () => {
                 <label className="block text-gray-400">Email</label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
                   placeholder="Your email"
                   required
@@ -74,6 +115,9 @@ const CareerHeroSection: FC = () => {
                 <label className="block text-gray-400">Phone</label>
                 <input
                   type="tel"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
                   placeholder="Your phone number"
                   required
@@ -83,6 +127,9 @@ const CareerHeroSection: FC = () => {
                 <label className="block text-gray-400">Field</label>
                 <input
                   type="text"
+                  name="jobField"
+                  value={formData.jobField}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
                   placeholder="Your field"
                   required
@@ -92,6 +139,9 @@ const CareerHeroSection: FC = () => {
                 <label className="block text-gray-400">Professional URL</label>
                 <input
                   type="url"
+                  name="professionalUrl"
+                  value={formData.professionalUrl}
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
                   placeholder="LinkedIn or other professional link"
                 />
@@ -100,6 +150,8 @@ const CareerHeroSection: FC = () => {
                 <label className="block text-gray-400">Resume</label>
                 <input
                   type="file"
+                  name="resume"
+                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white"
                   required
                 />

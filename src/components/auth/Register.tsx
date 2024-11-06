@@ -1,36 +1,57 @@
-// pages/register.tsx
 "use client";
 import { Facebook, Github } from 'lucide-react';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { FaGoogle, FaUser, FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+import { backend_url } from '@/newLayout';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 interface FormData {
   name: string;
   email: string;
   password: string;
-  role: string;
 }
 
 const Register: React.FC = () => {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-    password: '',
-    role: 'jobSeeker' 
+    password: ''
   });
+  const [loading, setLoading] = useState<boolean>(false); // New loading state
 
   const changeEventHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Add form submission logic, e.g., send data to API
-    console.log('Form data submitted:', formData);
+    setLoading(true); // Set loading to true when submitting
+    try {
+      const res = await axios.post(`${backend_url}/api/v1/user/register`, formData, {
+        headers:{
+          "Content-Type":"application/json"
+        },
+        withCredentials:true
+      });
+      if (res.data.success) {
+        toast.success(res.data.message);
+        setFormData({ name: '', email: '', password: '' });
+        router.push("/login");
+      }
+    } catch (error: any) {
+      console.log(error);
+      const errorMessage = error?.response?.data?.message || 'An error occurred';
+      toast.error(errorMessage);
+    } finally {
+      setLoading(false); // Reset loading state after submission
+    }
   };
 
   return (
@@ -121,38 +142,12 @@ const Register: React.FC = () => {
                 </div>
               </div>
 
-              {/* <div className="mb-4">
-                <div className="flex items-center gap-4">
-                  <label className="flex items-center cursor-pointer">
-                    <input 
-                      type="radio" 
-                      name="role" 
-                      value="jobSeeker" 
-                      checked={formData.role === 'jobSeeker'} 
-                      onChange={changeEventHandler} 
-                      className="mr-2" 
-                    />
-                    Job Seeker
-                  </label>
-                  <label className="flex items-center cursor-pointer">
-                    <input 
-                      type="radio" 
-                      name="role" 
-                      value="admin" 
-                      checked={formData.role === 'admin'} 
-                      onChange={changeEventHandler} 
-                      className="mr-2" 
-                    />
-                    Admin
-                  </label>
-                </div>
-              </div> */}
-
               <button
                 type="submit"
-                className="inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none cursor-pointer"
+                className={`inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none cursor-pointer ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                disabled={loading} // Disable button while loading
               >
-                Register
+                {loading ? 'Loading...' : 'Register'} {/* Show loading text */}
               </button>
 
               <p className="mt-4 text-center text-gray-400">

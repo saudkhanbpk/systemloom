@@ -1,26 +1,66 @@
-// pages/login.tsx
 "use client";
 import { Facebook } from 'lucide-react';
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { FaGoogle, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { backend_url } from '@/newLayout';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
+import { setUser } from '@/redux/authSlice';
+import { useDispatch } from 'react-redux';
 
 const Login: React.FC = () => {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    role: 'jobSeeker',
   });
+  const [loading, setLoading] = useState(false); // Loading state
 
   const changeEventHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setLoading(true); // Set loading to true
+    try {
+      const res = await axios.post(`${backend_url}/api/v1/user/login`, formData, {
+        headers: {
+          "Content-Type": "application/json"
+        },
+        withCredentials: true
+      });
+      if (res.data.success) {
+        // Dispatch user to Redux state
+        dispatch(setUser(res.data.user));
+
+        // Redirect based on user role
+        if (res.data.user.role === "admin") {
+          router.push("/admin");
+        } else {
+          router.push("/");
+        }
+
+        toast.success(res.data.message);
+        setFormData({ email: '', password: '' }); // Clear form data
+      }
+    } catch (error: any) {
+      console.log(error);
+      const errorMessage = error?.response?.data?.message || 'An error occurred';
+      toast.error(errorMessage);
+    } finally {
+      setLoading(false); // Reset loading state
+    }
+  };
+
   return (
-    <motion.div 
+    <motion.div
       className="flex items-center justify-center min-h-screen bg-gray-900 p-4"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -30,9 +70,9 @@ const Login: React.FC = () => {
         
         {/* Image - Hidden on small screens */}
         <div className='w-[300px] md:w-[600px] hidden md:block'>
-          <motion.img 
-            src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" 
-            alt="Login Illustration" 
+          <motion.img
+            src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            alt="Login Illustration"
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -41,8 +81,8 @@ const Login: React.FC = () => {
 
         {/* Form Container */}
         <div className='w-full max-w-md text-white'>
-          <form>
-            <motion.div 
+          <form onSubmit={handleSubmit}>
+            <motion.div
               className='flex flex-col md:flex-row gap-6 items-center text-white'
               initial={{ y: -30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -67,15 +107,16 @@ const Login: React.FC = () => {
               <h2 className='mb-2'>Email</h2>
               <div className='flex items-center border-2 border-gray-500 rounded'>
                 <FaEnvelope className='text-gray-500 p-2' size={24} />
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="email"
-                  placeholder='Email address' 
-                  className='w-full px-2 py-3 outline-none bg-gray-900 text-white' 
+                  placeholder='Email address'
+                  className='w-full px-2 py-3 outline-none bg-gray-900 text-white'
                   autoComplete="off"
                   value={formData.email}
                   onChange={changeEventHandler}
-                  required 
+                  required
+                  aria-label="Email address"
                 />
               </div>
             </div>
@@ -93,53 +134,28 @@ const Login: React.FC = () => {
                   autoComplete="off"
                   value={formData.password}
                   onChange={changeEventHandler}
-                  required 
+                  required
+                  aria-label="Password"
                 />
-                <div 
-                  className='p-2 cursor-pointer' 
+                <div
+                  className='p-2 cursor-pointer'
                   onClick={() => setShowPassword(!showPassword)}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
                 >
                   {showPassword ? <FaEyeSlash className='text-gray-500' size={24} /> : <FaEye className='text-gray-500' size={24} />}
                 </div>
               </div>
             </div>
 
-            {/* Role Selection */}
-            {/* <div className='mb-4'>
-              <div className='flex items-center gap-4'>
-                <label className='flex items-center cursor-pointer'>
-                  <input 
-                    type="radio" 
-                    name="role" 
-                    value="jobSeeker" 
-                    checked={formData.role === 'jobSeeker'} 
-                    onChange={changeEventHandler} 
-                    className="mr-2" 
-                  />
-                  Job Seeker
-                </label>
-                <label className='flex items-center cursor-pointer'>
-                  <input 
-                    type="radio" 
-                    name="role" 
-                    value="admin" 
-                    checked={formData.role === 'admin'} 
-                    onChange={changeEventHandler} 
-                    className="mr-2" 
-                  />
-                  Admin
-                </label>
-              </div>
-            </div> */}
-
             {/* Submit Button */}
             <motion.button
               type="submit"
-              className="inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none"
+              className={`inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              disabled={loading} // Disable button when loading
             >
-              Login
+              {loading ? 'Logging in...' : 'Login'}
             </motion.button>
 
             <p className='mt-4 text-center text-gray-400'>
