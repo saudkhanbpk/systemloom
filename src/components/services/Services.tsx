@@ -13,8 +13,7 @@ interface Service {
 
 const ServicesSec = () => {
   const servicesArr: Service[] = [
-    {
-      id: 1,
+    {id: 1,
       title: "Web Design & Development",
       des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
       image: "/assets/landingPage/Code_perspective_matte.png",
@@ -80,7 +79,6 @@ const ServicesSec = () => {
 
   return (
     <div>
-      <div>
         <div className="relative bg-gray-900 text-white">
           <div className="absolute inset-0 overflow-hidden">
             <Image
@@ -90,7 +88,7 @@ const ServicesSec = () => {
             />
           </div>
           <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-            <div className="text-center mt-10">
+            <div className="text-left md:text-center mt-10">
               <h1 className="font-semibold text-[40px] md:text-[57px] leading-[50px] md:leading-[65px] mb-6">
                 Our Services
               </h1>
@@ -100,8 +98,7 @@ const ServicesSec = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="mb-10 mt-10 mx-auto flex flex-wrap justify-center  md:gap-24 gap-4 w-full px-4 sm:px-6 md:px-10 py-10">
+        <div className="mb-10 mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 xll:grid-cols-3 xl:grid-cols-3  gap-10 w-full px-4 sm:px-6 md:px-10 py-0 md:py-10 max-w-7xl">
         {
           servicesArr.map((item) => (
             <Link href={item.link || "#"} key={item.id}>
