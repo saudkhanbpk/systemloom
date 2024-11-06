@@ -17,10 +17,10 @@ const DetailPost: React.FC = () => {
   }
 
   return (
-    <Layout>
+    <>
       <BlogHeroDetail/>
 <BlogDetails params={{ title: postId }} />
-    </Layout>
+    </>
     
   );
 };

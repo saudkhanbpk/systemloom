@@ -21,8 +21,8 @@ const JobCard: FC<JobCardProps> = ({
   timeAgo = "6 months ago",
 }) => {
   return (
-    <div className="bg-[#F4F6FC] rounded-[24px] p-6 w-[360px] h-auto hover:shadow-lg transition-shadow   ">
-      <div className=" flex items-center mb-3">
+    <div className="bg-[#F4F6FC] rounded-[24px] p-6 md:w-[360px] w-[300px] h-auto hover:shadow-lg transition-shadow   ">
+      <div className=" flex  items-center mb-3">
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-purple-600 mr-2"></div>
           <span className="text-purple-600 text-sm font-medium">{category}</span>
@@ -63,12 +63,12 @@ const JobCard: FC<JobCardProps> = ({
 // JobsCard component as main container
 const JobsCard: FC = () => {
   return (
-    <div className="bg-[#FFFFFF] py-12 px-10 ">
+    <div className="bg-[#FFFFFF] py-12 lg:px-10 px-3 ">
       <div>
         <p className="font-inter font-semibold text-[42px]">Open positions</p>
         <p className="font-inter font-normal text-[22px] text-[#838696]">Come join the team!</p>
       </div>
-      <div className="flex flex-wrap  py-14 gap-10 justify-center">
+      <div className="flex flex-wrap  py-14 lg:gap-10 gap-5 justify-center">
   <JobCard />
   <JobCard
     category="Design"
