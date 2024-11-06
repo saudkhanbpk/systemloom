@@ -24,6 +24,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       }`}
       style={{
         boxShadow: `${style ? "3px 4px 5px 0px #00000040" : "0px 4px 30px 0px #0000000D"}`,
+        maxWidth:'100%',
+        overflow:'hidden'
       }}
     >
       <div className="mb-4 p-3 h-[58px] w-full bg-purple-100 rounded-full">

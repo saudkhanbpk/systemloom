@@ -27,7 +27,7 @@ const FeaturesList: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-8 mt-20  lg:mx-0 border-y border-dotted border-gray-300 ">
+    <div className="w-full py-8 lg:mt-20  lg:mx-0 border-y border-dotted border-gray-300 ">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
           {features.map((feature, index) => (
