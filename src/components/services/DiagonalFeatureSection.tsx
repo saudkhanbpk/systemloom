@@ -2,7 +2,7 @@ import React from 'react';
 import Image, { StaticImageData } from "next/image";
 import firstHeadingImage from "../../../public/assets/ServiceDetailsImages/firstheading.webp";
 import secondHeadingImage from "../../../public/assets/ServiceDetailsImages/secondheading.webp";
-import thirdHeadingImage from "../../../public/assets/ServiceDetailsImages/thirdheading.webp";
+// import thirdHeadingImage from "../../../public/assets/ServiceDetailsImages/thirdheading.webp";
 
 interface Section {
   heading: string;
@@ -24,7 +24,7 @@ const DiagonalFeatureSection: React.FC<DiagonalFeatureSectionProps> = ({
   const sections: Section[] = [
     { heading, description, imageSrc: firstHeadingImage },
     { heading, description, imageSrc: secondHeadingImage },
-    { heading, description, imageSrc: thirdHeadingImage },
+    // { heading, description, imageSrc: thirdHeadingImage },
   ];
 
   return (
