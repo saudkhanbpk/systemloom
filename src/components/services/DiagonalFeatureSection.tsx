@@ -24,7 +24,7 @@ const DiagonalFeatureSection: React.FC<DiagonalFeatureSectionProps> = ({
   const sections: Section[] = [
     { heading, description, imageSrc: firstHeadingImage },
     { heading, description, imageSrc: secondHeadingImage },
-    { heading, description, imageSrc: thirdHeadingImage },
+    // { heading, description, imageSrc: thirdHeadingImage },
   ];
 
   return (
