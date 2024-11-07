@@ -10,25 +10,21 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
   key: 'root',
   version: 1,
   storage,
-}
-
+};
 
 const rootReducer = combineReducers({
   auth:authReducer,
   job:jobReducer
 })
 
-
-
-const persistedReducer = persistReducer(persistConfig, rootReducer)
-
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
@@ -39,5 +35,9 @@ const store = configureStore({
       },
     }),
 });
+
+// Optional: Define types for RootState and AppDispatch for better TypeScript support
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
 export default store;
