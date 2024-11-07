@@ -12,7 +12,6 @@ import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 
 export const backend_url = process.env.NEXT_PUBLIC_BACKEND_URL;
-
 // Create persistor outside of the component
 const persistor = persistStore(store);
 
