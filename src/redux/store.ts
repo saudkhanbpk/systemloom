@@ -19,10 +19,13 @@ const persistConfig = {
   storage,
 }
 
+
 const rootReducer = combineReducers({
   auth:authReducer,
   job:jobReducer
 })
+
+
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
@@ -36,10 +39,5 @@ const store = configureStore({
       },
     }),
 });
-
-
-// Optional: Define types for RootState and AppDispatch for better TypeScript support
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
 
 export default store;
