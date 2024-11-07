@@ -3,6 +3,9 @@ import Image from 'next/image';
 import CommonButton from '../common/Button';
 import { FC } from 'react';
 import CareerSectionImage from '../../../public/assets/careerImages/Rectangle 402.png';
+import axios from 'axios';
+import { backend_url } from '@/newLayout';
+import { toast } from 'react-toastify';
 
 const CareerHeroSection: FC = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -14,6 +17,7 @@ const CareerHeroSection: FC = () => {
     professionalUrl: '',
     resume: null as File | null, // Explicitly define resume as File or null
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, files } = e.target;
@@ -27,19 +31,47 @@ const CareerHeroSection: FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Here, add your API call logic to submit the form data
-    console.log(formData);
+    // Create FormData to handle file upload
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('phoneNumber', formData.phoneNumber);
+    formDataToSend.append('jobField', formData.jobField);
+    formDataToSend.append('professionalUrl', formData.professionalUrl);
+    if (formData.resume) {
+      formDataToSend.append('resume', formData.resume);
+    }
 
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phoneNumber: '',
-      jobField: '',
-      professionalUrl: '',
-      resume: null,
-    });
-    handleDialogClose(); // Close the dialog after submission
+    setLoading(true); // Start loading indicator
+    
+
+    try {
+      // Send the form data to the backend
+      const res = await axios.post(`${backend_url}/api/v1/resume/send`, formDataToSend, {
+        headers: {
+          'Content-Type': 'multipart/form-data', // Required for file upload
+        },
+      });
+console.log(res.data);
+
+      if (res.data.success) {
+        toast.success(res.data.message)
+        setFormData({
+          name: '',
+          email: '',
+          phoneNumber: '',
+          jobField: '',
+          professionalUrl: '',
+          resume: null,
+        });
+      }
+    } catch (error:any) {
+      console.log(error);
+      toast.error(error.response.data.message)
+      
+    } finally {
+      setLoading(false); // Stop loading indicator
+    }
   };
 
   const handleDialogOpen = () => setDialogOpen(true);
@@ -86,6 +118,7 @@ const CareerHeroSection: FC = () => {
             onClick={(e) => e.stopPropagation()} // Prevent click from closing dialog
           >
             <h2 className="text-2xl font-semibold mb-4">Submit Your Resume</h2>
+            
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-400">Name</label>
@@ -164,8 +197,12 @@ const CareerHeroSection: FC = () => {
                 >
                   Cancel
                 </button>
-                <button type="submit" className="bg-[#9A00FF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg">
-                  Submit
+                <button
+                  type="submit"
+                  className="bg-[#9A00FF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg"
+                  disabled={loading}
+                >
+                  {loading ? 'Submitting...' : 'Submit'}
                 </button>
               </div>
             </form>

@@ -1,9 +1,9 @@
-// jobCard.tsx (TypeScript version for Next.js)
-
+import JobDetail from './JobDetail';
 import { useSelector } from 'react-redux';
 import { MapPin, Clock } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { RootState } from '@/redux/store';
+import { useState } from 'react';
 
 
 
@@ -71,27 +71,54 @@ const JobCard = ({
 const JobsCard = () => {
   // Correct useSelector usage
   const { allJobs } = useSelector((state: RootState) => state.job);
+  // console.log(allJobs);
+
+  // State for modal visibility and selected job
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
+
+  
+
+  const openModal = (job:any) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedJob(null);
+  };
+  
 
   return (
+    <>
     <div className="bg-[#FFFFFF] py-12 lg:px-10 px-3">
       <div>
         <p className="font-inter font-semibold text-[42px]">Open positions</p>
         <p className="font-inter font-normal text-[22px] text-[#838696]">Come join the team!</p>
       </div>
       <div className="flex flex-wrap py-14 lg:gap-10 gap-5 justify-center">
-        {allJobs?.map((job) => (
-          <JobCard
-            key={job._id} // Assuming jobs have a unique _id
-            category={job.category}
-            title={job.title}
-            location={job.location}
-            type={job.employmentType}
-            company={job.company}
-            timeAgo={job.createdAt}
-          />
-        ))}
+      {allJobs?.map((job) => (
+            <div key={job._id} onClick={() => openModal(job)}>
+              <JobCard
+                category={job.category}
+                title={job.title}
+                location={job.location}
+                type={job.employmentType}
+                company={job.company}
+                timeAgo={job.createdAt}
+              />
+            </div>
+          ))}
       </div>
     </div>
+
+    {/* Render the JobDetail modal only if a job is selected */}
+    {selectedJob && (
+        <JobDetail isOpen={isModalOpen} onClose={closeModal} job={selectedJob} />
+      )}
+    </>
+    
   );
 };
 
