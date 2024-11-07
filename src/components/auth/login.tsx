@@ -30,7 +30,7 @@ const Login: React.FC = () => {
     e.preventDefault();
     setLoading(true); // Set loading to true
     try {
-      const res = await axios.post(`https://techcreator-backend.onrender.com/api/v1/user/login`, formData, {
+      const res = await axios.post(`${backend_url}/api/v1/user/login`, formData, {
         headers: {
           "Content-Type": "application/json"
         },
