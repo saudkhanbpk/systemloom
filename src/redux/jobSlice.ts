@@ -8,6 +8,7 @@ interface Job {
   employmentType: string;
   company: string;
   timeAgo: string;
+  createdAt: Date;
 }
 
 interface JobState {

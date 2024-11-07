@@ -14,7 +14,7 @@ interface JobCardProps {
   location: string;
   type: string;
   company: string;
-  timeAgo: Date | string;
+  timeAgo: Date;
 }
 
 const JobCard = ({
