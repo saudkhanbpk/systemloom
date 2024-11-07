@@ -20,7 +20,7 @@ const StatsDisplay: React.FC = () => {
         <div className='flex flex-col md:flex-row items-center gap-5'>
           
           {/* Stats Column */}
-          <div className='flex flex-col gap-4 text-center'>
+          <div className='flex md:flex-col flex-row gap-4 text-center'>
             <div className='bg-[#A7B8FF] text-white p-4 py-8 rounded-3xl w-full sm:w-auto'>
               <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>98%</h1>
               <p className='text-sm sm:text-base'>Training Completion</p>
@@ -39,16 +39,17 @@ const StatsDisplay: React.FC = () => {
       </div>
 
       {/* dev2 */}
-      <div className='flex flex-col gap-3 mt-6 md:mt-0'>
-        <div className='py-2 p-2 px-2 w-full sm:w-[280px] h-[200px] sm:h-[240px] rounded-3xl bg-[#006A60] text-white text-center'>
-          <h1 className='text-5xl sm:text-6xl md:text-7xl font-bold'>98%</h1>
-          <p className='text-sm sm:text-base'>Client Satisfaction</p>
-        </div>
-        <div className='py-2 p-2 px-2 w-full sm:w-[280px] h-[200px] sm:h-[240px] rounded-3xl bg-[#FFD572] text-green-900 text-center'>
-          <h1 className='text-5xl sm:text-6xl md:text-7xl font-bold'>100%</h1>
-          <p className='text-sm sm:text-base'>Success Rate</p>
-        </div>
-      </div>
+      <div className='flex md:flex-col flex-row gap-3 mt-6 md:mt-0 justify-center items-center'>
+  <div className='py-2 p-2 px-2 w-[180px] sm:w-[280px] h-[200px] sm:h-[240px] rounded-3xl bg-[#006A60] text-white text-center'>
+    <h1 className='text-5xl sm:text-6xl md:text-7xl font-bold'>98%</h1>
+    <p className='text-sm sm:text-base'>Client Satisfaction</p>
+  </div>
+  <div className='py-2 p-2 px-2 sm:w-[280px] w-[180px] h-[200px] sm:h-[240px] rounded-3xl bg-[#FFD572] text-green-900 text-center'>
+    <h1 className='text-5xl sm:text-6xl md:text-7xl font-bold'>100%</h1>
+    <p className='text-sm sm:text-base'>Success Rate</p>
+  </div>
+</div>
+
     </div>
   );
 };

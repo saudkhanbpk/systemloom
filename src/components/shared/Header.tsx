@@ -58,7 +58,7 @@ const Header: React.FC = () => {
 
   return (
     <nav className="text-white absolute z-10 px-4 py-2 w-full text-nowrap">
-      <div className="md:pr-10 md:pl-10 mx-auto">
+      <div className="lg:pr-10 lg:pl-10 mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex justify-center gap-2 items-center">
             <div>
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-base rounded-md font-medium hover:bg-[#9A00FF] text-white"
+                  className="lg:px-3 px-1 py-2 md:text-sm lg:text-base   rounded-md font-medium hover:bg-[#9A00FF] text-white"
                 >
                   {item.name}
                 </Link>
@@ -138,7 +138,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
+        <div className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <Link

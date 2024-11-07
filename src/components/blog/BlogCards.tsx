@@ -54,10 +54,10 @@ const BlogCards: React.FC = () => {
   ];
 
   return (
-    <div className="container mb-10 mt-10 mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+    <div className="container mb-10 mt-10 mx-auto max-w-7xl grid grid-cols-1  sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3  w-full ">
       {blogData.map((item) => (
         <div key={item.id} className="p-2">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full space-x-2 h-auto md:w-[350px] sm:h-[480px]">
             <Image src={item.image} alt={item.title} className="w-full h-48 object-cover" />
             <div className="p-6">
               <Link href={`/blog/blogDetail/${createSlug(item.title)}`}>
@@ -66,7 +66,7 @@ const BlogCards: React.FC = () => {
                 </h2>
               </Link>
               <p className="text-gray-600 mb-4">{item.description}</p>
-              <div className="flex items-center">
+              <div className="flex items-center mb-3 ">
                 <Image 
                   src={item.authorImage} 
                   alt={item.authorName} 

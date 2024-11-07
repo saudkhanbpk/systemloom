@@ -31,7 +31,7 @@ const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
 const CoreValues: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16 md:mt-44 mt-32">
-      <div className="grid grid-cols-1 md:grid-cols-2 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 space-x-3 ">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Our core values</h2>
           <p className="text-gray-600 max-w-2xl">
@@ -39,7 +39,7 @@ const CoreValues: React.FC = () => {
             We're all in the same boat - It's time to begin the voyage.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 space-y-2 sm:space-y-0 ">
+        <div className="grid sm:grid-cols-2 space-x-2 space-y-2 sm:space-y-0 ">
           <ValueCard
             icon={sunGlasses}
             title="Be You"

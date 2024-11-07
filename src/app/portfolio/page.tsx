@@ -1,6 +1,6 @@
 "use client"
 
-import Companies from "@/components/landingPage/Companies"
+import Companies, { CTASection } from "@/components/landingPage/Companies"
 import ServicesSection from "@/components/landingPage/ServicesSection"
 import ClientTestimonialsSection from "@/components/landingPage/TestimonialCard"
 import HeroSection from "@/components/portfolio/HeroSection"
@@ -15,6 +15,7 @@ const Portfolio = () => {
       <ServicesSection/>
       <StatsDisplay/>
       <Companies/>
+      {/* <CTASection/> */}
       <OurProjectsGrid/>
       <ClientTestimonialsSection/>
       </>

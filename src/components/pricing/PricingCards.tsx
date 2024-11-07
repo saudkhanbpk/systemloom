@@ -87,11 +87,11 @@ const PricingCards: React.FC = () => {
       </div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center space-y-3 md:space-y-0 md:gap-0">
+    <div className="flex flex-wrap justify-center items-center   gap-4">
       {plans.map((plan, index) => (
         <div
           key={index}
-          className="bg-[#4848485C] bg-gray-800 w-full md:w-[359px] h-auto md:h-[604.11px] rounded-lg p-6 flex flex-col animate-card-entry"
+          className="bg-[#4848485C] bg-gray-800 w-[300px] md:w-[359px] h-[550px] md:h-[604.11px] rounded-lg p-6 flex flex-col animate-card-entry "
         >
           <h2 className="text-xl font-semibold mb-2 animate-fade-in-delay">
             {plan.name}

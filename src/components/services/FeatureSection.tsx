@@ -47,7 +47,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
       alt="Feature section image"
       width={300} 
       height={450}
-      className=" lg:w-[400px] lg:h-[450px] mx-auto lg:absolute lg:left-30 lg:top-10 shadow-xl"
+      className=" lg:w-[400px] lg:h-[450px] mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
     />
   </div>
   <div className="bg-[#9A00FF] w-full max-w-[800px] lg:max-w-none lg:flex-grow lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 lg:ml-[-40px] xl:ml-[-100px]">
