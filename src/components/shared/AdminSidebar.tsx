@@ -21,6 +21,7 @@ const AdminSidebar: React.FC = () => {
   // ];
   const links = [
     { href: "/admin/create-blog", label: "Create Blog", icon: <FaPlus className="w-6 h-6" /> },
+    { href: "/admin/all-projects", label: "All Projects", icon: <FaRegFileAlt className="w-6 h-6" /> },
     { href: "/admin/create-job", label: "Create Job", icon: <FaPlus className="w-6 h-6" /> },
     { href: "/admin/all-blogs", label: "All Blogs", icon: <FaRegFileAlt className="w-6 h-6" /> },
     { href: "/admin/all-jobs", label: "All Jobs", icon: <FaRegFileAlt className="w-6 h-6" /> },

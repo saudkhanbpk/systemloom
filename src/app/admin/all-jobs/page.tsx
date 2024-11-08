@@ -1,0 +1,25 @@
+"use client"
+import JobsCard from '@/components/admin/Alljobs'
+import Header from '@/components/admin/Header'
+import AdminLayout from '@/components/shared/AdminLayout'
+import useGetAllJobs from '@/hooks/useGetAllJobs'
+import React, { useState } from 'react'
+
+// Define the component using React.FC type
+const Page: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState<string>("")
+
+  // Invoke the custom hook
+  useGetAllJobs()
+
+  return (
+    <AdminLayout>
+      <div className="">
+        <Header onSearch={setSearchTerm} buttonType="job" />
+        <JobsCard searchTerm={searchTerm} />
+      </div>
+    </AdminLayout>
+  )
+}
+
+export default Page
