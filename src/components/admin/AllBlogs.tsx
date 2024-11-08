@@ -1,88 +1,7 @@
-// import React from 'react';
-// import { FaEdit, FaTrash } from 'react-icons/fa';
-
-// // Define a type for the blog data
-// interface Blog {
-//   id: number;
-//   image: string;
-//   content: string;
-//   tags: string[];
-//   publishDate: string;
-// }
-
-// const AllBlogs: React.FC = () => {
-//   // Sample blog data
-//   const blogs: Blog[] = [
-//     {
-//       id: 1,
-//       image: 'https://media.istockphoto.com/id/1830163120/photo/group-of-computer-programmers-talking-while-working-at-it-office.jpg?s=2048x2048&w=is&k=20&c=9kBhD3LKWrtIOvnA1Y7TNQ1Wde83uUBtJAofUFxK898=',
-//       content: 'This is a sample blog content.',
-//       tags: ['React', 'JavaScript'],
-//       publishDate: '2023-11-04',
-//     },
-//     {
-//       id: 2,
-//       image: 'https://media.istockphoto.com/id/1830159907/photo/happy-ceo-offering-handshake-in-front-of-his-business-team-and-looking-at-camera.jpg?s=2048x2048&w=is&k=20&c=gLPcMu43smWQ5Sfbo37FJQX1QwnSGWFnS8uY8bSEVXM=',
-//       content: 'Another blog content example.',
-//       tags: ['Next.js', 'TypeScript'],
-//       publishDate: '2023-11-03',
-//     },
-//     // Add more blog data as needed
-//   ];
-
-//   return (
-//     <div className="my-10 px-4 sm:px-6 lg:px-8">
-//       <h2 className="text-2xl font-bold mb-5">All Blogs</h2>
-//       {/* Scrollable container for small screens */}
-//       <div className="overflow-x-auto md:w-[80vw] w-[65vw]">
-//         <table className="min-w-full border border-gray-300  text-xs md:text-base"> {/* Smaller text on small screens */}
-//           <thead>
-//             <tr className="bg-gray-100">
-//               <th className="px-2 py-1 border md:text-base text-xs text-left">Image</th>
-//               <th className="px-2 py-1 md:text-base text-xs border text-left">Content</th>
-//               <th className="px-2 py-1 border md:text-base text-xs text-left">Tags</th>
-//               <th className="px-2 py-1 border md:text-base text-xs text-left">Publish</th>
-//               <th className="px-2 py-1 border md:text-base text-xs text-left">Action</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {blogs.map((blog) => (
-//               <tr key={blog.id} className="hover:bg-gray-50">
-//                 <td className="px-2 py-1 border">
-//                   <img src={blog.image} alt="Blog" className="w-12 h-12 object-cover" /> {/* Smaller image */}
-//                 </td>
-//                 <td className="px-2 py-1 md:text-base text-xs text-nowrap border">{blog.content}</td>
-//                 <td className="px-2 py-1 border">
-//                   {blog.tags.map((tag, index) => (
-//                     <span key={index} className="text-xs bg-blue-100 text-nowrap text-blue-700 rounded-full px-1 py-0.5 mr-1"> {/* Smaller tags */}
-//                       {tag}
-//                     </span>
-//                   ))}
-//                 </td>
-//                 <td className="px-2 py-1 border text-nowrap">{blog.publishDate}</td>
-//                 <td className="px-2 py-1 border text-center  space-x-1 flex justify-center"> {/* Adjusted spacing */}
-//                   <button className="p-1 text-blue-500 hover:text-blue-700" aria-label="Edit">
-//                     <FaEdit size={14} /> {/* Smaller icon */}
-//                   </button>
-//                   <button className="p-1 text-red-500 hover:text-red-700" aria-label="Delete">
-//                     <FaTrash size={14} /> {/* Smaller icon */}
-//                   </button>
-//                 </td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AllBlogs;
-
-
 "use client";
 import React, { useState } from "react";
 import { MdFilterList } from "react-icons/md";
+import Link from 'next/link';
 import { IoMdAdd, IoMdArrowDown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { FaRegTrashCan } from "react-icons/fa6";
@@ -146,21 +65,24 @@ const AllBlogs: React.FC = () => {
   };
 
   return (
-    <main className="max-w-7xl mx-auto bg-inline p-6">
-      <header className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
+    <main className="max-w-7xl mx-auto bg-inline lg:p-6">
+      <header className="flex flex-col md:flex-row justify-between md:items-center mb-4 space-y-4 md:space-y-0">
         <div className="flex items-center space-x-4">
-          <button
+          {/* <button
             aria-label="Filter Blogs"
             className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50"
           >
             <MdFilterList className="mr-2" /> Filters
-          </button>
-          <button
-            aria-label="Add Blog"
-            className="flex items-center px-4 py-2 bg-[#9A00FF] text-white rounded-lg shadow-sm hover:bg-[#32044f]"
-            >
-            <IoMdAdd className="mr-2" /> Add Blog
-          </button>
+          </button> */}
+   <Link href="/create-blog" passHref>
+      <button
+        aria-label="Add Blog"
+        className="flex items-center px-4 py-2 bg-[#9A00FF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
+      >
+        <IoMdAdd className="mr-2" /> Add Blog
+      </button>
+    </Link>
+
           <span className="text-gray-700">1 row selected</span>
         </div>
         <div className="relative w-full md:w-auto">
@@ -179,7 +101,7 @@ const AllBlogs: React.FC = () => {
       <section className="overflow-x-auto shadow rounded-lg bg-white">
         <table className="min-w-full bg-white border border-gray-200 rounded-lg">
           <thead>
-            <tr className="bg-gray-50">
+            <tr className="bg-gray-50 text-nowrap">
               <th className="px-6 py-3 border-b border-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 <input className="form-checkbox h-4 w-4 text-blue-600" type="checkbox" aria-label="Select All" />
               </th>
@@ -216,7 +138,7 @@ const AllBlogs: React.FC = () => {
                     height="40"
                   />
                 </td>
-                <td className="px-6 py-4 border-b border-gray-200 text-gray-900">{blog.content}</td>
+                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.content}</td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
                   {blog.tags.map((tag, index) => (
                     <span key={index} className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 mr-1">
@@ -224,7 +146,7 @@ const AllBlogs: React.FC = () => {
                     </span>
                   ))}
                 </td>
-                <td className="px-6 py-4 border-b border-gray-200 text-gray-900">{blog.publishDate}</td>
+                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.publishDate}</td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
                   <button aria-label="Delete Blog" className="text-gray-500 hover:text-gray-700">
                     <FaRegTrashCan />
@@ -238,7 +160,7 @@ const AllBlogs: React.FC = () => {
           </tbody>
         </table>
 
-        <div className="flex flex-col sm:flex-row justify-between items-center mt-4 space-y-2 sm:space-y-0 p-3">
+        <div className="flex  flex-row justify-between items-center mt-4 space-y-2 sm:space-y-0 p-3 ">
           <button
             aria-label="Previous Page"
             className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${
