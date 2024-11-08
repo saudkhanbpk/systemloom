@@ -6,58 +6,49 @@ import { IoMdAdd, IoMdArrowDown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FiEdit2 } from "react-icons/fi";
-import { usePathname } from 'next/navigation';
-
+import { useEffect } from "react";
 // Define a type for the blog data
 interface Blog {
   id: number;
-  image: string;
+  image: any;
   content: string;
   tags: string[];
-  publishDate: string;
+  createdAt: any;
+  publish:boolean;
+  title:string
+  
 }
 
 const AllBlogs: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const blogsPerPage = 5;
-  const blogs: Blog[] = [
-    {
-      id: 1,
-      image:
-        "https://media.istockphoto.com/id/1830163120/photo/group-of-computer-programmers-talking-while-working-at-it-office.jpg?s=2048x2048&w=is&k=20&c=9kBhD3LKWrtIOvnA1Y7TNQ1Wde83uUBtJAofUFxK898=",
-      content: "This is a sample blog content.",
-      tags: ["React", "JavaScript"],
-      publishDate: "2023-11-04",
-    },
-    {
-      id: 2,
-      image:
-        "https://media.istockphoto.com/id/1830159907/photo/happy-ceo-offering-handshake-in-front-of-his-business-team-and-looking-at-camera.jpg?s=2048x2048&w=is&k=20&c=gLPcMu43smWQ5Sfbo37FJQX1QwnSGWFnS8uY8bSEVXM=",
-      content: "Another blog content example.",
-      tags: ["Next.js", "TypeScript"],
-      publishDate: "2023-11-03",
-    },
-    // Add more blog data as needed
-  ];
-
-  // Filter blogs based on the search term
-  const filteredBlogs = blogs.filter((blog) =>
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  useEffect(() => {
+    async function fetchBlogs() {
+      try {
+        const response = await fetch("https://tech-creator-backend.onrender.com/api/blogs/");
+        const data = await response.json();
+        setBlogs(data.blogs);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    }
+    fetchBlogs();
+  }, []);
+  const filteredBlogs = Array.isArray(blogs) ? blogs.filter((blog)=>
     blog.content.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+  ) : [];
   const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
   const displayedBlogs = filteredBlogs.slice(
     (currentPage - 1) * blogsPerPage,
     currentPage * blogsPerPage
   );
-
   const handleNext = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
   };
-
   const handlePrevious = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -74,7 +65,7 @@ const AllBlogs: React.FC = () => {
           >
             <MdFilterList className="mr-2" /> Filters
           </button> */}
-   <Link href="/create-blog" passHref>
+   <Link href="/admin/create-blog" passHref>
       <button
         aria-label="Add Blog"
         className="flex items-center px-4 py-2 bg-[#9A00FF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
@@ -109,7 +100,7 @@ const AllBlogs: React.FC = () => {
                 Image <IoMdArrowDown className="inline ml-2" />
               </th>
               <th className="px-6 py-3 border-b border-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Content <IoMdArrowDown className="inline ml-2" />
+                Title <IoMdArrowDown className="inline ml-2" />
               </th>
               <th className="px-6 py-3 border-b border-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Tags <IoMdArrowDown className="inline ml-2" />
@@ -133,12 +124,12 @@ const AllBlogs: React.FC = () => {
                   <img
                     alt="Blog preview"
                     className="h-10 w-10 rounded object-cover"
-                    src={blog.image}
+                    src={blog?.image.imageUrl}
                     width="40"
                     height="40"
                   />
                 </td>
-                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.content}</td>
+                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog?.title}</td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
                   {blog.tags.map((tag, index) => (
                     <span key={index} className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 mr-1">
@@ -146,7 +137,14 @@ const AllBlogs: React.FC = () => {
                     </span>
                   ))}
                 </td>
-                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.publishDate}</td>
+                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">
+                 {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                 year: "numeric",
+                  month: "long",
+                day: "numeric",
+                   })}
+                    </td>
+                {/* <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.createdAt | Date }</td> */}
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
                   <button aria-label="Delete Blog" className="text-gray-500 hover:text-gray-700">
                     <FaRegTrashCan />
