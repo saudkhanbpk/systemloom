@@ -17,7 +17,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
             <AdminHeader />
             <div className="flex flex-1">
                 {memoizedSidebar} {/* Sidebar will not re-render */}
-                <main className="flex-1 p-4">
+                <main className="flex-1 p-4 w-100 overflow-auto">
                     {children} {/* Only this part will change on page navigation */}
                 </main>
             </div>
