@@ -1,5 +1,7 @@
 import staticImage from '../../../public/assets/portfolioImages/Frame 5073.png';
+// import Image from 'next/image';
 import Image from 'next/image';
+
 
 const HeroSection: React.FC = () => {
   return (
