@@ -1,15 +1,21 @@
 "use client"
 
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { MapPin, Clock } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import { RootState } from '@/redux/store'
 import { FiEdit2 } from "react-icons/fi"
 import { FaRegTrashCan } from "react-icons/fa6"
+import axios from 'axios'
+import { backend_url } from '@/newLayout'
+import { toast } from 'react-toastify'
+import { deleteJob } from '@/redux/jobSlice'
+import { useRouter } from 'next/navigation'
 
 // JobCard component with typed props
 interface JobCardProps {
+  jobId: string;
   category: string;
   title: string;
   location: string;
@@ -19,6 +25,7 @@ interface JobCardProps {
 }
 
 const JobCard: React.FC<JobCardProps> = ({
+  jobId,
   category = "Development",
   title = "Urgent webapp and mobile app",
   location = "Tokyo",
@@ -30,6 +37,35 @@ const JobCard: React.FC<JobCardProps> = ({
   const timeAgoFormatted = typeof timeAgo === 'string' ? new Date(timeAgo) : timeAgo
   const timeDistance = formatDistanceToNow(timeAgoFormatted, { addSuffix: true })
 
+  
+  const dispatch = useDispatch();
+  const deletedJobHandler = async () => {
+    try {
+      const res = await axios.delete(`${backend_url}/api/v1/job/delete/${jobId}`, {
+        headers:{
+          "Content-Type":"application/json"
+        },
+        withCredentials:true
+      })
+      // console.log(res);
+      
+      if (res.data.success){
+        dispatch(deleteJob(jobId))
+        toast.success(res.data.message)
+      }
+    } catch (error:any) {
+      console.log(error);
+      const errorMessage = error?.response?.data?.message
+      toast.error(errorMessage)
+    }
+  }
+
+
+  
+
+  const router = useRouter()
+  
+
   return (
     <div className="bg-[#F4F6FC] rounded-[24px] p-6 md:w-[360px] w-[300px] h-auto hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-3">
@@ -39,8 +75,8 @@ const JobCard: React.FC<JobCardProps> = ({
         </div>
 
         <div className='flex gap-3'>
-          <FaRegTrashCan className='cursor-pointer'/>
-          <FiEdit2 className='cursor-pointer'/>
+          <FaRegTrashCan className='cursor-pointer' onClick={deletedJobHandler}/>
+          <FiEdit2 className='cursor-pointer' onClick={() => router.push(`/admin/all-jobs/addjob?jobId=${jobId}`)} />
         </div>
       </div>
 
@@ -97,6 +133,7 @@ const filteredJobs = allJobs?.filter(job =>
         {filteredJobs?.map((job) => (
           <div key={job._id}>
             <JobCard
+            jobId={job._id}
               category={job.category}
               title={job.title}
               location={job.location}

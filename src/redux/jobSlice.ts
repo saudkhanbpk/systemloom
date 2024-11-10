@@ -26,8 +26,11 @@ const jobSlice = createSlice({
     setAllJobs(state, action: PayloadAction<Job[]>) {
       state.allJobs = action.payload;
     },
+    deleteJob(state, action: PayloadAction<string>) {
+      state.allJobs = state.allJobs.filter(job => job._id !== action.payload);
+    },
   },
 });
 
-export const { setAllJobs } = jobSlice.actions;
+export const { setAllJobs, deleteJob } = jobSlice.actions;
 export default jobSlice.reducer;

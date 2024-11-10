@@ -1,5 +1,10 @@
 "use client";
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { backend_url } from '@/newLayout';
+import { RootState } from '@/redux/store';
+import axios from 'axios';
+import React, { useState,  ChangeEvent, FormEvent } from 'react';
+import { useSearchParams } from "next/navigation";
+import { toast } from 'react-toastify';
 
 interface FormData {
   firstName: string;
@@ -19,6 +24,12 @@ interface FormData {
 }
 
 const JobApplicationForm: React.FC = () => {
+  const searchParams = useSearchParams();
+  const jobId = searchParams.get("jobId");  
+  console.log(jobId);
+  
+  const [loading, setLoading] = useState(false)
+  
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -56,6 +67,67 @@ const JobApplicationForm: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
+    if (!jobId) {
+      toast.error("Job ID is missing.");
+      return;
+    }
+
+    const formDataToSend = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      if (value !== null) {
+        formDataToSend.append(key, value as Blob | string);
+      }
+    });
+    setLoading(true); 
+    try {
+      const res = await axios.post(`${backend_url}/api/v1/application/apply/${jobId}`, formDataToSend, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        withCredentials: true,
+      });
+      if (res.data.success) {
+        toast.success(res.data.message);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          phoneNumber: '',
+          email: '',
+          address: '',
+          city: '',
+          stateOrProvince: '',
+          postalOrZipCode: '',
+          gender: '',
+          applyingForPosition: '',
+          experience: '',
+          professionalUrl: '',
+          resume: null,
+          motivationLetter: null,
+        })
+      }
+    } catch (error: any) {
+      console.error(error);
+      const errorMessage = error?.response?.data?.message;
+      toast.error(errorMessage);
+      setFormData({
+        firstName: '',
+          lastName: '',
+          phoneNumber: '',
+          email: '',
+          address: '',
+          city: '',
+          stateOrProvince: '',
+          postalOrZipCode: '',
+          gender: '',
+          applyingForPosition: '',
+          experience: '',
+          professionalUrl: '',
+          resume: null,
+          motivationLetter: null,
+      })
+    }finally{
+      setLoading(false)
+    }
   };
 
   return (
@@ -238,8 +310,10 @@ const JobApplicationForm: React.FC = () => {
               type="submit"
               className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-200"
             >
-              Submit Application
+              {loading ? 'Submitting...' : 'Submit Application'}
+              
             </button>
+            
           </div>
         </form>
       </div>

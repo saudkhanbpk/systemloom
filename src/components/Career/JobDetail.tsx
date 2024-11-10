@@ -1,12 +1,14 @@
 // JobDetail.tsx
 import { Dialog, Transition } from "@headlessui/react";
 import { DotIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { Fragment } from "react";
 
 interface JobDetailProps {
   isOpen: boolean;
   onClose: () => void;
   job: {
+    _id: string;
     category: string;
     company: string;
     createdAt: string;
@@ -23,6 +25,8 @@ interface JobDetailProps {
 }
 
 const JobDetail = ({ isOpen, onClose, job }: JobDetailProps) => {
+const router = useRouter()
+  
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={onClose}>
@@ -49,7 +53,7 @@ const JobDetail = ({ isOpen, onClose, job }: JobDetailProps) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md p-6 bg-white rounded-2xl shadow-xl     ">
+              <Dialog.Panel className="w-full max-w-2xl p-6 bg-white rounded-2xl shadow-xl     ">
                 <h1 className="text-center font-bold text-2xl">Job Details</h1>
                 <Dialog.Title className="text-lg mt-5 font-medium text-gray-900">
                   <p>
@@ -116,7 +120,7 @@ const JobDetail = ({ isOpen, onClose, job }: JobDetailProps) => {
                   >
                     Cancel
                   </button>
-                  <button className="px-4 py-2 text-sm text-white bg-blue-600 rounded">
+                  <button  onClick={() => router.push(`/job-apply?jobId=${job._id}`)} className="px-4 py-2 text-sm text-white bg-blue-600 rounded">
                     Apply
                   </button>
                 </div>

@@ -17,6 +17,7 @@ const CareerHeroSection: FC = () => {
     professionalUrl: '',
     resume: null as File | null, // Explicitly define resume as File or null
   });
+  
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,6 +31,7 @@ const CareerHeroSection: FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+// console.log(formData);
 
     // Create FormData to handle file upload
     const formDataToSend = new FormData();
@@ -49,10 +51,11 @@ const CareerHeroSection: FC = () => {
       // Send the form data to the backend
       const res = await axios.post(`${backend_url}/api/v1/resume/send`, formDataToSend, {
         headers: {
-          'Content-Type': 'multipart/form-data', // Required for file upload
+          'Content-Type': 'multipart/form-data', 
         },
+        withCredentials:true
       });
-console.log(res.data);
+console.log("resume data", res);
 
       if (res.data.success) {
         toast.success(res.data.message)
@@ -65,9 +68,12 @@ console.log(res.data);
           resume: null,
         });
       }
-    } catch (error:any) {
+    } catch (error: any) {
       console.log(error);
-      toast.error(error.response.data.message)
+      // Check if the error has a response and if it contains the message
+      const errorMessage = error?.response?.data?.error || 'Something went wrong';
+      toast.error(errorMessage);
+    
       
     } finally {
       setLoading(false); // Stop loading indicator
@@ -119,7 +125,7 @@ console.log(res.data);
           >
             <h2 className="text-2xl font-semibold mb-4">Submit Your Resume</h2>
             
-            <form onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-400">Name</label>
                 <input
