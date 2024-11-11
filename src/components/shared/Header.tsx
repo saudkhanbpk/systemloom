@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             </div>
             <div>
               <span className="text-[#FFFFFF] text-lg font-semibold">
-                Tech <br /> Creator
+                Tech Creator
               </span>
             </div>
           </div>

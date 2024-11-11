@@ -67,7 +67,7 @@ const JobCard: React.FC<JobCardProps> = ({
   
 
   return (
-    <div className="bg-[#F4F6FC] rounded-[24px] p-6 md:w-[360px] w-[300px] h-auto hover:shadow-lg transition-shadow">
+    <div className="bg-[#F4F6FC] rounded-[24px] p-6 md:w-[360px] w-[300px] h-[280px] hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-purple-600 mr-2"></div>

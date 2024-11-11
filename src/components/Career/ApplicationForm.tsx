@@ -58,9 +58,11 @@ const JobApplicationForm: React.FC = () => {
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, files } = e.target;
     if (files) {
+      const file = files[0];
       setFormData((prevData) => ({
         ...prevData,
-        [name]: files[0],
+        [name]: file,
+        [`${name}OriginalName`]: file.name, // Add original file name here
       }));
     }
   };
@@ -71,13 +73,22 @@ const JobApplicationForm: React.FC = () => {
       toast.error("Job ID is missing.");
       return;
     }
-
+  
     const formDataToSend = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
       if (value !== null) {
         formDataToSend.append(key, value as Blob | string);
       }
     });
+  
+    // Append the original file names
+    if (formData.resume) {
+      formDataToSend.append("resumeOriginalName", formData.resume.name);
+    }
+    if (formData.motivationLetter) {
+      formDataToSend.append("motivationLetterOriginalName", formData.motivationLetter.name);
+    }
+  
     setLoading(true); 
     try {
       const res = await axios.post(`${backend_url}/api/v1/application/apply/${jobId}`, formDataToSend, {
@@ -111,24 +122,25 @@ const JobApplicationForm: React.FC = () => {
       toast.error(errorMessage);
       setFormData({
         firstName: '',
-          lastName: '',
-          phoneNumber: '',
-          email: '',
-          address: '',
-          city: '',
-          stateOrProvince: '',
-          postalOrZipCode: '',
-          gender: '',
-          applyingForPosition: '',
-          experience: '',
-          professionalUrl: '',
-          resume: null,
-          motivationLetter: null,
+        lastName: '',
+        phoneNumber: '',
+        email: '',
+        address: '',
+        city: '',
+        stateOrProvince: '',
+        postalOrZipCode: '',
+        gender: '',
+        applyingForPosition: '',
+        experience: '',
+        professionalUrl: '',
+        resume: null,
+        motivationLetter: null,
       })
-    }finally{
+    } finally {
       setLoading(false)
     }
   };
+  
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
