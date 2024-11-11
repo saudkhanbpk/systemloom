@@ -3,8 +3,10 @@ import { Editor } from '@tinymce/tinymce-react';
 import { IoIosAddCircle, IoIosCloseCircle } from "react-icons/io";
 import { backend_url } from '@/newLayout';
 import axios from 'axios';
+import { useRouter } from 'next/navigation'
 
 const CreateBlogForm = () => {
+  const router = useRouter()
   // const AdminContext = createContext(null);
   const [storyContent, setStoryContent] = useState("");
   const [altDescription, setAltDescription] = useState("");
@@ -14,16 +16,6 @@ const CreateBlogForm = () => {
   const [tagInput, setTagInput] = useState("");
   const [image, setImage] = useState<File | null>(null); // State to store image file
   const [imagePreview, setImagePreview] = useState<string | null>(null); // State to store image preview
-  // const useAdminContextStates = () => {
-  //   const context = useContext(AdminContext);
-  //   if (!context) {
-  //     throw new Error(
-  //       "useAdminContextStates must be use within the AdminProvider"
-  //     );
-  //   }
-  //   return context;
-  // };
-
   const handleEditorChange = (content: string) => {
     setStoryContent(content);
   };
@@ -79,27 +71,23 @@ const CreateBlogForm = () => {
       formData.append("image", image);
     }
     try {
-      const response = await axios.post(
-        `${backend_url}/api/v1/blogs/create`,
-        formData,
-        {
-          headers: {
-            'Content-Type': 'multipart/form-data', // Axios automatically handles this for FormData
-          },
-          withCredentials: true, // Optional: Use this if you need cookies to be sent with the request
-        }
-      );
+      // Create new job if no jobId
+      const res = await axios.post(`${backend_url}/api/v1/blogs/create`, formData, {
+        withCredentials: true,
+      });
     
-      if (response.status === 200) {
+      // Check if the request was successful
+      if (res.status == 200) {
         alert("Blog posted successfully!");
-        setTags([]); // Clear tags after posting
+        router.push("/admin/all-blogs");
       } else {
-        alert(`Error: ${response?.data?.error}`);
+        alert(`Error: ${res.statusText}`);
       }
     } catch (error) {
       console.error(error);
       alert("An error occurred. Please try again.");
     }
+    
   };
 
   return (
