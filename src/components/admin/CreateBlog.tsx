@@ -4,7 +4,7 @@ import { IoIosAddCircle, IoIosCloseCircle } from "react-icons/io";
 import { backend_url } from '@/newLayout';
 import axios from 'axios';
 import { useRouter } from 'next/navigation'
-
+import { toast } from 'react-toastify';
 const CreateBlogForm = () => {
   const router = useRouter()
   // const AdminContext = createContext(null);
@@ -78,7 +78,7 @@ const CreateBlogForm = () => {
     
       // Check if the request was successful
       if (res.status == 200) {
-        alert("Blog posted successfully!");
+        toast.success("Blog posted successfully!");
         router.push("/admin/all-blogs");
       } else {
         alert(`Error: ${res.statusText}`);
