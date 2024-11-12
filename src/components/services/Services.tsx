@@ -88,12 +88,12 @@ const ServicesSec = () => {
             className="w-full h-auto opacity-15"
           />
         </div>
-        <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="text-left md:text-center mt-10">
-            <h1 className="font-semibold text-[40px] md:text-[57px] leading-[50px] md:leading-[65px] mb-6 text-start lg:text-center">
+        <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 ">
+          <div className="text-left md:text-center  mt-10">
+            <h1 className="font-semibold text-[40px] md:text-[57px] leading-[50px] md:leading-[65px] mb-6 text-center">
               Our Services
             </h1>
-            <p className="font-normal text-[16px] md:text-[18px] max-w-3xl mx-auto leading-6 md:leading-9">
+            <p className="font-normal text-[16px] md:text-[18px] mx-auto leading-6 md:leading-9 ">
               TechCreator offers top-notch web and mobile app development
               services to help businesses bring their ideas to life. Our
               experienced team of developers creates custom apps that are

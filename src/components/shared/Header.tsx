@@ -1,9 +1,8 @@
-"use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from '../../../public/assets/icons/Logo.png';
+import Logo from "../../../public/assets/icons/Logo.png";
 import personIcon from "../../../public/assets/landingPage/Vector.png";
 import { CiLogout } from "react-icons/ci";
 import { IoMdLogIn } from "react-icons/io";
@@ -14,14 +13,15 @@ import { RootState } from "../../redux/store";  // Import RootState for typing u
 import axios from "axios";
 import { backend_url } from "@/newLayout";
 import { setUser } from "@/redux/authSlice";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
 const Header: React.FC = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
-  const router = useRouter()
+  const router = useRouter();
   const dispatch = useDispatch();
   const { user } = useSelector((store: RootState) => store.auth);  // Typing store with RootState
 
@@ -42,16 +42,15 @@ const Header: React.FC = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get(`${backend_url}/api/v1/user/logout`, {withCredentials:true})
-      if (res.data.success){
-        dispatch(setUser(null))
-        router.push("/")
-        toast.success(res.data.message)
+      const res = await axios.get(`${backend_url}/api/v1/user/logout`, {withCredentials:true});
+      if (res.data.success) {
+        dispatch(setUser(null));
+        router.push("/");
+        toast.success(res.data.message);
       }
     } catch (error: any) {
       console.log(error);
-      toast.error(error?.response?.data?.message)
-      
+      toast.error(error?.response?.data?.message);
     }
     setIsDropdownOpen(false);
   };
@@ -76,7 +75,9 @@ const Header: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="lg:px-3 px-1 py-2 md:text-sm lg:text-base   rounded-md font-medium hover:bg-[#9A00FF] text-white"
+                  className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF] text-white
+                    ${pathname === item.href ? 'bg-[#9A00FF] text-white' : ''}  
+                  `}
                 >
                   {item.name}
                 </Link>
@@ -144,7 +145,9 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700"
+                className={`flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700
+                  ${pathname === item.href ? 'bg-[#0c080f] text-white' : ''}  // Correct active class for mobile
+                `}
               >
                 {item.icon} {item.name}
               </Link>

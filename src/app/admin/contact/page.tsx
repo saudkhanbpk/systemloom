@@ -89,7 +89,7 @@ const Contacts: React.FC = () => {
   return (
     <AdminLayout>
       <div className="p-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between sm:flex-row flex-col items-center">
           <h1 className="text-2xl font-semibold mb-4">Contacts</h1>
           <div className="relative mb-4">
             <input

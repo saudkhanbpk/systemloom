@@ -57,8 +57,8 @@ const AdminHeader: React.FC = () => {
   };
 
   return (
-    <nav className="text-white bg-black z-10 px-4 py-2 w-full text-nowrap">
-      <div className="md:pr-10 md:pl-10 mx-auto">
+    <nav className="text-white bg-black z-10 lg:px-4 py-2 w-full text-nowrap">
+      <div className="lg:pr-10 lg:pl-10 mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex justify-center gap-2 items-center">
             <div>
@@ -76,7 +76,7 @@ const AdminHeader: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-base rounded-md font-medium hover:bg-[#9A00FF] text-white"
+                  className="lg:px-3 px-2 py-2 lg:text-base md:text-sm rounded-md font-medium hover:bg-[#9A00FF] text-white"
                 >
                   {item.name}
                 </Link>

@@ -15,7 +15,7 @@ const Page: React.FC = () => {
   return (
     <AdminLayout>
       <div className="">
-        <Header onSearch={setSearchTerm} buttonType="job" />
+        <Header onSearch={setSearchTerm} buttonType="job"  />
         <JobsCard searchTerm={searchTerm} />
       </div>
     </AdminLayout>

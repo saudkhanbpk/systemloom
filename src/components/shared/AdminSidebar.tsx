@@ -1,47 +1,54 @@
 "use client";
 import Link from 'next/link';
-import React from 'react';
-import { usePathname } from 'next/navigation'; // Use next/navigation for Next.js 13+
+import React, { useState } from 'react';
+import { usePathname } from 'next/navigation'; 
+import { GrProjects } from "react-icons/gr";
+import { FiBriefcase } from "react-icons/fi";
 
 // Importing icons from Heroicons v2
-import { PlusIcon, DocumentIcon, UserIcon, InboxIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import { FaPlus, FaRegFileAlt, FaUsers, FaPhoneAlt } from 'react-icons/fa';
+import { FaPlus, FaRegFileAlt, FaUsers, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 const AdminSidebar: React.FC = () => {
   const pathname = usePathname(); // Get the current pathname
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to toggle sidebar visibility
 
-  // Define the links with their corresponding icons
-  // const links = [
-  //   { href: "/admin/create-blog", label: "Create Blog", icon: <PlusIcon className="w-6 h-6" /> },
-  //   { href: "/admin/create-job", label: "Create Job", icon: <PlusIcon className="w-6 h-6" /> },
-  //   { href: "/admin/all-blogs", label: "All Blogs", icon: <DocumentIcon className="w-6 h-6" /> },
-  //   { href: "/admin/all-jobs", label: "All Jobs", icon: <DocumentIcon className="w-6 h-6" /> },
-  //   { href: "/admin/applicants", label: "Applicants", icon: <UserIcon className="w-6 h-6" /> },
-  //   { href: "/admin/contact", label: "Contact", icon: <PhoneIcon className="w-6 h-6" /> },
-  // ];
   const links = [
-    { href: "/admin/all-projects", label: "All Projects", icon: <FaRegFileAlt className="w-6 h-6" /> },
-    { href: "/admin/all-blogs", label: "All Blogs", icon: <FaRegFileAlt className="w-6 h-6" /> },
+    { href: "/admin/all-projects", label: "All Projects", icon: <GrProjects className="w-6 h-6" /> },
+    { href: "/admin/all-blogs", label: "All Blogs", icon: <FiBriefcase className="w-6 h-6" /> },
     { href: "/admin/all-jobs", label: "All Jobs", icon: <FaRegFileAlt className="w-6 h-6" /> },
     { href: "/admin/all-applicants", label: "Applicants", icon: <FaUsers className="w-6 h-6" /> },
     { href: "/admin/contact", label: "Contact", icon: <FaPhoneAlt className="w-6 h-6" /> },
   ];
 
   return (
-    <div className='w-30 sm:w-[12vw] min-h-screen border-r bg-black text-white'>
-      <div className='pt-6 flex flex-col gap-4'>
-        {links.map(link => (
-          <Link key={link.label} href={link.href} passHref>
-            <div 
-              className={`flex gap-2 items-center border sm:ml-4 p-2 
-                ${pathname === link.href ? 'bg-gray-600 text-white' : ''} 
-              `}
-            >
-              <div className="block ">{link.icon}</div> {/* Show icon on small screens */}
-              <p className='hidden md:block'>{link.label}</p>
-            </div>
-          </Link>
-        ))}
+    <div className="relative">
+      {/* Button to toggle sidebar on small screens */}
+      <button 
+        className="sm:hidden p-2 bg-[#0f080a] text-white absolute  left-0 z-50"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      >
+        {isSidebarOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
+      </button>
+
+      {/* Sidebar */}
+      <div 
+        className={`w-fit min-h-screen border-r bg-black text-white 
+          ${isSidebarOpen ? 'block' : 'hidden'} sm:block transition-all duration-300 ease-in-out`}
+      >
+        <div className='py-12 flex flex-col gap-4'>
+          {links.map(link => (
+            <Link key={link.label} href={link.href} passHref>
+              <div 
+                className={`flex gap-2 items-center border sm:ml-4 p-2 
+                  ${pathname === link.href ? 'bg-[#9A00FF] text-white' : ''} 
+                `}
+              >
+                <div className="block">{link.icon}</div>
+                <p className='hidden md:block text-nowrap'>{link.label}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

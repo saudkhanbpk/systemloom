@@ -24,7 +24,7 @@ interface User {
   motivationLetter: string;
   originalResumeName: string;
   originalMotivationLetterName: string;
-  createdAt: string; 
+  createdAt: string;
 }
 
 interface UserTableProps {
@@ -32,7 +32,7 @@ interface UserTableProps {
 }
 
 const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const applicantsPerPage = 3;
@@ -66,22 +66,18 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
     return formattedDate.toLocaleString();
   };
 
-  
-
-  const handleDelete = async (id:string) => {
-    // console.log("id", id)
+  const handleDelete = async (id: string) => {
     try {
-      const res = await axios.delete(`${backend_url}/api/v1/application/delete/${id}`,{withCredentials:true} )
-      if (res.data.success){
-        dispatch(deleteApplicant(id))
-        toast.success(res.data.message)
+      const res = await axios.delete(`${backend_url}/api/v1/application/delete/${id}`, { withCredentials: true });
+      if (res.data.success) {
+        dispatch(deleteApplicant(id));
+        toast.success(res.data.message);
       }
-    } catch (error:any) {
-      console.log(error);
-      const errorMessage = error?.response?.data?.message
-      toast.error(errorMessage)
+    } catch (error: any) {
+      const errorMessage = error?.response?.data?.message;
+      toast.error(errorMessage);
     }
-  }
+  };
 
   return (
     <div className="overflow-x-auto p-4">
@@ -97,7 +93,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
             <th className="px-4 py-2 text-left">Action</th>
           </tr>
         </thead>
-        <tbody >
+        <tbody>
           {currentApplicants.map((user) => (
             <tr key={user._id} className="border-t">
               <td className="px-4 py-2 text-nowrap ">{user.firstName} {user.lastName}</td>
@@ -141,7 +137,11 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                   >
                     <FaEye size={18} />
                   </button>
-                  <button onClick={() => handleDelete(user._id)} className="text-red-500 hover:text-red-700" aria-label="Delete">
+                  <button
+                    onClick={() => handleDelete(user._id)}
+                    className="text-red-500 hover:text-red-700"
+                    aria-label="Delete"
+                  >
                     <FaTrash size={18} />
                   </button>
                 </div>
@@ -149,32 +149,32 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
             </tr>
           ))}
         </tbody>
+        <tfoot className="bg-gray-100">
+          <tr>
+            <td colSpan={7} className="py-2 px-4">
+              <div className="flex justify-between items-center">
+                <button
+                  onClick={goToPreviousPage}
+                  disabled={currentPage === 1}
+                  className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"}`}
+                >
+                  Previous
+                </button>
+                <span className="text-gray-700">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button
+                  onClick={goToNextPage}
+                  disabled={currentPage === totalPages}
+                  className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"}`}
+                >
+                  Next
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
       </table>
-
-      {/* Pagination */}
-      <div className="flex items-center justify-between mt-4">
-        <button
-          onClick={goToPreviousPage}
-          disabled={currentPage === 1}
-          className={`px-4 py-2 rounded ${
-            currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"
-          }`}
-        >
-          Previous
-        </button>
-        <span className="text-gray-700">
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          onClick={goToNextPage}
-          disabled={currentPage === totalPages}
-          className={`px-4 py-2 rounded ${
-            currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"
-          }`}
-        >
-          Next
-        </button>
-      </div>
 
       {/* Modal for User Details */}
       {selectedUser && (
@@ -182,8 +182,8 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
           <div className="bg-white p-6 rounded-lg max-w-2xl w-full shadow-lg">
             <h2 className="text-lg font-semibold mb-8 text-center text-blue-700">User Details</h2>
             <p className="mb-2">
-  <strong>Full Name:</strong> {selectedUser.firstName} {selectedUser.lastName}
-</p>
+              <strong>Full Name:</strong> {selectedUser.firstName} {selectedUser.lastName}
+            </p>
             <p className="mb-2"><strong>Phone Number:</strong> {selectedUser.phoneNumber}</p>
             <p className="mb-2"><strong>Email:</strong> {selectedUser.email}</p>
             <p className="mb-2"><strong>Address:</strong> {selectedUser.address}, {selectedUser.city}, {selectedUser.stateOrProvince}, {selectedUser.postalOrZipCode}</p>
@@ -229,13 +229,15 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <span className="text-gray-500">No Resume Available</span>
               )}
             </p>
-            <p className="mb-2"><strong>Date:</strong> {formatDate(selectedUser.createdAt)}</p>
-            <button
-              onClick={handleCloseModal}
-              className="mt-4 px-4 py-2 bg-gray-600 text-white rounded"
-            >
-              Close
-            </button>
+
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={handleCloseModal}
+                className="bg-red-500 text-white px-6 py-2 rounded-md"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}

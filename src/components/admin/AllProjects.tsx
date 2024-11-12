@@ -14,7 +14,7 @@ const ProjectCard = ({ title }: ProjectCardType) => {
       <Image
         src={portfolio}
         alt="Project"
-        className="w-full h-full object-cover"
+        className="sm:w-full w-[300px] h-full object-cover"
       />
       {/* Overlay for hover effect */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
@@ -60,7 +60,7 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
 
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl ml-11">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl sm:ml-11">
         {filteredProjects.map((project, index) => (
           <ProjectCard key={index} title={project.title} />
         ))}

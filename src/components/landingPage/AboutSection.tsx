@@ -36,11 +36,16 @@ function AboutSection() {
           </div>
 
           <div className="flex flex-col items-center md:items-start md:w-1/2 w-full">
-            <div className="mb-4 md:mb-4 flex justify-center md:justify-start md:ms-44">
+            <div className="mb-4 md:mb-4  flex justify-center md:justify-start md:ms-44">
               <Image
                 src={squareImage}
                 alt="about_image"
-                className="w-[150px] h-[150px] md:w-[196.88px] md:h-[196.18px] rotate-[-9.96deg] object-cover"
+                width={250}  
+    height={260} 
+    layout="responsive"  
+    className="object-cover"
+    sizes="(max-width: 768px) 250px, (min-width: 768px) 324px"
+                // className="w-[150px] h-[150px] md:w-[196.88px] md:h-[196.18px] rotate-[-9.96deg] object-cover"
               />
             </div>
             <div className="text-center md:text-left  mx-auto">

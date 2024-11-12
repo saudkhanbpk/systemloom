@@ -67,7 +67,7 @@ const JobCard: React.FC<JobCardProps> = ({
   
 
   return (
-    <div className="bg-[#F4F6FC] rounded-[24px] p-6 md:w-[360px] w-[300px] h-[280px] hover:shadow-lg transition-shadow">
+    <div className="bg-[#F4F6FC] rounded-[24px] p-6 lg:w-[360px] w-[300px] h-[280px] hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-purple-600 mr-2"></div>
@@ -129,7 +129,7 @@ const filteredJobs = allJobs?.filter(job =>
 
   return (
     <div className="bg-[#FFFFFF] lg:px-10 px-3">
-      <div className="flex flex-wrap py-9 lg:gap-10 gap-5 justify-start">
+      <div className="flex flex-wrap py-9 lg:gap-10 gap-5 lg:justify-start justify-center w-full">
         {filteredJobs?.map((job) => (
           <div key={job._id}>
             <JobCard
