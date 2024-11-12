@@ -1,11 +1,13 @@
 import { backend_url } from "@/newLayout";
+import { deleteApplicant } from "@/redux/applicantSlice";
 import axios from "axios";
 import { useState } from "react";
 import { FaEye, FaTrash } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
 interface User {
-  id: string;
+  _id: string;
   firstName: string;
   lastName: string;
   phoneNumber: string;
@@ -22,7 +24,7 @@ interface User {
   motivationLetter: string;
   originalResumeName: string;
   originalMotivationLetterName: string;
-  createdAt: string; // Add createdAt field for date formatting
+  createdAt: string; 
 }
 
 interface UserTableProps {
@@ -30,9 +32,10 @@ interface UserTableProps {
 }
 
 const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
+  const dispatch = useDispatch()
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const applicantsPerPage = 5;
+  const applicantsPerPage = 3;
 
   // Calculate total pages
   const totalPages = Math.ceil(users.length / applicantsPerPage);
@@ -60,13 +63,17 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
 
   const formatDate = (date: string) => {
     const formattedDate = new Date(date);
-    return formattedDate.toLocaleString(); // Format date as per your requirement
+    return formattedDate.toLocaleString();
   };
 
+  
+
   const handleDelete = async (id:string) => {
+    // console.log("id", id)
     try {
-      const res = await axios(`${backend_url}/api/v1/application/delete/${id}` )
+      const res = await axios.delete(`${backend_url}/api/v1/application/delete/${id}`,{withCredentials:true} )
       if (res.data.success){
+        dispatch(deleteApplicant(id))
         toast.success(res.data.message)
       }
     } catch (error:any) {
@@ -79,10 +86,9 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
   return (
     <div className="overflow-x-auto p-4">
       <table className="min-w-full border border-gray-200 shadow-md">
-        <thead className="bg-gray-100">
+        <thead className="bg-gray-100 text-nowrap">
           <tr>
-            <th className="px-4 py-2 text-left">First Name</th>
-            <th className="px-4 py-2 text-left">Last Name</th>
+            <th className="px-4 py-2 text-left">Full Name</th>
             <th className="px-4 py-2 text-left">Phone Number</th>
             <th className="px-4 py-2 text-left">Email</th>
             <th className="px-4 py-2 text-left">Resume</th>
@@ -91,11 +97,10 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
             <th className="px-4 py-2 text-left">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {currentApplicants.map((user) => (
-            <tr key={user.id} className="border-t">
-              <td className="px-4 py-2">{user.firstName}</td>
-              <td className="px-4 py-2">{user.lastName}</td>
+            <tr key={user._id} className="border-t">
+              <td className="px-4 py-2 text-nowrap ">{user.firstName} {user.lastName}</td>
               <td className="px-4 py-2">{user.phoneNumber}</td>
               <td className="px-4 py-2">{user.email}</td>
               <td className="px-4 py-2">
@@ -136,7 +141,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                   >
                     <FaEye size={18} />
                   </button>
-                  <button onClick={() => handleDelete(user.id)} className="text-red-500 hover:text-red-700" aria-label="Delete">
+                  <button onClick={() => handleDelete(user._id)} className="text-red-500 hover:text-red-700" aria-label="Delete">
                     <FaTrash size={18} />
                   </button>
                 </div>
@@ -174,17 +179,18 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
       {/* Modal for User Details */}
       {selectedUser && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg max-w-md w-full shadow-lg">
-            <h2 className="text-lg font-semibold mb-4">User Details</h2>
-            <p><strong>First Name:</strong> {selectedUser.firstName}</p>
-            <p><strong>Last Name:</strong> {selectedUser.lastName}</p>
-            <p><strong>Phone Number:</strong> {selectedUser.phoneNumber}</p>
-            <p><strong>Email:</strong> {selectedUser.email}</p>
-            <p><strong>Address:</strong> {selectedUser.address}, {selectedUser.city}, {selectedUser.stateOrProvince}, {selectedUser.postalOrZipCode}</p>
-            <p><strong>Gender:</strong> {selectedUser.gender}</p>
-            <p><strong>Position Applied:</strong> {selectedUser.applyingForPosition}</p>
-            <p><strong>Experience:</strong> {selectedUser.experience}</p>
-            <p>
+          <div className="bg-white p-6 rounded-lg max-w-2xl w-full shadow-lg">
+            <h2 className="text-lg font-semibold mb-8 text-center text-blue-700">User Details</h2>
+            <p className="mb-2">
+  <strong>Full Name:</strong> {selectedUser.firstName} {selectedUser.lastName}
+</p>
+            <p className="mb-2"><strong>Phone Number:</strong> {selectedUser.phoneNumber}</p>
+            <p className="mb-2"><strong>Email:</strong> {selectedUser.email}</p>
+            <p className="mb-2"><strong>Address:</strong> {selectedUser.address}, {selectedUser.city}, {selectedUser.stateOrProvince}, {selectedUser.postalOrZipCode}</p>
+            <p className="mb-2"><strong>Gender:</strong> {selectedUser.gender}</p>
+            <p className="mb-2"><strong>Position Applied:</strong> {selectedUser.applyingForPosition}</p>
+            <p className="mb-2"><strong>Experience:</strong> {selectedUser.experience}</p>
+            <p className="mb-2">
               <strong>Professional URL:</strong>{" "}
               <a
                 href={selectedUser.professionalUrl}
@@ -195,7 +201,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 {selectedUser.professionalUrl}
               </a>
             </p>
-            <p><strong>Motivation Letter:</strong>
+            <p className="mb-2"><strong>Motivation Letter:</strong>
               {selectedUser.motivationLetter ? (
                 <a
                   href={selectedUser.motivationLetter}
@@ -209,7 +215,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <span className="text-gray-500">No Motivation Letter Available</span>
               )}
             </p>
-            <p><strong>Resume:</strong>
+            <p className="mb-2"><strong>Resume:</strong>
               {selectedUser.resume ? (
                 <a
                   href={selectedUser.resume}
@@ -223,7 +229,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <span className="text-gray-500">No Resume Available</span>
               )}
             </p>
-            <p><strong>Date:</strong> {formatDate(selectedUser.createdAt)}</p>
+            <p className="mb-2"><strong>Date:</strong> {formatDate(selectedUser.createdAt)}</p>
             <button
               onClick={handleCloseModal}
               className="mt-4 px-4 py-2 bg-gray-600 text-white rounded"

@@ -2,9 +2,10 @@
 import { backend_url } from '@/newLayout';
 import { RootState } from '@/redux/store';
 import axios from 'axios';
-import React, { useState,  ChangeEvent, FormEvent } from 'react';
-import { useSearchParams } from "next/navigation";
+import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
 
 interface FormData {
   firstName: string;
@@ -26,10 +27,11 @@ interface FormData {
 const JobApplicationForm: React.FC = () => {
   const searchParams = useSearchParams();
   const jobId = searchParams.get("jobId");  
-  console.log(jobId);
+  const { allJobs } = useSelector((state: RootState) => state.job);
+
+  const router = useRouter()
   
-  const [loading, setLoading] = useState(false)
-  
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -46,6 +48,18 @@ const JobApplicationForm: React.FC = () => {
     resume: null,
     motivationLetter: null,
   });
+
+  useEffect(() => {
+    if (jobId && allJobs.length > 0) {
+      const job = allJobs.find(job => job._id === jobId);
+      if (job) {
+        setFormData((prevData) => ({
+          ...prevData,
+          applyingForPosition: job.title, // Set the job title in the form data
+        }));
+      }
+    }
+  }, [jobId, allJobs]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
@@ -81,7 +95,6 @@ const JobApplicationForm: React.FC = () => {
       }
     });
   
-    // Append the original file names
     if (formData.resume) {
       formDataToSend.append("resumeOriginalName", formData.resume.name);
     }
@@ -98,6 +111,7 @@ const JobApplicationForm: React.FC = () => {
         withCredentials: true,
       });
       if (res.data.success) {
+        router.push("/career")
         toast.success(res.data.message);
         setFormData({
           firstName: '',
@@ -114,30 +128,14 @@ const JobApplicationForm: React.FC = () => {
           professionalUrl: '',
           resume: null,
           motivationLetter: null,
-        })
+        });
       }
     } catch (error: any) {
       console.error(error);
       const errorMessage = error?.response?.data?.message;
       toast.error(errorMessage);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        phoneNumber: '',
-        email: '',
-        address: '',
-        city: '',
-        stateOrProvince: '',
-        postalOrZipCode: '',
-        gender: '',
-        applyingForPosition: '',
-        experience: '',
-        professionalUrl: '',
-        resume: null,
-        motivationLetter: null,
-      })
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   };
   
@@ -264,6 +262,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.applyingForPosition}
                 onChange={handleChange}
                 required
+                readOnly
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>

@@ -63,13 +63,17 @@ const Contacts: React.FC = () => {
 
   const handleView = async (id: string) => {
     try {
-      const res = await axios.get(`${backend_url}/api/v1/contact/get/${id}`, {
+      const res = await axios.get(`${backend_url}/api/v1/contact/get/${id}`, {        
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
+      // console.log(res);
+
       if (res.data.success) {
         setSelectedContact(res.data.message);
         setIsModalOpen(true); 
+      }else{
+        toast.error(res.data.message)
       }
     } catch (error: any) {
       console.log(error);
