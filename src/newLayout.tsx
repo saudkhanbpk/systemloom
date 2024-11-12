@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   
   return (
     <Provider store={store}>
-      <PersistGate loading={<div className="flex items-center justify-center min-h-screen bg-black text-3xl font-bold text-white">Loading...</div>} persistor={persistor}>
+      <PersistGate  persistor={persistor}>
         <ToastContainer
           position="top-right"
           autoClose={5000}

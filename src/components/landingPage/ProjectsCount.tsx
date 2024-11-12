@@ -1,30 +1,26 @@
-// import necessary libraries
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { FC } from 'react';
 
-// Define the props for StatItem
 interface StatItemProps {
   value: number;
   label: string;
 }
 
-// StatItem component
 const StatItem: FC<StatItemProps> = ({ value, label }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <div ref={ref} className="text-center  text-white">
-    <div className="text-[50px] font-medium leading-[40px] font-inter mb-2">
-    <span className="text-4xl">+</span>
-      {inView ? <CountUp start={0} end={value} duration={2.5} /> : 0}
+    <div ref={ref} className="text-center text-white">
+      <div className="text-[50px] font-medium leading-[40px] font-inter mb-2">
+        <span className="text-4xl">+</span>
+        {inView ? <CountUp start={0} end={value} duration={2.5} /> : 0}
+      </div>
+      <div className="text-[30px] font-medium leading-[40px] font-inter">{label}</div>
     </div>
-    <div className="text-[30px] font-medium leading-[40px] font-inter">{label}</div>
-  </div>
   );
 };
 
-// ProjectsCount component
 const ProjectsCount: FC = () => {
   return (
     <div className="relative bg-purple-600 py-8 overflow-hidden">
@@ -34,6 +30,7 @@ const ProjectsCount: FC = () => {
           muted
           loop
           className="absolute inset-0 w-full h-[190px] object-cover opacity-70"
+          poster="/assets/vecteezy_video-placeholder.jpg"  // Optional placeholder image for better UX
         >
           <source
             src="/assets/vecteezy_digital-waves-motion-background-video-animation_3006226.mp4"

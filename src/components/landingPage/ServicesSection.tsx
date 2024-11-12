@@ -2,8 +2,17 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ServiceCard from "./ServiceCard";
+import Image from "next/image";
 
-function ServicesSection() {
+
+interface Service {
+  id: number;
+  title: string;
+  des: string;
+  image: string;
+}
+
+const ServicesSection: React.FC = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1440 },
@@ -27,7 +36,8 @@ function ServicesSection() {
     },
   };
 
-  const servicesArr = [
+  
+  const servicesArr: Service[] = [
     {
       id: 1,
       title: "Web Design & Development",
@@ -73,7 +83,7 @@ function ServicesSection() {
         transitionDuration={800}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px flex justify-center" // Center the items
+        itemClass="carousel-item-padding-40-px flex justify-center"
       >
         {servicesArr.map((item) => (
           <div key={item.id} className="flex justify-center h-auto w-[333px] mx-auto lg:mx-0 mb-14">
@@ -88,6 +98,6 @@ function ServicesSection() {
       </Carousel>
     </div>
   );
-}
+};
 
 export default ServicesSection;

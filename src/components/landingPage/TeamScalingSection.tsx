@@ -1,4 +1,3 @@
-// import React from 'react';
 import Image from 'next/image';
 import team1 from "../../../public/assets/landingPage/Rectangle 17.png"
 import person1 from "../../../public/assets/landingPage/Ellipse 185.png"
