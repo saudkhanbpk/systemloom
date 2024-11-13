@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import authReducer from "./authSlice";
 import jobReducer from "./jobSlice";
 import messageReducer from "./messageSlice"
+import blogReducer from './blogSlice';
 import applicantReducer from "./applicantSlice"
 
 import {
@@ -25,6 +26,7 @@ const rootReducer = combineReducers({
   auth:authReducer,
   job:jobReducer,
   message: messageReducer,
+  blogs:blogReducer,
   applicants: applicantReducer,
 })
 
