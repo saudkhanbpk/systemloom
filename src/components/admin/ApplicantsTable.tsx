@@ -82,7 +82,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
   return (
     <div className="overflow-x-auto p-4">
       <table className="min-w-full border border-gray-200 shadow-md">
-        <thead className="bg-gray-100 text-nowrap">
+        <thead className="bg-gray-100 text-gray-600 text-nowrap">
           <tr>
             <th className="px-4 py-2 text-left">Full Name</th>
             <th className="px-4 py-2 text-left">Phone Number</th>
@@ -93,7 +93,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
             <th className="px-4 py-2 text-left">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white text-gray-600">
           {currentApplicants.map((user) => (
             <tr key={user._id} className="border-t">
               <td className="px-4 py-2 text-nowrap ">{user.firstName} {user.lastName}</td>
@@ -179,7 +179,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
       {/* Modal for User Details */}
       {selectedUser && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-6 rounded-lg max-w-2xl w-full shadow-lg">
+          <div className="bg-white text-black p-6 rounded-lg max-w-2xl w-full shadow-lg">
             <h2 className="text-lg font-semibold mb-8 text-center text-blue-700">User Details</h2>
             <p className="mb-2">
               <strong>Full Name:</strong> {selectedUser.firstName} {selectedUser.lastName}

@@ -40,7 +40,7 @@ export default Companies;
 export const CTASection = () => {
   return (
     <section className="py-16 ">
-      <div className="bg-[#FFFFFF] mx-auto w-[95%] h-auto lg:h-[300px]">
+      <div className=" mx-auto w-[95%] h-auto lg:h-[300px]">
         <div className="flex flex-col  md:flex-row justify-around">
           <div className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">

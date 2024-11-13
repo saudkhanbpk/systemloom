@@ -38,7 +38,7 @@ const FeaturesList: React.FC = () => {
               <div className="mb-4 p-3 rounded-full bg-gray-100 flex w-[40px] h-[40px]">
                 {feature.icon}
               </div>
-              <p className="text-sm text-gray-700 p-3">
+              <p className="text-sm  p-3">
                 {feature.text}
               </p>
             </div>

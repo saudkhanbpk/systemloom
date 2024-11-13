@@ -21,9 +21,9 @@ const DiversitySection: FC = () => {
 
   return (
     <div>
-      <div className="max-w-6xl mx-auto px-4 py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 py-16  ">
         <div className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold font-inter mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold  font-inter mb-4">
             We're from everywhere
           </h2>
           <p className="text-[#838696] font-normal font-inter text-[22px] leading-[35px]">

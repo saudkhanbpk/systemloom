@@ -54,34 +54,34 @@ const router = useRouter()
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="w-full max-w-2xl p-6 bg-white rounded-2xl shadow-xl     ">
-                <h1 className="text-center font-bold text-2xl">Job Details</h1>
+                <h1 className="text-center font-bold text-2xl text-black">Job Details</h1>
                 <Dialog.Title className="text-lg mt-5 font-medium text-gray-900">
-                  <p>
-                    <span className="text-blue-600 ">Title:</span> {job.title}
+                  <p className="text-gray-600">
+                    <span className="text-blue-600  ">Title:</span> {job.title}
                   </p>
                 </Dialog.Title>
                 <div className="mt-4 flex flex-col gap-5">
-                  <p>
+                  <p className="text-gray-600">
                     <span className="text-blue-600">Category:</span>{" "}
                     {job.category}
                   </p>
-                  <p>
+                  <p className="text-gray-600">
                     <span className="text-blue-600">Company:</span>{" "}
                     {job.company}
                   </p>
-                  <p>
+                  <p className="text-gray-600">
                     <span className="text-blue-600">Location:</span>{" "}
                     {job.location}
                   </p>
-                  <p>
+                  <p className="text-gray-600">
                     <span className="text-blue-600">Employment Type:</span>{" "}
                     {job.employmentType}
                   </p>
-                  <p>
+                  <p className="text-gray-600">
                     <span className="text-blue-600">Salary:</span> Rs{" "}
                     {job.salary}
                   </p>
-                  <p>
+                  <p className="text-gray-600">
                     <span className="text-blue-600">Description:</span>{" "}
                     {job.description}
                   </p>
@@ -91,20 +91,20 @@ const router = useRouter()
                     </div>
 
                     <div className="text-sm mx-4">
-                      <p className="flex item-center ">
+                      <p className="flex item-center text-gray-600">
                         <span>
                           <DotIcon />
                         </span>{" "}
                         {job.qualifications?.join(", ") || "N/A"}
                       </p>
-                      <p className="flex item-center ">
+                      <p className="flex item-center text-gray-600 ">
                         <span>
                           <DotIcon />
                         </span>{" "}
                         At least {job.experience} of experience
                       </p>
 
-                      <p className="flex item-center ">
+                      <p className="flex item-center text-gray-600">
                         <span>
                           <DotIcon />
                         </span>{" "}

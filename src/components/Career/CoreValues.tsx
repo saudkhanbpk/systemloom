@@ -12,8 +12,8 @@ const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
     <div className="flex justify-between">
       <div className="flex items-center mb-4">
         <h3>
-          <span className="font-normal text-[14] font-inter">{title.split(" ")[0]}</span> <br />
-          <span className="font-bold text-[24px] font-inter">
+          <span className="font-normal text-[14] text-black font-inter">{title.split(" ")[0]}</span> <br />
+          <span className="font-bold text-[24px] text-black font-inter">
             {title.split(" ")[1]} {title.split(" ")[2]}
           </span>
         </h3>
@@ -34,7 +34,7 @@ const CoreValues: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 space-x-3 ">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Our core values</h2>
-          <p className="text-gray-600 max-w-2xl">
+          <p className=" max-w-2xl">
             We value true innovation and giving our people freedom to find their own creative solutions to the challenges we face.
             We're all in the same boat - It's time to begin the voyage.
           </p>

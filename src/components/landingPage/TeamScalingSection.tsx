@@ -13,12 +13,12 @@ const TeamScalingSection = () => {
             <h2 className="text-[28px] font-semibold text-purple-600 mb-4">
               Build the right team to scale
             </h2>
-            <p className="text-[#2D3748] mb-4 font-normal text-lg">
+            <p className=" mb-4 font-normal text-lg">
               Finding the right talent is not easy. We help you find the talent
               that suits your needs, follows your processes, and sticks with
               you long term (not the case with freelancers
             </p>
-            <p className="text-[#2D3748] mb-4 font-normal text-lg">
+            <p className=" mb-4 font-normal text-lg">
               Our <span className="text-purple-600 font-semibold">delivery model</span> helps you cut costs and deliver within
               budget.
             </p>
@@ -40,7 +40,7 @@ const TeamScalingSection = () => {
                 className="w-10 h-10 rounded-full mr-3"
               />
               <div>
-                <p className="font-normal text-base text-[#1A202C]">Jeewa markram</p>
+                <p className="font-normal text-base ">Jeewa markram</p>
                 <p className="text-sm font-normal text-[#718096]">CEO</p>
               </div>
             </div>
@@ -73,12 +73,12 @@ const TeamScalingSection = () => {
             <h2 className="text-[28px] font-semibold text-purple-600 mb-4">
               Build the right team to scale
             </h2>
-            <p className="text-[#2D3748] mb-4 font-normal text-lg">
+            <p className=" mb-4 font-normal text-lg">
               Finding the right talent is not easy. We help you find the talent
               that suits your needs, follows your processes, and sticks with
               you long term (not the case with freelancers
             </p>
-            <p className="text-[#2D3748] mb-4 font-normal text-lg">
+            <p className=" mb-4 font-normal text-lg">
               Our <span className="text-purple-600 font-semibold">delivery model</span> helps you cut costs and deliver within
               budget.
             </p>
@@ -100,7 +100,7 @@ const TeamScalingSection = () => {
                 className="w-10 h-10 rounded-full mr-3"
               />
               <div>
-                <p className="font-normal text-base text-[#1A202C]">Jeewa markram</p>
+                <p className="font-normal text-base ">Jeewa markram</p>
                 <p className="text-sm font-normal text-[#718096]">CEO</p>
               </div>
             </div>
@@ -111,12 +111,12 @@ const TeamScalingSection = () => {
             <h2 className="text-[28px] font-semibold text-purple-600 mb-4">
               Build the right team to scale
             </h2>
-            <p className="text-[#2D3748] mb-4 font-normal text-lg">
+            <p className=" mb-4 font-normal text-lg">
               Finding the right talent is not easy. We help you find the talent
               that suits your needs, follows your processes, and sticks with
               you long term (not the case with freelancers
             </p>
-            <p className="text-[#2D3748] mb-4 font-normal text-lg">
+            <p className=" mb-4 font-normal text-lg">
               Our <span className="text-purple-600 font-semibold">delivery model</span> helps you cut costs and deliver within
               budget.
             </p>
@@ -138,7 +138,7 @@ const TeamScalingSection = () => {
                 className="w-10 h-10 rounded-full mr-3"
               />
               <div>
-                <p className="font-normal text-base text-[#1A202C]">Jeewa markram</p>
+                <p className="font-normal text-base ">Jeewa markram</p>
                 <p className="text-sm font-normal text-[#718096]">CEO</p>
               </div>
             </div>

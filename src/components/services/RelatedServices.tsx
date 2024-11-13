@@ -54,7 +54,7 @@ const RelatedServices: React.FC = () => {
 
   return (
     <div className="mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 lg:py-24">
-      <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 text-gray-800">
+      <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
         Related Services
       </h2>
 

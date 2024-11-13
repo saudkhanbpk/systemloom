@@ -1,4 +1,3 @@
-"use client";
 import { Facebook } from 'lucide-react';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { FaGoogle, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
@@ -37,7 +36,13 @@ const Login: React.FC = () => {
         withCredentials: true
       });
       if (res.data.success) {
-        // Dispatch user to Redux state
+        // Access token from the response
+        const token = res.data.token;
+        
+        // Store token in local storage
+        localStorage.setItem('token', token);
+
+        // Dispatch user data to Redux state
         dispatch(setUser(res.data.user));
 
         // Redirect based on user role
@@ -106,7 +111,7 @@ const Login: React.FC = () => {
             <div className='mb-4'>
               <h2 className='mb-2'>Email</h2>
               <div className='flex items-center border-2 border-gray-500 rounded'>
-                <FaEnvelope className='text-gray-500 p-2' size={24} />
+                <FaEnvelope className='text-gray-500 p-2' size={32} />
                 <input
                   type="email"
                   name="email"
@@ -125,13 +130,13 @@ const Login: React.FC = () => {
             <div className='mb-4'>
               <h2 className='mb-2'>Password</h2>
               <div className='flex items-center border-2 border-gray-500 rounded'>
-                <FaLock className='text-gray-500 p-2' size={24} />
+                <FaLock className='text-gray-500 p-2' size={32} />
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder='************'
                   className='w-full px-2 py-3 outline-none bg-gray-900 text-white'
-                  autoComplete="off"
+
                   value={formData.password}
                   onChange={changeEventHandler}
                   required
@@ -142,7 +147,7 @@ const Login: React.FC = () => {
                   onClick={() => setShowPassword(!showPassword)}
                   aria-label={showPassword ? 'Hide password' : 'Show password'}
                 >
-                  {showPassword ? <FaEyeSlash className='text-gray-500' size={24} /> : <FaEye className='text-gray-500' size={24} />}
+                  {showPassword ? <FaEyeSlash className='text-gray-500' size={16} /> : <FaEye className='text-gray-500' size={16} />}
                 </div>
               </div>
             </div>

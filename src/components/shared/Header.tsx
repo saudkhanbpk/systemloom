@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
+
   const router = useRouter();
   const dispatch = useDispatch();
   const { user } = useSelector((store: RootState) => store.auth);  // Typing store with RootState
@@ -42,17 +42,17 @@ const Header: React.FC = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get(`${backend_url}/api/v1/user/logout`, {withCredentials:true});
+      const res = await axios.get(`${backend_url}/api/v1/user/logout`, { withCredentials: true });
       if (res.data.success) {
         dispatch(setUser(null));
         router.push("/");
         toast.success(res.data.message);
       }
     } catch (error: any) {
-      console.log(error);
-      toast.error(error?.response?.data?.message);
+      console.error(error);
+      toast.error(error?.response?.data?.message || 'Failed to logout');
     }
-    setIsDropdownOpen(false);
+    setIsDropdownOpen(false); // Close the dropdown after logout
   };
 
   return (
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
             </div>
             <div>
               <span className="text-[#FFFFFF] text-lg font-semibold">
-                Tech Creator
+                TechCreator
               </span>
             </div>
           </div>

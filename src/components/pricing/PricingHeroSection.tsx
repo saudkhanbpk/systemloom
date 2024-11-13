@@ -7,16 +7,16 @@ import pricing1 from "../../../public/assets/pricing_images/pricing1 (1).png"
 const PricingHeroSection: React.FC = () => {
   return (
     <div>
-      <div className=" text-white p-4 md:p-8">
+      <div className="  p-4 md:p-8">
         <div className="max-w-6xl mx-auto"></div>
       </div>
       
       <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-6 lg:px-20 ">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
-          <h1 className="text-[#004540] font-inter font-medium text-3xl md:text-[45.25px]">
+          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
             Innovation Unleashed
           </h1>
-          <p className="text-[#004540] font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
+          <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
             Dive into the future with our state-of-the-art products and services. From software development to hardware solutions, we are the architects of your digital dreams.
           </p>
         </div>
@@ -64,7 +64,7 @@ const PricingHeroSection: React.FC = () => {
             />
           </div>
         </div>
-        <div className='md:w-[600px] text-[#004540] '>
+        <div className='md:w-[600px]  '>
           <h1 className='text-3xl font-normal'>Affordability Redefined</h1>
           <p className='text-xl mt-4'>Dive into the future with our state-of-the-art products and services. From software development to hardware solutions, we are the architects of your digital dreams.</p>
         </div>
@@ -73,10 +73,10 @@ const PricingHeroSection: React.FC = () => {
 
       <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-6 lg:px-20">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
-          <h1 className="text-[#004540] font-inter font-medium text-3xl md:text-[45.25px]">
+          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
             Innovation Unleashed
           </h1>
-          <p className="text-[#004540] font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
+          <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
             Dive into the future with our state-of-the-art products and services. From software development to hardware solutions, we are the architects of your digital dreams.
           </p>
         </div>

@@ -43,8 +43,8 @@ const ProfileCard: React.FC<TeamProfile> = ({
         </div>
       </div>
       <div className="mt-2 p-4 flex flex-col  items-center">
-        <h2 className="text-lg font-semibold text-gray-900">{name}</h2>
-        <p className="text-gray-500">{position}</p>
+        <h2 className="text-lg font-semibold ">{name}</h2>
+        <p className="">{position}</p>
       </div>
     </div>
   );

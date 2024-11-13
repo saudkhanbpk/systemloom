@@ -51,7 +51,7 @@ function AboutSection() {
               <h1 className="text-[#9A00FF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
                 About Us
               </h1>
-              <p className="text-[#3F3F3F] font-normal text-base md:text-xl leading-7 md:leading-[36px] max-w-full md:max-w-lg">
+              <p className=" font-normal text-base md:text-xl leading-7 md:leading-[36px] max-w-full md:max-w-lg">
                 Concept Softworks is a software company, we develop custom-built
                 software for clients - covering everything from financial
                 institutions & medical companies all the way to tech companies

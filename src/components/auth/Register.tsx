@@ -92,7 +92,7 @@ const Register: React.FC = () => {
               <div className="mb-4">
                 <h2 className="mb-2">Full Name</h2>
                 <div className="flex items-center border-2 border-gray-500 rounded">
-                  <FaUser className="text-gray-500 p-2" size={24} />
+                  <FaUser className="text-gray-500 p-2" size={32} />
                   <input 
                     type="text" 
                     name="name"
@@ -108,7 +108,7 @@ const Register: React.FC = () => {
               <div className="mb-4">
                 <h2 className="mb-2">Email</h2>
                 <div className="flex items-center border-2 border-gray-500 rounded">
-                  <FaEnvelope className="text-gray-500 p-2" size={24} />
+                  <FaEnvelope className="text-gray-500 p-2" size={32} />
                   <input 
                     type="email" 
                     name="email"
@@ -125,7 +125,7 @@ const Register: React.FC = () => {
               <div className="mb-4">
                 <h2 className="mb-2">Password</h2>
                 <div className="flex items-center border-2 border-gray-500 rounded">
-                  <FaLock className="text-gray-500 p-2" size={24} />
+                  <FaLock className="text-gray-500 p-2" size={32} />
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
@@ -137,7 +137,7 @@ const Register: React.FC = () => {
                     required
                   />
                   <div className="p-2 cursor-pointer" onClick={() => setShowPassword(!showPassword)}>
-                    {showPassword ? <FaEyeSlash className="text-gray-500" size={24} /> : <FaEye className="text-gray-500" size={24} />}
+                    {showPassword ? <FaEyeSlash className="text-gray-500" size={16} /> : <FaEye className="text-gray-500" size={16} />}
                   </div>
                 </div>
               </div>

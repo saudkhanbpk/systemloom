@@ -154,7 +154,7 @@ const Page: React.FC = () => {
   return (
     <AdminLayout>
       <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-8">
-        <h1 className="text-3xl font-semibold mb-6 text-center">{jobId ? 'Edit Job' : 'Add New Position'}</h1>
+        <h1 className="text-3xl font-semibold mb-6 text-black text-center">{jobId ? 'Edit Job' : 'Add New Position'}</h1>
 
         <form onSubmit={handleSubmit}>
           {/* Title */}
@@ -166,7 +166,7 @@ const Page: React.FC = () => {
               value={formData.title}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -178,7 +178,7 @@ const Page: React.FC = () => {
               value={formData.description}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -191,7 +191,7 @@ const Page: React.FC = () => {
                 value={formData.jobType}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Select Job Type</option>
                 <option value="full-time">Full-time</option>
@@ -210,7 +210,7 @@ const Page: React.FC = () => {
                 value={formData.location}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -224,7 +224,7 @@ const Page: React.FC = () => {
                 value={formData.experience}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Select Experience Level</option>
                 <option value="0-2 years">0-2 years</option>
@@ -241,7 +241,7 @@ const Page: React.FC = () => {
                 value={formData.salary}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -255,7 +255,7 @@ const Page: React.FC = () => {
                 value={formData.category}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Select Category</option>
                 <option value="Engineering">Engineering</option>
@@ -274,7 +274,7 @@ const Page: React.FC = () => {
                 value={formData.employmentType}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -287,7 +287,7 @@ const Page: React.FC = () => {
               value={formData.company}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
                 <option value="">Select Company</option>
               <option value="Tech Creator">Tech Creator</option>
@@ -302,7 +302,7 @@ const Page: React.FC = () => {
               name="skills"
               value={formData.skills.join(', ')}
               onChange={(e) => handleArrayChange(e, 'skills')}
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="e.g. JavaScript, Node.js, React"
             />
           </div>
@@ -315,7 +315,7 @@ const Page: React.FC = () => {
               name="qualifications"
               value={formData.qualifications.join(', ')}
               onChange={(e) => handleArrayChange(e, 'qualifications')}
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 text-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="e.g. Bachelors, Masters"
             />
           </div>

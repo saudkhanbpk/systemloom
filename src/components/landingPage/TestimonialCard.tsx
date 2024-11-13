@@ -26,7 +26,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         className="object-cover"
       />
     </div>
-    <h3 className="font-bold text-xl mb-2 text-center text-[#000000]">{name}</h3>
+    <h3 className="font-bold text-xl mb-2 text-center ">{name}</h3>
     <div className="flex justify-center mb-3">
       {[...Array(5)].map((_, i) => (
         <Star
@@ -36,7 +36,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         />
       ))}
     </div>
-    <p className="font-normal leading-6 text-base mb-2 text-center text-[#000000]">
+    <p className="font-normal leading-6 text-base mb-2 text-center ">
       {`"${testimonial}"`}
     </p>
   </div>
@@ -76,7 +76,7 @@ const ClientTestimonialsSection: React.FC = () => {
         <h2 className="text-[35px] font-bold text-center text-purple-600 mb-2">
           CLIENT TESTIMONIALS
         </h2>
-        <p className="text-2xl text-center font-medium text-black mb-12">
+        <p className="text-2xl text-center font-medium  mb-12">
           What they say about us
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

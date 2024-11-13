@@ -28,7 +28,7 @@ const DiagonalFeatureSection: React.FC<DiagonalFeatureSectionProps> = ({
   ];
 
   return (
-    <div className="w-full py-16 px-4 md:px-8 mx-auto bg-white rounded-lg overflow-hidden shadow-md mb-10 max-w-screen-xl">
+    <div className="w-full py-16 px-4 md:px-8 mx-auto bg-white rounded-lg overflow-hidden  mb-10 max-w-screen-xl">
       {sections.map((section, index) => (
         <div key={index} className="relative mb-16 md:mb-32">
           <div

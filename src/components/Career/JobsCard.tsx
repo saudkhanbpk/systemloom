@@ -30,7 +30,7 @@ const JobCard = ({
   const timeDistance = formatDistanceToNow(timeAgoFormatted, { addSuffix: true });
 
   return (
-    <div className="bg-[#F4F6FC] rounded-[24px] p-6 md:w-[360px] w-[300px] h-[280px] hover:shadow-lg transition-shadow">
+    <div className="bg-[#F4F6FC] text-black rounded-[24px] p-6 md:w-[360px] w-[300px] h-[280px] hover:shadow-lg transition-shadow">
       <div className="flex items-center mb-3">
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-purple-600 mr-2"></div>
@@ -92,7 +92,7 @@ const JobsCard = () => {
 
   return (
     <>
-    <div className="bg-[#FFFFFF] py-12 lg:px-10 px-3">
+    <div className=" py-12 lg:px-10 px-3">
       <div>
         <p className="font-inter font-semibold text-[42px]">Open positions</p>
         <p className="font-inter font-normal text-[22px] text-[#838696]">Come join the team!</p>

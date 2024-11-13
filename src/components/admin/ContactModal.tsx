@@ -12,7 +12,7 @@ const ContactModal: FC<ContactModalProps> = ({ contact, onClose }) => {
       onClick={onClose} 
     >
       <div
-        className="bg-white rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
+        className="bg-white  rounded-lg p-6 w-full max-w-2xl shadow-lg relative"
         onClick={(e) => e.stopPropagation()} 
       >
         <button
@@ -21,13 +21,13 @@ const ContactModal: FC<ContactModalProps> = ({ contact, onClose }) => {
         >
           &times;
         </button>
-        <h2 className="text-xl font-semibold mb-4">Contact Details</h2>
-        <p className='mt-3'><strong>First Name:</strong> {contact.firstName}</p>
-        <p className='mt-3'><strong>Last Name:</strong> {contact.lastName}</p>
-        <p className='mt-3'><strong>Email:</strong> {contact.email}</p>
-        <p className='mt-3'><strong>Phone Number:</strong> {contact.phoneNumber}</p>
-        <p className='mt-3'><strong>Message:</strong> {contact.message}</p>
-        <p className='mt-3'><strong>Created At:</strong> {new Date(contact.createdAt).toLocaleString()}</p>
+        <h2 className="text-xl font-semibold mb-4 text-black">Contact Details</h2>
+        <p className='mt-3 text-gray-600'><strong className=''>First Name:</strong> {contact.firstName}</p>
+        <p className='mt-3 text-gray-600'><strong>Last Name:</strong> {contact.lastName}</p>
+        <p className='mt-3 text-gray-600'><strong>Email:</strong> {contact.email}</p>
+        <p className='mt-3 text-gray-600'><strong>Phone Number:</strong> {contact.phoneNumber}</p>
+        <p className='mt-3 text-gray-600'><strong>Message:</strong> {contact.message}</p>
+        <p className='mt-3 text-gray-600'><strong>Created At:</strong> {new Date(contact.createdAt).toLocaleString()}</p>
       </div>
     </div>
   );
