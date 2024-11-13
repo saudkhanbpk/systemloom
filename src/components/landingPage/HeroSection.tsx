@@ -7,17 +7,19 @@ function HeroSection() {
 
   return (
     <div className="relative bg-gray-900 text-white pt-5">
-      <div className="absolute inset-0 overflow-hidden">
-        {imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt="Background"
-            fill // Use fill instead of layout="fill"
-            className="object-cover opacity-50"
-            style={{ objectFit: 'cover' }} // Ensures the image covers the container
-          />
-        ) : null} 
-      </div>
+     <div className="absolute inset-0 overflow-hidden">
+  {imageUrl ? (
+    <Image
+      src={imageUrl}
+      alt="Background-image"
+      fill
+      priority 
+      className="object-cover opacity-50"
+      style={{ objectFit: 'cover' }}
+    />
+  ) : null}
+</div>
+
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
         <div className="text-center">
           <h1 className="font-semibold text-3xl md:text-[57px] leading-tight md:leading-[65px] mb-4 md:mb-6">

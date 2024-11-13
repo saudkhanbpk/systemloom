@@ -21,14 +21,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const pathname = usePathname();
   const isAdminPage = pathname.startsWith("/admin");
 
-  // Log store state for debugging
-  store.subscribe(() => {
-    console.log("Store state: ", store.getState());
-  });
-
+  
   return (
     <Provider store={store}>
-      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+      <PersistGate  persistor={persistor}>
         <ToastContainer
           position="top-right"
           autoClose={5000}

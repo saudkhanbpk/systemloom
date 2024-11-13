@@ -1,20 +1,44 @@
 "use client";
 import Image from 'next/image';
-import Link from 'next/link'; // Import Link from Next.js
+import Link from 'next/link';
 import Logo from '../../../public/assets/icons/Logo.png';
 import CommonButton from '../common/Button';
 import Footerbg from '../../../public/assets/footerImages/footer_bg_image.svg';
+import { useEffect } from 'react';
 
 const Footer: React.FC = () => {
+
+  useEffect(() => {
+    const footerBackground = document.querySelector(".footer-bg") as HTMLElement | null;
+
+    if (footerBackground && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              footerBackground.style.backgroundImage = `url(${Footerbg.src})`;
+              observer.unobserve(entry.target); // Stop observing once image is loaded
+            }
+          });
+        },
+        { rootMargin: "0px 0px 200px 0px" }
+      );
+
+      observer.observe(footerBackground);
+      return () => observer.disconnect(); // Cleanup observer on component unmount
+    } else if (footerBackground) {
+      // Fallback in case IntersectionObserver is not supported
+      footerBackground.style.backgroundImage = `url(${Footerbg.src})`;
+    }
+  }, []);
+
   return (
     <footer className="relative bg-black text-white py-8 md:py-10 w-full ">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{
-          backgroundImage: `url(${Footerbg.src})`,
-        }}
+        className="absolute inset-0 bg-cover bg-center opacity-20 footer-bg"
+        // Background image will load dynamically with Intersection Observer
       ></div>
-      <div className="relative  mx-auto px-4 md:px-10">
+      <div className="relative mx-auto px-4 md:px-10">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
           <div className="ml-2 md:ml-8">
             <div className="flex items-center gap-2">

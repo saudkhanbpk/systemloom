@@ -63,13 +63,17 @@ const Contacts: React.FC = () => {
 
   const handleView = async (id: string) => {
     try {
-      const res = await axios.get(`${backend_url}/api/v1/contact/get/${id}`, {
+      const res = await axios.get(`${backend_url}/api/v1/contact/get/${id}`, {        
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
+      // console.log(res);
+
       if (res.data.success) {
         setSelectedContact(res.data.message);
         setIsModalOpen(true); 
+      }else{
+        toast.error(res.data.message)
       }
     } catch (error: any) {
       console.log(error);
@@ -85,7 +89,7 @@ const Contacts: React.FC = () => {
   return (
     <AdminLayout>
       <div className="p-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between sm:flex-row flex-col items-center">
           <h1 className="text-2xl font-semibold mb-4">Contacts</h1>
           <div className="relative mb-4">
             <input

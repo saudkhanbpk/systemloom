@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch, buttonType }) => {
 
   return (
     <div className=''>
-      <header className="flex flex-col max-w-6xl md:flex-row justify-between items-center space-y-4 md:space-y-0  md:ml-11 ">
+      <header className="flex flex-col mt-6 sm:mt-0 max-w-6xl md:flex-row justify-between items-center space-y-4 md:space-y-0  md:ml-11 ">
         <div className="flex items-center ">
            {/* Conditionally render Add Job or Add Project button */}
            <Link
@@ -35,9 +35,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch, buttonType }) => {
             </button>
           </Link>
         </div>
-        <div className="relative w-full md:w-auto">
+        <div className="relative border rounded-md w-[300px] md:w-auto">
           <input
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=" px-4 py-2 w-full border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Search"
             type="text"
             aria-label="Search Jobs"

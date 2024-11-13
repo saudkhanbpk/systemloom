@@ -43,13 +43,10 @@ const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => 
   };
 
   return (
-    <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
+    <div className="overflow-x-auto border rounded-lg shadow-lg bg-white">
       <table className="min-w-full text-sm text-left text-gray-500">
         <thead className="bg-gray-100 text-gray-700">
           <tr>
-            {/* <th className="p-4">
-              <input type="checkbox" className="form-checkbox h-5 w-5" />
-            </th> */}
             <th className="p-4">Image</th>
             <th className="p-4">Name</th>
             <th className="p-4">Email</th>
@@ -61,9 +58,6 @@ const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => 
         <tbody>
           {currentContacts.map((contact) => (
             <tr key={contact._id} className="border-b border-gray-200 hover:bg-gray-50">
-              {/* <td className="p-4">
-                <input type="checkbox" className="form-checkbox h-5 w-5" />
-              </td> */}
               <td className="p-2">
                 <Image
                   src="/default-avatar.jpg"
@@ -77,10 +71,10 @@ const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => 
               <td className="p-4 text-nowrap">{contact.email}</td>
               <td className="p-4 text-nowrap">{contact.phoneNumber}</td>
               <td className="p-4 text-nowrap truncate max-w-xs">{contact.message}</td>
-              <td className="p-4  flex space-x-3">
+              <td className="p-4 flex space-x-3">
                 <FaEye
                   className="text-blue-500 cursor-pointer hover:text-blue-700 transition-all"
-                  onClick={() => onView(contact._id) }
+                  onClick={() => onView(contact._id)}
                 />
                 <FaTrashAlt
                   className="text-red-500 cursor-pointer hover:text-red-700 transition-all"
@@ -90,28 +84,32 @@ const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => 
             </tr>
           ))}
         </tbody>
+        <tfoot className="bg-gray-100">
+          <tr>
+            <td colSpan={7} className="py-2 px-4">
+              <div className="flex justify-between items-center">
+                <button
+                  onClick={handlePrevPage}
+                  disabled={currentPage === 1}
+                  className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"}`}
+                >
+                  Previous
+                </button>
+                <span className="text-gray-700">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button
+                  onClick={handleNextPage}
+                  disabled={currentPage === totalPages}
+                  className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"}`}
+                >
+                  Next
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
       </table>
-
-      {/* Pagination */}
-      <div className="flex justify-between items-center p-4">
-        <button
-          className="px-4 py-2 bg-gray-100 text-gray-500 rounded hover:bg-gray-200"
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        <span className="text-gray-700">
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          className="px-4 py-2 bg-gray-100 text-gray-500 rounded hover:bg-gray-200"
-          onClick={handleNextPage}
-          disabled={currentPage === totalPages}
-        >
-          Next
-        </button>
-      </div>
     </div>
   );
 };

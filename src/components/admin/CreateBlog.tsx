@@ -1,12 +1,12 @@
-import React, { useState , createContext , useContext } from 'react';
-import { Editor } from '@tinymce/tinymce-react';
+import React, { useState, createContext, useContext } from "react";
+import { Editor } from "@tinymce/tinymce-react";
 import { IoIosAddCircle, IoIosCloseCircle } from "react-icons/io";
-import { backend_url } from '@/newLayout';
-import axios from 'axios';
-import { useRouter } from 'next/navigation'
-import { toast } from 'react-toastify';
+import { backend_url } from "@/newLayout";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 const CreateBlogForm = () => {
-  const router = useRouter()
+  const router = useRouter();
   // const AdminContext = createContext(null);
   const [storyContent, setStoryContent] = useState("");
   const [altDescription, setAltDescription] = useState("");
@@ -36,7 +36,7 @@ const CreateBlogForm = () => {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleTagAdd();
     }
   };
@@ -72,10 +72,14 @@ const CreateBlogForm = () => {
     }
     try {
       // Create new job if no jobId
-      const res = await axios.post(`${backend_url}/api/v1/blogs/create`, formData, {
-        withCredentials: true,
-      });
-    
+      const res = await axios.post(
+        `${backend_url}/api/v1/blogs/create`,
+        formData,
+        {
+          withCredentials: true,
+        }
+      );
+
       // Check if the request was successful
       if (res.status == 200) {
         toast.success("Blog posted successfully!");
@@ -83,11 +87,10 @@ const CreateBlogForm = () => {
       } else {
         alert(`Error: ${res.statusText}`);
       }
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred. Please try again.");
+    } catch (error: any) {
+      console.log(error);
+      toast.error("An error occurred. Please try again.");
     }
-    
   };
 
   return (
@@ -111,7 +114,11 @@ const CreateBlogForm = () => {
           {/* Preview selected image */}
           {imagePreview && (
             <div className="mt-4">
-              <img src={imagePreview} alt="Image Preview" className="w-32 h-32 object-cover mx-auto" />
+              <img
+                src={imagePreview}
+                alt="Image Preview"
+                className="w-32 h-32 object-cover mx-auto"
+              />
             </div>
           )}
         </div>
@@ -159,9 +166,27 @@ const CreateBlogForm = () => {
             value={storyContent}
             init={{
               height: 400,
-              plugins: ["advlist", "autolink", "lists", "link", "image", "charmap", "preview", "anchor", "searchreplace", "visualblocks", "code", "fullscreen", "insertdatetime", "media", "table"],
-              toolbar: "undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help | link",
-              content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+              plugins: [
+                "advlist",
+                "autolink",
+                "lists",
+                "link",
+                "image",
+                "charmap",
+                "preview",
+                "anchor",
+                "searchreplace",
+                "visualblocks",
+                "code",
+                "fullscreen",
+                "insertdatetime",
+                "media",
+                "table",
+              ],
+              toolbar:
+                "undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help | link",
+              content_style:
+                "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
             }}
             onEditorChange={handleEditorChange}
           />
@@ -172,7 +197,10 @@ const CreateBlogForm = () => {
           <label className="block text-gray-700 mb-2">Tags</label>
           <div className="flex flex-wrap gap-2 mb-2">
             {tags.map((tag, index) => (
-              <span key={index} className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full flex items-center">
+              <span
+                key={index}
+                className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full flex items-center"
+              >
                 {tag}
                 <IoIosCloseCircle
                   className="ml-2 cursor-pointer text-blue-600"

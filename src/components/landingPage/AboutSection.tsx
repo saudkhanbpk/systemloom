@@ -7,9 +7,9 @@ import group3 from '../../../public/assets/aboutImages/Mask group (2).png';
 function AboutSection() {
   return (
     <>
-      <section className="py-12 md:py-16 md:p-10">
-        <div className="mx-auto px-4 flex flex-col md:flex-row gap-12 items-center">
-          <div className="flex flex-col sm:flex-row items-center md:w-1/2 w-full justify-center md:justify-start  gap-4">
+      <section className="py-12 md:py-16 md:p-10  mx-auto">
+        <div className=" flex  flex-col md:flex-row justify-center gap-12   items-center">
+          <div className="flex flex-col sm:flex-row items-center  md:w-1/2 w-full justify-center   gap-4">
             <div className="mb-4 md:mb-0 md:mr-2">
               <Image
                 src={group1}
@@ -36,14 +36,18 @@ function AboutSection() {
           </div>
 
           <div className="flex flex-col items-center md:items-start md:w-1/2 w-full">
-            <div className="mb-4 md:mb-4 flex justify-center md:justify-start md:ms-44">
+            <div className="mb-4 md:mb-4  flex justify-center md:justify-start md:ms-44">
               <Image
                 src={squareImage}
                 alt="about_image"
-                className="w-[150px] h-[150px] md:w-[196.88px] md:h-[196.18px] rotate-[-9.96deg] object-cover"
+                width={250}  
+    height={260} 
+    layout="responsive"  
+    className="object-cover"
+    sizes="(max-width: 768px) 250px, (min-width: 768px) 324px"
               />
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left  mx-auto">
               <h1 className="text-[#9A00FF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
                 About Us
               </h1>

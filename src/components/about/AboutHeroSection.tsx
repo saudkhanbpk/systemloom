@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import backgroundImage from "../../../public/assets/aboutImages/backgroundImage.jpeg"
+import backgroundImage from "../../../public/assets/aboutImages/backgroundImage.jpeg";
 
 const AboutHeroSection: React.FC = () => {
   return (
@@ -10,12 +10,15 @@ const AboutHeroSection: React.FC = () => {
         <Image
           src={backgroundImage}
           alt="Background"
-          className="w-full opacity-25"
+          layout="fill"        
+          objectFit="cover"    
+          priority             
+          className="opacity-25" 
         />
       </div>
 
       {/* Content Wrapper */}
-      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8 md:pb-12">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="w-full text-center">
           <h1 className="font-semibold text-[32px] sm:text-[48px] md:text-[58px] font-poppins leading-[1.2] mb-0">
             Together, We Drive Your Success

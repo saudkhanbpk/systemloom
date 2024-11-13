@@ -3,6 +3,7 @@ import authReducer from "./authSlice";
 import jobReducer from "./jobSlice";
 import messageReducer from "./messageSlice"
 import blogReducer from './blogSlice';
+import applicantReducer from "./applicantSlice"
 
 import {
   persistReducer,
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
   auth:authReducer,
   job:jobReducer,
   message: messageReducer,
-  blogs:blogReducer
+  blogs:blogReducer,
+  applicants: applicantReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
