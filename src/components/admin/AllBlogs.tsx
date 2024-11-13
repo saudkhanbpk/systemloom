@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import { MdFilterList } from "react-icons/md";
 import Link from 'next/link';
@@ -6,75 +6,94 @@ import { IoMdAdd, IoMdArrowDown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FiEdit2 } from "react-icons/fi";
-import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { backend_url } from "@/newLayout";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { deleteblog } from "@/redux/blogSlice";
+
 // Define a type for the blog data
 interface Blog {
-  id: number;
-  image: any;
+  _id: number;
+  image: string | { imageUrl: string }; // This accounts for both string or object with imageUrl
   content: string;
   tags: string[];
   createdAt: any;
-  publish:boolean;
-  title:string
-  
+  publish: boolean;
+  title: string;
 }
 
 const AllBlogs: React.FC = () => {
+  const { blogs } = useSelector((state: any) => state.blogs);
+
+  console.log("all blogs", blogs);
+  
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const blogsPerPage = 5;
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  useEffect(() => {
-    async function fetchBlogs() {
-      try {
-        const response = await fetch("https://tech-creator-backend.onrender.com/api/blogs/");
-        const data = await response.json();
-        setBlogs(data.blogs);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      }
-    }
-    fetchBlogs();
-  }, []);
-  const filteredBlogs = Array.isArray(blogs) ? blogs.filter((blog)=>
+
+  const filteredBlogs = Array.isArray(blogs) ? blogs.filter((blog: Blog) =>
     blog.content.toLowerCase().includes(searchTerm.toLowerCase())
   ) : [];
+
   const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
   const displayedBlogs = filteredBlogs.slice(
     (currentPage - 1) * blogsPerPage,
     currentPage * blogsPerPage
   );
+
   const handleNext = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
   };
+
   const handlePrevious = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   };
-
+  const dispatch = useDispatch();
+  const deletedblogHandler = async (id: any) => {
+     console.log("Deleting blog with ID:", id);
+    try {
+      const res = await axios.delete(`${backend_url}/api/v1/blogs/delete/${id}`, {
+        headers: {
+          "Content-Type": "application/json"
+        },
+        withCredentials: true
+      });
+  
+      if (res.data.success) {
+        dispatch(deleteblog(id));  // Use id instead of _id
+        toast.success(res.data.message);
+      }
+    } catch (error: any) {
+      console.log(error);
+      const errorMessage = error?.response?.data?.message;
+      toast.error(errorMessage);
+    }
+  };
+  
   return (
     <main className="max-w-7xl mx-auto bg-inline lg:p-6">
       <header className="flex flex-col md:flex-row justify-between md:items-center mb-4 space-y-4 md:space-y-0">
         <div className="flex items-center space-x-4">
-          {/* <button
+          <button
             aria-label="Filter Blogs"
             className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50"
           >
             <MdFilterList className="mr-2" /> Filters
-          </button> */}
-   <Link href="/admin/create-blog" passHref>
-      <button
-        aria-label="Add Blog"
-        className="flex items-center px-4 py-2 bg-[#9A00FF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
-      >
-        <IoMdAdd className="mr-2" /> Add Blog
-      </button>
-    </Link>
-
-          <span className="text-gray-700">1 row selected</span>
+          </button>
+          <Link href="/admin/create-blog" passHref>
+            <button
+              aria-label="Add Blog"
+              className="flex items-center px-4 py-2 bg-[#9A00FF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
+            >
+              <IoMdAdd className="mr-2" /> Add Blog
+            </button>
+          </Link>
+          {/* <span className="text-gray-700">1 row selected</span> */}
         </div>
         <div className="relative w-full md:w-auto">
           <input
@@ -93,9 +112,9 @@ const AllBlogs: React.FC = () => {
         <table className="min-w-full bg-white border border-gray-200 rounded-lg">
           <thead>
             <tr className="bg-gray-50 text-nowrap">
-              <th className="px-6 py-3 border-b border-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              {/* <th className="px-6 py-3 border-b border-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 <input className="form-checkbox h-4 w-4 text-blue-600" type="checkbox" aria-label="Select All" />
-              </th>
+              </th> */}
               <th className="px-6 py-3 border-b border-gray-200 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Image <IoMdArrowDown className="inline ml-2" />
               </th>
@@ -115,38 +134,37 @@ const AllBlogs: React.FC = () => {
           </thead>
 
           <tbody className="bg-white">
-            {displayedBlogs.map((blog, index) => (
-              <tr key={`${blog.id}-${index}`}>
-                <td className="px-6 py-4 border-b border-gray-200">
-                  <input className="form-checkbox h-4 w-4 text-blue-600" type="checkbox" aria-label={`Select blog ${blog.id}`} />
-                </td>
+            {displayedBlogs.map((blog: Blog, index: number) => (
+              <tr key={`${blog._id}-${index}`}>
+                {/* <td className="px-6 py-4 border-b border-gray-200">
+                  <input className="form-checkbox h-4 w-4 text-blue-600" type="checkbox" aria-label={`Select blog ${blog._id}`} />
+                </td> */}
                 <td className="px-6 py-4 border-b border-gray-200">
                   <img
                     alt="Blog preview"
                     className="h-10 w-10 rounded object-cover"
-                    src={blog?.image.imageUrl}
+                    src={(typeof blog.image === "string") ? blog.image : blog.image.imageUrl}
                     width="40"
                     height="40"
                   />
                 </td>
-                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog?.title}</td>
+                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.title}</td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
-                  {blog.tags.map((tag, index) => (
+                  {blog.tags.map((tag: string, index: number) => (
                     <span key={index} className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 mr-1">
                       {tag}
                     </span>
                   ))}
                 </td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">
-                 {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                 year: "numeric",
-                  month: "long",
-                day: "numeric",
-                   })}
-                    </td>
-                {/* <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.createdAt | Date }</td> */}
+                  {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
-                  <button aria-label="Delete Blog" className="text-gray-500 hover:text-gray-700">
+                  <button aria-label="Delete Blog" className="text-gray-500 hover:text-gray-700" onClick={() => deletedblogHandler(blog._id)} >
                     <FaRegTrashCan />
                   </button>
                   <button aria-label="Edit Blog" className="text-gray-500 hover:text-gray-700 ml-2">
@@ -158,12 +176,10 @@ const AllBlogs: React.FC = () => {
           </tbody>
         </table>
 
-        <div className="flex  flex-row justify-between items-center mt-4 space-y-2 sm:space-y-0 p-3 ">
+        <div className="flex flex-row justify-between items-center mt-4 space-y-2 sm:space-y-0 p-3 ">
           <button
             aria-label="Previous Page"
-            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${
-              currentPage === 1 ? "cursor-not-allowed opacity-50" : ""
-            }`}
+            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${currentPage === 1 ? "cursor-not-allowed opacity-50" : ""}`}
             onClick={handlePrevious}
             disabled={currentPage === 1}
           >
@@ -176,9 +192,7 @@ const AllBlogs: React.FC = () => {
             aria-label="Next Page"
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${
-              currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""
-            }`}
+            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""}`}
           >
             Next
           </button>
