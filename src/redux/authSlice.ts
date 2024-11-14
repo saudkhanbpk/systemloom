@@ -1,12 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-
 interface User {
-  id: string; 
+  id: string;
   name: string;
   email: string;
+  role: "admin" | "job seeker"; // Add the role property
 }
-
 
 interface AuthState {
   user: User | null;
@@ -24,13 +23,11 @@ const authSlice = createSlice({
   reducers: {
     // Action to set the user
     setUser: (state, action: PayloadAction<User | null>) => {
-      state.user = action.payload; 
+      state.user = action.payload;
     },
   },
 });
 
-
 export const { setUser } = authSlice.actions;
-
 
 export default authSlice.reducer;

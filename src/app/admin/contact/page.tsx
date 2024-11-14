@@ -11,6 +11,7 @@ import { backend_url } from '@/newLayout';
 import { toast } from 'react-toastify';
 import { removeContact } from '@/redux/messageSlice';
 import ContactModal from '@/components/admin/ContactModal';
+import ProtectedRoute from '@/components/auth/ProtectedRoute';
 
 interface Contact {
   _id: string;
@@ -87,6 +88,8 @@ const Contacts: React.FC = () => {
     setSelectedContact(null);
   };
   return (
+    <ProtectedRoute>
+    
     <AdminLayout>
       <div className="p-4">
         <div className="flex justify-between sm:flex-row flex-col items-center">
@@ -111,6 +114,7 @@ const Contacts: React.FC = () => {
         )}
       </div>
     </AdminLayout>
+    </ProtectedRoute>
   );
 };
 

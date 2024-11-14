@@ -7,6 +7,7 @@ import { RootState } from "@/redux/store";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
 
 
@@ -22,6 +23,7 @@ const ApplicantsPage = () => {
   );
 
   return (
+    <ProtectedRoute>
     <AdminLayout>
       <div className="container mx-auto p-4">
 
@@ -46,6 +48,7 @@ const ApplicantsPage = () => {
         <ApplicantsTable users={filteredApplicants} />
       </div>
     </AdminLayout>
+    </ProtectedRoute>
   );
 };
 

@@ -1,4 +1,5 @@
 "use client";
+import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import AdminLayout from '@/components/shared/AdminLayout';
 import { backend_url } from '@/newLayout';
 import axios from 'axios';
@@ -152,6 +153,7 @@ const Page: React.FC = () => {
   
 
   return (
+    <ProtectedRoute>
     <AdminLayout>
       <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-8">
         <h1 className="text-3xl font-semibold mb-6 text-black text-center">{jobId ? 'Edit Job' : 'Add New Position'}</h1>
@@ -338,6 +340,7 @@ const Page: React.FC = () => {
         </form>
       </div>
     </AdminLayout>
+    </ProtectedRoute>
   );
 };
 
