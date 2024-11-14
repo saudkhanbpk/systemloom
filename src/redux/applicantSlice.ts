@@ -19,7 +19,8 @@ interface Applicant {
   originalResumeName:string;
   motivationLetter: string;
   date: string;
-  createdAt:string
+  createdAt:string;
+  
 }
 
 interface ApplicantState {

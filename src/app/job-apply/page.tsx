@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Page = () => {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center min-h-screen ">
       {/* Background Image Section */}
       <div className="relative w-full h-72 md:h-96 flex items-center justify-center overflow-hidden">
         <Image

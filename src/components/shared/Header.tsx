@@ -9,7 +9,7 @@ import { IoMdLogIn } from "react-icons/io";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { FaHome, FaInfoCircle, FaServicestack, FaTags, FaBlog, FaProjectDiagram, FaBriefcase, FaEnvelope } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../redux/store";  // Import RootState for typing useSelector
+import { RootState } from "../../redux/store";
 import axios from "axios";
 import { backend_url } from "@/newLayout";
 import { setUser } from "@/redux/authSlice";
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
 
   const router = useRouter();
   const dispatch = useDispatch();
-  const { user } = useSelector((store: RootState) => store.auth);  // Typing store with RootState
+  const { user } = useSelector((store: RootState) => store.auth);
 
   const navItems = [
     { name: "Home", href: "/", icon: <FaHome /> },
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
       console.error(error);
       toast.error(error?.response?.data?.message || 'Failed to logout');
     }
-    setIsDropdownOpen(false); // Close the dropdown after logout
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -60,14 +60,10 @@ const Header: React.FC = () => {
       <div className="lg:pr-10 lg:pl-10 mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex justify-center gap-2 items-center">
-            <div>
-              <Image src={Logo} alt="logo" width={48} height={50} />
-            </div>
-            <div>
-              <span className="text-[#FFFFFF] text-lg font-semibold">
-                TechCreator
-              </span>
-            </div>
+            <Image src={Logo} alt="logo" width={48} height={50} />
+            <span className="text-[#FFFFFF] text-lg font-semibold">
+              TechCreator
+            </span>
           </div>
           <div className="hidden md:block">
             <div className="flex items-baseline space-x-4">
@@ -75,6 +71,7 @@ const Header: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
+                  onClick={() => setIsOpen(false)}
                   className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF] text-white
                     ${pathname === item.href ? 'bg-[#9A00FF] text-white' : ''}  
                   `}
@@ -85,7 +82,6 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Person Icon with Dropdown */}
           <div className="hidden md:block relative">
             <Image
               src={personIcon}
@@ -98,22 +94,35 @@ const Header: React.FC = () => {
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 w-fit bg-white rounded-md shadow-lg py-2 z-20">
                 {user ? (
-                  <button
-                    onClick={handleLogout}
-                    className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
-                  >
-                    <CiLogout className="text-xl text-[#9A00FF]" /> Logout
-                  </button>
+                  <>
+                    {user.role === "admin" && (
+                      <Link
+                        href="/admin"
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        <SiGnuprivacyguard className="text-xl text-[#9A00FF]" /> Admin
+                      </Link>
+                    )}
+                    <button
+                      onClick={handleLogout}
+                      className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      <CiLogout className="text-xl text-[#9A00FF]" /> Logout
+                    </button>
+                  </>
                 ) : (
                   <>
                     <Link
                       href="/login"
+                      onClick={() => setIsDropdownOpen(false)}
                       className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
                       <IoMdLogIn className="text-xl text-[#9A00FF]" /> Login
                     </Link>
                     <Link
                       href="/register"
+                      onClick={() => setIsDropdownOpen(false)}
                       className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
                       <SiGnuprivacyguard className="text-xl text-[#9A00FF]" /> Signup
@@ -124,7 +133,6 @@ const Header: React.FC = () => {
             )}
           </div>
 
-          {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -137,7 +145,6 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -145,31 +152,33 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 href={item.href}
+                onClick={() => setIsOpen(false)}
                 className={`flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700
-                  ${pathname === item.href ? 'bg-[#0c080f] text-white' : ''}  // Correct active class for mobile
+                  ${pathname === item.href ? 'bg-[#0c080f] text-white' : ''}  
                 `}
               >
                 {item.icon} {item.name}
               </Link>
             ))}
-            {user && (
+            {user ? (
               <button
                 onClick={handleLogout}
                 className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700"
               >
                 <CiLogout className="text-white" /> Logout
               </button>
-            )}
-            {!user && (
+            ) : (
               <>
                 <Link
                   href="/login"
+                  onClick={() => setIsOpen(false)}
                   className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700"
                 >
                   <IoMdLogIn className="text-white" /> Login
                 </Link>
                 <Link
                   href="/register"
+                  onClick={() => setIsOpen(false)}
                   className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700"
                 >
                   <SiGnuprivacyguard className="text-white" /> Signup

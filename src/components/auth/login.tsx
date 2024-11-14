@@ -1,5 +1,5 @@
 import { Facebook } from 'lucide-react';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { FaGoogle, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -8,12 +8,15 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { setUser } from '@/redux/authSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
 
 const Login: React.FC = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
+  const {user} = useSelector((state:RootState) => state.auth)
+  
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -36,12 +39,7 @@ const Login: React.FC = () => {
         withCredentials: true
       });
       if (res.data.success) {
-        // Access token from the response
-        const token = res.data.token;
-        
-        // Store token in local storage
-        localStorage.setItem('token', token);
-
+       
         // Dispatch user data to Redux state
         dispatch(setUser(res.data.user));
 
@@ -53,7 +51,7 @@ const Login: React.FC = () => {
         }
 
         toast.success(res.data.message);
-        setFormData({ email: '', password: '' }); // Clear form data
+        setFormData({ email: '', password: '' });
       }
     } catch (error: any) {
       console.log(error);
@@ -63,6 +61,13 @@ const Login: React.FC = () => {
       setLoading(false); // Reset loading state
     }
   };
+
+  useEffect(() => {
+    if (user){
+      router.push("/")
+    }
+  }, [])
+  
 
   return (
     <motion.div

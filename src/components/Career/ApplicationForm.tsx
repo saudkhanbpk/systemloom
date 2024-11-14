@@ -28,8 +28,8 @@ const JobApplicationForm: React.FC = () => {
   const searchParams = useSearchParams();
   const jobId = searchParams.get("jobId");  
   const { allJobs } = useSelector((state: RootState) => state.job);
-
-  const router = useRouter()
+  const { user } = useSelector((state: RootState) => state.auth);
+  const router = useRouter();
   
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
@@ -55,7 +55,7 @@ const JobApplicationForm: React.FC = () => {
       if (job) {
         setFormData((prevData) => ({
           ...prevData,
-          applyingForPosition: job.title, // Set the job title in the form data
+          applyingForPosition: job.title,
         }));
       }
     }
@@ -76,7 +76,7 @@ const JobApplicationForm: React.FC = () => {
       setFormData((prevData) => ({
         ...prevData,
         [name]: file,
-        [`${name}OriginalName`]: file.name, // Add original file name here
+        [`${name}OriginalName`]: file.name,
       }));
     }
   };
@@ -95,54 +95,56 @@ const JobApplicationForm: React.FC = () => {
       }
     });
   
-    if (formData.resume) {
-      formDataToSend.append("resumeOriginalName", formData.resume.name);
-    }
-    if (formData.motivationLetter) {
-      formDataToSend.append("motivationLetterOriginalName", formData.motivationLetter.name);
-    }
-  
     setLoading(true); 
     try {
-      const res = await axios.post(`${backend_url}/api/v1/application/apply/${jobId}`, formDataToSend, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        withCredentials: true,
-      });
-      if (res.data.success) {
-        router.push("/career")
-        toast.success(res.data.message);
-        setFormData({
-          firstName: '',
-          lastName: '',
-          phoneNumber: '',
-          email: '',
-          address: '',
-          city: '',
-          stateOrProvince: '',
-          postalOrZipCode: '',
-          gender: '',
-          applyingForPosition: '',
-          experience: '',
-          professionalUrl: '',
-          resume: null,
-          motivationLetter: null,
-        });
+      if (user && user.role === "job seeker") {
+        const res = await axios.post(
+          `${backend_url}/api/v1/application/apply/${jobId}`, 
+          formDataToSend, 
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+            withCredentials: true,
+          }
+        );
+        if (res.data.success) {
+          router.push("/career");
+          toast.success(res.data.message);
+          setFormData({
+            firstName: '',
+            lastName: '',
+            phoneNumber: '',
+            email: '',
+            address: '',
+            city: '',
+            stateOrProvince: '',
+            postalOrZipCode: '',
+            gender: '',
+            applyingForPosition: '',
+            experience: '',
+            professionalUrl: '',
+            resume: null,
+            motivationLetter: null,
+          });
+        }
+      } else {
+        toast.error("You are not authenticated. Please log in and then apply");
+        router.push("/login");
       }
     } catch (error: any) {
       console.error(error);
-      const errorMessage = error?.response?.data?.message;
+      const errorMessage = error?.response?.data?.message || "An error occurred. Please try again.";
       toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
   };
-  
+
 
   return (
-    <div className="flex items-center justify-center min-h-scree  bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-5xl bg-white  rounded-lg p-8 sm:p-12 md:p-16 lg:p-20 space-y-6">
+    <div className="flex items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-5xl bg-white shadow-md  rounded-lg p-8 sm:p-12 md:p-16 lg:p-20 space-y-6">
         <h2 className="text-3xl font-semibold text-center mb-12 text-black ">Job Application Form</h2>
         <form onSubmit={handleSubmit} encType="multipart/form-data" className="space-y-6  ">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -154,7 +156,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -166,7 +168,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -178,7 +180,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.phoneNumber}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -190,7 +192,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -202,7 +204,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.address}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -214,7 +216,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.city}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -226,7 +228,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.stateOrProvince}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -238,7 +240,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.postalOrZipCode}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -250,7 +252,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.gender}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -263,7 +265,7 @@ const JobApplicationForm: React.FC = () => {
                 onChange={handleChange}
                 required
                 readOnly
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -275,7 +277,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.experience}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -287,7 +289,7 @@ const JobApplicationForm: React.FC = () => {
                 value={formData.professionalUrl}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -299,7 +301,7 @@ const JobApplicationForm: React.FC = () => {
                 onChange={handleFileChange}
                 accept=".pdf,.doc,.docx"
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -311,7 +313,7 @@ const JobApplicationForm: React.FC = () => {
                 onChange={handleFileChange}
                 accept=".pdf,.doc,.docx"
                 required
-                className="w-full p-3 border border-gray-300 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
