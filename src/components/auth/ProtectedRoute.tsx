@@ -1,8 +1,9 @@
+"use client"; 
+
 import { RootState } from "@/redux/store";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-
 
 interface ProtectedRouteProps {
   children: React.ReactNode; 
@@ -20,7 +21,6 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     } 
   }, [user, router]);
 
- 
   if (!user || user.role !== "admin") {
     return null; 
   }
