@@ -19,9 +19,11 @@ const OverviewSec: React.FC = () => {
         {/* Image Section */}
         <div className="flex w-full justify-end items-center">
           <Image 
-            src={ceoProfile} 
+            src="/assets/Teamimages/saudkhan.jpg"
+            width={300}
+            height={300}
             alt="about" 
-            className="w-[200px] md:w-[278px] h-[200px] md:h-[350px] rounded-[15px]" 
+            className="w-[200px] object-cover md:w-[278px] h-[200px] md:h-[350px] rounded-[15px]" 
           />
         </div>
       </div>

@@ -4,6 +4,8 @@ import jobReducer from "./jobSlice";
 import messageReducer from "./messageSlice"
 import blogReducer from './blogSlice';
 import applicantReducer from "./applicantSlice"
+import projectReducer from "./projectSlice"
+
 
 import {
   persistReducer,
@@ -28,6 +30,7 @@ const rootReducer = combineReducers({
   message: messageReducer,
   blogs:blogReducer,
   applicants: applicantReducer,
+  projects:projectReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

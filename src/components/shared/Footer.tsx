@@ -94,8 +94,7 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <p className="text-xs md:text-sm">contact@techcreator.co</p>
               <p className="text-xs md:text-sm">+92-311-9265290</p>
-              <p className="text-xs md:text-sm">+92-311-9265290</p>
-              <div className="flex sm:flex-row flex-col gap-3 space-x-2 mt-4">
+              <div className="flex sm:flex-row flex-col  gap-1 mt-4">
                 <CommonButton
                   className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
                   title="Consultancy"

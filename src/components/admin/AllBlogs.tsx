@@ -54,6 +54,9 @@ const AllBlogs: React.FC = () => {
     }
   };
   const dispatch = useDispatch();
+
+  
+
   const deletedblogHandler = async (id: any) => {
      console.log("Deleting blog with ID:", id);
     try {

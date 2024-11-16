@@ -58,26 +58,26 @@ const ContactForm: React.FC = () => {
 <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
   <form onSubmit={handleSubmit} className="flex flex-wrap justify-around items-start gap-10 mt-20">
     <div className="max-w-lg">
-      <h1 className="font-inter font-semibold text-3xl sm:text-4xl text-white leading-snug">
+      <h1 className="font-inter font-semibold text-4xl sm:text-4xl text-white leading-snug">
         Let's talk with us
       </h1>
-      <p className="mt-4 font-inter font-light text-lg text-white">
+      <p className="mt-4 font-inter font-light text-xl text-white">
         Questions, comments, or suggestions? Simply fill in the form and we’ll be in touch shortly.
       </p>
       <div className="mt-8">
-        <p className="flex gap-2 items-start">
-          <MapPin color="#A445B8" />
+        <p className="flex gap-2 items-start text-lg">
+          <MapPin color="#A445B8" size={40} />
           <span>TechCreator Software Company, Located on Mardan road Near Muneer Hospital, Swabi <br /> Swabi, Pakistan-23430</span>
         </p>
       </div>
       <div className="mt-4">
-        <p className="flex gap-2 items-center">
+        <p className="flex gap-2 items-center text-lg">
           <PhoneCall color="#A445B8" />
           <span>+92-311-9265290</span>
         </p>
       </div>
       <div className="mt-4">
-        <p className="flex gap-2 items-center">
+        <p className="flex gap-2 items-center text-lg">
           <Mail color="#A445B8" />
           <span>contact@techcreator.co</span>
         </p>
