@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
 
           <div>
             <h3 className="text-base md:text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-5">
+            <ul className="space-y-2">
               {[
                 { name: 'Web Development', link: '/services/web-development' },
                 { name: 'Graphic Designing', link: '/services/web-development' },

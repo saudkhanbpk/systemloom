@@ -5,25 +5,27 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-const useGetAllApplicants = () => {
+const useGetAllBlogs = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchAllApplicants = async () => {
+    const fetchAllBlogs = async () => {
       try {
         const res = await axios.get(`${backend_url}/api/v1/blogs/all`, { withCredentials: true });
-        console.log(res);  
+        console.log("Response from backend:", res);
 
         if (res.data.success) {
           dispatch(setAllblog(res.data.blogs));  
+        } else {
+          console.error("No blogs found or API failed:", res.data.message);
         }
-      } catch (error) {
-        console.error("Error fetching Messages:", error);  
+      } catch (error:any) {
+        console.error("Error fetching blogs:", error.message);  
       }
     };
-    fetchAllApplicants();  
-  }, [dispatch]); 
-
+    fetchAllBlogs();
+  }, [dispatch]);
 };
 
-export default useGetAllApplicants;
+
+export default useGetAllBlogs;

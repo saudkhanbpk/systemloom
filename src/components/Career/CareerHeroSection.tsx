@@ -105,6 +105,8 @@ console.log("resume data", res);
             <div className="absolute lg:left-[308px] lg:-top-20 md:left-0 md:top-0 top-5 overflow-hidden w-full md:w-auto">
               <Image
                 src={CareerSectionImage}
+                width={400}
+                height={400}
                 alt="Team collaboration"
                 className="w-full h-full rounded-[24px] md:h-96 object-cover"
               />

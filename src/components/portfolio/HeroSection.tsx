@@ -18,9 +18,9 @@ const HeroSection: React.FC = () => {
               us in the journey of transforming your vision into cutting-edge technology.
             </p>
           </div>
-          <div className="md:w-1/3 relative flex justify-center md:justify-end">
-            <div className="relative md:absolute md:-top-40 md:right-0 w-1/2  md:w-[380px]">
-              <Image src={staticImage} alt="Portfolio Image" layout="intrinsic" />
+          <div className="md:w-1/3 relative flex  justify-center md:justify-end">
+            <div className="relative md:absolute md:-top-56 md:right-0 w-1/2  md:w-[480px]">
+              <Image src={staticImage} width={600} height={600} alt="Portfolio Image" layout="intrinsic" />
             </div>
           </div>
         </div>

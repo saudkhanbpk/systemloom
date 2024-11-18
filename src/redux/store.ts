@@ -5,6 +5,7 @@ import messageReducer from "./messageSlice"
 import blogReducer from './blogSlice';
 import applicantReducer from "./applicantSlice"
 import projectReducer from "./projectSlice"
+import testimonialReducer from "./testimonialSlice"
 
 
 import {
@@ -30,7 +31,8 @@ const rootReducer = combineReducers({
   message: messageReducer,
   blogs:blogReducer,
   applicants: applicantReducer,
-  projects:projectReducer
+  projects:projectReducer,
+  testimonials:testimonialReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

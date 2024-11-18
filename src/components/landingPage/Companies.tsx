@@ -8,6 +8,7 @@ import company4 from "../../../public/assets/companies/image 181.png";
 import company5 from "../../../public/assets/companies/image 149.png";
 import company6 from "../../../public/assets/companies/Group 40.png";
 import company7 from "../../../public/assets/companies/Rectangle 21848.png";
+import Link from "next/link";
 
 const Companies = () => {
   return (
@@ -49,14 +50,17 @@ export const CTASection = () => {
             <div className="flex justify-center md:justify-start">
               <div className="relative md:left-8">
                 <div>
+                  
                   <Image src={company6} alt="button_image" width={123.83} height={191} />
                 </div>
                 <div className="absolute top-16 -right-[52px]">
+                <Link href="/career">
                   <CommonButton
                     title="Hire Top Developers"
                     className="bg-[#9A00FF] text-white font-semibold py-3 px-6 rounded-[5px] w-[220px]"
                     handleClick={() => console.log("")}
                   />
+                  </Link>
                 </div>
               </div>
             </div>

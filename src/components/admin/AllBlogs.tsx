@@ -11,11 +11,13 @@ import { backend_url } from "@/newLayout";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { deleteblog } from "@/redux/blogSlice";
+import useGetAllBlogs from "@/hooks/useGetAllBlogs";
+import { useRouter } from "next/navigation";
 
 // Define a type for the blog data
 interface Blog {
-  _id: number;
-  image: string | { imageUrl: string }; // This accounts for both string or object with imageUrl
+  _id: string;
+  image: string | { imageUrl: string }; 
   content: string;
   tags: string[];
   createdAt: any;
@@ -24,9 +26,8 @@ interface Blog {
 }
 
 const AllBlogs: React.FC = () => {
+  useGetAllBlogs()
   const { blogs } = useSelector((state: any) => state.blogs);
-
-  console.log("all blogs", blogs);
   
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
@@ -53,30 +54,39 @@ const AllBlogs: React.FC = () => {
       setCurrentPage(currentPage - 1);
     }
   };
+
   const dispatch = useDispatch();
+  const router = useRouter()
+
+  const handleEdit = (blogId: string) => {
+    router.push(`/admin/create-blog?blogId=${blogId}`);
+  };
 
   
+
+  
+
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const deletedblogHandler = async (id: any) => {
-     console.log("Deleting blog with ID:", id);
+    setIsDeleting(true);
     try {
-      const res = await axios.delete(`${backend_url}/api/v1/blogs/delete/${id}`, {
-        headers: {
-          "Content-Type": "application/json"
-        },
-        withCredentials: true
-      });
-  
+      const res = await axios.delete(`${backend_url}/api/v1/blogs/delete/${id}`, { withCredentials: true });
       if (res.data.success) {
-        dispatch(deleteblog(id));  // Use id instead of _id
+        dispatch(deleteblog(id));
         toast.success(res.data.message);
+      } else {
+        toast.error(res.data.message);
       }
     } catch (error: any) {
-      console.log(error);
-      const errorMessage = error?.response?.data?.message;
-      toast.error(errorMessage);
+      console.error("Error while deleting blog:", error);
+      toast.error("Error deleting blog");
+    } finally {
+      setIsDeleting(false);
     }
   };
+  
+  
   
   return (
     <main className="max-w-7xl mx-auto bg-inline lg:p-6">
@@ -167,10 +177,10 @@ const AllBlogs: React.FC = () => {
                   })}
                 </td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
-                  <button aria-label="Delete Blog" className="text-gray-500 hover:text-gray-700" onClick={() => deletedblogHandler(blog._id)} >
+                  <button aria-label="Delete Blog" className="text-gray-500 hover:text-gray-700" onClick={() => deletedblogHandler(blog._id)} disabled={isDeleting} >
                     <FaRegTrashCan />
                   </button>
-                  <button aria-label="Edit Blog" className="text-gray-500 hover:text-gray-700 ml-2">
+                  <button onClick={() => handleEdit(blog._id)} aria-label="Edit Blog" className="text-gray-500 hover:text-gray-700 ml-2">
                     <FiEdit2 />
                   </button>
                 </td>

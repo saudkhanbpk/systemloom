@@ -1,38 +1,50 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import { IoIosAddCircle, IoIosCloseCircle } from "react-icons/io";
 import { backend_url } from "@/newLayout";
 import axios from "axios";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
+
 const CreateBlogForm = () => {
+  const searchParams = useSearchParams();
+  const blogId = searchParams.get("blogId");
   const router = useRouter();
-  // const AdminContext = createContext(null);
-  const [storyContent, setStoryContent] = useState("");
-  const [altDescription, setAltDescription] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [tags, setTags] = useState<string[]>([]);
-  const [tagInput, setTagInput] = useState("");
-  const [image, setImage] = useState<File | null>(null); // State to store image file
-  const [imagePreview, setImagePreview] = useState<string | null>(null); // State to store image preview
+
+  const [formData, setFormData] = useState({
+    storyContent: "",
+    altDescription: "",
+    title: "",
+    description: "",
+    tags: [] as string[],
+    tagInput: "",
+    image: null as File | null,
+    imagePreview: null as string | null,
+  });
+
   const handleEditorChange = (content: string) => {
-    setStoryContent(content);
+    setFormData((prevData) => ({ ...prevData, storyContent: content }));
   };
 
   const handleTagInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTagInput(e.target.value);
+    setFormData((prevData) => ({ ...prevData, tagInput: e.target.value }));
   };
 
   const handleTagAdd = () => {
-    if (tagInput.trim() && !tags.includes(tagInput.trim())) {
-      setTags([...tags, tagInput.trim()]);
-      setTagInput(""); // Clear the input field after adding
+    if (formData.tagInput.trim() && !formData.tags.includes(formData.tagInput.trim())) {
+      setFormData((prevData) => ({
+        ...prevData,
+        tags: [...prevData.tags, formData.tagInput.trim()],
+        tagInput: "",
+      }));
     }
   };
 
   const handleTagRemove = (tagToRemove: string) => {
-    setTags(tags.filter((tag) => tag !== tagToRemove));
+    setFormData((prevData) => ({
+      ...prevData,
+      tags: prevData.tags.filter((tag) => tag !== tagToRemove),
+    }));
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -45,48 +57,88 @@ const CreateBlogForm = () => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const selectedImage = e.target.files[0];
-      setImage(selectedImage);
+      setFormData((prevData) => ({ ...prevData, image: selectedImage }));
 
       // Create a preview of the selected image
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImagePreview(reader.result as string);
+        setFormData((prevData) => ({
+          ...prevData,
+          imagePreview: reader.result as string,
+        }));
       };
       reader.readAsDataURL(selectedImage);
     }
   };
 
+  useEffect(() => {
+    if (blogId) {
+      // Fetch blog data if blogId is provided
+      const fetchBlogData = async () => {
+        try {
+          const res = await axios.get(`${backend_url}/api/v1/blogs/get/${blogId}`);
+          console.log("single project data", res);
+          if (res.data.success) {
+            setFormData({
+              storyContent: res.data.blog.content,
+              altDescription: res.data.blog.image.altDescription, // Image alt description
+              title: res.data.blog.title,
+              description: res.data.blog.description,
+              tags: res.data.blog.tags,
+              tagInput: "",
+              image: null, // Image is initially null
+              imagePreview: res.data.blog.image.imageUrl || null, // Image URL
+            });
+          }
+        } catch (error) {
+          console.error(error);
+          toast.error("Failed to load project data");
+        }
+      };
+      fetchBlogData();
+    }
+  }, [blogId]);
+  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("content", storyContent);
-    formData.append("altDescription", altDescription);
-    formData.append("tags", JSON.stringify(tags));
-    formData.append("description", description);
-    formData.append("title", title);
+    const { storyContent, altDescription, tags, description, title, image } = formData;
+
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append("content", storyContent);
+    formDataToSubmit.append("altDescription", altDescription);
+    formDataToSubmit.append("tags", JSON.stringify(tags));
+    formDataToSubmit.append("description", description);
+    formDataToSubmit.append("title", title);
 
     // Append the image to form data if available
     if (image) {
-      formData.append("image", image);
+      formDataToSubmit.append("image", image);
     }
-    try {
-      // Create new job if no jobId
-      const res = await axios.post(
-        `${backend_url}/api/v1/blogs/create`,
-        formData,
-        {
-          withCredentials: true,
-        }
-      );
 
-      // Check if the request was successful
-      if (res.status == 200) {
-        toast.success("Blog posted successfully!");
-        router.push("/admin/all-blogs");
+    try {
+      let res;
+      if (blogId) {
+        // Update the blog if blogId exists
+        res = await axios.put(`${backend_url}/api/v1/blogs/update/${blogId}`, formDataToSubmit, {
+          withCredentials: true,
+        });
+        if (res.data.success) {
+          toast.success(res.data.message);
+        }
       } else {
-        alert(`Error: ${res.statusText}`);
+        // Create a new blog if no blogId exists
+        res = await axios.post(`${backend_url}/api/v1/blogs/create`, formDataToSubmit, {
+          withCredentials: true,
+        });
+        if (res.data.success) {
+          toast.success(res.data.message);
+        }
       }
+
+      // Redirect after successful operation
+      router.push("/admin/all-blogs");
     } catch (error: any) {
       console.log(error);
       toast.error("An error occurred. Please try again.");
@@ -112,10 +164,10 @@ const CreateBlogForm = () => {
           </label>
 
           {/* Preview selected image */}
-          {imagePreview && (
+          {formData.imagePreview && (
             <div className="mt-4">
               <img
-                src={imagePreview}
+                src={formData.imagePreview}
                 alt="Image Preview"
                 className="w-32 h-32 object-cover mx-auto"
               />
@@ -130,8 +182,8 @@ const CreateBlogForm = () => {
             type="text"
             placeholder="Enter image alt"
             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={altDescription}
-            onChange={(e) => setAltDescription(e.target.value)}
+            value={formData.altDescription}
+            onChange={(e) => setFormData((prevData) => ({ ...prevData, altDescription: e.target.value }))}
           />
         </div>
 
@@ -142,8 +194,8 @@ const CreateBlogForm = () => {
             type="text"
             placeholder="Enter Blog Title"
             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            value={formData.title}
+            onChange={(e) => setFormData((prevData) => ({ ...prevData, title: e.target.value }))}
           />
         </div>
 
@@ -153,8 +205,8 @@ const CreateBlogForm = () => {
           <textarea
             placeholder="Enter a brief description here..."
             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            value={formData.description}
+            onChange={(e) => setFormData((prevData) => ({ ...prevData, description: e.target.value }))}
           ></textarea>
         </div>
 
@@ -163,7 +215,7 @@ const CreateBlogForm = () => {
           <label className="block text-gray-700 mb-2">Write your story</label>
           <Editor
             apiKey="muhvdqcz9lqg5jgayj93eeyismpcu19zu9u38c6rnuz7l98n"
-            value={storyContent}
+            value={formData.storyContent}
             init={{
               height: 400,
               plugins: [
@@ -195,58 +247,47 @@ const CreateBlogForm = () => {
         {/* Tags Section */}
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Tags</label>
-          <div className="flex flex-wrap gap-2 mb-2">
-            {tags.map((tag, index) => (
+          <div className="flex  flex-wrap gap-2">
+            {formData.tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full flex items-center"
+                className="bg-blue-500 text-white px-4 py-2 rounded-full flex items-center"
               >
                 {tag}
                 <IoIosCloseCircle
-                  className="ml-2 cursor-pointer text-blue-600"
                   onClick={() => handleTagRemove(tag)}
+                  className="ml-2 cursor-pointer"
                 />
               </span>
             ))}
-          </div>
+            <div className="relative w-full">
+  <input
+    type="text"
+    placeholder="Add tags"
+    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10" // Add padding-right to make space for the icon
+    value={formData.tagInput}
+    onChange={handleTagInputChange}
+    onKeyDown={handleKeyPress}
+  />
+  <IoIosAddCircle
+  size={32}
+    onClick={handleTagAdd}
+    className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-blue-500"
+  />
+</div>
 
-          <div className="flex items-center">
-            <input
-              type="text"
-              placeholder="Enter Tags"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              value={tagInput}
-              onChange={handleTagInputChange}
-              onKeyDown={handleKeyPress}
-            />
-            <button
-              type="button"
-              className="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 sm:block hidden"
-              onClick={handleTagAdd}
-            >
-              <IoIosAddCircle />
-            </button>
-          </div>
-
-          {/* Mobile Add Button */}
-          <div className="sm:hidden mt-2">
-            <button
-              type="button"
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 w-full"
-              onClick={handleTagAdd}
-            >
-              Add Tag
-            </button>
           </div>
         </div>
 
         {/* Submit Button */}
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600"
-        >
-          Create Blog
-        </button>
+        <div className="mb-4 text-center">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-700 focus:outline-none"
+          >
+            {blogId ? "Update Blog" : "Create Blog"}
+          </button>
+        </div>
       </form>
     </div>
   );

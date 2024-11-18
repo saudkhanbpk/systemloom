@@ -40,28 +40,30 @@ const ServicesSection: React.FC = () => {
     {
       id: 1,
       title: "Web Design & Development",
-      des: "A website is an extension of yourself, and we can help you express it properly. Your website is your number one marketing asset because we live in a digital age.",
-      image: "/assets/landingPage/Dashboard_perspective_matte.png", 
+      des: "Transform your online presence with a visually stunning and functional website that drives engagement and grows your brand.",
+      image: "/assets/landingPage/Dashboard_perspective_matte.png",
     },
     {
       id: 2,
       title: "Mobile App Development",
-      des: "A website is an extension of yourself, and we can help you express it properly. Your website is your number one marketing asset because we live in a digital age.",
-      image: "/assets/landingPage/Mobile_app_perspective_matte.png", 
+      des: "Reach customers on-the-go with a seamless, user-friendly mobile app that enhances experiences across devices.",
+      image: "/assets/landingPage/Mobile_app_perspective_matte.png",
     },
     {
       id: 3,
       title: "DevOps",
-      des: "A website is an extension of yourself, and we can help you express it properly. Your website is your number one marketing asset because we live in a digital age.",
-      image: "/assets/landingPage/Code_perspective_matte.png", 
+      des: "Boost efficiency with DevOps solutions that automate workflows, ensure quick deployments, and maintain top-notch quality.",
+      image: "/assets/landingPage/Code_perspective_matte.png",
     },
     {
       id: 4,
       title: "Software Testing Service",
-      des: "A website is an extension of yourself, and we can help you express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      des: "Deliver flawless products with our expert testing services, ensuring performance, security, and a perfect user experience.",
       image: "/assets/landingPage/Mobile_app_perspective_matte.png",
     },
   ];
+  
+  
 
   return (
     <div className="mx-auto">

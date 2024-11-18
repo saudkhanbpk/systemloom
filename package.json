@@ -28,7 +28,8 @@
     "react-toastify": "^10.0.6",
     "react-visibility-sensor": "^5.1.1",
     "redux-persist": "^6.0.0",
-    "tw-elements-react": "^1.0.0-alpha-end"
+    "tw-elements-react": "^1.0.0-alpha-end",
+    "uuid": "^11.0.3"
   },
   "devDependencies": {
     "@types/node": "^20",
