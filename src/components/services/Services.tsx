@@ -3,80 +3,9 @@ import ServiceCard from "../constant/ServiceCard";
 import Image from "next/image";
 import backgroundImage from "../../../public/assets/aboutImages/servicesBgImage.jpeg";
 
-interface Service {
-  id: number;
-  title: string;
-  des: string;
-  image: string;
-  link?: string; // Make link optional since some services may not have it
-}
+
 
 const ServicesSec = () => {
-  const servicesArr: Service[] = [
-    {
-      id: 1,
-      title: "Web Design & Development",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/web-development",
-    },
-    {
-      id: 2,
-      title: "Mobile App Development",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/mobile-app-development",
-    },
-    {
-      id: 3,
-      title: "Devops",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/devops",
-    },
-    {
-      id: 4,
-      title: "Software Testing Service",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/web-development",
-    },
-    {
-      id: 5,
-      title: "Software Testing Service",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/web-development",
-    },
-    {
-      id: 6,
-      title: "Software Testing Service",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/web-development",
-    },
-    {
-      id: 7,
-      title: "Software Testing Service",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/web-development",
-    },
-    {
-      id: 8,
-      title: "Software Testing Service",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/web-development",
-    },
-    {
-      id: 9,
-      title: "Software Testing Service",
-      des: "TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
-      link: "/services/web-development",
-    },
-  ];
 
   return (
     <div>
@@ -108,18 +37,7 @@ const ServicesSec = () => {
           </div>
         </div>
       </div>
-      <div className="mb-10 mt-10 mx-auto grid grid-cols-1 md:grid-cols-3 xll:grid-cols-3 xl:grid-cols-3  gap-10 w-full px-4 sm:px-6 md:px-10 py-0 md:py-10 max-w-7xl">
-        {servicesArr.map((item) => (
-          <Link href={item.link || "#"} key={item.id}>
-            <ServiceCard
-              description={item.des}
-              title={item.title}
-              icon={item.image}
-              style={true}
-            />
-          </Link>
-        ))}
-      </div>
+    <ServiceCard/>
     </div>
   );
 };
