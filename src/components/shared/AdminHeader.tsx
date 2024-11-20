@@ -3,14 +3,23 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from '../../../public/assets/icons/Logo.png';
+import Logo from "../../../public/assets/icons/Logo.png";
 import personIcon from "../../../public/assets/landingPage/Vector.png";
 import { CiLogout } from "react-icons/ci";
 import { IoMdLogIn } from "react-icons/io";
 import { SiGnuprivacyguard } from "react-icons/si";
-import { FaHome, FaInfoCircle, FaServicestack, FaTags, FaBlog, FaProjectDiagram, FaBriefcase, FaEnvelope } from "react-icons/fa";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaServicestack,
+  FaTags,
+  FaBlog,
+  FaProjectDiagram,
+  FaBriefcase,
+  FaEnvelope,
+} from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../redux/store";  
+import { RootState } from "../../redux/store";
 import axios from "axios";
 import { backend_url } from "@/newLayout";
 import { setUser } from "@/redux/authSlice";
@@ -20,16 +29,16 @@ import { toast } from "react-toastify";
 const AdminHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
-  const router = useRouter()
+
+  const router = useRouter();
   const dispatch = useDispatch();
-  const { user } = useSelector((store: RootState) => store.auth);  
+  const { user } = useSelector((store: RootState) => store.auth);
 
   const navItems = [
     { name: "Home", href: "/", icon: <FaHome /> },
     { name: "About Us", href: "/about", icon: <FaInfoCircle /> },
     { name: "Services", href: "/services", icon: <FaServicestack /> },
-    // { name: "Pricing", href: "/pricing", icon: <FaTags /> },
+    { name: "Pricing", href: "/pricing", icon: <FaTags /> },
     { name: "Blog", href: "/blog", icon: <FaBlog /> },
     { name: "Portfolio", href: "/portfolio", icon: <FaProjectDiagram /> },
     { name: "Career", href: "/career", icon: <FaBriefcase /> },
@@ -42,16 +51,17 @@ const AdminHeader: React.FC = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get(`${backend_url}/api/v1/user/logout`, {withCredentials:true})
-      if (res.data.success){
-        dispatch(setUser(null))
-        router.push("/login")
-        toast.success(res.data.message)
+      const res = await axios.get(`${backend_url}/api/v1/user/logout`, {
+        withCredentials: true,
+      });
+      if (res.data.success) {
+        dispatch(setUser(null));
+        router.push("/login");
+        toast.success(res.data.message);
       }
     } catch (error: any) {
       console.log(error);
-      toast.error(error?.response?.data?.message)
-      
+      toast.error(error?.response?.data?.message);
     }
     setIsDropdownOpen(false);
   };
@@ -66,7 +76,7 @@ const AdminHeader: React.FC = () => {
             </div>
             <div>
               <span className="text-[#FFFFFF] text-lg font-semibold">
-                Tech <br /> Creator
+                TechCreator
               </span>
             </div>
           </div>
@@ -115,7 +125,8 @@ const AdminHeader: React.FC = () => {
                       href="/register"
                       className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
-                      <SiGnuprivacyguard className="text-xl text-[#9A00FF]" /> Signup
+                      <SiGnuprivacyguard className="text-xl text-[#9A00FF]" />{" "}
+                      Signup
                     </Link>
                   </>
                 )}
@@ -130,7 +141,11 @@ const AdminHeader: React.FC = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
             >
               <span className="sr-only">Open main menu</span>
-              {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
+              {isOpen ? (
+                <X className="block h-6 w-6" />
+              ) : (
+                <Menu className="block h-6 w-6" />
+              )}
             </button>
           </div>
         </div>

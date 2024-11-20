@@ -3,10 +3,7 @@ import ServiceCard from "../constant/ServiceCard";
 import Image from "next/image";
 import backgroundImage from "../../../public/assets/aboutImages/servicesBgImage.jpeg";
 
-
-
 const ServicesSec = () => {
-
   return (
     <div>
       <div className="relative bg-gray-900 text-white">
@@ -17,12 +14,12 @@ const ServicesSec = () => {
             className="w-full h-auto opacity-15"
           />
         </div>
-        <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 ">
-          <div className="text-left md:text-center  mt-10">
-            <h1 className="font-semibold text-[40px] md:text-[57px] leading-[50px] md:leading-[65px] mb-6 text-center">
+        <div className="relative max-w-[1440px] mx-auto h-screen px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col items-center justify-center">
+          <div className="text-center mt-10">
+            <h1 className="font-semibold text-[40px] md:text-[57px] leading-[50px] md:leading-[65px] mb-6">
               Our Services
             </h1>
-            <p className="font-normal text-[16px] md:text-[18px] mx-auto leading-6 md:leading-9 ">
+            <p className="font-normal text-[16px] md:text-[18px] mx-auto leading-6 md:leading-9">
               TechCreator offers top-notch web and mobile app development
               services to help businesses bring their ideas to life. Our
               experienced team of developers creates custom apps that are
@@ -37,7 +34,7 @@ const ServicesSec = () => {
           </div>
         </div>
       </div>
-    <ServiceCard/>
+      <ServiceCard />
     </div>
   );
 };

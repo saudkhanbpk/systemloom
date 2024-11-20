@@ -10,12 +10,7 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3 px-10 mb-8 md:mb-0 md:pr-8">
             <p className="text-sm md:text-base mb-4">
-              At TechCreator Software Company, we specialize in crafting bespoke
-              software solutions that cater to your unique business needs. Our portfolio
-              showcases a range of successful projects, from intuitive mobile apps to
-              complex web platforms. With a talented team dedicated to quality and
-              innovation, we're your partner in turning ideas into impactful realities. Join
-              us in the journey of transforming your vision into cutting-edge technology.
+            At TechCreator, we specialize in creating custom software solutions tailored to your business needs. Our portfolio showcases a diverse range of projects, from intuitive mobile apps to complex web platforms. With a focus on quality and innovation, we turn your vision into reality, helping your business thrive in the digital world.
             </p>
           </div>
           <div className="md:w-1/3 relative flex  justify-center md:justify-end">

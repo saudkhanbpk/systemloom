@@ -1,24 +1,23 @@
 import React from 'react';
 import JobApplicationForm from '@/components/Career/ApplicationForm';
-import heroImage from "../../../public/assets/careerImages/joinUs.png"
-import Image from 'next/image';
+
 
 const Page = () => {
   return (
     <div className="flex flex-col items-center min-h-screen ">
       {/* Background Image Section */}
-      <div className="relative w-full h-72 md:h-96 flex items-center justify-center overflow-hidden">
-        <Image
-          src={heroImage}
-          alt="Join Us"
-          className="w-full h-full object-cover opacity-100"
-        />
-        {/* Black Overlay with Increased Opacity */}
-        <div className="absolute inset-0 bg-black opacity-75"></div>
+      <div className=" w-full h-72 md:h-96 flex flex-col items-center bg-black justify-center overflow-hidden">
+      <h1 className='text-white text-3xl font-bold'>JOIN TECHCREATOR </h1>
+      <p className='text-white text-lg mt-2'>Apply Now</p>
+        
       </div>
 
       {/* Form Section */}
-      <div className="w-full mt-10">
+      <div className="w-full  flex justify-around  ">
+        <div className=' mt-16 flex flex-col items-center'>
+          <h1 className='text-3xl font-bold mb-4'>Apply for job</h1>
+          <p className='text-lg'>Send us your CV by filling the form</p>
+        </div>
         <JobApplicationForm />
       </div>
     </div>

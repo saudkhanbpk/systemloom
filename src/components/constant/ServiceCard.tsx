@@ -1,168 +1,112 @@
-import React from 'react'
-import webImage from "../../../public/assets/ServiceDetailsImages/webdev.png"
-import appImage from "../../../public/assets/ServiceDetailsImages/appdev.png"
-import graphicImage from "../../../public/assets/ServiceDetailsImages/Designer_working_with_pen_display_Illustration-removebg-preview 1.png"
-import seoImage from "../../../public/assets/ServiceDetailsImages/seo1.png"
-import projectManagementImage from "../../../public/assets/ServiceDetailsImages/management.png"
-import uidesignImage from "../../../public/assets/ServiceDetailsImages/Saly-13.png"
-import softwareMantenance from "../../../public/assets/ServiceDetailsImages/soft.png"
-import devopsImage from "../../../public/assets/ServiceDetailsImages/QA.png"
-import qatestingImage from "../../../public/assets/ServiceDetailsImages/qaTesting.png"
-import webdev1 from "../../../public/assets/ServiceDetailsImages/webdev1.png"
-import appdev1 from "../../../public/assets/ServiceDetailsImages/appdev1.png"
-import appdev2 from "../../../public/assets/ServiceDetailsImages/appdev2.png"
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import Image from 'next/image'
-import Link from 'next/link'
+// Array of service data
+const services = [
+  {
+    title: "Web Development",
+    description:
+      "TechCreator provides professional web development services tailored to meet the unique needs of your business. Our team specializes in building modern, responsive, and highly functional websites that deliver exceptional user experiences. Whether you're looking for a sleek portfolio, a dynamic e-commerce platform, or a robust enterprise solution, we utilize the latest technologies to ensure scalability, security, and performance. Partner with us to transform your online presence and achieve your digital goals.",
+    image: "/assets/ServiceDetailsImages/webimg.png",
+    link: "/services/web-development",
+    bgColor: "bg-[#91B9A4AB]",
+  },
+  {
+    title: "App Development",
+    description:
+      "At TechCreator, we excel in developing cutting-edge mobile applications that cater to diverse industries and user needs. Our app development services cover Android, iOS, and cross-platform solutions, ensuring seamless performance across all devices. From ideation and UI/UX design to deployment and maintenance, we work closely with clients to craft apps that are intuitive, secure, and feature-rich. Let us bring your app idea to life and help you connect with users like never before.",
+    image: "/assets/ServiceDetailsImages/appimg.png",
+    link: "/services/app-development",
+    bgColor: "bg-[#E5DFACAB]",
+  },
+  {
+    title: "UI/UX Designing",
+    description:
+      "TechCreator specializes in creating visually stunning and user-centered designs that enhance usability and engagement. Our UI/UX design services focus on understanding user behavior and crafting interfaces that are not only aesthetically pleasing but also highly functional. We design responsive and accessible interfaces for websites, mobile apps, and software, ensuring an enjoyable experience across all devices. Collaborate with us to achieve designs that captivate and delight your audience.",
+    image: "/assets/ServiceDetailsImages/uximg.png",
+    link: "/services/ui-ux-designing",
+    bgColor: "bg-[#E5C2ACAB]",
+  },
+  {
+    title: "DevOps",
+    description:
+      "TechCreator provides comprehensive DevOps solutions to streamline your software development and IT operations. Our services include infrastructure automation, CI/CD pipelines, cloud integration, and monitoring, aimed at enhancing efficiency and collaboration. By adopting DevOps best practices, we help businesses achieve faster software delivery, improved reliability, and seamless scalability. Let us optimize your workflows to ensure a high-performing, secure, and agile development environment.",
+    image: "/assets/ServiceDetailsImages/QA.png",
+    link: "/services/devops",
+    bgColor: "bg-[#A1D9D3]",
+  },
+  {
+    title: "Graphic Designing",
+    description:
+      "At TechCreator, our graphic design services are all about transforming ideas into impactful visuals. We offer a wide range of design solutions, including logos, brochures, websites, and social media graphics, tailored to reflect your brand identity. Our creative team works meticulously to produce designs that are not only eye-catching but also communicate your message effectively. Elevate your brand’s visual appeal with our innovative graphic design expertise.",
+    image: "/assets/ServiceDetailsImages/Designer_working_with_pen_display_Illustration-removebg-preview 1.png",
+    link: "/services/graphic-designing",
+    bgColor: "bg-[#D4A5A5]",
+  },
+  {
+    title: "Project Management",
+    description:
+      "TechCreator’s project management services ensure that your projects are executed with precision and efficiency. Our experienced project managers utilize proven methodologies, such as Agile and Waterfall, to plan, execute, and deliver projects on time and within budget. From scope definition and resource allocation to risk management and performance tracking, we focus on achieving successful outcomes while fostering collaboration and transparency. Trust us to bring your projects to fruition seamlessly.",
+    image: "/assets/ServiceDetailsImages/management.png",
+    link: "/services/project-management",
+    bgColor: "bg-[#F5D6A1]",
+  },
+  {
+    title: "SEO & Content Writing",
+    description:
+      "TechCreator provides expert SEO and content writing services to enhance your online visibility and drive organic traffic. Our team crafts keyword-optimized, high-quality content tailored to resonate with your audience and improve search engine rankings. From website copy and blog posts to product descriptions and marketing materials, we ensure your content is engaging, informative, and aligned with your brand voice. Boost your digital presence and connect with your audience effectively.",
+    image: "/assets/ServiceDetailsImages/seo1.png",
+    link: "/services/seo-content-writing",
+    bgColor: "bg-[#B3D9C9]",
+  },
+  {
+    title: "Software Maintenance",
+    description:
+      "TechCreator offers reliable software maintenance services to ensure your applications remain functional, secure, and up-to-date. Our services include regular updates, performance optimization, security patches, and issue resolution to minimize downtime and enhance user satisfaction. We provide proactive monitoring and support to address potential problems before they escalate, ensuring your software operates smoothly and efficiently over time.",
+    image: "/assets/ServiceDetailsImages/soft.png",
+    link: "/services/software-maintenance",
+    bgColor: "bg-[#C1B2E3]",
+  },
+  {
+    title: "QA Testing",
+    description:
+      "Ensure the quality and reliability of your software with TechCreator’s QA testing services. Our team conducts comprehensive manual and automated testing to identify bugs, improve functionality, and optimize performance. From unit testing and integration testing to user acceptance testing, we ensure your software meets the highest quality standards before deployment. Let us help you deliver flawless and user-friendly applications to your audience.",
+    image: "/assets/ServiceDetailsImages/qaTesting.png",
+    link: "/services/qa-testing",
+    bgColor: "bg-[#FFB8B8]",
+  },
+];
+
 
 const ServiceCard = () => {
   return (
-    <div className='max-w-7xl  flex flex-col gap-6  mx-auto my-16'>
-      {/* web development */}
-     <Link href="/services/web-development">
-     <div className='flex justify-between md:flex-row flex-col  items-center bg-[#91B9A4AB] px-4 cursor-pointer rounded-md'>
-  <div>
-    <h1 className='text-3xl font-bold mb-4'>Web Development</h1>
-    <p className='text-xl text-gray-700 md:w-[40vw]'>
-      TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.
-      TechCreator provides top-notch web development services to create modern and functional websites that meet our clients' needs.
-    </p>
-  </div>
-  <div className='relative'>
-    <Image
-      src={webImage}
-      alt="web_Image"
-      width={300}
-      height={300}
-      className='w-[35vw] h-[300px] object-contain'
-    />
-    <Image
-      src={webdev1}
-      alt="web_Image"
-      width={300}
-      height={300}
-      className='w-[35vw] h-[300px] object-contain absolute top-0 right-20'
-    />
-  </div>
-</div>
-     </Link>
-
-
-      {/* App development */}
-<div className='flex justify-between md:flex-row flex-col relative items-center bg-[#E5DFACAB] px-4 p-9 cursor-pointer rounded-md'>
-  <div>
-    <h1 className='text-3xl font-bold mb-4 '>App Development</h1>
-    <p className='text-xl text-gray-700 md:w-[40vw]'>
-      TechCreator offers top-tier mobile app development services, creating innovative and user-friendly apps for both Android and iOS. 
-      We work closely with clients to ensure each app is tailored to their needs, using the latest technologies to build secure, scalable, and intuitive solutions. 
-      Whether simple or complex, we’re dedicated to delivering apps that exceed expectations.
-    </p>
-  </div>
-  <div className='  border '>
-    <Image
-      src={appImage}
-      alt="app_Image"
-      width={300}
-      height={300}
-      className='w-[25vw] h-[210px] object-cover -mt-20  '
-    />
-    <Image
-      src={appdev1}
-      alt="appdev1_Image"
-      width={300}
-      height={300}
-      className='w-[30vw] h-[300px] object-cover absolute top-2 right-36'
-    />
-    <Image
-      src={appdev2}
-      alt="appdev2_Image"
-      width={300}
-      height={300}
-      className='w-[25vw] h-[210px] object-cover absolute top-20 right-20' // Adjusted left position
-    />
-  </div>
-</div>
-
-
-{/* UI/UX Designing */}
-      <div className='flex justify-between md:flex-row flex-col items-center bg-[#E5C2ACAB] px-4 cursor-pointer rounded-md'>
-        <div>
-        <h1 className='text-3xl font-bold mb-4'>UI/UX Designing</h1>
-        <p className='text-xl text-gray-700 md:w-[40vw]'>TechCreator specializes in UI/UX design to create visually appealing and user-friendly interfaces. We focus on understanding user needs and behavior to design intuitive, responsive, and engaging experiences. Our team ensures seamless interaction and aesthetic appeal across all devices, providing designs that enhance usability and drive user satisfaction.</p>
-        </div>
-        <div>
-          <Image src={uidesignImage} alt="design_Image" width={300} height={300} className='w-[35vw] h-[300px] object-contain' />
-        </div>
-      </div>
-
-{/* Devops */}
-<div className='flex justify-between md:flex-row flex-col items-center bg-[#A1D9D3] px-4 cursor-pointer rounded-md'>
-        <div>
-        <h1 className='text-3xl font-bold mb-4'>Devops</h1>
-        <p className='text-xl text-gray-700 md:w-[40vw]'>TechCreator offers comprehensive DevOps services to streamline your development and operations workflows. We focus on automating processes, improving collaboration, and enhancing system reliability to ensure faster, more efficient delivery of software. Our DevOps solutions help you achieve continuous integration, continuous deployment, and scalability, optimizing your infrastructure for high performance and security.</p>
-        </div>
-        <div>
-          <Image src={devopsImage} alt="design_Image" width={300} height={300} className='w-[35vw] h-[300px] object-contain' />
-        </div>
-      </div>
-
-{/* Graphic Designing */}
-<div className='flex justify-between md:flex-row flex-col items-center bg-[#D4A5A5] px-4 cursor-pointer rounded-md'>
-        <div>
-        <h1 className='text-3xl font-bold mb-4'>Graphic Designing</h1>
-        <p className='text-xl text-gray-700 md:w-[40vw]'>TechCreator offers creative graphic design services to bring your brand to life. We specialize in crafting visually stunning designs for logos, brochures, websites, social media, and more. Our designs are tailored to effectively communicate your brand identity and engage your audience.</p>
-        </div>
-        <div>
-          <Image src={graphicImage} alt="design_Image" width={300} height={300} className='w-[35vw] h-[300px] object-contain' />
-        </div>
-      </div>
-
-      {/* Project Management */}
-      <div className='flex justify-between md:flex-row flex-col items-center bg-[#F5D6A1] px-4 cursor-pointer rounded-md'>
-        <div>
-        <h1 className='text-3xl font-bold mb-4'>Project Management</h1>
-        <p className='text-xl text-gray-700 md:w-[40vw]'>TechCreator offers project management services to ensure that your projects are delivered on time, within budget, and according to your specifications. Our experienced project managers use proven methodologies to plan, execute, and monitor projects efficiently, ensuring smooth collaboration and successful outcomes.</p>
-        </div>
-        <div>
-          <Image src={projectManagementImage} alt="projectmanagement_Image" width={300} height={300} className='w-[35vw] h-[300px] object-contain' />
-        </div>
-      </div>
-
-      {/* SEO & Content Writing */}
-      <div className='flex justify-between md:flex-row flex-col items-center bg-[#B3D9C9] px-4 cursor-pointer rounded-md'>
-        <div>
-        <h1 className='text-3xl font-bold mb-4'>SEO & Content Writing</h1>
-        <p className='text-xl text-gray-700 md:w-[40vw]'>TechCreator provides expert SEO and content writing services to help your business rank higher on search engines and attract organic traffic. We create compelling, keyword-optimized content that resonates with your audience and enhances your online visibility.</p>
-        </div>
-        <div>
-          <Image src={seoImage} alt="seo_Image" width={300} height={300} className='w-[35vw] h-[300px] object-contain' />
-        </div>
-      </div>
-
-      {/* Software Maintenance */}
-      <div className='flex justify-between md:flex-row flex-col items-center bg-[#C1B2E3] px-4 cursor-pointer rounded-md'>
-        <div>
-        <h1 className='text-3xl font-bold mb-4'>Software Maintenance</h1>
-        <p className='text-xl text-gray-700 md:w-[40vw]'>TechCreator offers reliable software maintenance services to ensure your systems remain up-to-date, secure, and functional. We provide regular updates, performance monitoring, and bug fixes, helping you maintain a seamless user experience and long-term software success.</p>
-        </div>
-        <div>
-          <Image src={softwareMantenance} alt="design_Image" width={300} height={300} className='w-[35vw] h-[300px] object-contain' />
-        </div>
-      </div>
-
-      {/* QA Testing */}
-      <div className='flex justify-between md:flex-row flex-col items-center bg-[#FFB8B8] px-4 cursor-pointer rounded-md'>
-        <div>
-        <h1 className='text-3xl font-bold mb-4'>QA Testing</h1>
-        <p className='text-xl text-gray-700 md:w-[40vw]'>TechCreator provides comprehensive QA testing services to ensure the quality, functionality, and performance of your software. Our team conducts rigorous testing to identify bugs and improve usability, ensuring that your applications meet the highest standards before launch.</p>
-        </div>
-        <div>
-          <Image src={qatestingImage} alt="design_Image" width={300} height={300} className='w-[35vw] h-[300px] object-contain' />
-        </div>
-      </div>
-
+    <div className="max-w-7xl flex flex-col gap-2 mx-auto my-16">
+      {services.map((service, index) => (
+        <Link href={service.link} key={index}>
+          <div
+            className={`flex justify-between md:flex-row flex-col items-center ${service.bgColor} px-4 cursor-pointer rounded-md`}
+          >
+            <div className='p-2'>
+              <h1 className="text-3xl font-bold mb-4">{service.title}</h1>
+              <p className="text-xl text-gray-700  md:w-[50vw]">
+                {service.description}
+              </p>
+            </div>
+            <div>
+              <Image
+                src={service.image}
+                alt={`${service.title}_Image`}
+                width={300}
+                height={300}
+                className="md:w-[32vw] md:h-[320px]  object-contain"
+              />
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default ServiceCard
+export default ServiceCard;

@@ -37,14 +37,21 @@ const Overview: React.FC = () => {
         </div>
 
         {/* Text Section */}
-        <div className="w-full">
-          <h1 className="text-[#9A00FF] font-inter text-[28px] md:text-[35px] leading-[40px] md:leading-[55px] font-semibold">
-            Overview
-          </h1>
-          <p className="text-[16px] md:text-[20px] text-justify font-inter font-normal  leading-6 md:leading-9">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.
-          </p>
-        </div>
+        <div className="w-full py-12 md:py-16 px-6">
+  <h1 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-6">
+    About TechCreator
+  </h1>
+  <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8">
+    At TechCreator, we specialize in crafting innovative digital solutions that empower businesses to thrive in an ever-evolving technological landscape. Our expert team designs and develops custom web and mobile applications, all tailored to meet your unique business needs.
+  </p>
+  <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8 mt-6">
+    Driven by a passion for technology and a commitment to excellence, we blend creativity with the latest industry trends to deliver scalable, secure, and user-friendly solutions. Whether you're launching a startup or scaling an enterprise, TechCreator is your trusted partner in turning ideas into impactful realities.
+  </p>
+  <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8 mt-6">
+    Let’s build the future together.
+  </p>
+</div>
+
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ServiceCard from "./ServiceCard";
 
-
 interface Service {
   id: number;
   title: string;
@@ -41,13 +40,13 @@ const ServicesSection: React.FC = () => {
       id: 1,
       title: "Web Design & Development",
       des: "Transform your online presence with a visually stunning and functional website that drives engagement and grows your brand.",
-      image: "/assets/landingPage/Dashboard_perspective_matte.png",
+      image: "/assets/icons/webdesignicon.png",
     },
     {
       id: 2,
       title: "Mobile App Development",
       des: "Reach customers on-the-go with a seamless, user-friendly mobile app that enhances experiences across devices.",
-      image: "/assets/landingPage/Mobile_app_perspective_matte.png",
+      image: "/assets/icons/appdevicon.png",
     },
     {
       id: 3,
@@ -59,7 +58,7 @@ const ServicesSection: React.FC = () => {
       id: 4,
       title: "Software Testing Service",
       des: "Deliver flawless products with our expert testing services, ensuring performance, security, and a perfect user experience.",
-      image: "/assets/landingPage/Mobile_app_perspective_matte.png",
+      image: "/assets/icons/webdevicon.png",
     },
   ];
   
@@ -87,7 +86,7 @@ const ServicesSection: React.FC = () => {
         itemClass="carousel-item-padding-40-px flex justify-center"
       >
         {servicesArr.map((item) => (
-          <div key={item.id} className="flex justify-center h-auto w-[333px] mx-auto lg:mx-0 mb-14">
+          <div key={item.id} className="flex justify-center h-auto w-[333px]  mx-auto lg:mx-0 mb-14">
             <ServiceCard
               title={item.title}
               description={item.des}

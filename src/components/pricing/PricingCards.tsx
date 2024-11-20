@@ -11,61 +11,64 @@ interface Plan {
 }
 
 const PricingCards: React.FC = () => {
-  const [isYearly, setIsYearly] = useState<boolean>(false);
+  // const [isYearly, setIsYearly] = useState<boolean>(false);
 
-  const plans: Plan[] = [
-    {
-      name: 'BASIC',
-      price: isYearly ? 7200 : 600,
-      features: [
-        'Personalized Workout',
-        'Exercise Form Correction',
-        'Lifestyle Plan',
-      ],
-    },
-    {
-      name: 'STANDARD',
-      price: isYearly ? 14400 : 1200,
-      features: [
-        'Personalized Workout',
-        'Exercise Form Correction',
-        'Lifestyle Plan',
-        'Personalized Program',
-      ],
-    },
-    {
-      name: 'PREMIUM',
-      price: isYearly ? 21600 : 1800,
-      features: [
-        'Personalized Workout',
-        'Exercise Form Correction',
-        'Lifestyle Plan',
-        'Personalized Program',
-        '8 12 Weeks Plan',
-      ],
-    },
-  ];
+  // const plans: Plan[] = [
+  //   {
+  //     name: 'BASIC',
+  //     price: isYearly ? 7200 : 600,
+  //     features: [
+  //       'Personalized Workout',
+  //       'Exercise Form Correction',
+  //       'Lifestyle Plan',
+  //     ],
+  //   },
+  //   {
+  //     name: 'STANDARD',
+  //     price: isYearly ? 14400 : 1200,
+  //     features: [
+  //       'Personalized Workout',
+  //       'Exercise Form Correction',
+  //       'Lifestyle Plan',
+  //       'Personalized Program',
+  //     ],
+  //   },
+  //   {
+  //     name: 'PREMIUM',
+  //     price: isYearly ? 21600 : 1800,
+  //     features: [
+  //       'Personalized Workout',
+  //       'Exercise Form Correction',
+  //       'Lifestyle Plan',
+  //       'Personalized Program',
+  //       '8 12 Weeks Plan',
+  //     ],
+  //   },
+  // ];
 
   return (
-    <div className="relative text-white h-auto px-4">
-  <div className="absolute inset-0 overflow-hidden">
-    <Image
-      src={backgroundImage}
-      alt="Background"
-      className="w-full h-full object-cover animate-fade-in" // Add fade-in animation
-    />
-  </div>
-  <div className="sm:px-6 py-24 md:py-32 relative max-w-[1440px] mx-auto container">
-    <h1 className="text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center animate-slide-down">
-      PRICING
-    </h1>
-    <p className="text-lg md:text-xl font-normal mb-8 text-white text-center animate-fade-in">
-      TechCreator is easy to use. Whether you need a simple mobile app or a
-      complex web application, TechCreator has the expertise to deliver
-      high-quality solutions that excel in web and mobile app development
-      services.
-    </p>
-
+    <div className="relative text-white h-screen px-4">
+    {/* Background Image */}
+    <div className="absolute inset-0 overflow-hidden">
+      <Image
+        src={backgroundImage}
+        alt="Background"
+        className="w-full h-full object-cover animate-fade-in"
+      />
+    </div>
+  
+    {/* Content */}
+    <div className="relative flex flex-col items-center justify-center h-full max-w-[1440px] mx-auto container">
+      <h1 className="text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center animate-slide-down">
+        PRICING
+      </h1>
+      <p className="text-lg md:text-xl font-normal mb-8 text-center animate-fade-in">
+        TechCreator is easy to use. Whether you need a simple mobile app or a
+        complex web application, TechCreator has the expertise to deliver
+        high-quality solutions that excel in web and mobile app development
+        services.
+      </p>
+{/* 
     <div className="flex justify-center mb-8">
       <div className="bg-[black] p-1 rounded-[12px] animate-slide-up">
         <button
@@ -137,7 +140,7 @@ const PricingCards: React.FC = () => {
           </button>
         </div>
       ))}
-    </div>
+    </div> */}
   </div>
 </div>
 

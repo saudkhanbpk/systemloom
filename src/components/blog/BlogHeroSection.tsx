@@ -1,5 +1,4 @@
 import React from 'react';
-import BlogCards from './BlogCards';
 import backgroundImage from "../../../public/assets/blog/blogbg.jpeg"
 import Image from 'next/image';
 
@@ -24,7 +23,6 @@ const BlogHeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <BlogCards />
     </>
   );
 };

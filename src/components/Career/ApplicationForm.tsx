@@ -61,13 +61,14 @@ const JobApplicationForm: React.FC = () => {
     }
   }, [jobId, allJobs]);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
+  
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, files } = e.target;
@@ -144,191 +145,163 @@ const JobApplicationForm: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-5xl bg-white shadow-md  rounded-lg p-8 sm:p-12 md:p-16 lg:p-20 space-y-6">
-        <h2 className="text-3xl font-semibold text-center mb-12 text-black ">Job Application Form</h2>
-        <form onSubmit={handleSubmit} encType="multipart/form-data" className="space-y-6  ">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">First Name:</label>
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+      <div className="w-full max-w-5xl bg-white border  shadow-md  p-8 sm:p-12 md:p-7 lg:p-5 space-y-6">
+      <form onSubmit={handleSubmit} encType="multipart/form-data" className="space-y-6">
+  <div className="grid grid-cols-1 gap-6">
+    {/* First Name and Last Name */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <input
+        type="text"
+        name="firstName"
+        placeholder="First Name*"
+        value={formData.firstName}
+        onChange={handleChange}
+        required
+        className="w-full p-3 border-b border-black focus:outline-none"
+      />
+      <input
+        type="text"
+        name="lastName"
+        placeholder="Last Name*"
+        value={formData.lastName}
+        onChange={handleChange}
+        required
+        className="w-full p-3 border-b border-black focus:outline-none"
+      />
+    </div>
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Last Name:</label>
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+    {/* Email */}
+    <input
+      type="email"
+      name="email"
+      placeholder="Email*"
+      value={formData.email}
+      onChange={handleChange}
+      required
+      className="w-[325px] p-3 border-b border-black focus:outline-none"
+    />
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Phone Number:</label>
-              <input
-                type="text"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+    {/* Phone Number and Gender */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  <input
+    type="text"
+    name="phoneNumber"
+    placeholder="Phone Number*"
+    value={formData.phoneNumber}
+    onChange={handleChange}
+    required
+    className="w-full p-3 border-b border-black focus:outline-none"
+  />
+  <select
+    name="gender"
+    value={formData.gender}
+    onChange={handleChange}
+    required
+    className="w-full p-3 border-b border-black focus:outline-none bg-white"
+  >
+    <option value="" disabled>
+      Select Gender*
+    </option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Email:</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Address:</label>
-              <input
-                type="text"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+    {/* Address */}
+    <input
+      type="text"
+      name="address"
+      placeholder="Address*"
+      value={formData.address}
+      onChange={handleChange}
+      required
+      className="w-full p-3 border-b border-black focus:outline-none"
+    />
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">City:</label>
-              <input
-                type="text"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+    {/* City */}
+    <input
+      type="text"
+      name="city"
+      placeholder="City*"
+      value={formData.city}
+      onChange={handleChange}
+      required
+      className="w-[325px] p-3 border-b border-black focus:outline-none"
+    />
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">State/Province:</label>
-              <input
-                type="text"
-                name="stateOrProvince"
-                value={formData.stateOrProvince}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+    {/* Applying For Position and Experience */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <input
+        type="text"
+        name="applyingForPosition"
+        value={formData.applyingForPosition}
+        onChange={handleChange}
+        required
+        readOnly
+        className="w-full p-3 border-b border-black focus:outline-none"
+      />
+      <input
+        type="text"
+        name="experience"
+        placeholder="Experience*"
+        value={formData.experience}
+        onChange={handleChange}
+        required
+        className="w-full p-3 border-b border-black focus:outline-none"
+      />
+    </div>
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Postal/Zip Code:</label>
-              <input
-                type="text"
-                name="postalOrZipCode"
-                value={formData.postalOrZipCode}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+    {/* Professional URL */}
+    <input
+      type="text"
+      name="professionalUrl"
+      placeholder="Professional URL*"
+      value={formData.professionalUrl}
+      onChange={handleChange}
+      required
+      className="w-[325px] p-3 border-b border-black focus:outline-none"
+    />
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Gender:</label>
-              <input
-                type="text"
-                name="gender"
-                value={formData.gender}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+    {/* Resume and Motivation Letter */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="form-group">
+        <label className="block text-sm font-medium text-gray-700">Resume</label>
+        <input
+          type="file"
+          name="resume"
+          onChange={handleFileChange}
+          accept=".pdf,.doc,.docx"
+          required
+          className="w-full p-3 border-b border-black focus:outline-none"
+        />
+      </div>
+      <div className="form-group">
+        <label className="block text-sm font-medium text-gray-700">Motivation Letter</label>
+        <input
+          type="file"
+          name="motivationLetter"
+          onChange={handleFileChange}
+          accept=".pdf,.doc,.docx"
+          required
+          className="w-full p-3 border-b border-black focus:outline-none"
+        />
+      </div>
+    </div>
+  </div>
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Position Applying For:</label>
-              <input
-                type="text"
-                name="applyingForPosition"
-                value={formData.applyingForPosition}
-                onChange={handleChange}
-                required
-                readOnly
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
+  {/* Submit Button */}
+  <div className="flex justify-center mt-6">
+    <button
+      type="submit"
+      className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-200"
+    >
+      {loading ? "Submitting..." : "Submit Application"}
+    </button>
+  </div>
+</form>
 
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Experience:</label>
-              <input
-                type="text"
-                name="experience"
-                value={formData.experience}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Professional URL:</label>
-              <input
-                type="text"
-                name="professionalUrl"
-                value={formData.professionalUrl}
-                onChange={handleChange}
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Resume (PDF/Word):</label>
-              <input
-                type="file"
-                name="resume"
-                onChange={handleFileChange}
-                accept=".pdf,.doc,.docx"
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-sm font-medium text-gray-700">Motivation Letter (PDF/Word):</label>
-              <input
-                type="file"
-                name="motivationLetter"
-                onChange={handleFileChange}
-                accept=".pdf,.doc,.docx"
-                required
-                className="w-full p-3 border border-gray-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-          </div>
-
-          <div className="flex justify-center mt-6 ">
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-200"
-            >
-              {loading ? 'Submitting...' : 'Submit Application'}
-              
-            </button>
-            
-          </div>
-        </form>
       </div>
     </div>
   );

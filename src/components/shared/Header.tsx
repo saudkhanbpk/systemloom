@@ -29,7 +29,7 @@ const Header: React.FC = () => {
     { name: "Home", href: "/", icon: <FaHome /> },
     { name: "About Us", href: "/about", icon: <FaInfoCircle /> },
     { name: "Services", href: "/services", icon: <FaServicestack /> },
-    // { name: "Pricing", href: "/pricing", icon: <FaTags /> },
+    { name: "Pricing", href: "/pricing", icon: <FaTags /> },
     { name: "Blog", href: "/blog", icon: <FaBlog /> },
     { name: "Portfolio", href: "/portfolio", icon: <FaProjectDiagram /> },
     { name: "Career", href: "/career", icon: <FaBriefcase /> },

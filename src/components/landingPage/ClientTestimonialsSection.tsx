@@ -51,11 +51,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <p className="font-normal leading-6 text-base mb-2 text-center">{`"${testimonial}"`}</p>
 
       {isHovered && reviewScreenshot && (
-        <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-75 flex justify-center items-center">
+        <div className="absolute top-0 left-0 w-full h-full border-2 bg-white bg-opacity-105 flex justify-center items-center">
           <img
             src={reviewScreenshot}
             alt="Testimonial Screenshot"
-            className="object-cover max-w-full max-h-full"
+            className="object-cover max-w-[500px] max-h-[500px]"
           />
         </div>
       )}
@@ -65,7 +65,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
 
 const ClientTestimonialsSection: React.FC = () => {
-  useGetAllTestimonial(); // Fetch testimonials from the backend
+  useGetAllTestimonial(); 
   const { testimonials } = useSelector((state: RootState) => state.testimonials);
 
   // Carousel settings
