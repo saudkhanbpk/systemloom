@@ -45,6 +45,7 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [commentText, setCommentText] = useState<string>("");
   const [userName, setUserName] = useState<string>("");
+  const [email, setEmail] = useState<string>(""); 
 
   const handleCommentSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -100,14 +101,15 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
 
         {/* Tags Section */}
         <div className="flex flex-wrap gap-3 justify-center mb-6">
-          {post.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="bg-blue-100 text-blue-600 text-sm sm:text-base px-4 py-2 rounded-full shadow-md hover:bg-blue-200 transition duration-200"
-            >
-              #{tag}
-            </span>
-          ))}
+        {post.tags.map((tag, index) => (
+  <span
+    key={index}
+    className="bg-blue-100 text-blue-600 text-sm sm:text-base px-4 py-2 rounded-full shadow-md hover:bg-blue-200 transition duration-200"
+  >
+    #{tag.replace(/[\[\]"]+/g, '')} {/* Remove square brackets and double quotes */}
+  </span>
+))}
+
         </div>
 
         {/* Content Text */}
@@ -141,33 +143,44 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
 
         {/* Add Comment Form */}
         <form onSubmit={handleCommentSubmit} className="space-y-6 mt-8">
-          <div className="flex flex-col">
-            <input
-              type="text"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-              placeholder="Your Name"
-              className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <textarea
-              value={commentText}
-              onChange={(e) => setCommentText(e.target.value)}
-              placeholder="Add a comment..."
-              className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
-              rows={4}
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 text-lg sm:text-xl"
-          >
-            Post Comment
-          </button>
-        </form>
+  <div className="flex flex-col">
+    <input
+      type="text"
+      value={userName}
+      onChange={(e) => setUserName(e.target.value)}
+      placeholder="Your Name"
+      className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
+      required
+    />
+  </div>
+  <div className="flex flex-col">
+    <input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      placeholder="Your Email"
+      className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
+      required
+    />
+  </div>
+  <div className="flex flex-col">
+    <textarea
+      value={commentText}
+      onChange={(e) => setCommentText(e.target.value)}
+      placeholder="Add a comment..."
+      className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
+      rows={4}
+      required
+    />
+  </div>
+  <button
+    type="submit"
+    className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 text-lg sm:text-xl"
+  >
+    Post Comment
+  </button>
+</form>
+
       </div>
     </div>
   );

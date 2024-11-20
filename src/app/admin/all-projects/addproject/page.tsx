@@ -19,6 +19,7 @@ const AddProjectPage: React.FC = () => {
     websiteLink: '',
     githubLink: '',
     projectScreenshot: null as File | null,
+    screenshotUrl: '' // To store the URL of the existing screenshot for updates
   });
 
   const [loading, setLoading] = useState(false);
@@ -32,7 +33,10 @@ const AddProjectPage: React.FC = () => {
           console.log("single project data", res);
           
           if (res.data.success) {
-            setFormData(res.data.project); // Set fetched data into form
+            setFormData({
+              ...res.data.project,
+              screenshotUrl: res.data.project.projectScreenshot || '' // Set the screenshot URL for updates
+            });
           }
         } catch (error) {
           console.error(error);
@@ -52,16 +56,17 @@ const AddProjectPage: React.FC = () => {
     }));
   };
 
-  // Handle file upload change
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (files && files.length > 0) {
-      setFormData((prevData) => ({
-        ...prevData,
-        projectScreenshot: files[0], // Only store the first selected file
-      }));
-    }
-  };
+ // Handle file upload change
+const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const files = e.target.files;
+  if (files && files.length > 0) {
+    setFormData((prevData) => ({
+      ...prevData,
+      projectScreenshot: files[0], // Store the selected file
+      screenshotUrl: URL.createObjectURL(files[0]) // Create a preview URL for the image
+    }));
+  }
+};
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
@@ -189,11 +194,17 @@ const AddProjectPage: React.FC = () => {
             <div className="mt-9">
               <label htmlFor="projectScreenshot" className="block text-sm font-medium text-gray-700">Project Screenshot</label>
               <div className="mt-1 border-dashed border-2 border-gray-300 rounded-lg p-4 text-center">
-                {formData.projectScreenshot ? (
-                  <p>{formData.projectScreenshot.name}</p>
-                ) : (
-                  <p className="text-gray-500">Choose a file or drag & drop it here</p>
-                )}
+              {formData.projectScreenshot || formData.screenshotUrl ? (
+  <div>
+    <img
+      src={formData.screenshotUrl || (formData.projectScreenshot ? URL.createObjectURL(formData.projectScreenshot) : '')}
+      alt="Project Screenshot"
+      className="mx-auto mb-4 max-w-full max-h-60 object-contain"
+    />
+  </div>
+) : (
+  <p className="text-gray-500">Choose a file or drag & drop it here</p>
+)}
                 <input
                   type="file"
                   name="projectScreenshot"
@@ -225,7 +236,7 @@ const AddProjectPage: React.FC = () => {
                 disabled={loading}
                 className="w-full md:w-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg"
               >
-                {loading ? 'Posting...' : projectId ? 'Update Post' : 'Post Now'}
+                {loading ? 'Saving...' : projectId ? 'Update Project' : 'Add Project'}
               </button>
             </div>
           </form>

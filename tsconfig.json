@@ -18,10 +18,16 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./",  // Ensure baseUrl is set to root
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]  // Use 'src/*' to map the alias to the src directory
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

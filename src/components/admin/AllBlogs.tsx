@@ -163,12 +163,16 @@ const AllBlogs: React.FC = () => {
                 </td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.title}</td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
-                  {blog.tags.map((tag: string, index: number) => (
-                    <span key={index} className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 mr-1">
-                      {tag}
-                    </span>
-                  ))}
-                </td>
+                {Array.isArray(blog.tags) ? blog.tags.map((tag: string, index: number) => (
+    <span key={index} className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 mr-1">
+      {tag.replace(/[\[\]"]+/g, '')} {/* Remove square brackets and double quotes */}
+    </span>
+)) : (
+    <span className="text-red-500">Invalid tags</span>
+)}
+
+</td>
+
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">
                   {new Date(blog.createdAt).toLocaleDateString("en-US", {
                     year: "numeric",
