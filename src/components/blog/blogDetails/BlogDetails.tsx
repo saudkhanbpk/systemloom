@@ -1,16 +1,17 @@
-"use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import Image from "next/image";
-import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
+import { backend_url } from "@/newLayout";
+import { toast } from "react-toastify";
 
 // Define the Post and Comment interfaces
 interface Post {
   _id: string;
   title: string;
   date: string;
-  createdAt: string; 
+  createdAt: string;
   updatedAt: string;
   readTime: string;
   image: { imageUrl: string; altDescription: string };
@@ -21,9 +22,12 @@ interface Post {
 }
 
 interface Comment {
-  id: string;
+  _id: string;
   name: string;
-  content: string;
+  email: string;
+  user: { name: string };
+  commentText: string;
+  createdAt: string;
 }
 
 interface DetailPostProps {
@@ -32,34 +36,88 @@ interface DetailPostProps {
   };
 }
 
-// Function to create a slug from the title
-const createSlug = (title: string): string =>
-  title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+// Utility function to create a slug from a post title
+const createSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')  // Replace spaces with hyphens
+    .replace(/[^\w-]+/g, '');  // Remove non-word characters (except hyphens)
+};
 
 const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
   const blogs = useSelector((state: RootState) => state.blogs.blogs);
   const { title } = params;
 
+  // Find the post that matches the title slug
   const post = (blogs as Post[]).find((p) => createSlug(p.title) === title);
 
   const [comments, setComments] = useState<Comment[]>([]);
   const [commentText, setCommentText] = useState<string>("");
-  const [userName, setUserName] = useState<string>("");
-  const [email, setEmail] = useState<string>(""); 
 
-  const handleCommentSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    console.log("Post object:", post); // Debug the post object
+    if (post?._id) {
+      axios
+        .get(`${backend_url}/api/v1/comments/all/${post._id}`)
+        .then((res) => {
+          setComments(res.data.comments);
+        })
+        .catch((error) => {
+          console.error("Error fetching comments:", error.message);
+        });
+    } else {
+      console.log("Post ID is undefined. Skipping API call.");
+    }
+  }, [post?._id]);
+
+  const handleCommentSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (commentText.trim() && userName.trim()) {
-      const newComment: Comment = {
-        id: uuidv4(),
-        name: userName,
-        content: commentText,
+    if (commentText.trim()) {
+      const newComment = {
+        commentText: commentText,
+        blogPostId: post?._id,
       };
-      setComments([...comments, newComment]);
-      setCommentText("");
-      setUserName("");
+      try {
+        const res = await axios.post(
+          `${backend_url}/api/v1/comments/add`,
+          newComment,
+          { withCredentials: true }
+        );
+        if (res.data.success) {
+          toast.success(res.data.message);
+          setCommentText("");
+          setComments((prevComments) => [
+            ...prevComments,
+            res.data.comment,
+          ]);
+        } else {
+          toast.error(res.data.message);
+        }
+      } catch (error: any) {
+        toast.error(error?.response?.data?.message || "An error occurred.");
+        console.log("Error adding comment:", error.message);
+      }
     }
   };
+
+  const deleteHandler = async (commentId: string) => {
+    try {
+      const res = await axios.delete(`${backend_url}/api/v1/comments/delete/${commentId}`, {
+        withCredentials: true,  // Ensure that the cookies are sent
+      });
+      if (res.data.success) {
+        setComments((prevComments) => prevComments.filter(comment => comment._id !== commentId));
+        toast.success(res.data.message);
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error: any) {
+      toast.error(error?.response?.data?.message || "Error deleting comment");
+      console.log("Error deleting comment:", error.message);
+    }
+  };
+  
 
   if (!post) {
     return (
@@ -90,26 +148,27 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
       <div className="w-full mb-12">
         {/* Image Section */}
         <div className="w-full h-[400px] lg:h-[600px] relative mb-8">
-          <Image
-            src={post.image?.imageUrl}
-            alt={post.image?.altDescription}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg shadow-lg"
-          />
+          {post.image?.imageUrl && (
+            <Image
+              src={post.image.imageUrl}
+              alt={post.image.altDescription}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg shadow-lg"
+            />
+          )}
         </div>
 
         {/* Tags Section */}
         <div className="flex flex-wrap gap-3 justify-center mb-6">
-        {post.tags.map((tag, index) => (
-  <span
-    key={index}
-    className="bg-blue-100 text-blue-600 text-sm sm:text-base px-4 py-2 rounded-full shadow-md hover:bg-blue-200 transition duration-200"
-  >
-    #{tag.replace(/[\[\]"]+/g, '')} {/* Remove square brackets and double quotes */}
-  </span>
-))}
-
+          {post.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="bg-blue-100 text-blue-600 text-sm sm:text-base px-4 py-2 rounded-full shadow-md hover:bg-blue-200 transition duration-200"
+            >
+              #{tag.replace(/[\[\]"]+/g, "")}
+            </span>
+          ))}
         </div>
 
         {/* Content Text */}
@@ -122,65 +181,67 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
       </div>
 
       {/* Comments Section */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Comments</h2>
+      <div className="space-y-6 mt-12">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6">Comments</h2>
 
         {/* Display Comments */}
         {comments.length > 0 ? (
-          <div className="space-y-4">
+          <div className="space-y-6">
             {comments.map((comment) => (
-              <div key={comment.id} className="bg-gray-100 p-4 rounded-lg shadow-md">
-                <p className="font-bold text-lg text-gray-700">{comment.name}</p>
-                <p className="text-sm sm:text-base text-gray-600">{comment.content}</p>
+              <div key={comment._id} className="bg-white rounded-lg p-4 shadow-md">
+                <div className="flex items-center space-x-4 mb-4">
+                  {/* User Avatar Placeholder */}
+                  <div className="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full font-bold text-lg">
+                    {comment.user?.name?.charAt(0).toUpperCase() || 'N'}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-lg text-gray-800">
+                      {comment.user.name}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      {new Date(comment.createdAt).toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  {comment.commentText}
+                </p>
+                <button
+                  onClick={() => deleteHandler(comment._id)}
+                  className="text-red-500 mt-2"
+                >
+                  Delete
+                </button>
               </div>
             ))}
           </div>
         ) : (
-          <p className="text-gray-500 text-sm sm:text-base">
+          <p className="text-gray-500 text-base">
             No comments yet. Be the first to comment!
           </p>
         )}
 
         {/* Add Comment Form */}
         <form onSubmit={handleCommentSubmit} className="space-y-6 mt-8">
-  <div className="flex flex-col">
-    <input
-      type="text"
-      value={userName}
-      onChange={(e) => setUserName(e.target.value)}
-      placeholder="Your Name"
-      className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
-      required
-    />
-  </div>
-  <div className="flex flex-col">
-    <input
-      type="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      placeholder="Your Email"
-      className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
-      required
-    />
-  </div>
-  <div className="flex flex-col">
-    <textarea
-      value={commentText}
-      onChange={(e) => setCommentText(e.target.value)}
-      placeholder="Add a comment..."
-      className="w-full p-4 border border-gray-300 rounded-md text-lg sm:text-xl"
-      rows={4}
-      required
-    />
-  </div>
-  <button
-    type="submit"
-    className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 text-lg sm:text-xl"
-  >
-    Post Comment
-  </button>
-</form>
-
+          <textarea
+            value={commentText}
+            onChange={(e) => setCommentText(e.target.value)}
+            placeholder="Add a comment..."
+            className="w-full p-4 border border-gray-300 rounded-lg text-lg"
+            rows={4}
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 text-lg font-semibold"
+          >
+            Post Comment
+          </button>
+        </form>
       </div>
     </div>
   );

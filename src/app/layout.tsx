@@ -16,6 +16,7 @@ const geistMono = localFont({
 
 // Update the metadata to be more descriptive and relevant
 export const metadata: Metadata = {
+  
   title: "TechCreator - Custom Software Development",
   description: "Expert solutions for your software needs. Transforming ideas into reality with our dedicated services.",
   keywords: "software development, custom software, tech solutions, web development, app development",
@@ -45,14 +46,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Add favicon and any other head elements if necessary */}
+       <head>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="AVdrxyNjezX0QpeAA-BxrpT19BFeEwwfp5Tof-aLtsY" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Layout>{children}</Layout> {/* Use Layout here to wrap children */}
+        <Layout>{children}</Layout> 
       </body>
     </html>
   );

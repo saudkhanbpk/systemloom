@@ -12,7 +12,7 @@ const useGetAllBlogs = () => {
     const fetchAllBlogs = async () => {
       try {
         const res = await axios.get(`${backend_url}/api/v1/blogs/all`, { withCredentials: true });
-        console.log("Response from backend:", res);
+        // console.log("Response from backend:", res);
 
         if (res.data.success) {
           dispatch(setAllblog(res.data.blogs));  

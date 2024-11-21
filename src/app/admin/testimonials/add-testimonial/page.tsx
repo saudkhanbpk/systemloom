@@ -6,6 +6,7 @@ import axios from "axios";
 import { backend_url } from "@/newLayout";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
 interface TestimonialFormData {
   profilePic: File | null;
@@ -105,6 +106,7 @@ const AddNewTestimonial: React.FC = () => {
   };
 
   return (
+    <ProtectedRoute>
     <AdminLayout>
       <div className=" mx-auto  ">
         <h1 className="text-2xl font-bold mb-4 text-center">Add New Testimonial</h1>
@@ -215,6 +217,7 @@ const AddNewTestimonial: React.FC = () => {
         </form>
       </div>
     </AdminLayout>
+    </ProtectedRoute>
   );
 };
 

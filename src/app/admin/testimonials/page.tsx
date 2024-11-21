@@ -1,9 +1,11 @@
+import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import AdminLayout from '@/components/shared/AdminLayout';
 import Link from 'next/link';
 import React from 'react';
 
 const Testimonial = () => {
   return (
+    <ProtectedRoute>
     <AdminLayout>
       <div className="flex justify-between items-center mb-4">
         <Link href="/admin/testimonials/add-testimonial">
@@ -18,6 +20,7 @@ const Testimonial = () => {
         />
       </div>
     </AdminLayout>
+    </ProtectedRoute>
   );
 };
 
