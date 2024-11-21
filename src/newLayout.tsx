@@ -27,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <PersistGate  persistor={persistor}>
         <ToastContainer
           position="top-right"
-          autoClose={5000}
+          autoClose={2000}
           hideProgressBar={false}
           closeOnClick
           pauseOnHover
