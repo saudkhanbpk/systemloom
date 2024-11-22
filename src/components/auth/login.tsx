@@ -1,6 +1,6 @@
-import { Facebook } from 'lucide-react';
+
 import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
-import { FaGoogle, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
+import { FaGoogle, FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { backend_url } from '@/newLayout';
@@ -15,7 +15,7 @@ const Login: React.FC = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
-  const {user} = useSelector((state:RootState) => state.auth)
+  const { user } = useSelector((state: RootState) => state.auth);
   
   const [formData, setFormData] = useState({
     email: '',
@@ -39,7 +39,6 @@ const Login: React.FC = () => {
         withCredentials: true
       });
       if (res.data.success) {
-       
         // Dispatch user data to Redux state
         dispatch(setUser(res.data.user));
 
@@ -63,25 +62,22 @@ const Login: React.FC = () => {
   };
 
   useEffect(() => {
-    if (user){
+    if (user) {
       router.push("/")
     }
-  }, [])
-
-  
-  
+  }, [user]);
 
   return (
     <motion.div
-      className="flex items-center justify-center min-h-screen bg-gray-900 p-4"
+      className="flex  items-center justify-center min-h-screen bg-gray-900 p-4"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div className='flex flex-col md:flex-row justify-between gap-8 md:gap-16 items-center'>
+      <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-16 items-center'>
         
         {/* Image - Hidden on small screens */}
-        <div className='w-[300px] md:w-[600px] hidden md:block'>
+        <div className='w-[300px] md:w-[400px] mt-10 hidden md:block'>
           <motion.img
             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
             alt="Login Illustration"
@@ -92,23 +88,30 @@ const Login: React.FC = () => {
         </div>
 
         {/* Form Container */}
-        <div className='w-full max-w-md text-white'>
+        <div className='text-white w-full  max-w-md '>
           <form onSubmit={handleSubmit}>
-            <motion.div
-              className='flex flex-col md:flex-row gap-6 items-center text-white'
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-            >
-              <h1>Sign in with</h1>
-              <div className='flex gap-3'>
-                <Facebook className='cursor-pointer border-2 border-white bg-blue-700 w-10 h-10 p-2 rounded-full' size={30} />
-                <FaGoogle className='cursor-pointer border-2 border-white bg-blue-700 w-10 h-10 p-2 rounded-full' size={30} />
-                <FaGithub className='cursor-pointer border-2 border-white bg-blue-700 w-10 h-10 p-2 rounded-full' size={30} />
-              </div>
-            </motion.div>
+          <motion.div
+  className="flex flex-col md:flex-row gap-6  w-[320px] md:w-full justify-center mx-auto md:mx-0  items-center text-white"
+  initial={{ y: -30, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ delay: 0.3, duration: 0.5 }}
+>
+  <h1 className="text-2xl font-semibold">Sign in with</h1>
+  <div className="flex gap-4">
+    {/* Continue with Google Button */}
+    <button
+      className="flex items-center gap-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+      type="button" 
+      onClick={() => { /* Handle Google Login Here */ }}
+    >
+      <FaGoogle className="text-white" size={24} />
+      <span className="text-white font-medium">Continue with Google</span>
+    </button>
+  </div>
+</motion.div>
 
-            <div className='flex items-center gap-3 mt-6'>
+
+            <div className='flex  items-center gap-3 mt-6 '>
               <hr className='h-2 text-white flex-1' />
               <p className='-mt-4 text-2xl font-bold'>or</p>
               <hr className='h-2 text-white flex-1' />

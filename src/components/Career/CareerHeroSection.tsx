@@ -31,9 +31,6 @@ const CareerHeroSection: FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-// console.log(formData);
-
-    // Create FormData to handle file upload
     const formDataToSend = new FormData();
     formDataToSend.append('name', formData.name);
     formDataToSend.append('email', formData.email);
@@ -43,22 +40,19 @@ const CareerHeroSection: FC = () => {
     if (formData.resume) {
       formDataToSend.append('resume', formData.resume);
     }
-
-    setLoading(true); // Start loading indicator
-    
-
+  
+    setLoading(true);
+  
     try {
-      // Send the form data to the backend
       const res = await axios.post(`${backend_url}/api/v1/resume/send`, formDataToSend, {
         headers: {
-          'Content-Type': 'multipart/form-data', 
+          'Content-Type': 'multipart/form-data',
         },
-        withCredentials:true
+        withCredentials: true,
       });
-console.log("resume data", res);
-
+  
       if (res.data.success) {
-        toast.success(res.data.message)
+        toast.success(res.data.message);
         setFormData({
           name: '',
           email: '',
@@ -67,18 +61,24 @@ console.log("resume data", res);
           professionalUrl: '',
           resume: null,
         });
+      } else {
+        toast.error(res.data.message);
       }
     } catch (error: any) {
-      console.log(error);
-      // Check if the error has a response and if it contains the message
-      const errorMessage = error?.response?.data?.error || 'Something went wrong';
-      toast.error(errorMessage);
-    
-      
+      console.log("Error:", error); // Check the full error structure
+  
+      // Try different error paths based on the error response
+      const errorMessage =
+        error?.response?.data?.message || // Standard error message
+        error?.response?.data?.error || // Custom error message field
+        'Something went wrong'; // Default fallback message
+  
+      toast.error(errorMessage); // Display error in toast
     } finally {
-      setLoading(false); // Stop loading indicator
+      setLoading(false);
     }
   };
+  
 
   const handleDialogOpen = () => setDialogOpen(true);
   const handleDialogClose = () => setDialogOpen(false);

@@ -71,21 +71,24 @@ const Register: React.FC = () => {
           <img src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" alt="Illustration" className="w-full  h-auto object-cover hidden md:block" />
         </motion.div>
 
-        <motion.div className="text-white w-full max-w-sm" initial={{ x: -50 }} animate={{ x: 0 }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-white w-full max-w-md" initial={{ x: -50 }} animate={{ x: 0 }} transition={{ duration: 0.6 }}>
           <form onSubmit={handleSubmit}>
-            <div className="flex gap-6 items-center text-white">
-              <h1>Sign up with</h1>
-              <div className="flex gap-3">
-                <Facebook className="border-2 border-white bg-blue-700 w-10 h-10 p-2 rounded-full cursor-pointer" size={30} />
-                <FaGoogle className="border-2 border-white bg-blue-700 w-10 h-10 p-2 rounded-full cursor-pointer" size={30} />
-                <Github className="border-2 border-white bg-blue-700 w-10 h-10 p-2 rounded-full cursor-pointer" size={30} />
-              </div>
+            <div className="flex md:flex-row flex-col w-[250px] md:w-full justify-center mx-auto md:mx-0  gap-6 items-center text-white">
+              <h1 className='text-2xl font-semibold'>Sign up with</h1>
+              <button
+      className="flex items-center gap-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+      type="button" 
+      onClick={() => { /* Handle Google Login Here */ }}
+    >
+      <FaGoogle className="text-white" size={24} />
+      <span className="text-white font-medium">Continue with Google</span>
+    </button>
             </div>
 
-            <div className="flex items-center gap-3 mt-6">
-              <hr className="h-2 text-white w-24 md:w-44" />
-              <p className="-mt-4 text-xl md:text-2xl font-bold">or</p>
-              <hr className="h-2 text-white w-24 md:w-44" />
+            <div className='flex  items-center gap-3 mt-6 '>
+              <hr className='h-2 text-white flex-1' />
+              <p className='-mt-4 text-2xl font-bold'>or</p>
+              <hr className='h-2 text-white flex-1' />
             </div>
 
             <div>

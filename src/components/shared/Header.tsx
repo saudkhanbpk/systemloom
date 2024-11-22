@@ -59,12 +59,12 @@ const Header: React.FC = () => {
     <nav className="text-white absolute z-10 px-4 py-2 w-full text-nowrap">
       <div className="lg:pr-10 lg:pl-10 mx-auto">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0 flex justify-center gap-2 items-center">
+          <Link href="/"><div className="flex-shrink-0 flex justify-center gap-2 items-center">
             <Image src={Logo} alt="logo" width={48} height={50} />
             <span className="text-[#FFFFFF] text-lg font-semibold">
               TechCreator
             </span>
-          </div>
+          </div></Link>
           <div className="hidden md:block">
             <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (

@@ -1,4 +1,7 @@
+import { backend_url } from '@/newLayout';
+import axios from 'axios';
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const PricingForm = () => {
   const [formData, setFormData] = useState({
@@ -17,32 +20,30 @@ const PricingForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const response = await fetch('/api/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert('Form submitted successfully!');
-        setFormData({
-          name: '',
-          email: '',
-          phoneNumber: '',
-          service: '',
-          details: '',
-          referenceLink: '',
-        });
-      } else {
-        alert('Something went wrong. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Error submitting form. Please try again later.');
+   try {
+    const res = await axios.post(`${backend_url}/api/v1/pricing/submit-form`, formData, {
+      headers:{
+        "Content-Type":"application/json"
+      },
+      withCredentials:true
+    })
+    if (res.data.success){
+      toast.success(res.data.message)
+      setFormData({
+        name: '',
+        email: '',
+        phoneNumber: '',
+        service: '',
+        details: '',
+        referenceLink: '',
+      })
+    }else{
+      toast.error(res.data.message)
     }
+   } catch (error:any) {
+    console.log(error)
+    toast.error(error?.response?.data?.message)
+   }
   };
 
   return (

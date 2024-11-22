@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { GrProjects } from "react-icons/gr";
 import { FiBriefcase } from "react-icons/fi";
 import { FaNoteSticky } from "react-icons/fa6";
+import { FaClipboardList } from 'react-icons/fa';
 
 // Importing icons from Heroicons v2
 import { FaPlus, FaRegFileAlt, FaUsers, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
@@ -20,6 +21,7 @@ const AdminSidebar: React.FC = () => {
     { href: "/admin/all-applicants", label: "Applicants", icon: <FaUsers className="w-6 h-6" /> },
     { href: "/admin/contact", label: "Contact", icon: <FaPhoneAlt className="w-6 h-6" /> },
     { href: "/admin/testimonials", label: "Testimonials", icon: <FaNoteSticky className="w-6 h-6" /> },
+    { href: "/admin/pricing-form", label: "PricingForm", icon: <FaClipboardList className="w-6 h-6" /> },
 
   ];
 
