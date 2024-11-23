@@ -7,6 +7,8 @@ import { backend_url } from "@/newLayout";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import { useDispatch } from "react-redux";
+import { addTestimonial } from "@/redux/testimonialSlice";
 
 interface TestimonialFormData {
   profilePic: File | null;
@@ -31,6 +33,7 @@ const AddNewTestimonial: React.FC = () => {
   const [profilePreview, setProfilePreview] = useState<string | null>(null);
   const [screenshotPreview, setScreenshotPreview] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false); // Loading state
+  const dispatch = useDispatch()
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name } = e.target;
@@ -83,6 +86,7 @@ const AddNewTestimonial: React.FC = () => {
       // Handle success response
       if (res.data.success) {
         router.push("/admin/testimonials")
+        dispatch(addTestimonial(res.data.testimonial))
         toast.success(res.data.message);
         // Optionally reset the form
         setFormData({

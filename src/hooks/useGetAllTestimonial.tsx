@@ -13,7 +13,7 @@ const useGetAllTestimonial = () => {
     const fetchAllTestimonial = async () => {
       try {
         const res = await axios.get(`${backend_url}/api/v1/testimonial/all`, { withCredentials: true });
-        console.log(res);  
+        // console.log(res);  
 
         if (res.data.success) {
           dispatch(setAllTestimonials(res.data.testimonials));  

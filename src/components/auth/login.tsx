@@ -1,4 +1,3 @@
-
 import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { FaGoogle, FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from 'next/link';
@@ -14,7 +13,6 @@ import { RootState } from '@/redux/store';
 const Login: React.FC = () => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const [showPassword, setShowPassword] = useState(false);
   const { user } = useSelector((state: RootState) => state.auth);
   
   const [formData, setFormData] = useState({
@@ -22,6 +20,7 @@ const Login: React.FC = () => {
     password: '',
   });
   const [loading, setLoading] = useState(false); // Loading state
+  const [showPassword, setShowPassword] = useState(false);
 
   const changeEventHandler = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -67,9 +66,42 @@ const Login: React.FC = () => {
     }
   }, [user]);
 
+  const handleGoogleLogin = () => {
+    window.location.href = `${backend_url}/auth/google`;  // Redirect to backend for Google login
+  };
+
+  const handleGoogleCallback = async () => {
+    try {
+      // Call your backend to get user data
+      const response = await axios.get(`${backend_url}/auth/google/callback`, { withCredentials: true });
+  
+      console.log("Response status:", response.status); // Check the status code
+      console.log("Google Callback Response:", response.data); // Log the response
+  
+      if (response.data.success) {
+        // const userData = response.data.user;
+        dispatch(setUser(response.data.user));
+        router.push("/");
+      } else {
+        console.error("Unexpected response structure:", response);
+      }
+    } catch (error) {
+      console.error("Error during Google OAuth callback:", error);
+    }
+  };
+  
+  
+
+  // Use this effect to call the Google callback handler if redirected after login
+  useEffect(() => {
+    if (window.location.pathname === '/auth/google/callback') {
+      handleGoogleCallback();  // Automatically handle the callback if redirected back
+    }
+  }, [window.location.pathname]);
+
   return (
     <motion.div
-      className="flex  items-center justify-center min-h-screen bg-gray-900 p-4"
+      className="flex items-center justify-center min-h-screen bg-gray-900 p-4"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -88,30 +120,29 @@ const Login: React.FC = () => {
         </div>
 
         {/* Form Container */}
-        <div className='text-white w-full  max-w-md '>
+        <div className='text-white w-full max-w-md'>
           <form onSubmit={handleSubmit}>
-          <motion.div
-  className="flex flex-col md:flex-row gap-6  w-[320px] md:w-full justify-center mx-auto md:mx-0  items-center text-white"
-  initial={{ y: -30, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  transition={{ delay: 0.3, duration: 0.5 }}
->
-  <h1 className="text-2xl font-semibold">Sign in with</h1>
-  <div className="flex gap-4">
-    {/* Continue with Google Button */}
-    <button
-      className="flex items-center gap-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
-      type="button" 
-      onClick={() => { /* Handle Google Login Here */ }}
-    >
-      <FaGoogle className="text-white" size={24} />
-      <span className="text-white font-medium">Continue with Google</span>
-    </button>
-  </div>
-</motion.div>
+            <motion.div
+              className="flex flex-col md:flex-row gap-6 w-[320px] md:w-full justify-center mx-auto md:mx-0 items-center text-white"
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              <h1 className="text-2xl font-semibold">Sign in with</h1>
+              <div className="flex gap-4">
+                {/* Continue with Google Button */}
+                <button
+                  onClick={handleGoogleLogin} 
+                  className="flex items-center gap-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+                  type="button" 
+                >
+                  <FaGoogle className="text-white" size={24} />
+                  <span className="text-white font-medium">Continue with Google</span>
+                </button>
+              </div>
+            </motion.div>
 
-
-            <div className='flex  items-center gap-3 mt-6 '>
+            <div className='flex items-center gap-3 mt-6'>
               <hr className='h-2 text-white flex-1' />
               <p className='-mt-4 text-2xl font-bold'>or</p>
               <hr className='h-2 text-white flex-1' />
@@ -146,7 +177,6 @@ const Login: React.FC = () => {
                   name="password"
                   placeholder='************'
                   className='w-full px-2 py-3 outline-none bg-gray-900 text-white'
-
                   value={formData.password}
                   onChange={changeEventHandler}
                   required
@@ -184,6 +214,6 @@ const Login: React.FC = () => {
       </div>
     </motion.div>
   );
-};
+}
 
 export default Login;
