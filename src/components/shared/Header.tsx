@@ -42,18 +42,29 @@ const Header: React.FC = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get(`${backend_url}/api/v1/user/logout`, { withCredentials: true });
+      const res = await axios.get(`${backend_url}/api/v1/user/logout`);
       if (res.data.success) {
+        // Clear user data from Redux
         dispatch(setUser(null));
+  
+        // Redirect to homepage after successful logout
         router.push("/");
+  
+        // Show success toast
         toast.success(res.data.message);
       }
     } catch (error: any) {
       console.error(error);
-      toast.error(error?.response?.data?.message || 'Failed to logout');
+  
+      // Error handling with fallback message
+      const message = error?.response?.data?.message || error?.message || 'Failed to logout';
+      toast.error(message);
     }
+  
+    // Close the dropdown (if any)
     setIsDropdownOpen(false);
   };
+  
 
   return (
     <nav className="text-white absolute z-10 px-4 py-2 w-full text-nowrap">
