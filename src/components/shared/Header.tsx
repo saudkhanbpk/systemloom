@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get(`${backend_url}/api/v1/user/logout`);
+      const res = await axios.get(`${backend_url}/api/v1/user/logout`, { withCredentials: true });
       if (res.data.success) {
         // Clear user data from Redux
         dispatch(setUser(null));
