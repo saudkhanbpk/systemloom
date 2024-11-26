@@ -70,34 +70,7 @@ const Login: React.FC = () => {
     window.location.href = `${backend_url}/auth/google`;  // Redirect to backend for Google login
   };
 
-  const handleGoogleCallback = async () => {
-    try {
-      // Call your backend to get user data
-      const response = await axios.get(`${backend_url}/auth/google/callback`, { withCredentials: true });
   
-      console.log("Response status:", response.status); // Check the status code
-      console.log("Google Callback Response:", response.data); // Log the response
-  
-      if (response.data.success) {
-        // const userData = response.data.user;
-        dispatch(setUser(response.data.user));
-        router.push("/");
-      } else {
-        console.error("Unexpected response structure:", response);
-      }
-    } catch (error) {
-      console.error("Error during Google OAuth callback:", error);
-    }
-  };
-  
-  
-
-  // Use this effect to call the Google callback handler if redirected after login
-  useEffect(() => {
-    if (window.location.pathname === '/auth/google/callback') {
-      handleGoogleCallback();  // Automatically handle the callback if redirected back
-    }
-  }, [window.location.pathname]);
 
   return (
     <motion.div

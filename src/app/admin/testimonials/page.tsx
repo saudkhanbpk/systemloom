@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Star, Edit, Trash } from "lucide-react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import axios from "axios";
@@ -160,23 +160,44 @@ const Testimonial = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="px-4 py-2 bg-gray-300 rounded-md disabled:bg-gray-400"
-          >
-            <FaChevronLeft />
-          </button>
-          <span className="mx-2 font-bold">{currentPage}</span>
-          <button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="px-4 py-2 bg-gray-300 rounded-md disabled:bg-gray-400"
-          >
-            <FaChevronRight />
-          </button>
-        </div>
+        <div className="flex items-center justify-center mt-6 space-x-4">
+  {/* Previous Button */}
+  <button
+    onClick={() => handlePageChange(currentPage - 1)}
+    disabled={currentPage === 1}
+    className="text-gray-500 hover:text-purple-600 disabled:text-gray-300"
+  >
+    <FaArrowLeft size={20} />
+  </button>
+
+  {/* Page Numbers */}
+  <div className="flex space-x-2">
+    {Array.from({ length: totalPages }, (_, index) => (
+      <button
+        key={index + 1}
+        onClick={() => handlePageChange(index + 1)}
+        className={`px-3 py-1 rounded-md ${
+          currentPage === index + 1
+            ? "bg-purple-600 text-white"
+            : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+        }`}
+      >
+        {index + 1}
+      </button>
+    ))}
+  </div>
+
+  {/* Next Button */}
+  <button
+    onClick={() => handlePageChange(currentPage + 1)}
+    disabled={currentPage === totalPages}
+    className="text-gray-500 hover:text-purple-600 disabled:text-gray-300"
+  >
+    <FaArrowRight size={20} />
+  </button>
+</div>
+
+
       </AdminLayout>
     </ProtectedRoute>
   );

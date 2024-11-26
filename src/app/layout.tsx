@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Layout from "../newLayout"; 
+import Logo from "../../public/assets/icons/Logo.png";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,15 +22,15 @@ export const metadata: Metadata = {
   title: "TechCreator - Custom Software Development",
   description: "Expert solutions for your software needs. Transforming ideas into reality with our dedicated services.",
   keywords: "software development, custom software, tech solutions, web development, app development",
-  authors: [{ name: "Your Name", url: "https://yourwebsite.com" }], // Optional: Add author info
+  authors: [{ name: "Zakarya khan", url: "https://tectcreator.co" }], 
   openGraph: {
     title: "TechCreator - Custom Software Development",
     description: "Expert solutions for your software needs. Transforming ideas into reality with our dedicated services.",
-    url: "https://tech-creator-web-app-ou63.vercel.app", // Replace with your site's URL
+    url: "https://tech-creator-web-app-ou63.vercel.app", 
     siteName: "TechCreator",
     images: [
       {
-        url: "https://tech-creator-web-app-ou63.vercel.app/assets/landingPage/backgroundImage.png", // Ensure this URL is correct and accessible
+        url: "https://www.techcreator.co/assets/landingPage/backgroundImage.png", 
         width: 800,
         height: 600,
         alt: "TechCreator Preview Image",
@@ -47,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
        <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/icons/Logo.png" type="image/png" />
         <meta name="google-site-verification" content="AVdrxyNjezX0QpeAA-BxrpT19BFeEwwfp5Tof-aLtsY" />
       </head>
       <body

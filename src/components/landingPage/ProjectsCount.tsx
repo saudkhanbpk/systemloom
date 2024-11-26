@@ -13,8 +13,16 @@ const StatItem: FC<StatItemProps> = ({ value, label }) => {
   return (
     <div ref={ref} className="text-center text-white">
       <div className="text-[50px] font-medium leading-[40px] font-inter mb-2">
-        <span className="text-4xl">+</span>
-        {inView ? <CountUp start={0} end={value} duration={2.5} /> : 0}
+        {inView ? (
+          <CountUp
+            start={0}
+            end={value}
+            duration={2.5}
+            suffix="+"
+          />
+        ) : (
+          `0+`
+        )}
       </div>
       <div className="text-[30px] font-medium leading-[40px] font-inter">{label}</div>
     </div>
@@ -30,7 +38,7 @@ const ProjectsCount: FC = () => {
           muted
           loop
           className="absolute inset-0 w-full h-[190px] object-cover opacity-70"
-          poster="/assets/vecteezy_video-placeholder.jpg"  // Optional placeholder image for better UX
+          poster="/assets/vecteezy_video-placeholder.jpg"
         >
           <source
             src="/assets/vecteezy_digital-waves-motion-background-video-animation_3006226.mp4"
@@ -41,9 +49,9 @@ const ProjectsCount: FC = () => {
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
-          <StatItem value={60} label="Clients" />
-          <StatItem value={60} label="Countries" />
-          <StatItem value={60} label="Products" />
+          <StatItem value={90} label="Clients" />
+          <StatItem value={70} label="Countries" />
+          <StatItem value={35} label="Products" />
         </div>
       </div>
     </div>
