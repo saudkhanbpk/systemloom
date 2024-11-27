@@ -1,13 +1,21 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
-import Logo from '../../../public/assets/icons/Logo.png';
-import CommonButton from '../common/Button';
-import Footerbg from '../../../public/assets/footerImages/footer_bg_image.svg';
-import { useEffect } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faLinkedinIn,
+  faTwitter,
+  faYoutube,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import Logo from "../../../public/assets/icons/Logo.png";
+import CommonButton from "../common/Button";
+import Footerbg from "../../../public/assets/footerImages/footer_bg_image.svg";
+import { useEffect } from "react";
 
 const Footer: React.FC = () => {
-
   useEffect(() => {
     const footerBackground = document.querySelector(".footer-bg") as HTMLElement | null;
 
@@ -33,7 +41,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="relative bg-black text-white py-8 md:py-10 w-full ">
+    <footer className="relative bg-black text-white py-8 md:py-10 w-full">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 footer-bg"
         // Background image will load dynamically with Intersection Observer
@@ -53,12 +61,15 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className='lg:ml-20'>
+          <div className="lg:ml-20">
             <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Contact', 'Blog'].map((item) => (
+              {["Home", "About", "Services", "Contact", "Blog","Pricing", "Portfolio","Career"].map((item) => (
                 <li key={item}>
-                  <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-xs md:text-sm hover:text-purple-500 transition-colors">
+                  <Link
+                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    className="text-xs md:text-sm hover:text-purple-500 transition-colors"
+                  >
                     {item}
                   </Link>
                 </li>
@@ -66,7 +77,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div>
+
+           <div>
             <h3 className="text-base md:text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {[
@@ -94,19 +106,42 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <p className="text-xs md:text-sm">contact@techcreator.co</p>
               <p className="text-xs md:text-sm">+92-311-9265290</p>
-              <div className="flex sm:flex-row flex-col  gap-1 mt-4">
+              <div className="flex sm:flex-row flex-col gap-1 mt-4">
                 <CommonButton
                   className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
                   title="Consultancy"
-                  handleClick={() => console.log('Consultancy Clicked')}
+                  handleClick={() => console.log("Consultancy Clicked")}
                 />
                 <CommonButton
                   className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
                   title="Appointment"
-                  handleClick={() => console.log('Appointment Clicked')}
+                  handleClick={() => console.log("Appointment Clicked")}
                 />
               </div>
             </div>
+          </div>
+        </div>
+        <div className="mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row items-center  justify-between">
+          <p className="text-xs md:text-sm text-gray-400">© 2024 TechCreator. All rights reserved.</p>
+          <div className="flex gap-7 mt-4 md:mt-0">
+            <a href="https://www.facebook.com/techcreatorfb/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <FontAwesomeIcon icon={faFacebookF} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
+            </a>
+            <a href="https://www.linkedin.com/company/techcreator" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <FontAwesomeIcon icon={faLinkedinIn} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
+            </a>
+            <a href="https://www.upwork.com/agencies/1479726519577280512/" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+              <FontAwesomeIcon icon={faBriefcase} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
+            </a>
+            {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <FontAwesomeIcon icon={faTwitter} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
+            </a> */}
+            <a href="https://www.youtube.com/@techcreator9512" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <FontAwesomeIcon icon={faYoutube} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
+            </a>
+            <a href="https://www.instagram.com/techcreatorco/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <FontAwesomeIcon icon={faInstagram} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
+            </a>
           </div>
         </div>
       </div>

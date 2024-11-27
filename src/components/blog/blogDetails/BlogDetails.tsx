@@ -24,17 +24,23 @@ interface Post {
 interface Comment {
   _id: string;
   name: string;
+  fullName: string;
   email: string;
-  user: { name: string };
+  user: {
+    name: string; // Mark name as optional
+    fullName: string; // Add fullName and mark it as optional
+  };
   commentText: string;
   createdAt: string;
 }
+
 
 interface DetailPostProps {
   params: {
     title: string;
   };
 }
+
 
 // Utility function to create a slug from a post title
 const createSlug = (title: string): string => {
@@ -89,13 +95,17 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
           newComment,
           { withCredentials: true }
         );
+        
   
         if (res.data.success) {
           const updatedComment = {
             ...res.data.comment,
-            user: { name: user?.name }, 
+            user: {
+              name: user?.name || '', // Fallback to name if fullName is not available
+              fullName: user?.fullName || '', // Ensure fullName is used if available
+            },
           };
-  
+        
           // Append the new comment to the comments state
           setComments((prevComments) => [...prevComments, updatedComment]);
   
@@ -112,6 +122,7 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
       }
     }
   };
+  
   
 
   const deleteHandler = async (commentId: string) => {
@@ -230,10 +241,11 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
       <div className="flex items-start space-x-4 mb-3">
         {/* User Avatar */}
         <div className="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full font-bold text-lg">
-          {comment.user?.name?.charAt(0).toUpperCase() || 'N/A'}
+        {(comment.user?.name?.charAt(0) || comment.user?.fullName?.charAt(0) || 'N/A').toUpperCase()}
+
         </div>
         <div>
-          <p className="font-semibold text-lg text-gray-800">{comment.user.name}</p>
+          <p className="font-semibold text-lg text-gray-800">{comment.user.name || comment.user.fullName || "Anonymous"}</p>
           <p className="text-xs text-gray-500">
             {new Date(comment.createdAt).toLocaleDateString(undefined, {
               year: "numeric",
@@ -254,7 +266,7 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
         <div className="flex justify-end mt-2">
           <button
             onClick={() => deleteHandler(comment._id)}
-            className="text-red-600 text-sm font-medium hover:text-red-700 transition duration-300"
+            className="bg-red-600 text-white text-sm font-medium border p-1 rounded-md px-3 transition duration-300"
           >
             Delete
           </button>
@@ -265,16 +277,8 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
 ) : (
   <p className="text-gray-600 text-lg text-center">No comments yet. Be the first to comment!</p>
 )}
-
-
-  </div>
-
-  
+  </div> 
 </div>
-
-
-
-
     </div>
   );
 };

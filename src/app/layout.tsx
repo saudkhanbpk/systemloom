@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Layout from "../newLayout"; 
-import Logo from "../../public/assets/icons/Logo.png";
+
 
 
 const geistSans = localFont({
@@ -51,6 +51,7 @@ export default function RootLayout({
        <head>
         <link rel="icon" href="/assets/icons/Logo.png" type="image/png" />
         <meta name="google-site-verification" content="AVdrxyNjezX0QpeAA-BxrpT19BFeEwwfp5Tof-aLtsY" />
+        <link rel="canonical" href="https://www.techcreator.co" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

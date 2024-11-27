@@ -66,8 +66,9 @@ const Login: React.FC = () => {
     }
   }, [user]);
 
+
   const handleGoogleLogin = () => {
-    window.location.href = `${backend_url}/auth/google`;  // Redirect to backend for Google login
+    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/google`; // Redirect to backend for Google login
   };
 
   

@@ -20,7 +20,7 @@ const ServicesDetail: React.FC = () => {
         image2={webImage}
       />
 
-      <FeatureSection heading="Heading" description="It  is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and " image="/assets/fullStackDevelopment/img1.png" />
+      {/* <FeatureSection heading="Heading" description="It  is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and " image="/assets/fullStackDevelopment/img1.png" /> */}
       <FeaturesList  />
       <DiagonalFeatureSection/>
       <FramedFeatureSection/>

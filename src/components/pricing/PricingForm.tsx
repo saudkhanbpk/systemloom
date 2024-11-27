@@ -12,6 +12,8 @@ const PricingForm = () => {
     details: '',
     referenceLink: '',
   });
+  
+  const [loading, setLoading] = useState(false);  // New loading state
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -20,30 +22,33 @@ const PricingForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-   try {
-    const res = await axios.post(`${backend_url}/api/v1/pricing/submit-form`, formData, {
-      headers:{
-        "Content-Type":"application/json"
-      },
-      withCredentials:true
-    })
-    if (res.data.success){
-      toast.success(res.data.message)
-      setFormData({
-        name: '',
-        email: '',
-        phoneNumber: '',
-        service: '',
-        details: '',
-        referenceLink: '',
-      })
-    }else{
-      toast.error(res.data.message)
+    setLoading(true);  // Set loading state to true when submitting
+    try {
+      const res = await axios.post(`${backend_url}/api/v1/pricing/submit-form`, formData, {
+        headers: {
+          "Content-Type": "application/json"
+        },
+        withCredentials: true
+      });
+      if (res.data.success) {
+        toast.success(res.data.message);
+        setFormData({
+          name: '',
+          email: '',
+          phoneNumber: '',
+          service: '',
+          details: '',
+          referenceLink: '',
+        });
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error: any) {
+      console.log(error);
+      toast.error(error?.response?.data?.message);
+    } finally {
+      setLoading(false);  // Reset loading state after request completes
     }
-   } catch (error:any) {
-    console.log(error)
-    toast.error(error?.response?.data?.message)
-   }
   };
 
   return (
@@ -153,13 +158,18 @@ const PricingForm = () => {
               />
             </div>
 
-            {/* Submit Button */}
+            {/* Submit Button with loading indicator */}
             <div>
               <button
                 type="submit"
-                className="bg-[#9A00FF] w-full text-white py-2 px-4 rounded-full mt-3"
+                className={`bg-[#9A00FF] w-full text-white py-2 px-4 rounded-full mt-3 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                disabled={loading} // Disable button while loading
               >
-                Submit
+                {loading ? (
+                 <div> loading....</div>
+                ) : (
+                  'Submit'
+                )}
               </button>
             </div>
           </form>

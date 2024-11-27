@@ -9,11 +9,15 @@ import OurProjectsGrid from "@/components/portfolio/OurProjectsGrid"
 import PortfolioSection from "@/components/portfolio/PortfolioSection"
 import StatsDisplay from "@/components/portfolio/StatsDisplay"
 import useGetAllProjects from "@/hooks/useGetAllProjects"
+import Head from "next/head"
 
 const Portfolio = () => {
   useGetAllProjects()
   return (
     <div>
+       <Head>
+        <link rel="canonical" href="https://www.techcreator.co/portfolio" />
+      </Head>
       <>
       <HeroSection/>
       <PortfolioSection/>

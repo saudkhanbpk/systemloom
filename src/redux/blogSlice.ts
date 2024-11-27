@@ -4,6 +4,7 @@ interface Blog {
     _id: string;
     image: string | { imageUrl: string };
     content: string;
+    description: string;
     tags: string | string[];
     createdAt: string;
     publish: boolean;

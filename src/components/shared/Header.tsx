@@ -49,7 +49,7 @@ const Header: React.FC = () => {
   
         // Redirect to homepage after successful logout
         router.push("/");
-  
+        localStorage.removeItem("token");
         // Show success toast
         toast.success(res.data.message);
       }

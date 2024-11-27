@@ -52,7 +52,7 @@ const ServicesSection: React.FC = () => {
       id: 3,
       title: "DevOps",
       des: "Boost efficiency with DevOps solutions that automate workflows, ensure quick deployments, and maintain top-notch quality.",
-      image: "/assets/landingPage/Code_perspective_matte.png",
+      image: "https://cdn-icons-png.flaticon.com/512/5084/5084071.png",
     },
     {
       id: 4,
@@ -60,7 +60,38 @@ const ServicesSection: React.FC = () => {
       des: "Deliver flawless products with our expert testing services, ensuring performance, security, and a perfect user experience.",
       image: "/assets/icons/webdevicon.png",
     },
+    {
+      id: 5,
+      title: "UI/UX Designing",
+      des: "Craft intuitive and visually appealing designs that provide exceptional user experiences across all platforms.",
+      image: "https://cdn-icons-png.flaticon.com/512/17109/17109606.png",
+    },
+    {
+      id: 6,
+      title: "Graphic Designing",
+      des: "Bring your ideas to life with striking graphics and creative visuals that leave a lasting impression.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB8CSayoy_gkUrkW4-D9Vq82e_gcDBNfOM1w&s",
+    },
+    {
+      id: 7,
+      title: "Project Management",
+      des: "Streamline your projects with professional management strategies that ensure timely and successful completion.",
+      image: "https://cdn-icons-png.flaticon.com/512/9402/9402518.png",
+    },
+    {
+      id: 8,
+      title: "SEO & Content Writing",
+      des: "Boost your online visibility with engaging content and optimized strategies that drive traffic and conversions.",
+      image: "https://cdn-icons-png.flaticon.com/512/13122/13122980.png",
+    },
+    {
+      id: 9,
+      title: "Software Maintenance",
+      des: "Ensure your software runs smoothly with expert maintenance services that address issues proactively.",
+      image: "https://cdn-icons-png.flaticon.com/512/8463/8463643.png",
+    },
   ];
+  
   
   
 

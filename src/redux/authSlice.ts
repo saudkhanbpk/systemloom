@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 interface User {
   id: string;
   name: string;
+  fullName?: string; 
   email: string;
   role: "admin" | "job seeker"; // Add the role property
 }
