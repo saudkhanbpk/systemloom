@@ -65,15 +65,14 @@ const CareerHeroSection: FC = () => {
         toast.error(res.data.message);
       }
     } catch (error: any) {
-      console.log("Error:", error); // Check the full error structure
+      console.log("Error:", error); 
   
-      // Try different error paths based on the error response
+
       const errorMessage =
-        error?.response?.data?.message || // Standard error message
-        error?.response?.data?.error || // Custom error message field
-        'Something went wrong'; // Default fallback message
-  
-      toast.error(errorMessage); // Display error in toast
+        error?.response?.data?.message || 
+        error?.response?.data?.error || 
+        'Something went wrong';
+      toast.error(errorMessage); 
     } finally {
       setLoading(false);
     }
@@ -122,78 +121,78 @@ const CareerHeroSection: FC = () => {
           onClick={handleDialogClose}
         >
           <div
-            className="text-white p-6 sm:w-[400px] md:w-[600px] max-w-full relative z-50 h-fit w-full bg-purple-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100"
-            onClick={(e) => e.stopPropagation()} // Prevent click from closing dialog
+            className="text-white p-6 sm:w-[400px] md:w-[600px] max-w-full relative z-50 h-fit w-full bg-white rounded-md"
+            onClick={(e) => e.stopPropagation()} 
           >
             <h2 className="text-2xl font-semibold mb-4">Submit Your Resume</h2>
             
             <form  onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="block text-gray-400">Name</label>
+                <label className="block text-black">Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg  text-black outline-none"
                   placeholder="Your name"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-400">Email</label>
+                <label className="block text-black">Email</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black outline-none"
                   placeholder="Your email"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-400">Phone</label>
+                <label className="block text-black">Phone</label>
                 <input
                   type="tel"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg  text-black outline-none"
                   placeholder="Your phone number"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-400">Field</label>
+                <label className="block text-black">Field</label>
                 <input
                   type="text"
                   name="jobField"
                   value={formData.jobField}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black outline-none"
                   placeholder="Your field"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-400">Professional URL</label>
+                <label className="block text-black">Professional URL</label>
                 <input
                   type="url"
                   name="professionalUrl"
                   value={formData.professionalUrl}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white outline-none"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg  text-black outline-none"
                   placeholder="LinkedIn or other professional link"
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-400">Resume</label>
+                <label className="block text-black">Resume</label>
                 <input
                   type="file"
                   name="resume"
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg bg-gray-800 text-white"
+                  className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black"
                   required
                 />
               </div>

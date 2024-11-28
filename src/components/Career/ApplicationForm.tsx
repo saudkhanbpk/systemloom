@@ -245,7 +245,7 @@ const JobApplicationForm: React.FC = () => {
       <input
         type="text"
         name="experience"
-        placeholder="Experience*"
+        placeholder="Experience (e.g., 2+ years, 3+ years)"
         value={formData.experience}
         onChange={handleChange}
         required
@@ -284,7 +284,7 @@ const JobApplicationForm: React.FC = () => {
           name="motivationLetter"
           onChange={handleFileChange}
           accept=".pdf,.doc,.docx"
-          required
+          // required
           className="w-full p-3 border-b border-black focus:outline-none"
         />
       </div>
