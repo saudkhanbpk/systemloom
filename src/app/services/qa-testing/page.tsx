@@ -2,11 +2,11 @@ import React from 'react'
 import qatestinImage from "../../../../public/assets/graphice design images/qatesting.png"
 import Image from 'next/image'
 import { LayoutDashboard, FileText, Zap, Clock } from 'lucide-react';
-import graphic1 from "../../../../public/assets/graphice design images/graphi1.png"
-import graphic2 from "../../../../public/assets/graphice design images/graphic2.png"
-import graphic3 from "../../../../public/assets/graphice design images/graphic3.png"
-import FramedFeatureSectionImage from "../../../../public/assets/graphice design images/FramedFeatureSection.png"
-import FeatureImage from "../../../../public/assets/graphice design images/featureimage.png"
+import qaimage1 from "../../../../public/assets/graphice design images/qaimage1.png"
+import qaimage2 from "../../../../public/assets/graphice design images/qaimage2.png"
+import qaimage3 from "../../../../public/assets/graphice design images/qaimage3.png"
+import qaimage4 from "../../../../public/assets/graphice design images/qaimage4.png"
+import qaimage5 from "../../../../public/assets/graphice design images/qaimage5.png"
 
 
 // image for RecentWorks
@@ -75,7 +75,7 @@ const QATesting = () => {
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10 md:px-12   mt-20">
-    <h1 className="text-3xl md:text-5xl font-bold">QA Testing Services & Solutions</h1>
+    <h1 className="text-3xl lg:text-5xl font-bold">QA Testing Services & Solutions</h1>
     <p className="text-base md:text-lg mt-3">
       At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
       Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 
@@ -103,7 +103,7 @@ const QATesting = () => {
       <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
   <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
     <Image
-      src={FeatureImage}
+      src={qaimage1}
       alt="Feature section image"
       width={300} 
       height={450}
@@ -168,7 +168,7 @@ const QATesting = () => {
 <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic1}
+    src={qaimage2}
     alt="heroImage"
     width={300}
     height={300}
@@ -197,7 +197,7 @@ const QATesting = () => {
     </p>
   </div>
   <Image
-    src={graphic2}
+    src={qaimage3}
     alt="heroImage"
     width={300}
     height={300}
@@ -209,7 +209,7 @@ const QATesting = () => {
 <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic3}
+    src={qaimage4}
     alt="heroImage"
     width={300}
     height={300}
@@ -246,7 +246,7 @@ const QATesting = () => {
   
       <div className="relative bg-gray-100">
         <Image
-          src={FramedFeatureSectionImage}
+          src={qaimage5}
           alt="Feature illustration"
           width={300}
           height={300}

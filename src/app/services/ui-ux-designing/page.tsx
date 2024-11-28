@@ -2,11 +2,11 @@ import React from 'react'
 import UIUXDesignImage from "../../../../public/assets/graphice design images/UIDesign.png"
 import Image from 'next/image'
 import { LayoutDashboard, FileText, Zap, Clock } from 'lucide-react';
-import graphic1 from "../../../../public/assets/graphice design images/graphi1.png"
-import graphic2 from "../../../../public/assets/graphice design images/graphic2.png"
-import graphic3 from "../../../../public/assets/graphice design images/graphic3.png"
-import FramedFeatureSectionImage from "../../../../public/assets/graphice design images/FramedFeatureSection.png"
-import FeatureImage from "../../../../public/assets/graphice design images/featureimage.png"
+import uxdesignimage1 from "../../../../public/assets/graphice design images/uxdesign1.png"
+import uxdesignimage2 from "../../../../public/assets/graphice design images/uxdesign2.png"
+import uxdesignimage3 from "../../../../public/assets/graphice design images/uxdesign3.png"
+import uxdesignimage4 from "../../../../public/assets/graphice design images/uxdesign4.png"
+import uxdesignimage5 from "../../../../public/assets/graphice design images/uxeesign5.png"
 
 
 // image for RecentWorks
@@ -25,7 +25,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 
 
-const GraphicDesign = () => {
+const UIUXDesign = () => {
 
   const services = [
     {
@@ -75,7 +75,7 @@ const GraphicDesign = () => {
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0 md:px-12 mt-20">
-    <h1 className="text-3xl md:text-5xl font-bold">UI/UX design services</h1>
+    <h1 className="text-3xl lg:text-5xl font-bold">UI/UX design services</h1>
     <p className="text-base md:text-lg mt-3">
       At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
       Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 
@@ -103,7 +103,7 @@ const GraphicDesign = () => {
       <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
   <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
     <Image
-      src={FeatureImage}
+      src={uxdesignimage1}
       alt="Feature section image"
       width={300} 
       height={450}
@@ -168,7 +168,7 @@ const GraphicDesign = () => {
 <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic1}
+    src={uxdesignimage2}
     alt="heroImage"
     width={300}
     height={300}
@@ -197,7 +197,7 @@ const GraphicDesign = () => {
     </p>
   </div>
   <Image
-    src={graphic2}
+    src={uxdesignimage3}
     alt="heroImage"
     width={300}
     height={300}
@@ -209,7 +209,7 @@ const GraphicDesign = () => {
 <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic3}
+    src={uxdesignimage4}
     alt="heroImage"
     width={300}
     height={300}
@@ -246,7 +246,7 @@ const GraphicDesign = () => {
   
       <div className="relative bg-gray-100">
         <Image
-          src={FramedFeatureSectionImage}
+          src={uxdesignimage5}
           alt="Feature illustration"
           width={300}
           height={300}
@@ -376,4 +376,4 @@ const GraphicDesign = () => {
   )
 }
 
-export default GraphicDesign
+export default UIUXDesign

@@ -2,11 +2,11 @@ import React from 'react'
 import webDevelopmentImagehero from "../../../../public/assets/graphice design images/webdevelopment.png"
 import Image from 'next/image'
 import { LayoutDashboard, FileText, Zap, Clock } from 'lucide-react';
-import graphic1 from "../../../../public/assets/graphice design images/graphi1.png"
-import graphic2 from "../../../../public/assets/graphice design images/graphic2.png"
-import graphic3 from "../../../../public/assets/graphice design images/graphic3.png"
-import FramedFeatureSectionImage from "../../../../public/assets/graphice design images/FramedFeatureSection.png"
-import FeatureImage from "../../../../public/assets/graphice design images/featureimage.png"
+import webimage1 from "../../../../public/assets/ServiceDetailsImages/webImage1.png"
+import webimage2 from "../../../../public/assets/ServiceDetailsImages/firstheading.webp"
+import webimage3 from "../../../../public/assets/ServiceDetailsImages/secondheading.webp"
+import webimage4 from "../../../../public/assets/ServiceDetailsImages/thirdHeading.webp"
+import webimage5 from "../../../../public/assets/ServiceDetailsImages/webimage5.png"
 
 
 // image for RecentWorks
@@ -72,11 +72,11 @@ const WebDevelopment = () => {
     <div >
 
       {/* hero section start */}
-    <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
+    <div className="bg-black w-full lg:min-h-screen md:pt-36 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  md:px-12  mt-20">
-    <h1 className="text-3xl md:text-5xl font-bold">Full stack web development services</h1>
-    <p className="text-base md:text-lg mt-3">
+    <h1 className="text-3xl lg:text-5xl  font-bold">Full stack web development services</h1>
+    <p className="text-base lg:text-lg mt-3">
     At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful proul realities. Join us in the journey of transforming your vision into cutting-edge technology.
     </p>
   </div>
@@ -88,7 +88,7 @@ const WebDevelopment = () => {
       alt="heroImage"
       width={300}
       height={300}
-      className="w-[50vw] md:w-[25vw]"
+      className="w-[50vw] md:w-[25vw] lg:mt-52 "
     />
   </div>
 </div>
@@ -101,14 +101,14 @@ const WebDevelopment = () => {
       <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
   <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
     <Image
-      src={FeatureImage}
+      src={webimage1}
       alt="Feature section image"
       width={300} 
       height={450}
       className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
     />
   </div>
-  <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+  <div className="bg-[#9A00FF] w-full md:w-[700px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
     <div className="text-white xl:py-20 lg:px-40">
       <h1 className="text-2xl sm:text-3xl font-bold mb-3">Heading</h1>
       <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and </p>
@@ -166,7 +166,7 @@ const WebDevelopment = () => {
 <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic1}
+    src={webimage2}
     alt="heroImage"
     width={300}
     height={300}
@@ -195,7 +195,7 @@ const WebDevelopment = () => {
     </p>
   </div>
   <Image
-    src={graphic2}
+    src={webimage3}
     alt="heroImage"
     width={300}
     height={300}
@@ -207,7 +207,7 @@ const WebDevelopment = () => {
 <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic3}
+    src={webimage4}
     alt="heroImage"
     width={300}
     height={300}
@@ -244,7 +244,7 @@ const WebDevelopment = () => {
   
       <div className="relative bg-gray-100">
         <Image
-          src={FramedFeatureSectionImage}
+          src={webimage5}
           alt="Feature illustration"
           width={300}
           height={300}
@@ -317,7 +317,7 @@ const WebDevelopment = () => {
               <Image
                 src={image3}
                 alt="Design planning"
-                className="w-full h-[280px] object-cover"
+                className="w-full  h-[280px] object-cover"
               />
             </div>
           </div>

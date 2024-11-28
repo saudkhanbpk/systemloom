@@ -2,11 +2,11 @@ import React from "react";
 import heroappdevelopmentImage from "../../../../public/assets/ServiceDetailsImages/appimg.png";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import graphic1 from "../../../../public/assets/graphice design images/graphi1.png";
-import graphic2 from "../../../../public/assets/graphice design images/graphic2.png";
-import graphic3 from "../../../../public/assets/graphice design images/graphic3.png";
-import FramedFeatureSectionImage from "../../../../public/assets/graphice design images/FramedFeatureSection.png";
-import FeatureImage from "../../../../public/assets/graphice design images/featureimage.png";
+import appImage1 from "../../../../public/assets/graphice design images/appimage1.png";
+import appImage2 from "../../../../public/assets/graphice design images/appImage2.png";
+import appImage3 from "../../../../public/assets/graphice design images/appImage3.png";
+import appImage4 from "../../../../public/assets/graphice design images/appImag4.png";
+import appImage from "../../../../public/assets/graphice design images/MobileAppDevelopment.png";
 
 // image for RecentWorks
 import image from "../../../../public/assets/RecentWork/unsplash_IyaNci0CyRk.png";
@@ -23,7 +23,7 @@ import developmentDesignImage from "../../../../public/assets/relatedServices/Fr
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 
-const GraphicDesign = () => {
+const MobileAppDevelopment = () => {
   const services = [
     {
       title: "Product Design",
@@ -69,7 +69,7 @@ const GraphicDesign = () => {
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left md:px-12 mb-6 md:mb-0 md:mt-0  mt-20">
-          <h1 className="text-3xl md:text-5xl font-bold">
+          <h1 className="text-3xl lg:text-5xl font-bold">
           Custom Mobile App Development Services
           </h1>
           <p className="text-base md:text-lg mt-3">
@@ -99,7 +99,7 @@ const GraphicDesign = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
-              src={FeatureImage}
+              src={appImage}
               alt="Feature section image"
               width={300}
               height={450}
@@ -173,7 +173,7 @@ const GraphicDesign = () => {
         <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
           {/* Image Section */}
           <Image
-            src={graphic1}
+            src={appImage1}
             alt="heroImage"
             width={300}
             height={300}
@@ -215,7 +215,7 @@ const GraphicDesign = () => {
             </p>
           </div>
           <Image
-            src={graphic2}
+            src={appImage2}
             alt="heroImage"
             width={300}
             height={300}
@@ -227,7 +227,7 @@ const GraphicDesign = () => {
         <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
           {/* Image Section */}
           <Image
-            src={graphic3}
+            src={appImage3}
             alt="heroImage"
             width={300}
             height={300}
@@ -274,7 +274,7 @@ const GraphicDesign = () => {
 
           <div className="relative bg-gray-100">
             <Image
-              src={FramedFeatureSectionImage}
+              src={appImage4}
               alt="Feature illustration"
               width={300}
               height={300}
@@ -408,4 +408,4 @@ const GraphicDesign = () => {
   );
 };
 
-export default GraphicDesign;
+export default MobileAppDevelopment;

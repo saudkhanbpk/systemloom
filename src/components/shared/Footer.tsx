@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                 { name: 'Software Maintenance', link: '/services/software-maintenance' },
                 { name: 'SEO & Content Writing', link: '/services/seo-content-writing' },
                 { name: 'Project Management', link: '/services/project-management' },
-                { name: 'SQA', link: '/services/qa-testing' },
+                { name: 'QA Testing', link: '/services/qa-testing' },
               ].map((service) => (
                 <li key={service.name}>
                   <Link href={service.link} className="text-xs md:text-sm hover:text-purple-500 transition-colors">

@@ -75,7 +75,7 @@ const GraphicDesign = () => {
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  mt-20">
-    <h1 className="text-3xl md:text-5xl font-bold">Graphic Design Services</h1>
+    <h1 className="text-3xl lg:text-5xl font-bold">Graphic Design Services</h1>
     <p className="text-base md:text-lg mt-3">
       At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
       Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 

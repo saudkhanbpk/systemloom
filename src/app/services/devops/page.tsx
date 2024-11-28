@@ -1,12 +1,12 @@
 import React from 'react'
-import heroimage from "../../../../public/assets/ServiceDetailsImages/Designer_working_with_pen_display_Illustration-removebg-preview 1.png"
+import heroimage from "../../../../public/assets/ServiceDetailsImages/QA.png"
 import Image from 'next/image'
 import { LayoutDashboard, FileText, Zap, Clock } from 'lucide-react';
-import graphic1 from "../../../../public/assets/graphice design images/graphi1.png"
-import graphic2 from "../../../../public/assets/graphice design images/graphic2.png"
-import graphic3 from "../../../../public/assets/graphice design images/graphic3.png"
-import FramedFeatureSectionImage from "../../../../public/assets/graphice design images/FramedFeatureSection.png"
-import FeatureImage from "../../../../public/assets/graphice design images/featureimage.png"
+import devopimage1 from "../../../../public/assets/graphice design images/devopimag1.png"
+import devopimage2 from "../../../../public/assets/graphice design images/devopimage2.png"
+import devopimage3 from "../../../../public/assets/graphice design images/devopimage3.png"
+import devopimage4 from "../../../../public/assets/graphice design images/devopimage4.png"
+import devopimage5 from "../../../../public/assets/graphice design images/devopimage5.png"
 
 
 // image for RecentWorks
@@ -75,7 +75,7 @@ const Devops = () => {
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10 md:px-12  mt-20">
-    <h1 className="text-3xl md:text-5xl font-bold">DEOps Services & Optimization</h1>
+    <h1 className="text-3xl lg:text-5xl font-bold">DEOps Services & Optimization</h1>
     <p className="text-base md:text-lg mt-3">
       At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
       Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 
@@ -103,7 +103,7 @@ const Devops = () => {
       <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
   <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
     <Image
-      src={FeatureImage}
+      src={devopimage1}
       alt="Feature section image"
       width={300} 
       height={450}
@@ -168,7 +168,7 @@ const Devops = () => {
 <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic1}
+    src={devopimage2}
     alt="heroImage"
     width={300}
     height={300}
@@ -197,7 +197,7 @@ const Devops = () => {
     </p>
   </div>
   <Image
-    src={graphic2}
+    src={devopimage3}
     alt="heroImage"
     width={300}
     height={300}
@@ -209,7 +209,7 @@ const Devops = () => {
 <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={graphic3}
+    src={devopimage4}
     alt="heroImage"
     width={300}
     height={300}
@@ -246,7 +246,7 @@ const Devops = () => {
   
       <div className="relative bg-gray-100">
         <Image
-          src={FramedFeatureSectionImage}
+          src={devopimage5}
           alt="Feature illustration"
           width={300}
           height={300}
