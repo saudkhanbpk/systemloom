@@ -25,7 +25,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 
 
-const Devops = () => {
+const GraphicDesign = () => {
 
   const services = [
     {
@@ -74,8 +74,8 @@ const Devops = () => {
       {/* hero section start */}
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
-  <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10 md:px-12  mt-20">
-    <h1 className="text-3xl md:text-5xl font-bold">DEOps Services & Optimization</h1>
+  <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  mt-20">
+    <h1 className="text-3xl md:text-5xl font-bold">Graphic Design Services</h1>
     <p className="text-base md:text-lg mt-3">
       At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
       Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 
@@ -99,7 +99,7 @@ const Devops = () => {
 
 
 {/* FeatureSection section start */}
-<div className='max-w-7xl  mx-auto'>
+      <div className='max-w-7xl  mx-auto'>
       <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
   <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
     <Image
@@ -376,4 +376,4 @@ const Devops = () => {
   )
 }
 
-export default Devops
+export default GraphicDesign

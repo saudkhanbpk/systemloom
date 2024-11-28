@@ -117,7 +117,7 @@ const PricingForm = () => {
           <input
             type="text"
             placeholder="Search customers..."
-            className="border outline-none p-1 w-[300px]"
+            className="border-2 outline-none p-2 rounded-md w-[300px]  border-black"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

@@ -90,7 +90,7 @@ const Testimonial = () => {
           <input
             type="text"
             placeholder="Search testimonials..."
-            className="border-2 border-black rounded-md p-2 outline-none focus:ring-2 focus:ring-purple-600"
+            className=" rounded-md p-2 outline-none w-[300px] border-2  border-black"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

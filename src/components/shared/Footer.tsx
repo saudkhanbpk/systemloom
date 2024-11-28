@@ -83,14 +83,14 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {[
                 { name: 'Web Development', link: '/services/web-development' },
-                { name: 'Graphic Designing', link: '/services/web-development' },
+                { name: 'Graphic Designing', link: '/services/graphic-designing' },
                 { name: 'Mobile App Development', link: '/services/mobile-app-development' },
                 { name: 'DevOps Services & Optimization', link: '/services/devops' },
-                { name: 'UI/UX Designing', link: '/services/ui-ux-design' },
-                { name: 'Software Maintenance', link: '/services/mobile-app-development' },
-                { name: 'SEO & Content Writing', link: '/services/devops' },
-                { name: 'Project Management', link: '/services/mobile-app-development' },
-                { name: 'SQA', link: '/services/sqa' },
+                { name: 'UI/UX Designing', link: '/services/ui-ux-designing' },
+                { name: 'Software Maintenance', link: '/services/software-maintenance' },
+                { name: 'SEO & Content Writing', link: '/services/seo-content-writing' },
+                { name: 'Project Management', link: '/services/project-management' },
+                { name: 'SQA', link: '/services/qa-testing' },
               ].map((service) => (
                 <li key={service.name}>
                   <Link href={service.link} className="text-xs md:text-sm hover:text-purple-500 transition-colors">
