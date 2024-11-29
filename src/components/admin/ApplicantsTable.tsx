@@ -79,8 +79,16 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
     }
   };
 
+  // Close modal if clicked outside of it
+  const handleOutsideClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      handleCloseModal();
+    }
+  };
+  
+
   return (
-    <div className="overflow-x-auto p-4">
+    <div className="overflow-x-auto">
       <table className="min-w-full border border-gray-200 shadow-md">
         <thead className="bg-gray-100 text-gray-600 text-nowrap">
           <tr>
@@ -176,11 +184,15 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
         </tfoot>
       </table>
 
-      {/* Modal for User Details */}
-      {selectedUser && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white text-black p-6 rounded-lg max-w-2xl w-full shadow-lg">
-            <h2 className="text-lg font-semibold mb-8 text-center text-blue-700">User Details</h2>
+       {/* Modal for User Details */}
+       {selectedUser && (
+        <div
+          className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50 z-50"
+          onClick={handleOutsideClick}
+        >
+          <div className="bg-white text-black  w-full md:max-w-xl shadow-lg" onClick={(e) => e.stopPropagation()}>
+            <h2 className="text-lg font-semibold mb-8 text-center bg-[#9A00FF] text-white p-7">User Details</h2>
+            <div className="p-2 mb-3">
             <p className="mb-2">
               <strong>Full Name:</strong> {selectedUser.firstName} {selectedUser.lastName}
             </p>
@@ -229,14 +241,15 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <span className="text-gray-500">No Resume Available</span>
               )}
             </p>
+            </div>
 
             <div className="flex justify-center mt-4">
-              <button
+              {/* <button
                 onClick={handleCloseModal}
                 className="bg-red-500 text-white px-6 py-2 rounded-md"
               >
                 Close
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

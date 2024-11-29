@@ -80,10 +80,10 @@ const Login: React.FC = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-16 items-center'>
+      <div className='flex flex-col lg:flex-row justify-between lg:gap-8 md:gap-16 items-center'>
         
         {/* Image - Hidden on small screens */}
-        <div className='w-[300px] md:w-[400px] mt-10 hidden md:block'>
+        <div className='lg:w-[600px] w-[400px]  md:mt-10 lg:mt-0 hidden md:block'>
           <motion.img
             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
             alt="Login Illustration"
@@ -102,25 +102,25 @@ const Login: React.FC = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <h1 className="text-2xl font-semibold">Sign in with</h1>
+              <h1 className="text-2xl font-semibold text-center mb-4">Login</h1>
               <div className="flex gap-4">
                 {/* Continue with Google Button */}
-                <button
+                {/* <button
                   onClick={handleGoogleLogin} 
                   className="flex items-center gap-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
                   type="button" 
                 >
                   <FaGoogle className="text-white" size={24} />
                   <span className="text-white font-medium">Continue with Google</span>
-                </button>
+                </button> */}
               </div>
             </motion.div>
 
-            <div className='flex items-center gap-3 mt-6'>
+            {/* <div className='flex items-center gap-3 mt-6'>
               <hr className='h-2 text-white flex-1' />
               <p className='-mt-4 text-2xl font-bold'>or</p>
               <hr className='h-2 text-white flex-1' />
-            </div>
+            </div> */}
 
             {/* Email Field */}
             <div className='mb-4'>
@@ -176,6 +176,23 @@ const Login: React.FC = () => {
             >
               {loading ? 'Logging in...' : 'Login'}
             </motion.button>
+
+            <div className=''>
+            <div className='flex items-center gap-3 mt-6'>
+              <hr className='h-2 text-white flex-1' />
+              <p className='-mt-4 text-2xl font-bold'>or</p>
+              <hr className='h-2 text-white flex-1' />
+            </div>
+              {/* Continue with Google Button */}
+              <button
+                  onClick={handleGoogleLogin} 
+                  className="flex items-center gap-3 mx-auto mt-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+                  type="button" 
+                >
+                  <FaGoogle className="text-white" size={24} />
+                  <span className="text-white font-medium">Continue with Google</span>
+                </button>
+            </div>
 
             <p className='mt-4 text-center text-gray-400'>
               Already registered?{' '}

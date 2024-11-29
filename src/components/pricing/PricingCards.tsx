@@ -1,8 +1,12 @@
 // components/PricingCards.tsx
 import Image from 'next/image';
 import backgroundImage from "../../../public/assets/pricingPage/backgroundImage.jpeg"
-
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import frontImage from '../../../public/assets/pricing_images/List → Listitem.png';
+import pricing2 from "../../../public/assets/pricing_images/pricing1 (2).png"
+import pricing1 from "../../../public/assets/pricing_images/pricing1 (1).png"
+import PricingForm from './PricingForm';
+import { FaArrowDown } from 'react-icons/fa';
 
 interface Plan {
   name: string;
@@ -11,42 +15,36 @@ interface Plan {
 }
 
 const PricingCards: React.FC = () => {
-  // const [isYearly, setIsYearly] = useState<boolean>(false);
+  const pricingFormRef = useRef<HTMLDivElement>(null);
 
-  // const plans: Plan[] = [
-  //   {
-  //     name: 'BASIC',
-  //     price: isYearly ? 7200 : 600,
-  //     features: [
-  //       'Personalized Workout',
-  //       'Exercise Form Correction',
-  //       'Lifestyle Plan',
-  //     ],
-  //   },
-  //   {
-  //     name: 'STANDARD',
-  //     price: isYearly ? 14400 : 1200,
-  //     features: [
-  //       'Personalized Workout',
-  //       'Exercise Form Correction',
-  //       'Lifestyle Plan',
-  //       'Personalized Program',
-  //     ],
-  //   },
-  //   {
-  //     name: 'PREMIUM',
-  //     price: isYearly ? 21600 : 1800,
-  //     features: [
-  //       'Personalized Workout',
-  //       'Exercise Form Correction',
-  //       'Lifestyle Plan',
-  //       'Personalized Program',
-  //       '8 12 Weeks Plan',
-  //     ],
-  //   },
-  // ];
+  const scrollToForm = () => {
+    
+
+  if (pricingFormRef.current) {
+    const targetPosition = pricingFormRef.current.offsetTop; // Get the target position
+    const startPosition = window.scrollY; // Get the current position
+    const distance = targetPosition - startPosition; // Calculate the distance
+    const duration = 1000; // Duration of the scroll (in milliseconds)
+
+    let startTime: number | null = null;
+
+    const animateScroll = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1); // Calculate the progress (0 to 1)
+
+      window.scrollTo(0, startPosition + distance * progress); // Scroll to the position
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animateScroll); // Continue the animation
+      }
+    };
+
+    requestAnimationFrame(animateScroll); // Start the animation
+  }
+};
 
   return (
+    <>
     <div className="relative text-white h-screen px-4">
     {/* Background Image */}
     <div className="absolute inset-0 overflow-hidden">
@@ -68,82 +66,102 @@ const PricingCards: React.FC = () => {
         high-quality solutions that excel in web and mobile app development
         services.
       </p>
-{/* 
-    <div className="flex justify-center mb-8">
-      <div className="bg-[black] p-1 rounded-[12px] animate-slide-up">
-        <button
-          className={`px-4 py-2 rounded-[10px] transition duration-300 ${
-            !isYearly ? 'bg-[#FFFFFF] text-[black]' : 'bg-[black] text-white'
-          }`}
-          onClick={() => setIsYearly(false)}
-        >
-          Monthly
-        </button>
-        <button
-          className={`px-4 py-2 rounded-[10px] transition duration-300 ${
-            isYearly ? 'bg-[#FFFFFF] text-[black]' : 'bg-[black] text-white'
-          }`}
-          onClick={() => setIsYearly(true)}
-        >
-          Yearly
-        </button>
-      </div>
-    </div>
-
-    <div className="flex flex-wrap justify-center items-center   gap-4">
-      {plans.map((plan, index) => (
-        <div
-          key={index}
-          className="bg-[#4848485C] bg-gray-800 w-[300px] md:w-[359px] h-[550px] md:h-[604.11px] rounded-lg p-6 flex flex-col animate-card-entry "
-        >
-          <h2 className="text-xl font-semibold mb-2 animate-fade-in-delay">
-            {plan.name}
-          </h2>
-          <p className="mb-6 text-[14.86px] font-normal font-inter animate-fade-in-delay">
-            Membership
-          </p>
-          <div className="text-[49.52px] font-inter font-medium items-center animate-fade-in-delay">
-            ${plan.price}
-            <span className="text-[14.86px] font-semibold">/package</span>
-          </div>
-          {(index === 1 || index === 2) && (
-            <p className="font-normal text-[14.86px] animate-fade-in-delay">
-              {index === 1 ? 'Save $30' : 'Save $150'}
-            </p>
-          )}
-          <div className="border-[#AEAEAE] border-[1.24px] mb-8 animate-grow" />
-          <ul className="mb-8 flex-grow">
-            {plan.features.map((feature, idx) => (
-              <li key={idx} className="mb-6 flex items-center animate-fade-in-delay">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-dot"
-                >
-                  <circle cx="12.1" cy="12.1" r="1" />
-                </svg>
-                <p className="text-[14.86px] text-[#FFFFFF] font-inter leading-[19.36px] font-normal">
-                  {feature}
-                </p>
-              </li>
-            ))}
-          </ul>
-          <button className="bg-purple-600 text-white py-2 px-4 rounded-full hover:bg-purple-700 transition duration-300 animate-bounce">
-            Choose Plan
+      <button
+            onClick={scrollToForm}
+            className="bg-purple-600 text-lg  text-white p-4 rounded-md mt-4 hover:bg-purple-500 transition flex gap-1 items-center"
+          >
+            Share Your Requirements
+            <FaArrowDown
+      className="transition-transform duration-300 group-hover:translate-y-2"
+      size={15} 
+    />
           </button>
-        </div>
-      ))}
-    </div> */}
   </div>
 </div>
 
+
+ 
+<div>
+      <div className="  p-4 md:p-8">
+        <div className="max-w-7xl mx-auto"></div>
+      </div>
+      
+      <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-6 lg:px-20 ">
+        <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
+          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
+            Innovation Unleashed
+          </h1>
+          <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
+          At TechCreator, we turn your digital dreams into reality. From custom software development to tailored hardware solutions, our innovative products and services are designed to elevate your business.
+
+With a focus on scalability, security, and cutting-edge technology, we deliver solutions that drive success. Partner with us to build the future today.
+          </p>
+        </div>
+        <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px] mx-auto md:mx-0">
+          <div className="relative z-10 w-full h-full">
+            <Image
+              src={frontImage}
+              alt="Foreground"
+              className="absolute inset-0 rounded-2xl w-[600px]"
+              layout="fill" 
+              objectFit="cover " 
+            />
+          </div>
+        </div>
+      </div>
+
+
+      <div className='flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-6 lg:px-20 '>
+      <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px]  mx-auto md:mx-0">
+          <div className="relative z-10 w-full h-full">
+            <Image
+              src={pricing2}
+              alt="Foreground"
+              className="absolute inset-0 rounded-2xl w-[600px]"
+              layout="fill" 
+              objectFit="cover" 
+            />
+          </div>
+        </div>
+        <div className='md:w-[600px]  '>
+          <h1 className='text-3xl font-normal'>Affordability Redefined</h1>
+          <p className='text-xl mt-4'>At TechCreator, we believe that cutting-edge technology should be accessible to all. Our affordable solutions—from custom software development to advanced hardware integrations—are designed to fuel your business growth without compromising on quality.
+
+We blend innovation with cost-effectiveness, delivering scalable, secure, and high-performance products tailored to your needs. Let’s build the future together, without breaking the bank.</p>
+        </div>
+      </div>
+{/* Pricing form */}
+<div ref={pricingFormRef}>
+      <PricingForm/>
+      </div>
+
+      <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-6 lg:px-20">
+        <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
+          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
+          Seamless Integration
+          </h1>
+          <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
+          At TechCreator, we specialize in seamless integration that ensures your technology ecosystem works flawlessly. Whether it’s connecting new systems with legacy infrastructure or developing custom APIs, our solutions are designed for smooth transitions and optimal performance, helping your business stay ahead in a fast-evolving digital world.
+          </p>
+        </div>
+
+        
+
+
+        <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px]  mx-auto md:mx-0">
+          <div className="relative z-10 w-full h-full">
+            <Image
+              src={pricing1}
+              alt="Foreground"
+              className="absolute inset-0 rounded-2xl w-[600px]"
+              layout="fill" 
+              objectFit="cover" 
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+</>
   );
 };
 

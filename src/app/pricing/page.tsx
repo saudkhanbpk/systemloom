@@ -1,6 +1,5 @@
 "use client"
 import PricingCards from '@/components/pricing/PricingCards'
-import PricingHeroSection from '@/components/pricing/PricingHeroSection'
 import Head from 'next/head'
 import React from 'react'
 
@@ -12,7 +11,6 @@ const page = () => {
       </Head>
       <>
       <PricingCards/>
-      <PricingHeroSection/>
       </>
     </div>
   )

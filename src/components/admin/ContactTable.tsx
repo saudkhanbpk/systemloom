@@ -47,7 +47,7 @@ const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => 
       <table className="min-w-full text-sm text-left text-gray-500">
         <thead className="bg-gray-100 text-gray-700">
           <tr>
-            <th className="p-4">Image</th>
+            {/* <th className="p-4">Image</th> */}
             <th className="p-4">Name</th>
             <th className="p-4">Email</th>
             <th className="p-4">Phone</th>
@@ -58,7 +58,7 @@ const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => 
         <tbody>
           {currentContacts.map((contact) => (
             <tr key={contact._id} className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2">
+              {/* <td className="p-2">
                 <Image
                   src="/default-avatar.jpg"
                   alt="Contact Image"
@@ -66,7 +66,7 @@ const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => 
                   height={40}
                   className="rounded-full object-cover"
                 />
-              </td>
+              </td> */}
               <td className="p-4 text-nowrap">{`${contact.firstName} ${contact.lastName}`}</td>
               <td className="p-4 text-nowrap">{contact.email}</td>
               <td className="p-4 text-nowrap">{contact.phoneNumber}</td>

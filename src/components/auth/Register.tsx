@@ -68,7 +68,7 @@ const Register: React.FC = () => {
         transition={{ duration: 0.6 }}
       >
         <motion.div
-          className="w-full md:w-[600px] mb-8 md:mb-0"
+          className="w-full lg:w-[900px]  mb-8 md:mb-0"
           initial={{ scale: 0.9 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -79,22 +79,22 @@ const Register: React.FC = () => {
         <motion.div className="text-white w-full max-w-md" initial={{ x: -50 }} animate={{ x: 0 }} transition={{ duration: 0.6 }}>
           <form onSubmit={handleSubmit}>
             <div className="flex md:flex-row flex-col w-[250px] md:w-full justify-center mx-auto md:mx-0  gap-6 items-center text-white">
-              <h1 className='text-2xl font-semibold'>Sign up with</h1>
-              <button
+              <h1 className='text-2xl font-semibold'>Sign up </h1>
+              {/* <button
       className="flex items-center gap-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
       type="button" 
       onClick={handleGoogleLogin} 
     >
       <FaGoogle className="text-white" size={24} />
       <span className="text-white font-medium">Continue with Google</span>
-    </button>
+    </button> */}
             </div>
 
-            <div className='flex  items-center gap-3 mt-6 '>
+            {/* <div className='flex  items-center gap-3 mt-6 '>
               <hr className='h-2 text-white flex-1' />
               <p className='-mt-4 text-2xl font-bold'>or</p>
               <hr className='h-2 text-white flex-1' />
-            </div>
+            </div> */}
 
             <div>
               <div className="mb-4">
@@ -157,6 +157,23 @@ const Register: React.FC = () => {
               >
                 {loading ? 'Loading...' : 'Register'} {/* Show loading text */}
               </button>
+
+              <div className=''>
+            <div className='flex items-center gap-3 mt-6'>
+              <hr className='h-2 text-white flex-1' />
+              <p className='-mt-4 text-2xl font-bold'>or</p>
+              <hr className='h-2 text-white flex-1' />
+            </div>
+              {/* Continue with Google Button */}
+              <button
+                  onClick={handleGoogleLogin} 
+                  className="flex items-center gap-3 mx-auto mt-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+                  type="button" 
+                >
+                  <FaGoogle className="text-white" size={24} />
+                  <span className="text-white font-medium">Continue with Google</span>
+                </button>
+            </div>
 
               <p className="mt-4 text-center text-gray-400">
                 Already registered?{' '}

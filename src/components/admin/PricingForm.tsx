@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useRef, useState } from 'react';
 import { FaRegEye, FaTrashAlt } from 'react-icons/fa';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -97,15 +97,36 @@ const PricingForm = () => {
     }
   };
 
-  const openModal = (item: PricingItem) => {
-    setSelectedItem(item);
-    setShowModal(true);
-  };
 
-  const closeModal = () => {
-    setShowModal(false);
-    setSelectedItem(null);
-  };
+
+    // Existing state and hooks remain the same
+    const modalRef = useRef<HTMLDivElement | null>(null); // Reference for the modal container
+  
+    const openModal = (item: PricingItem) => {
+      setSelectedItem(item);
+      setShowModal(true);
+    };
+  
+    const closeModal = () => {
+      setShowModal(false);
+      setSelectedItem(null);
+    };
+  
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+          closeModal();
+        }
+      };
+  
+      if (showModal) {
+        document.addEventListener('mousedown', handleClickOutside);
+      }
+  
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, [showModal]);
 
   return (
     <div>
@@ -183,11 +204,16 @@ const PricingForm = () => {
         </button>
       </div>
 
-      {showModal && selectedItem && (
+       {/* Modal */}
+       {showModal && selectedItem && (
         <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg w-1/3">
-            <h2 className="text-2xl font-bold mb-4">Details</h2>
-            <p>
+          <div
+            ref={modalRef} // Attach ref to the modal container
+            className="bg-white  w-1/3"
+          >
+            <h2 className="text-2xl font-bold mb-4 text-center bg-[#9A00FF] text-white p-7">Pricing Form Details</h2>
+           <div className='p-2 mb-3'>
+           <p>
               <strong>Name:</strong> {selectedItem.name}
             </p>
             <p>
@@ -214,11 +240,7 @@ const PricingForm = () => {
             <p>
               <strong>Current Time:</strong> {currentTime}
             </p>
-            <div className="mt-4 flex justify-end">
-              <button onClick={closeModal} className="bg-blue-500 text-white px-4 py-2 rounded">
-                Close
-              </button>
-            </div>
+           </div>
           </div>
         </div>
       )}

@@ -1,24 +1,55 @@
-import { backend_url } from '@/newLayout';
+import { backend_url } from '@/newLayout'; // Make sure backend_url is correctly set in your Next.js environment
 import axios from 'axios';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import { IoIosRadioButtonOff } from 'react-icons/io';
 
-const PricingForm = () => {
-  const [formData, setFormData] = useState({
+interface PricingFormData {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  service: string[];
+  details: string;
+  referenceLink: string;
+  
+}
+
+const PricingForm: React.FC = () => {
+  const [formData, setFormData] = useState<PricingFormData>({
     name: '',
     email: '',
     phoneNumber: '',
-    service: '',
+    service: [],
     details: '',
     referenceLink: '',
   });
-  
-  const [loading, setLoading] = useState(false);  // New loading state
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const [loading, setLoading] = useState<boolean>(false);  // New loading state
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+  
+    // Type narrowing for 'checkbox' inputs
+    if (type === 'checkbox') {
+      const target = e.target as HTMLInputElement;  // Type assertion to HTMLInputElement
+      setFormData((prevData) => ({
+        ...prevData,
+        service: target.checked
+          ? [...prevData.service, value]  // Add the service if checked
+          : prevData.service.filter((service) => service !== value),  // Remove the service if unchecked
+      }));
+    } else {
+      // For text inputs and textareas, just update the field
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
+  
+  
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,9 +57,9 @@ const PricingForm = () => {
     try {
       const res = await axios.post(`${backend_url}/api/v1/pricing/submit-form`, formData, {
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        withCredentials: true
+        withCredentials: true,
       });
       if (res.data.success) {
         toast.success(res.data.message);
@@ -36,7 +67,7 @@ const PricingForm = () => {
           name: '',
           email: '',
           phoneNumber: '',
-          service: '',
+          service: [],
           details: '',
           referenceLink: '',
         });
@@ -104,59 +135,73 @@ const PricingForm = () => {
               />
             </div>
 
-            {/* "What can we do for you" Field */}
-            <div>
-              <p className="font-bold">What can we do for you *</p>
-              {[
-                { id: 'web-development', label: 'Web Development' },
-                { id: 'app-development', label: 'App Development' },
-                { id: 'ui-ux-designing', label: 'UI/UX Designing' },
-                { id: 'logo-designing', label: 'Logo Designing' },
-                { id: 'devops', label: 'DevOps' },
-                { id: 'graphic-designing', label: 'Graphic Designing' },
-                { id: 'project-management', label: 'Project Management' },
-                { id: 'seo-content-writing', label: 'SEO & Content Writing' },
-                { id: 'software-maintenance', label: 'Software Maintenance' },
-                { id: 'qa-testing', label: 'QA Testing' },
-              ].map((service) => (
-                <div key={service.id}>
-                  <input
-                    type="radio"
-                    id={service.id}
-                    name="service"
-                    value={service.id}
-                    checked={formData.service === service.id}
-                    onChange={handleChange}
-                    required
-                    className="mr-2"
-                  />
-                  <label htmlFor={service.id}>{service.label}</label>
-                </div>
-              ))}
-            </div>
+     
+
+{/* "What can we do for you" Field */}
+<div>
+  <p className="font-bold">What can we do for you *</p>
+  {[
+    { id: 'web-development', label: 'Web Development' },
+    { id: 'app-development', label: 'App Development' },
+    { id: 'ui-ux-designing', label: 'UI/UX Designing' },
+    { id: 'logo-designing', label: 'Logo Designing' },
+    { id: 'devops', label: 'DevOps' },
+    { id: 'graphic-designing', label: 'Graphic Designing' },
+    { id: 'project-management', label: 'Project Management' },
+    { id: 'seo-content-writing', label: 'SEO & Content Writing' },
+    { id: 'software-maintenance', label: 'Software Maintenance' },
+    { id: 'qa-testing', label: 'QA Testing' },
+  ].map((service) => (
+    <div key={service.id} className="flex items-center mb-3">
+      <input
+        type="checkbox"
+        id={service.id}
+        name="service"
+        value={service.id}
+        checked={formData.service.includes(service.id)}
+        onChange={handleChange}
+        className="hidden" // Hide the default checkbox
+      />
+      <label
+        htmlFor={service.id}
+        className={`cursor-pointer  mr-2 flex items-center justify-center w-6 h-6 border-2 rounded-full transition-all duration-300 
+          ${formData.service.includes(service.id) ? 'bg-blue-500 text-white' : 'bg-white text-gray-700 border-gray-300'} 
+          hover:bg-blue-100`}
+      >
+        {/* Replace the checkbox with the icon */}
+        <IoIosRadioButtonOff
+          className={`w-2 h-2 ${formData.service.includes(service.id) ? 'text-white bg-white rounded-full' : 'text-white'}`}
+        />
+      </label>
+      <label htmlFor={service.id}>{service.label}</label>
+    </div>
+  ))}
+</div>
+
 
             {/* Any more details we should know */}
-            <div>
-              <textarea
-                name="details"
-                placeholder="Any more details we should know?"
-                value={formData.details}
-                onChange={handleChange}
-                className="w-full lg:w-[325px] p-3 border-b border-black focus:outline-none"
-              ></textarea>
-            </div>
+<div>
+  <textarea
+    name="details"
+    placeholder="Any more details we should know?"
+    value={formData.details}
+    onChange={handleChange}
+    className="w-full lg:w-[325px] border-b border-black focus:outline-none p-1 mt-4"
+  ></textarea>
+</div>
 
-            {/* Figma or Reference Website Link */}
-            <div>
-              <input
-                type="url"
-                name="referenceLink"
-                placeholder="Figma or reference website link"
-                value={formData.referenceLink}
-                onChange={handleChange}
-                className="w-full lg:w-[325px] p-3 border-b border-black focus:outline-none"
-              />
-            </div>
+{/* Figma or Reference Website Link */}
+<div>
+  <input
+    type="url"
+    name="referenceLink"
+    placeholder="Figma or reference website link"
+    value={formData.referenceLink}
+    onChange={handleChange}
+    className="w-full lg:w-[325px] p-3 border-b border-black focus:outline-none"
+  />
+</div>
+
 
             {/* Submit Button with loading indicator */}
             <div>
@@ -166,7 +211,7 @@ const PricingForm = () => {
                 disabled={loading} // Disable button while loading
               >
                 {loading ? (
-                 <div> loading....</div>
+                  <div>loading....</div>
                 ) : (
                   'Submit'
                 )}
