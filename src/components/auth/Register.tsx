@@ -54,6 +54,11 @@ const Register: React.FC = () => {
     }
   };
 
+  const handleGoogleLogin = () => {
+    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/google`;
+  };
+
+  
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900 px-4 md:px-0">
       <motion.div
@@ -78,7 +83,7 @@ const Register: React.FC = () => {
               <button
       className="flex items-center gap-3 cursor-pointer border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 w-full md:w-64 h-12 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
       type="button" 
-      onClick={() => { /* Handle Google Login Here */ }}
+      onClick={handleGoogleLogin} 
     >
       <FaGoogle className="text-white" size={24} />
       <span className="text-white font-medium">Continue with Google</span>
