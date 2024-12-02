@@ -1,11 +1,18 @@
-import Link from "next/link";
 import ServiceCard from "../constant/ServiceCard";
 import Image from "next/image";
 import backgroundImage from "../../../public/assets/aboutImages/servicesBgImage.jpeg";
+import Head from "next/head";
 
 const ServicesSec = () => {
   return (
     <div>
+      <Head>
+        <title>From Software and App Development to Digital Marketing and SEO all at TechCreator</title>
+        <meta
+          name="description"
+          content="TechCreator offers expert services in software development, app creation, digital marketing, and SEO to boost your business success. We provide all-in-one solutions for your business."
+        />
+      </Head>
       <div className="relative bg-gray-900 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <Image
@@ -20,16 +27,7 @@ const ServicesSec = () => {
               Our Services
             </h1>
             <p className="font-normal text-[16px] md:text-[18px] mx-auto leading-6 md:leading-9">
-              TechCreator offers top-notch web and mobile app development
-              services to help businesses bring their ideas to life. Our
-              experienced team of developers creates custom apps that are
-              tailored to meet our clients' specific needs. We use the latest
-              technologies and industry best practices to ensure that our apps
-              are scalable, secure, and easy to use. Whether you need a simple
-              mobile app or a complex web application, TechCreator has the
-              expertise to deliver high-quality solutions that exceed your
-              expectations. Contact us today to learn more about our web and
-              mobile app development services.
+            At TechCreator we’ll help transform your day-to-day processes with our customized Service solutions. Whether it’s revamping your Web or Mobile App or creating a new product, we’ve got your back! Our teams are integrated because your marketing strategies are interconnected. Whether it's Web documents, workflow software Testing, or Designing Web, our teams enjoy a unique experience.
             </p>
           </div>
         </div>

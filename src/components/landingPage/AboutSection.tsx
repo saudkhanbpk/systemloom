@@ -52,10 +52,7 @@ function AboutSection() {
                 About Us
               </h1>
               <p className=" font-normal text-base md:text-xl leading-7 md:leading-[36px] max-w-full md:max-w-lg">
-                Concept Softworks is a software company, we develop custom-built
-                software for clients - covering everything from financial
-                institutions & medical companies all the way to tech companies
-                and government organizations.
+              TechCreator is a software development company helping businesses scale up their growth Because Your potential customers will find you online. Our team made it happen. Engage them with contemporary, attractive web design and content they were looking for on the search engines. Then, Watch your sales grow.
               </p>
             </div>
           </div>

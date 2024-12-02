@@ -7,7 +7,7 @@ const services = [
   {
     title: "Web Development",
     description:
-      "TechCreator provides professional web development services tailored to meet the unique needs of your business. Our team specializes in building modern, responsive, and highly functional websites that deliver exceptional user experiences. Whether you're looking for a sleek portfolio, a dynamic e-commerce platform, or a robust enterprise solution, we utilize the latest technologies to ensure scalability, security, and performance. Partner with us to transform your online presence and achieve your digital goals.",
+      "TechCreator provides web development services that are all about helping your business stand out in the digital world. We create scalable websites and apps with user-friendly designs, top-notch security, and smooth performance. Whether you’re starting fresh or improving an existing platform, we’ve got you covered with custom solutions, continuous support, and innovative features. From eCommerce to CMS and everything in between, we’re here to bring your vision to life and give you the opportunity to stand out in front of your competitors!",
     image: "/assets/ServiceDetailsImages/webimg.png",
     link: "/services/web-development",
     bgColor: "bg-[#91B9A4AB]",
@@ -15,7 +15,7 @@ const services = [
   {
     title: "App Development",
     description:
-      "At TechCreator, we excel in developing cutting-edge mobile applications that cater to diverse industries and user needs. Our app development services cover Android, iOS, and cross-platform solutions, ensuring seamless performance across all devices. From ideation and UI/UX design to deployment and maintenance, we work closely with clients to craft apps that are intuitive, secure, and feature-rich. Let us bring your app idea to life and help you connect with users like never before.",
+      "Mobile apps that work seamlessly across all devices are what we specialize in. Design, coding, integration, and management are all part of our expert mobile app development services. It doesn't matter if you're a startup or a large enterprise, we build feature-rich, visually stunning apps. Our expertise transforms ideas into fully functional apps that boost brand identity, drive results, and help your business thrive online.",
     image: "/assets/ServiceDetailsImages/appimg.png",
     link: "/services/mobile-app-development",
     bgColor: "bg-[#E5DFACAB]",
@@ -23,7 +23,7 @@ const services = [
   {
     title: "UI/UX Designing",
     description:
-      "TechCreator specializes in creating visually stunning and user-centered designs that enhance usability and engagement. Our UI/UX design services focus on understanding user behavior and crafting interfaces that are not only aesthetically pleasing but also highly functional. We design responsive and accessible interfaces for websites, mobile apps, and software, ensuring an enjoyable experience across all devices. Collaborate with us to achieve designs that captivate and delight your audience.",
+      "Creating colors that brands need.  In addition to implementing proven systems, our designers undergo meticulous reviews and learn from impactful practices and toolsets.Using modern tools and technologies, our design team turns rudimentary event apps into interactive experiences and builds enterprise software for Fortune 500 companies.A continuous mentoring process ensures our design team is skillful, organized, and able to deliver excellence.",
     image: "/assets/ServiceDetailsImages/uximg.png",
     link: "/services/ui-ux-designing",
     bgColor: "bg-[#E5C2ACAB]",
@@ -31,7 +31,7 @@ const services = [
   {
     title: "DevOps",
     description:
-      "TechCreator provides comprehensive DevOps solutions to streamline your software development and IT operations. Our services include infrastructure automation, CI/CD pipelines, cloud integration, and monitoring, aimed at enhancing efficiency and collaboration. By adopting DevOps best practices, we help businesses achieve faster software delivery, improved reliability, and seamless scalability. Let us optimize your workflows to ensure a high-performing, secure, and agile development environment.",
+      "Build better software faster. Ensure your organization cultivates an effective culture. Make your customers and employees happy by embracing continuous delivery principles.Accelerate your cloud operations and workloads by minimizing costs, increasing efficiency, and speeding up release management with our DevOps Services. Faster time to market, better throughput, and more resilient systems. Our DevOps Services help drive a culture of “Everything as Code”, creating harmony in cloud operations.",
     image: "/assets/ServiceDetailsImages/QA.png",
     link: "/services/devops",
     bgColor: "bg-[#A1D9D3]",
@@ -39,7 +39,7 @@ const services = [
   {
     title: "Graphic Designing",
     description:
-      "At TechCreator, our graphic design services are all about transforming ideas into impactful visuals. We offer a wide range of design solutions, including logos, brochures, websites, and social media graphics, tailored to reflect your brand identity. Our creative team works meticulously to produce designs that are not only eye-catching but also communicate your message effectively. Elevate your brand’s visual appeal with our innovative graphic design expertise.",
+      "Scale your creative content quickly with flat-rate, on-demand graphic design services. Our designers are experienced, vetted, and dedicated to making your life easier. TechCreator’ creatives hail from around the world and bring a comprehensive skill set, ensuring you are matched with the right creatives – quality control included. Our graphic design services cover a wide range of products – brochures, business cards, publications, mailers, posters and billboards – we've designed it all.",
     image: "/assets/ServiceDetailsImages/Designer_working_with_pen_display_Illustration-removebg-preview 1.png",
     link: "/services/graphic-designing",
     bgColor: "bg-[#D4A5A5]",
@@ -55,7 +55,7 @@ const services = [
   {
     title: "SEO & Content Writing",
     description:
-      "TechCreator provides expert SEO and content writing services to enhance your online visibility and drive organic traffic. Our team crafts keyword-optimized, high-quality content tailored to resonate with your audience and improve search engine rankings. From website copy and blog posts to product descriptions and marketing materials, we ensure your content is engaging, informative, and aligned with your brand voice. Boost your digital presence and connect with your audience effectively.",
+      "We help your business or personal brand rank on Google with SEO Services. A successful business cannot ignore the importance of Micro Moments. There are times when people turn to their devices to learn, discover, watch, do, or buy something. Intent-Rich Moments lead to awareness and decision-making.TechCreator SEO Services connects you with experts who research, write, and optimize your website to improve your business's ranking in SERPs.",
     image: "/assets/ServiceDetailsImages/seo1.png",
     link: "/services/seo-content-writing",
     bgColor: "bg-[#B3D9C9]",
@@ -63,7 +63,7 @@ const services = [
   {
     title: "Software Maintenance",
     description:
-      "TechCreator offers reliable software maintenance services to ensure your applications remain functional, secure, and up-to-date. Our services include regular updates, performance optimization, security patches, and issue resolution to minimize downtime and enhance user satisfaction. We provide proactive monitoring and support to address potential problems before they escalate, ensuring your software operates smoothly and efficiently over time.",
+      "Software Maintenance Service ensures the business value of your original license investment by ensuring you can access the latest software releases, technical support, and add-on products.Maintain your enterprise apps according to your business requirements and effectively resolve issues and bugs; bridge gaps in your IT ecosystem and facilitate massive yet sustainable growthTechCreator offers simplified software maintenance services. Establish a plan for consistent growth, impact customers, and avoid roadblocks.",
     image: "/assets/ServiceDetailsImages/soft.png",
     link: "/services/software-maintenance",
     bgColor: "bg-[#C1B2E3]",
@@ -71,7 +71,7 @@ const services = [
   {
     title: "QA Testing",
     description:
-      "Ensure the quality and reliability of your software with TechCreator’s QA testing services. Our team conducts comprehensive manual and automated testing to identify bugs, improve functionality, and optimize performance. From unit testing and integration testing to user acceptance testing, we ensure your software meets the highest quality standards before deployment. Let us help you deliver flawless and user-friendly applications to your audience.",
+      "At TechCreator Experienced quality assurance specialists deliver secure, high-quality, future-proof solutions that boost your company's confidence.We have ensured the smooth operation of thousands of software solutions over the years with the help of our quality assurance testers.Over the years, we have tested dozens of mobile applications, complex enterprise software for Fortune 500 companies, IoT ecosystems, a blockchain marketplace, and more. In this way, your company gets fail-safe software.",
     image: "/assets/ServiceDetailsImages/qaTesting.png",
     link: "/services/qa-testing",
     bgColor: "bg-[#FFB8B8]",

@@ -10,6 +10,7 @@ interface Service {
   des: string;
   image: string;
   link: string;
+  altText: string; // Added altText field
 }
 
 const ServicesSection: React.FC = () => {
@@ -36,75 +37,80 @@ const ServicesSection: React.FC = () => {
     },
   };
 
-  
   const servicesArr: Service[] = [
     {
       id: 1,
       title: "Web Design & Development",
-      des: "Transform your online presence with a visually stunning and functional website that drives engagement and grows your brand.",
+      des: "We make what you think. Whether it is through implementation, team extension, or research, we can support you. TechCreator provides web development services that are all about helping your business stand out in the digital world.",
       image: "/assets/icons/webdesignicon.png",
       link: "/services/web-development",
+      altText: "Web design and development services",
     },
     {
       id: 2,
       title: "Mobile App Development",
-      des: "Reach customers on-the-go with a seamless, user-friendly mobile app that enhances experiences across devices.",
+      des: "Using an agile Mobile App Development methodology, TechCreator churns android app development and iOS app development for businesses of all scales.",
       image: "/assets/icons/appdevicon.png",
-    link: "/services/mobile-app-development"
+      link: "/services/mobile-app-development",
+      altText: "Providing mobile app development and maintenance",
     },
     {
       id: 3,
       title: "DevOps",
-      des: "Boost efficiency with DevOps solutions that automate workflows, ensure quick deployments, and maintain top-notch quality.",
+      des: "Why wait for success when you can automate it? We bridge the gap between development and operations, ensuring seamless collaboration, automation, and faster time-to-market. From CI/CD pipelines to real-time monitoring, our tailored solutions enhance efficiency, scalability, and reliability.",
       image: "https://cdn-icons-png.flaticon.com/512/5084/5084071.png",
-    link: "/services/devops",
+      link: "/services/devops",
+      altText: "Development and maintenance all at one place",
     },
     {
       id: 4,
       title: "Software Testing Service",
-      des: "Deliver flawless products with our expert testing services, ensuring performance, security, and a perfect user experience.",
+      des: "Your software is ready for success with our Software Testing Services, designed to deliver comprehensive bug detection, advanced security protocols, and flawless performance evaluation.",
       image: "/assets/icons/webdevicon.png",
-    link: "/services/qa-testing",
+      link: "/services/qa-testing",
+      altText: "Software testing solutions at TechCreator",
     },
     {
       id: 5,
       title: "UI/UX Designing",
-      des: "Craft intuitive and visually appealing designs that provide exceptional user experiences across all platforms.",
+      des: "Creating colors that brands need. In addition to implementing proven systems, our designers undergo meticulous reviews and learn from impactful practices and toolsets.",
       image: "https://cdn-icons-png.flaticon.com/512/17109/17109606.png",
-    link: "/services/ui-ux-designing",
+      link: "/services/ui-ux-designing",
+      altText: "Design your dream into reality",
     },
     {
       id: 6,
       title: "Graphic Designing",
-      des: "Bring your ideas to life with striking graphics and creative visuals that leave a lasting impression.",
+      des: "TechCreator’s creatives hail from around the world and bring a comprehensive skill set, ensuring you are matched with the right creatives – quality control included.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB8CSayoy_gkUrkW4-D9Vq82e_gcDBNfOM1w&s",
-    link: "/services/graphic-designing",
+      link: "/services/graphic-designing",
+      altText: "Attract and grab audience attention",
     },
     {
       id: 7,
       title: "Project Management",
-      des: "Streamline your projects with professional management strategies that ensure timely and successful completion.",
+      des: "Team coordination and cooperation is what we demand and deal first. We manage a lot of businesses successfully and have the potential to handle your projects.",
       image: "https://cdn-icons-png.flaticon.com/512/9402/9402518.png",
-    link: "/services/project-management",
+      link: "/services/project-management",
+      altText: "Project Management Services",
     },
     {
       id: 8,
       title: "SEO & Content Writing",
-      des: "Boost your online visibility with engaging content and optimized strategies that drive traffic and conversions.",
+      des: "We aim to create websites and rank them on Google with expert SEO Services. TechCreator builds platforms that meet search engine needs to scale your business into profitability.",
       image: "https://cdn-icons-png.flaticon.com/512/13122/13122980.png",
-    link: "/services/seo-content-writing",
+      link: "/services/seo-content-writing",
+      altText: "SEO and content writing for better optimization",
     },
     {
       id: 9,
       title: "Software Maintenance",
       des: "Ensure your software runs smoothly with expert maintenance services that address issues proactively.",
       image: "https://cdn-icons-png.flaticon.com/512/8463/8463643.png",
-    link: "/services/software-maintenance",
+      link: "/services/software-maintenance",
+      altText: "Software maintenance services at TechCreator",
     },
   ];
-  
-  
-  
 
   return (
     <div className="mx-auto">
@@ -130,14 +136,13 @@ const ServicesSection: React.FC = () => {
         {servicesArr.map((item) => (
           <div key={item.id} className="flex justify-center h-auto w-[333px] mx-auto lg:mx-0 mb-14">
             <Link href={item.link} passHref>
-              
-                <ServiceCard
-                  title={item.title}
-                  description={item.des}
-                  icon={item.image}
-                  style={false}
-                />
-              
+              <ServiceCard
+                title={item.title}
+                description={item.des}
+                icon={item.image}
+                altText={item.altText} 
+                style={false}
+              />
             </Link>
           </div>
         ))}

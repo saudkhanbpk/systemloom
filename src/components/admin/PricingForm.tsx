@@ -164,7 +164,22 @@ const PricingForm = () => {
                 <td className="border p-2 text-nowrap">{item.name}</td>
                 <td className="border p-2 text-nowrap">{item.email}</td>
                 <td className="border p-2 text-nowrap">{item.phoneNumber}</td>
-                <td className="border p-2 text-nowrap">{item.service}</td>
+                <td className="border p-2">
+                {Array.isArray(item.service)
+  ? item.service.map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ))
+  : String(item.service).split('\n').map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ))}
+</td>
+
                 <td className="border p-2">
                   <a href={item.referenceLink} target="_blank" rel="noopener noreferrer">
                     {item.referenceLink}
@@ -222,8 +237,20 @@ const PricingForm = () => {
             <p>
               <strong>Phone Number:</strong> {selectedItem.phoneNumber}
             </p>
-            <p>
-              <strong>Service:</strong> {selectedItem.service}
+            <p><strong>Services:</strong> <br/>
+            {Array.isArray(selectedItem.service)
+  ? selectedItem.service.map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ))
+  : String(selectedItem.service).split('\n').map((line, index) => (
+      <span key={index}>
+        {line}
+        <br />
+      </span>
+    ))}
             </p>
             <p>
               <strong>Reference Link:</strong>{' '}

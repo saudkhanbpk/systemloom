@@ -45,14 +45,14 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="relative bg-black text-white py-8 md:py-10 w-full">
+    <footer className="relative bg-black text-white py-4 md:py-4 w-full">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 footer-bg"
         // Background image will load dynamically with Intersection Observer
       ></div>
-      <div className="relative mx-auto px-4 md:px-10">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-          <div className="ml-2 md:ml-8">
+      <div className="relative mx-auto px-4 md:px-10 mt-6">
+        <div className="flex flex-wrap sm:gap-5 gap-10 justify-between ">
+          <div className=" md:ml-8">
             <div className="flex items-center gap-2">
               <Image
                 src={Logo}
@@ -70,6 +70,66 @@ const Footer: React.FC = () => {
               clients with complete end-to-end solutions, customized according
               to their needs.
             </p>
+            <div className="flex gap-7 mt-4 md:mt-10">
+            <a
+              href="https://www.facebook.com/techcreatorfb/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FontAwesomeIcon
+                icon={faFacebookF}
+                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/techcreator"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+              />
+            </a>
+            <a
+              href="https://www.upwork.com/agencies/1479726519577280512/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Upwork"
+            >
+              <FontAwesomeIcon
+                icon={faBriefcase}
+                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+              />
+            </a>
+            {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <FontAwesomeIcon icon={faTwitter} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
+            </a> */}
+            <a
+              href="https://www.youtube.com/@techcreator9512"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <FontAwesomeIcon
+                icon={faYoutube}
+                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/techcreatorco/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+              />
+            </a>
+          </div>
           </div>
 
           <div className="lg:ml-20">
@@ -161,7 +221,7 @@ const Footer: React.FC = () => {
                 </a>
               </p>
 
-              <div className="flex sm:flex-row flex-col gap-1 mt-4">
+              <div className="flex gap-1 mt-4">
                 <CommonButton
                   className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
                   title="Consultancy"
@@ -181,70 +241,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row items-center  justify-between">
-          <p className="text-xs md:text-sm text-gray-400">
-            © 2024 TechCreator. All rights reserved.
+        <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center  justify-end">
+          <p className="text-xs md:text-sm text-gray-400 mt-3 ">
+            © 2024 <span className="text-purple-600 text-lg font-semibold">TechCreator</span>. All rights reserved.
           </p>
-          <div className="flex gap-7 mt-4 md:mt-0">
-            <a
-              href="https://www.facebook.com/techcreatorfb/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <FontAwesomeIcon
-                icon={faFacebookF}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/techcreator"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedinIn}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            <a
-              href="https://www.upwork.com/agencies/1479726519577280512/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Upwork"
-            >
-              <FontAwesomeIcon
-                icon={faBriefcase}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <FontAwesomeIcon icon={faTwitter} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
-            </a> */}
-            <a
-              href="https://www.youtube.com/@techcreator9512"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <FontAwesomeIcon
-                icon={faYoutube}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/techcreatorco/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-          </div>
+         
         </div>
       </div>
     </footer>

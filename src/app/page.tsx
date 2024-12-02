@@ -51,6 +51,12 @@ const Page = () => {
   return (
     <div>
       <Head>
+      <title>Software Development and Digital Marketing Agency | TechCreator</title>
+        <meta
+          name="description"
+          content="With TechCreator, you can get the marketing and development solutions you need to grow your company. Competitor's market, now at your fingertips."
+        />
+
         <link rel="canonical" href="https://www.techcreator.co/" />
         <script
           type="application/ld+json"
