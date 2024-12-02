@@ -13,6 +13,7 @@ import { backend_url } from "@/newLayout";
 import { toast } from "react-toastify";
 import { deleteTestimonial } from "@/redux/testimonialSlice";
 import { FaStar } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
 
 // Interface for Testimonial
 interface Testimonial {
@@ -87,13 +88,16 @@ const Testimonial = () => {
               Add Testimonial
             </button>
           </Link>
-          <input
+         <div className="flex items-center  rounded-md p-2  border-2 w-[300px]  border-black">
+         <input
             type="text"
             placeholder="Search testimonials..."
-            className=" rounded-md p-2 outline-none w-[300px] border-2  border-black"
+            className=" outline-none w-[300px]"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
+          <FiSearch size={20} />
+         </div>
         </div>
 
         {/* Testimonial List */}
@@ -124,12 +128,12 @@ const Testimonial = () => {
                     </div>
                   </div>
                   <div className="flex space-x-2">
-                    <button
+                    {/* <button
                       onClick={() => handleUpdate(testimonial._id)}
                       className="text-blue-600 hover:text-blue-800"
                     >
                       <Edit size={20} />
-                    </button>
+                    </button> */}
                     <button
                       onClick={() => handleDelete(testimonial._id)}
                       className="text-red-600 hover:text-red-800"

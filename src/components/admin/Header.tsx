@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
-import { CiSearch } from 'react-icons/ci'
+import { FiSearch } from "react-icons/fi";
 import { IoMdAdd } from 'react-icons/io'
 
 // Define the prop type
@@ -15,16 +15,15 @@ const Header: React.FC<HeaderProps> = ({ onSearch, buttonType }) => {
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const term = e.target.value
     setSearchTerm(term)
-    onSearch(term) // Pass search term to parent component
+    onSearch(term) 
   }
 
   return (
     <div className=''>
       <header className="flex flex-col mt-6  sm:mt-0 max-w-6xl md:flex-row justify-between items-center space-y-4 md:space-y-0  md:ml-11 ">
         <div className="flex items-center  ">
-           {/* Conditionally render Add Job or Add Project button */}
            <Link
-            href={buttonType === 'job' ? '/admin/all-jobs/addjob' : '/admin/all-projects/addproject'} // Dynamic link
+            href={buttonType === 'job' ? '/admin/all-jobs/addjob' : '/admin/all-projects/addproject'} 
             passHref
           >
             <button
@@ -44,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch, buttonType }) => {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <CiSearch className="absolute right-3 top-3 text-gray-400" />
+          <FiSearch size={20} className="absolute right-3 top-3 " />
         </div>
       </header>
     </div>

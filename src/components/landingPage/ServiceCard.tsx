@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className="p-2 rounded-md  transition-transform duration-300 ease-in-out border-2 h-[420px] hover:translate-y-8 hover:border-4 hover:border-[#bb7fe3] cursor-pointer shadow-md"
+      className="p-2 rounded-md  transition-transform duration-300 ease-in-out border-2 hover:translate-y-8 hover:border-4 hover:border-[#bb7fe3] cursor-pointer shadow-md"
       
     >
       <div className="flex justify-center">

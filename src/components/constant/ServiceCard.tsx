@@ -76,6 +76,15 @@ const services = [
     link: "/services/qa-testing",
     bgColor: "bg-[#FFB8B8]",
   },
+  {
+
+    title: "Social Media Marketing & Branding",
+   description:"Our expert marketers create unique strategies that enhance your digital presence. Whether it be creating targeted advertising campaigns or establishing impactful social media tactics on media channels such as Facebook, Instagram, and LinkedIn, we help expand your reach. Leveraging our in-house branding specialists, we craft memorable brand personalities that imply a connection with your audience. We already helped startups and Fortune 500 drive successful digital transformations with measurable ROI online for many years. We’ll help you thrive in the digital world.",
+    image: "/assets/ServiceDetailsImages/social-media.png",
+    link: "/services/digital-marketing",
+    bgColor: "bg-[#FFE5B4]",
+    
+    },
 ];
 
 

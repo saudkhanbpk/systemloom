@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { MdFilterList } from "react-icons/md";
 import Link from 'next/link';
 import { IoMdAdd, IoMdArrowDown } from "react-icons/io";
-import { CiSearch } from "react-icons/ci";
+import { FiSearch } from "react-icons/fi";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FiEdit2 } from "react-icons/fi";
 import { useDispatch, useSelector } from 'react-redux';
@@ -91,13 +91,13 @@ const AllBlogs: React.FC = () => {
   return (
     <main className="max-w-7xl mx-auto bg-inline lg:p-6">
       <header className="flex flex-col md:flex-row justify-between md:items-center mb-4 space-y-4 md:space-y-0">
-        <div className="flex items-center space-x-4">
-          <button
+        <div className="flex items-center justify-center md:justify-start space-x-4">
+          {/* <button
             aria-label="Filter Blogs"
             className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50"
           >
             <MdFilterList className="mr-2" /> Filters
-          </button>
+          </button> */}
           <Link href="/admin/create-blog" passHref>
             <button
               aria-label="Add Blog"
@@ -108,7 +108,7 @@ const AllBlogs: React.FC = () => {
           </Link>
           {/* <span className="text-gray-700">1 row selected</span> */}
         </div>
-        <div className="relative w-full md:w-auto">
+        <div className="relative w-fit mx-auto md:mx-0 md:w-auto">
           <input
             className="w-[300px] px-4 py-2 border-2 border-black rounded-lg shadow-sm focus:outline-none "
             placeholder="Search"
@@ -117,7 +117,7 @@ const AllBlogs: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <CiSearch className="absolute right-3 top-3 text-gray-400" />
+          <FiSearch size={20} className="absolute right-3 top-3" />
         </div>
       </header>
 

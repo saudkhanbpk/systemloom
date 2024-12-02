@@ -128,8 +128,8 @@ const filteredJobs = allJobs?.filter(job =>
 
 
   return (
-    <div className=" lg:px-10 px-3">
-      <div className="flex flex-wrap py-9 lg:gap-10 gap-5 lg:justify-start justify-center w-full">
+    <div className=" md:px-10 px-3">
+      <div className="flex flex-wrap py-9 gap-5 lg:justify-start justify-center w-full">
         {filteredJobs?.map((job) => (
           <div key={job._id}>
             <JobCard
