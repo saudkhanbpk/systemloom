@@ -147,7 +147,7 @@ const ServicesSection: React.FC = () => {
         .slice(0, 24)
         .join(" ")+"...",
       image: "https://cdn-icons-png.flaticon.com/512/3050/3050467.png",
-      link: "/services/social-media-marketing",
+      link: "/services/digital-marketing",
       altText: "Social media marketing and branding services",
     },
     

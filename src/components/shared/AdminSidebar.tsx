@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { GrProjects } from "react-icons/gr";
 import { FiBriefcase } from "react-icons/fi";
 import { FaNoteSticky } from "react-icons/fa6";
-import { FaClipboardList } from 'react-icons/fa';
+import { FaClipboardList, FaUserTie } from 'react-icons/fa';
 
 
 import { FaPlus, FaRegFileAlt, FaUsers, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
@@ -22,7 +22,7 @@ const AdminSidebar: React.FC = () => {
     { href: "/admin/all-applicants", label: "Applicants", icon: <FaUsers className="w-6 h-6" /> },
     { href: "/admin/contact", label: "Contact", icon: <FaPhoneAlt className="w-6 h-6" /> },
     { href: "/admin/pricing-form", label: "PricingForm", icon: <FaClipboardList className="w-6 h-6" /> },
-    { href: "/admin/resume", label: "Resume", icon: <FaClipboardList className="w-6 h-6" /> },
+    { href: "/admin/resume", label: "Resume", icon: <FaUserTie className="w-6 h-6" /> },
 
 
   ];

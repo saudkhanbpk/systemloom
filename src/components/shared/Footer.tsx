@@ -190,6 +190,7 @@ const Footer: React.FC = () => {
                   link: "/services/project-management",
                 },
                 { name: "QA Testing", link: "/services/qa-testing" },
+                { name: "Social Media Marketing & Branding", link: "/services/digital-marketing" },
               ].map((service) => (
                 <li key={service.name}>
                   <Link

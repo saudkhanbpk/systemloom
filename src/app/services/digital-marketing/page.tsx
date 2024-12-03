@@ -1,13 +1,12 @@
 import React from 'react'
-import webDevelopmentImagehero from "../../../../public/assets/graphice design images/webdevelopment.png"
 import Image from 'next/image'
 import { LayoutDashboard, FileText, Zap, Clock } from 'lucide-react';
-import webimage1 from "../../../../public/assets/ServiceDetailsImages/webImage1.png"
-import webimage2 from "../../../../public/assets/ServiceDetailsImages/firstheading.webp"
-import webimage3 from "../../../../public/assets/ServiceDetailsImages/secondheading.webp"
-import webimage4 from "../../../../public/assets/ServiceDetailsImages/thirdHeading.webp"
-import webimage5 from "../../../../public/assets/ServiceDetailsImages/webimage5.png"
-
+import digitalMarketingHeroImage from "../../../../public/assets/graphice design images/digitalmarketionHeroImage.png"
+import marketingImage1 from "../../../../public/assets/graphice design images/digitalmarketing1.png"
+import marketingImage2 from "../../../../public/assets/graphice design images/digitalmarketing2.png"
+import marketingImage3 from "../../../../public/assets/graphice design images/digitalmarketing3.png"
+import marketingImage4 from "../../../../public/assets/graphice design images/digitalmarketing4.png"
+import marketingImage5 from "../../../../public/assets/graphice design images/digitalmarketing5.png"
 
 // image for RecentWorks
 import image from '../../../../public/assets/RecentWork/unsplash_IyaNci0CyRk.png';
@@ -25,7 +24,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 
 
-const WebDevelopment = () => {
+const DigitalMarketing = () => {
 
   const services = [
     {
@@ -75,7 +74,7 @@ const WebDevelopment = () => {
     <div className="bg-black w-full lg:min-h-screen md:pt-36 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  md:px-12  mt-20">
-    <h1 className="text-3xl lg:text-5xl  font-bold">Full stack web development services</h1>
+    <h1 className="text-3xl lg:text-5xl  font-bold">Social Media Marketing & Branding services</h1>
     <p className="text-base lg:text-lg mt-3">
     At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful proul realities. Join us in the journey of transforming your vision into cutting-edge technology.
     </p>
@@ -84,11 +83,11 @@ const WebDevelopment = () => {
   {/* Right Section */}
   <div className="w-full md:w-auto flex justify-center">
     <Image
-      src={webDevelopmentImagehero}
+      src={digitalMarketingHeroImage}
       alt="heroImage"
       width={300}
       height={300}
-      className="w-[50vw] md:w-[25vw] lg:mt-52 "
+      className="w-[50vw] md:w-[35vw] lg:mt-30 "
     />
   </div>
 </div>
@@ -101,7 +100,7 @@ const WebDevelopment = () => {
       <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
   <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
     <Image
-      src={webimage1}
+      src={marketingImage1}
       alt="Feature section image"
       width={300} 
       height={450}
@@ -166,7 +165,7 @@ const WebDevelopment = () => {
 <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={webimage2}
+    src={marketingImage2}
     alt="heroImage"
     width={300}
     height={300}
@@ -195,7 +194,7 @@ const WebDevelopment = () => {
     </p>
   </div>
   <Image
-    src={webimage3}
+    src={marketingImage3}
     alt="heroImage"
     width={300}
     height={300}
@@ -207,7 +206,7 @@ const WebDevelopment = () => {
 <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
   {/* Image Section */}
   <Image
-    src={webimage4}
+    src={marketingImage4}
     alt="heroImage"
     width={300}
     height={300}
@@ -244,7 +243,7 @@ const WebDevelopment = () => {
   
       <div className="relative bg-gray-100">
         <Image
-          src={webimage5}
+          src={marketingImage5}
           alt="Feature illustration"
           width={300}
           height={300}
@@ -374,4 +373,4 @@ const WebDevelopment = () => {
   )
 }
 
-export default WebDevelopment
+export default DigitalMarketing
