@@ -178,7 +178,7 @@ const JobApplicationForm: React.FC = () => {
       value={formData.email}
       onChange={handleChange}
       required
-      className="w-[325px] p-3 border-b border-black focus:outline-none"
+      className="md:w-[325px] w-full p-3 border-b border-black focus:outline-none"
     />
 
     {/* Phone Number and Gender */}
@@ -228,7 +228,7 @@ const JobApplicationForm: React.FC = () => {
       value={formData.city}
       onChange={handleChange}
       required
-      className="w-[325px] p-3 border-b border-black focus:outline-none"
+      className="md:w-[325px] w-full p-3 border-b border-black focus:outline-none"
     />
 
     {/* Applying For Position and Experience */}
@@ -261,7 +261,7 @@ const JobApplicationForm: React.FC = () => {
       value={formData.professionalUrl}
       onChange={handleChange}
       required
-      className="w-[325px] p-3 border-b border-black focus:outline-none"
+      className="md:w-[325px] w-full p-3 border-b border-black focus:outline-none"
     />
 
     {/* Resume and Motivation Letter */}

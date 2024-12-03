@@ -23,8 +23,6 @@ const AdminSidebar: React.FC = () => {
     { href: "/admin/contact", label: "Contact", icon: <FaPhoneAlt className="w-6 h-6" /> },
     { href: "/admin/pricing-form", label: "PricingForm", icon: <FaClipboardList className="w-6 h-6" /> },
     { href: "/admin/resume", label: "Resume", icon: <FaUserTie className="w-6 h-6" /> },
-
-
   ];
 
   return (

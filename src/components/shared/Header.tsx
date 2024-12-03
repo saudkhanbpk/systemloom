@@ -172,12 +172,23 @@ const Header: React.FC = () => {
               </Link>
             ))}
             {user ? (
+              <>
+              {user.role === "admin" && (
+                <Link
+                  href="/admin"
+                  onClick={() => setIsDropdownOpen(false)}
+                  className="flex items-center gap-2 px-4 py-2 "
+                >
+                  <SiGnuprivacyguard className="text-xl text-white" /> Admin
+                </Link>
+              )}
               <button
                 onClick={handleLogout}
                 className="flex items-center gap-3 w-full px-3 py-2 text-left rounded-md text-base font-medium text-white hover:bg-gray-700"
               >
                 <CiLogout className="text-white" /> Logout
               </button>
+              </>
             ) : (
               <>
                 <Link

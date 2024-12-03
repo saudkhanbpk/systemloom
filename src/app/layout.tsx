@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TechCreator - Custom Software Development",
     description: "Expert solutions for your software needs. Transforming ideas into reality with our dedicated services.",
-    url: "https://tech-creator-web-app-ou63.vercel.app", 
+    url: "https://tectcreator.co", 
     siteName: "TechCreator",
     images: [
       {

@@ -21,7 +21,7 @@ const ProfileCard: React.FC<TeamProfile> = ({
   height 
 }) => {
   return (
-    <div className="relative group max-w-xs mx-auto overflow-hidden ">
+    <div className="relative group max-w-xs mx-auto  overflow-hidden ">
       <div className="relative group w-[280px] ">
         <Image
           src={imageUrl}
@@ -36,7 +36,7 @@ const ProfileCard: React.FC<TeamProfile> = ({
             href={linkedInUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-3xl"
+            className="text-white text-3xl cursor-pointer"
           >
             <Image src={Linkedin} alt="LinkedIn" />
           </a>
