@@ -15,7 +15,7 @@ const CareerHeroSection: FC = () => {
     phoneNumber: '',
     jobField: '',
     professionalUrl: '',
-    resume: null as File | null, // Explicitly define resume as File or null
+    resume: null as File | null, 
   });
   
   const [loading, setLoading] = useState(false);
@@ -23,7 +23,7 @@ const CareerHeroSection: FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, files } = e.target;
     if (type === 'file' && files) {
-      setFormData({ ...formData, [name]: files[0] }); // Access the first file from the FileList
+      setFormData({ ...formData, [name]: files[0] }); 
     } else {
       setFormData({ ...formData, [name]: value });
     }

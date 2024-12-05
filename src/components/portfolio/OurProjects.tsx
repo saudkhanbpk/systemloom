@@ -35,7 +35,7 @@ const OurProjects = () => {
           <div className="lg:w-[50%] w-full text-gray-800 mx-auto mb-6 lg:mb-0">
             <h2 className="text-2xl font-bold text-[#9A00FF] mb-4">{project.title}</h2>
             <p className="text-lg mb-4">{project.description || 'No description provided.'}</p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex flex-wrap items-center gap-3 md:gap-0 md:space-x-4 mt-4">
               {project.websiteLink && (
                 <a
                   href={project.websiteLink}

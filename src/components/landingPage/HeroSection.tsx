@@ -6,7 +6,7 @@ function HeroSection() {
   const imageUrl = backgroundImage;
 
   return (
-    <div className="relative bg-gray-900 text-white pt-5">
+    <div className="relative bg-gray-900 text-white md:pt-5 pt-16 ">
      <div className="absolute inset-0 overflow-hidden">
   {imageUrl ? (
     <Image

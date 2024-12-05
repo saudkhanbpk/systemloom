@@ -21,31 +21,31 @@ const PricingCards: React.FC = () => {
     
 
   if (pricingFormRef.current) {
-    const targetPosition = pricingFormRef.current.offsetTop; // Get the target position
-    const startPosition = window.scrollY; // Get the current position
-    const distance = targetPosition - startPosition; // Calculate the distance
-    const duration = 1000; // Duration of the scroll (in milliseconds)
+    const targetPosition = pricingFormRef.current.offsetTop; 
+    const startPosition = window.scrollY; 
+    const distance = targetPosition - startPosition; 
+    const duration = 1000; 
 
     let startTime: number | null = null;
 
     const animateScroll = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1); // Calculate the progress (0 to 1)
+      const progress = Math.min(timeElapsed / duration, 1);
 
-      window.scrollTo(0, startPosition + distance * progress); // Scroll to the position
+      window.scrollTo(0, startPosition + distance * progress); 
       if (timeElapsed < duration) {
-        requestAnimationFrame(animateScroll); // Continue the animation
+        requestAnimationFrame(animateScroll); 
       }
     };
 
-    requestAnimationFrame(animateScroll); // Start the animation
+    requestAnimationFrame(animateScroll); 
   }
 };
 
   return (
     <>
-    <div className="relative text-white h-screen px-4">
+    <div className="relative text-white h-screen md:px-4 px-2">
     {/* Background Image */}
     <div className="absolute inset-0 overflow-hidden">
       <Image
@@ -86,7 +86,7 @@ const PricingCards: React.FC = () => {
         <div className="max-w-7xl mx-auto"></div>
       </div>
       
-      <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-6 lg:px-20 ">
+      <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-2 lg:px-20 ">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
           <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
             Innovation Unleashed
@@ -111,7 +111,7 @@ With a focus on scalability, security, and cutting-edge technology, we deliver s
       </div>
 
 
-      <div className='flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-6 lg:px-20 '>
+      <div className='flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-2 lg:px-20 '>
       <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px]  mx-auto md:mx-0">
           <div className="relative z-10 w-full h-full">
             <Image
@@ -135,7 +135,7 @@ We blend innovation with cost-effectiveness, delivering scalable, secure, and hi
       <PricingForm/>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-6 lg:px-20">
+      <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-2 lg:px-20">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
           <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
           Seamless Integration

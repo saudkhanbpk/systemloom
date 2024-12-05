@@ -5,6 +5,8 @@ import { MapPin, PhoneCall, Mail } from "lucide-react";
 import axios from 'axios';
 import { backend_url } from '@/newLayout';
 import { toast } from 'react-toastify';
+import { FaWhatsapp } from "react-icons/fa";
+
 
 interface FormData {
   firstName: string;
@@ -73,7 +75,12 @@ const ContactForm: React.FC = () => {
       <div className="mt-4">
         <p className="flex gap-2 items-center text-lg">
           <PhoneCall color="#A445B8" />
-          <span>+92-311-9265290</span>
+          <span>+1 (321) 407-3272</span>
+        </p>
+
+        <p className="flex gap-2 items-center text-lg mt-1">
+          <FaWhatsapp size={28} color="#A445B8" />
+          <span>+92 347 1914920</span>
         </p>
       </div>
       <div className="mt-4">

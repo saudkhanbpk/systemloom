@@ -71,7 +71,7 @@ const WebDevelopment = () => {
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  md:px-12  mt-20">
     <h1 className="text-3xl lg:text-5xl  font-bold">Full stack web development services</h1>
     <p className="text-base lg:text-lg mt-3">
-    At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful proul realities. Join us in the journey of transforming your vision into cutting-edge technology.
+    Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored applications that ensure seamless functionality and innovation. Our comprehensive web development services are structured to align with your business goals, helping you stand out in a competitive digital landscape. 
     </p>
   </div>
 
@@ -102,10 +102,10 @@ const WebDevelopment = () => {
       className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
     />
   </div>
-  <div className="bg-[#9A00FF] w-full md:w-[700px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
-    <div className="text-white xl:py-20 lg:px-32">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Heading</h1>
-      <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and </p>
+  <div className="bg-[#9A00FF] w-full md:w-[750px]   md:h-[450px] p-6 sm:p-10 md:p-10 py-10 md:py-14 mt-8 md:mt-0 ">
+    <div className="text-white md:py-4 md:px-20">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Web Development</h1>
+      <p className="text-sm sm:text-base md:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">Web Development is the ideal approach to crafting solutions that align precisely with your business goals. Be developing a well designed and bespoke web application, you create a direct, personalized connection with your customers, which enhances your business and brand identity. Our team of certified web developers delivers robust, high-performance and secure solutions that seamlessly support to make sure your web platforms provide lasting value and drive business success.  </p>
     </div>
   </div>
 </div>
@@ -169,9 +169,26 @@ const WebDevelopment = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Web Development benefits  </h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    <span className='text-xl font-semibold text-black'>Solutions for your brand  </span> <br/> 
+Bespoke software allows you to showcase your brand with a custom design and smooth user experience. It goes beyond generic templates, offering a solution tailored to your unique business needs. 
+
+    </p>
+
+    <p className="text-base md:text-xl text-gray-700 mt-3">
+    <span className='text-xl font-semibold text-black'>Improve Online Presence   </span> <br/> 
+    Web development boost your brand’s visibility on the internet, making it easier for potential customers to find you, learn about services and engage with your product.  
+    </p>
+
+    <p className="text-base md:text-xl text-gray-700 mt-3">
+    <span className='text-xl font-semibold text-black'>Scalibility </span> <br/> 
+    Web development allows your business to sacle its websites and features as they grow. It also ensures that the site can handle increased traffic, transactions and new functionalities.   
+    </p>
+
+    <p className="text-base md:text-xl text-gray-700 mt-3">
+    <span className='text-xl font-semibold text-black'>Business automation </span> <br/> 
+    Custom web development also allows you to optimize your business workflow and streamline your operations. Whether you need enhanced integration or manage your customer data in-app, bespoke software connects your systems in a single customized organism.  
     </p>
   </div>
 </div>
@@ -183,9 +200,19 @@ const WebDevelopment = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Industries we work with</h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    TechCreator specialize in providing custom web development services across a wide range of  
+Industries. including <br/>
+ <span className='font-semibold '>e-commerce </span> <br/>
+ <span className='font-semibold'>Healthcare</span> <br/>
+ <span className='font-semibold'>Education</span> <br/>
+ <span className='font-semibold'>Finance and Banking</span>  <br/>
+ <span className='font-semibold'>real estate </span>
+ <span className='font-semibold'>tourism and hospitality</span> <br/>  
+ <span className='font-semibold'>entertainment and media</span> <br/>
+ <span className='font-semibold'>government and public services</span> . 
+
     </p>
   </div>
   <Image
@@ -210,9 +237,20 @@ const WebDevelopment = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
-    <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Our process  </h1>
+    <p className="text-base md:text-xl text-gray-700 mt-3">
+    <span className='text-xl font-semibold text-black'>Discovery  </span> <br/> 
+    TechCreator starts by understanding your business requirements. Our team of business analysts examines your needs and dives into your unique objectives. Based on this, we define a clear vision for your future solutions.    
+    </p>
+
+    <p className="text-base md:text-xl text-gray-700 mt-3">
+    <span className='text-xl font-semibold text-black'>Development   </span> <br/> 
+    Our company moves further to development. Developers transform your business idea into a real solution keeping in view the latest tech updates to make sure your product stands out from the competition.     
+    </p>
+
+    <p className="text-base md:text-xl text-gray-700 mt-3">
+    <span className='text-xl font-semibold text-black'>Testing    </span> <br/> 
+    After development we proceed with thorough testing. Our team remains diligent in identifying and resolving any defects or discrepancies, ensuring the solution aligns perfectly with the predefined goals.     
     </p>
   </div>
 </div>
@@ -222,32 +260,29 @@ const WebDevelopment = () => {
 
 
 {/* FramedFeatureSection section start */}
-<div className="w-full mx-auto bg-white rounded-lg  overflow-hidden mb-10 max-w-6xl px-4 sm:px-6 lg:px-4">
-  <div className="flex flex-col md:flex-row items-center">
-    {/* Text Section */}
-    <div className="w-full  bg-[#9A00FF] p-6 md:p-12 text-white">
-      <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
-        Heading
-      </h2>
-      <p className="text-base w-full md:text-lg text-wrap leading-relaxed md:w-[400px]">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and
+<div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-32 py-6 md:mt-52 md:mb-52">
+  <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
+    {/* Text Content */}
+    <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Deployment and Support </h1>
+      <p className="text-base md:text-lg text-white webDevtext ">
+      After the application is fully established, we deploy it using reliable process for consistent results. Our developers continuously monitor the new environment to ensure its stability and optimal performance. After that we provide comprehensive support and assistance to ensure your website or web application runs smoothly and remains up to date. 
       </p>
     </div>
-
-    {/* Image Section */}
-  
-      <div className="relative bg-gray-100">
-        <Image
-          src={webimage5}
-          alt="Feature illustration"
-          width={300}
-          height={300}
-          className='w-[500px] md:h-[500px] h-[300px] object-cover'
-        />
-      
+    {/* Image */}
+    <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
+      <Image
+        src={webimage5}
+        alt="Feature illustration"
+        width={400}
+        height={500}
+        className="rounded-lg mx-auto  md:mx-0"
+      />
     </div>
   </div>
 </div>
+
+
 {/* FramedFeatureSection section end */}
 
 {/* RecentWorks section start */}

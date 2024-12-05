@@ -78,16 +78,13 @@ const Header: React.FC = () => {
   };
 
   return (
-    <nav className="text-white absolute z-20 px-4 py-2 w-full text-nowrap">
+    <nav className="text-white  z-20 px-4 py-2 w-full fixed bg-black  text-nowrap">
       <div className="lg:pr-10 lg:pl-10 mx-auto">
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex-shrink-0 flex justify-center gap-2 items-center">
               <Image src={Logo} alt="logo" width={48} height={50} />
-              <p className="">
-              <span className="text-[#FFFFFF] text-lg font-semibold">Tech</span>
-              <span className="text-[#FFFFFF] text-lg font-semibold">Creator</span>
-              </p>
+              <span className="text-[#FFFFFF] text-xl font-semibold">TechCreator</span>
             </div>
           </Link>
           <div className="hidden md:block">
@@ -237,7 +234,7 @@ const Header: React.FC = () => {
                       key={subItem.name}
                       href={subItem.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-600"
+                      className="flex items-center gap-3 text-wrap px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-600"
                     >
                       {subItem.icon} {subItem.name}
                     </Link>

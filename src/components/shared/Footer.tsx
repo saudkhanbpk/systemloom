@@ -15,6 +15,9 @@ import CommonButton from "../common/Button";
 import Footerbg from "../../../public/assets/footerImages/footer_bg_image.svg";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { FaWhatsapp } from "react-icons/fa";
+import { PhoneCall } from "lucide-react";
+
 
 const Footer: React.FC = () => {
   const router = useRouter();
@@ -50,8 +53,8 @@ const Footer: React.FC = () => {
         className="absolute inset-0 bg-cover bg-center opacity-20 footer-bg"
         // Background image will load dynamically with Intersection Observer
       ></div>
-      <div className="relative mx-auto px-4 md:px-10 mt-6">
-        <div className="flex flex-wrap sm:gap-5 gap-10 justify-between ">
+      <div className="relative mx-auto  px-3 mt-6">
+        <div className="flex flex-wrap md:gap-10 gap-9 justify-between px-5">
           <div className=" md:ml-8">
             <div className="flex items-center gap-2">
               <Image
@@ -65,12 +68,14 @@ const Footer: React.FC = () => {
                 Tech <br /> Creator
               </span>
             </div>
-            <p className="max-w-sm md:max-w-md text-xs md:text-sm leading-5 md:leading-6 mt-5">
+            <p className="max-w-sm md:max-w-md text-xs md:text-sm leading-5 w-[230px] md:leading-6 mt-5">
               We have been providing quality services since 2001. We provide our
               clients with complete end-to-end solutions, customized according
               to their needs.
             </p>
-            <div className="flex gap-7 mt-4 md:mt-10">
+            <div>
+            </div>
+            <div className="flex gap-7 mt-4 md:mt-4">
             <a
               href="https://www.facebook.com/techcreatorfb/"
               target="_blank"
@@ -130,9 +135,33 @@ const Footer: React.FC = () => {
               />
             </a>
           </div>
+
+          <div className="mt-3">
+            <h1 className="text-2xl font-bold">Subscribe</h1>
+            <p className="mt-2">Stay updated with the latest in tech.</p>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="" className="mt-2">Email<span className="text-red-600">*</span></label>
+              <input type="email" className="outline-none w-full md:w-[300px] p-2 rounded-md text-black" />
+              <button className=" bg-purple-600 text-white w-fit p-2 mt-3 px-4 rounded-md">submit</button>
+            </div>
           </div>
 
-          <div className="lg:ml-20">
+          </div>
+
+
+          <div className="flex flex-col  gap-4">
+            <h1 className="text-base  md:text-lg font-semibold">Industries We Serve</h1>
+            <ul className="space-y-4 text-sm">
+              <li>HealthCare</li>
+              <li>E-Commerce</li>
+              <li>Hospitality</li>
+              <li>Real Estate</li>
+              <li>Restaurants</li>
+            </ul>
+          </div>
+
+
+          <div className="">
             <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
             <ul className="space-y-2">
               {[
@@ -156,6 +185,8 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+
+         
 
           <div>
             <h3 className="text-base md:text-lg font-semibold mb-4">
@@ -214,13 +245,20 @@ const Footer: React.FC = () => {
               </p>
               <p className="text-xs md:text-sm">
                 <a
-                  href="https://wa.me/923119265290"
+                  href="https://wa.me/+923471914920"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +92-311-9265290
+                  <p className="flex gap-2 items-center text-base mt-1">
+          <FaWhatsapp size={28} color="#9A00FF" />
+          <span>+92 347 1914920</span>
+        </p>
                 </a>
               </p>
+              <p className="flex gap-2 items-center text-base">
+          <PhoneCall color="#9A00FF" />
+          <span>+1 (321) 407-3272</span>
+        </p>
 
               <div className="flex gap-1 mt-4">
                 <CommonButton
@@ -244,7 +282,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center  justify-end">
           <p className="text-xs md:text-sm text-gray-400 mt-3 ">
-            © 2024 <span className="text-purple-600 text-lg font-semibold">TechCreator</span>. All rights reserved.
+            © 2024 <span className="text-purple-600">TechCreator</span>. All rights reserved.
           </p>
          
         </div>

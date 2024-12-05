@@ -6,7 +6,7 @@ import about3 from '../../../public/assets/aboutImages/about3.png';
 
 const Overview: React.FC = () => {
   return (
-    <div className="py-10 px-4 md:px-10">
+    <div className="py-10  md:px-10">
       <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-10">
         {/* Images Section */}
         <div className="flex w-full about-page justify-center md:justify-start gap-4 mb-6 md:mb-0">

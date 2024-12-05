@@ -18,3 +18,24 @@ textarea:-webkit-autofill {
 
 
 
+
+
+/* Media query for screens between 841px and 941px */
+@media screen and (max-width: 941px) and (min-width: 841px) {
+  .webDevtext {
+    width: 400px;
+  }
+}
+
+/* Media query for screens 841px or smaller */
+@media screen and (max-width: 841px) and (min-width: 768px) {
+  .webDevtext {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 941px) {
+  .webDevtext {
+    width: 520px;
+  }
+}
