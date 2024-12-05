@@ -28,7 +28,7 @@ const JobApplicationForm: React.FC = () => {
   const searchParams = useSearchParams();
   const jobId = searchParams.get("jobId");  
   const { allJobs } = useSelector((state: RootState) => state.job);
-  const { user } = useSelector((state: RootState) => state.auth);
+  // const { user } = useSelector((state: RootState) => state.auth);
   const router = useRouter();
   
   const [loading, setLoading] = useState(false);
@@ -98,7 +98,6 @@ const JobApplicationForm: React.FC = () => {
   
     setLoading(true); 
     try {
-      if (user && user.role === "job seeker") {
         const res = await axios.post(
           `${backend_url}/api/v1/application/apply/${jobId}`, 
           formDataToSend, 
@@ -129,10 +128,6 @@ const JobApplicationForm: React.FC = () => {
             motivationLetter: null,
           });
         }
-      } else {
-        toast.error("You are not authenticated. Please log in and then apply");
-        router.push("/login");
-      }
     } catch (error: any) {
       console.error(error);
       const errorMessage = error?.response?.data?.message || "An error occurred. Please try again.";

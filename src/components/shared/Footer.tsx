@@ -13,13 +13,21 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../../public/assets/icons/Logo.png";
 import CommonButton from "../common/Button";
 import Footerbg from "../../../public/assets/footerImages/footer_bg_image.svg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
 import { PhoneCall } from "lucide-react";
-
+import axios from "axios";
+import { backend_url } from "@/newLayout";
+import { setUser } from "@/redux/authSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { RootState } from "@/redux/store";
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const router = useRouter();
   useEffect(() => {
     const footerBackground = document.querySelector(
@@ -47,6 +55,56 @@ const Footer: React.FC = () => {
     }
   }, []);
 
+  const dispatch = useDispatch();
+  const { user } = useSelector((store: RootState) => store.auth);
+
+  const handleLogout = async () => {
+    try {
+      const res = await axios.get(`${backend_url}/api/v1/user/logout`, {
+        withCredentials: true,
+      });
+      if (res.data.success) {
+        dispatch(setUser(null));
+        router.push("/");
+        localStorage.removeItem("token");
+        toast.success(res.data.message);
+      }
+    } catch (error: any) {
+      const message =
+        error?.response?.data?.message || error?.message || "Failed to logout";
+      toast.error(message);
+    }
+  };
+
+  // Handle form submission
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      toast.error("Email is required!");
+      return;
+    }
+    setLoading(true);
+
+    try {
+      const res = await axios.post(`${backend_url}/api/v1/subscribeuser`, {
+        email,
+      });
+
+      if (res.data.success) {
+        toast.success(res.data.message);
+        setEmail(""); // Clear email input after successful subscription
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error: any) {
+      console.error("Error:", error);
+      toast.error(error?.response?.data?.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="relative bg-black text-white py-4 md:py-4 w-full">
       <div
@@ -73,84 +131,107 @@ const Footer: React.FC = () => {
               clients with complete end-to-end solutions, customized according
               to their needs.
             </p>
-            <div>
-            </div>
+            <div></div>
             <div className="flex gap-7 mt-4 md:mt-4">
-            <a
-              href="https://www.facebook.com/techcreatorfb/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <FontAwesomeIcon
-                icon={faFacebookF}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/techcreator"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedinIn}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            <a
-              href="https://www.upwork.com/agencies/1479726519577280512/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Upwork"
-            >
-              <FontAwesomeIcon
-                icon={faBriefcase}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <a
+                href="https://www.facebook.com/techcreatorfb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FontAwesomeIcon
+                  icon={faFacebookF}
+                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/techcreator"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                />
+              </a>
+              <a
+                href="https://www.upwork.com/agencies/1479726519577280512/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Upwork"
+              >
+                <FontAwesomeIcon
+                  icon={faBriefcase}
+                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                />
+              </a>
+              {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FontAwesomeIcon icon={faTwitter} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
             </a> */}
-            <a
-              href="https://www.youtube.com/@techcreator9512"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <FontAwesomeIcon
-                icon={faYoutube}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/techcreatorco/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
-              />
-            </a>
-          </div>
+              <a
+                href="https://www.youtube.com/@techcreator9512"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <FontAwesomeIcon
+                  icon={faYoutube}
+                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/techcreatorco/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                />
+              </a>
+            </div>
 
-          <div className="mt-3">
-            <h1 className="text-2xl font-bold">Subscribe</h1>
-            <p className="mt-2">Stay updated with the latest in tech.</p>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="" className="mt-2">Email<span className="text-red-600">*</span></label>
-              <input type="email" className="outline-none w-full md:w-[300px] p-2 rounded-md text-black" />
-              <button className=" bg-purple-600 text-white w-fit p-2 mt-3 px-4 rounded-md">submit</button>
+            <div className="mt-3">
+              <h1 className="text-2xl font-bold">Subscribe</h1>
+              <p className="mt-2">Stay updated with the latest in tech.</p>
+              <div className="flex flex-col gap-2">
+                <label htmlFor="email" className="mt-2">
+                  Email<span className="text-red-600">*</span>
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className="outline-none w-full md:w-[300px] p-2 rounded-md text-black"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button
+                  className={`bg-purple-600 text-white w-fit p-2 mt-3 px-4 rounded-md ${
+                    loading ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  onClick={handleSubscribe}
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <span
+                      className="spinner-border spinner-border-sm text-white"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                  ) : (
+                    "Submit"
+                  )}
+                </button>
+              </div>
             </div>
           </div>
 
-          </div>
-
-
           <div className="flex flex-col  gap-4">
-            <h1 className="text-base  md:text-lg font-semibold">Industries We Serve</h1>
+            <h1 className="text-base  md:text-lg font-semibold">
+              Industries We Serve
+            </h1>
             <ul className="space-y-4 text-sm">
               <li>HealthCare</li>
               <li>E-Commerce</li>
@@ -159,7 +240,6 @@ const Footer: React.FC = () => {
               <li>Restaurants</li>
             </ul>
           </div>
-
 
           <div className="">
             <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
@@ -183,10 +263,33 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
+
+              {user ? (
+                <>
+                  {user.role === "admin" && (
+                    <Link
+                      href="/admin"
+                      className="flex items-center gap-2 text-xs md:text-sm hover:text-purple-500 transition-colors"
+                    >
+                      Admin
+                    </Link>
+                  )}
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center gap-2 text-xs md:text-sm hover:text-purple-500 transition-colors"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link href="/login" className="flex items-center gap-2 ">
+                    Login
+                  </Link>
+                </>
+              )}
             </ul>
           </div>
-
-         
 
           <div>
             <h3 className="text-base md:text-lg font-semibold mb-4">
@@ -221,7 +324,10 @@ const Footer: React.FC = () => {
                   link: "/services/project-management",
                 },
                 { name: "QA Testing", link: "/services/qa-testing" },
-                { name: "Social Media Marketing & Branding", link: "/services/digital-marketing" },
+                {
+                  name: "Social Media Marketing & Branding",
+                  link: "/services/digital-marketing",
+                },
               ].map((service) => (
                 <li key={service.name}>
                   <Link
@@ -250,15 +356,15 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                 >
                   <p className="flex gap-2 items-center text-base mt-1">
-          <FaWhatsapp size={28} color="#9A00FF" />
-          <span>+92 347 1914920</span>
-        </p>
+                    <FaWhatsapp size={28} color="#9A00FF" />
+                    <span>+92 347 1914920</span>
+                  </p>
                 </a>
               </p>
               <p className="flex gap-2 items-center text-base">
-          <PhoneCall color="#9A00FF" />
-          <span>+1 (321) 407-3272</span>
-        </p>
+                <PhoneCall color="#9A00FF" />
+                <span>+1 (321) 407-3272</span>
+              </p>
 
               <div className="flex gap-1 mt-4">
                 <CommonButton
@@ -282,9 +388,9 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center  justify-end">
           <p className="text-xs md:text-sm text-gray-400 mt-3 ">
-            © 2024 <span className="text-purple-600">TechCreator</span>. All rights reserved.
+            © 2024 <span className="text-purple-600">TechCreator</span>. All
+            rights reserved.
           </p>
-         
         </div>
       </div>
     </footer>

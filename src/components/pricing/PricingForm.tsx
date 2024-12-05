@@ -1,4 +1,4 @@
-import { backend_url } from '@/newLayout'; // Make sure backend_url is correctly set in your Next.js environment
+import { backend_url } from '@/newLayout';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -24,7 +24,7 @@ const PricingForm: React.FC = () => {
     referenceLink: '',
   });
 
-  const [loading, setLoading] = useState<boolean>(false);  // New loading state
+  const [loading, setLoading] = useState<boolean>(false);  
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,12 +33,12 @@ const PricingForm: React.FC = () => {
   
     // Type narrowing for 'checkbox' inputs
     if (type === 'checkbox') {
-      const target = e.target as HTMLInputElement;  // Type assertion to HTMLInputElement
+      const target = e.target as HTMLInputElement;  
       setFormData((prevData) => ({
         ...prevData,
         service: target.checked
-          ? [...prevData.service, value]  // Add the service if checked
-          : prevData.service.filter((service) => service !== value),  // Remove the service if unchecked
+          ? [...prevData.service, value]  
+          : prevData.service.filter((service) => service !== value), 
       }));
     } else {
       // For text inputs and textareas, just update the field
@@ -53,7 +53,7 @@ const PricingForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);  // Set loading state to true when submitting
+    setLoading(true);  
     try {
       const res = await axios.post(`${backend_url}/api/v1/pricing/submit-form`, formData, {
         headers: {
@@ -78,7 +78,7 @@ const PricingForm: React.FC = () => {
       console.log(error);
       toast.error(error?.response?.data?.message);
     } finally {
-      setLoading(false);  // Reset loading state after request completes
+      setLoading(false);  
     }
   };
 
