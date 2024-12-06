@@ -1,22 +1,29 @@
-import axios from 'axios';
+import axios from "axios";
 
 const getAllPostTitles = async () => {
   try {
-    const response = await axios.get('https://techcreator-backend.onrender.com/api/v1/blogs/all', {
-    });
+    const response = await axios.get(
+      "https://techcreator-backend.onrender.com/api/v1/blogs/all",
+      {}
+    );
     return response.data.blogs.map((post) => ({
-      title: post.title.replace(/\s+/g, '-').toLowerCase(),
+      title: post.title
+        ? post.title
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-|-$/g, "")
+        : "untitled",
       lastmod: new Date(post.createdAt).toISOString(),
     }));
   } catch (error) {
-    console.error('Error fetching post titles:', error);
+    console.error("Error fetching post titles:", error);
     return [];
   }
 };
 
 export async function GET() {
   const posts = await getAllPostTitles();
-  console.log(posts)
+  console.log(posts);
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -29,13 +36,13 @@ export async function GET() {
         </url>
       `
       )
-      .join('')}
+      .join("")}
   </urlset>`;
 
   return new Response(sitemap, {
     headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'no-store, max-age=0',
+      "Content-Type": "application/xml",
+      "Cache-Control": "no-store, max-age=0",
     },
   });
 }

@@ -6,59 +6,64 @@ import group3 from '../../../public/assets/aboutImages/Mask group (2).png';
 
 function AboutSection() {
   return (
-    <>
-      <section className="py-12 md:py-16 md:p-10  mx-auto">
-        <div className=" flex  flex-col md:flex-row justify-center gap-12   items-center">
-          <div className="flex flex-col sm:flex-row items-center  md:w-1/2 w-full justify-center   gap-4">
-            <div className="mb-4 md:mb-0 md:mr-2">
+    <section className="py-12 md:py-16 md:p-10 mx-auto">
+      <div className="flex flex-col md:flex-row justify-center gap-12 items-center">
+        {/* Image Section */}
+        <div className="flex flex-col sm:flex-row items-center md:w-1/2 w-full justify-center gap-4">
+          {/* Group1 */}
+          <div className="mb-4 md:mb-0 md:mr-2">
+            <Image
+              src={group1}
+              alt="image1"
+              className="w-[290px] h-[180px] md:w-[280px] md:h-[290px] rounded-md object-cover"
+            />
+          </div>
+          {/* Group2 and Group3 */}
+          <div>
+            <div className="mb-4 md:mb-1">
               <Image
-                src={group1}
-                alt="image1"
-                className="w-[250px] h-[260px] md:w-[324px] md:h-[333px] object-cover"
+                src={group2}
+                alt="image2"
+                className="w-[290px] h-[180px] md:w-[280px] md:h-[280px] rounded-md object-cover"
               />
             </div>
             <div>
-              <div className="mb-4 md:mb-1">
-                <Image
-                  src={group2}
-                  alt="image2"
-                  className="w-[250px] h-[150px] md:w-auto md:h-auto object-cover"
-                />
-              </div>
-              <div>
-                <Image
-                  src={group3}
-                  alt="image3"
-                  className="w-[250px] h-[150px] md:w-auto md:h-auto object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center md:items-start md:w-1/2 w-full">
-            <div className="mb-4 md:mb-4  flex justify-center md:justify-start md:ms-44">
               <Image
-                src={squareImage}
-                alt="about_image"
-                width={250}  
-    height={260} 
-    layout="responsive"  
-    className="object-cover"
-    sizes="(max-width: 768px) 250px, (min-width: 768px) 324px"
+                src={group3}
+                alt="image3"
+                className="w-[290px] h-[180px] md:w-[280px] md:h-[100px] rounded-md object-cover"
               />
-            </div>
-            <div className="text-center md:text-left  mx-auto">
-              <h1 className="text-[#9A00FF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
-                About Us
-              </h1>
-              <p className=" font-normal text-base md:text-xl leading-7 md:leading-[36px] max-w-full md:max-w-lg">
-              TechCreator is a software development company helping businesses scale up their growth Because Your potential customers will find you online. Our team made it happen. Engage them with contemporary, attractive web design and content they were looking for on the search engines. Then, Watch your sales grow.
-              </p>
             </div>
           </div>
         </div>
-      </section>
-    </>
+
+        {/* Text Section */}
+        <div className="flex flex-col items-center md:items-start md:w-1/2 w-full relative">
+          {/* Image aligned to the right */}
+          <div className="absolute -top-20 hide-at-970 right-52 transform translate-x-3">
+            <Image
+              src={squareImage}
+              alt="about_image"
+              width={150}
+              height={150}
+              layout="responsive"
+              className="object-cover"
+              sizes="(max-width: 768px) 150px, (min-width: 548px) 150px, (min-width: 1024px) 300px"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="text-center md:text-left mx-auto">
+            <h1 className="text-[#9A00FF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
+              About Us
+            </h1>
+            <p className="font-normal text-base md:text-lg leading-7 md:leading-[36px] max-w-full md:max-w-lg">
+              TechCreator is a software development company helping businesses scale up their growth. Your potential customers will find you online. Our team made it happen. Engage them with contemporary, attractive web design and content they were looking for on the search engines. Then, watch your sales grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

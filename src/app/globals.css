@@ -46,3 +46,19 @@ textarea:-webkit-autofill {
     display: none !important;
   }
 }
+
+@media (max-width: 1130px) {
+  .hide-at-970 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 936px) and (min-width: 768px)  {
+  .hide-at-936 {
+    height: 200px;
+    width: 300px;
+  }
+}
+
+
+

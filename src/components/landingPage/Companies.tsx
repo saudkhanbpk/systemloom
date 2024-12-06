@@ -40,9 +40,9 @@ export default Companies;
 
 export const CTASection = () => {
   return (
-    <section className="py-16 ">
-      <div className=" mx-auto w-[95%] h-auto lg:h-[300px]">
-        <div className="flex flex-col  md:flex-row justify-around">
+    <section className="mb-32 ">
+      <div className=" mx-auto w-[95%] h-auto md:h-[300px]">
+        <div className="flex flex-col items-center   md:flex-row justify-around">
           <div className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
               "Looking for top developers and designers? Let's build something great together. Get in touch today!"
@@ -53,8 +53,8 @@ export const CTASection = () => {
                   
                   <Image src={company6} alt="button_image" width={123.83} height={191} />
                 </div>
-                <div className="absolute top-16 -right-[52px]">
-                <Link href="/career">
+                <div className="absolute top-16 -right-[72px]">
+                <Link href="/contact">
                   <CommonButton
                     title="Hire Top Developers"
                     className="bg-[#9A00FF] text-white font-semibold py-3 px-6 rounded-[5px] w-[220px]"
@@ -69,9 +69,9 @@ export const CTASection = () => {
             <Image
               src={company7}
               alt="Team working together"
-              width={500} 
-              height={380}
-              className="w-full rounded-lg shadow-lg h-[380px] lg:h-[330px]"
+              width={300} 
+              height={280}
+              className="w-full hide-at-936 rounded-lg shadow-lg h-[280px] md:h-[330px]"
             />
           </div>
         </div>

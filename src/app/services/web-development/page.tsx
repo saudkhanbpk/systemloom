@@ -17,6 +17,7 @@ import developmentDesignImage from "../../../../public/assets/relatedServices/Fr
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import ProjectWork from '@/components/services/ProjectWork';
+import Head from "next/head";
 
 
 const WebDevelopment = () => {
@@ -63,15 +64,24 @@ const WebDevelopment = () => {
 
 
   return (
-    <div >
 
+    <div>
+      
+      <Head>
+    <title>Progressive Web App Development Company | TechCreator</title>
+    <meta
+      name="description"
+      content="TechCreator provides full-fledged Progressive Web App development Services for your business online needs. Get a more attractive and customized solution here."
+    />
+  </Head>
+      
       {/* hero section start */}
     <div className="bg-black w-full lg:min-h-screen md:pt-36 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  md:px-12  mt-20">
-    <h1 className="text-3xl lg:text-5xl  font-bold">Full stack web development services</h1>
+    <h1 className="text-3xl lg:text-5xl  font-bold">Choose the perfect Web Development solution for your business</h1>
     <p className="text-base lg:text-lg mt-3">
-    Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored applications that ensure seamless functionality and innovation. Our comprehensive web development services are structured to align with your business goals, helping you stand out in a competitive digital landscape. 
+    At TechCreator white label web development services are the perfect solution for agencies looking to expand their offerings without the added workload. We deliver high-quality, client-ready websites under your brand, ensuring seamless collaboration and satisfaction.
     </p>
   </div>
 
@@ -79,7 +89,7 @@ const WebDevelopment = () => {
   <div className="w-full md:w-auto flex justify-center">
     <Image
       src={webDevelopmentImagehero}
-      alt="heroImage"
+      alt="Custom Web Development and Design"
       width={300}
       height={300}
       className="w-[50vw] md:w-[25vw] lg:mt-52 "
@@ -96,7 +106,7 @@ const WebDevelopment = () => {
   <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
     <Image
       src={webimage1}
-      alt="Feature section image"
+      alt="Bespoke Web Development to attract your audience"
       width={300} 
       height={450}
       className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
@@ -104,8 +114,8 @@ const WebDevelopment = () => {
   </div>
   <div className="bg-[#9A00FF] w-full md:w-[750px]   md:h-[450px] p-6 sm:p-10 md:p-10 py-10 md:py-14 mt-8 md:mt-0 ">
     <div className="text-white md:py-4 md:px-20">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Web Development</h1>
-      <p className="text-sm sm:text-base md:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">Web Development is the ideal approach to crafting solutions that align precisely with your business goals. Be developing a well designed and bespoke web application, you create a direct, personalized connection with your customers, which enhances your business and brand identity. Our team of certified web developers delivers robust, high-performance and secure solutions that seamlessly support to make sure your web platforms provide lasting value and drive business success.  </p>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Bespoke Web Development Tailored to Your Vision</h1>
+      <p className="text-sm sm:text-base md:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">Stand out from the crowd with bespoke web development crafted to meet your specific needs. Our team of skilled developers creates custom solutions that align with your brand and business goals, offering unique designs and functionalities to captivate your audience and elevate your online presence. </p>
     </div>
   </div>
 </div>
@@ -161,7 +171,7 @@ const WebDevelopment = () => {
   {/* Image Section */}
   <Image
     src={webimage2}
-    alt="heroImage"
+    alt="Digital Web Development solution for your business needs"
     width={300}
     height={300}
     className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -169,27 +179,11 @@ const WebDevelopment = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Web Development benefits  </h1>
-    <p className="text-base md:text-xl text-gray-700">
-    <span className='text-xl font-semibold text-black'>Solutions for your brand  </span> <br/> 
-Bespoke software allows you to showcase your brand with a custom design and smooth user experience. It goes beyond generic templates, offering a solution tailored to your unique business needs. 
-
+    <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">Custom Web App Development for Dynamic Digital Solutions</h1>
+    <p className="text-base md:text-lg text-gray-700">
+    <strong>We love working on fresh concepts, ideas and technologies that break industry standards and generate online traction.</strong> A solution that goes beyond a traditional website? Our custom web app development services deliver feature-rich, interactive applications that cater to your business's unique requirements. We specialize in building web apps that enhance user engagement and streamline your operations.
     </p>
 
-    <p className="text-base md:text-xl text-gray-700 mt-3">
-    <span className='text-xl font-semibold text-black'>Improve Online Presence   </span> <br/> 
-    Web development boost your brand’s visibility on the internet, making it easier for potential customers to find you, learn about services and engage with your product.  
-    </p>
-
-    <p className="text-base md:text-xl text-gray-700 mt-3">
-    <span className='text-xl font-semibold text-black'>Scalibility </span> <br/> 
-    Web development allows your business to sacle its websites and features as they grow. It also ensures that the site can handle increased traffic, transactions and new functionalities.   
-    </p>
-
-    <p className="text-base md:text-xl text-gray-700 mt-3">
-    <span className='text-xl font-semibold text-black'>Business automation </span> <br/> 
-    Custom web development also allows you to optimize your business workflow and streamline your operations. Whether you need enhanced integration or manage your customer data in-app, bespoke software connects your systems in a single customized organism.  
-    </p>
   </div>
 </div>
 
@@ -200,24 +194,14 @@ Bespoke software allows you to showcase your brand with a custom design and smoo
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Industries we work with</h1>
-    <p className="text-base md:text-xl text-gray-700">
-    TechCreator specialize in providing custom web development services across a wide range of  
-Industries. including <br/>
- <span className='font-semibold '>e-commerce </span> <br/>
- <span className='font-semibold'>Healthcare</span> <br/>
- <span className='font-semibold'>Education</span> <br/>
- <span className='font-semibold'>Finance and Banking</span>  <br/>
- <span className='font-semibold'>real estate </span>
- <span className='font-semibold'>tourism and hospitality</span> <br/>  
- <span className='font-semibold'>entertainment and media</span> <br/>
- <span className='font-semibold'>government and public services</span> . 
-
+    <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">PHP Web Development Services for Robust Performance</h1>
+    <p className="text-base md:text-lg text-gray-700">
+    As experts in <strong>PHP web development services,</strong> we build scalable and secure websites that deliver exceptional performance. Whether you need a content-rich website, an e-commerce platform, or a web application, our developers leverage the flexibility of PHP to meet your demands.
     </p>
   </div>
   <Image
     src={webimage3}
-    alt="heroImage"
+    alt="Execute perfect planing with php web development services "
     width={300}
     height={300}
     className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -229,7 +213,7 @@ Industries. including <br/>
   {/* Image Section */}
   <Image
     src={webimage4}
-    alt="heroImage"
+    alt="progressive web app development company providing its best"
     width={300}
     height={300}
     className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -237,20 +221,9 @@ Industries. including <br/>
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Our process  </h1>
-    <p className="text-base md:text-xl text-gray-700 mt-3">
-    <span className='text-xl font-semibold text-black'>Discovery  </span> <br/> 
-    TechCreator starts by understanding your business requirements. Our team of business analysts examines your needs and dives into your unique objectives. Based on this, we define a clear vision for your future solutions.    
-    </p>
-
-    <p className="text-base md:text-xl text-gray-700 mt-3">
-    <span className='text-xl font-semibold text-black'>Development   </span> <br/> 
-    Our company moves further to development. Developers transform your business idea into a real solution keeping in view the latest tech updates to make sure your product stands out from the competition.     
-    </p>
-
-    <p className="text-base md:text-xl text-gray-700 mt-3">
-    <span className='text-xl font-semibold text-black'>Testing    </span> <br/> 
-    After development we proceed with thorough testing. Our team remains diligent in identifying and resolving any defects or discrepancies, ensuring the solution aligns perfectly with the predefined goals.     
+    <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">Progressive Web App Development Company: Innovation at Its Best</h1>
+    <p className="text-base md:text-lg text-gray-700 mt-3">
+    <strong>Taste</strong> the future of web technology with our expertise as a <strong>progressive web app development company.</strong> We create applications that combine the best of web and mobile experiences, ensuring fast loading times, offline functionality, and seamless user interaction across all devices.    
     </p>
   </div>
 </div>
@@ -260,13 +233,13 @@ Industries. including <br/>
 
 
 {/* FramedFeatureSection section start */}
-<div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-32 py-6 md:mt-52 md:mb-52">
+<div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
   <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
     {/* Text Content */}
     <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Deployment and Support </h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Comprehensive Web Development Services with Ongoing Support</h1>
       <p className="text-base md:text-lg text-white webDevtext ">
-      After the application is fully established, we deploy it using reliable process for consistent results. Our developers continuously monitor the new environment to ensure its stability and optimal performance. After that we provide comprehensive support and assistance to ensure your website or web application runs smoothly and remains up to date. 
+      Our commitment doesn’t end with the launch of your website or app. We provide comprehensive <strong>web development services,</strong> from concept to deployment, with continuous support to ensure your platform evolves with your business. Trust us to deliver innovation, functionality, and unmatched quality in every project.
       </p>
     </div>
     {/* Image */}

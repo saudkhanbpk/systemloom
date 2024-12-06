@@ -6,48 +6,10 @@ import HeroSection from "@/components/landingPage/HeroSection";
 import ProjectsCount from "@/components/landingPage/ProjectsCount";
 import ServicesSection from "@/components/landingPage/ServicesSection";
 import TeamScalingSection from "@/components/landingPage/TeamScalingSection";
-import { backend_url } from "@/newLayout";
-import { setUser } from "@/redux/authSlice";
-import axios from "axios";
 import Head from "next/head";
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
 
 const Page = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const res = await axios.get(`${backend_url}/api/v1/auth/user`, {
-          withCredentials: true,
-        });
-
-        if (res.data.success) {
-          // console.log("User data received:", res.data.user);
-          dispatch(setUser(res.data.user));
-        } else {
-          console.warn("User not authenticated or no user data available.");
-        }
-      } catch (error: any) {
-        if (error.response) {
-          if (error.response.status === 401) {
-            console.warn("User not authenticated or token expired");
-          } else {
-            console.error(
-              `Error fetching user data: ${error.response.status} - ${error.response.data.message}`
-            );
-          }
-        } else if (error.request) {
-          console.error("No response received. Network error?", error.request);
-        } else {
-          console.error("Error in request setup:", error.message);
-        }
-      }
-    };
-
-    fetchUser();
-  }, [dispatch]);
-
+ 
   return (
     <div>
       <Head>

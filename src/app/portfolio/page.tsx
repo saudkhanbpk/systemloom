@@ -4,6 +4,7 @@ import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonia
 import Companies, { CTASection } from "@/components/landingPage/Companies"
 import ServicesSection from "@/components/landingPage/ServicesSection"
 import HeroSection from "@/components/portfolio/HeroSection"
+import OurImpresiveProject from "@/components/portfolio/OurImpresiveProject"
 import OurProjects from "@/components/portfolio/OurProjects"
 import OurProjectsGrid from "@/components/portfolio/OurProjectsGrid"
 import PortfolioSection from "@/components/portfolio/PortfolioSection"
@@ -26,7 +27,8 @@ const Portfolio = () => {
       {/* <Companies/> */}
       {/* <CTASection/> */}
       {/* <OurProjectsGrid/> */}
-      <OurProjects/>
+      {/* <OurProjects/> */}
+      <OurImpresiveProject/>
       <ClientTestimonialsSection/>
       </>
     </div>

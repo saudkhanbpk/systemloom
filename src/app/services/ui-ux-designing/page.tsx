@@ -23,6 +23,7 @@ import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
+import Head from 'next/head';
 
 
 const UIUXDesign = () => {
@@ -70,16 +71,20 @@ const UIUXDesign = () => {
 
   return (
     <div >
-
+<Head>
+    <title>UI/UX Design Service | Top UI/UX Design Agency for Mobile Solutions</title>
+    <meta
+      name="description"
+      content="Expert UI/UX design services at TechCreator. As a top UI/UX design agency, we specialize in mobile & Desktop UI/UX design and creating user-centric digital experiences."
+    />
+  </Head>
       {/* hero section start */}
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0 md:px-12 mt-20">
-    <h1 className="text-3xl lg:text-5xl font-bold">UI/UX design services</h1>
+    <h1 className="text-xl lg:text-4xl font-bold">Exceptional Digital Experiences: UI/UX Design Services</h1>
     <p className="text-base md:text-lg mt-3">
-      At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
-      Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 
-      Join us in the journey of transforming your vision into cutting-edge technology.
+    At TechCreator, our UI/UX design is built around delivering intuitive and visually engaging interfaces. We focus on creating user journeys that enhance interaction and improve satisfaction, ensuring your platform stands out in a competitive digital landscape.
     </p>
   </div>
 
@@ -112,8 +117,8 @@ const UIUXDesign = () => {
   </div>
   <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
     <div className="text-white xl:py-20 lg:px-40">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Heading</h1>
-      <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and </p>
+      <h1 className="text-xl sm:text-3xl font-bold mb-3">Your Partner as a Top UI/UX Design Agency</h1>
+      <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement. </p>
     </div>
   </div>
 </div>
@@ -177,9 +182,9 @@ const UIUXDesign = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
-    <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">Mobile UI/UX Design for On-the-Go Excellence</h1>
+    <p className="text-base md:text-lg text-gray-700">
+    In a mobile-first world, our expertise in mobile UI/UX design ensures your applications are optimized for smaller screens without compromising user experience. We design sleek, responsive, and intuitive interfaces that captivate users across all devices.
     </p>
   </div>
 </div>
@@ -191,9 +196,9 @@ const UIUXDesign = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
-    <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">End-to-End UI/UX Solutions for Your Business Needs    </h1>
+    <p className="text-base md:text-lg text-gray-700">
+    We provide comprehensive UI/UX design services, covering every step from ideation to implementation. Our goal is to deliver designs that not only look great but also solve real user challenges, driving results for your business. 
     </p>
   </div>
   <Image
@@ -218,9 +223,9 @@ const UIUXDesign = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
-    <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">Customized UI/UX for Every Industry</h1>
+    <p className="text-base md:text-lg text-gray-700">
+    From startups to enterprises, our design solutions cater to diverse industries. Whether you need a mobile UI/UX design for an app or a complete overhaul of your digital presence, we ensure the final product exceeds your expectations.
     </p>
   </div>
 </div>
@@ -230,29 +235,24 @@ const UIUXDesign = () => {
 
 
 {/* FramedFeatureSection section start */}
-<div className="w-full mx-auto bg-white rounded-lg  overflow-hidden mb-10 max-w-6xl px-4 sm:px-6 lg:px-4">
-  <div className="flex flex-col md:flex-row items-center">
-    {/* Text Section */}
-    <div className="w-full  bg-[#9A00FF] p-6 md:p-12 text-white">
-      <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
-        Heading
-      </h2>
-      <p className="text-base w-full md:text-lg text-wrap leading-relaxed md:w-[400px]">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and
+<div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+  <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
+    {/* Text Content */}
+    <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">RRecent Work: Turning Ideas into Impactful Designs</h1>
+      <p className="text-base md:text-lg text-white webDevtext ">
+      Recently, we partnered with a healthcare startup to deliver a user-friendly mobile UI/UX design that improved patient engagement. Additionally, our work with an e-commerce platform as a <strong>top UI/UX design agency</strong> enhanced their customer journey, leading to increased conversions and user satisfaction.
       </p>
     </div>
-
-    {/* Image Section */}
-  
-      <div className="relative bg-gray-100">
-        <Image
-          src={uxdesignimage5}
-          alt="Feature illustration"
-          width={300}
-          height={300}
-          className='w-[500px] md:h-[500px] h-[300px] object-cover'
-        />
-      
+    {/* Image */}
+    <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
+      <Image
+        src={uxdesignimage5}
+        alt="Feature illustration"
+        width={400}
+        height={500}
+        className="rounded-lg mx-auto  md:mx-0"
+      />
     </div>
   </div>
 </div>

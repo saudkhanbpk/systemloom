@@ -42,7 +42,7 @@ const router = useRouter()
           <div className="fixed inset-0 bg-black bg-opacity-25" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-y-auto">
+        <div className="fixed inset-0 overflow-y-auto mt-16">
           <div className="flex min-h-full items-center justify-center p-4 ">
             <Transition.Child
               as={Fragment}
@@ -53,14 +53,14 @@ const router = useRouter()
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-2xl p-6 bg-white rounded-2xl shadow-xl     ">
-                <h1 className="text-center font-bold text-2xl text-black">Job Details</h1>
-                <Dialog.Title className="text-lg mt-5 font-medium text-gray-900">
+              <Dialog.Panel className="w-full max-w-2xl bg-white rounded-2xl shadow-xl  ">
+                <h1 className="text-center font-bold text-2xl rounded-t-2xl  text-black bg-purple-600 p-6">Job Details</h1>
+                <Dialog.Title className="text-lg mt-5 p-3 font-medium text-gray-900">
                   <p className="text-gray-600">
                     <span className="text-blue-600  ">Title:</span> {job.title}
                   </p>
                 </Dialog.Title>
-                <div className="mt-4 flex flex-col gap-5">
+                <div className="mt-4 flex flex-col p-3 gap-5">
                   <p className="text-gray-600">
                     <span className="text-blue-600">Category:</span>{" "}
                     {job.category}
@@ -113,14 +113,14 @@ const router = useRouter()
                     </div>
                   </div>
                 </div>
-                <div className="mt-4 flex justify-end">
+                <div className="mt-4 flex justify-end p-3">
                   <button
                     onClick={onClose}
                     className="mr-4 px-4 py-2 text-sm text-white bg-red-500 rounded"
                   >
                     Cancel
                   </button>
-                  <button  onClick={() => router.push(`/job-apply?jobId=${job._id}`)} className="px-4 py-2 text-sm text-white bg-blue-600 rounded">
+                  <button  onClick={() => router.push(`/job-apply?jobId=${job._id}`)} className="px-4 py-2 text-sm text-white bg-purple-600 rounded ">
                     Apply
                   </button>
                 </div>

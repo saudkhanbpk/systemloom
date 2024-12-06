@@ -203,27 +203,29 @@ const Footer: React.FC = () => {
                 <input
                   id="email"
                   type="email"
+                  placeholder="Enter your email"
                   className="outline-none w-full md:w-[300px] p-2 rounded-md text-black"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <button
-                  className={`bg-purple-600 text-white w-fit p-2 mt-3 px-4 rounded-md ${
-                    loading ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                  onClick={handleSubscribe}
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <span
-                      className="spinner-border spinner-border-sm text-white"
-                      role="status"
-                      aria-hidden="true"
-                    ></span>
-                  ) : (
-                    "Submit"
-                  )}
-                </button>
+               <button
+  className={`bg-purple-600 text-white w-fit p-2 mt-3 px-4 rounded-md ${
+    loading ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
+  }`}
+  onClick={handleSubscribe}
+  disabled={loading}
+>
+  {loading ? (
+    <span
+      className="spinner-border spinner-border-sm text-white"
+      role="status"
+      aria-hidden="true"
+    ></span>
+  ) : (
+    "Submit"
+  )}
+</button>
+
               </div>
             </div>
           </div>
