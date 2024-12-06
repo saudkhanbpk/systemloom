@@ -9,7 +9,6 @@ import { Provider } from "react-redux";
 import { usePathname } from "next/navigation";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
 
 export const backend_url = process.env.NEXT_PUBLIC_BACKEND_URL;
 const persistor = persistStore(store);
@@ -35,15 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           pauseOnFocusLoss
         />
 
-        {/* WhatsApp icon */}
-        <a
-          href="https://wa.me/923471914920" // WhatsApp link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-20 right-0  p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
-        >
-          <FaWhatsapp size={40} />
-        </a>
+      
 
         {!isAdminPage && <Header />}
 

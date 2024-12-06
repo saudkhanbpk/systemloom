@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Layout from "../newLayout"; 
+import { FaWhatsapp } from "react-icons/fa";
 
 
 
@@ -57,6 +58,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Layout>{children}</Layout> 
+
+        <a
+          href="https://wa.me/923471914920" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-20 right-3  p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
+        >
+          <FaWhatsapp size={40} />
+        </a>
       </body>
     </html>
   );
