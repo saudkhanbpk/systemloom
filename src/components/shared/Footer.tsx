@@ -285,7 +285,7 @@ const Footer: React.FC = () => {
                 </>
               ) : (
                 <>
-                  <Link href="/login" className="flex items-center gap-2 ">
+                  <Link href="/login" className="flex items-center gap-2 hover:text-purple-500 ">
                     Login
                   </Link>
                 </>

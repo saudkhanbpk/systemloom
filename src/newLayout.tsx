@@ -6,9 +6,10 @@ import Header from "./components/shared/Header";
 import "react-toastify/dist/ReactToastify.css";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import { usePathname } from "next/navigation";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import { usePathname } from "next/navigation"; // Correct import
+import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
 
 export const backend_url = process.env.NEXT_PUBLIC_BACKEND_URL;
 const persistor = persistStore(store);
@@ -18,12 +19,8 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const pathname = usePathname(); // Get the current pathname
-
-  console.log("Current pathname:", pathname); // Debugging line
-
-  // Check if the current page is the 404 page or not
-  const isNotFoundPage = pathname === "/not-found" || pathname === "/404";
+  const pathname = usePathname();
+  const isAdminPage = pathname.startsWith("/admin");
 
   return (
     <Provider store={store}>
@@ -38,17 +35,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           pauseOnFocusLoss
         />
 
-        {/* Show Header only if it's NOT the 'not-found' page */}
-        {!isNotFoundPage && <Header />}
+        {/* WhatsApp icon */}
+        <a
+          href="https://wa.me/923471914920" // WhatsApp link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-20 right-0  p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
+        >
+          <FaWhatsapp size={40} />
+        </a>
+
+        {!isAdminPage && <Header />}
 
         <main className="flex-1">{children}</main>
 
-        {/* Show Footer only if it's NOT the 'not-found' page */}
-        {!isNotFoundPage && <Footer />}
+        <Footer />
       </PersistGate>
     </Provider>
   );
 };
-
 
 export default Layout;
