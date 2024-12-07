@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/redux/store';
 import Image from 'next/image';
 import { deleteProject } from '@/redux/projectSlice'; // Assuming you have delete functionality
-import useGetAllProjects from '@/hooks/useGetAllProjects';
+// import useGetAllProjects from '@/hooks/useGetAllProjects';
 import { backend_url } from '@/newLayout';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -15,7 +15,7 @@ interface OurProjectsGridProps {
 }
 
 const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
-  useGetAllProjects();
+  // useGetAllProjects();
   const { projects } = useSelector((state: RootState) => state.projects);
   const dispatch = useDispatch();
   const router = useRouter();

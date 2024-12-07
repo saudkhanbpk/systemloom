@@ -2,13 +2,9 @@ import { useState } from "react";
 import { Menu, PhoneCall, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/assets/icons/Logo.png";
-import personIcon from "../../../public/assets/landingPage/Vector.png";
-import { CiLogout } from "react-icons/ci";
-import { IoMdLogIn } from "react-icons/io";
-import { SiGnuprivacyguard } from "react-icons/si";
 import { FaHome, FaInfoCircle, FaTags, FaBlog, FaProjectDiagram,FaWrench,FaPencilRuler, FaBriefcase, FaEnvelope, FaDesktop, FaMobileAlt, FaPaintBrush, FaCogs, FaTasks, FaSearch, FaCheck, FaBullhorn } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
+import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png"
 
 
 const Header: React.FC = () => {
@@ -60,9 +56,9 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div>
           <Link href="/">
-            <div className="flex-shrink-0 flex justify-center gap-2 items-center">
-              <Image src={Logo} alt="logo" width={48} height={50} />
-              <span className="text-[#FFFFFF] md:text-xl font-semibold">TechCreator</span>
+            <div className="flex-shrink-0 flex justify-center gap-2 items-center   ">
+              <Image src={TechcreatorLogo} alt="techcreartor_logo" width={158} height={10} />
+              {/* <span className="text-[#FFFFFF] md:text-xl font-semibold">TechCreator</span> */}
             </div>
           </Link>
           </div>

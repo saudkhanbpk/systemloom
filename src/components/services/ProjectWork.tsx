@@ -26,6 +26,7 @@ const ProjectWork = () => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get(`${backend_url}/api/v1/project/all`);
+        // console.log("all projects", response)
         if (response.data.success) {
           setProjects(response.data.projects);
         } else {

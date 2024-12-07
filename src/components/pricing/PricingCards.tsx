@@ -89,12 +89,10 @@ const PricingCards: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-2 lg:px-20 ">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
           <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
-            Innovation Unleashed
+          Find The Perfect Plan Today 
           </h1>
           <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
-          At TechCreator, we turn your digital dreams into reality. From custom software development to tailored hardware solutions, our innovative products and services are designed to elevate your business.
-
-With a focus on scalability, security, and cutting-edge technology, we deliver solutions that drive success. Partner with us to build the future today.
+          Discover the ideal TechCreator pricing plan that’s right for your business to establish and grow your presence online. Whether you are just looking for advanced solutions, our plans range from basic to premium to meet your unique business needs. So, look no further other than us, to empower you with affordable, transparent and flexible solutions that drive success. Our plans are designed for every vision. 
           </p>
         </div>
         <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px] mx-auto md:mx-0">
@@ -124,10 +122,10 @@ With a focus on scalability, security, and cutting-edge technology, we deliver s
           </div>
         </div>
         <div className='md:w-[600px]  '>
-          <h1 className='text-3xl font-normal'>Affordability Redefined</h1>
-          <p className='text-xl mt-4'>At TechCreator, we believe that cutting-edge technology should be accessible to all. Our affordable solutions—from custom software development to advanced hardware integrations—are designed to fuel your business growth without compromising on quality.
-
-We blend innovation with cost-effectiveness, delivering scalable, secure, and high-performance products tailored to your needs. Let’s build the future together, without breaking the bank.</p>
+        <h1 className='font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]'>
+  Seamless Scalability for Growing Businesses
+</h1>
+          <p className='text-xl mt-4'>Our priority is to grow your businesses by providing you with our affordable and flexible price plans. Everything evolves so as your business, adjust your plan to match your expanding needs. Upgrade, customize, or add features anytime- it’s all about ensuring you have what you need to stay ahead in your industries. </p>
         </div>
       </div>
 {/* Pricing form */}
@@ -137,11 +135,11 @@ We blend innovation with cost-effectiveness, delivering scalable, secure, and hi
 
       <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-2 lg:px-20">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
-          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
-          Seamless Integration
+          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
+          Innovative Technology Solutions with Quality at the Core 
           </h1>
           <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
-          At TechCreator, we specialize in seamless integration that ensures your technology ecosystem works flawlessly. Whether it’s connecting new systems with legacy infrastructure or developing custom APIs, our solutions are designed for smooth transitions and optimal performance, helping your business stay ahead in a fast-evolving digital world.
+          TechCreator focus on driving technological innovation and delivering top-tier quality to empower your business. We aim to provide unmatched performance, reliable support and cutting-edge features- all at affordable, user-friendly prices. We focus on cloud-based tools and custom software development to ensure your business stays ahead in todays’s competitive digital landscape.
           </p>
         </div>
 

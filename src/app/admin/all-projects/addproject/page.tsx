@@ -19,6 +19,7 @@ const AddProjectPage: React.FC = () => {
     websiteLink: "",
     githubLink: "",
     category: "",
+    industry:"",
     projectScreenshot: null as File | null,
     screenshotUrl: "", // To store the URL of the existing screenshot for updates
   });
@@ -50,16 +51,18 @@ const AddProjectPage: React.FC = () => {
     }
   }, [projectId]);
 
+
+
   // Handle form data change
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+) => {
+  const { name, value } = e.target;
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value, 
+  }));
+};
   
 
   // Handle file upload change
@@ -86,6 +89,9 @@ const AddProjectPage: React.FC = () => {
     formPayload.append("websiteLink", formData.websiteLink);
     formPayload.append("githubLink", formData.githubLink);
     formPayload.append("category", formData.category);
+    formPayload.append("industry", formData.industry);
+
+    console.log("Industry Value:", formData.industry);
 
     if (formData.projectScreenshot) {
       formPayload.append("projectScreenshot", formData.projectScreenshot);
@@ -176,12 +182,34 @@ const AddProjectPage: React.FC = () => {
               />
             </div>
 
-            {/* Category Field */}
+
+
+{/* Industry Field */}
 <div>
-  <label
-    htmlFor="category"
-    className="block text-sm font-medium text-gray-700"
+  <label htmlFor="industry" className="block text-sm font-medium text-gray-700">
+    Industry
+  </label>
+  <select
+    name="industry"
+    id="industry"
+    value={formData.industry}
+    onChange={handleChange}
+    required
+    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
   >
+    <option value="">Select an Industry</option>
+    <option value="healthcare">HealthCare</option>
+    <option value="e-commerce">E-Commerce</option>
+    <option value="hospitality">Hospitality</option>
+    <option value="real-estate">Real Estate</option>
+    <option value="restaurants">Restaurants</option>
+    <option value="green-energy">Green Energy</option>
+  </select>
+</div>
+
+{/* Category Field */}
+<div>
+  <label htmlFor="category" className="block text-sm font-medium text-gray-700">
     Category
   </label>
   <select
@@ -205,6 +233,7 @@ const AddProjectPage: React.FC = () => {
     <option value="social-media-marketing">Social Media Marketing & Branding</option>
   </select>
 </div>
+
 
 
             {/* Figma Link Field */}

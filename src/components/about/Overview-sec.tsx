@@ -9,16 +9,16 @@ const OverviewSec: React.FC = () => {
         {/* Text Section */}
         <div className="w-full mb-6 md:mb-12">
   <h1 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-4">
-    Overview
+  Saud Khan CEO Of Tech Creator
   </h1>
   <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify">
-    At TechCreator, our mission is to turn innovative ideas into powerful, scalable digital solutions. We are a passionate team of professionals dedicated to delivering high-quality web and mobile applications that cater to your business needs.
+  My name is <strong>Saud Khan,</strong> CEO of TecCreator based in Pakistan. 
   </p>
   <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify mt-4">
-    We leverage the latest technologies with a client-first approach, ensuring every project we undertake drives meaningful results. Whether launching a new app or enhancing your digital presence, we’re here to help you succeed in a rapidly evolving world.
+  As the world rapidly transforming into global village through digitalization, people are becoming more interconnected than ever before. It forms our vision to deliver innovative IT solutions that are agile, AI driven and designed to adapt to the ever-changing digital landscape. 
   </p>
   <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify mt-4">
-    Thank you for choosing TechCreator as your technology partner. Together, we'll transform your vision into reality.
+  I believe, we are not just creating digital assets but are fostering long-term partnership built on trust, collaboration and a shared vision for success.  In this era digital landscape, we are committed to provide our agile services to clients across the globe. We, TechCreator, are here to drive our head towards a future where innovation meets the demands of the people of future. 
   </p>
 </div>
 

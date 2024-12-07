@@ -23,6 +23,8 @@ import { setUser } from "@/redux/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { RootState } from "@/redux/store";
+import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png"
+
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -113,18 +115,16 @@ const Footer: React.FC = () => {
       ></div>
       <div className="relative mx-auto  px-3 mt-6">
         <div className="flex flex-wrap md:gap-10 gap-9 justify-between px-5">
-          <div className=" md:ml-8">
+          <div className=" ">
             <div className="flex items-center gap-2">
               <Image
-                src={Logo}
+                src={TechcreatorLogo}
                 alt="logo"
-                width={50}
+                width={158}
                 height={40}
-                className="w-10 h-10 md:w-12 md:h-12"
+                className=""
               />
-              <span className="text-white text-lg md:text-xl font-semibold">
-                Tech <br /> Creator
-              </span>
+              
             </div>
             <p className="max-w-sm md:max-w-md text-xs md:text-sm leading-5 w-[230px] md:leading-6 mt-5">
               We have been providing quality services since 2001. We provide our
@@ -234,12 +234,13 @@ const Footer: React.FC = () => {
             <h1 className="text-base  md:text-lg font-semibold">
               Industries We Serve
             </h1>
-            <ul className="space-y-4 text-sm">
-              <li>HealthCare</li>
-              <li>E-Commerce</li>
-              <li>Hospitality</li>
-              <li>Real Estate</li>
-              <li>Restaurants</li>
+            <ul className="flex flex-col gap-4 text-sm">
+              <Link href="/healthcare-projects" className="hover:text-purple-500"><li>HealthCare</li></Link>
+              <Link href="/e-Commerce-projects" className="hover:text-purple-500"><li>E-Commerce</li></Link>
+              <Link href="/hospitality-projects" className="hover:text-purple-500"><li>Hospitality</li></Link>
+              <Link href="/real-estate-projects" className="hover:text-purple-500"><li>Real Estate</li></Link>
+              <Link href="/restaurants-projects" className="hover:text-purple-500"><li>Restaurants</li></Link>
+              <Link href="/green-energy-projects" className="hover:text-purple-500"><li>Green Energy</li></Link>
             </ul>
           </div>
 

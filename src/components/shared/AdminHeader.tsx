@@ -25,6 +25,8 @@ import { backend_url } from "@/newLayout";
 import { setUser } from "@/redux/authSlice";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png"
+
 
 const AdminHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,12 +75,7 @@ const AdminHeader: React.FC = () => {
          <Link href="/">
          <div className="flex-shrink-0 flex justify-center gap-2 items-center">
             <div>
-              <Image src={Logo} alt="logo" width={48} height={50} />
-            </div>
-            <div>
-              <span className="text-[#FFFFFF] text-lg font-semibold">
-                TechCreator
-              </span>
+              <Image src={TechcreatorLogo} alt="logo" width={158} height={10} />
             </div>
           </div>
          </Link>

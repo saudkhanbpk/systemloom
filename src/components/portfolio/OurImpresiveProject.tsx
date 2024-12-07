@@ -6,6 +6,7 @@ import realstateImage from '../../../public/assets/portfolioImages/realstate.png
 import ecommerceImage from '../../../public/assets/portfolioImages/eccommerce.png';
 import HospitalityImage from '../../../public/assets/portfolioImages/hospitality.png';
 import greenEnergyImage from '../../../public/assets/portfolioImages/greenenergy.png';
+import Link from 'next/link';
 
 const OurImpressiveProject = () => {
   return (
@@ -49,9 +50,9 @@ const OurImpressiveProject = () => {
             className="transition-transform duration-300 ease-in-out w-full group-hover:scale-110"
           />
           {/* Title with Background */}
-          <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
+          <Link href="/restaurants-projects"><h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
           Restaurant
-          </h1>
+          </h1></Link>
         </div>
 
          {/* card 3 */}
@@ -66,7 +67,7 @@ const OurImpressiveProject = () => {
           />
           {/* Title with Background */}
           <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
-            Real State
+            Real Estate
           </h1>
         </div>
 
@@ -99,9 +100,12 @@ const OurImpressiveProject = () => {
             className="transition-transform w-full duration-300 ease-in-out group-hover:scale-110"
           />
           {/* Title with Background */}
+          <Link href="/hospitality-projects">
           <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
           Hospitality
           </h1>
+          </Link>
+          
         </div>
 
 

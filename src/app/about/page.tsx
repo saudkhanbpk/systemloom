@@ -11,7 +11,12 @@ import React from 'react';
 const About = () => {
   return (
     <div>
-      <Head>
+       <Head>
+        <title>TechCreator - A Software Company</title>
+        <meta
+          name="description"
+          content="TechCreator is a software company offering expert services in web development, app development, DevOps, Graphic Designing, Project Management, and more."
+        />
         <link rel="canonical" href="https://www.techcreator.co/about" />
       </Head>
       <AboutHeroSection/>
