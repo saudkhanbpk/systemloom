@@ -21,9 +21,9 @@ const getAllPostTitles = async () => {
   }
 };
 
-export async function GET() {
+export async function GET(req, res) {
   const posts = await getAllPostTitles();
-  console.log(posts);
+  // console.log(posts);
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
