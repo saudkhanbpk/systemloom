@@ -16,8 +16,8 @@ import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import ProjectWork from '@/components/services/ProjectWork';
 import Head from "next/head";
+import WebDevRelatedProjects from '@/components/services/WebDevRelatedProjects';
 
 
 const WebDevelopment = () => {
@@ -254,12 +254,10 @@ const WebDevelopment = () => {
     </div>
   </div>
 </div>
-
-
 {/* FramedFeatureSection section end */}
 
 {/* RecentWorks section start */}
-<ProjectWork/>
+<WebDevRelatedProjects/>
 {/* RecentWorks section end */}
 
 
