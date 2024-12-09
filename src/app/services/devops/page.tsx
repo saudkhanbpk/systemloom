@@ -9,13 +9,6 @@ import devopimage4 from "../../../../public/assets/graphice design images/devopi
 import devopimage5 from "../../../../public/assets/graphice design images/devopimage5.png"
 
 
-// image for RecentWorks
-import image from '../../../../public/assets/RecentWork/unsplash_IyaNci0CyRk.png';
-import image1 from '../../../../public/assets/RecentWork/unsplash_7ZWVnVSaafY.png';
-import image2 from '../../../../public/assets/RecentWork/unsplash_qC2n6RQU4Vw.png';
-import image3 from '../../../../public/assets/RecentWork/unsplash_m_HRfLhgABo.png';
-import { Pencil, Heart } from 'lucide-react';
-
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
 import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
@@ -24,6 +17,7 @@ import developmentDesignImage from "../../../../public/assets/relatedServices/Fr
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import DevopsRelatedProjects from '@/components/services/DevopsRelatedProjects';
+import Head from 'next/head';
 
 
 const Devops = () => {
@@ -72,15 +66,21 @@ const Devops = () => {
   return (
     <div >
 
+<Head>
+    <title>DevOps Consulting | Expert DevOps Automation & Business Solutions</title>
+    <meta
+      name="description"
+      content="Discover professional DevOps consulting services at TechCreator. Our expert DevOps consultants deliver tailored business DevOps solutions, automation, and process optimization."
+    />
+  </Head>
+
       {/* hero section start */}
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10 md:px-12  mt-20">
-    <h1 className="text-3xl lg:text-5xl font-bold">DEOps Services & Optimization</h1>
+    <h1 className="text-3xl lg:text-5xl font-bold">Expert DevOps Consulting</h1>
     <p className="text-base md:text-lg mt-3">
-      At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
-      Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 
-      Join us in the journey of transforming your vision into cutting-edge technology.
+    TechCreator provides professional DevOps consulting services to help businesses optimize their development and operations workflows. Our experienced DevOps consultants assess your current processes and implement tailored solutions to enhance efficiency, scalability, and collaboration across teams.
     </p>
   </div>
 
@@ -113,8 +113,8 @@ const Devops = () => {
   </div>
   <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
     <div className="text-white xl:py-20 lg:px-40">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Heading</h1>
-      <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and </p>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Partner with One of the Leading DevOps Companies</h1>
+      <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">As one of the trusted DevOps companies, we deliver innovative solutions designed to meet your business needs. From infrastructure management to process automation, our team ensures seamless integration of development and IT operations for faster and more reliable software delivery. </p>
     </div>
   </div>
 </div>
@@ -178,9 +178,9 @@ const Devops = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Transform Processes with DevOps Automation</h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    Our DevOps automation services eliminate manual tasks and streamline workflows, reducing errors and deployment times. We utilize advanced tools to automate testing, integration, and delivery, empowering your business to operate with greater agility and precision.
     </p>
   </div>
 </div>
@@ -192,9 +192,9 @@ const Devops = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Empowering Growth with Business </h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    Our business DevOps solutions are designed to align development practices with organizational goals. By enhancing collaboration between teams, we help businesses reduce time-to-market, improve quality, and achieve consistent performance.
     </p>
   </div>
   <Image
@@ -219,9 +219,9 @@ const Devops = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Get a Tailored Support</h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    Work with a dedicated DevOps consultant to implement strategies that cater to your unique challenges. Whether you need help with cloud migration, CI/CD pipelines, or workflow optimization, our consultants deliver results-driven guidance and ongoing support.
     </p>
   </div>
 </div>
@@ -231,29 +231,24 @@ const Devops = () => {
 
 
 {/* FramedFeatureSection section start */}
-<div className="w-full mx-auto bg-white rounded-lg  overflow-hidden mb-10 max-w-6xl px-4 sm:px-6 lg:px-4">
-  <div className="flex flex-col md:flex-row items-center">
-    {/* Text Section */}
-    <div className="w-full  bg-[#9A00FF] p-6 md:p-12 text-white">
-      <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
-        Heading
-      </h2>
-      <p className="text-base w-full md:text-lg text-wrap leading-relaxed md:w-[400px]">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and
+<div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+  <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
+    {/* Text Content */}
+    <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Driving Efficiency with DevOps Automation</h1>
+      <p className="text-base md:text-lg text-white webDevtext ">
+      We recently partnered with a tech startup to implement DevOps automation, reducing their deployment time by 60%. Additionally, our DevOps consulting services helped an enterprise migrate to a cloud-based infrastructure, enabling seamless scalability and enhanced security.
       </p>
     </div>
-
-    {/* Image Section */}
-  
-      <div className="relative bg-gray-100">
-        <Image
-          src={devopimage5}
-          alt="Feature illustration"
-          width={300}
-          height={300}
-          className='w-[500px] md:h-[500px] h-[300px] object-cover'
-        />
-      
+    {/* Image */}
+    <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
+      <Image
+        src={devopimage5}
+        alt="Feature illustration"
+        width={400}
+        height={500}
+        className="rounded-lg mx-auto  md:mx-0"
+      />
     </div>
   </div>
 </div>

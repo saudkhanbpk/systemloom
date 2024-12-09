@@ -81,27 +81,40 @@ const Footer: React.FC = () => {
   // Handle form submission
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     if (!email) {
       toast.error("Email is required!");
       return;
     }
+  
+    // Validate email format
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!emailRegex.test(email)) {
+    //   toast.error("Please enter a valid email address!");
+    //   return;
+    // }
+  
     setLoading(true);
-
+  
     try {
-      const res = await axios.post(`${backend_url}/api/v1/subscribeuser`, {
-        email,
+      const res = await axios.post(`${backend_url}/api/v1/subscribeuser`, { email },{
+        headers: {
+          'Content-Type': 'application/json',
+        }
       });
-
+  console.log("email", res)
       if (res.data.success) {
         toast.success(res.data.message);
         setEmail(""); // Clear email input after successful subscription
       } else {
-        toast.error(res.data.message);
+        toast.error(res.data.message || "Subscription failed!");
       }
     } catch (error: any) {
-      console.error("Error:", error);
-      toast.error(error?.response?.data?.message);
+      console.error("Error during subscription:", error);
+  
+      // Fallback error message
+      const message = error?.response?.data?.message || "Something went wrong. Please try again.";
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -197,34 +210,20 @@ const Footer: React.FC = () => {
               <h1 className="text-2xl font-bold">Subscribe</h1>
               <p className="mt-2">Stay updated with the latest in tech.</p>
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="mt-2">
-                  Email<span className="text-red-600">*</span>
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                  className="outline-none w-full md:w-[300px] p-2 rounded-md text-black"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-               <button
-  className={`bg-purple-600 text-white w-fit p-2 mt-3 px-4 rounded-md ${
-    loading ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
-  }`}
-  onClick={handleSubscribe}
-  disabled={loading}
->
-  {loading ? (
-    <span
-      className="spinner-border spinner-border-sm text-white"
-      role="status"
-      aria-hidden="true"
-    ></span>
-  ) : (
-    "Submit"
-  )}
-</button>
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+  <input
+    type="email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    placeholder="Enter your email"
+    disabled={loading}
+    required
+    className="text-black p-2 outline-none rounded-md "
+  />
+  <button type="submit" disabled={loading} className="bg-purple-600 rounded-md p-2 w-fit">
+    {loading ? "Subscribing..." : "Subscribe"}
+  </button>
+</form>
 
               </div>
             </div>

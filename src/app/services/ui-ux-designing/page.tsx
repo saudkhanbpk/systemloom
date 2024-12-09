@@ -9,13 +9,6 @@ import uxdesignimage4 from "../../../../public/assets/graphice design images/uxd
 import uxdesignimage5 from "../../../../public/assets/graphice design images/uxeesign5.png"
 
 
-// image for RecentWorks
-import image from '../../../../public/assets/RecentWork/unsplash_IyaNci0CyRk.png';
-import image1 from '../../../../public/assets/RecentWork/unsplash_7ZWVnVSaafY.png';
-import image2 from '../../../../public/assets/RecentWork/unsplash_qC2n6RQU4Vw.png';
-import image3 from '../../../../public/assets/RecentWork/unsplash_m_HRfLhgABo.png';
-import { Pencil, Heart } from 'lucide-react';
-
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
 import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";

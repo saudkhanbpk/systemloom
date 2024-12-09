@@ -24,6 +24,7 @@ import developmentDesignImage from "../../../../public/assets/relatedServices/Fr
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import SeoContentWritingRelatedProjects from '@/components/services/SerContentWritingRelatedProjects';
+import Head from 'next/head';
 
 
 const SeoContentWriting = () => {
@@ -71,16 +72,20 @@ const SeoContentWriting = () => {
 
   return (
     <div >
-
+<Head>
+    <title>SEO Content Writing Services | Technical SEO Agency & Consulting</title>
+    <meta
+      name="description"
+      content="TechCreator offers expert SEO content writing services and SEO consulting services. Partner with a leading technical SEO agency to boost visibility with a tailored SEO content strategy."
+    />
+  </Head>
       {/* hero section start */}
     <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
   {/* Left Section */}
   <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10 md:px-12  mt-20">
-    <h1 className="text-3xl lg:text-5xl font-bold">SEO & Content Writing Services</h1>
+    <h1 className="text-3xl lg:text-5xl font-bold">SEO Content Writing Services</h1>
     <p className="text-base md:text-lg mt-3">
-      At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. 
-      Our portfolio showcases a range of successful projects that have turned ideas into impactful digital realities. 
-      Join us in the journey of transforming your vision into cutting-edge technology.
+    At TechCreator, we provide professional SEO content writing services designed to align with your business goals and improve search engine visibility. With a focus on quality and relevance, our content engages audiences and supports a comprehensive SEO content strategy that drives measurable results.
     </p>
   </div>
 
@@ -113,8 +118,8 @@ const SeoContentWriting = () => {
   </div>
   <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
     <div className="text-white xl:py-20 lg:px-40">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Heading</h1>
-      <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and </p>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-3">Go-To Technical SEO Agency</h1>
+      <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">As a trusted <strong>technical SEO agency,</strong>. we ensure every piece of content is optimized for search engine success. From metadata to keyword placement, our team blends technical expertise with creative writing to help your site rank higher and convert better. </p>
     </div>
   </div>
 </div>
@@ -178,9 +183,9 @@ const SeoContentWriting = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Strategic Consulting for Better Visibility</h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    Beyond content creation, we offer <strong>SEO consulting services</strong> to help you craft a results-driven strategy. Whether you need guidance on keyword research or optimizing existing pages, our consultants ensure your content aligns with your broader SEO goals.
     </p>
   </div>
 </div>
@@ -192,9 +197,9 @@ const SeoContentWriting = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Optimization For Every Business Niche</h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    Our <strong>SEO content strategy</strong> focuses on natural keyword integration that aligns with search intent. By incorporating industry-specific keywords, we help your website attract targeted traffic and boost engagement, leading to improved rankings and conversions.
     </p>
   </div>
   <Image
@@ -219,9 +224,9 @@ const SeoContentWriting = () => {
 
   {/* Text Section */}
   <div className="w-full md:w-[40vw] text-center md:text-left">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Heading</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">Enhance Authority with Technical SEO Expertise</h1>
     <p className="text-base md:text-xl text-gray-700">
-      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    Combining <strong>SEO content writing services</strong> with technical SEO knowledge, we ensure that your website content not only attracts but also retains visitors. From readability improvements to optimized linking structures, we deliver content that supports long-term growth.
     </p>
   </div>
 </div>
@@ -231,29 +236,24 @@ const SeoContentWriting = () => {
 
 
 {/* FramedFeatureSection section start */}
-<div className="w-full mx-auto bg-white rounded-lg  overflow-hidden mb-10 max-w-6xl px-4 sm:px-6 lg:px-4">
-  <div className="flex flex-col md:flex-row items-center">
-    {/* Text Section */}
-    <div className="w-full  bg-[#9A00FF] p-6 md:p-12 text-white">
-      <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
-        Heading
-      </h2>
-      <p className="text-base w-full md:text-lg text-wrap leading-relaxed md:w-[400px]">
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and
+<div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+  <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
+    {/* Text Content */}
+    <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Results That Speak for Themselves</h1>
+      <p className="text-base md:text-lg text-white webDevtext ">
+      In a recent project, we partnered with an e-commerce platform to revamp their <strong>SEO content strategy,</strong> resulting in a 50% increase in organic traffic. Additionally, as a <strong>technical SEO agency,</strong> we helped a tech company optimize its blog content, improving keyword rankings and audience engagement.
       </p>
     </div>
-
-    {/* Image Section */}
-  
-      <div className="relative bg-gray-100">
-        <Image
-          src={seoimage5}
-          alt="Feature illustration"
-          width={300}
-          height={300}
-          className='w-[500px] md:h-[500px] h-[300px] object-cover'
-        />
-      
+    {/* Image */}
+    <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
+      <Image
+        src={seoimage5}
+        alt="Project Management Portfolio  by TechCreator"
+        width={400}
+        height={500}
+        className="rounded-lg mx-auto  md:mx-0"
+      />
     </div>
   </div>
 </div>

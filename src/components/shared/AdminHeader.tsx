@@ -94,7 +94,7 @@ const AdminHeader: React.FC = () => {
           </div>
 
           {/* Person Icon with Dropdown */}
-          <div className="hidden md:block relative">
+          {/* <div className="hidden md:block relative">
             <Image
               src={personIcon}
               alt="person_image"
@@ -131,7 +131,7 @@ const AdminHeader: React.FC = () => {
                 )}
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center">
