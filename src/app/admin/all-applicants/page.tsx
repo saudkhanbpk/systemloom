@@ -25,7 +25,7 @@ const ApplicantsPage = () => {
   return (
     <ProtectedRoute>
     <AdminLayout>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 mt-20">
 
         {/* Search Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-4">

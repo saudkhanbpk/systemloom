@@ -7,6 +7,7 @@ interface Project {
   figmaLink?: string;
   websiteLink?: string;
   githubLink?: string;
+  industry: string;
   projectScreenshot?: string;
   originalScreenshotName?: string;
   createdAt: Date;

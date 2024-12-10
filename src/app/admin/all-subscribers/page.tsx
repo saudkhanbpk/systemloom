@@ -87,7 +87,7 @@ const AllSubscriber = () => {
   return (
     <ProtectedRoute>
       <AdminLayout>
-        <div className="p-8">
+        <div className="p-8 mt-20">
           <div className="flex flex-col md:flex-row justify-between items-center mb-6">
             <h1 className="text-2xl font-semibold text-gray-700 mb-4 md:mb-0">
               All Subscribers: {filteredSubscribers.length}
@@ -97,7 +97,7 @@ const AllSubscriber = () => {
               value={searchQuery}
               onChange={handleSearch}
               placeholder="Search by email"
-              className="px-4 py-2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 border border-black rounded-lg shadow-sm outline-none"
             />
           </div>
 

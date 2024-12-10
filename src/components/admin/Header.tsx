@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch, buttonType }) => {
   }
 
   return (
-    <div className=''>
+    <div className=' mt-20'>
       <header className="flex flex-col mt-6  sm:mt-0 max-w-6xl md:flex-row justify-between items-center space-y-4 md:space-y-0  md:ml-11 ">
         <div className="flex items-center  ">
            <Link

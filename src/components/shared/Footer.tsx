@@ -24,6 +24,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { RootState } from "@/redux/store";
 import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png"
+import AppointmentSection from "./AppointmentSection";
 
 
 const Footer: React.FC = () => {
@@ -102,7 +103,7 @@ const Footer: React.FC = () => {
           'Content-Type': 'application/json',
         }
       });
-  console.log("email", res)
+  // console.log("email", res)
       if (res.data.success) {
         toast.success(res.data.message);
         setEmail(""); // Clear email input after successful subscription
@@ -368,23 +369,16 @@ const Footer: React.FC = () => {
                 <span>+1 (321) 407-3272</span>
               </p>
 
-              <div className="flex gap-1 mt-4">
-                <CommonButton
-                  className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
-                  title="Consultancy"
-                  handleClick={() =>
-                    router.push("https://mentoga.com/saudkhan")
-                  }
-                />
+              <div className="flex gap-1 mt-4 items-center">
+              <CommonButton
+  className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
+  title="Consultancy"
+  handleClick={() => window.open("https://mentoga.com/saudkhan", "_blank")} 
+/>
 
-                <CommonButton
-                  className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
-                  title="Appointment"
-                  handleClick={() =>
-                    router.push("https://calendly.com/saudkhanbpk/")
-                  }
-                />
-              </div>
+  <AppointmentSection />
+</div>
+
             </div>
           </div>
         </div>

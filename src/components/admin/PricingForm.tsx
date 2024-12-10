@@ -129,7 +129,7 @@ const PricingForm = () => {
     }, [showModal]);
 
   return (
-    <div>
+    <div className='mt-20'>
       <div className="flex md:flex-row flex-col text-center md:text-start mt-6 md:mt-2 justify-between">
         <div>
           <h1 className="text-3xl font-bold mb-2">Pricing List</h1>

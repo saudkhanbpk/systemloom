@@ -82,7 +82,7 @@ const Testimonial = () => {
   return (
     <ProtectedRoute>
       <AdminLayout>
-        <div className="flex md:flex-row flex-col mt-2 gap-4 justify-between items-center mb-4">
+        <div className="flex md:flex-row flex-col gap-4 mt-20 justify-between items-center mb-4">
           <Link href="/admin/testimonials/add-testimonial">
             <button className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition">
               Add Testimonial

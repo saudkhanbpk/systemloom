@@ -89,7 +89,7 @@ const AllBlogs: React.FC = () => {
   
   
   return (
-    <main className="max-w-7xl mx-auto bg-inline lg:p-6">
+    <main className="max-w-7xl mx-auto bg-inline lg:p-6 mt-20">
       <header className="flex flex-col md:flex-row justify-between md:items-center mb-4 space-y-4 md:space-y-0">
         <div className="flex items-center justify-center md:justify-start space-x-4">
           {/* <button

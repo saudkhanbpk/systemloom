@@ -9,13 +9,14 @@ import { backend_url } from '@/newLayout';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
+import useGetAllProjects from '@/hooks/useGetAllProjects';
 
 interface OurProjectsGridProps {
   searchTerm: string;
 }
 
 const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
-  // useGetAllProjects();
+  useGetAllProjects();
   const { projects } = useSelector((state: RootState) => state.projects);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -76,11 +77,11 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
   return (
     <div>
       {/* Project Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl sm:ml-11">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 max-w-6xl mt-6 sm:ml-11">
         {currentProjects.map((project) => (
           <div
             key={project._id}
-            className="relative max-w-6xl mx-auto rounded-xl overflow-hidden cursor-pointer my-10 group"
+            className="relative max-w-6xl mx-auto rounded-xl overflow-hidden cursor-pointer border border-gray-600 group"
           >
             <Image
               src={project.projectScreenshot || '/default-image.jpg'} // Fallback image if no screenshot is available
