@@ -112,9 +112,9 @@ const HospitalityProject: React.FC = () => {
       </div>
 
       {/* Projects section */}
-      <div className="max-w-7xl mx-auto my-10 grid gap-8 md:grid-cols-2 sm:grid-cols-1">
+      <div className="flex md:flex-row flex-col justify-center w-[85vw] gap-3 mx-auto border my-10">
         {currentProjects.map((project) => (
-          <div key={project.id} className="flex flex-col bg-white border border-black text-gray-800 rounded-md overflow-hidden">
+          <div key={project.id} className="flex flex-col  bg-white border border-black text-gray-800 rounded-md overflow-hidden">
             <div>
               <Image
                 src={project.projectScreenshot}

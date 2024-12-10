@@ -17,7 +17,7 @@ const BlogHeroSection: React.FC = () => {
           <div className="relative max-w-[1440px] mx-auto px-2 lg:px-8 py-24 md:py-32">
             <div className="flex justify-center items-center h-[70vh]">
               <h1 className="font-semibold text-[58px] font-poppins leading-[65px] text-center mb-6">
-                our latest news and updates
+                Our latest news and updates
               </h1>
             </div>
           </div>

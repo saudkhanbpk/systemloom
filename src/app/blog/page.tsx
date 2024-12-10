@@ -53,7 +53,7 @@ const Blog: React.FC = () => {
   return (
     <div>
       <Head>
-        <link rel="canonical" href={`https://www.techcreator.co/blog/${blogs[0]?._id}`} />
+        <link rel="canonical" href='https://www.techcreator.co/blog'/>
         <script type="application/ld+json">
           {JSON.stringify(blogSchema)}
         </script>

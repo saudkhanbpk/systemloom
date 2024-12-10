@@ -40,14 +40,14 @@ export default Companies;
 
 export const CTASection = () => {
   return (
-    <section className="mb-32 ">
+    <section className="mb-32 mt-16 ">
       <div className=" mx-auto w-[95%] h-auto md:h-[300px]">
-        <div className="flex flex-col items-center   md:flex-row justify-around">
+        <div className="flex flex-col    md:flex-row justify-around">
           <div className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
               "Looking for top developers and designers? Let's build something great together. Get in touch today!"
             </h2>
-            <div className="flex justify-center md:justify-start">
+            {/* <div className="flex justify-center md:justify-start">
               <div className="relative md:left-8">
                 <div>
                   
@@ -62,8 +62,8 @@ export const CTASection = () => {
                   />
                   </Link>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
           <div className=" ">
             <Image

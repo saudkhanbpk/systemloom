@@ -92,12 +92,12 @@ const JobsCard = () => {
 
   return (
     <>
-    <div className=" py-12   px-1">
-      <div>
+    <div className=" py-12 max-w-6xl mx-auto  px-1">
+      <div className=' '>
         <p className="font-inter font-semibold text-[42px]">Open positions</p>
         <p className="font-inter font-normal text-[22px] text-[#838696]">Come join the team!</p>
       </div>
-      <div className="flex flex-wrap py-14  md:gap-5 max-w-6xl mx-auto justify-center  gap-4  ">
+      <div className="flex flex-wrap py-14  md:gap-5  justify-center  gap-4  ">
       {allJobs?.map((job) => (
             <div key={job._id} onClick={() => openModal(job)} className=' cursor-pointer '>
               <JobCard

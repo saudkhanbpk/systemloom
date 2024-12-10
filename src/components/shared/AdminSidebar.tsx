@@ -27,7 +27,7 @@ const AdminSidebar: React.FC = () => {
   ];
 
   return (
-    <div className="relative  ">
+    <div className="relative mt-16 ">
       {/* Button to toggle sidebar on small screens */}
       <button 
         className="sm:hidden p-2 bg-[#0f080a] text-white absolute   left-0 z-50"

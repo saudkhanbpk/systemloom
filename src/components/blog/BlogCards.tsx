@@ -37,10 +37,10 @@ const BlogCards: React.FC = () => {
 
   return (
     <div>
-    <div className="container mb-10 mt-10 mx-auto cursor-pointer max-w-7xl grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 w-full">
+    <div className="container mb-10 mt-10 mx-auto cursor-pointer  max-w-7xl border grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-3 gap-3 w-full">
       {currentBlogs.map((blog: any) => (
-        <div key={blog._id} className="p-2">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full space-x-2 h-auto sm:h-[350px]">
+        <div key={blog._id} className="">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full  h-auto sm:h-[350px]">
             <Image
               src={blog.image?.imageUrl || '/path/to/default-image.jpg'}
               alt={blog.image?.altDescription || blog.title}
@@ -54,7 +54,7 @@ const BlogCards: React.FC = () => {
                   {blog.title}
                 </h2>
               </Link>
-              <p className="text-gray-600 mb-4">{truncateText(blog.content, 100)}</p>
+              <p className="text-gray-600 mb-4">{truncateText(blog.description, 100)}</p>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const OurImpressiveProject = () => {
   return (
-    <div className="max-w-7xl mx-auto my-20 px-4">
+    <div className=" my-20 px-4">
       {/* Heading */}
       <div className="text-center">
         <h1 className="text-2xl md:text-4xl font-bold">
@@ -22,9 +22,9 @@ const OurImpressiveProject = () => {
       </div>
 
       {/* Project Section */}
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-16 flex flex-wrap justify-center gap-8">
         {/* Single Project Card 1 */}
-        <div className="relative group overflow-hidden rounded-lg shadow-lg border">
+        <div className="relative group overflow-hidden rounded-lg shadow-lg md:w-[380px] border">
           {/* Project Image */}
           <Image
             src={healthcareImage}
@@ -40,7 +40,7 @@ const OurImpressiveProject = () => {
         </div>
 
         {/* card 2 */}
-        <div className="relative group overflow-hidden rounded-lg shadow-lg">
+        <div className="relative group overflow-hidden rounded-lg md:w-[380px] shadow-lg">
           {/* Project Image */}
           <Image
             src={restaurantImage}
@@ -56,7 +56,7 @@ const OurImpressiveProject = () => {
         </div>
 
          {/* card 3 */}
-         <div className="relative group overflow-hidden rounded-lg shadow-lg">
+         <div className="relative group overflow-hidden rounded-lg md:w-[380px] shadow-lg">
           {/* Project Image */}
           <Image
             src={realstateImage}
@@ -73,7 +73,7 @@ const OurImpressiveProject = () => {
 
 
          {/* card 4 */}
-         <div className="relative group overflow-hidden rounded-lg shadow-lg">
+         <div className="relative group overflow-hidden rounded-lg md:w-[380px] shadow-lg">
           {/* Project Image */}
           <Image
             src={ecommerceImage}
@@ -90,7 +90,7 @@ const OurImpressiveProject = () => {
 
 
          {/* card 5 */}
-         <div className="relative group overflow-hidden rounded-lg shadow-lg">
+         <div className="relative group overflow-hidden rounded-lg md:w-[380px] shadow-lg">
           {/* Project Image */}
           <Image
             src={HospitalityImage}
@@ -110,7 +110,7 @@ const OurImpressiveProject = () => {
 
 
          {/* card 6 */}
-         <div className="relative group overflow-hidden rounded-lg shadow-lg">
+         <div className="relative group overflow-hidden rounded-lg md:w-[380px] shadow-lg">
           {/* Project Image */}
           <Image
             src={greenEnergyImage}
