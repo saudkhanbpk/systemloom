@@ -90,7 +90,7 @@ const HospitalityProject: React.FC = () => {
       </div>
 
       {/* Projects section */}
-      <div className="flex md:flex-row flex-col justify-center w-[85vw] gap-3 mx-auto border my-10">
+      <div className="flex md:flex-row flex-col justify-center w-[85vw] gap-3 mx-auto  my-10">
         {currentProjects.map((project) => (
           <div
             key={project._id}

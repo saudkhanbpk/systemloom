@@ -11,11 +11,20 @@ interface Profile {
 }
 
 const profiles: Profile[] = [
+  // {
+  //   name: "Saud Khan",
+  //   position: "CEO",
+  //   imageUrl: "/assets/Teamimages/saudkhan.jpg",
+  //   linkedInUrl: "https://www.linkedin.com/in/saudkhan39",
+  //   width: 300,
+  //   height: 300,
+  // },
+
   {
-    name: "Saud Khan",
-    position: "CEO",
-    imageUrl: "/assets/Teamimages/saudkhan.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/saudkhan39",
+    name: "Saad",
+    position: "Angular Developer ",
+    imageUrl: "/assets/Teamimages/saad.jpg",
+    linkedInUrl: "https://www.linkedin.com/in/saad-khan-42716a222",
     width: 300,
     height: 300,
   },

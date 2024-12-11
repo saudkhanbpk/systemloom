@@ -1,42 +1,75 @@
 import React from "react";
-import Image from "next/image"; 
-import CommonButton from "../common/Button"; 
-import company1 from "../../../public/assets/companies/image 182.png";
-import company2 from "../../../public/assets/companies/image 152.png";
-import company3 from "../../../public/assets/companies/image 150.png";
-import company4 from "../../../public/assets/companies/image 181.png";
-import company5 from "../../../public/assets/companies/image 149.png";
-import company6 from "../../../public/assets/companies/Group 40.png";
+import Image from "next/image";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css"; // Import default styles
+import company1 from "../../../public/assets/companies/petronworklogo.png";
+import company2 from "../../../public/assets/companies/GeekshubLogo.png";
+import company3 from "../../../public/assets/companies/bnblogo.png";
+import company4 from "../../../public/assets/companies/musafirLogo.svg";
+import company5 from "../../../public/assets/companies/PatronPal logo.png";
 import company7 from "../../../public/assets/companies/Rectangle 21848.png";
 import Link from "next/link";
+import CommonButton from "../common/Button";
 
 const Companies = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1024 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 480 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 480, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
-    <React.Fragment>
-      <div className="bg-[#FFFFFF] h-auto py-5 px-4 md:px-10 md:mb-0 border mb-8">
-        <div className="flex flex-wrap justify-between items-center gap-7 md:gap-0 mx-auto">
-          <div className="flex justify-center items-center mb-2 mx-auto sm:mx-0">
-            <Image src={company1} alt="Company 1" width={140} height={45} />
-          </div>
-          <div className="flex justify-center items-center mb-2 mx-auto sm:mx-0">
-            <Image src={company2} alt="Company 2" width={140} height={45} />
-          </div>
-          <div className="flex justify-center items-center mb-2 mx-auto sm:mx-0">
-            <Image src={company3} alt="Company 3" width={140} height={45} />
-          </div>
-          <div className="flex justify-center items-center mb-2 mx-auto sm:mx-0">
-            <Image src={company4} alt="Company 4" width={140} height={45} />
-          </div>
-          <div className="flex justify-center items-center mb-2 mx-auto sm:mx-0">
-            <Image src={company5} alt="Company 5" width={140} height={45} />
-          </div>
+    <div className="bg-gray-400 py-5 px-4 md:px-10 md:mb-0 border mb-8">
+      <Carousel
+  responsive={responsive}
+  infinite={true}
+  autoPlay={true}
+  autoPlaySpeed={3000} 
+  transitionDuration={800} 
+  removeArrowOnDeviceType={["tablet", "mobile"]} 
+  arrows={false} 
+  containerClass="carousel-container"
+  centerMode={true} 
+  swipeable={true} 
+  draggable={true} 
+  customTransition="transform 0.8s ease-in-out" 
+  dotListClass="custom-dot-list-style" 
+>
+        <div className="flex justify-center items-center mb-2 mx-auto  mt-11 sm:mx-0">
+          <Image src={company1} alt="Company 1" width={140} height={45} />
         </div>
-      </div>
-    </React.Fragment>
+        <div className="flex justify-center items-center mb-2   mx-auto sm:mx-0">
+          <Image src={company2} alt="Company 2" width={140} height={45} />
+        </div>
+        <div className="flex justify-center items-center mt-9  mb-2 mx-auto sm:mx-0">
+          <Image src={company4} alt="Company 4" width={140} height={45} />
+        </div>
+        <div className="flex justify-center items-center mb-2 mx-auto sm:mx-0">
+          <Image src={company3} alt="Company 3" width={140} height={45} />
+        </div>
+        <div className="flex justify-center items-center mt-10  mb-2 mx-auto sm:mx-0">
+          <Image src={company5} alt="Company 5" width={140} height={45} />
+        </div>
+      </Carousel>
+    </div>
   );
 };
 
 export default Companies;
+
 
 export const CTASection = () => {
   return (
@@ -47,23 +80,13 @@ export const CTASection = () => {
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
               "Looking for top developers and designers? Let's build something great together. Get in touch today!"
             </h2>
-            {/* <div className="flex justify-center md:justify-start">
-              <div className="relative md:left-8">
-                <div>
-                  
-                  <Image src={company6} alt="button_image" width={123.83} height={191} />
-                </div>
-                <div className="absolute top-16 -right-[72px]">
-                <Link href="/contact">
+            <Link href="/contact">
                   <CommonButton
                     title="Hire Top Developers"
-                    className="bg-[#9A00FF] text-white font-semibold py-3 px-6 rounded-[5px] w-[220px]"
+                    className="bg-[#9A00FF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5"
                     handleClick={() => console.log("")}
                   />
                   </Link>
-                </div>
-              </div> */}
-            {/* </div> */}
           </div>
           <div className=" ">
             <Image

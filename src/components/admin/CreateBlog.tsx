@@ -146,7 +146,7 @@ const CreateBlogForm = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div className="max-w-5xl mx-auto bg-white p-6 rounded-lg mt-20 shadow-md">
       <form onSubmit={handleSubmit}>
         {/* Image Upload Section */}
         <div className="border-dashed border-2 border-gray-300 p-6 text-center rounded-lg mb-6">
@@ -272,7 +272,7 @@ const CreateBlogForm = () => {
   <IoIosAddCircle
   size={32}
     onClick={handleTagAdd}
-    className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-blue-500"
+    className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-purple-600"
   />
 </div>
 
@@ -283,7 +283,7 @@ const CreateBlogForm = () => {
         <div className="mb-4 text-center">
           <button
             type="submit"
-            className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-700 focus:outline-none"
+            className="bg-purple-600 text-white py-2 px-6 rounded-lg hover:bg-purple-700 focus:outline-none"
           >
             {blogId ? "Update Blog" : "Create Blog"}
           </button>

@@ -25,6 +25,7 @@ import { toast } from "react-toastify";
 import { RootState } from "@/redux/store";
 import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png"
 import AppointmentSection from "./AppointmentSection";
+import { AiOutlineMail } from 'react-icons/ai';
 
 
 const Footer: React.FC = () => {
@@ -207,9 +208,9 @@ const Footer: React.FC = () => {
               </a>
             </div>
 
-            <div className="mt-3">
+            <div className="mt-6">
               <h1 className="text-2xl font-bold">Subscribe</h1>
-              <p className="mt-2">Stay updated with the latest in tech.</p>
+              <p className="mt-2 mb-2">Stay updated with the latest in tech.</p>
               <div className="flex flex-col gap-2">
               <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
   <input
@@ -347,7 +348,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-base md:text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
-              <p className="text-xs md:text-sm">
+              <p className="text-xs md:text-sm flex items-center gap-2">
+              <span className=""><AiOutlineMail size={28} color="#9A00FF" /></span>
                 <a href="mailto:contact@techcreator.co">
                   contact@techcreator.co
                 </a>
@@ -369,12 +371,12 @@ const Footer: React.FC = () => {
                 <span>+1 (321) 407-3272</span>
               </p>
 
-              <div className="flex gap-1 mt-4 items-center">
-              <CommonButton
+              <div>
+              {/* <CommonButton
   className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
   title="Consultancy"
   handleClick={() => window.open("https://mentoga.com/saudkhan", "_blank")} 
-/>
+/> */}
 
   <AppointmentSection />
 </div>

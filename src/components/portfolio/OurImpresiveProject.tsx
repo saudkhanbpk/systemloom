@@ -24,7 +24,7 @@ const OurImpressiveProject = () => {
       {/* Project Section */}
       <div className="mt-16 flex flex-wrap justify-center gap-8">
         {/* Single Project Card 1 */}
-        <div className="relative group overflow-hidden rounded-lg shadow-lg md:w-[380px] border">
+        <div className="relative group overflow-hidden rounded-lg shadow-lg md:w-[380px] ">
           {/* Project Image */}
           <Image
             src={healthcareImage}

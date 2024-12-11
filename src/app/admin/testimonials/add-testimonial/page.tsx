@@ -112,7 +112,7 @@ const AddNewTestimonial: React.FC = () => {
   return (
     <ProtectedRoute>
     <AdminLayout>
-      <div className=" mx-auto  ">
+      <div className=" mx-auto mt-20 ">
         <h1 className="text-2xl font-bold mb-4 text-center">Add New Testimonial</h1>
         <form onSubmit={handleSubmit} className="space-y-4 rounded-md shadow-lg p-4 border max-w-4xl  mx-auto ">
           {/* Profile Picture */}
@@ -211,13 +211,16 @@ const AddNewTestimonial: React.FC = () => {
           </div>
 
           {/* Submit Button */}
+          <div className="flex justify-end">
           <button
             type="submit"
-            className={`w-full ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500"} text-white py-2 rounded-md hover:bg-blue-600 transition`}
+            className={` ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-purple-600"} text-white  p-2 w-fit py-2 rounded-md hover:bg-purple-700 transition`}
             disabled={loading}
           >
             {loading ? "Submitting..." : "Submit Testimonial"}
           </button>
+          </div>
+          
         </form>
       </div>
     </AdminLayout>

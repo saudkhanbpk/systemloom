@@ -119,7 +119,7 @@ const Page = () => {
                     </td>
                     <td className="border p-1 text-center">
                       <button onClick={() => handleDelete(row._id)}>
-                        <FaTrash className="text-red-500" />
+                        <FaTrash className="text-red-600" />
                       </button>
                     </td>
                   </tr>
@@ -129,25 +129,28 @@ const Page = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-between items-center mt-4">
-            <button
-              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-              disabled={currentPage === 1}
-              className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
-            >
-              Previous
-            </button>
-            <span>
-              Page {currentPage} of {totalPages}
-            </span>
-            <button
-              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-              disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
-            >
-              Next
-            </button>
-          </div>
+          <div className="">
+  <div className="flex justify-between items-center mt-4 py-2 px-4">
+    <button
+      onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+      disabled={currentPage === 1}
+      className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
+    >
+      Previous
+    </button>
+    <span className="text-gray-700">
+      Page {currentPage} of {totalPages}
+    </span>
+    <button
+      onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+      disabled={currentPage === totalPages}
+      className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
+    >
+      Next
+    </button>
+  </div>
+</div>
+
         </div>
       </AdminLayout>
     </ProtectedRoute>

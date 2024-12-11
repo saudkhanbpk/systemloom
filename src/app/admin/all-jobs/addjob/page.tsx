@@ -26,6 +26,8 @@ const Page: React.FC = () => {
   const searchParams = useSearchParams();
   const jobId = searchParams.get('jobId');
   const router = useRouter()
+  const [loading, setLoading] = useState(false);
+
 
   const [formData, setFormData] = useState<FormData>({
     title: '',
@@ -48,7 +50,7 @@ const Page: React.FC = () => {
         try {
           const res = await axios.get(`${backend_url}/api/v1/job/get/${jobId}`);
           if (res.data.success) {
-            setFormData(res.data.job); // Set fetched data into form
+            setFormData(res.data.job); 
           }
         } catch (error) {
           console.error(error);
@@ -70,6 +72,7 @@ const Page: React.FC = () => {
   // Handle array field changes (skills and qualifications)
   const handleArrayChange = (e: ChangeEvent<HTMLInputElement>, field: 'skills' | 'qualifications') => {
     const value = e.target.value;
+    // Ensure the value is split by commas, trimmed, and any empty values are removed
     setFormData((prevData) => ({
       ...prevData,
       [field]: value.split(',').map(item => item.trim()).filter(Boolean)
@@ -80,6 +83,7 @@ const Page: React.FC = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
+      setLoading(true);
       if (jobId) {
         // Update job if jobId is present
         const res = await axios.put(`${backend_url}/api/v1/job/update/${jobId}`, formData, {
@@ -129,6 +133,8 @@ const Page: React.FC = () => {
       console.error(error);
       const errorMessage = error?.response?.data?.message;
       toast.error(errorMessage);
+    }finally{
+      setLoading(false)
     }
   };
 
@@ -155,7 +161,7 @@ const Page: React.FC = () => {
   return (
     <ProtectedRoute>
     <AdminLayout>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-8">
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-20">
         <h1 className="text-3xl font-semibold mb-6 text-black text-center">{jobId ? 'Edit Job' : 'Add New Position'}</h1>
 
         <form onSubmit={handleSubmit}>
@@ -302,8 +308,8 @@ const Page: React.FC = () => {
             <input
               type="text"
               name="skills"
-              value={formData.skills.join(', ')}
-              onChange={(e) => handleArrayChange(e, 'skills')}
+              value={formData.skills}
+              onChange={handleChange}
               className="w-full p-3 border border-gray-300  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="e.g. JavaScript, Node.js, React"
             />
@@ -315,8 +321,8 @@ const Page: React.FC = () => {
             <input
               type="text"
               name="qualifications"
-              value={formData.qualifications.join(', ')}
-              onChange={(e) => handleArrayChange(e, 'qualifications')}
+              value={formData.qualifications}
+              onChange={handleChange}
               className="w-full p-3 border border-gray-300  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="e.g. Bachelors, Masters"
             />
@@ -334,7 +340,7 @@ const Page: React.FC = () => {
               type="submit"
               className="bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700"
             >
-              {jobId ? 'Update Job' : 'Create Job'}
+              {loading ? "Loading..." : jobId ? 'Update Job' : 'Create Job'}
             </button>
           </div>
         </form>

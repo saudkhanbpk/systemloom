@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import ceoProfile from "../../../public/assets/aboutImages/Rectangle.png";
 
 const OverviewSec: React.FC = () => {
   return (
     <div className="px-4 md:px-20 py-10">
-      <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
         {/* Text Section */}
         <div className="w-full mb-6 md:mb-12">
   <h1 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-4">
@@ -24,13 +23,13 @@ const OverviewSec: React.FC = () => {
 
 
         {/* Image Section */}
-        <div className="flex w-full justify-end items-center">
+        <div className="flex w-full justify-end items-center  object-contain md:w-[478px] h-[200px] md:h-[410px] rounded-[15px]">
           <Image
-            src="/assets/Teamimages/saudkhan.jpg"
+            src="/assets/Teamimages/ceoimage2.jpg"
             width={300}
             height={300}
             alt="about"
-            className="w-[200px] object-cover md:w-[278px] h-[200px] md:h-[350px] rounded-[15px]"
+            className="rounded-[15px]"
           />
         </div>
       </div>

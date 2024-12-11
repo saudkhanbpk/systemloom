@@ -71,8 +71,8 @@ const handleChange = (
     if (files && files.length > 0) {
       setFormData((prevData) => ({
         ...prevData,
-        projectScreenshot: files[0], // Store the selected file
-        screenshotUrl: URL.createObjectURL(files[0]), // Create a preview URL for the image
+        projectScreenshot: files[0], 
+        screenshotUrl: URL.createObjectURL(files[0]), 
       }));
     }
   };
@@ -91,7 +91,7 @@ const handleChange = (
     formPayload.append("category", formData.category);
     formPayload.append("industry", formData.industry);
 
-    console.log("Industry Value:", formData.industry);
+    // console.log("Industry Value:", formData.industry);
 
     if (formData.projectScreenshot) {
       formPayload.append("projectScreenshot", formData.projectScreenshot);
@@ -119,7 +119,7 @@ const handleChange = (
 
       if (res.data.success) {
         toast.success(res.data.message);
-        setTimeout(() => router.push("/admin/all-projects"), 2000); // Redirect after success
+        setTimeout(() => router.push("/admin/all-projects"), 2000); 
       } else {
         toast.error(res.data.message);
       }
@@ -133,13 +133,13 @@ const handleChange = (
 
   // Handle Cancel Button
   const handleCancel = () => {
-    router.push("/admin/all-projects"); // Redirect to a different page (e.g., project list)
+    router.push("/admin/all-projects"); 
   };
 
   return (
     <ProtectedRoute>
       <AdminLayout>
-        <div className="max-w-3xl mx-auto p-4">
+        <div className="max-w-3xl mx-auto p-4 mt-20">
           <h1 className="text-2xl text-center font-bold mb-6">
             {projectId ? "Update Project" : "Add New Project"}
           </h1>
@@ -329,7 +329,7 @@ const handleChange = (
                   onClick={() =>
                     document.getElementById("projectScreenshot")?.click()
                   }
-                  className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg"
+                  className="mt-2 px-4 py-2 bg-purple-600 text-white rounded-lg"
                 >
                   Browse File
                 </button>
@@ -348,10 +348,10 @@ const handleChange = (
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full md:w-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg"
+                className="w-full md:w-auto px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg"
               >
                 {loading
-                  ? "Saving..."
+                  ? "Loading..."
                   : projectId
                   ? "Update Project"
                   : "Add Project"}

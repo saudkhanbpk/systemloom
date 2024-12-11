@@ -139,7 +139,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
               <td className="px-4 py-2">
                 <div className="flex space-x-4">
                   <button
-                    className="text-blue-500 hover:text-blue-700"
+                    className="text-purple-600 hover:text-purple-700"
                     onClick={() => handleSeeDetail(user)}
                     aria-label="See Detail"
                   >
@@ -147,7 +147,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                   </button>
                   <button
                     onClick={() => handleDelete(user._id)}
-                    className="text-red-500 hover:text-red-700"
+                    className="text-red-600 hover:text-red-700"
                     aria-label="Delete"
                   >
                     <FaTrash size={18} />
@@ -164,7 +164,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <button
                   onClick={goToPreviousPage}
                   disabled={currentPage === 1}
-                  className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"}`}
+                  className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
                 >
                   Previous
                 </button>
@@ -174,7 +174,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <button
                   onClick={goToNextPage}
                   disabled={currentPage === totalPages}
-                  className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-blue-500 text-white"}`}
+                  className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
                 >
                   Next
                 </button>

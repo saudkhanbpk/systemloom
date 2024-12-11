@@ -180,16 +180,16 @@ const PricingForm = () => {
     ))}
 </td>
 
-                <td className="border p-2">
+                <td className="border p-2 text-blue-500">
                   <a href={item.referenceLink} target="_blank" rel="noopener noreferrer">
                     {item.referenceLink}
                   </a>
                 </td>
                 <td className="border p-2">
-                  <button className="text-blue-500 mr-2" onClick={() => openModal(item)}>
+                  <button className="text-purple-600 mr-2" onClick={() => openModal(item)}>
                     <FaRegEye />
                   </button>
-                  <button className="text-red-500" onClick={() => handlerDelete(item._id)}>
+                  <button className="text-red-600" onClick={() => handlerDelete(item._id)}>
                     <FaTrashAlt />
                   </button>
                 </td>
@@ -202,7 +202,7 @@ const PricingForm = () => {
       <div className="flex justify-between items-center mt-5">
         <button
           onClick={handlePrevious}
-          className={`px-4 py-2 rounded ${currentPage === 1 ? 'bg-gray-300' : 'bg-blue-500 text-white'}`}
+          className={`px-4 py-2 rounded ${currentPage === 1 ? 'bg-gray-300' : 'bg-purple-600 text-white'}`}
           disabled={currentPage === 1}
         >
           Previous
@@ -212,7 +212,7 @@ const PricingForm = () => {
         </span>
         <button
           onClick={handleNext}
-          className={`px-4 py-2 rounded ${currentPage === Math.ceil(filteredData.length / itemsPerPage) ? 'bg-gray-300' : 'bg-blue-500 text-white'}`}
+          className={`px-4 py-2 rounded ${currentPage === Math.ceil(filteredData.length / itemsPerPage) ? 'bg-gray-300' : 'bg-purple-600 text-white'}`}
           disabled={currentPage === Math.ceil(filteredData.length / itemsPerPage)}
         >
           Next
