@@ -3,7 +3,9 @@ import team1 from "../../../public/assets/landingPage/Rectangle 17.png"
 import person1 from "../../../public/assets/landingPage/Ellipse 185.png"
 import team2 from "../../../public/assets/landingPage/Rectangle 18.png"
 import teemImage3 from "../../../public/assets/landingPage/team3.avif"
-import zaraimage from "../../../public/assets/landingPage/zara.avif"
+import projectManagerImage from "../../../public/assets/Teamimages/hamdan.jpg"
+import CeoImage from "../../../public/assets/Teamimages/ceoimage2.jpg"
+import AdminOfficerImage from "../../../public/assets/Teamimages/hamdad.jpg"
 
 
 const TeamScalingSection = () => {
@@ -29,16 +31,18 @@ const TeamScalingSection = () => {
   </div>
 
   <div className="flex items-center">
-    <Image
-      src="/assets/Teamimages/saudkhan.jpg"
-      alt="ceo-image"
-      width={700}
-      height={450}
-      className="w-10 h-10 rounded-full mr-3 object-cover"
-    />
+  <Image
+  src={CeoImage}
+  alt="ceo-image"
+  width={850} 
+  height={850}
+  className="w-12 h-12 rounded-full mr-3 object-fill"
+/>
+
+
     <div>
       <p className="font-normal text-base">Saud Khan</p>
-      <p className="text-sm font-normal text-[#718096]">Co-Founder & CEO</p>
+      <p className="text-sm font-normal text-[#718096]">CEO</p>
     </div>
   </div>
 </div>
@@ -84,15 +88,15 @@ const TeamScalingSection = () => {
 
   <div className="flex items-center">
     <Image
-      src={zaraimage}
-      alt="ceo-image"
-      width={700}
-      height={450}
-      className="w-10 h-10 rounded-full mr-3 object-cover"
+      src={projectManagerImage}
+      alt="ProjectManager-image"
+      width={850} 
+  height={850}
+  className="w-12 h-12 rounded-full mr-3 object-fill"
     />
     <div>
-      <p className="font-normal text-base">Zara</p>
-      <p className="text-sm font-normal text-[#718096]">CEO</p>
+      <p className="font-normal text-base">Hamdan Khan</p>
+      <p className="text-sm font-normal text-[#718096]">Project Manager</p>
     </div>
   </div>
 </div>
@@ -115,15 +119,15 @@ const TeamScalingSection = () => {
 
   <div className="flex items-center">
     <Image
-      src={person1}
-      alt="ceo-image"
-      width={700}
-      height={450}
-      className="w-10 h-10 rounded-full mr-3 object-cover"
+      src={AdminOfficerImage}
+      alt="AdminOfficer-image"
+      width={850}
+      height={850}
+      className="w-10 h-10 rounded-full mr-3 object-fill"
     />
     <div>
-      <p className="font-normal text-base">Jane Smith</p>
-      <p className="text-sm font-normal text-[#718096]">Project Manager</p>
+      <p className="font-normal text-base">Aamad Khan</p>
+      <p className="text-sm font-normal text-[#718096]">Admin Officer</p>
     </div>
   </div>
 </div>

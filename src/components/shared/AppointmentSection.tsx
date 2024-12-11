@@ -118,7 +118,7 @@ const AppointmentSection: React.FC = () => {
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
           url: "https://calendly.com/contact-techcreator/30min",
-          text: "Schedule time with me",
+          text: "Schedule Free Strategy Call",
           color: "#0069ff",
           textColor: "#ffffff",
         });

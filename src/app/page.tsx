@@ -32,7 +32,7 @@ const Page = () => {
               logo: "https://media.licdn.com/dms/image/v2/C4D0BAQGDwMkGwI7z3w/company-logo_200_200/company-logo_200_200/0/1676023222184?e=2147483647&v=beta&t=AeynEpG8fBAhql0cEiTw6hJJFz8t-ypAxsbx5e4KoNw",
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+92-311-9265290",
+                telephone: "+92 347 1914920",
                 contactType: "customer service",
                 contactOption: "TollFree",
                 areaServed: ["US", "GB", "CA"],
