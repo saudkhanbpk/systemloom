@@ -37,7 +37,7 @@ const BlogCards: React.FC = () => {
 
   return (
     <div>
-    <div className="container mb-10 mt-10 mx-auto cursor-pointer  max-w-7xl  grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-3 gap-3 w-full">
+    <div className="container mb-10 mt-10 mx-auto cursor-pointer  max-w-7xl px-12 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-3 gap-3 w-full">
       {currentBlogs.map((blog: any) => (
         <div key={blog._id} className="">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full  h-auto sm:h-[350px]">
@@ -63,6 +63,7 @@ const BlogCards: React.FC = () => {
       
     </div>
 {/* Pagination Controls */}
+{blogs.length > blogsPerPage && (
 <div className="flex justify-center mb-6 items-center mt-8 space-x-4">
         {/* Previous Button */}
         <button
@@ -99,6 +100,7 @@ const BlogCards: React.FC = () => {
           <AiOutlineArrowRight size={20} />
         </button>
       </div>
+)}
     </div>
   );
 };

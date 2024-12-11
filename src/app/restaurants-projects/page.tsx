@@ -5,6 +5,7 @@ import healthcareImage from "../../../public/assets/portfolioImages/healthcare.p
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
+import useGetAllProjects from "@/hooks/useGetAllProjects";
 
 // Define a TypeScript type for a Project
 // interface Project {
@@ -19,11 +20,13 @@ import { RootState } from "@/redux/store";
 // }
 
 const RestaurantProject: React.FC = () => {
+  useGetAllProjects()
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 6; 
 
   // Fetch projects from Redux store
   const { projects } = useSelector((state: RootState) => state.projects);
+  // console.log("projects", projects)
 
   // Filter projects by category 'restaurants'
   const filteredProjects = projects.filter(
@@ -59,6 +62,8 @@ const RestaurantProject: React.FC = () => {
   for (let i = 1; i <= Math.ceil(filteredProjects.length / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
+
+  const showPagination = filteredProjects.length > 6;
 
   return (
     <div>
@@ -140,6 +145,7 @@ const RestaurantProject: React.FC = () => {
       </div>
 
       {/* Pagination */}
+      {showPagination && (
       <div className="flex justify-center items-center gap-4 my-10">
         <button
           onClick={prevPage}
@@ -171,6 +177,7 @@ const RestaurantProject: React.FC = () => {
           <FaChevronRight />
         </button>
       </div>
+      )}
     </div>
   );
 };
