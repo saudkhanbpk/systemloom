@@ -43,7 +43,10 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
   // Get current page applicants
   const indexOfLastApplicant = currentPage * applicantsPerPage;
   const indexOfFirstApplicant = indexOfLastApplicant - applicantsPerPage;
-  const currentApplicants = users.slice(indexOfFirstApplicant, indexOfLastApplicant);
+  const currentApplicants = users.slice(
+    indexOfFirstApplicant,
+    indexOfLastApplicant
+  );
 
   const handleSeeDetail = (user: User) => {
     setSelectedUser(user);
@@ -68,7 +71,10 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
 
   const handleDelete = async (id: string) => {
     try {
-      const res = await axios.delete(`${backend_url}/api/v1/application/delete/${id}`, { withCredentials: true });
+      const res = await axios.delete(
+        `${backend_url}/api/v1/application/delete/${id}`,
+        { withCredentials: true }
+      );
       if (res.data.success) {
         dispatch(deleteApplicant(id));
         toast.success(res.data.message);
@@ -85,7 +91,6 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
       handleCloseModal();
     }
   };
-  
 
   return (
     <div className="overflow-x-auto">
@@ -104,7 +109,9 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
         <tbody className="bg-white text-gray-600">
           {currentApplicants.map((user) => (
             <tr key={user._id} className="border-t">
-              <td className="px-4 py-2 text-nowrap ">{user.firstName} {user.lastName}</td>
+              <td className="px-4 py-2 text-nowrap ">
+                {user.firstName} {user.lastName}
+              </td>
               <td className="px-4 py-2">{user.phoneNumber}</td>
               <td className="px-4 py-2">{user.email}</td>
               <td className="px-4 py-2">
@@ -129,10 +136,13 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                     rel="noopener noreferrer"
                     className="text-blue-500 hover:underline"
                   >
-                    {user.originalMotivationLetterName || "View Motivation Letter"}
+                    {user.originalMotivationLetterName ||
+                      "View Motivation Letter"}
                   </a>
                 ) : (
-                  <span className="text-gray-500">No Motivation Letter Available</span>
+                  <span className="text-gray-500">
+                    No Motivation Letter Available
+                  </span>
                 )}
               </td>
               <td className="px-4 py-2">{formatDate(user.createdAt)}</td>
@@ -164,7 +174,11 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <button
                   onClick={goToPreviousPage}
                   disabled={currentPage === 1}
-                  className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
+                  className={`px-4 py-2 rounded ${
+                    currentPage === 1
+                      ? "bg-gray-200 text-gray-500"
+                      : "bg-purple-600 text-white"
+                  }`}
                 >
                   Previous
                 </button>
@@ -174,7 +188,11 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <button
                   onClick={goToNextPage}
                   disabled={currentPage === totalPages}
-                  className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
+                  className={`px-4 py-2 rounded ${
+                    currentPage === totalPages
+                      ? "bg-gray-200 text-gray-500"
+                      : "bg-purple-600 text-white"
+                  }`}
                 >
                   Next
                 </button>
@@ -184,63 +202,89 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
         </tfoot>
       </table>
 
-       {/* Modal for User Details */}
-       {selectedUser && (
+      {/* Modal for User Details */}
+      {selectedUser && (
         <div
           className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50 z-50"
           onClick={handleOutsideClick}
         >
-          <div className="bg-white text-black  w-full md:max-w-xl shadow-lg" onClick={(e) => e.stopPropagation()}>
-            <h2 className="text-lg font-semibold mb-8 text-center bg-[#9A00FF] text-white p-7">User Details</h2>
+          <div
+            className="bg-white text-black  w-full md:max-w-xl shadow-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-lg font-semibold mb-8 text-center bg-[#7A4AFF] text-white p-7">
+              User Details
+            </h2>
             <div className="p-2 mb-3">
-            <p className="mb-2">
-              <strong>Full Name:</strong> {selectedUser.firstName} {selectedUser.lastName}
-            </p>
-            <p className="mb-2"><strong>Phone Number:</strong> {selectedUser.phoneNumber}</p>
-            <p className="mb-2"><strong>Email:</strong> {selectedUser.email}</p>
-            <p className="mb-2"><strong>Address:</strong> {selectedUser.address}, {selectedUser.city}, {selectedUser.stateOrProvince}, {selectedUser.postalOrZipCode}</p>
-            <p className="mb-2"><strong>Gender:</strong> {selectedUser.gender}</p>
-            <p className="mb-2"><strong>Position Applied:</strong> {selectedUser.applyingForPosition}</p>
-            <p className="mb-2"><strong>Experience:</strong> {selectedUser.experience}</p>
-            <p className="mb-2">
-              <strong>Professional URL:</strong>{" "}
-              <a
-                href={selectedUser.professionalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                {selectedUser.professionalUrl}
-              </a>
-            </p>
-            <p className="mb-2"><strong>Motivation Letter:</strong>
-              {selectedUser.motivationLetter ? (
+              <p className="mb-2">
+                <strong>Full Name:</strong> {selectedUser.firstName}{" "}
+                {selectedUser.lastName}
+              </p>
+              <p className="mb-2">
+                <strong>Phone Number:</strong> {selectedUser.phoneNumber}
+              </p>
+              <p className="mb-2">
+                <strong>Email:</strong> {selectedUser.email}
+              </p>
+              <p className="mb-2">
+                <strong>Address:</strong> {selectedUser.address},{" "}
+                {selectedUser.city}, {selectedUser.stateOrProvince},{" "}
+                {selectedUser.postalOrZipCode}
+              </p>
+              <p className="mb-2">
+                <strong>Gender:</strong> {selectedUser.gender}
+              </p>
+              <p className="mb-2">
+                <strong>Position Applied:</strong>{" "}
+                {selectedUser.applyingForPosition}
+              </p>
+              <p className="mb-2">
+                <strong>Experience:</strong> {selectedUser.experience}
+              </p>
+              <p className="mb-2">
+                <strong>Professional URL:</strong>{" "}
                 <a
-                  href={selectedUser.motivationLetter}
+                  href={selectedUser.professionalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
-                  {selectedUser.originalMotivationLetterName || "View Motivation Letter"}
+                  {selectedUser.professionalUrl}
                 </a>
-              ) : (
-                <span className="text-gray-500">No Motivation Letter Available</span>
-              )}
-            </p>
-            <p className="mb-2"><strong>Resume:</strong>
-              {selectedUser.resume ? (
-                <a
-                  href={selectedUser.resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  {selectedUser.originalResumeName || "View Resume"}
-                </a>
-              ) : (
-                <span className="text-gray-500">No Resume Available</span>
-              )}
-            </p>
+              </p>
+              <p className="mb-2">
+                <strong>Motivation Letter:</strong>
+                {selectedUser.motivationLetter ? (
+                  <a
+                    href={selectedUser.motivationLetter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    {selectedUser.originalMotivationLetterName ||
+                      "View Motivation Letter"}
+                  </a>
+                ) : (
+                  <span className="text-gray-500">
+                    No Motivation Letter Available
+                  </span>
+                )}
+              </p>
+              <p className="mb-2">
+                <strong>Resume:</strong>
+                {selectedUser.resume ? (
+                  <a
+                    href={selectedUser.resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:underline"
+                  >
+                    {selectedUser.originalResumeName || "View Resume"}
+                  </a>
+                ) : (
+                  <span className="text-gray-500">No Resume Available</span>
+                )}
+              </p>
             </div>
 
             <div className="flex justify-center mt-4">

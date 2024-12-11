@@ -21,7 +21,7 @@ function HeroSection() {
       <div className="relative max-w-[1440px] mx-auto md:px-4 sm:px-6 lg:px-8 py-16 md:py-32">
         <div className="text-center">
           <h1 className="font-semibold text-3xl md:text-[57px] leading-tight md:leading-[65px] mb-6 md:mb-8">
-            Develop your <span className="text-purple-500">Business</span>
+            Develop your <span className="text-[#7A4AFF]">Business</span>
             <br className="hidden md:inline" />
             <span> to Accelerate Growth</span>
           </h1>

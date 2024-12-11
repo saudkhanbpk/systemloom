@@ -66,24 +66,30 @@ const MobileAppDevelopment = () => {
   ];
 
   return (
-    
     <div>
       <Head>
-    <title>Cross-Platform Mobile App Design and Development | TechCreator</title>
-    <meta
-      name="description"
-      content="Explore expert mobile app design and development services at TechCreator. Specializing in Flutter, cross-platform, healthcare, and enterprise app solutions tailored to meet your business needs."
-    />
-  </Head>
+        <title>
+          Cross-Platform Mobile App Design and Development | TechCreator
+        </title>
+        <meta
+          name="description"
+          content="Explore expert mobile app design and development services at TechCreator. Specializing in Flutter, cross-platform, healthcare, and enterprise app solutions tailored to meet your business needs."
+        />
+      </Head>
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left md:px-12 mb-6 md:mb-0 md:mt-0  mt-20">
           <h1 className="text-3xl lg:text-5xl font-bold">
-          Mobile App Design and Development Services
+            Mobile App Design and Development Services
           </h1>
           <p className="text-base md:text-lg mt-3">
-          From concept to deployment, we ensure every detail is meticulously crafted just according to your business needs. At TechCreator, we specialize in mobile app development that prioritizes functionality and user engagement. Our team creates intuitive and visually appealing apps that meet your customer complex needs while delivering exceptional user experiences. 
+            From concept to deployment, we ensure every detail is meticulously
+            crafted just according to your business needs. At TechCreator, we
+            specialize in mobile app development that prioritizes functionality
+            and user engagement. Our team creates intuitive and visually
+            appealing apps that meet your customer complex needs while
+            delivering exceptional user experiences.
           </p>
         </div>
 
@@ -112,11 +118,18 @@ const MobileAppDevelopment = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full md:w-[800px]   md:h-[450px] p-4 md:p-16 py-2 md:py-14 mt-8 md:mt-0 ">
+          <div className="bg-[#7A4AFF] w-full md:w-[800px]   md:h-[450px] p-4 md:p-16 py-2 md:py-14 mt-8 md:mt-0 ">
             <div className="text-white md:py-20 md:px-40">
-              <h1 className="text-xl sm:text-2xl font-bold mb-3">Healthcare Mobile App Development Transforming Industries</h1>
+              <h1 className="text-xl sm:text-2xl font-bold mb-3">
+                Healthcare Mobile App Development Transforming Industries
+              </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-                As a trusted healthcare mobile app development company, we design solutions that improve patient care and streamline medical processes. Our healthcare mobile app development services include secure data handling, user-friendly interfaces, and features tailored to meet the demands of healthcare providers and patients alike.
+                As a trusted healthcare mobile app development company, we
+                design solutions that improve patient care and streamline
+                medical processes. Our healthcare mobile app development
+                services include secure data handling, user-friendly interfaces,
+                and features tailored to meet the demands of healthcare
+                providers and patients alike.
               </p>
             </div>
           </div>
@@ -184,10 +197,14 @@ const MobileAppDevelopment = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
-            Flutter Mobile App Development for High-Performance Solutions
+              Flutter Mobile App Development for High-Performance Solutions
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            Our expertise in Flutter mobile app development enables us to deliver fast, reliable, and visually consistent apps for both iOS and Android platforms. Leveraging this inventive framework, we create apps that provide smooth performance, enhanced flexibility, and a unified codebase, saving time and resources.
+              Our expertise in Flutter mobile app development enables us to
+              deliver fast, reliable, and visually consistent apps for both iOS
+              and Android platforms. Leveraging this inventive framework, we
+              create apps that provide smooth performance, enhanced flexibility,
+              and a unified codebase, saving time and resources.
             </p>
           </div>
         </div>
@@ -199,10 +216,14 @@ const MobileAppDevelopment = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
-            Your Choice for Multi-Device Reach
+              Your Choice for Multi-Device Reach
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            Our cross-platform mobile app development services enable businesses to reach a wider audience with a single solution. We ensure your app functions seamlessly across multiple devices and operating systems, offering a consistent experience to all users while optimizing development efficiency.
+              Our cross-platform mobile app development services enable
+              businesses to reach a wider audience with a single solution. We
+              ensure your app functions seamlessly across multiple devices and
+              operating systems, offering a consistent experience to all users
+              while optimizing development efficiency.
             </p>
           </div>
           <Image
@@ -228,10 +249,13 @@ const MobileAppDevelopment = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
-            Enhancing Efficiency while Optimizing Functionality
+              Enhancing Efficiency while Optimizing Functionality
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            Enterprise mobile app development company specializes in enhancing productivity and streamlining operations. We develop secure, scalable apps that empower businesses to manage workflows, collaborate effectively, and achieve organizational goals.
+              Enterprise mobile app development company specializes in enhancing
+              productivity and streamlining operations. We develop secure,
+              scalable apps that empower businesses to manage workflows,
+              collaborate effectively, and achieve organizational goals.
             </p>
           </div>
         </div>
@@ -239,33 +263,41 @@ const MobileAppDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
-  <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
-    {/* Text Content */}
-    <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Recent Work: Redefining Mobile Solutions</h1>
-      <p className="text-base md:text-lg text-white webDevtext ">
-      We recently collaborated with a leading startup to deliver a cross-platform mobile app development project, enabling them to reach users across iOS and Android seamlessly. Additionally, we developed a specialized healthcare app for a clinic, integrating appointment scheduling, patient records, and secure communication features, transforming their service delivery.<br/> <br />
-Choose TechCreator to turn your mobile app ideas into reality with innovative solutions designed to meet your business objectives.
-
-      </p>
-    </div>
-    {/* Image */}
-    <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
-      <Image
-        src={appImage4}
-        alt="Feature illustration"
-        width={400}
-        height={500}
-        className="rounded-lg mx-auto  md:mx-0"
-      />
-    </div>
-  </div>
-</div>
+      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+        <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
+          {/* Text Content */}
+          <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Recent Work: Redefining Mobile Solutions
+            </h1>
+            <p className="text-base md:text-lg text-white webDevtext ">
+              We recently collaborated with a leading startup to deliver a
+              cross-platform mobile app development project, enabling them to
+              reach users across iOS and Android seamlessly. Additionally, we
+              developed a specialized healthcare app for a clinic, integrating
+              appointment scheduling, patient records, and secure communication
+              features, transforming their service delivery.
+              <br /> <br />
+              Choose TechCreator to turn your mobile app ideas into reality with
+              innovative solutions designed to meet your business objectives.
+            </p>
+          </div>
+          {/* Image */}
+          <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
+            <Image
+              src={appImage4}
+              alt="Feature illustration"
+              width={400}
+              height={500}
+              className="rounded-lg mx-auto  md:mx-0"
+            />
+          </div>
+        </div>
+      </div>
       {/* FramedFeatureSection section end */}
 
       {/* RecentWorks section start */}
-      <AppDevRelatedProjects/>
+      <AppDevRelatedProjects />
       {/* RecentWorks section end */}
 
       {/* RelatedServices section start */}

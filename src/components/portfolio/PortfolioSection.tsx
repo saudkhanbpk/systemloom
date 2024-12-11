@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import portfolioImage from "../../../public/assets/portfolioImages/portfolioImage.png";
 
 const PortfolioSection = () => {
@@ -19,10 +19,15 @@ const PortfolioSection = () => {
       {/* Text Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-center lg:mt-24 mt-6 space-y-6 px-6">
         <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
-          Our <span className="text-[#9A00FF]">Portfolio</span>
+          Our <span className="text-[#7A4AFF]">Portfolio</span>
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed">
-          At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Our portfolio showcases a range of successful projects, from intuitive mobile apps to dynamic web platforms. With a talented team dedicated to quality and innovation, we're your partner in turning ideas into impactful realities.
+          At TechCreator Software Company, we specialize in crafting bespoke
+          software solutions that cater to your unique business needs. Our
+          portfolio showcases a range of successful projects, from intuitive
+          mobile apps to dynamic web platforms. With a talented team dedicated
+          to quality and innovation, we're your partner in turning ideas into
+          impactful realities.
         </p>
         <ul className="text-gray-700 text-lg space-y-2">
           <li>• Cutting-edge technology</li>

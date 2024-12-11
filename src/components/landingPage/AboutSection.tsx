@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import squareImage from '../../../public/assets/aboutImages/Group 143725868.png';
-import group1 from '../../../public/assets/aboutImages/Mask group.png';
-import group2 from '../../../public/assets/aboutImages/Mask group (1).png';
-import group3 from '../../../public/assets/aboutImages/Mask group (2).png';
+import Image from "next/image";
+import squareImage from "../../../public/assets/aboutImages/Group 143725868.png";
+import group1 from "../../../public/assets/aboutImages/Mask group.png";
+import group2 from "../../../public/assets/aboutImages/Mask group (1).png";
+import group3 from "../../../public/assets/aboutImages/Mask group (2).png";
 
 function AboutSection() {
   return (
@@ -54,11 +54,15 @@ function AboutSection() {
 
           {/* Text Content */}
           <div className="text-center md:text-left mx-auto">
-            <h1 className="text-[#9A00FF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
+            <h1 className="text-[#7A4AFF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
               About Us
             </h1>
             <p className="font-normal text-base md:text-lg leading-7 md:leading-[36px] max-w-full md:max-w-lg">
-              TechCreator is a software development company helping businesses scale up their growth. Your potential customers will find you online. Our team made it happen. Engage them with contemporary, attractive web design and content they were looking for on the search engines. Then, watch your sales grow.
+              TechCreator is a software development company helping businesses
+              scale up their growth. Your potential customers will find you
+              online. Our team made it happen. Engage them with contemporary,
+              attractive web design and content they were looking for on the
+              search engines. Then, watch your sales grow.
             </p>
           </div>
         </div>

@@ -1,15 +1,21 @@
-import { useState } from 'react';
-import { FaTrash, FaEdit, FaEye, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '@/redux/store';
-import Image from 'next/image';
-import { deleteProject } from '@/redux/projectSlice'; // Assuming you have delete functionality
+import { useState } from "react";
+import {
+  FaTrash,
+  FaEdit,
+  FaEye,
+  FaArrowLeft,
+  FaArrowRight,
+} from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/redux/store";
+import Image from "next/image";
+import { deleteProject } from "@/redux/projectSlice"; // Assuming you have delete functionality
 // import useGetAllProjects from '@/hooks/useGetAllProjects';
-import { backend_url } from '@/newLayout';
-import axios from 'axios';
-import { toast } from 'react-toastify';
-import { useRouter } from 'next/navigation';
-import useGetAllProjects from '@/hooks/useGetAllProjects';
+import { backend_url } from "@/newLayout";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import useGetAllProjects from "@/hooks/useGetAllProjects";
 
 interface OurProjectsGridProps {
   searchTerm: string;
@@ -35,7 +41,10 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
 
   // Get projects for the current page
   const startIndex = (currentPage - 1) * projectsPerPage;
-  const currentProjects = filteredProjects.slice(startIndex, startIndex + projectsPerPage);
+  const currentProjects = filteredProjects.slice(
+    startIndex,
+    startIndex + projectsPerPage
+  );
 
   // Pagination Handlers
   const handlePrevious = () => {
@@ -53,7 +62,10 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
   // ProjectCard Functionality
   const handleDelete = async (projectId: string) => {
     try {
-      const res = await axios.delete(`${backend_url}/api/v1/project/delete/${projectId}`, { withCredentials: true });
+      const res = await axios.delete(
+        `${backend_url}/api/v1/project/delete/${projectId}`,
+        { withCredentials: true }
+      );
       if (res.data.success) {
         dispatch(deleteProject(projectId));
         toast.success(res.data.message);
@@ -70,7 +82,7 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
 
   const handleOpenWebsite = (websiteLink: string | undefined) => {
     if (websiteLink) {
-      window.open(websiteLink, '_blank');
+      window.open(websiteLink, "_blank");
     }
   };
 
@@ -84,7 +96,7 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
             className="relative max-w-6xl mx-auto rounded-xl overflow-hidden cursor-pointer border border-gray-600 group"
           >
             <Image
-              src={project.projectScreenshot || '/default-image.jpg'} // Fallback image if no screenshot is available
+              src={project.projectScreenshot || "/default-image.jpg"} // Fallback image if no screenshot is available
               alt="Project"
               className="sm:w-full w-[300px] h-[300px] object-cover"
               width={300}
@@ -102,7 +114,10 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
                 </div>
                 {/* Edit Icon (for Update) */}
                 <div className="bg-black bg-opacity-75 rounded-full p-2">
-                  <FaEdit className="text-yellow-400 w-6 h-6" onClick={() => handleEdit(project._id)} />
+                  <FaEdit
+                    className="text-yellow-400 w-6 h-6"
+                    onClick={() => handleEdit(project._id)}
+                  />
                 </div>
                 {/* Trash Icon (for Delete) */}
                 <div
@@ -115,7 +130,7 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
             </div>
 
             {/* Title always visible */}
-            <div className="absolute bottom-4 left-4 bg-[#9A00FF] bg-opacity-75 text-white p-2 rounded">
+            <div className="absolute bottom-4 left-4 bg-[#7A4AFF] bg-opacity-75 text-white p-2 rounded">
               <p className="text-sm font-semibold">{project.title}</p>
             </div>
           </div>
@@ -128,7 +143,9 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
         <button
           onClick={handlePrevious}
           disabled={currentPage === 1}
-          className={`p-2 rounded-full ${currentPage === 1 ? 'text-gray-400' : 'text-purple-600'}`}
+          className={`p-2 rounded-full ${
+            currentPage === 1 ? "text-gray-400" : "text-purple-600"
+          }`}
         >
           <FaArrowLeft size={20} />
         </button>
@@ -140,7 +157,9 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
               key={index + 1}
               onClick={() => handlePageClick(index + 1)}
               className={`px-3 py-1 rounded ${
-                currentPage === index + 1 ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-800'
+                currentPage === index + 1
+                  ? "bg-purple-600 text-white"
+                  : "bg-gray-200 text-gray-800"
               }`}
             >
               {index + 1}
@@ -152,7 +171,9 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
         <button
           onClick={handleNext}
           disabled={currentPage === totalPages}
-          className={`p-2 rounded-full ${currentPage === totalPages ? 'text-gray-400' : 'text-purple-600'}`}
+          className={`p-2 rounded-full ${
+            currentPage === totalPages ? "text-gray-400" : "text-purple-600"
+          }`}
         >
           <FaArrowRight size={20} />
         </button>

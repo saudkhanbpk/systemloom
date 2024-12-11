@@ -53,7 +53,7 @@ const JobCard = ({
 
       <div className="flex items-center justify-between mt-20">
         <div className="flex items-center">
-          <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-2">
+          <div className="w-8 h-8 bg-[#7A4AFF] rounded-full flex items-center justify-center mr-2">
             <span className="text-white text-sm">T</span>
           </div>
           <span className="font-medium">{company}</span>

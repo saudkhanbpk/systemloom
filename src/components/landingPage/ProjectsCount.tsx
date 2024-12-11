@@ -31,7 +31,7 @@ const StatItem: FC<StatItemProps> = ({ value, label }) => {
 
 const ProjectsCount: FC = () => {
   return (
-    <div className="relative bg-purple-600 py-8 overflow-hidden">
+    <div className="relative bg-[#7A4AFF] py-8 overflow-hidden">
       <div className="absolute inset-0">
         <video
           autoPlay

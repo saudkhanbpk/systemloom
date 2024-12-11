@@ -96,7 +96,7 @@ const ClientTestimonialsSection: React.FC = () => {
   return (
     <section className="py-16">
       <div className="mx-auto px-4">
-        <h2 className="text-[35px] font-bold text-center text-purple-600 mb-2">
+        <h2 className="text-[35px] font-bold text-center text-[#7A4AFF] mb-2">
           CLIENT TESTIMONIALS
         </h2>
         <p className="text-2xl text-center font-medium mb-12">

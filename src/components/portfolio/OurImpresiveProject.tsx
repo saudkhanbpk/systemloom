@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import React from 'react';
-import healthcareImage from '../../../public/assets/portfolioImages/healthcare.png';
-import restaurantImage from '../../../public/assets/portfolioImages/restaurant.png';
-import realstateImage from '../../../public/assets/portfolioImages/realstate.png';
-import ecommerceImage from '../../../public/assets/portfolioImages/eccommerce.png';
-import HospitalityImage from '../../../public/assets/portfolioImages/hospitality.png';
-import greenEnergyImage from '../../../public/assets/portfolioImages/greenenergy.png';
-import Link from 'next/link';
+import Image from "next/image";
+import React from "react";
+import healthcareImage from "../../../public/assets/portfolioImages/healthcare.png";
+import restaurantImage from "../../../public/assets/portfolioImages/restaurant.png";
+import realstateImage from "../../../public/assets/portfolioImages/realstate.png";
+import ecommerceImage from "../../../public/assets/portfolioImages/eccommerce.png";
+import HospitalityImage from "../../../public/assets/portfolioImages/hospitality.png";
+import greenEnergyImage from "../../../public/assets/portfolioImages/greenenergy.png";
+import Link from "next/link";
 
 const OurImpressiveProject = () => {
   return (
@@ -14,10 +14,11 @@ const OurImpressiveProject = () => {
       {/* Heading */}
       <div className="text-center">
         <h1 className="text-2xl md:text-4xl font-bold">
-          Our <span className="text-[#9A00FF]">Impressive</span> Projects
+          Our <span className="text-[#7A4AFF]">Impressive</span> Projects
         </h1>
         <p className="text-gray-500 mt-4">
-          Explore some of our outstanding projects that demonstrate innovation and excellence.
+          Explore some of our outstanding projects that demonstrate innovation
+          and excellence.
         </p>
       </div>
 
@@ -25,12 +26,20 @@ const OurImpressiveProject = () => {
       <div className="mt-16 flex flex-wrap justify-center gap-4 lg:gap-8 max-w-7xl  mx-auto">
         {/* Card Component */}
         {[
-          { image: healthcareImage, title: 'Healthcare' },
-          { image: restaurantImage, title: 'Restaurant', link: '/restaurants-projects' },
-          { image: realstateImage, title: 'Real Estate' },
-          { image: ecommerceImage, title: 'E-commerce' },
-          { image: HospitalityImage, title: 'Hospitality', link: '/hospitality-projects' },
-          { image: greenEnergyImage, title: 'Green Energy' },
+          { image: healthcareImage, title: "Healthcare" },
+          {
+            image: restaurantImage,
+            title: "Restaurant",
+            link: "/restaurants-projects",
+          },
+          { image: realstateImage, title: "Real Estate" },
+          { image: ecommerceImage, title: "E-commerce" },
+          {
+            image: HospitalityImage,
+            title: "Hospitality",
+            link: "/hospitality-projects",
+          },
+          { image: greenEnergyImage, title: "Green Energy" },
         ].map((project, index) => (
           <div
             key={index}
@@ -47,12 +56,12 @@ const OurImpressiveProject = () => {
             {/* Title with Background */}
             {project.link ? (
               <Link href={project.link}>
-                <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
+                <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#7A4AFF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
                   {project.title}
                 </h1>
               </Link>
             ) : (
-              <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
+              <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#7A4AFF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
                 {project.title}
               </h1>
             )}

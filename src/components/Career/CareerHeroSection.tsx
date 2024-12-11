@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import CommonButton from '../common/Button';
-import { FC } from 'react';
-import CareerSectionImage from '../../../public/assets/careerImages/Rectangle 402.png';
-import axios from 'axios';
-import { backend_url } from '@/newLayout';
-import { toast } from 'react-toastify';
+import React, { useState } from "react";
+import Image from "next/image";
+import CommonButton from "../common/Button";
+import { FC } from "react";
+import CareerSectionImage from "../../../public/assets/careerImages/Rectangle 402.png";
+import axios from "axios";
+import { backend_url } from "@/newLayout";
+import { toast } from "react-toastify";
 
 const CareerHeroSection: FC = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    jobField: '',
-    professionalUrl: '',
-    resume: null as File | null, 
+    name: "",
+    email: "",
+    phoneNumber: "",
+    jobField: "",
+    professionalUrl: "",
+    resume: null as File | null,
   });
-  
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, files } = e.target;
-    if (type === 'file' && files) {
-      setFormData({ ...formData, [name]: files[0] }); 
+    if (type === "file" && files) {
+      setFormData({ ...formData, [name]: files[0] });
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -32,58 +32,60 @@ const CareerHeroSection: FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const formDataToSend = new FormData();
-    formDataToSend.append('name', formData.name);
-    formDataToSend.append('email', formData.email);
-    formDataToSend.append('phoneNumber', formData.phoneNumber);
-    formDataToSend.append('jobField', formData.jobField);
-    formDataToSend.append('professionalUrl', formData.professionalUrl);
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("phoneNumber", formData.phoneNumber);
+    formDataToSend.append("jobField", formData.jobField);
+    formDataToSend.append("professionalUrl", formData.professionalUrl);
     if (formData.resume) {
-      formDataToSend.append('resume', formData.resume);
+      formDataToSend.append("resume", formData.resume);
     }
-  
+
     setLoading(true);
-  
+
     try {
-      const res = await axios.post(`${backend_url}/api/v1/resume/send`, formDataToSend, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-        withCredentials: true,
-      });
-  
+      const res = await axios.post(
+        `${backend_url}/api/v1/resume/send`,
+        formDataToSend,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          withCredentials: true,
+        }
+      );
+
       if (res.data.success) {
         toast.success(res.data.message);
         setFormData({
-          name: '',
-          email: '',
-          phoneNumber: '',
-          jobField: '',
-          professionalUrl: '',
+          name: "",
+          email: "",
+          phoneNumber: "",
+          jobField: "",
+          professionalUrl: "",
           resume: null,
         });
       } else {
         toast.error(res.data.message);
       }
     } catch (error: any) {
-      console.log("Error:", error); 
-  
+      console.log("Error:", error);
 
       const errorMessage =
-        error?.response?.data?.message || 
-        error?.response?.data?.error || 
-        'Something went wrong';
-      toast.error(errorMessage); 
+        error?.response?.data?.message ||
+        error?.response?.data?.error ||
+        "Something went wrong";
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
   };
-  
 
   const handleDialogOpen = () => setDialogOpen(true);
   const handleDialogClose = () => setDialogOpen(false);
 
   return (
-    <div className={`${isDialogOpen ? 'blurred' : ''}`}>
+    <div className={`${isDialogOpen ? "blurred" : ""}`}>
       <div className="relative bg-black text-white h-[644px]">
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
           <div className="mb-8 md:mb-12 p-10">
@@ -91,11 +93,12 @@ const CareerHeroSection: FC = () => {
               Be Who You Are. Do What You Love
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mb-8">
-              Are you at your best in an atmosphere of trust, knowhow, freedom and support,
-              alongside talented and creative people just like you? That's our working style.
+              Are you at your best in an atmosphere of trust, knowhow, freedom
+              and support, alongside talented and creative people just like you?
+              That's our working style.
             </p>
             <CommonButton
-              className="bg-[#9A00FF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
+              className="bg-[#7A4AFF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
               title="Send your resume"
               handleClick={handleDialogOpen}
             />
@@ -122,11 +125,11 @@ const CareerHeroSection: FC = () => {
         >
           <div
             className="text-white p-6 sm:w-[400px] md:w-[600px] max-w-full relative z-50 h-fit w-full bg-white rounded-md"
-            onClick={(e) => e.stopPropagation()} 
+            onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-2xl font-semibold mb-4">Submit Your Resume</h2>
-            
-            <form  onSubmit={handleSubmit}>
+
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-black">Name</label>
                 <input
@@ -206,10 +209,10 @@ const CareerHeroSection: FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="bg-[#9A00FF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#7A4AFF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg"
                   disabled={loading}
                 >
-                  {loading ? 'Submitting...' : 'Submit'}
+                  {loading ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>

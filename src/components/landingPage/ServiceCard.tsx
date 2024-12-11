@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className="p-2 rounded-md  transition-transform duration-300 ease-in-out border-2 hover:translate-y-8 hover:border-4 hover:border-[#bb7fe3] cursor-pointer shadow-md"
+      className="p-2 rounded-md  transition-transform duration-300 ease-in-out border-2 hover:translate-y-8 hover:border-4 hover:border-[#7A4AFF] cursor-pointer shadow-md"
       
     >
       <div className="flex justify-center">
@@ -28,8 +28,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           className="w-[100px] h-[100px] object-contain"
         />
       </div>
-      <div className="mt-4">
-        <h3 className="text-xl font-semibold mb-2 text-[#b36ae3]">{title}</h3>
+      <div className="mt-4 hover:text-[#7A4AFF]">
+        <h3 className="text-xl font-semibold mb-2 ">{title}</h3>
         <p className="text-gray-600 text-lg ">
           {description}
         </p>

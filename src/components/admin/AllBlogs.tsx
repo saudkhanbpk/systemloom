@@ -1,12 +1,12 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import { MdFilterList } from "react-icons/md";
-import Link from 'next/link';
+import Link from "next/link";
 import { IoMdAdd, IoMdArrowDown } from "react-icons/io";
 import { FiSearch } from "react-icons/fi";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { FiEdit2 } from "react-icons/fi";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { backend_url } from "@/newLayout";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -17,7 +17,7 @@ import { useRouter } from "next/navigation";
 // Define a type for the blog data
 interface Blog {
   _id: string;
-  image: string | { imageUrl: string }; 
+  image: string | { imageUrl: string };
   content: string;
   tags: string[];
   createdAt: any;
@@ -26,16 +26,18 @@ interface Blog {
 }
 
 const AllBlogs: React.FC = () => {
-  useGetAllBlogs()
+  useGetAllBlogs();
   const { blogs } = useSelector((state: any) => state.blogs);
-  
+
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const blogsPerPage = 5;
 
-  const filteredBlogs = Array.isArray(blogs) ? blogs.filter((blog: Blog) =>
-    blog.content.toLowerCase().includes(searchTerm.toLowerCase())
-  ) : [];
+  const filteredBlogs = Array.isArray(blogs)
+    ? blogs.filter((blog: Blog) =>
+        blog.content.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : [];
 
   const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
   const displayedBlogs = filteredBlogs.slice(
@@ -56,22 +58,21 @@ const AllBlogs: React.FC = () => {
   };
 
   const dispatch = useDispatch();
-  const router = useRouter()
+  const router = useRouter();
 
   const handleEdit = (blogId: string) => {
     router.push(`/admin/create-blog?blogId=${blogId}`);
   };
-
-  
-
-  
 
   const [isDeleting, setIsDeleting] = useState(false);
 
   const deletedblogHandler = async (id: any) => {
     setIsDeleting(true);
     try {
-      const res = await axios.delete(`${backend_url}/api/v1/blogs/delete/${id}`, { withCredentials: true });
+      const res = await axios.delete(
+        `${backend_url}/api/v1/blogs/delete/${id}`,
+        { withCredentials: true }
+      );
       if (res.data.success) {
         dispatch(deleteblog(id));
         toast.success(res.data.message);
@@ -85,9 +86,7 @@ const AllBlogs: React.FC = () => {
       setIsDeleting(false);
     }
   };
-  
-  
-  
+
   return (
     <main className="max-w-7xl mx-auto bg-inline lg:p-6 mt-20">
       <header className="flex flex-col md:flex-row justify-between md:items-center mb-4 space-y-4 md:space-y-0">
@@ -101,7 +100,7 @@ const AllBlogs: React.FC = () => {
           <Link href="/admin/create-blog" passHref>
             <button
               aria-label="Add Blog"
-              className="flex items-center px-4 py-2 bg-[#9A00FF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
+              className="flex items-center px-4 py-2 bg-[#7A4AFF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
             >
               <IoMdAdd className="mr-2" /> Add Blog
             </button>
@@ -156,22 +155,33 @@ const AllBlogs: React.FC = () => {
                   <img
                     alt="Blog preview"
                     className="h-10 w-10 rounded object-cover"
-                    src={(typeof blog.image === "string") ? blog.image : blog.image.imageUrl}
+                    src={
+                      typeof blog.image === "string"
+                        ? blog.image
+                        : blog.image.imageUrl
+                    }
                     width="40"
                     height="40"
                   />
                 </td>
-                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">{blog.title}</td>
+                <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">
+                  {blog.title}
+                </td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
-                {Array.isArray(blog.tags) ? blog.tags.map((tag: string, index: number) => (
-    <span key={index} className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 mr-1">
-      {tag.replace(/[\[\]"]+/g, '')} {/* Remove square brackets and double quotes */}
-    </span>
-)) : (
-    <span className="text-red-500">Invalid tags</span>
-)}
-
-</td>
+                  {Array.isArray(blog.tags) ? (
+                    blog.tags.map((tag: string, index: number) => (
+                      <span
+                        key={index}
+                        className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 mr-1"
+                      >
+                        {tag.replace(/[\[\]"]+/g, "")}{" "}
+                        {/* Remove square brackets and double quotes */}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-red-500">Invalid tags</span>
+                  )}
+                </td>
 
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900 text-nowrap">
                   {new Date(blog.createdAt).toLocaleDateString("en-US", {
@@ -181,10 +191,19 @@ const AllBlogs: React.FC = () => {
                   })}
                 </td>
                 <td className="px-6 py-4 border-b border-gray-200 text-gray-900">
-                  <button aria-label="Delete Blog" className="text-gray-500 hover:text-gray-700" onClick={() => deletedblogHandler(blog._id)} disabled={isDeleting} >
+                  <button
+                    aria-label="Delete Blog"
+                    className="text-gray-500 hover:text-gray-700"
+                    onClick={() => deletedblogHandler(blog._id)}
+                    disabled={isDeleting}
+                  >
                     <FaRegTrashCan />
                   </button>
-                  <button onClick={() => handleEdit(blog._id)} aria-label="Edit Blog" className="text-gray-500 hover:text-gray-700 ml-2">
+                  <button
+                    onClick={() => handleEdit(blog._id)}
+                    aria-label="Edit Blog"
+                    className="text-gray-500 hover:text-gray-700 ml-2"
+                  >
                     <FiEdit2 />
                   </button>
                 </td>
@@ -196,7 +215,9 @@ const AllBlogs: React.FC = () => {
         <div className="flex flex-row justify-between items-center mt-4 space-y-2 sm:space-y-0 p-3 ">
           <button
             aria-label="Previous Page"
-            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${currentPage === 1 ? "cursor-not-allowed opacity-50" : ""}`}
+            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${
+              currentPage === 1 ? "cursor-not-allowed opacity-50" : ""
+            }`}
             onClick={handlePrevious}
             disabled={currentPage === 1}
           >
@@ -209,7 +230,9 @@ const AllBlogs: React.FC = () => {
             aria-label="Next Page"
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""}`}
+            className={`px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-50 ${
+              currentPage === totalPages ? "cursor-not-allowed opacity-50" : ""
+            }`}
           >
             Next
           </button>

@@ -68,7 +68,7 @@ const PricingCards: React.FC = () => {
       </p>
       <button
             onClick={scrollToForm}
-            className="bg-purple-600 text-lg  text-white p-4 rounded-md mt-4 hover:bg-purple-500 transition flex gap-1 items-center"
+            className=" bg-[#7A4AFF] text-lg  text-white p-4 rounded-md mt-4 hover:bg-[#734bdf] transition flex gap-1 items-center"
           >
             Share Your Requirements
             <FaArrowDown

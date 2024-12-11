@@ -8,17 +8,27 @@ const OverviewSec: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
         {/* Text Section */}
         <div className="w-full mb-6 mt-10 md:mb-12">
-          <h1 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-4">
-          CEO Message
+          <h1 className="text-[#7A4AFF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-4">
+            CEO Message
           </h1>
           <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify">
-            My name is <strong>Saud Khan,</strong> CEO of TecCreator based in Pakistan.
+            My name is <strong>Saud Khan,</strong> CEO of TecCreator based in
+            Pakistan.
           </p>
           <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify mt-4">
-            As the world rapidly transforming into global village through digitalization, people are becoming more interconnected than ever before. It forms our vision to deliver innovative IT solutions that are agile, AI driven and designed to adapt to the ever-changing digital landscape.
+            As the world rapidly transforming into global village through
+            digitalization, people are becoming more interconnected than ever
+            before. It forms our vision to deliver innovative IT solutions that
+            are agile, AI driven and designed to adapt to the ever-changing
+            digital landscape.
           </p>
           <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify mt-4">
-            I believe, we are not just creating digital assets but are fostering long-term partnership built on trust, collaboration and a shared vision for success. In this era digital landscape, we are committed to provide our agile services to clients across the globe. We, TechCreator, are here to drive our head towards a future where innovation meets the demands of the people of future.
+            I believe, we are not just creating digital assets but are fostering
+            long-term partnership built on trust, collaboration and a shared
+            vision for success. In this era digital landscape, we are committed
+            to provide our agile services to clients across the globe. We,
+            TechCreator, are here to drive our head towards a future where
+            innovation meets the demands of the people of future.
           </p>
         </div>
 
@@ -32,19 +42,18 @@ const OverviewSec: React.FC = () => {
             alt="ceo_image"
             className="rounded-[15px] group-hover:opacity-50 object-contain transition-opacity duration-300 "
           />
-          
+
           {/* LinkedIn Icon appears when the image is hovered */}
           <div className="absolute inset-0 flex justify-center items-center  bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <a
-             href="https://www.linkedin.com/in/saudkhan39"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="text-white text-3xl cursor-pointer"
-             aria-label="Visit Saud Khan's LinkedIn profile"
-          >
-            <Image src={Linkedin} alt="LinkedIn" />
-          </a>
-        
+            <a
+              href="https://www.linkedin.com/in/saudkhan39"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-3xl cursor-pointer"
+              aria-label="Visit Saud Khan's LinkedIn profile"
+            >
+              <Image src={Linkedin} alt="LinkedIn" />
+            </a>
           </div>
         </div>
       </div>

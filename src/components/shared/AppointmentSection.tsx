@@ -11,9 +11,9 @@
 //     <div className="appointment-section">
 //       {/* Button for Appointment */}
 //       <CommonButton
-//         className="bg-[#9A00FF] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm"
+//         className="bg-[#7A4AFF] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm"
 //         title="Appointment"
-//         handleClick={handleButtonClick} 
+//         handleClick={handleButtonClick}
 //       />
 //     </div>
 //   );
@@ -21,13 +21,7 @@
 
 // export default AppointmentSection;
 
-
-
-
-
-
 // first
-
 
 // import React from "react";
 // import CommonButton from "../common/Button";
@@ -43,9 +37,9 @@
 //     <div className="appointment-section">
 //       {/* Button for Appointment */}
 //       <CommonButton
-//         className="bg-[#9A00FF] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm"
+//         className="bg-[#7A4AFF] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm"
 //         title="Book Appointment"
-//         handleClick={handleButtonClick} 
+//         handleClick={handleButtonClick}
 //       />
 
 //       {/* Calendly Inline Widget */}
@@ -54,7 +48,7 @@
 //         data-url="https://calendly.com/contact-techcreator/30min"
 //         style={{ minWidth: "320px", height: "700px" }}
 //       ></div>
-      
+
 //       <script
 //         type="text/javascript"
 //         src="https://assets.calendly.com/assets/external/widget.js"
@@ -68,9 +62,6 @@
 // };
 
 // export default AppointmentSection;
-
-
-
 
 // second
 import React, { useEffect } from "react";
@@ -97,7 +88,11 @@ interface CommonButtonProps {
   handleClick: () => void;
 }
 
-const CommonButton: React.FC<CommonButtonProps> = ({ className, title, handleClick }) => (
+const CommonButton: React.FC<CommonButtonProps> = ({
+  className,
+  title,
+  handleClick,
+}) => (
   <button className={className} onClick={handleClick}>
     {title}
   </button>
@@ -133,7 +128,7 @@ const AppointmentSection: React.FC = () => {
   return (
     <div className="appointment-section">
       <CommonButton
-        className="bg-[#9A00FF] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm flex items-center gap-2"
+        className="bg-[#7A4AFF] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm flex items-center gap-2"
         title={
           <>
             <FaCalendarAlt /> Book Appointment

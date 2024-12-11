@@ -32,22 +32,22 @@ const Companies = () => {
   };
 
   return (
-    <div className="bg-purple-600  py-5 px-4 md:px-10 md:mb-0  mb-8">
+    <div className="bg-[#7A4AFF]  py-5 px-4 md:px-10 md:mb-0  mb-8">
       <Carousel
-  responsive={responsive}
-  infinite={true}
-  autoPlay={true}
-  autoPlaySpeed={1000} 
-  transitionDuration={800} 
-  removeArrowOnDeviceType={["tablet", "mobile"]} 
-  arrows={false} 
-  containerClass="carousel-container"
-  centerMode={true} 
-  swipeable={true} 
-  draggable={true} 
-  customTransition="transform 0.8s ease-in-out" 
-  dotListClass="custom-dot-list-style" 
->
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={1000}
+        transitionDuration={800}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        arrows={false}
+        containerClass="carousel-container"
+        centerMode={true}
+        swipeable={true}
+        draggable={true}
+        customTransition="transform 0.8s ease-in-out"
+        dotListClass="custom-dot-list-style"
+      >
         <div className="flex justify-center items-center mb-2 mx-auto  mt-11 sm:mx-0">
           <Image src={company1} alt="Company 1" width={140} height={45} />
         </div>
@@ -70,7 +70,6 @@ const Companies = () => {
 
 export default Companies;
 
-
 export const CTASection = () => {
   return (
     <section className="mb-32 mt-16 ">
@@ -78,21 +77,22 @@ export const CTASection = () => {
         <div className="flex flex-col    md:flex-row justify-around">
           <div className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
-              "Looking for top developers and designers? Let's build something great together. Get in touch today!"
+              "Looking for top developers and designers? Let's build something
+              great together. Get in touch today!"
             </h2>
             <Link href="/contact">
-                  <CommonButton
-                    title="Hire Top Developers"
-                    className="bg-[#9A00FF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5"
-                    handleClick={() => console.log("")}
-                  />
-                  </Link>
+              <CommonButton
+                title="Hire Top Developers"
+                className="bg-[#7A4AFF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5"
+                handleClick={() => console.log("")}
+              />
+            </Link>
           </div>
           <div className=" ">
             <Image
               src={company7}
               alt="Team working together"
-              width={300} 
+              width={300}
               height={280}
               className="w-full hide-at-936 rounded-lg shadow-lg h-[280px] md:h-[330px]"
             />

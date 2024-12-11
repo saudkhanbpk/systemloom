@@ -23,10 +23,9 @@ import { setUser } from "@/redux/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { RootState } from "@/redux/store";
-import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png"
+import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png";
 import AppointmentSection from "./AppointmentSection";
-import { AiOutlineMail } from 'react-icons/ai';
-
+import { AiOutlineMail } from "react-icons/ai";
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -83,28 +82,32 @@ const Footer: React.FC = () => {
   // Handle form submission
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     if (!email) {
       toast.error("Email is required!");
       return;
     }
-  
+
     // Validate email format
     // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // if (!emailRegex.test(email)) {
     //   toast.error("Please enter a valid email address!");
     //   return;
     // }
-  
+
     setLoading(true);
-  
+
     try {
-      const res = await axios.post(`${backend_url}/api/v1/subscribeuser`, { email },{
-        headers: {
-          'Content-Type': 'application/json',
+      const res = await axios.post(
+        `${backend_url}/api/v1/subscribeuser`,
+        { email },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      });
-  // console.log("email", res)
+      );
+      // console.log("email", res)
       if (res.data.success) {
         toast.success(res.data.message);
         setEmail(""); // Clear email input after successful subscription
@@ -113,9 +116,11 @@ const Footer: React.FC = () => {
       }
     } catch (error: any) {
       console.error("Error during subscription:", error);
-  
+
       // Fallback error message
-      const message = error?.response?.data?.message || "Something went wrong. Please try again.";
+      const message =
+        error?.response?.data?.message ||
+        "Something went wrong. Please try again.";
       toast.error(message);
     } finally {
       setLoading(false);
@@ -139,7 +144,6 @@ const Footer: React.FC = () => {
                 height={40}
                 className=""
               />
-              
             </div>
             <p className="max-w-sm md:max-w-md text-xs md:text-sm leading-5 w-[230px] md:leading-6 mt-5">
               We have been providing quality services since 2001. We provide our
@@ -156,7 +160,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
                 />
               </a>
               <a
@@ -167,7 +171,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faLinkedinIn}
-                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
                 />
               </a>
               <a
@@ -178,7 +182,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faBriefcase}
-                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
                 />
               </a>
               {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -192,7 +196,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faYoutube}
-                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
                 />
               </a>
               <a
@@ -203,7 +207,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="text-gray-400 hover:text-purple-500 text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
                 />
               </a>
             </div>
@@ -212,21 +216,27 @@ const Footer: React.FC = () => {
               <h1 className="text-2xl font-bold">Subscribe</h1>
               <p className="mt-2 mb-2">Stay updated with the latest in tech.</p>
               <div className="flex flex-col gap-2">
-              <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
-  <input
-    type="email"
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-    placeholder="Enter your email"
-    disabled={loading}
-    required
-    className="text-black p-2 outline-none rounded-md "
-  />
-  <button type="submit" disabled={loading} className="bg-purple-600 rounded-md p-2 w-fit">
-    {loading ? "Subscribing..." : "Subscribe"}
-  </button>
-</form>
-
+                <form
+                  onSubmit={handleSubscribe}
+                  className="flex flex-col gap-3"
+                >
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    disabled={loading}
+                    required
+                    className="text-black p-2 outline-none rounded-md "
+                  />
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="bg-[#7A4AFF] rounded-md p-2 w-fit"
+                  >
+                    {loading ? "Subscribing..." : "Subscribe"}
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -236,12 +246,42 @@ const Footer: React.FC = () => {
               Industries We Serve
             </h1>
             <ul className="flex flex-col gap-4 text-sm">
-              <Link href="/healthcare-projects" className="hover:text-purple-500"><li>HealthCare</li></Link>
-              <Link href="/e-Commerce-projects" className="hover:text-purple-500"><li>E-Commerce</li></Link>
-              <Link href="/hospitality-projects" className="hover:text-purple-500"><li>Hospitality</li></Link>
-              <Link href="/real-estate-projects" className="hover:text-purple-500"><li>Real Estate</li></Link>
-              <Link href="/restaurants-projects" className="hover:text-purple-500"><li>Restaurants</li></Link>
-              <Link href="/green-energy-projects" className="hover:text-purple-500"><li>Green Energy</li></Link>
+              <Link
+                href="/healthcare-projects"
+                className="hover:text-[#7A4AFF]"
+              >
+                <li>HealthCare</li>
+              </Link>
+              <Link
+                href="/e-Commerce-projects"
+                className="hover:text-[#7A4AFF]"
+              >
+                <li>E-Commerce</li>
+              </Link>
+              <Link
+                href="/hospitality-projects"
+                className="hover:text-[#7A4AFF]"
+              >
+                <li>Hospitality</li>
+              </Link>
+              <Link
+                href="/real-estate-projects"
+                className="hover:text-[#7A4AFF]"
+              >
+                <li>Real Estate</li>
+              </Link>
+              <Link
+                href="/restaurants-projects"
+                className="hover:text-[#7A4AFF]"
+              >
+                <li>Restaurants</li>
+              </Link>
+              <Link
+                href="/green-energy-projects"
+                className="hover:text-[#7A4AFF]"
+              >
+                <li>Green Energy</li>
+              </Link>
             </ul>
           </div>
 
@@ -261,7 +301,7 @@ const Footer: React.FC = () => {
                 <li key={item}>
                   <Link
                     href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-xs md:text-sm hover:text-purple-500 transition-colors"
+                    className="text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
                   >
                     {item}
                   </Link>
@@ -273,21 +313,24 @@ const Footer: React.FC = () => {
                   {user.role === "admin" && (
                     <Link
                       href="/admin"
-                      className="flex items-center gap-2 text-xs md:text-sm hover:text-purple-500 transition-colors"
+                      className="flex items-center gap-2 text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
                     >
                       Admin
                     </Link>
                   )}
                   <button
                     onClick={handleLogout}
-                    className="flex items-center gap-2 text-xs md:text-sm hover:text-purple-500 transition-colors"
+                    className="flex items-center gap-2 text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
                   >
                     Logout
                   </button>
                 </>
               ) : (
                 <>
-                  <Link href="/login" className="flex items-center gap-2 hover:text-purple-500 ">
+                  <Link
+                    href="/login"
+                    className="flex items-center gap-2 hover:text-[#7A4AFF] "
+                  >
                     Login
                   </Link>
                 </>
@@ -336,7 +379,7 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     href={service.link}
-                    className="text-xs md:text-sm hover:text-purple-500 transition-colors"
+                    className="text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -349,7 +392,9 @@ const Footer: React.FC = () => {
             <h3 className="text-base md:text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <p className="text-xs md:text-sm flex items-center gap-2">
-              <span className=""><AiOutlineMail size={28} color="#9A00FF" /></span>
+                <span className="">
+                  <AiOutlineMail size={28} color="#7A4AFF" />
+                </span>
                 <a href="mailto:contact@techcreator.co">
                   contact@techcreator.co
                 </a>
@@ -361,32 +406,31 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                 >
                   <p className="flex gap-2 items-center text-base mt-1">
-                    <FaWhatsapp size={28} color="#9A00FF" />
+                    <FaWhatsapp size={28} color="#7A4AFF" />
                     <span>+92 347 1914920</span>
                   </p>
                 </a>
               </p>
               <p className="flex gap-2 items-center text-base">
-                <PhoneCall color="#9A00FF" />
+                <PhoneCall color="#7A4AFF" />
                 <span>+1 (321) 407-3272</span>
               </p>
 
               <div>
-              {/* <CommonButton
-  className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
+                {/* <CommonButton
+  className="bg-[#7A4AFF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
   title="Consultancy"
   handleClick={() => window.open("https://mentoga.com/saudkhan", "_blank")} 
 /> */}
 
-  <AppointmentSection />
-</div>
-
+                <AppointmentSection />
+              </div>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center  justify-end">
           <p className="text-xs md:text-sm text-gray-400 mt-3 ">
-            © 2024 <span className="text-purple-600">TechCreator</span>. All
+            © 2024 <span className="text-[#7A4AFF]">TechCreator</span>. All
             rights reserved.
           </p>
         </div>

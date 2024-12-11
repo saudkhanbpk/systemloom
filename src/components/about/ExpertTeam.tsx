@@ -131,7 +131,7 @@ const ExpertTeam: React.FC = () => {
   return (
     <div>
       <div className="py-20  text-center">
-        <p className="font-inter font-bold text-[35px] text-[#9A00FF]">
+        <p className="font-inter font-bold text-[35px] text-[#7A4AFF]">
           Expert Team
         </p>
       </div>
