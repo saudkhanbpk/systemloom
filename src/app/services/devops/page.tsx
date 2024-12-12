@@ -9,9 +9,6 @@ import devopimage4 from "../../../../public/assets/graphice design images/devopi
 import devopimage5 from "../../../../public/assets/graphice design images/devopimage5.png";
 
 // RelatedServices images
-import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
-import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
@@ -21,40 +18,23 @@ import Head from "next/head";
 const Devops = () => {
   const services = [
     {
-      title: "Product Design",
+      title: "Project Management",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: productDesignImage,
-    },
-    {
-      title: "App Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: appDesignImage,
-    },
-    {
-      title: "Web Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: webDesignImage,
-    },
-    {
-      title: "Development",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: developmentDesignImage,
-    },
-    {
-      title: "Illustration",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Executing precise project management potentially geared to step-out on time; it facilitates efficient collaboration by leading the project stakeholders.",
       icon: illustrationDesignImage,
     },
+  
     {
-      title: "Motion",
+      title: "Software Maintenance",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
       icon: motionDesignImage,
+    },
+    {
+      title: "QA Testing",
+      description:
+        "Having exhaustive testing done assures your software has no errors and delivers great performance to the customer.",
+      icon: developmentDesignImage,
     },
   ];
 
@@ -111,7 +91,7 @@ const Devops = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-2xl sm:text-3xl font-bold mb-3">
                 Partner with One of the Leading DevOps Companies
@@ -254,7 +234,7 @@ const Devops = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
@@ -289,7 +269,7 @@ const Devops = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 

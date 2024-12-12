@@ -89,7 +89,7 @@ const BlogCards: React.FC = () => {
                 onClick={() => paginate(index + 1)}
                 className={`px-4 py-2 rounded-md ${
                   currentPage === index + 1
-                    ? "bg-[#7A4AFF] text-white"
+                    ? "bg-[#9A00FF] text-white"
                     : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                 }`}
               >

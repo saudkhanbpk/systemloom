@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
               </a>
               <a
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faLinkedinIn}
-                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
               </a>
               <a
@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faBriefcase}
-                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
               </a>
               {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -196,7 +196,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faYoutube}
-                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
               </a>
               <a
@@ -207,7 +207,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="text-gray-400 hover:text-[#7A4AFF] text-lg md:text-xl"
+                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
               </a>
             </div>
@@ -232,7 +232,7 @@ const Footer: React.FC = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-[#7A4AFF] rounded-md p-2 w-fit"
+                    className="bg-[#9A00FF] rounded-md p-2 w-fit"
                   >
                     {loading ? "Subscribing..." : "Subscribe"}
                   </button>
@@ -248,37 +248,37 @@ const Footer: React.FC = () => {
             <ul className="flex flex-col gap-4 text-sm">
               <Link
                 href="/healthcare-projects"
-                className="hover:text-[#7A4AFF]"
+                className="hover:text-[#9A00FF]"
               >
                 <li>HealthCare</li>
               </Link>
               <Link
                 href="/e-Commerce-projects"
-                className="hover:text-[#7A4AFF]"
+                className="hover:text-[#9A00FF]"
               >
                 <li>E-Commerce</li>
               </Link>
               <Link
                 href="/hospitality-projects"
-                className="hover:text-[#7A4AFF]"
+                className="hover:text-[#9A00FF]"
               >
                 <li>Hospitality</li>
               </Link>
               <Link
                 href="/real-estate-projects"
-                className="hover:text-[#7A4AFF]"
+                className="hover:text-[#9A00FF]"
               >
                 <li>Real Estate</li>
               </Link>
               <Link
                 href="/restaurants-projects"
-                className="hover:text-[#7A4AFF]"
+                className="hover:text-[#9A00FF]"
               >
                 <li>Restaurants</li>
               </Link>
               <Link
                 href="/green-energy-projects"
-                className="hover:text-[#7A4AFF]"
+                className="hover:text-[#9A00FF]"
               >
                 <li>Green Energy</li>
               </Link>
@@ -301,7 +301,7 @@ const Footer: React.FC = () => {
                 <li key={item}>
                   <Link
                     href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
+                    className="text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
                   >
                     {item}
                   </Link>
@@ -313,14 +313,14 @@ const Footer: React.FC = () => {
                   {user.role === "admin" && (
                     <Link
                       href="/admin"
-                      className="flex items-center gap-2 text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
+                      className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
                     >
                       Admin
                     </Link>
                   )}
                   <button
                     onClick={handleLogout}
-                    className="flex items-center gap-2 text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
+                    className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
                   >
                     Logout
                   </button>
@@ -329,7 +329,7 @@ const Footer: React.FC = () => {
                 <>
                   <Link
                     href="/login"
-                    className="flex items-center gap-2 hover:text-[#7A4AFF] "
+                    className="flex items-center gap-2 hover:text-[#9A00FF] "
                   >
                     Login
                   </Link>
@@ -379,7 +379,7 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     href={service.link}
-                    className="text-xs md:text-sm hover:text-[#7A4AFF] transition-colors"
+                    className="text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -393,7 +393,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="text-xs md:text-sm flex items-center gap-2">
                 <span className="">
-                  <AiOutlineMail size={28} color="#7A4AFF" />
+                  <AiOutlineMail size={28} color="#9A00FF" />
                 </span>
                 <a href="mailto:contact@techcreator.co">
                   contact@techcreator.co
@@ -401,51 +401,53 @@ const Footer: React.FC = () => {
               </div>
               <div className="text-xs md:text-sm">
                 <a
-                  href="https://wa.me/+923471914920"
+                  href="https://wa.me/+447511801699"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <div className="flex gap-2 items-center text-base mt-1">
-                    <FaWhatsapp size={28} color="#7A4AFF" />
-                    <span>+92 347 1914920</span>
+                    <FaWhatsapp size={28} color="#9A00FF" />
+                    <span>+44 7511 801699</span>
                   </div>
 
-                 <div className="md:hidden block">
-                 <div className=" flex gap-2 items-center text-base mt-2 ">
-              <PhoneCall color="#7A4AFF"  />
-              <span>
-                <a href="tel:+13214073272" className="hover:underline">
-                  +1 (321) 407-3272
-                </a>
-              </span>
-            </div>
-                 </div>
+                  <div className="md:hidden block">
+                    <div className=" flex gap-2 items-center text-base mt-2 ">
+                      <PhoneCall color="#9A00FF" />
+                      <span>
+                        <a href="tel:+13214073272" className="hover:underline">
+                          +1 (321) 407-3272
+                        </a>
+                      </span>
+                    </div>
+                  </div>
                 </a>
               </div>
               <div className=" md:block hidden">
-              <div className="flex gap-2 items-center text-base ">
-              <PhoneCall color="#7A4AFF" />
-                <span><a href="callto:+13214073272" className="hover:underline">
-                    +1 (321) 407-3272
-                  </a></span>
-              </div>
+                <div className="flex gap-2 items-center text-base ">
+                  <PhoneCall color="#9A00FF" />
+                  <span>
+                    <a href="callto:+13214073272" className="hover:underline">
+                      +1 (321) 407-3272
+                    </a>
+                  </span>
+                </div>
               </div>
 
               <div>
                 {/* <CommonButton
-  className="bg-[#7A4AFF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
+  className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
   title="Consultancy"
   handleClick={() => window.open("https://mentoga.com/saudkhan", "_blank")} 
 /> */}
 
-                <AppointmentSection />
+                <AppointmentSection  />
               </div>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center  justify-end">
           <p className="text-xs md:text-sm text-gray-400 mt-3 ">
-            © 2024 <span className="text-[#7A4AFF]">TechCreator</span>. All
+            © 2024 <span className="text-[#9A00FF]">TechCreator</span>. All
             rights reserved.
           </p>
         </div>

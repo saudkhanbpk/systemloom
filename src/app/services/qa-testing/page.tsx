@@ -21,39 +21,21 @@ import Head from "next/head";
 const QATesting = () => {
   const services = [
     {
-      title: "Product Design",
+      title: "DevOps",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: productDesignImage,
-    },
-    {
-      title: "App Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: appDesignImage,
-    },
-    {
-      title: "Web Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: webDesignImage,
-    },
-    {
-      title: "Development",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Streamlining your development pipeline for guided efficiency with automation to allow for automated daily deployment.",
       icon: developmentDesignImage,
     },
     {
-      title: "Illustration",
+      title: "Project Management",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Executing precise project management potentially geared to step-out on time; it facilitates efficient collaboration by leading the project stakeholders.",
       icon: illustrationDesignImage,
     },
     {
-      title: "Motion",
+      title: "Software Maintenance",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
       icon: motionDesignImage,
     },
   ];
@@ -62,7 +44,7 @@ const QATesting = () => {
     <div>
       <Head>
         <title>
-        QA Testing Services | Comprehensive Quality Assurance Solutions
+          QA Testing Services | Comprehensive Quality Assurance Solutions
         </title>
         <meta
           name="description"
@@ -70,16 +52,18 @@ const QATesting = () => {
         />
       </Head>
 
-
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10 md:px-12   mt-20">
           <h1 className="text-3xl lg:text-5xl font-bold">
-          QA Testing Services
+            QA Testing Services
           </h1>
           <p className="text-base md:text-lg mt-3">
-          At TechCreator, Expert <strong>QA testing services</strong> ensure your software is flawless and reliable. From identifying bugs to improving functionality, we help businesses deliver top-quality applications that meet user expectations.
+            At TechCreator, Expert <strong>QA testing services</strong> ensure
+            your software is flawless and reliable. From identifying bugs to
+            improving functionality, we help businesses deliver top-quality
+            applications that meet user expectations.
           </p>
         </div>
 
@@ -108,13 +92,16 @@ const QATesting = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-2xl sm:text-3xl font-bold mb-3">
-              Comprehensive Quality Assurance Testing
+                Comprehensive Quality Assurance Testing
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-              Our quality assurance process covers every aspect of your software, from performance and usability to security. With meticulous testing techniques, we ensure that your applications function seamlessly across all platforms.
+                Our quality assurance process covers every aspect of your
+                software, from performance and usability to security. With
+                meticulous testing techniques, we ensure that your applications
+                function seamlessly across all platforms.
               </p>
             </div>
           </div>
@@ -182,10 +169,13 @@ const QATesting = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Specialized For Diverse Industries
+              Specialized For Diverse Industries
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            No matter your industry, TechCreator offers tailored QA solutions. From e-commerce to healthcare and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance.
+              No matter your industry, TechCreator offers tailored QA solutions.
+              From e-commerce to healthcare and beyond, our testing services are
+              designed to meet the specific challenges of your domain, ensuring
+              error-free performance.
             </p>
           </div>
         </div>
@@ -197,10 +187,13 @@ const QATesting = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Accelerate Time-to-Market with Agile QA Services
+              Accelerate Time-to-Market with Agile QA Services
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            Our Agile QA approach integrates testing throughout the development cycle. By detecting and resolving issues early, we help you speed up delivery timelines without compromising on quality or user experience.
+              Our Agile QA approach integrates testing throughout the
+              development cycle. By detecting and resolving issues early, we
+              help you speed up delivery timelines without compromising on
+              quality or user experience.
             </p>
           </div>
           <Image
@@ -226,10 +219,13 @@ const QATesting = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Automation and Manual Testing
+              Automation and Manual Testing
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            We combine manual and automated testing methods to provide comprehensive coverage and efficient results. Our team leverages the latest tools and technologies to identify and fix vulnerabilities, ensuring your software is robust and secure.
+              We combine manual and automated testing methods to provide
+              comprehensive coverage and efficient results. Our team leverages
+              the latest tools and technologies to identify and fix
+              vulnerabilities, ensuring your software is robust and secure.
             </p>
           </div>
         </div>
@@ -237,15 +233,19 @@ const QATesting = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Recent Work: Delivering Quality You Can Trust
+              Recent Work: Delivering Quality You Can Trust
             </h1>
             <p className="text-base md:text-lg text-white webDevtext ">
-            In a recent project, our <strong>QA testing services</strong> helped a SaaS company improve their application’s stability by 40%. Our comprehensive testing approach enabled the client to deliver a seamless user experience and gain higher customer satisfaction.
+              In a recent project, our <strong>QA testing services</strong>{" "}
+              helped a SaaS company improve their application’s stability by
+              40%. Our comprehensive testing approach enabled the client to
+              deliver a seamless user experience and gain higher customer
+              satisfaction.
             </p>
           </div>
           {/* Image */}
@@ -268,7 +268,7 @@ const QATesting = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 

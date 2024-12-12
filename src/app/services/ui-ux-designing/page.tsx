@@ -11,9 +11,6 @@ import uxdesignimage5 from "../../../../public/assets/graphice design images/uxe
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
 import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
-import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
-import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
-import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Head from "next/head";
 import UiUxDesigningRelatedProjects from "@/components/services/UiUxDesignRelatedProjects";
@@ -21,41 +18,24 @@ import UiUxDesigningRelatedProjects from "@/components/services/UiUxDesignRelate
 const UIUXDesign = () => {
   const services = [
     {
-      title: "Product Design",
+      title: "Web Developement",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Making dynamic, responsive websites that put user satisfaction first.",
       icon: productDesignImage,
     },
     {
-      title: "App Design",
+      title: "Mobile App Development",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Creating powerful mobile applications that will capture users and enhance your brand.",
       icon: appDesignImage,
     },
     {
-      title: "Web Design",
+      title: "Graphic Designing",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: webDesignImage,
-    },
-    {
-      title: "Development",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: developmentDesignImage,
-    },
-    {
-      title: "Illustration",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: illustrationDesignImage,
-    },
-    {
-      title: "Motion",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
       icon: motionDesignImage,
     },
+    
   ];
 
   return (
@@ -110,7 +90,7 @@ const UIUXDesign = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-xl sm:text-3xl font-bold mb-3">
                 Your Partner as a Top UI/UX Design Agency
@@ -252,7 +232,7 @@ const UIUXDesign = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
@@ -287,7 +267,7 @@ const UIUXDesign = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 

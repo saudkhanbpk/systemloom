@@ -215,7 +215,7 @@ const PricingForm: React.FC = () => {
             <div>
               <button
                 type="submit"
-                className={`bg-[#7A4AFF] w-full text-white py-2 px-4 rounded-full mt-3 ${
+                className={`bg-[#9A00FF] w-full text-white py-2 px-4 rounded-full mt-3 ${
                   loading ? "opacity-50 cursor-not-allowed" : ""
                 }`}
                 disabled={loading} // Disable button while loading

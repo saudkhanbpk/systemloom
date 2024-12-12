@@ -128,9 +128,9 @@ const AdminHeader: React.FC = () => {
                       onMouseLeave={() => setIsDropdownOpen(false)}
                     >
                       <span
-                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#7A4AFF] text-white ${
+                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF] text-white ${
                           pathname === item.href
-                            ? "bg-[#7A4AFF] text-white"
+                            ? "bg-[#9A00FF] text-white"
                             : ""
                         }`}
                       >
@@ -146,15 +146,15 @@ const AdminHeader: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#7A4AFF] font-semibold "
-                                      : "hover:text-[#7A4AFF]"
+                                      ? "text-[#9A00FF] font-semibold "
+                                      : "hover:text-[#9A00FF]"
                                   }`}
                                 >
                                   <Link
                                     href={subItem.href}
                                     className="flex items-center gap-2"
                                   >
-                                    <span className="text-[#7A4AFF]">
+                                    <span className="text-[#9A00FF]">
                                       {subItem.icon}
                                     </span>{" "}
                                     {subItem.name}
@@ -169,15 +169,15 @@ const AdminHeader: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#7A4AFF] font-semibold"
-                                      : "hover:text-[#7A4AFF] "
+                                      ? "text-[#9A00FF] font-semibold"
+                                      : "hover:text-[#9A00FF] "
                                   }`}
                                 >
                                   <Link
                                     href={subItem.href}
                                     className="flex items-center gap-2"
                                   >
-                                    <span className="text-[#7A4AFF]">
+                                    <span className="text-[#9A00FF]">
                                       {subItem.icon}
                                     </span>{" "}
                                     {subItem.name}
@@ -193,8 +193,8 @@ const AdminHeader: React.FC = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#7A4AFF] text-white ${
-                        pathname === item.href ? "bg-[#7A4AFF] text-white" : ""
+                      className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF] text-white ${
+                        pathname === item.href ? "bg-[#9A00FF] text-white" : ""
                       }`}
                     >
                       {item.name}
@@ -206,7 +206,7 @@ const AdminHeader: React.FC = () => {
 
             <div className="hide-at-1119">
               <p className="flex gap-2 items-center text-base">
-                <PhoneCall color="#7A4AFF" />
+                <PhoneCall color="#9A00FF" />
                 <span>+1 (321) 407-3272</span>
               </p>
             </div>
@@ -228,7 +228,7 @@ const AdminHeader: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden bg-[#7A4AFF] z-20 rounded-md mb-20">
+        <div className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <div key={item.name}>

@@ -100,7 +100,7 @@ const AllBlogs: React.FC = () => {
           <Link href="/admin/create-blog" passHref>
             <button
               aria-label="Add Blog"
-              className="flex items-center px-4 py-2 bg-[#7A4AFF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
+              className="flex items-center px-4 py-2 bg-[#9A00FF] text-white rounded-lg shadow-sm hover:bg-[#32044f] text-nowrap"
             >
               <IoMdAdd className="mr-2" /> Add Blog
             </button>

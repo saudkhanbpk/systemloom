@@ -7,7 +7,8 @@ interface Project {
   figmaLink?: string;
   websiteLink?: string;
   githubLink?: string;
-  industry: string;
+  industry: string[];
+  category: string[];
   projectScreenshot?: string;
   originalScreenshotName?: string;
   createdAt: Date;

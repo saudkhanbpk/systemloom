@@ -73,15 +73,42 @@ const ContactForm: React.FC = () => {
         </p>
       </div>
       <div className="mt-4">
-        <p className="flex gap-2 items-center text-lg">
-          <PhoneCall color="#A445B8" />
-          <span>+1 (321) 407-3272</span>
-        </p>
+      
 
         <p className="flex gap-2 items-center text-lg mt-1">
-          <FaWhatsapp size={28} color="#A445B8" />
-          <span>+92 347 1914920</span>
+        <a
+                  href="https://wa.me/+447511801699"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-2 items-center text-base mt-1">
+                    <FaWhatsapp size={28} color="#A445B8" />
+                    <span className='text-lg hover:underline'>+44 7511 801699</span>
+                  </div>
+
+                  <div className="md:hidden block">
+                    <div className=" flex gap-2 items-center text-base mt-2 ">
+                      <PhoneCall color="#A445B8" />
+                      <span className=''>
+                        <a href="tel:+13214073272" className="hover:underline">
+                          +1 (321) 407-3272
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </a>
         </p>
+
+        <div className=" md:block hidden">
+                <div className="flex gap-2 items-center text-base ">
+                  <PhoneCall color="#A445B8" />
+                  <span className='text-lg mt-2'>
+                    <a href="callto:+13214073272" className="hover:underline">
+                      +1 (321) 407-3272
+                    </a>
+                  </span>
+                </div>
+              </div>
       </div>
       <div className="mt-4">
         <p className="flex gap-2 items-center text-lg">

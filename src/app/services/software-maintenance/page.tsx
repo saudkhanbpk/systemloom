@@ -8,17 +8,7 @@ import softwareImage3 from "../../../../public/assets/graphice design images/sof
 import softwareImage4 from "../../../../public/assets/graphice design images/softImage4.png";
 import softwareImage5 from "../../../../public/assets/graphice design images/softimage5.png";
 
-// image for RecentWorks
-import image from "../../../../public/assets/RecentWork/unsplash_IyaNci0CyRk.png";
-import image1 from "../../../../public/assets/RecentWork/unsplash_7ZWVnVSaafY.png";
-import image2 from "../../../../public/assets/RecentWork/unsplash_qC2n6RQU4Vw.png";
-import image3 from "../../../../public/assets/RecentWork/unsplash_m_HRfLhgABo.png";
-import { Pencil, Heart } from "lucide-react";
-
 // RelatedServices images
-import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
-import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
@@ -28,39 +18,21 @@ import Head from "next/head";
 const SoftwareMaintenance = () => {
   const services = [
     {
-      title: "Product Design",
+      title: "DevOps",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: productDesignImage,
-    },
-    {
-      title: "App Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: appDesignImage,
-    },
-    {
-      title: "Web Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: webDesignImage,
-    },
-    {
-      title: "Development",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Streamlining your development pipeline for guided efficiency with automation to allow for automated daily deployment.",
       icon: developmentDesignImage,
     },
     {
-      title: "Illustration",
+      title: "Project Management",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Executing precise project management potentially geared to step-out on time; it facilitates efficient collaboration by leading the project stakeholders.",
       icon: illustrationDesignImage,
     },
     {
-      title: "Motion",
+      title: "QA Testing",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Having exhaustive testing done assures your software has no errors and delivers great performance to the customer.",
       icon: motionDesignImage,
     },
   ];
@@ -116,7 +88,7 @@ const SoftwareMaintenance = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-2xl sm:text-3xl md:w-[440px] font-bold mb-3">
                 Specialized Maintenance and Support Services
@@ -259,7 +231,7 @@ const SoftwareMaintenance = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
@@ -294,7 +266,7 @@ const SoftwareMaintenance = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 

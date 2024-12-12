@@ -54,7 +54,7 @@ function AboutSection() {
 
           {/* Text Content */}
           <div className="text-center md:text-left mx-auto">
-            <h1 className="text-[#7A4AFF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
+            <h1 className="text-[#9A00FF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
               About Us
             </h1>
             <p className="font-normal text-base md:text-lg leading-7 md:leading-[36px] max-w-full md:max-w-lg">

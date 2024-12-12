@@ -13,7 +13,7 @@ const TeamScalingSection = () => {
       <div className="md:mx-10 px-2">
         <div className="flex flex-col lg:flex-row mb-10">
           <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
-            <h2 className="text-[28px] font-semibold text-[#7A4AFF] mb-4">
+            <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">
               Empowering Your Business with Innovation
             </h2>
             <p className=" mb-4 font-normal text-lg">
@@ -25,8 +25,8 @@ const TeamScalingSection = () => {
               cycle.
             </p>
 
-            <div className="border-l-4 border-[#7A4AFF] pl-4 mb-6">
-              <p className="text-[#7A4AFF] italic font-light text-base mb-2">
+            <div className="border-l-4 border-[#9A00FF] pl-4 mb-6">
+              <p className="text-[#9A00FF] italic font-light text-base mb-2">
                 "Our team of experts integrates seamlessly with yours, ensuring
                 smooth collaboration and timely delivery."
               </p>
@@ -71,7 +71,7 @@ const TeamScalingSection = () => {
           </div>
 
           <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
-            <h2 className="text-[28px] font-semibold text-[#7A4AFF] mb-4">
+            <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">
               Bringing you the best of the Tech & Digital Eras
             </h2>
 
@@ -81,8 +81,8 @@ const TeamScalingSection = () => {
               aims to help the community in both of them.
             </p>
 
-            <div className="border-l-4 border-[#7A4AFF] pl-4 mb-6">
-              <p className="text-[#7A4AFF] italic font-light text-base mb-2">
+            <div className="border-l-4 border-[#9A00FF] pl-4 mb-6">
+              <p className="text-[#9A00FF] italic font-light text-base mb-2">
                 " As we build customized solutions to a person's unique needs."
               </p>
             </div>
@@ -106,7 +106,7 @@ const TeamScalingSection = () => {
         </div>
         <div className="flex flex-col lg:flex-row">
           <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
-            <h2 className="text-[28px] font-semibold text-[#7A4AFF] mb-4">
+            <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">
               What makes us Apart from Others
             </h2>
             <p className=" mb-4 font-normal text-lg  ">
@@ -118,7 +118,7 @@ const TeamScalingSection = () => {
             </p>
 
             <div className="border-l-4 border-purple-600 pl-4 mb-6">
-              <p className="text-[#7A4AFF] italic font-light text-base mb-2">
+              <p className="text-[#9A00FF] italic font-light text-base mb-2">
                 "With us, you don’t just get a service provider—you get a
                 partner dedicated to your growth."
               </p>

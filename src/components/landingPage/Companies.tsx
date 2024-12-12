@@ -32,38 +32,59 @@ const Companies = () => {
   };
 
   return (
-    <div className="bg-[#7A4AFF]  py-5 px-4 md:px-10 md:mb-0  mb-8">
-      <Carousel
-        responsive={responsive}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={1000}
-        transitionDuration={800}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        arrows={false}
-        containerClass="carousel-container"
-        centerMode={true}
-        swipeable={true}
-        draggable={true}
-        customTransition="transform 0.8s ease-in-out"
-        dotListClass="custom-dot-list-style"
-      >
-        <div className="flex justify-center items-center mb-2 mx-auto  mt-11 sm:mx-0">
-          <Image src={company1} alt="Company 1" width={140} height={45} />
-        </div>
-        <div className="flex justify-center items-center mb-2   mx-auto sm:mx-0">
-          <Image src={company2} alt="Company 2" width={140} height={45} />
-        </div>
-        <div className="flex justify-center items-center mt-9  mb-2 mx-auto sm:mx-0">
-          <Image src={company4} alt="Company 4" width={140} height={45} />
-        </div>
-        <div className="flex justify-center items-center mb-2 mx-auto sm:mx-0">
-          <Image src={company3} alt="Company 3" width={140} height={45} />
-        </div>
-        <div className="flex justify-center items-center mt-10  mb-2 mx-auto sm:mx-0">
-          <Image src={company5} alt="Company 5" width={140} height={45} />
-        </div>
-      </Carousel>
+    <div className="relative bg-[#9A00FF] py-5 px-4 md:px-10 md:mb-0 mb-8">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none"
+          aria-hidden="true"
+          poster="/assets/vecteezy_video-placeholder.jpg"
+        >
+          <source
+            src="/assets/vecteezy_digital-waves-motion-background-video-animation_3006226.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Carousel Section */}
+      <div className="relative z-10 ">
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={1000}
+          transitionDuration={800}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          arrows={false}
+          containerClass="carousel-container"
+          centerMode={true}
+          swipeable={true}
+          draggable={true}
+          customTransition="transform 0.8s ease-in-out"
+          dotListClass="custom-dot-list-style"
+        >
+          <div className="flex justify-center  items-center mb-2  mt-11 sm:mx-0 mx-3">
+            <Image src={company1} alt="Company 1" width={140} height={45} />
+          </div>
+          <div className="flex justify-center items-center mb-2 mx-3 sm:mx-0">
+            <Image src={company2} alt="Company 2" width={140} height={45} />
+          </div>
+          <div className="flex justify-center items-center mt-9 mb-2 mx-3 sm:mx-0">
+            <Image src={company4} alt="Company 4" width={140} height={45} />
+          </div>
+          <div className="flex justify-center items-center mb-2 mx-3 sm:mx-0">
+            <Image src={company3} alt="Company 3" width={140} height={45} />
+          </div>
+          <div className="flex justify-center items-center mt-10 mb-2 mx-3 sm:mx-0">
+            <Image src={company5} alt="Company 5" width={140} height={45} />
+          </div>
+        </Carousel>
+      </div>
     </div>
   );
 };
@@ -83,7 +104,7 @@ export const CTASection = () => {
             <Link href="/contact">
               <CommonButton
                 title="Hire Top Developers"
-                className="bg-[#7A4AFF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5"
+                className="bg-[#9A00FF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5"
                 handleClick={() => console.log("")}
               />
             </Link>

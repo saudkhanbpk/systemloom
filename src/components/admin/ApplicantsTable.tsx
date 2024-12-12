@@ -212,7 +212,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
             className="bg-white text-black  w-full md:max-w-xl shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-lg font-semibold mb-8 text-center bg-[#7A4AFF] text-white p-7">
+            <h2 className="text-lg font-semibold mb-8 text-center bg-[#9A00FF] text-white p-7">
               User Details
             </h2>
             <div className="p-2 mb-3">

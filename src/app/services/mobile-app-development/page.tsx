@@ -8,19 +8,10 @@ import appImage3 from "../../../../public/assets/graphice design images/appImage
 import appImage4 from "../../../../public/assets/graphice design images/appImag4.png";
 import appImage from "../../../../public/assets/graphice design images/MobileAppDevelopment.png";
 
-// image for RecentWorks
-import image from "../../../../public/assets/RecentWork/unsplash_IyaNci0CyRk.png";
-import image1 from "../../../../public/assets/RecentWork/unsplash_7ZWVnVSaafY.png";
-import image2 from "../../../../public/assets/RecentWork/unsplash_qC2n6RQU4Vw.png";
-import image3 from "../../../../public/assets/RecentWork/unsplash_m_HRfLhgABo.png";
-import { Pencil, Heart } from "lucide-react";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
 import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
-import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
-import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Head from "next/head";
 import AppDevRelatedProjects from "@/components/services/AppDevRelatedProjects";
@@ -28,41 +19,27 @@ import AppDevRelatedProjects from "@/components/services/AppDevRelatedProjects";
 const MobileAppDevelopment = () => {
   const services = [
     {
-      title: "Product Design",
+      title: "Software Maintenance",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
       icon: productDesignImage,
     },
+   
     {
-      title: "App Design",
+      title: "Ui & Ux Design",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: appDesignImage,
-    },
-    {
-      title: "Web Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Building intuitive interfaces that provide a seamless promised user experience.",
       icon: webDesignImage,
     },
+   
+    
     {
-      title: "Development",
+      title: "Graphic Designing",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: developmentDesignImage,
-    },
-    {
-      title: "Illustration",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: illustrationDesignImage,
-    },
-    {
-      title: "Motion",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
       icon: motionDesignImage,
     },
+  
   ];
 
   return (
@@ -118,13 +95,20 @@ const MobileAppDevelopment = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-xl sm:text-3xl font-bold mb-3">
-              Healthcare Mobile App Development Transforming Industries
+                Healthcare Mobile App Development Transforming Industries
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-              As a trusted healthcare <strong>mobile app development company,</strong> we design solutions that improve patient care and streamline medical processes. Our <strong>healthcare mobile app development</strong> services include secure data handling, user-friendly interfaces, and features tailored to meet the demands of healthcare providers and patients alike.
+                As a trusted healthcare{" "}
+                <strong>mobile app development company,</strong> we design
+                solutions that improve patient care and streamline medical
+                processes. Our{" "}
+                <strong>healthcare mobile app development</strong> services
+                include secure data handling, user-friendly interfaces, and
+                features tailored to meet the demands of healthcare providers
+                and patients alike.
               </p>
             </div>
           </div>
@@ -258,7 +242,7 @@ const MobileAppDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">

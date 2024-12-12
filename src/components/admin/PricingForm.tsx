@@ -254,7 +254,7 @@ const PricingForm = () => {
             ref={modalRef} // Attach ref to the modal container
             className="bg-white  w-1/3"
           >
-            <h2 className="text-2xl font-bold mb-4 text-center bg-[#7A4AFF] text-white p-7">
+            <h2 className="text-2xl font-bold mb-4 text-center bg-[#9A00FF] text-white p-7">
               Pricing Form Details
             </h2>
             <div className="p-2 mb-3">

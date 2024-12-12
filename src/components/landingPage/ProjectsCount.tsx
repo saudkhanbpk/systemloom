@@ -31,13 +31,13 @@ const StatItem: FC<StatItemProps> = ({ value, label }) => {
 
 const ProjectsCount: FC = () => {
   return (
-    <div className="relative bg-[#7A4AFF] py-8 overflow-hidden">
+    <div className="relative bg-[#9A00FF] py-8 overflow-hidden">
       <div className="absolute inset-0">
       <video
   autoPlay
   muted
   loop
-  className="absolute inset-0 w-full h-[190px] object-cover opacity-70 pointer-events-none"
+  className="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none"
   aria-hidden="true"
   poster="/assets/vecteezy_video-placeholder.jpg"
 >

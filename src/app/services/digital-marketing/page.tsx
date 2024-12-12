@@ -10,10 +10,7 @@ import marketingImage5 from "../../../../public/assets/graphice design images/di
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
 import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
-import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
-import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import MarketingRelatedProjects from "@/components/services/MarketingRelatedProjects";
 import Head from "next/head";
@@ -21,48 +18,30 @@ import Head from "next/head";
 const DigitalMarketing = () => {
   const services = [
     {
-      title: "Product Design",
+      title: "Web Developement",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Making dynamic, responsive websites that put user satisfaction first.",
       icon: productDesignImage,
     },
     {
-      title: "App Design",
+      title: "SEO & Content Writing",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: appDesignImage,
-    },
-    {
-      title: "Web Design",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: webDesignImage,
-    },
-    {
-      title: "Development",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: developmentDesignImage,
-    },
-    {
-      title: "Illustration",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: illustrationDesignImage,
-    },
-    {
-      title: "Motion",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
       icon: motionDesignImage,
+    },
+    {
+      title: "Graphic Designing",
+      description:
+        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
+      icon: webDesignImage,
     },
   ];
 
   return (
     <div>
-       <Head>
+      <Head>
         <title>
-        Digital Marketing Experts | Social Media Marketing & PPC Services
+          Digital Marketing Experts | Social Media Marketing & PPC Services
         </title>
         <meta
           name="description"
@@ -70,16 +49,19 @@ const DigitalMarketing = () => {
         />
       </Head>
 
-
       {/* hero section start */}
       <div className="bg-black w-full lg:min-h-screen md:pt-36 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  md:px-12  mt-20">
           <h1 className="text-3xl lg:text-5xl  font-bold">
-          Digital Marketing Services
+            Digital Marketing Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          At TechCreator, we combine creativity and strategy to offer tailored <strong>digital marketing services</strong> that meet your unique business goals. From effective <strong>branding</strong> to result-driven campaigns, our team’s expertise ensures your online success.
+            At TechCreator, we combine creativity and strategy to offer tailored{" "}
+            <strong>digital marketing services</strong> that meet your unique
+            business goals. From effective <strong>branding</strong> to
+            result-driven campaigns, our team’s expertise ensures your online
+            success.
           </p>
         </div>
 
@@ -108,11 +90,18 @@ const DigitalMarketing = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[700px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[700px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-32">
-              <h1 className="text-2xl sm:text-3xl md:w-[440px] font-bold mb-3 ">Social Media Marketing: Your Audience, Engaged</h1>
+              <h1 className="text-2xl sm:text-3xl md:w-[440px] font-bold mb-3 ">
+                Social Media Marketing: Your Audience, Engaged
+              </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-              Our personalized approach to <strong>social media marketing</strong> helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on Instagram, Facebook, and beyond to captivate and grow your audience.
+                Our personalized approach to{" "}
+                <strong>social media marketing</strong> helps brands foster
+                authentic connections. With a deep understanding of platform
+                algorithms, we craft compelling content and manage campaigns on
+                Instagram, Facebook, and beyond to captivate and grow your
+                audience.
               </p>
             </div>
           </div>
@@ -180,10 +169,14 @@ const DigitalMarketing = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            PPC Campaigns Designed for Maximum ROI
+              PPC Campaigns Designed for Maximum ROI
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            As specialists in <strong>PPC,</strong> we design campaigns that deliver high-impact results. Our team analyzes your business needs and targets the right audience with precision, ensuring your ads—whether Google or <strong>Meta Ads</strong>—generate maximum traffic and conversions.
+              As specialists in <strong>PPC,</strong> we design campaigns that
+              deliver high-impact results. Our team analyzes your business needs
+              and targets the right audience with precision, ensuring your
+              ads—whether Google or <strong>Meta Ads</strong>—generate maximum
+              traffic and conversions.
             </p>
           </div>
         </div>
@@ -195,10 +188,13 @@ const DigitalMarketing = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Insta and FB Ads That Deliver Impact
+              Insta and FB Ads That Deliver Impact
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            Our expertise in <strong>Insta and FB ads</strong> guarantees attention-grabbing campaigns that drive engagement and sales. We combine creativity with advanced analytics to craft ads that resonate with your audience and achieve your goals.
+              Our expertise in <strong>Insta and FB ads</strong> guarantees
+              attention-grabbing campaigns that drive engagement and sales. We
+              combine creativity with advanced analytics to craft ads that
+              resonate with your audience and achieve your goals.
             </p>
           </div>
           <Image
@@ -224,10 +220,13 @@ const DigitalMarketing = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Strategic Branding For Your Business
+              Strategic Branding For Your Business
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            Branding is more than a logo—it’s how the world perceives your business. Our experts take the time to understand your vision and values, delivering branding solutions that define your identity and leave a lasting impression on your audience.
+              Branding is more than a logo—it’s how the world perceives your
+              business. Our experts take the time to understand your vision and
+              values, delivering branding solutions that define your identity
+              and leave a lasting impression on your audience.
             </p>
           </div>
         </div>
@@ -235,15 +234,19 @@ const DigitalMarketing = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Proven Results Across Industries
+              Proven Results Across Industries
             </h1>
             <p className="text-base md:text-lg text-white webDevtext ">
-            With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic <strong>Meta Ads</strong> increase conversions by 60%. For startups, our targeted <strong>social media marketing </strong>campaigns have driven audience growth and brand loyalty.
+              With experience across multiple sectors, we bring personalized
+              expertise to every project. For a retail client, our strategic{" "}
+              <strong>Meta Ads</strong> increase conversions by 60%. For
+              startups, our targeted <strong>social media marketing </strong>
+              campaigns have driven audience growth and brand loyalty.
             </p>
           </div>
           {/* Image */}
@@ -266,7 +269,7 @@ const DigitalMarketing = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 

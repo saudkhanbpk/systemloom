@@ -10,10 +10,7 @@ import webimage4 from "../../../../public/assets/ServiceDetailsImages/thirdHeadi
 import webimage5 from "../../../../public/assets/ServiceDetailsImages/webimage5.png";
 
 // RelatedServices images
-import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
 import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
-import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Head from "next/head";
@@ -61,34 +58,10 @@ const WebDevelopment = () => {
 
   const services = [
     {
-      title: "Web Developement",
-      description:
-        "Making dynamic, responsive websites that put user satisfaction first.",
-      icon: productDesignImage,
-    },
-    {
-      title: "Mobile App Development",
-      description:
-        "Creating powerful mobile applications that will capture users and enhance your brand.",
-      icon: appDesignImage,
-    },
-    {
       title: "Ui & Ux Design",
       description:
         "Building intuitive interfaces that provide a seamless promised user experience.",
       icon: webDesignImage,
-    },
-    {
-      title: "DevOps",
-      description:
-        "Streamlining your development pipeline for guided efficiency with automation to allow for automated daily deployment.",
-      icon: developmentDesignImage,
-    },
-    {
-      title: "Project Management",
-      description:
-        "Executing precise project management potentially geared to step-out on time; it facilitates efficient collaboration by leading the project stakeholders.",
-      icon: illustrationDesignImage,
     },
     {
       title: "SEO & Content Writing",
@@ -100,25 +73,7 @@ const WebDevelopment = () => {
       title: "Graphic Designing",
       description:
         "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
-      icon: motionDesignImage,
-    },
-    {
-      title: "Software Maintenance",
-      description:
-        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
-      icon: motionDesignImage,
-    },
-    {
-      title: "QA Testing",
-      description:
-        "Having exhaustive testing done assures your software has no errors and delivers great performance to the customer.",
-      icon: motionDesignImage,
-    },
-    {
-      title: "Digital Marketing",
-      description:
-        "Promoting online presence through marketing campaigns meant to be traffic generators.",
-      icon: motionDesignImage,
+      icon: illustrationDesignImage,
     },
   ];
 
@@ -172,13 +127,18 @@ const WebDevelopment = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-xl sm:text-3xl font-bold mb-3">
-              Bespoke Web Development Tailored to Your Vision
+                Bespoke Web Development Tailored to Your Vision
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-              tand out from the crowd with <strong>bespoke web development</strong> crafted to meet your specific needs. Our team of skilled developers creates custom solutions that align with your brand and business goals, offering unique designs and functionalities to captivate your audience and elevate your online presence.
+                tand out from the crowd with{" "}
+                <strong>bespoke web development</strong> crafted to meet your
+                specific needs. Our team of skilled developers creates custom
+                solutions that align with your brand and business goals,
+                offering unique designs and functionalities to captivate your
+                audience and elevate your online presence.
               </p>
             </div>
           </div>
@@ -318,7 +278,7 @@ const WebDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
@@ -354,7 +314,7 @@ const WebDevelopment = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 

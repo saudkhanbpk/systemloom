@@ -130,7 +130,7 @@ const OurProjectsGrid = ({ searchTerm }: OurProjectsGridProps) => {
             </div>
 
             {/* Title always visible */}
-            <div className="absolute bottom-4 left-4 bg-[#7A4AFF] bg-opacity-75 text-white p-2 rounded">
+            <div className="absolute bottom-4 left-4 bg-[#9A00FF] bg-opacity-75 text-white p-2 rounded">
               <p className="text-sm font-semibold">{project.title}</p>
             </div>
           </div>

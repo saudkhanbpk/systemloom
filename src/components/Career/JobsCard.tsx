@@ -1,11 +1,9 @@
-import JobDetail from './JobDetail';
-import { useSelector } from 'react-redux';
-import { MapPin, Clock } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
-import { RootState } from '@/redux/store';
-import { useState } from 'react';
-
-
+import JobDetail from "./JobDetail";
+import { useSelector } from "react-redux";
+import { MapPin, Clock } from "lucide-react";
+import { formatDistanceToNow } from "date-fns";
+import { RootState } from "@/redux/store";
+import { useState } from "react";
 
 // JobCard component with typed props
 interface JobCardProps {
@@ -26,15 +24,20 @@ const JobCard = ({
   timeAgo = new Date(),
 }: JobCardProps) => {
   // If timeAgo is a string, convert it to a Date object
-  const timeAgoFormatted = typeof timeAgo === 'string' ? new Date(timeAgo) : timeAgo;
-  const timeDistance = formatDistanceToNow(timeAgoFormatted, { addSuffix: true });
+  const timeAgoFormatted =
+    typeof timeAgo === "string" ? new Date(timeAgo) : timeAgo;
+  const timeDistance = formatDistanceToNow(timeAgoFormatted, {
+    addSuffix: true,
+  });
 
   return (
     <div className="bg-[#F4F6FC] text-black rounded-[24px] p-6 md:w-[360px] w-[300px] h-[280px] hover:shadow-lg transition-shadow">
       <div className="flex items-center mb-3">
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-purple-600 mr-2"></div>
-          <span className="text-purple-600 text-sm font-medium">{category}</span>
+          <span className="text-purple-600 text-sm font-medium">
+            {category}
+          </span>
         </div>
       </div>
 
@@ -53,7 +56,7 @@ const JobCard = ({
 
       <div className="flex items-center justify-between mt-20">
         <div className="flex items-center">
-          <div className="w-8 h-8 bg-[#7A4AFF] rounded-full flex items-center justify-center mr-2">
+          <div className="w-8 h-8 bg-[#9A00FF] rounded-full flex items-center justify-center mr-2">
             <span className="text-white text-sm">T</span>
           </div>
           <span className="font-medium">{company}</span>
@@ -77,9 +80,7 @@ const JobsCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
 
-  
-
-  const openModal = (job:any) => {
+  const openModal = (job: any) => {
     setSelectedJob(job);
     setIsModalOpen(true);
   };
@@ -88,18 +89,23 @@ const JobsCard = () => {
     setIsModalOpen(false);
     setSelectedJob(null);
   };
-  
 
   return (
     <>
-    <div className=" py-12 max-w-6xl mx-auto  px-1">
-      <div className=' '>
-        <p className="font-inter font-semibold text-[42px]">Open positions</p>
-        <p className="font-inter font-normal text-[22px] text-[#838696]">Come join the team!</p>
-      </div>
-      <div className="flex flex-wrap py-14  md:gap-5  justify-center  gap-4  ">
-      {allJobs?.map((job) => (
-            <div key={job._id} onClick={() => openModal(job)} className=' cursor-pointer '>
+      <div className=" py-12 max-w-6xl mx-auto  px-1">
+        <div className=" ">
+          <p className="font-inter font-semibold text-[42px]">Open positions</p>
+          <p className="font-inter font-normal text-[22px] text-[#838696]">
+            Come join the team!
+          </p>
+        </div>
+        <div className="flex flex-wrap py-14  md:gap-5  justify-center  gap-4  ">
+          {allJobs?.map((job) => (
+            <div
+              key={job._id}
+              onClick={() => openModal(job)}
+              className=" cursor-pointer "
+            >
               <JobCard
                 category={job.category}
                 title={job.title}
@@ -110,15 +116,18 @@ const JobsCard = () => {
               />
             </div>
           ))}
+        </div>
       </div>
-    </div>
 
-    {/* Render the JobDetail modal only if a job is selected */}
-    {selectedJob && (
-        <JobDetail isOpen={isModalOpen} onClose={closeModal} job={selectedJob} />
+      {/* Render the JobDetail modal only if a job is selected */}
+      {selectedJob && (
+        <JobDetail
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          job={selectedJob}
+        />
       )}
     </>
-    
   );
 };
 

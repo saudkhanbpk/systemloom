@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { Star } from 'lucide-react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/redux/store';
-import useGetAllTestimonial from '@/hooks/useGetAllTestimonial';
-
+import React, { useState } from "react";
+import Image from "next/image";
+import { Star } from "lucide-react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+import useGetAllTestimonial from "@/hooks/useGetAllTestimonial";
 
 interface TestimonialCardProps {
   name: string;
@@ -45,7 +44,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
-            className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+            className={`w-5 h-5 ${
+              i < rating ? "text-yellow-400 fill-current" : "text-gray-300"
+            }`}
           />
         ))}
       </div>
@@ -64,10 +65,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   );
 };
 
-
 const ClientTestimonialsSection: React.FC = () => {
-  useGetAllTestimonial(); 
-  const { testimonials } = useSelector((state: RootState) => state.testimonials);
+  useGetAllTestimonial();
+  const { testimonials } = useSelector(
+    (state: RootState) => state.testimonials
+  );
 
   // Carousel settings
   const responsive = {
@@ -96,7 +98,7 @@ const ClientTestimonialsSection: React.FC = () => {
   return (
     <section className="py-16">
       <div className="mx-auto px-4">
-        <h2 className="text-[35px] font-bold text-center text-[#7A4AFF] mb-2">
+        <h2 className="text-[35px] font-bold text-center text-[#9A00FF] mb-2">
           CLIENT TESTIMONIALS
         </h2>
         <p className="text-2xl text-center font-medium mb-12">
@@ -106,7 +108,7 @@ const ClientTestimonialsSection: React.FC = () => {
           responsive={responsive}
           autoPlay
           infinite
-          removeArrowOnDeviceType={['mobile', 'tablet']}
+          removeArrowOnDeviceType={["mobile", "tablet"]}
           arrows={false}
           showDots
         >
@@ -114,10 +116,12 @@ const ClientTestimonialsSection: React.FC = () => {
             <TestimonialCard
               key={testimonial._id}
               name={testimonial.clientName}
-              image={testimonial.profilePicture || '/default-profile.png'}
+              image={testimonial.profilePicture || "/default-profile.png"}
               rating={testimonial.rating}
               testimonial={testimonial.review}
-              reviewScreenshot={testimonial.reviewScreenshot || '/default-screenshot.png'} 
+              reviewScreenshot={
+                testimonial.reviewScreenshot || "/default-screenshot.png"
+              }
             />
           ))}
         </Carousel>
@@ -125,6 +129,5 @@ const ClientTestimonialsSection: React.FC = () => {
     </section>
   );
 };
-
 
 export default ClientTestimonialsSection;

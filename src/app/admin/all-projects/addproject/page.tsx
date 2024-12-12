@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { backend_url } from "@/newLayout";
+import { FaRegCircle, FaCheckCircle } from "react-icons/fa";
 
 const AddProjectPage: React.FC = () => {
   const searchParams = useSearchParams();
@@ -18,11 +19,12 @@ const AddProjectPage: React.FC = () => {
     figmaLink: "",
     websiteLink: "",
     githubLink: "",
-    category: "",
-    industry:"",
+    category: [] as string[], 
+    industry: [] as string[],
     projectScreenshot: null as File | null,
-    screenshotUrl: "", // To store the URL of the existing screenshot for updates
+    screenshotUrl: "",
   });
+  
 
   const [loading, setLoading] = useState(false);
 
@@ -54,15 +56,16 @@ const AddProjectPage: React.FC = () => {
 
 
   // Handle form data change
-const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-) => {
-  const { name, value } = e.target;
-  setFormData((prevData) => ({
-    ...prevData,
-    [name]: value, 
-  }));
-};
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target; // Extract the name and value of the input
+    setFormData((prevData) => ({
+      ...prevData,  // Spread the previous form data
+      [name]: value, // Update the specific field using the name of the input
+    }));
+  };
+  
   
 
   // Handle file upload change
@@ -70,12 +73,33 @@ const handleChange = (
     const files = e.target.files;
     if (files && files.length > 0) {
       setFormData((prevData) => ({
-        ...prevData,
-        projectScreenshot: files[0], 
-        screenshotUrl: URL.createObjectURL(files[0]), 
+        ...prevData,  // Spread the previous form data
+        projectScreenshot: files[0],  // Save the selected file
+        screenshotUrl: URL.createObjectURL(files[0]),  // Create an object URL for the file to preview
       }));
     }
   };
+
+  
+  const handleCategoryChange = (category: string) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      category: prevData.category.includes(category)
+        ? prevData.category.filter((item) => item !== category)
+        : [...prevData.category, category],
+    }));
+  };
+  
+
+  const handleIndustryChange = (industry: string) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      industry: prevData.industry.includes(industry)
+        ? prevData.industry.filter((item:any) => item !== industry)
+        : [...prevData.industry, industry],
+    }));
+  };
+
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
@@ -88,8 +112,22 @@ const handleChange = (
     formPayload.append("figmaLink", formData.figmaLink);
     formPayload.append("websiteLink", formData.websiteLink);
     formPayload.append("githubLink", formData.githubLink);
-    formPayload.append("category", formData.category);
-    formPayload.append("industry", formData.industry);
+    // formPayload.append("category", formData.category);
+    // formPayload.append("industry", formData.industry);
+
+     // Add multiple Industries to the payload
+    if (Array.isArray(formData.industry)) {
+      formData.industry.forEach((industry) => {
+        formPayload.append("industry[]", industry);
+      });
+    }
+
+     // Add multiple categories to the payload
+  if (Array.isArray(formData.category)) {
+    formData.category.forEach((category) => {
+      formPayload.append("category[]", category);
+    });
+  }
 
     // console.log("Industry Value:", formData.industry);
 
@@ -185,54 +223,265 @@ const handleChange = (
 
 
 {/* Industry Field */}
+
 <div>
   <label htmlFor="industry" className="block text-sm font-medium text-gray-700">
     Industry
   </label>
-  <select
-    name="industry"
-    id="industry"
-    value={formData.industry}
-    onChange={handleChange}
-    required
-    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
-  >
-    <option value="">Select an Industry</option>
-    <option value="healthcare">HealthCare</option>
-    <option value="e-commerce">E-Commerce</option>
-    <option value="hospitality">Hospitality</option>
-    <option value="real-estate">Real Estate</option>
-    <option value="restaurants">Restaurants</option>
-    <option value="green-energy">Green Energy</option>
-  </select>
+  <div className="mt-2 space-y-2">
+    {/* Healthcare Industry */}
+    <div onClick={() => handleIndustryChange("healthcare")} className="flex items-center cursor-pointer">
+      {formData.industry.includes("healthcare") ? (
+        <FaCheckCircle className="text-blue-500 mr-2" />
+      ) : (
+        <FaRegCircle className="text-gray-500 mr-2" />
+      )}
+      <label htmlFor="healthcare" className="text-sm text-gray-700">HealthCare</label>
+    </div>
+
+    {/* E-Commerce Industry */}
+    <div onClick={() => handleIndustryChange("e-commerce")} className="flex items-center cursor-pointer">
+      {formData.industry.includes("e-commerce") ? (
+        <FaCheckCircle className="text-blue-500 mr-2" />
+      ) : (
+        <FaRegCircle className="text-gray-500 mr-2" />
+      )}
+      <label htmlFor="e-commerce" className="text-sm text-gray-700">E-Commerce</label>
+    </div>
+
+    {/* Hospitality Industry */}
+    <div onClick={() => handleIndustryChange("hospitality")} className="flex items-center cursor-pointer">
+      {formData.industry.includes("hospitality") ? (
+        <FaCheckCircle className="text-blue-500 mr-2" />
+      ) : (
+        <FaRegCircle className="text-gray-500 mr-2" />
+      )}
+      <label htmlFor="hospitality" className="text-sm text-gray-700">Hospitality</label>
+    </div>
+
+    {/* Real Estate Industry */}
+    <div onClick={() => handleIndustryChange("real-estate")} className="flex items-center cursor-pointer">
+      {formData.industry.includes("real-estate") ? (
+        <FaCheckCircle className="text-blue-500 mr-2" />
+      ) : (
+        <FaRegCircle className="text-gray-500 mr-2" />
+      )}
+      <label htmlFor="real-estate" className="text-sm text-gray-700">Real Estate</label>
+    </div>
+
+    {/* Restaurants Industry */}
+    <div onClick={() => handleIndustryChange("restaurants")} className="flex items-center cursor-pointer">
+      {formData.industry.includes("restaurants") ? (
+        <FaCheckCircle className="text-blue-500 mr-2" />
+      ) : (
+        <FaRegCircle className="text-gray-500 mr-2" />
+      )}
+      <label htmlFor="restaurants" className="text-sm text-gray-700">Restaurants</label>
+    </div>
+
+    {/* Green Energy Industry */}
+    <div onClick={() => handleIndustryChange("green-energy")} className="flex items-center cursor-pointer">
+      {formData.industry.includes("green-energy") ? (
+        <FaCheckCircle className="text-blue-500 mr-2" />
+      ) : (
+        <FaRegCircle className="text-gray-500 mr-2" />
+      )}
+      <label htmlFor="green-energy" className="text-sm text-gray-700">Green Energy</label>
+    </div>
+  </div>
 </div>
+
+
 
 {/* Category Field */}
 <div>
-  <label htmlFor="category" className="block text-sm font-medium text-gray-700">
-    Category
-  </label>
-  <select
-    name="category"
-    id="category"
-    value={formData.category}
-    onChange={handleChange}
-    required
-    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md"
-  >
-    <option value="">Select a Category</option>
-    <option value="web-development">Web Development</option>
-    <option value="app-development">App Development</option>
-    <option value="ui-ux-design">UI & UX Design</option>
-    <option value="devops">DevOps</option>
-    <option value="graphic-designing">Graphic Designing</option>
-    <option value="project-management">Project Management</option>
-    <option value="seo-content-writing">SEO & Content Writing</option>
-    <option value="software-maintenance">Software Maintenance</option>
-    <option value="qa-testing">QA Testing</option>
-    <option value="social-media-marketing">Social Media Marketing & Branding</option>
-  </select>
+  <label className="block text-sm font-medium text-gray-700">Category</label>
+  <div className="mt-2 space-y-2">
+    {/* Web Development Icon */}
+    <div>
+      <button
+        type="button"
+        id="web-development"
+        value="web-development"
+        onClick={() => handleCategoryChange("web-development")}
+        className="mr-2"
+      >
+        {formData.category.includes("web-development") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="web-development" className="text-sm text-gray-700">Web Development</label>
+    </div>
+
+    {/* App Development Icon */}
+    <div>
+      <button
+        type="button"
+        id="app-development"
+        value="app-development"
+        onClick={() => handleCategoryChange("app-development")}
+        className="mr-2"
+      >
+        {formData.category.includes("app-development") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="app-development" className="text-sm text-gray-700">App Development</label>
+    </div>
+
+    {/* UI & UX Design Icon */}
+    <div>
+      <button
+        type="button"
+        id="ui-ux-design"
+        value="ui-ux-design"
+        onClick={() => handleCategoryChange("ui-ux-design")}
+        className="mr-2"
+      >
+        {formData.category.includes("ui-ux-design") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="ui-ux-design" className="text-sm text-gray-700">UI & UX Design</label>
+    </div>
+
+    {/* DevOps Icon */}
+    <div>
+      <button
+        type="button"
+        id="devops"
+        value="devops"
+        onClick={() => handleCategoryChange("devops")}
+        className="mr-2"
+      >
+        {formData.category.includes("devops") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="devops" className="text-sm text-gray-700">DevOps</label>
+    </div>
+
+    {/* Graphic Designing Icon */}
+    <div>
+      <button
+        type="button"
+        id="graphic-designing"
+        value="graphic-designing"
+        onClick={() => handleCategoryChange("graphic-designing")}
+        className="mr-2"
+      >
+        {formData.category.includes("graphic-designing") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="graphic-designing" className="text-sm text-gray-700">Graphic Designing</label>
+    </div>
+
+    {/* Project Management Icon */}
+    <div>
+      <button
+        type="button"
+        id="project-management"
+        value="project-management"
+        onClick={() => handleCategoryChange("project-management")}
+        className="mr-2"
+      >
+        {formData.category.includes("project-management") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="project-management" className="text-sm text-gray-700">Project Management</label>
+    </div>
+
+    {/* SEO & Content Writing Icon */}
+    <div>
+      <button
+        type="button"
+        id="seo-content-writing"
+        value="seo-content-writing"
+        onClick={() => handleCategoryChange("seo-content-writing")}
+        className="mr-2"
+      >
+        {formData.category.includes("seo-content-writing") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="seo-content-writing" className="text-sm text-gray-700">SEO & Content Writing</label>
+    </div>
+
+    {/* Software Maintenance Icon */}
+    <div>
+      <button
+        type="button"
+        id="software-maintenance"
+        value="software-maintenance"
+        onClick={() => handleCategoryChange("software-maintenance")}
+        className="mr-2"
+      >
+        {formData.category.includes("software-maintenance") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="software-maintenance" className="text-sm text-gray-700">Software Maintenance</label>
+    </div>
+
+    {/* QA Testing Icon */}
+    <div>
+      <button
+        type="button"
+        id="qa-testing"
+        value="qa-testing"
+        onClick={() => handleCategoryChange("qa-testing")}
+        className="mr-2"
+      >
+        {formData.category.includes("qa-testing") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="qa-testing" className="text-sm text-gray-700">QA Testing</label>
+    </div>
+
+    {/* Social Media Marketing Icon */}
+    <div>
+      <button
+        type="button"
+        id="social-media-marketing"
+        value="social-media-marketing"
+        onClick={() => handleCategoryChange("social-media-marketing")}
+        className="mr-2"
+      >
+        {formData.category.includes("social-media-marketing") ? (
+          <FaCheckCircle className="text-blue-500" />
+        ) : (
+          <FaRegCircle className="text-gray-500" />
+        )}
+      </button>
+      <label htmlFor="social-media-marketing" className="text-sm text-gray-700">Social Media Marketing & Branding</label>
+    </div>
+  </div>
 </div>
+
+
+
+
 
 
 

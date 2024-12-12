@@ -163,7 +163,7 @@ const ServicesSection: React.FC = () => {
 
   return (
     <div className="mx-auto">
-      <div className="text-center font-bold text-[#7A4AFF] text-[35px] mb-20 mt-14">
+      <div className="text-center font-bold text-[#9A00FF] text-[35px] mb-20 mt-14">
         <h2>Services we offer</h2>
       </div>
       <Carousel

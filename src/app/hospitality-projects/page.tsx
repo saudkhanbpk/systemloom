@@ -29,7 +29,7 @@ const HospitalityProject: React.FC = () => {
 
   // Filter projects by category 'restaurants'
   const filteredProjects = projects.filter(
-    (project) => project.industry === "hospitality"
+    (project) => project.industry.includes(("hospitality"))
   );
 
   // Get current projects based on the page

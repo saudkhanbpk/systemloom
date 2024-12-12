@@ -98,7 +98,7 @@ const CareerHeroSection: FC = () => {
               That's our working style.
             </p>
             <CommonButton
-              className="bg-[#7A4AFF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
+              className="bg-[#9A00FF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
               title="Send your resume"
               handleClick={handleDialogOpen}
             />
@@ -209,7 +209,7 @@ const CareerHeroSection: FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="bg-[#7A4AFF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg"
+                  className="bg-[#9A00FF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg"
                   disabled={loading}
                 >
                   {loading ? "Submitting..." : "Submit"}

@@ -11,9 +11,6 @@ import FeatureImage from "../../../../public/assets/graphice design images/featu
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
 import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
-import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
-import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
-import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import GraphicDesigningRelatedProjects from "@/components/services/GraphicDesignRelatedProjects";
 import Head from "next/head";
@@ -21,39 +18,21 @@ import Head from "next/head";
 const GraphicDesign = () => {
   const services = [
     {
-      title: "Product Design",
+      title: "Web Developement",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Making dynamic, responsive websites that put user satisfaction first.",
       icon: productDesignImage,
     },
     {
-      title: "App Design",
+      title: "Mobile App Development",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Creating powerful mobile applications that will capture users and enhance your brand.",
       icon: appDesignImage,
     },
     {
-      title: "Web Design",
+      title: "SEO & Content Writing",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: webDesignImage,
-    },
-    {
-      title: "Development",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: developmentDesignImage,
-    },
-    {
-      title: "Illustration",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-      icon: illustrationDesignImage,
-    },
-    {
-      title: "Motion",
-      description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
       icon: motionDesignImage,
     },
   ];
@@ -62,7 +41,7 @@ const GraphicDesign = () => {
     <div>
       <Head>
         <title>
-        Agency for Graphic Design | Expert Graphic Design Companies
+          Agency for Graphic Design | Expert Graphic Design Companies
         </title>
         <meta
           name="description"
@@ -75,10 +54,14 @@ const GraphicDesign = () => {
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  mt-20">
           <h1 className="text-3xl lg:text-5xl font-bold">
-          Unique Styles for Your Business
+            Unique Styles for Your Business
           </h1>
           <p className="text-base md:text-lg mt-3">
-          TechCreator is your go-to <strong>agency for graphic design,</strong> offering creative solutions that bring your ideas to life. From logos to marketing materials, our designs are crafted to communicate your brand's message effectively and captivate your audience.
+            TechCreator is your go-to{" "}
+            <strong>agency for graphic design,</strong> offering creative
+            solutions that bring your ideas to life. From logos to marketing
+            materials, our designs are crafted to communicate your brand's
+            message effectively and captivate your audience.
           </p>
         </div>
 
@@ -107,13 +90,17 @@ const GraphicDesign = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-2xl sm:text-3xl font-bold mb-3">
-              Partner with One of the Top Graphic Design Companies
+                Partner with One of the Top Graphic Design Companies
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-              As one of the leading <strong>graphic design companies,</strong> we provide professional services that enhance your brand’s identity. Our team of skilled designers specializes in creating high-impact visuals that drive engagement and leave a lasting impression.
+                As one of the leading <strong>graphic design companies,</strong>{" "}
+                we provide professional services that enhance your brand’s
+                identity. Our team of skilled designers specializes in creating
+                high-impact visuals that drive engagement and leave a lasting
+                impression.
               </p>
             </div>
           </div>
@@ -181,10 +168,14 @@ const GraphicDesign = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Agency for Graphic Design Tailored to Your Brand
+              Agency for Graphic Design Tailored to Your Brand
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            At TechCreator, we understand the importance of design diversity. Our expertise spans various <strong>graphic design styles,</strong> ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.
+              At TechCreator, we understand the importance of design diversity.
+              Our expertise spans various{" "}
+              <strong>graphic design styles,</strong> ensuring we can create the
+              perfect visual identity for your business, whether it’s modern,
+              minimalistic, or vibrant and bold.
             </p>
           </div>
         </div>
@@ -196,10 +187,14 @@ const GraphicDesign = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Custom Designs for Every Need
+              Custom Designs for Every Need
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            We offer a wide range of services, including branding, infographics, and digital marketing assets. With our <strong>agency for graphic design,</strong> you’ll receive personalized solutions designed to stand out in today’s competitive market.
+              We offer a wide range of services, including branding,
+              infographics, and digital marketing assets. With our{" "}
+              <strong>agency for graphic design,</strong> you’ll receive
+              personalized solutions designed to stand out in today’s
+              competitive market.
             </p>
           </div>
           <Image
@@ -225,10 +220,13 @@ const GraphicDesign = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-            Brand with Strategic Visuals
+              Brand with Strategic Visuals
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-            Effective design goes beyond aesthetics. Our designs are strategically crafted to enhance your brand’s visibility and connect with your target audience, positioning your business as a leader in its industry.
+              Effective design goes beyond aesthetics. Our designs are
+              strategically crafted to enhance your brand’s visibility and
+              connect with your target audience, positioning your business as a
+              leader in its industry.
             </p>
           </div>
         </div>
@@ -236,7 +234,7 @@ const GraphicDesign = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#7A4AFF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
@@ -244,7 +242,11 @@ const GraphicDesign = () => {
               Recent Work: Redefining Mobile Solutions
             </h1>
             <p className="text-base md:text-lg text-white webDevtext ">
-            Our recent projects include branding for a healthcare startup and social media graphics for a retail business. As one of the top <strong>graphic design companies,</strong> we’ve helped clients amplify their brand presence and achieve measurable success with unique <strong>graphic design styles</strong>.
+              Our recent projects include branding for a healthcare startup and
+              social media graphics for a retail business. As one of the top{" "}
+              <strong>graphic design companies,</strong> we’ve helped clients
+              amplify their brand presence and achieve measurable success with
+              unique <strong>graphic design styles</strong>.
             </p>
           </div>
           {/* Image */}
@@ -267,7 +269,7 @@ const GraphicDesign = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 
