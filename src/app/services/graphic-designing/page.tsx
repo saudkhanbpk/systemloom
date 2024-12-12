@@ -62,12 +62,11 @@ const GraphicDesign = () => {
     <div>
       <Head>
         <title>
-          TechCreator offering services in Graphic Designing For Business to
-          touch new heights in Digital Landscape
+        Agency for Graphic Design | Expert Graphic Design Companies
         </title>
         <meta
           name="description"
-          content="TechCreator offers services in graphic designing to enhance your brand drive results. From logos and branding to digital ads and packaging, we have expert designers  that craft visuals that take your products to new heights."
+          content="TechCreator is a top agency for graphic design offering diverse graphic design styles. Partner with one of the leading graphic design companies to elevate your brand."
         />
       </Head>
 
@@ -76,14 +75,10 @@ const GraphicDesign = () => {
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  mt-20">
           <h1 className="text-3xl lg:text-5xl font-bold">
-            Graphic Design Services
+          Unique Styles for Your Business
           </h1>
           <p className="text-base md:text-lg mt-3">
-            At TechCreator, we craft custom graphic designs tailored to your
-            brand’s voice and vision. Whether you are looking for eye-catching
-            visuals, professional branding or digital art, our team brings
-            creativity and expertise to every business through professional
-            visuals.
+          TechCreator is your go-to <strong>agency for graphic design,</strong> offering creative solutions that bring your ideas to life. From logos to marketing materials, our designs are crafted to communicate your brand's message effectively and captivate your audience.
           </p>
         </div>
 
@@ -91,7 +86,7 @@ const GraphicDesign = () => {
         <div className="w-full md:w-auto flex justify-center">
           <Image
             src={heroimage}
-            alt="heroImage"
+            alt="TechCreator bringing technology innovations through graphic designing"
             width={300}
             height={300}
             className="w-[80vw] md:w-[35vw]"
@@ -106,7 +101,7 @@ const GraphicDesign = () => {
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
               src={FeatureImage}
-              alt="TechCreator bringing technology innovations through graphic designing"
+              alt="TechCreator designs logo aligning perfectly to your business aims"
               width={300}
               height={450}
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
@@ -115,15 +110,10 @@ const GraphicDesign = () => {
           <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-2xl sm:text-3xl font-bold mb-3">
-                Custom Logo Design to Define Your Brand Identity{" "}
+              Partner with One of the Top Graphic Design Companies
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-                First impression is the last impression. <br />
-                Your logo represents your business and make a lasting impression
-                on your audience. <br /> A well-designed logo will be the
-                cornerstone of your brand, to make a lasting impression. Concern
-                TechCreator for custom logos that perfectly aligns with your
-                business goals.
+              As one of the leading <strong>graphic design companies,</strong> we provide professional services that enhance your brand’s identity. Our team of skilled designers specializes in creating high-impact visuals that drive engagement and leave a lasting impression.
               </p>
             </div>
           </div>
@@ -182,7 +172,7 @@ const GraphicDesign = () => {
           {/* Image Section */}
           <Image
             src={graphic1}
-            alt="TechCreator designs logo aligning perfectly to your business aims"
+            alt="TechCreator attracts audience to your products graphic designing"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -191,15 +181,10 @@ const GraphicDesign = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              Professional Website and Social Media Graphics{" "}
+            Agency for Graphic Design Tailored to Your Brand
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-              Want to enhance your business presence online with custom graphics
-              and social media designs, look no further, other than TechCreator.
-              Our designs are optimized to drive engagement, ensuring your
-              brand’s visuals align with your digital marketing strategy. We
-              have a team of seasoned members, committed to excellence and
-              bringing innovation to digital landscape.
+            At TechCreator, we understand the importance of design diversity. Our expertise spans various <strong>graphic design styles,</strong> ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.
             </p>
           </div>
         </div>
@@ -211,21 +196,15 @@ const GraphicDesign = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              Target Audience Focus{" "}
+            Custom Designs for Every Need
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-              Effective graphic design always takes the target audience into
-              account. Whether you are designing a corporate logo, a social
-              media posts or a website, understanding your audience’s
-              preferences, behaviors and expectations is essential for creating
-              designs that resonate with them. We are here to do that for you-
-              attract audience to your product by portraying your product online
-              in an attractive way.
+            We offer a wide range of services, including branding, infographics, and digital marketing assets. With our <strong>agency for graphic design,</strong> you’ll receive personalized solutions designed to stand out in today’s competitive market.
             </p>
           </div>
           <Image
             src={graphic2}
-            alt="TechCreator attracts audience to your products graphic designing"
+            alt="TechCreator offers services in graphic designing for your brand"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -237,7 +216,7 @@ const GraphicDesign = () => {
           {/* Image Section */}
           <Image
             src={graphic3}
-            alt="TechCreator offers services in graphic designing for your brand"
+            alt="Strategic design to boost brand visibility and industry leadership."
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -246,18 +225,10 @@ const GraphicDesign = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              {" "}
-              We Offer{" "}
+            Brand with Strategic Visuals
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-              <strong>Our graphic design services cover:</strong>
-              <br />
-              <br />
-              Brand Identity <br />
-              Print Design <br />
-              Digital and Social Media Design <br />
-              Packaging Design <br />
-              Infographic and Illustrations <br />
+            Effective design goes beyond aesthetics. Our designs are strategically crafted to enhance your brand’s visibility and connect with your target audience, positioning your business as a leader in its industry.
             </p>
           </div>
         </div>
@@ -270,23 +241,17 @@ const GraphicDesign = () => {
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose TechCreator for Graphic Designing{" "}
+              Recent Work: Redefining Mobile Solutions
             </h1>
             <p className="text-base md:text-lg text-white webDevtext ">
-              TechCreator create designs that reflect your unique brand identity
-              and business goals with the help of our team, composed of
-              experience graphic designiners, branding experts and digital
-              strategists who work together to deliver high-quality design
-              solutions. So get connected to us transform your brand with
-              exceptional graphic design. We have the ability to bring your
-              vision to life through design.
+            Our recent projects include branding for a healthcare startup and social media graphics for a retail business. As one of the top <strong>graphic design companies,</strong> we’ve helped clients amplify their brand presence and achieve measurable success with unique <strong>graphic design styles</strong>.
             </p>
           </div>
           {/* Image */}
           <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={FramedFeatureSectionImage}
-              alt="Choose TechCreator for graphic designing for your product to thrive in your field"
+              alt="TechCreator graphic design for brand growth and success"
               width={400}
               height={500}
               className="rounded-lg mx-auto  md:mx-0"

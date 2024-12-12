@@ -257,7 +257,7 @@ const UIUXDesign = () => {
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              RRecent Work: Turning Ideas into Impactful Designs
+              Recent Work: Turning Ideas into Impactful Designs
             </h1>
             <p className="text-base md:text-lg text-white webDevtext ">
               Recently, we partnered with a healthcare startup to deliver a

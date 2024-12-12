@@ -16,6 +16,7 @@ import developmentDesignImage from "../../../../public/assets/relatedServices/Fr
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import QaTestingRelatedProjects from "@/components/services/QATestingRelatedProjects";
+import Head from "next/head";
 
 const QATesting = () => {
   const services = [
@@ -59,19 +60,26 @@ const QATesting = () => {
 
   return (
     <div>
+      <Head>
+        <title>
+        QA Testing Services | Comprehensive Quality Assurance Solutions
+        </title>
+        <meta
+          name="description"
+          content="TechCreator offers professional QA testing services to ensure software quality. Enhance reliability with tailored quality assurance testing for seamless performance."
+        />
+      </Head>
+
+
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10 md:px-12   mt-20">
           <h1 className="text-3xl lg:text-5xl font-bold">
-            QA Testing Services & Solutions
+          QA Testing Services
           </h1>
           <p className="text-base md:text-lg mt-3">
-            TechCreator is here to ensure to ensure the quality, functionality
-            and reliability of software or system you are using for your
-            business. We help in evaluating different aspects of software
-            performance, usability, security and compatibility to ensure your
-            product meets the specific requirements.
+          At TechCreator, Expert <strong>QA testing services</strong> ensure your software is flawless and reliable. From identifying bugs to improving functionality, we help businesses deliver top-quality applications that meet user expectations.
           </p>
         </div>
 
@@ -79,7 +87,7 @@ const QATesting = () => {
         <div className="w-full md:w-auto flex justify-center">
           <Image
             src={qatestinImage}
-            alt="heroImage"
+            alt="Assured quality through expert software testing QA testing."
             width={300}
             height={300}
             className="w-[60vw] md:w-[35vw]"
@@ -94,7 +102,7 @@ const QATesting = () => {
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
               src={qaimage1}
-              alt="TechCreator providing services in QA Testing"
+              alt="A thorough QA testing strategy aiming for an integrated, secure, and well-performing application."
               width={300}
               height={450}
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
@@ -103,15 +111,10 @@ const QATesting = () => {
           <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
               <h1 className="text-2xl sm:text-3xl font-bold mb-3">
-                Importance of QA Testing{" "}
+              Comprehensive Quality Assurance Testing
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-                QA testing helps in ensuring that the software is of high
-                quality by detecting and fixing bugs issues early in the
-                development process. It makes sure that the final product meets
-                the desired the functionality and performance standards. We are
-                here to serve you all the way to have a software in your hands
-                which is flawless and getting you to your desired goals.
+              Our quality assurance process covers every aspect of your software, from performance and usability to security. With meticulous testing techniques, we ensure that your applications function seamlessly across all platforms.
               </p>
             </div>
           </div>
@@ -170,7 +173,7 @@ const QATesting = () => {
           {/* Image Section */}
           <Image
             src={qaimage2}
-            alt="TechCreator helping you to reduce your cost from early stage "
+            alt="Customized QA solutions for different sectors toward achieving error-free working  "
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -179,15 +182,10 @@ const QATesting = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              Reduce Costs
+            Specialized For Diverse Industries
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-              Finding and fixing defects early in the development process is
-              better than addressing them later. Doing it in initial stages is
-              less expensive and also ensures efficiency and productivity with
-              fewer bugs and performance issues. In short QA testing helps
-              prevent costly post-launch fixes, as it identifies potential
-              problems before they affect the user.
+            No matter your industry, TechCreator offers tailored QA solutions. From e-commerce to healthcare and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance.
             </p>
           </div>
         </div>
@@ -199,21 +197,15 @@ const QATesting = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              What we test for Quality Assurance{" "}
+            Accelerate Time-to-Market with Agile QA Services
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-              <strong>Functional Testing:</strong> Verifying that software
-              functions according to its specifications. <br />
-              <strong>Performance Testing:</strong> Ensuring the software
-              performs well under different loads and conditions. <br />
-              <strong>Security Testing:</strong> Checking for vulnerabilities
-              and ensuring that software is secure. <br />
-              <strong>Usability: </strong>Assessing how easy is it to use
+            Our Agile QA approach integrates testing throughout the development cycle. By detecting and resolving issues early, we help you speed up delivery timelines without compromising on quality or user experience.
             </p>
           </div>
           <Image
             src={qaimage3}
-            alt="TechCreator helping your software function flawlessly and protected"
+            alt="Agile QA continues to be an invaluable way of ensuring faster delivery with impeccable quality"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -225,7 +217,7 @@ const QATesting = () => {
           {/* Image Section */}
           <Image
             src={qaimage4}
-            alt="TechCreator responsible for your business to go automatic"
+            alt="Manual and automated testing for total security and protection of software"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -234,15 +226,10 @@ const QATesting = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              Automation for Scalability and Speed
+            Automation and Manual Testing
             </h1>
             <p className="text-base md:text-xl text-gray-700">
-              TechCreator helps your business to go automatic by integrating
-              automation into the testing process. Automated testing speeds up
-              repetitive tasks, such as regression tests, allowing team to focus
-              more critical aspects of software. With that we also comes with
-              user-centric testing as QA testing has expanded beyond functional
-              requirements to focus on the end-user experience.
+            We combine manual and automated testing methods to provide comprehensive coverage and efficient results. Our team leverages the latest tools and technologies to identify and fix vulnerabilities, ensuring your software is robust and secure.
             </p>
           </div>
         </div>
@@ -255,23 +242,17 @@ const QATesting = () => {
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Overview
+            Recent Work: Delivering Quality You Can Trust
             </h1>
             <p className="text-base md:text-lg text-white webDevtext ">
-              QA Testing is no longer about finding bugs but it’s about
-              improving overall product quality, boosting user satisfaction and
-              ensuring business success. By investing in comprehensive,
-              early-stage QA testing, business can deliver better and ultimately
-              drive long-term success in a competitive market. <br /> <br />
-              Your investment doesn’t go wasted then invest on us in early
-              stages.
+            In a recent project, our <strong>QA testing services</strong> helped a SaaS company improve their application’s stability by 40%. Our comprehensive testing approach enabled the client to deliver a seamless user experience and gain higher customer satisfaction.
             </p>
           </div>
           {/* Image */}
           <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={qaimage5}
-              alt="Feature illustration"
+              alt="QA testing increases SaaS app stability by 40%, thus enabling optimal user experience"
               width={400}
               height={500}
               className="rounded-lg mx-auto  md:mx-0"

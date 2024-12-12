@@ -120,7 +120,7 @@ const MobileAppDevelopment = () => {
           </div>
           <div className="bg-[#7A4AFF] w-full md:w-[800px]   md:h-[450px] p-4 md:p-16 py-2 md:py-14 mt-8 md:mt-0 ">
             <div className="text-white md:py-20 md:px-40">
-              <h1 className="text-xl sm:text-2xl font-bold mb-3">
+              <h1 className="text-xl sm:text-3xl md:w-[440px] font-bold mb-3">
                 Healthcare Mobile App Development Transforming Industries
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">

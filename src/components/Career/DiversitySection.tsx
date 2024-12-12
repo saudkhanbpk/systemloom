@@ -27,11 +27,7 @@ const DiversitySection: FC = () => {
             We're from everywhere
           </h2>
           <p className="text-[#838696] font-normal font-inter text-[22px] leading-[35px]">
-            Diversity and inclusion of all races, religions, orientations and
-            background is, like our people, somethings that's integral to
-            Deupload philosophy. We hire you at Deupload because you're
-            awesome and talented - we welcome you to Deupload as your true
-            self.
+          A TechCreator workplace is more than just a workplace - it's a place where you can grow, innovate, and make an impact. Let's build a culture of excellence, collaboration, and shared purpose together if our values resonate with you. Let's redefine what's possible together.
           </p>
         </div>
 

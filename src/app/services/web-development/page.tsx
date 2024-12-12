@@ -111,7 +111,7 @@ const WebDevelopment = () => {
           </div>
           <div className="bg-[#7A4AFF] w-full md:w-[750px]   md:h-[450px] p-6 sm:p-10 md:p-10 py-10 md:py-14 mt-8 md:mt-0 ">
             <div className="text-white md:py-4 md:px-20">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-3">
+              <h1 className="text-2xl sm:text-3xl md:w-[440px] font-bold mb-3">
                 Bespoke Web Development Tailored to Your Vision
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">

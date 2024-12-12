@@ -7,10 +7,10 @@ const page = () => {
   return (
     <div>
       <Head>
-        <title>Pricing of TechCreator’s Services</title>
+        <title>Transparent Pricing Plans | Affordable Business Solutions</title>
         <meta
           name="description"
-          content="Explore affordable and flexible pricing plans at TechCreator. We design software solutions to scale with your business needs. Find the perfect plan today and empower your business online."
+          content="Explore TechCreator’s transparent pricing plans for web development, app development, and marketing services. Flexible solutions designed to fit your budget and goals."
         />
         <link rel="canonical" href="https://www.techcreator.co/pricing" />
       </Head>

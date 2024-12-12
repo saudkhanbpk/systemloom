@@ -11,6 +11,12 @@ const Portfolio = () => {
   return (
     <div>
        <Head>
+       <title>Our Portfolio | Explore TechCreator’s Success Stories</title>
+        <meta
+          name="description"
+          content="Discover TechCreator’s portfolio showcasing web development, app creation, UI/UX design, and digital marketing projects. Explore our innovative and impactful solutions today."
+        />
+
         <link rel="canonical" href="https://www.techcreator.co/portfolio" />
       </Head>
       <>

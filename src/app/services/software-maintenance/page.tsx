@@ -95,7 +95,7 @@ const SoftwareMaintenance = () => {
         <div className="w-full md:w-auto flex justify-center">
           <Image
             src={heroimage}
-            alt="heroImage"
+            alt="Software maintenance services for smooth, secure, and optimized performance"
             width={300}
             height={300}
             className="w-[80vw] md:w-[35vw]"
@@ -118,7 +118,7 @@ const SoftwareMaintenance = () => {
           </div>
           <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-3">
+              <h1 className="text-2xl sm:text-3xl md:w-[440px] font-bold mb-3">
                 Specialized Maintenance and Support Services
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">

@@ -50,7 +50,7 @@ const PricingCards: React.FC = () => {
     <div className="absolute inset-0 overflow-hidden">
       <Image
         src={backgroundImage}
-        alt="Background"
+        alt="Competitive pricing allows you to maximize value without compromising quality"
         className="w-full h-full object-cover animate-fade-in"
       />
     </div>
@@ -58,13 +58,10 @@ const PricingCards: React.FC = () => {
     {/* Content */}
     <div className="relative flex flex-col items-center justify-center h-full max-w-[1440px] mx-auto container">
       <h1 className="text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center animate-slide-down">
-        PRICING
+      Pricing to Your Success
       </h1>
       <p className="text-lg md:text-xl font-normal mb-8 text-center animate-fade-in">
-        TechCreator is easy to use. Whether you need a simple mobile app or a
-        complex web application, TechCreator has the expertise to deliver
-        high-quality solutions that excel in web and mobile app development
-        services.
+      At TechCreator, we believe in providing clear and competitive pricing for all our services. Whether you’re a startup or an established business, our packages are designed to deliver maximum value without compromising on quality.
       </p>
       <button
             onClick={scrollToForm}
@@ -88,18 +85,18 @@ const PricingCards: React.FC = () => {
       
       <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-2 lg:px-20 ">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
-          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px]">
-          Find The Perfect Plan Today 
+          <h1 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
+          Affordable Solutions Without Sacrificing Quality
           </h1>
           <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
-          Discover the ideal TechCreator pricing plan that’s right for your business to establish and grow your presence online. Whether you are just looking for advanced solutions, our plans range from basic to premium to meet your unique business needs. So, look no further other than us, to empower you with affordable, transparent and flexible solutions that drive success. Our plans are designed for every vision. 
+          Our pricing is structured to suit diverse business needs. From basic plans to premium solutions, we ensure that every client gets high-quality service, whether it's web development, digital marketing, or app development.
           </p>
         </div>
         <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px] mx-auto md:mx-0">
           <div className="relative z-10 w-full h-full">
             <Image
               src={frontImage}
-              alt="Foreground"
+              alt="Flexible pricing for high-quality web, marketing, and app development services"
               className="absolute inset-0 rounded-2xl w-[600px]"
               layout="fill" 
               objectFit="cover " 
@@ -114,7 +111,7 @@ const PricingCards: React.FC = () => {
           <div className="relative z-10 w-full h-full">
             <Image
               src={pricing2}
-              alt="Foreground"
+              alt="Custom pricing that works around your business growth"
               className="absolute inset-0 rounded-2xl w-[600px]"
               layout="fill" 
               objectFit="cover" 
@@ -123,9 +120,9 @@ const PricingCards: React.FC = () => {
         </div>
         <div className='md:w-[600px]  '>
         <h1 className='font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]'>
-  Seamless Scalability for Growing Businesses
+        Flexible Packages for All Businesses
 </h1>
-          <p className='text-xl mt-4'>Our priority is to grow your businesses by providing you with our affordable and flexible price plans. Everything evolves so as your business, adjust your plan to match your expanding needs. Upgrade, customize, or add features anytime- it’s all about ensuring you have what you need to stay ahead in your industries. </p>
+          <p className='text-xl mt-4'>We offer customizable pricing plans to align with your goals. Whether you need comprehensive solutions or specific services, our packages are built to scale with your business as it grows. </p>
         </div>
       </div>
 {/* Pricing form */}
@@ -136,10 +133,10 @@ const PricingCards: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-2 lg:px-20">
         <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
           <h1 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
-          Innovative Technology Solutions with Quality at the Core 
+          Why Choose TechCreator for Your Next Project?
           </h1>
           <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
-          TechCreator focus on driving technological innovation and delivering top-tier quality to empower your business. We aim to provide unmatched performance, reliable support and cutting-edge features- all at affordable, user-friendly prices. We focus on cloud-based tools and custom software development to ensure your business stays ahead in todays’s competitive digital landscape.
+          With TechCreator, you get more than just a service—you get a partner committed to your success. Our pricing reflects our dedication to delivering the best results while staying within your budget.
           </p>
         </div>
 
@@ -150,7 +147,7 @@ const PricingCards: React.FC = () => {
           <div className="relative z-10 w-full h-full">
             <Image
               src={pricing1}
-              alt="Foreground"
+              alt="TechCreator: A partner focused on your success with affordable pricing"
               className="absolute inset-0 rounded-2xl w-[600px]"
               layout="fill" 
               objectFit="cover" 

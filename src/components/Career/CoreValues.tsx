@@ -35,20 +35,19 @@ const CoreValues: React.FC = () => {
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Our core values</h2>
           <p className=" max-w-2xl">
-            We value true innovation and giving our people freedom to find their own creative solutions to the challenges we face.
-            We're all in the same boat - It's time to begin the voyage.
+          Throughout everything we do at TechCreator, our core values guide us. Inspire our team, shape our culture, and ensure that our clients receive exceptional results.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 space-x-2 space-y-2 sm:space-y-0 ">
           <ValueCard
             icon={sunGlasses}
             title="Be You"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="Celebrating individuality while nurturing an environment in which everyone is heard, valued and respected."
           />
           <ValueCard
             icon={sunGlasses}
             title="Strive to Grow"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="Become shaped through continuous evolution and exploration of ideas in ways to open the door to personal and professional development."
           />
         </div>
       </div>
@@ -57,17 +56,17 @@ const CoreValues: React.FC = () => {
           <ValueCard
             icon={sunGlasses}
             title="Push the Boundaries"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="Do not believe in mediocrity but rather value the amazing ideas by which new solutions can be created."
           />
           <ValueCard
             icon={sunGlasses}
             title="Strive to Impact"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="In your unwavering conviction to make a difference, create solutions that would be most relevant to clients and the communities in which we engage."
           />
           <ValueCard
             icon={sunGlasses}
             title="Unite As One"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="We come together, combining all that we have to reach a common target and build lasting relationships"
           />
         </div>
       </div>
@@ -76,17 +75,17 @@ const CoreValues: React.FC = () => {
           <ValueCard
             icon={sunGlasses}
             title="Be Transparent"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="Open communication, clear expectations to empower trust, and honesty in everything we say and do."
           />
           <ValueCard
             icon={sunGlasses}
             title="Take Pride"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="With every project we execute, put your heart into it and take pride in the work we accomplish."
           />
           <ValueCard
             icon={sunGlasses}
             title="Have Fun"
-            description="We embrace diversity, and provide freedom and flexibility."
+            description="Because work is more than just about doing tasks; it is about work, passion, creativity, and sharing an amazing journey with the team."
           />
         </div>
       </div>
