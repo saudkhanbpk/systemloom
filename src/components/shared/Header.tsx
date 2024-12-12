@@ -103,7 +103,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div>
             <Link href="/">
-              <div className="flex-shrink-0 flex justify-center gap-2 items-center   ">
+              <div className="flex-shrink-0 flex justify-center gap-2 items-center w-[100px] md:w-full   ">
                 <Image
                   src={TechcreatorLogo}
                   alt="techcreartor_logo"
@@ -214,7 +214,17 @@ const Header: React.FC = () => {
               </p>
             </div>
           </div>
-
+          
+          <div className="md:hidden block">
+          <p className=" flex gap-2 items-center text-sm ">
+              <PhoneCall color="#7A4AFF" size={15} />
+              <span>
+                <a href="tel:+13214073272" className="hover:underline">
+                  +1 (321) 407-3272
+                </a>
+              </span>
+            </p>
+          </div>
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -232,6 +242,7 @@ const Header: React.FC = () => {
 
       {isOpen && (
         <div className="lg:hidden bg-[#7A4AFF] z-20 rounded-md mb-20">
+          
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <div key={item.name}>
@@ -278,14 +289,6 @@ const Header: React.FC = () => {
                 )}
               </div>
             ))}
-            <p className="flex gap-2 items-center text-base">
-              <PhoneCall color="#FFFFFF" />
-              <span>
-                <a href="tel:+13214073272" className="hover:underline">
-                  +1 (321) 407-3272
-                </a>
-              </span>
-            </p>
           </div>
         </div>
       )}

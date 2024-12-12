@@ -391,30 +391,45 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-base md:text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
-              <p className="text-xs md:text-sm flex items-center gap-2">
+              <div className="text-xs md:text-sm flex items-center gap-2">
                 <span className="">
                   <AiOutlineMail size={28} color="#7A4AFF" />
                 </span>
                 <a href="mailto:contact@techcreator.co">
                   contact@techcreator.co
                 </a>
-              </p>
-              <p className="text-xs md:text-sm">
+              </div>
+              <div className="text-xs md:text-sm">
                 <a
                   href="https://wa.me/+923471914920"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p className="flex gap-2 items-center text-base mt-1">
+                  <div className="flex gap-2 items-center text-base mt-1">
                     <FaWhatsapp size={28} color="#7A4AFF" />
                     <span>+92 347 1914920</span>
-                  </p>
+                  </div>
+
+                 <div className="md:hidden block">
+                 <div className=" flex gap-2 items-center text-base mt-2 ">
+              <PhoneCall color="#7A4AFF"  />
+              <span>
+                <a href="tel:+13214073272" className="hover:underline">
+                  +1 (321) 407-3272
                 </a>
-              </p>
-              <p className="flex gap-2 items-center text-base">
-                <PhoneCall color="#7A4AFF" />
-                <span>+1 (321) 407-3272</span>
-              </p>
+              </span>
+            </div>
+                 </div>
+                </a>
+              </div>
+              <div className=" md:block hidden">
+              <div className="flex gap-2 items-center text-base ">
+              <PhoneCall color="#7A4AFF" />
+                <span><a href="callto:+13214073272" className="hover:underline">
+                    +1 (321) 407-3272
+                  </a></span>
+              </div>
+              </div>
 
               <div>
                 {/* <CommonButton
