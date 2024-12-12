@@ -89,7 +89,7 @@ const UIUXDesign = () => {
         <div className="w-full md:w-auto flex justify-center md:mt-20">
           <Image
             src={UIUXDesignImage}
-            alt="heroImage"
+            alt="The TechCreator will design intuitive and engaging user interfaces and enhance UI and UX to create greater satisfaction for the user"
             width={300}
             height={300}
             className="w-[60vw] md:w-[25vw] "
@@ -104,7 +104,7 @@ const UIUXDesign = () => {
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
               src={uxdesignimage1}
-              alt="Feature section image"
+              alt=" A top U/I X/UI design agency offers service to create functional and creative designs to reflect your brand and engage users"
               width={300}
               height={450}
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
@@ -179,7 +179,7 @@ const UIUXDesign = () => {
           {/* Image Section */}
           <Image
             src={uxdesignimage2}
-            alt="heroImage"
+            alt="Mobile UI/UX design from TechCreator comes with sleek, responsive, and intuitive interfaces for maximum engaging on-the-go experience"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -217,7 +217,7 @@ const UIUXDesign = () => {
           </div>
           <Image
             src={uxdesignimage3}
-            alt="heroImage"
+            alt="Comprehensive UI/UX solutions by TechCreator, solving user challenges and driving business results from ideation to implementation"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -229,7 +229,7 @@ const UIUXDesign = () => {
           {/* Image Section */}
           <Image
             src={uxdesignimage4}
-            alt="heroImage"
+            alt=" The UI/UX design is formulated for the individual industries to exceed expectations for apps and digital platforms"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -271,7 +271,7 @@ const UIUXDesign = () => {
           <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={uxdesignimage5}
-              alt="Feature illustration"
+              alt=" Featuring great designs: Healthcare UI/UX that drives engagement and eCommerce design that boosts conversions"
               width={400}
               height={500}
               className="rounded-lg mx-auto  md:mx-0"

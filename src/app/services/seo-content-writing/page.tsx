@@ -96,7 +96,7 @@ const SeoContentWriting = () => {
         <div className="w-full md:w-auto flex justify-center md:my-20">
           <Image
             src={SEOImage}
-            alt="heroImage"
+            alt=" Improve search engine results with professional SEO content writing services, which deliver results and engage audiences"
             width={300}
             height={300}
             className="w-[60vw] md:w-[30vw]"
@@ -111,7 +111,7 @@ const SeoContentWriting = () => {
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
               src={seoimage1}
-              alt="Feature section image"
+              alt="Raise your site's ranking with the help of a trusted technical SEO agency that optimizes content for success in search engines"
               width={300}
               height={450}
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
@@ -186,7 +186,7 @@ const SeoContentWriting = () => {
           {/* Image Section */}
           <Image
             src={seoimage2}
-            alt="heroImage"
+            alt="Achieve better visibility with expert SEO consulting offering strategy, keyword research, and page optimization"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -226,7 +226,7 @@ const SeoContentWriting = () => {
           </div>
           <Image
             src={seoimage3}
-            alt="heroImage"
+            alt="Drive targeted traffic with every business niche's SEO content-enhanced experiences, driving engagement and conversions"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -238,7 +238,7 @@ const SeoContentWriting = () => {
           {/* Image Section */}
           <Image
             src={seoimage4}
-            alt="heroImage"
+            alt=" Boost authority with technical SEO expertise in delivering content that attracts, retains visitors, and supports long-term growth"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -282,7 +282,7 @@ const SeoContentWriting = () => {
           <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={seoimage5}
-              alt="Project Management Portfolio  by TechCreator"
+              alt="With a 50% increase in organic traffic and other measurable results, expert SEO strategies are producing improved keyword rankings"
               width={400}
               height={500}
               className="rounded-lg mx-auto  md:mx-0"

@@ -112,24 +112,19 @@ const MobileAppDevelopment = () => {
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
               src={appImage}
-              alt="healthcare mobile app development for Medical Companies "
+              alt="Feature section image"
               width={300}
               height={450}
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[800px]   md:h-[450px] p-4 md:p-16 py-2 md:py-14 mt-8 md:mt-0 ">
-            <div className="text-white md:py-20 md:px-40">
-              <h1 className="text-xl sm:text-3xl md:w-[440px] font-bold mb-3">
-                Healthcare Mobile App Development Transforming Industries
+          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:px-40">
+              <h1 className="text-xl sm:text-3xl font-bold mb-3">
+              Healthcare Mobile App Development Transforming Industries
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-                As a trusted healthcare mobile app development company, we
-                design solutions that improve patient care and streamline
-                medical processes. Our healthcare mobile app development
-                services include secure data handling, user-friendly interfaces,
-                and features tailored to meet the demands of healthcare
-                providers and patients alike.
+              As a trusted healthcare <strong>mobile app development company,</strong> we design solutions that improve patient care and streamline medical processes. Our <strong>healthcare mobile app development</strong> services include secure data handling, user-friendly interfaces, and features tailored to meet the demands of healthcare providers and patients alike.
               </p>
             </div>
           </div>

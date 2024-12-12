@@ -12,8 +12,7 @@ const OverviewSec: React.FC = () => {
             CEO Message
           </h1>
           <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify">
-            My name is <strong>Saud Khan,</strong> CEO of TecCreator based in
-            Pakistan.
+            My name is <strong>Saud Khan,</strong> CEO of TecCreator.
           </p>
           <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify mt-4">
             As the world rapidly transforming into global village through

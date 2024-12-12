@@ -95,7 +95,7 @@ const SoftwareMaintenance = () => {
         <div className="w-full md:w-auto flex justify-center">
           <Image
             src={heroimage}
-            alt="Software maintenance services for smooth, secure, and optimized performance"
+            alt="Boost stability and growth with software solutions that improve tracking efficiency and reduce disruptions"
             width={300}
             height={300}
             className="w-[80vw] md:w-[35vw]"
@@ -110,7 +110,7 @@ const SoftwareMaintenance = () => {
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
               src={softwareImage1}
-              alt="Feature section image"
+              alt="Expert software maintenance and support services providing instant troubleshooting, upgrades, and improvement"
               width={300}
               height={450}
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
@@ -184,7 +184,7 @@ const SoftwareMaintenance = () => {
           {/* Image Section */}
           <Image
             src={softwareImage2}
-            alt="heroImage"
+            alt="Streamlined construction equipment maintenance software for tracking, scheduling, and monitoring performance"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -223,7 +223,7 @@ const SoftwareMaintenance = () => {
           </div>
           <Image
             src={softwareImage3}
-            alt="heroImage"
+            alt="Take advantage of enhanced security, efficiency, and longevity with proactive maintenance solutions"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -235,7 +235,7 @@ const SoftwareMaintenance = () => {
           {/* Image Section */}
           <Image
             src={softwareImage4}
-            alt="heroImage"
+            alt=" Software maintenance plans developed to cater to unique business needs and the peculiarities of distinct industries"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -278,7 +278,7 @@ const SoftwareMaintenance = () => {
           <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={softwareImage5}
-              alt="Project Management Portfolio  by TechCreator"
+              alt="Permit stability and growth through software solutions for improved tracking efficiency while ensuring mere minimal disruption"
               width={400}
               height={500}
               className="rounded-lg mx-auto  md:mx-0"

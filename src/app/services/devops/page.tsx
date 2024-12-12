@@ -90,7 +90,7 @@ const Devops = () => {
         <div className="w-full md:w-auto flex justify-center">
           <Image
             src={heroimage}
-            alt="heroImage"
+            alt="TechCreator will help you with professional DevOps consulting services to improve workflows in efficiency, scalability, and team collaboration"
             width={300}
             height={300}
             className="w-[80vw] md:w-[35vw]"
@@ -105,7 +105,7 @@ const Devops = () => {
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
             <Image
               src={devopimage1}
-              alt="Feature section image"
+              alt="Reliable DevOps company providing cutting-edge and modified solutions for faster and reliable software delivery"
               width={300}
               height={450}
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
@@ -180,7 +180,7 @@ const Devops = () => {
           {/* Image Section */}
           <Image
             src={devopimage2}
-            alt="heroImage"
+            alt="Speed up your workflows while reducing errors through DevOps automation with shorter and more accurate outputs"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -219,7 +219,7 @@ const Devops = () => {
           </div>
           <Image
             src={devopimage3}
-            alt="heroImage"
+            alt="Aligning development with business goals for quicker time-to-market, better quality, and better performance"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -231,7 +231,7 @@ const Devops = () => {
           {/* Image Section */}
           <Image
             src={devopimage4}
-            alt="heroImage"
+            alt="Get personalized DevOps support for cloud migration, CI/CD pipelines, and workflow optimization"
             width={300}
             height={300}
             className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
@@ -273,7 +273,7 @@ const Devops = () => {
           <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={devopimage5}
-              alt="Feature illustration"
+              alt="Improved efficiency through DevOps automation cuts down time to deploy by 60% and seamless cloud migration through seamless CI/CD deployments"
               width={400}
               height={500}
               className="rounded-lg mx-auto  md:mx-0"

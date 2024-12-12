@@ -20,41 +20,104 @@ import Head from "next/head";
 import WebDevRelatedProjects from "@/components/services/WebDevRelatedProjects";
 
 const WebDevelopment = () => {
+  // const services = [
+  //   {
+  //     title: "Product Design",
+  //     description:
+  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+  //     icon: productDesignImage,
+  //   },
+  //   {
+  //     title: "App Design",
+  //     description:
+  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+  //     icon: appDesignImage,
+  //   },
+  //   {
+  //     title: "Web Design",
+  //     description:
+  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+  //     icon: webDesignImage,
+  //   },
+  //   {
+  //     title: "Development",
+  //     description:
+  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+  //     icon: developmentDesignImage,
+  //   },
+  //   {
+  //     title: "Illustration",
+  //     description:
+  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+  //     icon: illustrationDesignImage,
+  //   },
+  //   {
+  //     title: "Motion",
+  //     description:
+  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+  //     icon: motionDesignImage,
+  //   },
+  // ];
+
   const services = [
     {
-      title: "Product Design",
+      title: "Web Developement",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Making dynamic, responsive websites that put user satisfaction first.",
       icon: productDesignImage,
     },
     {
-      title: "App Design",
+      title: "Mobile App Development",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Creating powerful mobile applications that will capture users and enhance your brand.",
       icon: appDesignImage,
     },
     {
-      title: "Web Design",
+      title: "Ui & Ux Design",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Building intuitive interfaces that provide a seamless promised user experience.",
       icon: webDesignImage,
     },
     {
-      title: "Development",
+      title: "DevOps",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Streamlining your development pipeline for guided efficiency with automation to allow for automated daily deployment.",
       icon: developmentDesignImage,
     },
     {
-      title: "Illustration",
+      title: "Project Management",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Executing precise project management potentially geared to step-out on time; it facilitates efficient collaboration by leading the project stakeholders.",
       icon: illustrationDesignImage,
     },
     {
-      title: "Motion",
+      title: "SEO & Content Writing",
       description:
-        "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
+        "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
+      icon: motionDesignImage,
+    },
+    {
+      title: "Graphic Designing",
+      description:
+        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
+      icon: motionDesignImage,
+    },
+    {
+      title: "Software Maintenance",
+      description:
+        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
+      icon: motionDesignImage,
+    },
+    {
+      title: "QA Testing",
+      description:
+        "Having exhaustive testing done assures your software has no errors and delivers great performance to the customer.",
+      icon: motionDesignImage,
+    },
+    {
+      title: "Digital Marketing",
+      description:
+        "Promoting online presence through marketing campaigns meant to be traffic generators.",
       icon: motionDesignImage,
     },
   ];
@@ -109,17 +172,13 @@ const WebDevelopment = () => {
               className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#7A4AFF] w-full md:w-[750px]   md:h-[450px] p-6 sm:p-10 md:p-10 py-10 md:py-14 mt-8 md:mt-0 ">
-            <div className="text-white md:py-4 md:px-20">
-              <h1 className="text-2xl sm:text-3xl md:w-[440px] font-bold mb-3">
-                Bespoke Web Development Tailored to Your Vision
+          <div className="bg-[#7A4AFF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:px-40">
+              <h1 className="text-xl sm:text-3xl font-bold mb-3">
+              Bespoke Web Development Tailored to Your Vision
               </h1>
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-                Stand out from the crowd with bespoke web development crafted to
-                meet your specific needs. Our team of skilled developers creates
-                custom solutions that align with your brand and business goals,
-                offering unique designs and functionalities to captivate your
-                audience and elevate your online presence.{" "}
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
+              tand out from the crowd with <strong>bespoke web development</strong> crafted to meet your specific needs. Our team of skilled developers creates custom solutions that align with your brand and business goals, offering unique designs and functionalities to captivate your audience and elevate your online presence.
               </p>
             </div>
           </div>
@@ -295,7 +354,7 @@ const WebDevelopment = () => {
 
       {/* RelatedServices section start */}
       <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
           Related Services
         </h2>
 
