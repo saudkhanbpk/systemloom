@@ -68,13 +68,11 @@ const ContactForm: React.FC = () => {
       </p>
       <div className="mt-8">
         <p className="flex gap-2 items-start text-lg">
-          <MapPin color="#A445B8" size={40} />
+          <MapPin color="#9A00FF" size={40} />
           <span>TechCreator Software Company, Located on Mardan road Near Muneer Hospital, Swabi <br /> Swabi, Pakistan-23430</span>
         </p>
       </div>
       <div className="mt-4">
-      
-
         <p className="flex gap-2 items-center text-lg mt-1">
         <a
                   href="https://wa.me/+447511801699"
@@ -82,15 +80,15 @@ const ContactForm: React.FC = () => {
                   rel="noopener noreferrer"
                 >
                   <div className="flex gap-2 items-center text-base mt-1">
-                    <FaWhatsapp size={28} color="#A445B8" />
+                    <FaWhatsapp size={28} color="#9A00FF" />
                     <span className='text-lg hover:underline'>+44 7511 801699</span>
                   </div>
 
                   <div className="md:hidden block">
                     <div className=" flex gap-2 items-center text-base mt-2 ">
-                      <PhoneCall color="#A445B8" />
+                      <PhoneCall color="#9A00FF" />
                       <span className=''>
-                        <a href="tel:+13214073272" className="hover:underline">
+                        <a href="tel:+13214073272" className="hover:underline text-lg">
                           +1 (321) 407-3272
                         </a>
                       </span>
@@ -101,7 +99,7 @@ const ContactForm: React.FC = () => {
 
         <div className=" md:block hidden">
                 <div className="flex gap-2 items-center text-base ">
-                  <PhoneCall color="#A445B8" />
+                  <PhoneCall color="#9A00FF" />
                   <span className='text-lg mt-2'>
                     <a href="callto:+13214073272" className="hover:underline">
                       +1 (321) 407-3272
@@ -110,12 +108,14 @@ const ContactForm: React.FC = () => {
                 </div>
               </div>
       </div>
-      <div className="mt-4">
-        <p className="flex gap-2 items-center text-lg">
-          <Mail color="#A445B8" />
-          <span>contact@techcreator.co</span>
-        </p>
-      </div>
+     <div className="mt-4 flex items-center gap-2">
+                     <span className=" ">
+                       <Mail size={28} color="#9A00FF" />
+                     </span>
+                     <a href="mailto:contact@techcreator.co" className='text-lg'>
+                       contact@techcreator.co
+                     </a>
+                   </div>
     </div>
 
     <div className="sm:w-[565px] shadow-lg p-6 sm:p-10 mt-10 sm:mt-0 h-full w-full bg-white rounded-md">
