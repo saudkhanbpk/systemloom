@@ -1,62 +1,45 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { backend_url } from '@/newLayout'; 
-import Image from 'next/image';
+import React from 'react';
 import { FaEye } from 'react-icons/fa'; 
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
+import Image from 'next/image';
 
 // Define a type for the project data
 type Project = {
   _id: string;
   title: string;
   description: string;
-  category: string;
-  projectScreenshot: string;
+  category: string[];  
+  projectScreenshot: string | undefined; 
   createdAt: string;
   updatedAt: string;
   figmaLink: string;
   githubLink: string;
-  websiteLink: string;
+  websiteLink: string | undefined;
 };
 
 const DevopsRelatedProjects = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await axios.get(`${backend_url}/api/v1/project/all`);
-        if (response.data.success) {
-          setProjects(response.data.projects);
-        } else {
-          console.error("No projects found");
-          setProjects([]);
-        }
-      } catch (error) {
-        console.error("Error fetching projects:", error);
-        alert("Failed to load projects, please try again later.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
+  // Access projects from Redux store
+  const { projects } = useSelector((state: RootState) => state.projects);
 
   // Filter projects by category 'web-development'
   const filteredProjects = projects
-  .filter((project) => project.category === "web-development")
-  .slice(0, 6);
-
-  if (loading) {
-    return <div>Loading projects...</div>;
-  }
+    .filter((project) => project.category.includes("devops"))
+    .slice(0, 6);
 
   // Handle the redirect to the website link
-  const handleRedirect = (websiteLink: string) => {
-    window.open(websiteLink, '_blank');
+  const handleRedirect = (websiteLink: string | undefined) => {
+    if (websiteLink) {
+      window.open(websiteLink, '_blank');
+    } else {
+      alert("Website link is not available for this project.");
+    }
   };
+
+  if (projects.length === 0) {
+    return <div>Loading projects...</div>;
+  }
 
   return (
     <div>
@@ -77,15 +60,16 @@ const DevopsRelatedProjects = () => {
               {filteredProjects.length > 0 ? (
                 <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                   {filteredProjects.map((project) => (
-                    <div key={project._id} className="relative overflow-hidden group">
+                    <div key={project._id} className="relative overflow-hidden group border-2 rounded-md">
                       {/* Main Feature Image */}
                       <Image
-                        src={project.projectScreenshot}
+                        src={project.projectScreenshot || "/path/to/fallback-image.jpg"}  // Provide a fallback image if projectScreenshot is undefined
                         alt={project.title}
-                        className="h-64 md:h-[300px] rounded-md border-2 object-fill"
+                        className="h-64 md:h-[300px] rounded-md  object-fill"
                         width={500}
                         height={500}
                       />
+                      <p className='bg-[#9A00FF] p-2 text-lg text-white'>{project.title}</p>
                       {/* Eye Icon on Hover */}
                       <div
                         className="absolute inset-0 flex justify-center items-center rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 cursor-pointer"
@@ -102,13 +86,6 @@ const DevopsRelatedProjects = () => {
                   No related projects available at the moment. Check back later!
                 </p>
               )}
-            </div>
-
-            {/* View All Button (Optional) */}
-            <div className="text-center mt-12">
-              {/* <button className="px-8 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors">
-                View All
-              </button> */}
             </div>
           </div>
         </div>

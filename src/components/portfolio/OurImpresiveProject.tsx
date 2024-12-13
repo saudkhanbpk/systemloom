@@ -26,20 +26,20 @@ const OurImpressiveProject = () => {
       <div className="mt-16 flex flex-wrap justify-center gap-4 lg:gap-8 max-w-7xl  mx-auto">
         {/* Card Component */}
         {[
-          { image: healthcareImage, title: "Healthcare" },
+          { image: healthcareImage, title: "Healthcare",link: "/healthcare-projects", },
           {
             image: restaurantImage,
             title: "Restaurant",
             link: "/restaurants-projects",
           },
-          { image: realstateImage, title: "Real Estate" },
-          { image: ecommerceImage, title: "E-commerce" },
+          { image: realstateImage, title: "Real Estate", link: "/real-estate-projects", },
+          { image: ecommerceImage, title: "E-commerce", link: "/e-commerce-projects", },
           {
             image: HospitalityImage,
             title: "Hospitality",
             link: "/hospitality-projects",
           },
-          { image: greenEnergyImage, title: "Green Energy" },
+          { image: greenEnergyImage, title: "Green Energy", link: "/green-energy-projects", },
         ].map((project, index) => (
           <div
             key={index}

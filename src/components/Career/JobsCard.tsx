@@ -100,26 +100,32 @@ const JobsCard = () => {
           </p>
         </div>
         <div className="flex flex-wrap py-14  md:gap-5  justify-center  gap-4  ">
-          {allJobs?.map((job) => (
-            <div
-              key={job._id}
-              onClick={() => openModal(job)}
-              className=" cursor-pointer "
-            >
-              <JobCard
-                category={job.category}
-                title={job.title}
-                location={job.location}
-                type={job.employmentType}
-                company={job.company}
-                timeAgo={job.createdAt}
-              />
-            </div>
-          ))}
+        {allJobs?.length > 0 ? (
+            allJobs.map((job) => (
+              <div
+                key={job._id}
+                onClick={() => openModal(job)}
+                className="cursor-pointer"
+              >
+                <JobCard
+                  category={job.category}
+                  title={job.title}
+                  location={job.location}
+                  type={job.employmentType}
+                  company={job.company}
+                  timeAgo={job.createdAt}
+                />
+              </div>
+            ))
+          ) : (
+            <p className="text-gray-600 text-lg text-center">
+              Sorry, no job openings are available right now. Please check back
+              later!
+            </p>
+          )}
         </div>
       </div>
 
-      {/* Render the JobDetail modal only if a job is selected */}
       {selectedJob && (
         <JobDetail
           isOpen={isModalOpen}

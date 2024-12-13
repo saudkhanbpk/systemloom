@@ -253,7 +253,7 @@ const Footer: React.FC = () => {
                 <li>HealthCare</li>
               </Link>
               <Link
-                href="/e-Commerce-projects"
+                href="/e-commerce-projects"
                 className="hover:text-[#9A00FF]"
               >
                 <li>E-Commerce</li>

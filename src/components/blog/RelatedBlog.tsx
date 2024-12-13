@@ -33,7 +33,7 @@ const RelatedBlog: React.FC<RelatedBlogProps> = ({ excludeBlogId }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center  md:grid-cols-3 gap-3">
         {relatedBlogs.map((blog: any) => (
           <div key={blog._id || Math.random()} className="">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full space-x-2 h-auto sm:h-[350px]">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full space-x-2 h-auto sm:h-[430px]">
               <Image
                 src={blog.image?.imageUrl || '/path/to/default-image.jpg'}
                 alt={blog.image?.altDescription || blog.title || 'Blog Image'}
@@ -47,7 +47,7 @@ const RelatedBlog: React.FC<RelatedBlogProps> = ({ excludeBlogId }) => {
                     {blog.title || 'Untitled Blog'}
                   </h2>
                 </Link>
-                <p className="text-gray-600 mb-4">{truncateText(blog.description, 100)}</p>
+                <p className="text-gray-600 mb-4">{truncateText(blog.description, 200)}</p>
               </div>
             </div>
           </div>

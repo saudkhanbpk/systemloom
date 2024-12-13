@@ -44,72 +44,81 @@ const BlogCards: React.FC = () => {
 
   return (
     <div>
-      <div className="container mb-10 mt-10 mx-auto cursor-pointer  max-w-7xl px-12 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-3 gap-3 w-full">
-        {currentBlogs.map((blog: any) => (
-          <div key={blog._id} className="">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full  h-auto sm:h-[350px]">
-              <Image
-                src={blog.image?.imageUrl || "/path/to/default-image.jpg"}
-                alt={blog.image?.altDescription || blog.title}
-                width={350}
-                height={200}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <Link href={`/blog/blogDetail/${createSlug(blog.title)}`}>
-                  <h2 className="text-xl font-semibold text-blue-600 mb-2 cursor-pointer">
-                    {blog.title}
-                  </h2>
-                </Link>
-                <p className="text-gray-600 mb-4">
-                  {truncateText(blog.description, 100)}
-                </p>
+    {blogs.length === 0 ? (
+      <p className="text-center text-gray-600 mt-10">
+        Sorry, no blogs are available at the moment. Please check back later!
+      </p>
+    ) : (
+      <>
+        <div className="container mb-10 mt-10 mx-auto cursor-pointer max-w-7xl px-12 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-3 gap-3 w-full">
+          {currentBlogs.map((blog: any) => (
+            <div key={blog._id} className="">
+              <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full h-auto sm:h-[430px]">
+                <Image
+                  src={blog.image?.imageUrl || "/path/to/default-image.jpg"}
+                  alt={blog.image?.altDescription || blog.title}
+                  width={350}
+                  height={200}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <Link href={`/blog/blogDetail/${createSlug(blog.title)}`}>
+                    <h2 className="text-xl font-semibold text-blue-600 mb-2 cursor-pointer">
+                      {blog.title}
+                    </h2>
+                  </Link>
+                  <p className="text-gray-600 mb-4">
+                    {truncateText(blog.description, 200)}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-      {/* Pagination Controls */}
-      {blogs.length > blogsPerPage && (
-        <div className="flex justify-center mb-6 items-center mt-8 space-x-4">
-          {/* Previous Button */}
-          <button
-            onClick={() => paginate(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="p-2 bg-gray-800 text-white rounded-md disabled:opacity-50 hover:bg-gray-700 transition duration-300"
-          >
-            <AiOutlineArrowLeft size={20} />
-          </button>
-
-          {/* Page Numbers */}
-          <div className="flex items-center mx-4 space-x-2">
-            {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index + 1}
-                onClick={() => paginate(index + 1)}
-                className={`px-4 py-2 rounded-md ${
-                  currentPage === index + 1
-                    ? "bg-[#9A00FF] text-white"
-                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                }`}
-              >
-                {index + 1}
-              </button>
-            ))}
-          </div>
-
-          {/* Next Button */}
-          <button
-            onClick={() => paginate(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="p-2 bg-gray-800 text-white rounded-md disabled:opacity-50 hover:bg-gray-700 transition duration-300"
-          >
-            <AiOutlineArrowRight size={20} />
-          </button>
+          ))}
         </div>
-      )}
-    </div>
-  );
+        {/* Pagination Controls */}
+        {blogs.length > blogsPerPage && (
+          <div className="flex justify-center mb-6 items-center mt-8 space-x-4">
+            {/* Previous Button */}
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="p-2 bg-gray-800 text-white rounded-md disabled:opacity-50 hover:bg-gray-700 transition duration-300"
+            >
+              <AiOutlineArrowLeft size={20} />
+            </button>
+
+            {/* Page Numbers */}
+            <div className="flex items-center mx-4 space-x-2">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index + 1}
+                  onClick={() => paginate(index + 1)}
+                  className={`px-4 py-2 rounded-md ${
+                    currentPage === index + 1
+                      ? "bg-[#9A00FF] text-white"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+
+            {/* Next Button */}
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="p-2 bg-gray-800 text-white rounded-md disabled:opacity-50 hover:bg-gray-700 transition duration-300"
+            >
+              <AiOutlineArrowRight size={20} />
+            </button>
+          </div>
+        )}
+      </>
+    )}
+  </div>
+);
 };
+ 
 
 export default BlogCards;
