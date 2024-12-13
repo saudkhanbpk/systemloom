@@ -68,8 +68,8 @@ const ContactForm: React.FC = () => {
       </p>
       <div className="mt-8">
         <p className="flex gap-2 items-start text-lg">
-          <MapPin color="#9A00FF" size={40} />
-          <span>TechCreator Software Company, Located on Mardan road Near Muneer Hospital, Swabi <br /> Swabi, Pakistan-23430</span>
+          <MapPin color="#9A00FF" size={30} />
+          <span>TechCreator Software Company, located in   <br />Orlando, Florida USA</span>
         </p>
       </div>
       <div className="mt-4">
