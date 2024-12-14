@@ -1,11 +1,10 @@
-"use client"
-import PricingCards from '@/components/pricing/PricingCards'
-import Head from 'next/head'
-import React from 'react'
+"use client";
+import PricingCards from "@/components/pricing/PricingCards";
+import Head from "next/head";
 
-const page = () => {
+const Pricing = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Transparent Pricing Plans | Affordable Business Solutions</title>
         <meta
@@ -14,11 +13,11 @@ const page = () => {
         />
         <link rel="canonical" href="https://www.techcreator.co/pricing" />
       </Head>
-      <>
-      <PricingCards/>
-      </>
-    </div>
-  )
+      <div>
+        <PricingCards />
+      </div>
+    </>
+  );
 }
 
-export default page
+export default Pricing;

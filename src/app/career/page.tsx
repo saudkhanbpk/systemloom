@@ -10,7 +10,7 @@ import React from 'react'
 const Career = () => {
   useGetAllJobs()
   return (
-    <div>
+    <>
       <Head>
         <link rel="canonical" href="https://www.techcreator.co/career" />
       </Head>
@@ -20,7 +20,7 @@ const Career = () => {
       <JobsCard />
       <DiversitySection/>
       </>
-    </div>
+    </>
   )
 }
 

@@ -9,7 +9,7 @@ import Head from "next/head"
 
 const Portfolio = () => {
   return (
-    <div>
+    <>
        <Head>
        <title>Our Portfolio | Explore TechCreator’s Success Stories</title>
         <meta
@@ -26,7 +26,7 @@ const Portfolio = () => {
       <OurImpresiveProject/>
       <ClientTestimonialsSection/>
       </>
-    </div>
+    </>
   )
 }
 

@@ -10,7 +10,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div>
+    <>
        <Head>
         <title>TechCreator - A Software Company</title>
         <meta
@@ -25,7 +25,7 @@ const About = () => {
       <ProjectsCount/>
       <OverviewSec/>
       <ExpertTeam/>
-    </div>
+    </>
   );
 }
 

@@ -84,7 +84,7 @@ const EcommerceProject: React.FC = () => {
       </div>
 
       {/* Projects section */}
-            <div className="flex md:flex-row flex-col justify-center w-[85vw] gap-3 mx-auto my-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2  w-[85vw] gap-3 mx-auto my-10">
               {currentProjects.length > 0 ? (
                 currentProjects.map((project) => (
                   <div

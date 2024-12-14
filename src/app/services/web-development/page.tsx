@@ -85,6 +85,7 @@ const WebDevelopment = () => {
           name="description"
           content="TechCreator provides full-fledged Progressive Web App development Services for your business online needs. Get a more attractive and customized solution here."
         />
+        <link rel="canonical" href="https://www.techcreator.co/services/web-development" />
       </Head>
 
       {/* hero section start */}

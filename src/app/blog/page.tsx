@@ -51,7 +51,7 @@ const Blog: React.FC = () => {
   
 
   return (
-    <div>
+    <>
       <Head>
         <link rel="canonical" href='https://www.techcreator.co/blog'/>
         {/* <script type="application/ld+json">
@@ -62,7 +62,7 @@ const Blog: React.FC = () => {
         <BlogHeroSection />
         <BlogCards />
       </>
-    </div>
+    </>
   );
 };
 

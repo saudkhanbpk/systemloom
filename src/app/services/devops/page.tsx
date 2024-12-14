@@ -39,7 +39,7 @@ const Devops = () => {
   ];
 
   return (
-    <div>
+    <>
       <Head>
         <title>
           DevOps Consulting | Expert DevOps Automation & Business Solutions
@@ -48,6 +48,7 @@ const Devops = () => {
           name="description"
           content="Discover professional DevOps consulting services at TechCreator. Our expert DevOps consultants deliver tailored business DevOps solutions, automation, and process optimization."
         />
+        <link rel="canonical" href="https://www.techcreator.co/services/web-development" />
       </Head>
 
       {/* hero section start */}
@@ -299,7 +300,7 @@ const Devops = () => {
         </div>
       </div>
       {/* RelatedServices section end */}
-    </div>
+    </>
   );
 };
 

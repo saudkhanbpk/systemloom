@@ -6,7 +6,7 @@ import Head from "next/head";
 const page = () => {
   
   return (
-    <div>
+    <>
       <Head>
         <link rel="canonical" href="https://www.techcreator.co/login" />
       </Head>
@@ -14,7 +14,7 @@ const page = () => {
     <>
       <Login/>
     </>
-    </div>
+    </>
   )
 }
 
