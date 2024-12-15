@@ -39,15 +39,7 @@ const projectManagement = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          Project Management Services | Expert Project Management Consultants
-        </title>
-        <meta
-          name="description"
-          content="TechCreator offers professional project management services with expert consultants. Streamline workflows, implement Agile methodologies, and achieve business success."
-        />
-      </Head>
+     
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
@@ -300,3 +292,14 @@ const projectManagement = () => {
 };
 
 export default projectManagement;
+
+
+
+export const metadata = {
+  title: " Project Management Services | Expert Project Management Consultants",
+  description:
+    "TechCreator offers professional project management services with expert consultants. Streamline workflows, implement Agile methodologies, and achieve business success.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/project-management",
+  },
+};

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import webDevelopmentImagehero from "../../../../public/assets/graphice design images/webdevelopment.png";
 import Image from "next/image";
@@ -79,14 +78,6 @@ const WebDevelopment = () => {
 
   return (
     <div>
-      <Head>
-        <title>Progressive Web App Development Company | TechCreator</title>
-        <meta
-          name="description"
-          content="TechCreator provides full-fledged Progressive Web App development Services for your business online needs. Get a more attractive and customized solution here."
-        />
-        <link rel="canonical" href="https://www.techcreator.co/services/web-development" />
-      </Head>
 
       {/* hero section start */}
       <div className="bg-black w-full lg:min-h-screen md:pt-36 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
@@ -350,3 +341,14 @@ const WebDevelopment = () => {
 };
 
 export default WebDevelopment;
+
+
+
+export const metadata = {
+  title: "Progressive Web App Development Company | TechCreator",
+  description:
+    "TechCreator provides full-fledged Progressive Web App development Services for your business online needs. Get a more attractive and customized solution here.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/web-development",
+  },
+};

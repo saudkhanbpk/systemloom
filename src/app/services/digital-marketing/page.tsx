@@ -39,16 +39,7 @@ const DigitalMarketing = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          Digital Marketing Experts | Social Media Marketing & PPC Services
-        </title>
-        <meta
-          name="description"
-          content="TechCreator offers expert digital marketing services, including social media marketing, branding, and PPC campaigns. Experience personalized solutions for measurable results."
-        />
-      </Head>
-
+ 
       {/* hero section start */}
       <div className="bg-black w-full lg:min-h-screen md:pt-36 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
@@ -304,3 +295,14 @@ const DigitalMarketing = () => {
 };
 
 export default DigitalMarketing;
+
+
+
+export const metadata = {
+  title: "Digital Marketing Experts | Social Media Marketing & PPC Services",
+  description:
+    "TechCreator offers expert digital marketing services, including social media marketing, branding, and PPC campaigns. Experience personalized solutions for measurable results.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/digital-marketing",
+  },
+};

@@ -40,15 +40,6 @@ const UIUXDesign = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          UI/UX Design Service | Top UI/UX Design Agency for Mobile Solutions
-        </title>
-        <meta
-          name="description"
-          content="Expert UI/UX design services at TechCreator. As a top UI/UX design agency, we specialize in mobile & Desktop UI/UX design and creating user-centric digital experiences."
-        />
-      </Head>
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
@@ -302,3 +293,14 @@ const UIUXDesign = () => {
 };
 
 export default UIUXDesign;
+
+
+
+export const metadata = {
+  title: "UI/UX Design Service | Top UI/UX Design Agency for Mobile Solutions",
+  description:
+    "Expert UI/UX design services at TechCreator. As a top UI/UX design agency, we specialize in mobile & Desktop UI/UX design and creating user-centric digital experiences.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/ui-ux-designing",
+  },
+};

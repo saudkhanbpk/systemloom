@@ -44,15 +44,7 @@ const MobileAppDevelopment = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          Cross-Platform Mobile App Design and Development | TechCreator
-        </title>
-        <meta
-          name="description"
-          content="Explore expert mobile app design and development services at TechCreator. Specializing in Flutter, cross-platform, healthcare, and enterprise app solutions tailored to meet your business needs."
-        />
-      </Head>
+     
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
@@ -316,3 +308,13 @@ const MobileAppDevelopment = () => {
 };
 
 export default MobileAppDevelopment;
+
+
+export const metadata = {
+  title: "Cross-Platform Mobile App Design and Development | TechCreator",
+  description:
+    "Explore expert mobile app design and development services at TechCreator. Specializing in Flutter, cross-platform, healthcare, and enterprise app solutions tailored to meet your business needs.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/mobile-app-development",
+  },
+};

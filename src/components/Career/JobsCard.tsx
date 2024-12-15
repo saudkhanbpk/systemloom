@@ -1,9 +1,11 @@
+"use client";
 import JobDetail from "./JobDetail";
 import { useSelector } from "react-redux";
 import { MapPin, Clock } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { RootState } from "@/redux/store";
 import { useState } from "react";
+import useGetAllJobs from "@/hooks/useGetAllJobs";
 
 // JobCard component with typed props
 interface JobCardProps {
@@ -14,6 +16,7 @@ interface JobCardProps {
   company: string;
   timeAgo: Date;
 }
+
 
 const JobCard = ({
   category = "Development",
@@ -72,6 +75,7 @@ const JobCard = ({
 
 // JobsCard component to display the list of jobs
 const JobsCard = () => {
+useGetAllJobs()
   // Correct useSelector usage
   const { allJobs } = useSelector((state: RootState) => state.job);
   // console.log(allJobs);

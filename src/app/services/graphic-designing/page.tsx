@@ -39,15 +39,7 @@ const GraphicDesign = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          Agency for Graphic Design | Expert Graphic Design Companies
-        </title>
-        <meta
-          name="description"
-          content="TechCreator is a top agency for graphic design offering diverse graphic design styles. Partner with one of the leading graphic design companies to elevate your brand."
-        />
-      </Head>
+     
 
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
@@ -304,3 +296,13 @@ const GraphicDesign = () => {
 };
 
 export default GraphicDesign;
+
+
+export const metadata = {
+  title: "Agency for Graphic Design | Expert Graphic Design Companies",
+  description:
+    "TechCreator is a top agency for graphic design offering diverse graphic design styles. Partner with one of the leading graphic design companies to elevate your brand.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/digital-marketing",
+  },
+};

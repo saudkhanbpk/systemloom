@@ -1,19 +1,22 @@
-"use client"
 import ContactUs from '@/components/contact/Contactus'
-import Head from 'next/head'
-import React from 'react'
+
 
 const page = () => {
   return (
     <>
-       <Head>
-        <link rel="canonical" href="https://www.techcreator.co/contact" />
-      </Head>
-      <>
       <ContactUs/>
-      </>
     </>
   )
 }
 
 export default page
+
+
+export const metadata = {
+  title: "Contact Us | Get in Touch with TechCreator",
+  description:
+    "Have questions or need support? Contact TechCreator today for inquiries about our services, collaborations, or career opportunities. We're here to help you achieve your goals!",
+  alternates: {
+    canonical: "https://www.techcreator.co/contact",
+  },
+};

@@ -40,17 +40,6 @@ const Devops = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          DevOps Consulting | Expert DevOps Automation & Business Solutions
-        </title>
-        <meta
-          name="description"
-          content="Discover professional DevOps consulting services at TechCreator. Our expert DevOps consultants deliver tailored business DevOps solutions, automation, and process optimization."
-        />
-        <link rel="canonical" href="https://www.techcreator.co/services/web-development" />
-      </Head>
-
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
@@ -305,3 +294,15 @@ const Devops = () => {
 };
 
 export default Devops;
+
+
+
+
+export const metadata = {
+  title: "DevOps Consulting | Expert DevOps Automation & Business Solutions",
+  description:
+    "Discover professional DevOps consulting services at TechCreator. Our expert DevOps consultants deliver tailored business DevOps solutions, automation, and process optimization.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/devops",
+  },
+};

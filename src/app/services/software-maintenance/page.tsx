@@ -39,15 +39,7 @@ const SoftwareMaintenance = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          Software Maintenance Services | Maintenance & Support Solutions
-        </title>
-        <meta
-          name="description"
-          content="TechCreator offers expert software maintenance services, including construction equipment maintenance software and support. Ensure seamless performance with our maintenance solutions."
-        />
-      </Head>
+     
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
@@ -301,3 +293,14 @@ const SoftwareMaintenance = () => {
 };
 
 export default SoftwareMaintenance;
+
+
+
+export const metadata = {
+  title: "Software Maintenance Services | Maintenance & Support Solutions",
+  description:
+    "TechCreator offers expert software maintenance services, including construction equipment maintenance software and support. Ensure seamless performance with our maintenance solutions.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/software-maintenance",
+  },
+};

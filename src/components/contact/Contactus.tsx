@@ -1,3 +1,4 @@
+"use client"
 import HeroSection_BG from "../../../public/assets/contactImages/Frame 5061.png";
 import Image from "next/image";
 import ContactForm from "./ContactForm";

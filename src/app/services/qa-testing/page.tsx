@@ -42,15 +42,6 @@ const QATesting = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          QA Testing Services | Comprehensive Quality Assurance Solutions
-        </title>
-        <meta
-          name="description"
-          content="TechCreator offers professional QA testing services to ensure software quality. Enhance reliability with tailored quality assurance testing for seamless performance."
-        />
-      </Head>
 
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
@@ -303,3 +294,13 @@ const QATesting = () => {
 };
 
 export default QATesting;
+
+
+export const metadata = {
+  title: "QA Testing Services | Comprehensive Quality Assurance Solutions",
+  description:
+    "TechCreator offers professional QA testing services to ensure software quality. Enhance reliability with tailored quality assurance testing for seamless performance.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/qa-testing",
+  },
+};

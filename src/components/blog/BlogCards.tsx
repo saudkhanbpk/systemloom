@@ -1,9 +1,11 @@
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import useGetAllBlogs from "@/hooks/useGetAllBlogs";
 
 // Function to create a slug from the title
 const createSlug = (title: string | undefined): string =>
@@ -25,6 +27,7 @@ const truncateText = (htmlContent: string, limit: number): string => {
 };
 
 const BlogCards: React.FC = () => {
+  useGetAllBlogs();
   const blogs = useSelector((state: RootState) => state.blogs.blogs);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;

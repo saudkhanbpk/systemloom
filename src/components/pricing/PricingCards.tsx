@@ -1,4 +1,5 @@
 // components/PricingCards.tsx
+"use client";
 import Image from "next/image";
 import backgroundImage from "../../../public/assets/pricingPage/backgroundImage.jpeg";
 import React, { useRef } from "react";

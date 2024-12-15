@@ -8,12 +8,6 @@ import seoimage3 from "../../../../public/assets/graphice design images/seoimage
 import seoimage4 from "../../../../public/assets/graphice design images/seoimage4.png";
 import seoimage5 from "../../../../public/assets/graphice design images/seoimage5.png";
 
-// image for RecentWorks
-import image from "../../../../public/assets/RecentWork/unsplash_IyaNci0CyRk.png";
-import image1 from "../../../../public/assets/RecentWork/unsplash_7ZWVnVSaafY.png";
-import image2 from "../../../../public/assets/RecentWork/unsplash_qC2n6RQU4Vw.png";
-import image3 from "../../../../public/assets/RecentWork/unsplash_m_HRfLhgABo.png";
-import { Pencil, Heart } from "lucide-react";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
@@ -46,15 +40,7 @@ const SeoContentWriting = () => {
 
   return (
     <div>
-      <Head>
-        <title>
-          SEO Content Writing Services | Technical SEO Agency & Consulting
-        </title>
-        <meta
-          name="description"
-          content="TechCreator offers expert SEO content writing services and SEO consulting services. Partner with a leading technical SEO agency to boost visibility with a tailored SEO content strategy."
-        />
-      </Head>
+      
       {/* hero section start */}
       <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
         {/* Left Section */}
@@ -312,3 +298,14 @@ const SeoContentWriting = () => {
 };
 
 export default SeoContentWriting;
+
+
+
+export const metadata = {
+  title: "SEO Content Writing Services | Technical SEO Agency & Consulting",
+  description:
+    "TechCreator offers expert SEO content writing services and SEO consulting services. Partner with a leading technical SEO agency to boost visibility with a tailored SEO content strategy.",
+  alternates: {
+    canonical: "https://www.techcreator.co/services/seo-content-writing",
+  },
+};
