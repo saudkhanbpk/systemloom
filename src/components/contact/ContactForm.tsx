@@ -6,6 +6,7 @@ import axios from 'axios';
 import { backend_url } from '@/newLayout';
 import { toast } from 'react-toastify';
 import { FaWhatsapp } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
 
 
 interface FormData {
@@ -25,7 +26,8 @@ const ContactForm: React.FC = () => {
     message: '',
   });
 
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false); 
+  const router = useRouter()
 
   const changeEventHandler = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,6 +47,7 @@ const ContactForm: React.FC = () => {
 
       if (res.data.success) {
         toast.success(res.data.message);
+router.push("/confirmation")
         setFormData({ firstName: '', lastName: '', email: '', phoneNumber: '', message: '' }); 
       }
     } catch (error: any) {
