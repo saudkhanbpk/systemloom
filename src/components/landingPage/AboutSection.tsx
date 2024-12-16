@@ -40,7 +40,7 @@ function AboutSection() {
         {/* Text Section */}
         <div className="flex flex-col items-center md:items-start md:w-1/2 w-full relative">
           {/* Image aligned to the right */}
-          <div className="absolute -top-20 hide-at-970 right-52 transform translate-x-3">
+          {/* <div className="absolute -top-20 hide-at-970 right-52 transform translate-x-3">
             <Image
               src={squareImage}
               alt="about_image"
@@ -50,14 +50,14 @@ function AboutSection() {
               className="object-cover"
               sizes="(max-width: 768px) 150px, (min-width: 548px) 150px, (min-width: 1024px) 300px"
             />
-          </div>
+          </div> */}
 
           {/* Text Content */}
           <div className="text-center md:text-left mx-auto">
-            <h1 className="text-[#9A00FF] font-bold text-3xl md:text-[35px] leading-tight md:leading-[55px] mb-4">
-              About Us
+            <h1 className="text-[#9A00FF]  font-bold text-3xl md:text-[35px] leading-tight md:leading-[45px] mb-4">
+            We Bring Maximum value to your business
             </h1>
-            <p className="font-normal text-base md:text-lg leading-7 md:leading-[36px] max-w-full md:max-w-lg">
+            <p className="font-normal text-xl p-2 md:text-lg leading-7 md:leading-[36px]">
               TechCreator is a software development company helping businesses
               scale up their growth. Your potential customers will find you
               online. Our team made it happen. Engage them with contemporary,
