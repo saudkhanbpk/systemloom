@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import Image from "next/image";
 import RelatedBlog from "../RelatedBlog";
+import useGetAllBlogs from "@/hooks/useGetAllBlogs";
 
 // Define the Post and Comment interfaces
 interface Post {
@@ -17,38 +18,22 @@ interface Post {
   description: string;
   tags: string[];
   publish: boolean;
+  slug: string;  // Ensure the slug is part of the post
 }
-
-
-
 
 interface DetailPostProps {
   params: {
-    title: string;
+    slug: string;
   };
 }
 
-
-// Utility function to create a slug from a post title
-const createSlug = (title: string): string => {
-  return title
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')  
-    .replace(/[^\w-]+/g, '');  
-};
-
 const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
+  useGetAllBlogs()
   const blogs = useSelector((state: RootState) => state.blogs.blogs);
-  // const user = useSelector((state: RootState) => state.auth.user);
+  const { slug } = params;
 
-  // console.log("blogs", blogs)
-  const { title } = params;
 
-  // Find the post that matches the title slug
-  const post = (blogs as Post[]).find((p) => createSlug(p.title) === title);
-
-  
+  const post = (blogs as Post[]).find((p) => p.slug === slug);
 
   if (!post) {
     return (
@@ -57,6 +42,7 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
       </div>
     );
   }
+
 
   return (
     <>

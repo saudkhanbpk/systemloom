@@ -53,7 +53,7 @@
 // }
 
 
-"use client";
+
 
 // app/layout.tsx
 import { useEffect } from "react";
@@ -87,20 +87,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("config", "G-ZTK7M863ND", {
-        page_path: window.location.pathname + window.location.search,
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined" && typeof window.gtag === "function") {
+  //     window.gtag("config", "G-PHQXJH3N0Z", {
+  //       page_path: window.location.pathname + window.location.search,
+  //     });
+  //   }
+  // }, []);
 
   return (
     <html lang="en">
       <head>
         {/* Google Analytics */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZTK7M863ND"
+          src="https://www.googletagmanager.com/gtag/js?id=G-PHQXJH3N0Z"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -108,7 +108,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-ZTK7M863ND');
+            gtag('config', 'G-PHQXJH3N0Z');
           `}
         </Script>
 

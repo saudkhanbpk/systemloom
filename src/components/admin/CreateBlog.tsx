@@ -9,14 +9,15 @@ import { toast } from "react-toastify";
 const CreateBlogForm = () => {
   const searchParams = useSearchParams();
   const blogId = searchParams.get("blogId");
+  const slug = searchParams.get("slug");
   const router = useRouter();
 
   const generateSlug = (title: string): string => {
     return title
       .toLowerCase()
       .trim()
-      .replace(/\s+/g, "-") // Replace spaces with dashes
-      .replace(/[^\w-]+/g, ""); // Remove non-alphanumeric characters
+      .replace(/\s+/g, "-") 
+      .replace(/[^\w-]+/g, ""); 
   };
   
 
@@ -93,11 +94,11 @@ const CreateBlogForm = () => {
   
 
   useEffect(() => {
-    if (blogId) {
+    if (slug) {
       // Fetch blog data if blogId is provided
       const fetchBlogData = async () => {
         try {
-          const res = await axios.get(`${backend_url}/api/v1/blogs/get/${blogId}`);
+          const res = await axios.get(`${backend_url}/api/v1/blogs/get/${slug}`);
           console.log("single project data", res);
           if (res.data.success) {
             setFormData({
@@ -114,12 +115,12 @@ const CreateBlogForm = () => {
           }
         } catch (error) {
           console.error(error);
-          toast.error("Failed to load project data");
+          toast.error("Failed to load blog data");
         }
       };
       fetchBlogData();
     }
-  }, [blogId]);
+  }, [slug]);
   
 
   const handleSubmit = async (e: React.FormEvent) => {

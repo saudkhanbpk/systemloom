@@ -19,7 +19,7 @@ const DetailPost: React.FC = () => {
   return (
     <>
       <BlogHeroDetail/>
-<BlogDetails params={{ title: postId }} />
+<BlogDetails params={{ slug: postId }} />
     </>
     
   );
