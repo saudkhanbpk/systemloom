@@ -102,14 +102,14 @@ const CreateBlogForm = () => {
           if (res.data.success) {
             setFormData({
               storyContent: res.data.blog.content,
-              altDescription: res.data.blog.image.altDescription, // Image alt description
+              altDescription: res.data.blog.image.altDescription, 
               title: res.data.blog.title,
               slug: res.data.blog.slug,
               description: res.data.blog.description,
               tags: res.data.blog.tags,
               tagInput: "",
               image: null, // Image is initially null
-              imagePreview: res.data.blog.image.imageUrl || null, // Image URL
+              imagePreview: res.data.blog.image.imageUrl || null, 
             });
           }
         } catch (error) {
@@ -125,7 +125,7 @@ const CreateBlogForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   
-    const { storyContent, altDescription, tags, description, title, slug, image } = formData; // Include slug here
+    const { storyContent, altDescription, tags, description, title, slug, image } = formData; 
   
     const formDataToSubmit = new FormData();
     formDataToSubmit.append("content", storyContent);
@@ -133,7 +133,7 @@ const CreateBlogForm = () => {
     formDataToSubmit.append("tags", JSON.stringify(tags));
     formDataToSubmit.append("description", description);
     formDataToSubmit.append("title", title);
-    formDataToSubmit.append("slug", slug); // Append slug to the form data
+    formDataToSubmit.append("slug", slug); 
   
     // Append the image to form data if available
     if (image) {
