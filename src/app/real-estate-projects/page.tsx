@@ -77,7 +77,7 @@ const RealEstateProject: React.FC = () => {
               Real Estate Projects
             </h1>
             <p className="md:text-xl">
-              At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Join us in the journey of transforming your vision into cutting-edge technology.
+            In the ever-changing world of real estate, digital solutions can be a game changer. We at TechCreator Software Company design feature-rich property management systems, real estate marketplaces, and CRM solutions to streamline property listings, customer transactions, and interactions with customers. Our solutions for the real estate and property industry enable online businesses to increase their visibility, simplify internal workflows, and enhance buyer and seller engagement. 
             </p>
           </div>
         </div>

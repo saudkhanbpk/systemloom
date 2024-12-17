@@ -71,6 +71,19 @@ const Page = () => {
     }
   };
 
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <ProtectedRoute>
       <AdminLayout>
@@ -125,31 +138,36 @@ const Page = () => {
                   </tr>
                 ))}
               </tbody>
+
+              <tfoot className="bg-gray-100">
+          <tr>
+            <td colSpan={7} className="py-2 px-4">
+              <div className="flex justify-between items-center">
+                <button
+                  onClick={handlePrevPage}
+                  disabled={currentPage === 1}
+                  className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
+                >
+                  Previous
+                </button>
+                <span className="text-gray-700">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button
+                  onClick={handleNextPage}
+                  disabled={currentPage === totalPages}
+                  className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
+                >
+                  Next
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
             </table>
           </div>
 
-          {/* Pagination */}
-          <div className="">
-  <div className="flex justify-between items-center mt-4 py-2 px-4">
-    <button
-      onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-      disabled={currentPage === 1}
-      className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
-    >
-      Previous
-    </button>
-    <span className="text-gray-700">
-      Page {currentPage} of {totalPages}
-    </span>
-    <button
-      onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-      disabled={currentPage === totalPages}
-      className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
-    >
-      Next
-    </button>
-  </div>
-</div>
+         
 
         </div>
       </AdminLayout>

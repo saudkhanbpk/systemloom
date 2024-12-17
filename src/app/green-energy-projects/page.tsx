@@ -77,7 +77,7 @@ const GreenEnergyProject: React.FC = () => {
               Green Energy Projects
             </h1>
             <p className="md:text-xl">
-              At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Join us in the journey of transforming your vision into cutting-edge technology.
+            With a mission to help usher in the future of innovation in renewable energy, TechCreator Software Company also creates custom software solutions for sustainability and efficiency. From energy management systems to monitoring and analytics platforms, we empower businesses to optimize renewable energy operations and reduce their carbon footprint. Join hands with us and let technology run in the coming days for a greener and sustainable life. 
             </p>
           </div>
         </div>

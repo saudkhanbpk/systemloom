@@ -90,6 +90,7 @@ const PricingForm = () => {
       item.service.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentData = filteredData.slice(startIndex, endIndex);
@@ -99,7 +100,7 @@ const PricingForm = () => {
   };
 
   const handleNext = () => {
-    if (currentPage < Math.ceil(filteredData.length / itemsPerPage)) {
+    if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -216,36 +217,36 @@ const PricingForm = () => {
               </tr>
             ))}
           </tbody>
-        </table>
-      </div>
-
-      <div className="flex justify-between items-center mt-5">
+          <tfoot className="bg-gray-100">
+  <tr>
+    <td colSpan={6} className="py-2 px-4">
+      <div className="flex justify-between items-center">
         <button
           onClick={handlePrevious}
-          className={`px-4 py-2 rounded ${
-            currentPage === 1 ? "bg-gray-300" : "bg-purple-600 text-white"
-          }`}
           disabled={currentPage === 1}
+          className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
         >
           Previous
         </button>
-        <span>
-          Page {currentPage} of {Math.ceil(filteredData.length / itemsPerPage)}
+        <span className="text-gray-700">
+          Page {currentPage} of {totalPages}
         </span>
         <button
           onClick={handleNext}
-          className={`px-4 py-2 rounded ${
-            currentPage === Math.ceil(filteredData.length / itemsPerPage)
-              ? "bg-gray-300"
-              : "bg-purple-600 text-white"
-          }`}
-          disabled={
-            currentPage === Math.ceil(filteredData.length / itemsPerPage)
-          }
+          disabled={currentPage === totalPages}
+          className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
         >
           Next
         </button>
       </div>
+    </td>
+  </tr>
+</tfoot>
+
+        </table>
+      </div>
+
+      
 
       {/* Modal */}
       {showModal && selectedItem && (

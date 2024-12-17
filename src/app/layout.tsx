@@ -54,7 +54,7 @@
 
 
 
-
+"use client"
 // app/layout.tsx
 import { useEffect } from "react";
 import Script from "next/script";
@@ -87,13 +87,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // useEffect(() => {
-  //   if (typeof window !== "undefined" && typeof window.gtag === "function") {
-  //     window.gtag("config", "G-PHQXJH3N0Z", {
-  //       page_path: window.location.pathname + window.location.search,
-  //     });
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("config", "G-PHQXJH3N0Z", {
+        page_path: window.location.pathname + window.location.search,
+      });
+    }
+  }, []);
 
   return (
     <html lang="en">

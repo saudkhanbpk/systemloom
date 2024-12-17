@@ -88,7 +88,7 @@ const RestaurantProject: React.FC = () => {
               Restaurant Projects
             </h1>
             <p className="md:text-xl">
-              At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Join us in the journey of transforming your vision into cutting-edge technology.
+            Let us take your restaurant business to another level of futuristic digital solutions through TechCreator Software Company. We develop point-of-sale systems, table reservation platforms, and online food delivery solutions according to your business needs so that you can run your business efficiently and thrive. With tailored and smartly crafted software, we can streamline operations, offer additional services to customers, and thus enhance revenues either for one or multiple chains.
             </p>
           </div>
         </div>

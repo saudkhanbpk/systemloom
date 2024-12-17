@@ -21,7 +21,7 @@ interface ContactTableProps {
 const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => {
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 3;
+  const rowsPerPage = 5;
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(contacts.length / rowsPerPage);

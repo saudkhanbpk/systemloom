@@ -12,6 +12,11 @@ const CreateBlogForm = () => {
   const slug = searchParams.get("slug");
   const router = useRouter();
 
+ 
+
+console.log("Query Parameters:", searchParams);
+console.log("Slug:", slug);
+
   const generateSlug = (title: string): string => {
     return title
       .toLowerCase()
@@ -92,7 +97,7 @@ const CreateBlogForm = () => {
     }));
   };
   
-
+  
   useEffect(() => {
     if (slug) {
       // Fetch blog data if blogId is provided
@@ -143,9 +148,9 @@ const CreateBlogForm = () => {
   
     try {
       let res;
-      if (blogId) {
+      if (slug) {
         // Update the blog if blogId exists
-        res = await axios.put(`${backend_url}/api/v1/blogs/update/${blogId}`, formDataToSubmit, {
+        res = await axios.put(`${backend_url}/api/v1/blogs/update/${slug}`, formDataToSubmit, {
           withCredentials: true,
         });
         if (res.data.success) {
@@ -220,7 +225,8 @@ const CreateBlogForm = () => {
             placeholder="Enter Blog Title"
             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={formData.title}
-            onChange={(e) => setFormData((prevData) => ({ ...prevData, title: e.target.value }))}
+            onChange={handleTitleChange}
+            // onChange={(e) => setFormData((prevData) => ({ ...prevData, title: e.target.value }))}
           />
         </div>
 

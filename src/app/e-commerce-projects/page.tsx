@@ -77,7 +77,7 @@ const EcommerceProject: React.FC = () => {
               E-Commerce Projects
             </h1>
             <p className="md:text-xl">
-              At TechCreator Software Company, we specialize in crafting bespoke software solutions that cater to your unique business needs. Join us in the journey of transforming your vision into cutting-edge technology.
+            We aim to take your online business to new heights with our custom e-commerce solutions. TechCreator Software Company builds secure, responsive, and scalable e-commerce websites, providing seamless shopping experiences to their users. Hence, product management, secure payment integrations with advanced analytics and inventory systems will be taken care of as per the client's specific needs to compete in the digital marketplace.
             </p>
           </div>
         </div>
