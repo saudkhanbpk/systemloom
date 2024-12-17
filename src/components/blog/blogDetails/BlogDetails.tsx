@@ -40,7 +40,7 @@ const createSlug = (title: string): string => {
 
 const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
   const blogs = useSelector((state: RootState) => state.blogs.blogs);
-  const user = useSelector((state: RootState) => state.auth.user);
+  // const user = useSelector((state: RootState) => state.auth.user);
 
   // console.log("blogs", blogs)
   const { title } = params;
@@ -72,8 +72,8 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
       <div className="flex justify-center items-center space-x-4 text-sm sm:text-base text-gray-600 mb-8">
         <span className="font-semibold">Created At: </span>
         <span>{new Date(post.createdAt).toLocaleString()}</span>
-        <span className="mx-2">•</span>
-        <span className="font-semibold">{post.readTime} read</span>
+        {/* <span className="mx-2">•</span> */}
+        {/* <span className="font-semibold">{post.readTime} read</span> */}
       </div>
 
       {/* Main Content Section */}

@@ -11,10 +11,20 @@ const CreateBlogForm = () => {
   const blogId = searchParams.get("blogId");
   const router = useRouter();
 
+  const generateSlug = (title: string): string => {
+    return title
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-") // Replace spaces with dashes
+      .replace(/[^\w-]+/g, ""); // Remove non-alphanumeric characters
+  };
+  
+
   const [formData, setFormData] = useState({
     storyContent: "",
     altDescription: "",
     title: "",
+    slug: "",
     description: "",
     tags: [] as string[],
     tagInput: "",
@@ -71,6 +81,17 @@ const CreateBlogForm = () => {
     }
   };
 
+  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const title = e.target.value;
+    const slug = generateSlug(title); // Generate slug from title
+    setFormData((prevData) => ({
+      ...prevData,
+      title,
+      slug, // Update slug in the state
+    }));
+  };
+  
+
   useEffect(() => {
     if (blogId) {
       // Fetch blog data if blogId is provided
@@ -83,6 +104,7 @@ const CreateBlogForm = () => {
               storyContent: res.data.blog.content,
               altDescription: res.data.blog.image.altDescription, // Image alt description
               title: res.data.blog.title,
+              slug: res.data.blog.slug,
               description: res.data.blog.description,
               tags: res.data.blog.tags,
               tagInput: "",
@@ -102,21 +124,22 @@ const CreateBlogForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const { storyContent, altDescription, tags, description, title, image } = formData;
-
+  
+    const { storyContent, altDescription, tags, description, title, slug, image } = formData; // Include slug here
+  
     const formDataToSubmit = new FormData();
     formDataToSubmit.append("content", storyContent);
     formDataToSubmit.append("altDescription", altDescription);
     formDataToSubmit.append("tags", JSON.stringify(tags));
     formDataToSubmit.append("description", description);
     formDataToSubmit.append("title", title);
-
+    formDataToSubmit.append("slug", slug); // Append slug to the form data
+  
     // Append the image to form data if available
     if (image) {
       formDataToSubmit.append("image", image);
     }
-
+  
     try {
       let res;
       if (blogId) {
@@ -136,14 +159,15 @@ const CreateBlogForm = () => {
           toast.success(res.data.message);
         }
       }
-
+  
       // Redirect after successful operation
       router.push("/admin/all-blogs");
     } catch (error: any) {
-      console.log(error);
+      console.error(error);
       toast.error("An error occurred. Please try again.");
     }
   };
+  
 
   return (
     <div className="max-w-5xl mx-auto bg-white p-6 rounded-lg mt-20 shadow-md">
