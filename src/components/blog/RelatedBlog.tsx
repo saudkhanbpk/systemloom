@@ -29,8 +29,8 @@ const RelatedBlog: React.FC<RelatedBlogProps> = ({ excludeBlogId }) => {
   const relatedBlogs = blogs?.filter((blog: any) => blog._id !== excludeBlogId).slice(0, 3) || [];
 
   return (
-    <div className="container mb-10 mt-10 mx-auto max-w-7xl ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center  md:grid-cols-3 gap-3">
+    <div className="container mb-10 mt-10  px-16   ">
+      <div className="flex flex-wrap justify-center  items-center md:w-[450px]  gap-3">
         {relatedBlogs.map((blog: any) => (
           <div key={blog._id || Math.random()} className="">
             <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full space-x-2 h-auto sm:h-[430px]">
