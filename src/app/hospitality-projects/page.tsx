@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import healthcareImage from "../../../public/assets/portfolioImages/healthcare.png";
+import HospitalityImage from "../../../public/assets/portfolioImages/hospitality.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
@@ -72,12 +72,12 @@ const HospitalityProject: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src={healthcareImage}
+            src={HospitalityImage}
             alt="Background"
             layout="fill"
             objectFit="cover"
             priority
-            className="opacity-15"
+            className="opacity-25"
           />
         </div>
 
