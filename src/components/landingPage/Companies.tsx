@@ -35,7 +35,7 @@ const Companies = () => {
   return (
     <div className="relative bg-[#9A00FF] py-5 px-4 md:px-10 md:mb-0 mb-8">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
@@ -50,7 +50,7 @@ const Companies = () => {
           />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </div> */}
 
       {/* Carousel Section */}
       <div className="relative z-10 ">

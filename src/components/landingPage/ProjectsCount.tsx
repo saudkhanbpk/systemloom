@@ -33,7 +33,7 @@ const StatItem: FC<StatItemProps> = ({ value, label }) => {
 const ProjectsCount: FC = () => {
   return (
     <div className="relative bg-[#9A00FF] py-8 overflow-hidden">
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
       <video
   autoPlay
   muted
@@ -49,7 +49,7 @@ const ProjectsCount: FC = () => {
   Your browser does not support the video tag.
 </video>
 
-      </div>
+      </div> */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
           <StatItem value={90} label="Clients" />
