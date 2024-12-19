@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import useGetAllTestimonial from "@/hooks/useGetAllTestimonial";
+import { motion } from "framer-motion";
 
 interface TestimonialCardProps {
   name: string;
@@ -15,6 +16,11 @@ interface TestimonialCardProps {
   testimonial: string;
   reviewScreenshot: string; // Add screenshot prop
 }
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
   name,
@@ -26,8 +32,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
+    <motion.div
       className="p-6 text-center relative"
+      variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover={{ scale: 1.05 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -54,7 +64,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <p className="font-normal leading-6 text-base mb-2 text-center">{`"${testimonial}"`}</p>
 
       {isHovered && reviewScreenshot && (
-        <div className="absolute top-0 left-0 w-full h-full  bg-white bg-opacity-105 flex justify-center items-center">
+        <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-105 flex justify-center items-center">
           <img
             src={reviewScreenshot}
             alt="Testimonial Screenshot"
@@ -62,7 +72,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
@@ -96,38 +106,62 @@ const ClientTestimonialsSection: React.FC = () => {
     },
   };
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
   return (
-    <section className="py-16">
+    <motion.section
+      className="py-16"
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+    >
       <div className="mx-auto px-4">
-        <h2 className="text-[35px] font-bold text-center text-[#9A00FF] mb-2">
-          CLIENT TESTIMONIALS
-        </h2>
-        <p className="text-2xl text-center font-medium mb-12">
-          What they say about us
-        </p>
-        <Carousel
-          responsive={responsive}
-          autoPlay
-          infinite
-          removeArrowOnDeviceType={["mobile", "tablet"]}
-          arrows={false}
-          showDots
+        <motion.h2
+          className="text-[35px] font-bold text-center text-[#9A00FF] mb-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 0.8 } }}
         >
-          {testimonials.map((testimonial) => (
-            <TestimonialCard
-              key={testimonial._id}
-              name={testimonial.clientName}
-              image={testimonial.profilePicture || "/default-profile.png"}
-              rating={testimonial.rating}
-              testimonial={testimonial.review}
-              reviewScreenshot={
-                testimonial.reviewScreenshot || "/default-screenshot.png"
-              }
-            />
-          ))}
-        </Carousel>
+          CLIENT TESTIMONIALS
+        </motion.h2>
+        <motion.p
+          className="text-2xl text-center font-medium mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 1 } }}
+        >
+          What they say about us
+        </motion.p>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+        >
+          <Carousel
+            responsive={responsive}
+            autoPlay
+            infinite
+            removeArrowOnDeviceType={["mobile", "tablet"]}
+            arrows={false}
+            showDots
+          >
+            {testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial._id}
+                name={testimonial.clientName}
+                image={testimonial.profilePicture || "/default-profile.png"}
+                rating={testimonial.rating}
+                testimonial={testimonial.review}
+                reviewScreenshot={
+                  testimonial.reviewScreenshot || "/default-screenshot.png"
+                }
+              />
+            ))}
+          </Carousel>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

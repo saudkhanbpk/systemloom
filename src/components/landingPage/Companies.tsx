@@ -11,6 +11,8 @@ import company5 from "../../../public/assets/companies/PatronPal logo.png";
 import company7 from "../../../public/assets/companies/Rectangle 21848.png";
 import Link from "next/link";
 import CommonButton from "../common/Button";
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer'; 
 
 const Companies = () => {
   const responsive = {
@@ -93,24 +95,42 @@ const Companies = () => {
 export default Companies;
 
 export const CTASection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,   
+    threshold: 0.3,      
+  });
+
   return (
     <section className="mb-32 mt-16 ">
       <div className=" mx-auto w-[95%] h-auto md:h-[300px]">
         <div className="flex flex-col    md:flex-row justify-around">
-          <div className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
+          <motion.div
+         ref={ref} 
+         initial={{ opacity: 0, y: 150 }}
+         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 150 }}
+         transition={{ duration: 1, ease: "easeInOut" }}
+         className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
               "Looking for top developers and designers? Let's build something
               great together. Get in touch today!"
             </h2>
             <Link href="/contact">
-              <CommonButton
-                title="Hire Top Developers"
+            
+              <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+                title=""
                 className="bg-[#9A00FF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5"
-                handleClick={() => console.log("")}
-              />
+                // handleClick={() => console.log("")}
+              >Hire Top Developers</motion.button>
             </Link>
-          </div>
-          <div className=" ">
+          </motion.div>
+          <motion.div
+           ref={ref} 
+           initial={{ opacity: 0, x: 150 }}
+           animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 150 }}
+           transition={{ duration: 1, ease: "easeInOut" }}
+            className=" ">
             <Image
               src={company7}
               alt="Team working together"
@@ -118,7 +138,7 @@ export const CTASection = () => {
               height={280}
               className="w-full hide-at-936 rounded-lg shadow-lg h-[280px] md:h-[330px]"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -61,4 +61,8 @@ textarea:-webkit-autofill {
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 
