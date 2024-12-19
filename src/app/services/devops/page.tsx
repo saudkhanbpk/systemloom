@@ -106,8 +106,7 @@ const Devops = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Automate development and operations processes with powerful DevOps tools.
           </p>
         </div>
 
@@ -116,8 +115,7 @@ const Devops = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Optimize workflows with CI/CD pipelines and real-time monitoring.
           </p>
         </div>
 
@@ -126,8 +124,7 @@ const Devops = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Enhance collaboration between teams for seamless development cycles.
           </p>
         </div>
 
@@ -136,8 +133,7 @@ const Devops = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Ensure smooth and efficient deployments with scalable DevOps solutions.
           </p>
         </div>
       </div>

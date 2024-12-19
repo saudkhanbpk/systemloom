@@ -107,8 +107,7 @@ const DigitalMarketing = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Grow your online presence with targeted digital marketing campaigns.
           </p>
         </div>
 
@@ -117,8 +116,7 @@ const DigitalMarketing = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Boost engagement with creative social media strategies and analytics.
           </p>
         </div>
 
@@ -127,8 +125,7 @@ const DigitalMarketing = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Leverage data to drive traffic and convert leads effectively.
           </p>
         </div>
 
@@ -137,8 +134,7 @@ const DigitalMarketing = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Achieve consistent results with data-driven and time-tested techniques.
           </p>
         </div>
       </div>

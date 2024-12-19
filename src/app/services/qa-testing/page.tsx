@@ -107,8 +107,7 @@ const QATesting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Conduct rigorous testing to ensure bug-free and reliable applications.
           </p>
         </div>
 
@@ -117,8 +116,7 @@ const QATesting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Perform detailed testing for performance, security, and compatibility.
           </p>
         </div>
 
@@ -127,8 +125,7 @@ const QATesting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Deliver reports with actionable insights to enhance application quality.
           </p>
         </div>
 
@@ -137,8 +134,7 @@ const QATesting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Ensure seamless user experience with comprehensive quality assurance.
           </p>
         </div>
       </div>

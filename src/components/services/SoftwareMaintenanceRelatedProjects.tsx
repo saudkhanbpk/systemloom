@@ -51,7 +51,7 @@ const SoftwareMaintenanceRelatedProjects = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Works</h2>
               <p className="mt-3 text-lg">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.
+              Our recent software maintenance activities focus on ensuring stability as well as optimal performance for ongoing operations. By addressing bug resolutions as well as executing system upgrades proactively aids us in supporting enhancements functionally along improving security which caters to dynamic industry demands.
               </p>
             </div>
 

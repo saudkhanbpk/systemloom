@@ -106,8 +106,7 @@ const UIUXDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Design intuitive interfaces that enhance user experience across platforms.
           </p>
         </div>
 
@@ -116,8 +115,7 @@ const UIUXDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Simplify navigation with creative and responsive UI designs.
           </p>
         </div>
 
@@ -126,8 +124,7 @@ const UIUXDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Incorporate user feedback to deliver tailored designs that engage and delight.
           </p>
         </div>
 
@@ -136,8 +133,7 @@ const UIUXDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Ensure every design aligns with your brand and user expectations.
           </p>
         </div>
       </div>

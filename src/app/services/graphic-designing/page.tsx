@@ -107,8 +107,7 @@ const GraphicDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Create eye-catching designs that represent your brand effectively.
           </p>
         </div>
 
@@ -117,8 +116,7 @@ const GraphicDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Deliver creative solutions for logos, banners, brochures, and more.
           </p>
         </div>
 
@@ -127,8 +125,7 @@ const GraphicDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Focus on innovation to create stunning visuals that captivate your audience.
           </p>
         </div>
 
@@ -137,8 +134,7 @@ const GraphicDesign = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Ensure timely delivery of designs without compromising on quality.
           </p>
         </div>
       </div>

@@ -51,7 +51,7 @@ const WebDevRelatedProjects = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Works</h2>
               <p className="mt-3 text-lg">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.
+              Our latest web development initiatives feature innovative designs and smooth functionality, customized to address various business requirements. We prioritize creating responsive layouts and comprehensive solutions that provide outstanding performance, user-friendly experiences, and trackable outcomes for every website built.
               </p>
             </div>
 

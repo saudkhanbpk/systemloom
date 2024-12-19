@@ -145,8 +145,7 @@ const WebDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Build scalable websites with modern technologies tailored to your business goals.
           </p>
         </div>
 
@@ -155,8 +154,7 @@ const WebDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Ensure seamless performance and intuitive user experience with our web solutions.
           </p>
         </div>
 
@@ -165,8 +163,7 @@ const WebDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Integrate powerful features and tools to enhance your website’s functionality.
           </p>
         </div>
 
@@ -175,8 +172,7 @@ const WebDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Deliver projects on time with precision and a focus on quality.
           </p>
         </div>
       </div>

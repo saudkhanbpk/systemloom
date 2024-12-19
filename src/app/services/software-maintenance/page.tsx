@@ -104,8 +104,7 @@ const SoftwareMaintenance = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Keep your software running smoothly with regular updates and maintenance.
           </p>
         </div>
 
@@ -114,8 +113,7 @@ const SoftwareMaintenance = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Identify and resolve issues to enhance software performance and reliability.
           </p>
         </div>
 
@@ -124,8 +122,7 @@ const SoftwareMaintenance = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Implement upgrades to align with the latest technologies and trends.
           </p>
         </div>
 
@@ -134,8 +131,7 @@ const SoftwareMaintenance = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Provide comprehensive support to address all your software maintenance needs.
           </p>
         </div>
       </div>

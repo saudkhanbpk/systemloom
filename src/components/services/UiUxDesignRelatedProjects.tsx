@@ -51,7 +51,7 @@ const UiUxDesigningRelatedProjects = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Works</h2>
               <p className="mt-3 text-lg">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.
+              The UI/UX design projects we have completed recently reflect an ideal combination of creativity and practicality, resulting in visually appealing yet easy-to-navigate interfaces. Our aim is to develop designs that improve user satisfaction, boost engagement levels, and integrate seamlessly with organizational goals.
               </p>
             </div>
 

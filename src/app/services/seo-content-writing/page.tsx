@@ -107,8 +107,7 @@ const SeoContentWriting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Improve your search engine rankings with optimized and engaging content.
           </p>
         </div>
 
@@ -117,8 +116,7 @@ const SeoContentWriting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Craft compelling content tailored to your audience and business goals.
           </p>
         </div>
 
@@ -127,8 +125,7 @@ const SeoContentWriting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Implement effective strategies to drive traffic and boost online visibility.
           </p>
         </div>
 
@@ -137,8 +134,7 @@ const SeoContentWriting = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Deliver consistent and high-quality content on time to meet your needs.
           </p>
         </div>
       </div>

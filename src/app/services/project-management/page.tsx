@@ -105,8 +105,7 @@ const projectManagement = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Manage projects with precision using advanced tracking and analytics tools.
           </p>
         </div>
 
@@ -115,8 +114,7 @@ const projectManagement = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Ensure timely delivery with streamlined workflows and resource allocation.
           </p>
         </div>
 
@@ -125,8 +123,7 @@ const projectManagement = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Drive collaboration across teams for successful project execution.
           </p>
         </div>
 
@@ -135,8 +132,7 @@ const projectManagement = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Monitor progress in real-time to achieve project goals efficiently.
           </p>
         </div>
       </div>

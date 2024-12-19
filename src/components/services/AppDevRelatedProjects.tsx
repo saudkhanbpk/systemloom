@@ -51,7 +51,7 @@ const AppDevRelatedProjects = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Works</h2>
               <p className="mt-3 text-lg">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.
+              Our most recent mobile app development efforts emphasize creative designs coupled with strong functionality. These projects are designed to offer a unified user experience across all devices. We excel in developing applications that foster engagement, enhance performance, and align with diverse business objectives through intuitive design and sophisticated features
               </p>
             </div>
 

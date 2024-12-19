@@ -115,8 +115,7 @@ const MobileAppDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Design and develop robust mobile applications for iOS and Android..
           </p>
         </div>
 
@@ -125,8 +124,7 @@ const MobileAppDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Create user-friendly apps with seamless navigation and stunning interfaces.
           </p>
         </div>
 
@@ -135,8 +133,7 @@ const MobileAppDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Incorporate cutting-edge technologies for faster and smoother performance.
           </p>
         </div>
 
@@ -145,8 +142,7 @@ const MobileAppDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base mt-2">
-            Build a dashboard in <span className="font-bold">2 minutes</span>,
-            refresh on demand.
+          Ensure on-time delivery with a focus on quality and user satisfaction.
           </p>
         </div>
       </div>
