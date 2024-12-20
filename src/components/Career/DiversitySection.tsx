@@ -8,6 +8,7 @@ import image1 from "../../../public/assets/careerImages/Mask group.png";
 import image2 from "../../../public/assets/careerImages/thisisengineering-raeng-8Jw2WhafOOg-unsplash 1.png";
 import image3 from "../../../public/assets/careerImages/Mask group (1).png";
 import image4 from "../../../public/assets/careerImages/Mask group (2).png";
+import Link from 'next/link';
 
 const DiversitySection: FC = () => {
   // Define the images array directly inside the component
@@ -51,10 +52,14 @@ const DiversitySection: FC = () => {
             </div>
           </div>
 
-          <div className="bg-[#651FFF] rounded-2xl p-8 flex flex-col items-center justify-center text-white col-span-1 sm:col-span-2 md:col-span-1">
-            <Instagram className="w-12 h-12 mb-4" />
-            <p className="text-lg font-medium mb-2">Follow us on</p>
-            <p className="text-sm opacity-90">#IPPSIbrogueDeupload</p>
+         
+         <div className="bg-[#651FFF] rounded-2xl cursor-pointer p-8 flex flex-col items-center justify-center text-white col-span-1 sm:col-span-2 md:col-span-1">
+         <Link href="https://www.instagram.com/techcreatorco/" target="_blank" rel="noopener noreferrer">
+            <Instagram className="w-12 h-12 mb-4 mx-auto" />
+            <p className="text-lg font-medium text-center mb-2">Follow us on</p>
+            <p className="text-sm opacity-90 text-center">#IPPSIbrogueDeupload</p>
+         </Link>
+
           </div>
 
           <div className="col-span-1">

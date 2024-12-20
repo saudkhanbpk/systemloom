@@ -81,7 +81,7 @@ const ServicesSection: React.FC = () => {
       des:
         "Your software is ready for success with our Software Testing Services, designed to deliver comprehensive bug detection, advanced security protocols, and flawless performance evaluation."
           .split(" ")
-          .slice(0, 27)
+          .slice(0, 23)
           .join(" ") + "...",
       image: "/assets/icons/webdevicon.png",
       link: "/services/qa-testing",
@@ -150,7 +150,7 @@ const ServicesSection: React.FC = () => {
     },
     {
       id: 10,
-      title: "Social Media Marketing & Branding",
+      title: "Digital Marketing ",
       des:
         " We create good ads campaigns on Facebook, Instagram, LinkedIn, and Twitter to increase the reach of your brand. We focus on creating viral content, targeted ads, and communities. When paired with a solid branding strategy, we make sure your social presence hits home. From influencer collaborations to data-driven analytics, we empower social media platforms to be your leading tools in achieving growth and success."
           .split(" ")
@@ -186,7 +186,7 @@ const ServicesSection: React.FC = () => {
         {servicesArr.map((item) => (
           <div
             key={item.id}
-            className="flex justify-center h-auto w-[333px] mx-auto lg:mx-0 mb-14"
+            className="flex justify-center h-auto w-[333px] mx-auto lg:mx-0 mb-14 "
           >
             <Link href={item.link} passHref>
               <ServiceCard

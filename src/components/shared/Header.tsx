@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Menu, PhoneCall, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from 'framer-motion';
+
 import {
   FaHome,
   FaInfoCircle,
@@ -77,7 +79,7 @@ const Header: React.FC = () => {
         },
         { name: "QA Testing", href: "/services/qa-testing", icon: <FaCheck /> },
         {
-          name: "Social Media Marketing & Branding",
+          name: "Digital Marketing ",
           href: "/services/digital-marketing",
           icon: <FaBullhorn />,
         },
@@ -101,7 +103,15 @@ const Header: React.FC = () => {
   return (
     <nav className="text-white  z-20 w-full fixed bg-black  text-nowrap">
       <div className="md:px-9 px-2 ">
-        <div className="flex items-center justify-between h-16">
+        <motion.div
+         initial={{ opacity: 0, scale: 0.8 }}
+         animate={{ opacity: 1, scale: 1 }}
+         transition={{
+           duration: 1.2,       // Duration of the animation
+           ease: [0.6, -0.05, 0.01, 0.99], // Custom cubic-bezier easing for a smooth effect
+         }}
+        
+         className="flex items-center justify-between h-16">
           <div>
             <Link href="/">
               <div className="flex-shrink-0 flex justify-center gap-2 items-center w-[100px] md:w-full   ">
@@ -238,7 +248,8 @@ const Header: React.FC = () => {
               )}
             </button>
           </div>
-        </div>
+        </motion.div>
+
       </div>
 
       {isOpen && (

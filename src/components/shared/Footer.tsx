@@ -26,6 +26,7 @@ import { RootState } from "@/redux/store";
 import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png";
 import AppointmentSection from "./AppointmentSection";
 import { AiOutlineMail } from "react-icons/ai";
+import {motion} from "framer-motion"
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -229,13 +230,16 @@ const Footer: React.FC = () => {
                     required
                     className="text-black p-2 outline-none rounded-md "
                   />
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="bg-[#9A00FF] rounded-md p-2 w-fit"
-                  >
-                    {loading ? "Subscribing..." : "Subscribe"}
-                  </button>
+                 <motion.button
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  type="submit"
+  disabled={loading}
+  className="bg-[#9A00FF] text-white rounded-md p-2 w-fit"
+>
+  {loading ? "Subscribing..." : "Subscribe"}
+</motion.button>
+
                 </form>
               </div>
             </div>
