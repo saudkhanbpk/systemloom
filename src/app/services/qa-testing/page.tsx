@@ -101,7 +101,8 @@ const QATesting = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <div className='my-16 mt-28 flex flex-wrap justify-center gap-7 border-b  "'>
+      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 

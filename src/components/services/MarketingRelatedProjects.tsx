@@ -161,7 +161,7 @@ const MarketingRelatedProjects = () => {
   };
 
   if (projects.length === 0) {
-    return <div>Loading projects...</div>;
+    return <div className='text-center text-2xl font-bold text-red-500'>Loading projects...</div>;
   }
 
   return (
@@ -188,7 +188,7 @@ const MarketingRelatedProjects = () => {
                       <Image
                         src={project.projectScreenshot || "/path/to/fallback-image.jpg"}  // Provide a fallback image if projectScreenshot is undefined
                         alt={project.title}
-                        className="h-64 md:h-[300px] rounded-md  object-fill"
+                        className="h-64 md:h-[300px] rounded-md  object-cover"
                         width={500}
                         height={500}
                       />

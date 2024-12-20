@@ -3,9 +3,9 @@ import webDevelopmentImagehero from "../../../../public/assets/graphice design i
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
 import webimage1 from "../../../../public/assets/ServiceDetailsImages/webImage1.png";
-import webimage2 from "../../../../public/assets/ServiceDetailsImages/firstheading.webp";
-import webimage3 from "../../../../public/assets/ServiceDetailsImages/secondheading.webp";
-import webimage4 from "../../../../public/assets/ServiceDetailsImages/thirdHeading.webp";
+import webimage2 from "../../../../public/assets/ServiceDetailsImages/webserviceImage1.png";
+import webimage3 from "../../../../public/assets/ServiceDetailsImages/webserviceimage2.png";
+import webimage4 from "../../../../public/assets/ServiceDetailsImages/webserviceimage3.png";
 import webimage5 from "../../../../public/assets/ServiceDetailsImages/webimage5.png";
 
 // RelatedServices images
@@ -84,13 +84,10 @@ const WebDevelopment = () => {
         {/* Left Section */}
         <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  md:px-12  mt-20">
           <h1 className="text-3xl lg:text-5xl  font-bold">
-            Choose the perfect Web Development solution for your business
+          Empower your business with custom web development
           </h1>
           <p className="text-base lg:text-lg mt-3">
-            At TechCreator white label web development services are the perfect
-            solution for agencies looking to expand their offerings without the
-            added workload. We deliver high-quality, client-ready websites under
-            your brand, ensuring seamless collaboration and satisfaction.
+          Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like Healthcare, Real Estates, Restaurants, E-Commerce stores- that ensure seamless functionality and innovation.
           </p>
         </div>
 
@@ -125,7 +122,7 @@ const WebDevelopment = () => {
                 Bespoke Web Development Tailored to Your Vision
               </h1>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-                tand out from the crowd with{" "}
+                Stand out from the crowd with{" "}
                 <strong>bespoke web development</strong> crafted to meet your
                 specific needs. Our team of skilled developers creates custom
                 solutions that align with your brand and business goals,
@@ -139,7 +136,8 @@ const WebDevelopment = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <div className='my-16 mt-28 flex flex-wrap justify-center gap-7 border-b  "'>
+      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 

@@ -335,7 +335,7 @@ const Footer: React.FC = () => {
                     href="/login"
                     className="flex items-center gap-2 hover:text-[#9A00FF] "
                   >
-                    Login
+                    Admin
                   </Link>
                 </>
               )}

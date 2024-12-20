@@ -38,7 +38,7 @@ const AppDevRelatedProjects = () => {
   };
 
   if (projects.length === 0) {
-    return <div>Loading projects...</div>;
+    return <div className='text-center text-2xl font-bold text-red-500'>Loading projects...</div>;
   }
 
   return (
@@ -60,12 +60,12 @@ const AppDevRelatedProjects = () => {
               {filteredProjects.length > 0 ? (
                 <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
                   {filteredProjects.map((project) => (
-                    <div key={project._id} className="relative overflow-hidden group border-2 rounded-md">
+                    <div key={project._id} className="relative overflow-hidden group border-2  rounded-lg">
                       {/* Main Feature Image */}
                       <Image
                         src={project.projectScreenshot || "/path/to/fallback-image.jpg"}  // Provide a fallback image if projectScreenshot is undefined
                         alt={project.title}
-                        className="h-64 md:h-[300px] rounded-md  object-fill"
+                        className="h-64 md:h-[300px]  object-cover"
                         width={500}
                         height={500}
                       />
