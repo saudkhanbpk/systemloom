@@ -38,9 +38,9 @@ const Overview: React.FC = () => {
 
         {/* Text Section */}
         <div className="w-full py-12 md:py-16 px-6">
-          <h1 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-6">
+          <h2 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-6">
             About TechCreator
-          </h1>
+          </h2>
           <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8">
             TechCreator is a software company, passionate about crafting
             innovative solutions that help businesses thrive in an ever-evolving

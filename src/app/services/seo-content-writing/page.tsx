@@ -84,9 +84,9 @@ const SeoContentWriting = () => {
           </div>
           <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-3">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3">
                 Go-To Technical SEO Agency
-              </h1>
+              </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
                 As a trusted <strong>technical SEO agency,</strong>. we ensure
                 every piece of content is optimized for search engine success.
@@ -101,7 +101,7 @@ const SeoContentWriting = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
       <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -156,9 +156,9 @@ const SeoContentWriting = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Strategic Consulting for Better Visibility
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Beyond content creation, we offer{" "}
               <strong>SEO consulting services</strong> to help you craft a
@@ -175,9 +175,9 @@ const SeoContentWriting = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Optimization For Every Business Niche
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Our <strong>SEO content strategy</strong> focuses on natural
               keyword integration that aligns with search intent. By
@@ -208,9 +208,9 @@ const SeoContentWriting = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Enhance Authority with Technical SEO Expertise
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Combining <strong>SEO content writing services</strong> with
               technical SEO knowledge, we ensure that your website content not
@@ -228,9 +228,9 @@ const SeoContentWriting = () => {
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Results That Speak for Themselves
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-white webDevtext ">
               In a recent project, we partnered with an e-commerce platform to
               revamp their <strong>SEO content strategy,</strong> resulting in a

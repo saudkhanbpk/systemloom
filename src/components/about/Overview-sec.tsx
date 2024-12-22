@@ -9,9 +9,9 @@ const OverviewSec: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
         {/* Text Section */}
         <div className="w-full mb-6 mt-10 md:mb-12">
-          <h1 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-4">
+          <h2 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-4">
             CEO Message
-          </h1>
+          </h2>
           <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify">
             My name is <strong>Saud Khan,</strong> CEO of TecCreator.
           </p>

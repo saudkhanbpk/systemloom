@@ -54,9 +54,9 @@ function AboutSection() {
 
           {/* Text Content */}
           <div className="text-center md:text-left mx-auto">
-            <h1 className="text-[#9A00FF]  font-bold text-3xl md:text-[35px] leading-tight md:leading-[45px] mb-4">
+            <h2 className="text-[#9A00FF]  font-bold text-3xl md:text-[35px] leading-tight md:leading-[45px] mb-4">
             We Bring Maximum value to your business
-            </h1>
+            </h2>
             <p className="font-normal text-xl p-2 md:text-lg leading-7 md:leading-[36px]">
               TechCreator is a software development company helping businesses
               scale up their growth. Your potential customers will find you

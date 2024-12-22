@@ -84,9 +84,9 @@ const GraphicDesign = () => {
           </div>
           <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-3">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3">
                 Partner with One of the Top Graphic Design Companies
-              </h1>
+              </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
                 As one of the leading <strong>graphic design companies,</strong>{" "}
                 we provide professional services that enhance your brand’s
@@ -101,7 +101,7 @@ const GraphicDesign = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
       <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -156,9 +156,9 @@ const GraphicDesign = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Agency for Graphic Design Tailored to Your Brand
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               At TechCreator, we understand the importance of design diversity.
               Our expertise spans various{" "}
@@ -175,9 +175,9 @@ const GraphicDesign = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Custom Designs for Every Need
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               We offer a wide range of services, including branding,
               infographics, and digital marketing assets. With our{" "}
@@ -208,9 +208,9 @@ const GraphicDesign = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Brand with Strategic Visuals
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Effective design goes beyond aesthetics. Our designs are
               strategically crafted to enhance your brand’s visibility and
@@ -227,9 +227,9 @@ const GraphicDesign = () => {
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Recent Work: Redefining Mobile Solutions
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-white webDevtext ">
               Our recent projects include branding for a healthcare startup and
               social media graphics for a retail business. As one of the top{" "}

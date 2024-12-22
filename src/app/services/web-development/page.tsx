@@ -118,9 +118,9 @@ const WebDevelopment = () => {
           </div>
           <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
-              <h1 className="text-xl sm:text-3xl font-bold mb-3">
+              <h2 className="text-xl sm:text-3xl font-bold mb-3">
                 Bespoke Web Development Tailored to Your Vision
-              </h1>
+              </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
                 Stand out from the crowd with{" "}
                 <strong>bespoke web development</strong> crafted to meet your
@@ -136,7 +136,7 @@ const WebDevelopment = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
       <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -191,9 +191,9 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               Custom Web App Development for Dynamic Digital Solutions
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-gray-700">
               <strong>
                 We love working on fresh concepts, ideas and technologies that
@@ -214,9 +214,9 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               PHP Web Development Services for Robust Performance
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-gray-700">
               As experts in <strong>PHP web development services,</strong> we
               build scalable and secure websites that deliver exceptional
@@ -247,9 +247,9 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               Progressive Web App Development Company: Innovation at Its Best
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-gray-700 mt-3">
               <strong>Taste</strong> the future of web technology with our
               expertise as a{" "}
@@ -268,9 +268,9 @@ const WebDevelopment = () => {
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Web Development Services with Ongoing Support
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-white webDevtext ">
               Our commitment doesn’t end with the launch of your website or app.
               We provide comprehensive{" "}

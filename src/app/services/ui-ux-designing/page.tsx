@@ -83,9 +83,9 @@ const UIUXDesign = () => {
           </div>
           <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
-              <h1 className="text-xl sm:text-3xl font-bold mb-3">
+              <h2 className="text-xl sm:text-3xl font-bold mb-3">
                 Your Partner as a Top UI/UX Design Agency
-              </h1>
+              </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
                 Recognized as a top UI/UX design agency, we collaborate closely
                 with clients to craft designs that resonate with their audience.
@@ -100,7 +100,7 @@ const UIUXDesign = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
       <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -155,9 +155,9 @@ const UIUXDesign = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               Mobile UI/UX Design for On-the-Go Excellence
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-gray-700">
               In a mobile-first world, our expertise in mobile UI/UX design
               ensures your applications are optimized for smaller screens
@@ -173,9 +173,9 @@ const UIUXDesign = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               End-to-End UI/UX Solutions for Your Business Needs{" "}
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-gray-700">
               We provide comprehensive UI/UX design services, covering every
               step from ideation to implementation. Our goal is to deliver
@@ -205,9 +205,9 @@ const UIUXDesign = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               Customized UI/UX for Every Industry
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-gray-700">
               From startups to enterprises, our design solutions cater to
               diverse industries. Whether you need a mobile UI/UX design for an
@@ -224,9 +224,9 @@ const UIUXDesign = () => {
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Recent Work: Turning Ideas into Impactful Designs
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-white webDevtext ">
               Recently, we partnered with a healthcare startup to deliver a
               user-friendly mobile UI/UX design that improved patient

@@ -83,9 +83,9 @@ const Devops = () => {
           </div>
           <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
-              <h1 className="text-2xl sm:text-3xl font-bold mb-3">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3">
                 Partner with One of the Leading DevOps Companies
-              </h1>
+              </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
                 As one of the trusted DevOps companies, we deliver innovative
                 solutions designed to meet your business needs. From
@@ -100,7 +100,7 @@ const Devops = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
       <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -155,9 +155,9 @@ const Devops = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Transform Processes with DevOps Automation
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Our DevOps automation services eliminate manual tasks and
               streamline workflows, reducing errors and deployment times. We
@@ -174,9 +174,9 @@ const Devops = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Empowering Growth with Business{" "}
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Our business DevOps solutions are designed to align development
               practices with organizational goals. By enhancing collaboration
@@ -206,9 +206,9 @@ const Devops = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
               Get a Tailored Support
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Work with a dedicated DevOps consultant to implement strategies
               that cater to your unique challenges. Whether you need help with
@@ -225,9 +225,9 @@ const Devops = () => {
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Driving Efficiency with DevOps Automation
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-white webDevtext ">
               We recently partnered with a tech startup to implement DevOps
               automation, reducing their deployment time by 60%. Additionally,

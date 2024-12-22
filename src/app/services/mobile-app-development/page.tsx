@@ -89,9 +89,9 @@ const MobileAppDevelopment = () => {
           </div>
           <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-40">
-              <h1 className="text-xl sm:text-3xl font-bold mb-3">
+              <h2 className="text-xl sm:text-3xl font-bold mb-3">
                 Healthcare Mobile App Development Transforming Industries
-              </h1>
+              </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
                 As a trusted healthcare{" "}
                 <strong>mobile app development company,</strong> we design
@@ -109,7 +109,7 @@ const MobileAppDevelopment = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h1 className="text-center text-3xl font-bold mt-52">Why Choose Us</h1>
+      <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
       <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[300px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -164,9 +164,9 @@ const MobileAppDevelopment = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               Flutter Mobile App Development for High-Performance Solutions
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Our expertise in Flutter mobile app development enables us to
               deliver fast, reliable, and visually consistent apps for both iOS
@@ -183,9 +183,9 @@ const MobileAppDevelopment = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               Your Choice for Multi-Device Reach
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Our cross-platform mobile app development services enable
               businesses to reach a wider audience with a single solution. We
@@ -216,9 +216,9 @@ const MobileAppDevelopment = () => {
 
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h1 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
               Enhancing Efficiency while Optimizing Functionality
-            </h1>
+            </h2>
             <p className="text-base md:text-xl text-gray-700">
               Enterprise mobile app development company specializes in enhancing
               productivity and streamlining operations. We develop secure,
@@ -235,9 +235,9 @@ const MobileAppDevelopment = () => {
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Recent Work: Redefining Mobile Solutions
-            </h1>
+            </h2>
             <p className="text-base md:text-lg text-white webDevtext ">
               We recently collaborated with a leading startup to deliver a
               cross-platform mobile app development project, enabling them to

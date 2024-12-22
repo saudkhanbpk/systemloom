@@ -98,6 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <link rel="icon" href="/assets/icons/Logo.png" type="image/png" />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PHQXJH3N0Z"
