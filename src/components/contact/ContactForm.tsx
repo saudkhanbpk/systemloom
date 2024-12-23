@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true on submit
+    setLoading(true);
 
     try {
       const res = await axios.post(`${backend_url}/api/v1/contact/send`, formData, {

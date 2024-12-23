@@ -11,7 +11,6 @@ import image4 from "../../../public/assets/careerImages/Mask group (2).png";
 import Link from 'next/link';
 
 const DiversitySection: FC = () => {
-  // Define the images array directly inside the component
   const images = [
     { src: image, alt: "Team meeting" },
     { src: image1, alt: "Team collaboration" },

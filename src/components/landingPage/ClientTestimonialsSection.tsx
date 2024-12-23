@@ -14,7 +14,7 @@ interface TestimonialCardProps {
   image: string;
   rating: number;
   testimonial: string;
-  reviewScreenshot: string; // Add screenshot prop
+  reviewScreenshot: string; 
 }
 
 const cardVariants = {

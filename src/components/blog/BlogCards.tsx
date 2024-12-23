@@ -56,7 +56,7 @@ const BlogCards: React.FC = () => {
         <div className="container mb-10 mt-10 mx-auto cursor-pointer max-w-7xl px-12 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-3 gap-3 w-full">
           {currentBlogs.map((blog: any) => (
             <div key={blog._id} className="">
-              <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full h-auto sm:h-[430px]">
+              <div className="bg-white shadow-lg rounded-lg overflow-hidden w-[330px] sm:w-full h-auto sm:h-[430px]">
                 <Image
                   src={blog.image?.imageUrl || "/path/to/default-image.jpg"}
                   alt={blog.image?.altDescription || blog.title}

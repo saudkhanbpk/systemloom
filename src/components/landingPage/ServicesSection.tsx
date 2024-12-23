@@ -11,7 +11,7 @@ interface Service {
   des: string;
   image: string;
   link: string;
-  altText: string; // Added altText field
+  altText: string; 
 }
 
 const ServicesSection: React.FC = () => {

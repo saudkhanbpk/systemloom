@@ -12,8 +12,8 @@ const ConfirmationPage: React.FC = () => {
           Thank You!
         </h2>
         <p className="text-lg text-gray-200 text-center max-w-lg">
-          Your request has been submitted successfully. We appreciate your effort 
-          and will get back to you as soon as possible.
+        Your request has been submitted successfully. We appreciate your effort 
+        and will get back to you as soon as possible. Please check your email; we have sent you a confirmation at your Gmail address.
         </p>
       </div>
 

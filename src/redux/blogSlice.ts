@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Blog {
-    _id: string;
+  slug: string;
     image: string | { imageUrl: string };
     content: string;
     description: string;
@@ -31,7 +31,7 @@ const BlogSlice = createSlice({
       state.blogs = action.payload;
     },
     deleteblog(state, action: PayloadAction<string>) {
-      state.blogs = state.blogs.filter(blg => blg._id !== action.payload);
+      state.blogs = state.blogs.filter((blog) => blog.slug !== action.payload);
     },
   },
 });

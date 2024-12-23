@@ -103,7 +103,7 @@ const QATesting = () => {
       {/* FeaturesList section start */}
       <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
       <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
-        <div className="border-r  w-[300px] p-3">
+        <div className="border-r  w-[280px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 
           {/* Text */}
@@ -112,7 +112,7 @@ const QATesting = () => {
           </p>
         </div>
 
-        <div className="border-r w-[300px] p-3">
+        <div className="border-r w-[280px] p-3">
           <FileText className="w-6 h-6 text-purple-500 flex-shrink-0" />
 
           {/* Text */}
@@ -121,7 +121,7 @@ const QATesting = () => {
           </p>
         </div>
 
-        <div className="border-r w-[300px] p-3">
+        <div className="border-r w-[280px] p-3">
           <Zap className="w-6 h-6 text-yellow-500 flex-shrink-0" />
 
           {/* Text */}
@@ -130,7 +130,7 @@ const QATesting = () => {
           </p>
         </div>
 
-        <div className=" w-[300px] p-3">
+        <div className=" w-[280px] p-3">
           <Clock className="w-6 h-6 text-blue-500 flex-shrink-0" />
 
           {/* Text */}

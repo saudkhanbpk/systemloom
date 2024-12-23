@@ -14,9 +14,6 @@ const CreateBlogForm = () => {
 
  
 
-console.log("Query Parameters:", searchParams);
-console.log("Slug:", slug);
-
   const generateSlug = (title: string): string => {
     return title
       .toLowerCase()
@@ -25,7 +22,7 @@ console.log("Slug:", slug);
       .replace(/[^\w-]+/g, ""); 
   };
   
-
+  const [isEditMode, setIsEditMode] = useState(false);
   const [formData, setFormData] = useState({
     storyContent: "",
     altDescription: "",
@@ -100,11 +97,11 @@ console.log("Slug:", slug);
   
   useEffect(() => {
     if (slug) {
-      // Fetch blog data if blogId is provided
+      setIsEditMode(true);
       const fetchBlogData = async () => {
         try {
           const res = await axios.get(`${backend_url}/api/v1/blogs/get/${slug}`);
-          console.log("single project data", res);
+          // console.log("single project data", res);
           if (res.data.success) {
             setFormData({
               storyContent: res.data.blog.content,
@@ -124,6 +121,8 @@ console.log("Slug:", slug);
         }
       };
       fetchBlogData();
+    }else {
+      setIsEditMode(false);
     }
   }, [slug]);
   
@@ -148,7 +147,7 @@ console.log("Slug:", slug);
   
     try {
       let res;
-      if (slug) {
+      if (isEditMode) {
         // Update the blog if blogId exists
         res = await axios.put(`${backend_url}/api/v1/blogs/update/${slug}`, formDataToSubmit, {
           withCredentials: true,
@@ -316,7 +315,7 @@ console.log("Slug:", slug);
             type="submit"
             className="bg-purple-600 text-white py-2 px-6 rounded-lg hover:bg-purple-700 focus:outline-none"
           >
-            {blogId ? "Update Blog" : "Create Blog"}
+            {slug ? "Update Blog" : "Create Blog"}
           </button>
         </div>
       </form>

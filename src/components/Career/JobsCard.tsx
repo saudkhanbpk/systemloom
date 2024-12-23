@@ -7,7 +7,7 @@ import { RootState } from "@/redux/store";
 import { useState } from "react";
 import useGetAllJobs from "@/hooks/useGetAllJobs";
 
-// JobCard component with typed props
+
 interface JobCardProps {
   category: string;
   title: string;
@@ -26,7 +26,6 @@ const JobCard = ({
   company = "Techcreator",
   timeAgo = new Date(),
 }: JobCardProps) => {
-  // If timeAgo is a string, convert it to a Date object
   const timeAgoFormatted =
     typeof timeAgo === "string" ? new Date(timeAgo) : timeAgo;
   const timeDistance = formatDistanceToNow(timeAgoFormatted, {
@@ -76,11 +75,8 @@ const JobCard = ({
 // JobsCard component to display the list of jobs
 const JobsCard = () => {
 useGetAllJobs()
-  // Correct useSelector usage
   const { allJobs } = useSelector((state: RootState) => state.job);
-  // console.log(allJobs);
 
-  // State for modal visibility and selected job
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
 
