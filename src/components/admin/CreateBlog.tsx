@@ -16,10 +16,14 @@ const CreateBlogForm = () => {
 
   const generateSlug = (title: string): string => {
     return title
+      // .toLowerCase()
+      // .trim()
+      // .replace(/\s+/g, "-") 
+      // .replace(/[^\w-]+/g, ""); 
+
       .toLowerCase()
-      .trim()
-      .replace(/\s+/g, "-") 
-      .replace(/[^\w-]+/g, ""); 
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
   };
   
   const [isEditMode, setIsEditMode] = useState(false);
