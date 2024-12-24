@@ -57,7 +57,7 @@ const HealthcareProject: React.FC = () => {
   return (
     <div>
       {/* Hero section */}
-      <div className="relative bg-gray-900 text-white h-[500px] md:min-h-screen">
+      <div className="relative bg-gray-900 text-white h-auto md:min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
@@ -71,9 +71,9 @@ const HealthcareProject: React.FC = () => {
         </div>
 
         {/* Content Wrapper */}
-        <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 h-full flex items-center">
+        <div className="relative md:max-w-[1440px] w-full mx-auto md:pt-0 pt-24 md:pb-0 pb-10 px-2 sm:px-6 md:px-8 h-full flex items-center">
           <div className="w-full text-center md:max-w-4xl flex flex-col justify-center gap-5 md:mx-auto">
-            <h1 className="font-semibold text-[32px] sm:text-[48px] md:text-[58px] font-poppins leading-[1.2] mb-0">
+            <h1 className="font-semibold text-[22px] sm:text-[48px] md:text-[58px] font-poppins leading-[1.2] mb-0">
               Custom HealthCare Software Development Solutions & Services 
             </h1>
             <p className="md:text-xl">

@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
               </a>
-              <a
+              {/* <a
                 href="https://www.upwork.com/agencies/1479726519577280512/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -185,7 +185,7 @@ const Footer: React.FC = () => {
                   icon={faBriefcase}
                   className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
-              </a>
+              </a> */}
               {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FontAwesomeIcon icon={faTwitter} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
             </a> */}
@@ -246,9 +246,9 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-col  gap-4">
-            <h1 className="text-base  md:text-lg font-semibold">
+            <h2 className="text-base  md:text-lg font-semibold">
               Industries We Serve
-            </h1>
+            </h2>
             <ul className="flex flex-col gap-4 text-sm">
               <Link
                 href="/healthcare-projects"
@@ -333,7 +333,7 @@ const Footer: React.FC = () => {
                 <>
                   <Link
                     href="/login"
-                    className="flex items-center gap-2 hover:text-[#9A00FF] "
+                    className="flex items-center text-sm gap-2 hover:text-[#9A00FF] "
                   >
                     Admin
                   </Link>

@@ -36,9 +36,10 @@ const TeamScalingSection = () => {
               <Image
                 src={CeoImage}
                 alt="ceo-image"
-                width={850}
-                height={850}
-                className="w-12 h-12 rounded-full mr-3 object-fill"
+                width={70}
+                height={70}
+                quality={100}
+                className="w-12 h-12 rounded-full mr-3 object-cover"
               />
 
               <div>
@@ -91,9 +92,9 @@ const TeamScalingSection = () => {
               <Image
                 src={projectManagerImage}
                 alt="ProjectManager-image"
-                width={850}
-                height={850}
-                className="w-12 h-12 rounded-full mr-3 object-fill"
+                width={70}
+                height={70}
+                className="w-12 h-12 rounded-full mr-3 object-cover"
               />
               <div>
                 <p className="font-normal text-base">Hamdan Khan</p>
@@ -128,9 +129,9 @@ const TeamScalingSection = () => {
               <Image
                 src={AdminOfficerImage}
                 alt="AdminOfficer-image"
-                width={850}
-                height={850}
-                className="w-10 h-10 rounded-full mr-3 object-fill"
+                width={70}
+                height={70}
+                className="w-10 h-10 rounded-full mr-3 object-cover"
               />
               <div>
                 <p className="font-normal text-base">Aamad Khan</p>

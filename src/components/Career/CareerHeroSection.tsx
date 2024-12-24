@@ -200,7 +200,7 @@ const CareerHeroSection: FC = () => {
                   required
                 />
               </div>
-              <div className="flex justify-end">
+              <div className="flex md:justify-end justify-start">
                 <button
                   type="button"
                   className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg mr-2"

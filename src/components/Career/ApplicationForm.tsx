@@ -287,7 +287,7 @@ const JobApplicationForm: React.FC = () => {
   </div>
 
   {/* Submit Button */}
-  <div className="flex justify-center mt-6">
+  <div className="flex md:justify-center justify-start mt-6">
     <button
       type="submit"
       className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-200"

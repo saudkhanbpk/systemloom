@@ -113,7 +113,7 @@ const router = useRouter()
                     </div>
                   </div>
                 </div>
-                <div className="mt-4 flex justify-end p-3">
+                <div className="mt-4 flex md:justify-end justify-start p-3">
                   <button
                     onClick={onClose}
                     className="mr-4 px-4 py-2 text-sm text-white bg-red-500 rounded"
