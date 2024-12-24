@@ -84,9 +84,9 @@ const PricingCards: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-2 lg:px-20 ">
           <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
-            <h1 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
+            <h2 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
               Affordable Solutions Without Sacrificing Quality
-            </h1>
+            </h2>
             <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
               Our pricing is structured to suit diverse business needs. From
               basic plans to premium solutions, we ensure that every client gets
@@ -120,9 +120,9 @@ const PricingCards: React.FC = () => {
             </div>
           </div>
           <div className="md:w-[600px]  ">
-            <h1 className="font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
+            <h2 className="font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
               Flexible Packages for All Businesses
-            </h1>
+            </h2>
             <p className="text-xl mt-4">
               We offer customizable pricing plans to align with your goals.
               Whether you need comprehensive solutions or specific services, our
@@ -137,9 +137,9 @@ const PricingCards: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-2 lg:px-20">
           <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
-            <h1 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
+            <h2 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
               Why Choose TechCreator for Your Next Project?
-            </h1>
+            </h2>
             <p className=" font-inter font-normal text-lg md:text-[20px] mt-4 md:mt-0">
               With TechCreator, you get more than just a service—you get a
               partner committed to your success. Our pricing reflects our

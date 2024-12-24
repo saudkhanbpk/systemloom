@@ -88,9 +88,9 @@ const PricingForm: React.FC = () => {
       <div className="flex flex-col md:flex-row gap-6 justify-between max-w-7xl md:px-7 mx-auto">
         {/* Left Section */}
         <div className="text-white flex md:mx-0 mx-auto flex-col mb-6 lg:mb-0">
-          <h1 className="text-4xl lg:text-6xl font-bold leading-snug">
+          <h2 className="text-4xl lg:text-6xl font-bold leading-snug">
             Share your <br /> requirements <br /> with us
-          </h1>
+          </h2>
           <p className="text-lg lg:text-xl mt-2">By filling this simple form</p>
         </div>
 

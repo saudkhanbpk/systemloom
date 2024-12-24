@@ -8,9 +8,9 @@ const ConfirmationPage: React.FC = () => {
       {/* Icon and Title Section */}
       <div className="flex flex-col items-center space-y-4">
         <FaCheckCircle className="text-6xl text-green-400 animate-bounce" />
-        <h2 className="text-4xl font-extrabold tracking-wide text-center">
+        <h1 className="text-4xl font-extrabold tracking-wide text-center">
           Thank You!
-        </h2>
+        </h1>
         <p className="text-lg text-gray-200 text-center max-w-lg">
         Your request has been submitted successfully. We appreciate your effort 
         and will get back to you as soon as possible. Please check your email; we have sent you a confirmation at your Gmail address.

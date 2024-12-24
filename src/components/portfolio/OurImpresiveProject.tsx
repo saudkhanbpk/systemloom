@@ -13,9 +13,9 @@ const OurImpressiveProject = () => {
     <div className="my-20 px-4">
       {/* Heading */}
       <div className="text-center">
-        <h1 className="text-2xl md:text-4xl font-bold">
+        <h2 className="text-2xl md:text-4xl font-bold">
           Our <span className="text-[#9A00FF]">Impressive</span> Projects
-        </h1>
+        </h2>
         <p className="text-gray-500 mt-4">
           Explore some of our outstanding projects that demonstrate innovation
           and excellence.
@@ -56,14 +56,14 @@ const OurImpressiveProject = () => {
             {/* Title with Background */}
             {project.link ? (
               <Link href={project.link}>
-                <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
+                <h2 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
                   {project.title}
-                </h1>
+                </h2>
               </Link>
             ) : (
-              <h1 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
+              <h2 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
                 {project.title}
-              </h1>
+              </h2>
             )}
           </div>
         ))}

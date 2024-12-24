@@ -99,8 +99,8 @@ const projectManagement = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h2 className="text-center text-3xl font-bold mt-52">Why Choose Us</h2>
-      <div className='my-16 mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
+      <h2 className="text-center text-3xl font-bold md:mt-52">Why Choose Us</h2>
+      <div className='my-16 md:mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[280px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 

@@ -18,9 +18,9 @@ const PortfolioSection = () => {
 
       {/* Text Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-center lg:mt-24 mt-6 space-y-6 px-6">
-        <h1 className="text-3xl md:text-3xl font-bold text-gray-900">
+        <h2 className="text-3xl md:text-3xl font-bold text-gray-900">
         With TechCreator, Make a lasting impression of your Brand
-        </h1>
+        </h2>
         <p className="text-gray-700 text-lg leading-relaxed">
         Ready to take your business to the next level? Join the list of satisfied clients showcased in our portfolio. Contact TechCreator today and let’s turn your vision into reality. From intuitive mobile apps to dynamic web platforms, our portfolio showcases a wide range of successful projects. In transforming ideas into impactful realities, we are your partner with a talented team dedicated to quality and innovation.
         </p>

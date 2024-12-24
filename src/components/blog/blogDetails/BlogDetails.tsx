@@ -49,9 +49,9 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
     <div className="container mx-auto pt-12 px-4 md:px-16 lg:px-24 my-8 ">
       {/* Title Section */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800">
           {post.title}
-        </h1>
+        </h2>
       </div>
 
       {/* Post Meta Info */}
@@ -101,7 +101,7 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
     </div>
 
 <div className="">
-<h1 className="text-center text-3xl font-bold ">Related Blogs</h1>
+<h2 className="text-center text-3xl font-bold ">Related Blogs</h2>
 <div>
 <RelatedBlog excludeBlogId={post._id} />
 </div>

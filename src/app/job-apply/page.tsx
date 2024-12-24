@@ -15,7 +15,7 @@ const Page = () => {
       {/* Form Section */}
       <div className="w-full  flex md:flex-row flex-col p-4 justify-around  ">
         <div className=' mt-16 flex flex-col items-center'>
-          <h1 className='text-3xl font-bold mb-4'>Apply for job</h1>
+          <h2 className='text-3xl font-bold mb-4'>Apply for job</h2>
           <p className='text-lg'>Send us your CV by filling the form</p>
         </div>
         <JobApplicationForm />
