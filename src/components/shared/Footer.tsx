@@ -214,7 +214,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="mt-6">
-              <h1 className="text-2xl font-bold">Subscribe</h1>
+              <h2 className="text-2xl font-bold">Subscribe</h2>
               <p className="mt-2 mb-2">Stay updated with the latest in tech.</p>
               <div className="flex flex-col gap-2">
                 <form
