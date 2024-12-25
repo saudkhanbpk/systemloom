@@ -14,6 +14,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import SoftwareMaintenanceRelatedProjects from "@/components/services/SoftwareMaintenanceRelatedProjects";
 import Head from "next/head";
+import Buttons from "@/components/services/Buttons";
 
 const SoftwareMaintenance = () => {
   const services = [
@@ -53,6 +54,7 @@ const SoftwareMaintenance = () => {
             performance optimization, we ensure your software stays updated,
             secure, and aligned with your evolving business needs.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}

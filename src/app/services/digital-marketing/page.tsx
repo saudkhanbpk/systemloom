@@ -14,6 +14,7 @@ import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import MarketingRelatedProjects from "@/components/services/MarketingRelatedProjects";
 import Head from "next/head";
+import Buttons from "@/components/services/Buttons";
 
 const DigitalMarketing = () => {
   const services = [
@@ -54,6 +55,7 @@ const DigitalMarketing = () => {
             result-driven campaigns, our team’s expertise ensures your online
             success.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}

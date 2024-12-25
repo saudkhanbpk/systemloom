@@ -14,6 +14,7 @@ import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Head from "next/head";
 import UiUxDesigningRelatedProjects from "@/components/services/UiUxDesignRelatedProjects";
+import Buttons from "@/components/services/Buttons";
 
 const UIUXDesign = () => {
   const services = [
@@ -54,6 +55,7 @@ const UIUXDesign = () => {
             ensuring your platform stands out in a competitive digital
             landscape.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}

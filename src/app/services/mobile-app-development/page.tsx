@@ -15,6 +15,7 @@ import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Head from "next/head";
 import AppDevRelatedProjects from "@/components/services/AppDevRelatedProjects";
+import Buttons from "@/components/services/Buttons";
 
 const MobileAppDevelopment = () => {
   const services = [
@@ -60,6 +61,7 @@ const MobileAppDevelopment = () => {
             appealing apps that meet your customer complex needs while
             delivering exceptional user experiences.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}

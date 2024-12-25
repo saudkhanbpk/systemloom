@@ -14,6 +14,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import DevopsRelatedProjects from "@/components/services/DevopsRelatedProjects";
 import Head from "next/head";
+import Buttons from "@/components/services/Buttons";
 
 const Devops = () => {
   const services = [
@@ -54,6 +55,7 @@ const Devops = () => {
             implement tailored solutions to enhance efficiency, scalability, and
             collaboration across teams.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}

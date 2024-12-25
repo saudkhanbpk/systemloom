@@ -14,6 +14,7 @@ import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import GraphicDesigningRelatedProjects from "@/components/services/GraphicDesignRelatedProjects";
 import Head from "next/head";
+import Buttons from "@/components/services/Buttons";
 
 const GraphicDesign = () => {
   const services = [
@@ -55,6 +56,7 @@ const GraphicDesign = () => {
             materials, our designs are crafted to communicate your brand's
             message effectively and captivate your audience.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}

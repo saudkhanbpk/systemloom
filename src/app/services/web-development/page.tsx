@@ -14,6 +14,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Head from "next/head";
 import WebDevRelatedProjects from "@/components/services/WebDevRelatedProjects";
+import Buttons from "@/components/services/Buttons";
 
 const WebDevelopment = () => {
   // const services = [
@@ -89,6 +90,8 @@ const WebDevelopment = () => {
           <p className="text-base lg:text-lg mt-3">
           Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like Healthcare, Real Estates, Restaurants, E-Commerce stores- that ensure seamless functionality and innovation.
           </p>
+          <Buttons/>
+          
         </div>
 
         {/* Right Section */}

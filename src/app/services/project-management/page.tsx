@@ -14,6 +14,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import ProjectManagementRelatedProjects from "@/components/services/ProjectManagementRelatedProjects";
 import Head from "next/head";
+import Buttons from "@/components/services/Buttons";
 
 const projectManagement = () => {
   const services = [
@@ -53,6 +54,7 @@ const projectManagement = () => {
             team focuses on aligning project objectives with your business
             goals, providing clarity, structure, and seamless execution.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}

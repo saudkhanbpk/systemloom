@@ -17,6 +17,7 @@ import illustrationDesignImage from "../../../../public/assets/relatedServices/F
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import QaTestingRelatedProjects from "@/components/services/QATestingRelatedProjects";
 import Head from "next/head";
+import Buttons from "@/components/services/Buttons";
 
 const QATesting = () => {
   const services = [
@@ -56,6 +57,7 @@ const QATesting = () => {
             improving functionality, we help businesses deliver top-quality
             applications that meet user expectations.
           </p>
+          <Buttons/>
         </div>
 
         {/* Right Section */}
