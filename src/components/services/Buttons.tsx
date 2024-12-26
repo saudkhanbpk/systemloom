@@ -1,6 +1,9 @@
 "use client"
 import React from 'react'
 import { motion } from "framer-motion"
+import { AiOutlineCalendar } from 'react-icons/ai';
+import { FaWhatsapp } from "react-icons/fa";
+
 
 const Buttons = () => {
   const handleStrategyClick = () => {
@@ -18,9 +21,9 @@ const Buttons = () => {
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className='bg-purple-700 p-2 px-3 rounded-full text-white'
+        className='bg-purple-700 p-2  rounded-full text-white'
         onClick={handleStrategyClick}>
-        Schedule Free Strategy Call
+        <AiOutlineCalendar size={30}/>
       </motion.button>
       
       <motion.button 
@@ -28,9 +31,9 @@ const Buttons = () => {
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className='bg-green-600 p-2 px-3 rounded-full text-white'
+        className='bg-green-600 p-2  rounded-full text-white'
         onClick={handleWhatsappClick}>
-        Whatsapp
+        <FaWhatsapp size={30}/>
       </motion.button>
     </div>
   )

@@ -15,6 +15,7 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Head from "next/head";
 import WebDevRelatedProjects from "@/components/services/WebDevRelatedProjects";
 import Buttons from "@/components/services/Buttons";
+import Link from "next/link";
 
 const WebDevelopment = () => {
   // const services = [
@@ -62,18 +63,21 @@ const WebDevelopment = () => {
       description:
         "Building intuitive interfaces that provide a seamless promised user experience.",
       icon: webDesignImage,
+      link: "/services/ui-ux-designing",
     },
     {
       title: "SEO & Content Writing",
       description:
         "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
       icon: motionDesignImage,
+      link: "/services/seo-content-writing",
     },
     {
       title: "Graphic Designing",
       description:
         "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
       icon: illustrationDesignImage,
+      link: "/services/graphic-designing",
     },
   ];
 
@@ -218,14 +222,10 @@ const WebDevelopment = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
-              PHP Web Development Services for Robust Performance
+            MERN & MEAN Web Development Services for High Performance
             </h2>
             <p className="text-base md:text-lg text-gray-700">
-              As experts in <strong>PHP web development services,</strong> we
-              build scalable and secure websites that deliver exceptional
-              performance. Whether you need a content-rich website, an
-              e-commerce platform, or a web application, our developers leverage
-              the flexibility of PHP to meet your demands.
+            Being a specialist in <strong>MERN and MEAN web development services,</strong> we build scalable, secure, and high-performance websites based on your business needs. No matter if your need is a content-heavy website, a feature-rich e-commerce platform, or an advanced web application, our developers harness the power and flexibility of MERN (MongoDB, Express, React, Node.js) and MEAN (MongoDB, Express, Angular, Node.js) to provide exemplary solutions. 
             </p>
           </div>
           <Image
@@ -251,15 +251,10 @@ const WebDevelopment = () => {
           {/* Text Section */}
           <div className="w-full md:w-[40vw] text-center md:text-left">
             <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
-              Progressive Web App Development Company: Innovation at Its Best
+            React Native Development Services for Cross-Platform Excellence
             </h2>
             <p className="text-base md:text-lg text-gray-700 mt-3">
-              <strong>Taste</strong> the future of web technology with our
-              expertise as a{" "}
-              <strong>progressive web app development company.</strong> We
-              create applications that combine the best of web and mobile
-              experiences, ensuring fast loading times, offline functionality,
-              and seamless user interaction across all devices.
+            By means of <strong>React Native development service experts,</strong> we built cross-platform mobile applications that provide native-like experience on iOS and Android. To build high-performing and cost-effective mobile solutions, our developers use the power of React Native for building everything-from feature-rich business applications, dynamic e-commerce solutions to interactive social platforms. 
             </p>
           </div>
         </div>
@@ -302,36 +297,38 @@ const WebDevelopment = () => {
       {/* RecentWorks section end */}
 
       {/* RelatedServices section start */}
-      <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
-          Related Services
-        </h2>
+      <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0 py-12 sm:py-16">
+  <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
+    Related Services
+  </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 justify-items-center">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative p-6 bg-white w-full max-w-[350px] h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="absolute -top-10 left-6 p-3 rounded-lg">
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={70}
-                  height={70}
-                  className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px]"
-                />
-              </div>
-              <div className="mt-8 sm:mt-12">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
-              </div>
-            </div>
-          ))}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 justify-items-center">
+    {services.map((service, index) => (
+      <Link 
+        href={service.link} 
+        key={index} 
+        className="relative p-6 bg-white w-full max-w-[350px] h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
+      >
+        <div className="absolute -top-10 left-6 p-3 rounded-lg">
+          <Image
+            src={service.icon}
+            alt={service.title}
+            width={70}
+            height={70}
+            className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px]"
+          />
         </div>
-      </div>
+        <div className="mt-8 sm:mt-12">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            {service.title}
+          </h3>
+          <p className="text-gray-600 text-sm">{service.description}</p>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
+
       {/* RelatedServices section end */}
     </div>
   );
