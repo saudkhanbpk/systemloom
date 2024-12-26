@@ -295,7 +295,6 @@ const Footer: React.FC = () => {
               {[
                 "Home",
                 "About",
-                "Services",
                 "Contact",
                 "Blog",
                 "Pricing",

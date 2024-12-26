@@ -15,6 +15,7 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import ProjectManagementRelatedProjects from "@/components/services/ProjectManagementRelatedProjects";
 import Head from "next/head";
 import Buttons from "@/components/services/Buttons";
+import Link from "next/link";
 
 const projectManagement = () => {
   const services = [
@@ -23,18 +24,21 @@ const projectManagement = () => {
       description:
         "Streamlining your development pipeline for guided efficiency with automation to allow for automated daily deployment.",
       icon: developmentDesignImage,
+      link: "/services/devops",
     },
     {
       title: "Software Maintenance",
       description:
         "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
       icon: motionDesignImage,
+      link: "/services/software-maintenance",
     },
     {
       title: "QA Testing",
       description:
         "Having exhaustive testing done assures your software has no errors and delivers great performance to the customer.",
       icon: illustrationDesignImage,
+      link: "/services/qa-testing",
     },
   ];
 
@@ -255,36 +259,37 @@ const projectManagement = () => {
       {/* RecentWorks section end */}
 
       {/* RelatedServices section start */}
-      <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0  py-12 sm:py-16  ">
-        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 ">
-          Related Services
-        </h2>
+      <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0 py-12 sm:py-16">
+  <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
+    Related Services
+  </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 justify-items-center">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative p-6 bg-white w-full max-w-[350px] h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="absolute -top-10 left-6 p-3 rounded-lg">
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={70}
-                  height={70}
-                  className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px]"
-                />
-              </div>
-              <div className="mt-8 sm:mt-12">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
-              </div>
-            </div>
-          ))}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 justify-items-center">
+    {services.map((service, index) => (
+      <Link 
+        href={service.link} 
+        key={index} 
+        className="relative p-6 bg-white w-full max-w-[350px] h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
+      >
+        <div className="absolute -top-10 left-6 p-3 rounded-lg">
+          <Image
+            src={service.icon}
+            alt={service.title}
+            width={70}
+            height={70}
+            className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px]"
+          />
         </div>
-      </div>
+        <div className="mt-8 sm:mt-12">
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            {service.title}
+          </h3>
+          <p className="text-gray-600 text-sm">{service.description}</p>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
       {/* RelatedServices section end */}
     </div>
   );
