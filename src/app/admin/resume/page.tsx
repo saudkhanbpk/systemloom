@@ -6,6 +6,7 @@ import AdminLayout from '@/components/shared/AdminLayout';
 import axios from 'axios';
 import { backend_url } from '@/newLayout';
 import { toast } from 'react-toastify';
+import Link from 'next/link';
 
 // Type definition for Resume data
 interface Resume {
@@ -124,7 +125,16 @@ const Page = () => {
                     <td className="border p-2 text-nowrap">{row.email}</td>
                     <td className="border p-2 text-nowrap">{row.phoneNumber}</td>
                     <td className="border p-2 text-nowrap">{row.jobField}</td>
-                    <td className="border p-2">{row.professionalUrl}</td>
+                    <td className="border p-2">
+  <Link 
+    href={row.professionalUrl} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-blue-500 hover:underline"
+  >
+    {row.professionalUrl}
+  </Link>
+</td>
                     <td className="border p-2 text-nowrap">
                       <a href={row.resume} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                         {row.originalFileName}
