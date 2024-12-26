@@ -14,6 +14,7 @@ const CareerHeroSection: FC = () => {
     name: "",
     email: "",
     phoneNumber: "",
+    location: "",
     jobField: "",
     professionalUrl: "",
     resume: null as File | null,
@@ -36,6 +37,7 @@ const CareerHeroSection: FC = () => {
     formDataToSend.append("name", formData.name);
     formDataToSend.append("email", formData.email);
     formDataToSend.append("phoneNumber", formData.phoneNumber);
+    formDataToSend.append("location", formData.location);
     formDataToSend.append("jobField", formData.jobField);
     formDataToSend.append("professionalUrl", formData.professionalUrl);
     if (formData.resume) {
@@ -55,13 +57,14 @@ const CareerHeroSection: FC = () => {
           withCredentials: true,
         }
       );
-
+// console.log("resume",res)
       if (res.data.success) {
         toast.success(res.data.message);
         setFormData({
           name: "",
           email: "",
           phoneNumber: "",
+          location: "",
           jobField: "",
           professionalUrl: "",
           resume: null,
@@ -121,14 +124,15 @@ const CareerHeroSection: FC = () => {
       {/* Dialog */}
       {isDialogOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center backdrop-blur-md p-4 sm:p-6 z-50"
+        className="absolute inset-0 mt-2  flex items-center justify-center  p-4 sm:p-6 z-50 overflow-y-auto"
+
           onClick={handleDialogClose}
         >
           <div
-            className="text-white p-6 sm:w-[400px] md:w-[600px] max-w-full relative z-50 h-fit w-full bg-white rounded-md"
+            className="text-white px-2 pb-2 sm:w-[400px] md:w-[600px] max-w-full relative z-50 h-fit w-full bg-white rounded-md"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-2xl font-semibold mb-4">Submit Your Resume</h2>
+            <h2 className="text-2xl font-semibold ">Submit Your Resume</h2>
 
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
@@ -167,6 +171,19 @@ const CareerHeroSection: FC = () => {
                   required
                 />
               </div>
+              <div className="mb-4">
+  <label className="block text-black">Location</label>
+  <input
+    type="text" 
+    name="location" 
+    value={formData.location}
+    onChange={handleChange}
+    className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black outline-none"
+    placeholder="Enter your location (Country & City)" 
+    required
+  />
+</div>
+
               <div className="mb-4">
                 <label className="block text-black">Field</label>
                 <input

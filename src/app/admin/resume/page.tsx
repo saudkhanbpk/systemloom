@@ -14,6 +14,7 @@ interface Resume {
   name: string;
   email: string;
   phoneNumber: string;
+  location: String;
   jobField: string;
   professionalUrl: string;
   resume: string;
@@ -21,7 +22,7 @@ interface Resume {
 }
 
 const Page = () => {
-  const rowsPerPage = 5;
+  const rowsPerPage = 12;
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [resumes, setResumes] = useState<Resume[]>([]);
@@ -43,14 +44,18 @@ const Page = () => {
   }, []);
 
   // Filtering resumes based on search term
-  const filteredData = resumes.filter((item) =>
-    (item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.phoneNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.jobField.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.professionalUrl.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    (item.originalFileName ? item.originalFileName.toLowerCase() : '').includes(searchTerm.toLowerCase())) // Fallback value
-  );
+  const filteredData = resumes.filter((item) => {
+    const searchTermLower = searchTerm.toLowerCase(); // Convert searchTerm to lowercase once
+    return (
+      (item.name?.toLowerCase() || '').includes(searchTermLower) ||
+      (item.email?.toLowerCase() || '').includes(searchTermLower) ||
+      (item.phoneNumber?.toLowerCase() || '').includes(searchTermLower) ||
+      (item.location?.toLowerCase() || '').includes(searchTermLower) ||
+      (item.jobField?.toLowerCase() || '').includes(searchTermLower) ||
+      (item.professionalUrl?.toLowerCase() || '').includes(searchTermLower) ||
+      (item.originalFileName?.toLowerCase() || '').includes(searchTermLower)
+    );
+  });
   
 
   // Pagination logic
@@ -63,7 +68,6 @@ const Page = () => {
       const res = await axios.delete(`${backend_url}/api/v1/resume/delete/${id}`);
       if (res.data.success) {
         toast.success(res.data.message);
-        // Optionally, update the state to remove the deleted resume from the UI
         setResumes(resumes.filter((resume) => resume._id !== id));
       }
     } catch (error: any) {
@@ -95,7 +99,7 @@ const Page = () => {
             <div className="relative flex items-center w-full max-w-xs">
               <input
                 type="text"
-                placeholder="Search resume..."
+                placeholder="Search by name, location, or field..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-2 pl-10 border-2 border-black rounded-md focus:outline-none"
@@ -112,6 +116,7 @@ const Page = () => {
                   <th className="border p-2 text-left">Name</th>
                   <th className="border p-2 text-left">Email</th>
                   <th className="border p-2 text-left">Phone</th>
+                  <th className="border p-2 text-left">Location</th>
                   <th className="border p-2 text-left">Field</th>
                   <th className="border p-2 text-left">Professional URL</th>
                   <th className="border p-2 text-left">Resume</th>
@@ -124,6 +129,7 @@ const Page = () => {
                     <td className="border p-2 text-nowrap">{row.name}</td>
                     <td className="border p-2 text-nowrap">{row.email}</td>
                     <td className="border p-2 text-nowrap">{row.phoneNumber}</td>
+                    <td className="border p-2 text-nowrap">{row.location}</td>
                     <td className="border p-2 text-nowrap">{row.jobField}</td>
                     <td className="border p-2">
   <Link 
