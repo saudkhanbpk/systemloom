@@ -12,7 +12,7 @@ const useGetAllApplicants = () => {
     const fetchAllApplicants = async () => {
       try {
         const res = await axios.get(`${backend_url}/api/v1/application/get/all`, { withCredentials: true });
-        // console.log(res);  
+        console.log("applicants",res);  
 
         if (res.data.success) {
           dispatch(setAllApplicants(res.data.applications));  

@@ -17,7 +17,7 @@ const ApplicantsPage = () => {
   const applicants = useSelector((store: RootState) => store.applicants.applicants);
   const [searchTerm, setSearchTerm] = useState("");
   const filteredApplicants = applicants.filter((applicant) =>
-    `${applicant.firstName} ${applicant.lastName}`
+    `${applicant.firstName} ${applicant.lastName} ${applicant.address} ${applicant.city}`
       .toLowerCase()
       .includes(searchTerm.toLowerCase())
   );
@@ -34,7 +34,7 @@ const ApplicantsPage = () => {
   <div className="relative flex items-center w-full max-w-xs">
     <input
       type="text"
-      placeholder="Search applicants..."
+      placeholder="Search by name & location..."
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       className="w-full px-4 py-2 pl-10 border-2 border-black rounded-md focus:outline-none "

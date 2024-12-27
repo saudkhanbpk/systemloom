@@ -219,7 +219,7 @@ const JobApplicationForm: React.FC = () => {
     <input
       type="text"
       name="city"
-      placeholder="City*"
+      placeholder="Enter your location (Country & City)*"
       value={formData.city}
       onChange={handleChange}
       required

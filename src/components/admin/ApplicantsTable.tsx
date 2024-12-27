@@ -205,7 +205,7 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
       {/* Modal for User Details */}
       {selectedUser && (
         <div
-          className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50 z-50"
+          className="absolute inset-0 flex items-center justify-center mb-4 bg-black bg-opacity-50 z-50"
           onClick={handleOutsideClick}
         >
           <div
@@ -227,8 +227,11 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 <strong>Email:</strong> {selectedUser.email}
               </p>
               <p className="mb-2">
+                <strong>Location:</strong> {selectedUser.city}
+              </p>
+              <p className="mb-2">
                 <strong>Address:</strong> {selectedUser.address},{" "}
-                {selectedUser.city}, {selectedUser.stateOrProvince},{" "}
+                {selectedUser.city}, {selectedUser.stateOrProvince}
                 {selectedUser.postalOrZipCode}
               </p>
               <p className="mb-2">
