@@ -113,6 +113,7 @@ const Page = () => {
             <table className="min-w-full table-auto border-collapse border border-gray-300">
               <thead>
                 <tr>
+                <th className="border p-2 text-center">No.</th>
                   <th className="border p-2 text-left">Name</th>
                   <th className="border p-2 text-left">Email</th>
                   <th className="border p-2 text-left">Phone</th>
@@ -124,8 +125,11 @@ const Page = () => {
                 </tr>
               </thead>
               <tbody>
-                {currentData.map((row) => (
+                {currentData.map((row, index) => (
                   <tr key={row._id}>
+                    <td className="border p-2 text-center">
+        {startIndex + index + 1} {/* Calculate the serial number based on pagination */}
+      </td>
                     <td className="border p-2 text-nowrap">{row.name}</td>
                     <td className="border p-2 text-nowrap">{row.email}</td>
                     <td className="border p-2 text-nowrap">{row.phoneNumber}</td>
@@ -155,31 +159,36 @@ const Page = () => {
                 ))}
               </tbody>
 
-              <tfoot className="bg-gray-100">
-          <tr>
-            <td colSpan={7} className="py-2 px-4">
-              <div className="flex justify-between items-center">
-                <button
-                  onClick={handlePrevPage}
-                  disabled={currentPage === 1}
-                  className={`px-4 py-2 rounded ${currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
-                >
-                  Previous
-                </button>
-                <span className="text-gray-700">
-                  Page {currentPage} of {totalPages}
-                </span>
-                <button
-                  onClick={handleNextPage}
-                  disabled={currentPage === totalPages}
-                  className={`px-4 py-2 rounded ${currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"}`}
-                >
-                  Next
-                </button>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
+              <tfoot className="bg-gray-100 w-full">
+  <tr>
+    <td colSpan={8} className="py-2 px-4">
+      <div className="flex justify-between items-center">
+        <button
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+          className={`px-4 py-2 rounded ${
+            currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"
+          }`}
+        >
+          Previous
+        </button>
+        <span className="text-gray-700">
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+          className={`px-4 py-2 rounded ${
+            currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"
+          }`}
+        >
+          Next
+        </button>
+      </div>
+    </td>
+  </tr>
+</tfoot>
+
             </table>
           </div>
 

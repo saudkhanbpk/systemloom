@@ -53,30 +53,34 @@ const BlogCards: React.FC = () => {
       </p>
     ) : (
       <>
-        <div className="container mb-10 mt-10 mx-auto cursor-pointer max-w-7xl px-12 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-3 gap-3 w-full">
-          {currentBlogs.map((blog: any) => (
-            <div key={blog._id} className="">
-              <div className="bg-white shadow-lg rounded-lg overflow-hidden w-[330px] sm:w-full h-auto sm:h-[430px]">
-                <Image
-                  src={blog.image?.imageUrl || "/path/to/default-image.jpg"}
-                  alt={blog.image?.altDescription || blog.title}
-                  width={350}
-                  height={200}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <Link href={`/blog/blogDetail/${createSlug(blog.title)}`}>
-                    <h2 className="text-xl font-semibold text-blue-600 mb-2 cursor-pointer">
-                      {blog.title}
-                    </h2>
-                  </Link>
-                  <p className="text-gray-600 mb-4">
-                    {truncateText(blog.description, 200)}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="container mb-10 mt-10 mx-auto cursor-pointer max-w-7xl md:px-12 px-2 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
+        {currentBlogs.map((blog: any) => (
+  <div key={blog._id}>
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:h-[390px]">
+      <Image
+        src={blog.image?.imageUrl || "/path/to/default-image.jpg"}
+        alt={blog.image?.altDescription || blog.title}
+        width={350}
+        height={200}
+        className="w-full h-48 object-cover"
+      />
+    <div className="md:p-3 p-1">
+  <div className="line-clamp-6">
+    <Link href={`/blog/blogDetail/${createSlug(blog.title)}`}>
+      <h2 className="text-xl font-semibold text-blue-600 mb-2 cursor-pointer">
+        {blog.title}
+      </h2>
+    </Link>
+    <p className="text-gray-600 mb-4">
+      {blog.description}
+    </p>
+  </div>
+</div>
+
+    </div>
+  </div>
+))}
+
         </div>
         {/* Pagination Controls */}
         {blogs.length > blogsPerPage && (

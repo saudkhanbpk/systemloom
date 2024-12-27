@@ -26,7 +26,7 @@ const PricingForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [currentTime, setCurrentTime] = useState<string>(""); // State for real-time clock
 
-  const itemsPerPage = 5;
+  const itemsPerPage = 12;
 
   useEffect(() => {
     const fetchData = async () => {

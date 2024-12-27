@@ -92,7 +92,7 @@ const CareerHeroSection: FC = () => {
     <div className={`${isDialogOpen ? "blurred" : ""}`}>
       <div className="relative bg-black text-white h-[644px]">
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
-          <div className="mb-8 md:mb-12 p-10">
+          <div className="mb-8 md:mb-12 md:p-10 md:mt-0 mt-14">
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
               Be Who You Are. Do What You Love
             </h1>
