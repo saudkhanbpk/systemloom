@@ -12,9 +12,9 @@ const GreenEnergy = () => {
 export default GreenEnergy
 
 export const metadata = {
-  title: "",
+  title: "Sustainable Software Solutions for Green Energy | Tech Creator",
   description:
-    "",
+    "Efficient green gadgets and software solutions. Manage renewable energy operations, monitor, and analyze to reduce carbon footprints.",
   alternates: {
     canonical: "https://www.techcreator.co/green-energy-projects",
   },

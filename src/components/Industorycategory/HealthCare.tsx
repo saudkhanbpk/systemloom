@@ -18,7 +18,7 @@ const HealthcareProject: React.FC = () => {
 
   // Filter projects by category 'restaurants'
   const filteredProjects = projects.filter(
-    (project) => project.industry.includes(("healthcare"))
+    (project:any) => project.industry.includes(("healthcare"))
   );
 
   // Get current projects based on the page
@@ -71,9 +71,9 @@ const HealthcareProject: React.FC = () => {
         </div>
 
         {/* Content Wrapper */}
-        <div className="relative md:max-w-[1440px] w-full mx-auto md:pt-0 pt-24 md:pb-0 pb-10 px-2 sm:px-6 md:px-8 h-full flex items-center">
-          <div className="w-full text-center md:max-w-4xl flex flex-col justify-center gap-5 md:mx-auto">
-            <h1 className="font-semibold text-[22px] sm:text-[48px] md:text-[58px] font-poppins leading-[1.2] mb-0">
+        <div className="relative md:max-w-[1440px] w-full mx-auto pt-32 md:pb-0 pb-10 px-2 sm:px-6 md:px-8 h-full flex items-center">
+          <div className="w-full text-center md:max-w-4xl flex flex-col  justify-center gap-5 md:mx-auto ">
+            <h1 className="font-semibold text-[22px] sm:text-[48px] md:text-[48px] font-poppins leading-[1.2] mb-0">
               Custom HealthCare Software Development Solutions & Services 
             </h1>
             <p className="md:text-xl">
