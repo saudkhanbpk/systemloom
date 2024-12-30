@@ -5,24 +5,23 @@ interface User {
   name: string;
   fullName?: string; 
   email: string;
-  role: "admin" | "job seeker"; // Add the role property
+  role: "admin" | "job seeker"; 
 }
 
 interface AuthState {
   user: User | null;
 }
 
-// Initial state
+
 const initialState: AuthState = {
   user: null,
 };
 
-// Create the auth slice
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    // Action to set the user
     setUser: (state, action: PayloadAction<User | null>) => {
       state.user = action.payload;
     },

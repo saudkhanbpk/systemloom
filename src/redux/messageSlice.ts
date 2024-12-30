@@ -1,5 +1,3 @@
-// src/redux/slices/messageSlice.ts
-
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Contact {

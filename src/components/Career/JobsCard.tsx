@@ -72,7 +72,7 @@ const JobCard = ({
   );
 };
 
-// JobsCard component to display the list of jobs
+
 const JobsCard = () => {
 useGetAllJobs()
   const { allJobs } = useSelector((state: RootState) => state.job);

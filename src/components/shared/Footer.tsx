@@ -407,6 +407,7 @@ const Footer: React.FC = () => {
                   href="https://wa.me/+447511801699"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:underline"
                 >
                   <div className="flex gap-2 items-center text-base mt-1">
                     <FaWhatsapp size={28} color="#9A00FF" />

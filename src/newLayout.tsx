@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           pauseOnFocusLoss
         />
 
-        {/* Conditionally render the Header for non-admin pages */}
+        
         {!isAdminPage && <Header />}
 
         <main className="flex-1">{children}</main>

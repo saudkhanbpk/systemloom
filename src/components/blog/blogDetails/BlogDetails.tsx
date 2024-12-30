@@ -5,7 +5,7 @@ import Image from "next/image";
 import RelatedBlog from "../RelatedBlog";
 import useGetAllBlogs from "@/hooks/useGetAllBlogs";
 
-// Define the Post and Comment interfaces
+
 interface Post {
   _id: string;
   title: string;
@@ -18,7 +18,7 @@ interface Post {
   description: string;
   tags: string[];
   publish: boolean;
-  slug: string;  // Ensure the slug is part of the post
+  slug: string;  
 }
 
 interface DetailPostProps {

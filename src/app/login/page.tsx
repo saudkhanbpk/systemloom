@@ -7,10 +7,7 @@ const page = () => {
   
   return (
     <>
-     
         <link rel="canonical" href="https://www.techcreator.co/login" />
-      
-    
     <>
       <Login/>
     </>

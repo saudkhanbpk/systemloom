@@ -28,7 +28,7 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true
+    setLoading(true); 
     try {
       const res = await axios.post(`${backend_url}/api/v1/user/login`, formData, {
         headers: {
@@ -37,10 +37,9 @@ const Login: React.FC = () => {
         withCredentials: true
       });
       if (res.data.success) {
-        // Dispatch user data to Redux state
         dispatch(setUser(res.data.user));
 
-        // Redirect based on user role
+        
         if (res.data.user.role === "admin") {
           router.push("/admin");
         } else {

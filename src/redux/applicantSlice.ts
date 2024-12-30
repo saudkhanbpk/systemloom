@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Applicant {
-  _id: string; // assuming the MongoDB id is a string
+  _id: string; 
   firstName: string;
   lastName: string;
   phoneNumber: string;
@@ -38,7 +38,7 @@ const applicantSlice = createSlice({
     setAllApplicants: (state, action: PayloadAction<Applicant[]>) => {
       state.applicants = action.payload;
     },
-    deleteApplicant: (state, action: PayloadAction<string>) => { // assuming MongoDB id is a string
+    deleteApplicant: (state, action: PayloadAction<string>) => {
       state.applicants = state.applicants.filter(
         (applicant) => applicant._id !== action.payload
       );

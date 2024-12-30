@@ -25,16 +25,16 @@ const RestaurantProject: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 6; 
 
-  // Fetch projects from Redux store
+  
   const { projects } = useSelector((state: RootState) => state.projects);
   // console.log("projects", projects)
 
-  // Filter projects by category 'restaurants'
+  
   const filteredProjects = projects.filter(
     (project) => project.industry.includes(("restaurants"))
   );
 
-  // Get current projects based on the page
+
   const indexOfLastProject = currentPage * itemsPerPage;
   const indexOfFirstProject = indexOfLastProject - itemsPerPage;
   const currentProjects = filteredProjects.slice(
@@ -42,7 +42,7 @@ const RestaurantProject: React.FC = () => {
     indexOfLastProject
   );
 
-  // Handle page changes
+
   const nextPage = () => {
     if (currentPage < Math.ceil(filteredProjects.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
