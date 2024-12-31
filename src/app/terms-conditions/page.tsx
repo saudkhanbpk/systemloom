@@ -17,65 +17,48 @@ const TermsAndConditionsPage = () => {
       {/* Terms and Conditions Content Section */}
       <div className="max-w-6xl px-5 py-10 my-10 text-lg">
         <p className="text-lg mb-6">
-          <strong className="text-2xl font-semibold text-purple-600 mb-3">Welcome to TechCreator</strong><br />
-          These Terms and Conditions lay down the rules and regulations for using TechCreator's services. If you access the services of this platform, you agree to abide by these terms. If you do not agree with any part of these terms, you should refrain from using our services.
+          <strong className="text-2xl font-semibold text-purple-600 mb-3"> Website Usage Terms</strong><br />
+          These Terms and Conditions govern your access to and use of our websites, including those available through <strong>www.techcreator.co,</strong> along with any associated services, features, or resources provided on or linked through our sites. This includes, but is not limited to, accessing information, registering in our database, subscribing to newsletters, receiving promotional emails, or engaging with related links (collectively referred to as "our Sites"). By visiting or using any part of our Sites, you confirm that you understand and agree to abide by these Terms and Conditions, as well as all relevant laws and regulations that apply to the use of our services.
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> Acceptance of Terms</h3>
         <p className="text-lg mb-6">
-        By accessing and using TechCreator, you confirm and agree to have read, understood, and accepted these Terms and Conditions. These terms apply to every visitor, user, and other persons who wish to access or use the Service.
+        We reserve the right to change these Terms and Conditions at any time, effective immediately upon posting on our Sites. If you violate these Terms and Conditions, we may terminate your use of the Sites, bar you from future use of the Sites, and/or take appropriate legal action against you.
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> User Responsibilities</h3>
+        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> COPYRIGHT AND TRADEMARK NOTICE</h3>
         <p className="text-lg mb-6">
-        You are responsible for the confidentiality of your account and password. You agree to hold yourself fully responsible for any activities that occur under your account. You will also be required to comply with all applicable laws and regulations and respect third-party rights while using TechCreator.
+        The contents of all material available on our Sites are copyrighted by Techcreator unless otherwise indicated. All rights are reserved and content may not be reproduced, downloaded, disseminated, or transferred, in any form or by any means, except with the prior written agreement of Techcreator or as indicated below.
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> Prohibited Activities</h3>
         <p className="text-lg mb-6">
-          Users are prohibited from engaging in any activity that:
-          <ul className="list-inside list-disc text-lg ml-4">
-            <li>This is not limited to violating any local, state, or national laws.</li>
-            <li>This is also extending to infringing upon TechCreator's and other parties' intellectual property rights</li>
-            <li>Interfering with the ability of TechCreator to function normally on the platform.</li>
-            <li>Insulting harass or threaten other users.</li>
-            <li>Introduce malware or other malicious programs.</li>
-          </ul>
+        <strong>Permitted Use:</strong> You are allowed to download pages or other content from our Sites solely for your personal use on a single device. However, no part of this content may be copied, reproduced, redistributed, or shared in any form or by any means without obtaining prior written consent from TechCreator and providing proper credit to us. By accessing our Sites, you agree that your rights are limited to viewing, visiting, and keeping a personal copy of the content for non-commercial use. Any duplication, downloading, publishing, modification, or sharing of the materials for purposes other than personal use is strictly prohibited unless explicitly authorized by TechCreator.
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> Privacy Policy</h3>
         <p className="text-lg mb-6">
-        Your agreement to use TechCreator extends to our collection and protection of the information of which you are informed by our Privacy Policy. Please refer to <a href="/privacy-policy" className="text-blue-600">Privacy Policy</a> Policy for details. 
+        You also agree not to deep-link to the site for any purpose, unless specifically authorized by us to do so. 
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> User Content</h3>
+        <h3 className="text-2xl font-semibold text-purple-600 mb-4">GENERAL LEGAL NOTICE AND LIABILITY DISCLAIMER</h3>
         <p className="text-lg mb-6">
-        Users may submit content, such as job postings, blogs, or any other type of content, to TechCreator. Users shall retain their rights in the content but grant TechCreator a license to use, display, and distribute the content within its platform. Users are fully responsible for their content and agree that TechCreator may delete any content that it considers breaches those values. 
+        We make available our Sites and the information and services contained herein “as is.” While Techcreator makes every effort to present accurate and reliable information on our Sites, Techcreator does not endorse, approve, or certify such information, nor does it guarantee the accuracy, completeness, efficacy, or timeliness of such information. Use of such information is voluntary, and reliance on it should only be undertaken after an independent review by qualified experts. 
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4">Links to Third-Party Websites and Services</h3>
         <p className="text-lg mb-6">
-        TechCreator provides links to third-party websites or services that are not operated by us. We take no responsibility for the content or conduct of these third-party sites; therefore, we encourage users to review their terms of service and privacy policies before interacting with them.
+        Reference herein to any specific commercial product, process, or service does not constitute or imply endorsement, recommendation, or favoring by Techcreator.
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> Disclaimers and Limitation of Liability</h3>
         <p className="text-lg mb-6">
-        TechCreator services are provided "as is" and without any warranties. We do not guarantee continuous error-free, secure, and uninterrupted operation of the platform. TechCreator does not assume any responsibility for any loss resulting from the proper or improper use of the platform.
+        At certain places on this site, live “links” to other websites can be accessed. Such external sites contain information created, published, maintained, or otherwise posted by institutions or organizations independent of Techcreator. Techcreator does not endorse, approve, certify, or control these external sites and does not guarantee the accuracy, completeness, efficacy, or timeliness of information located at such sites. Use of any information obtained from such sites is voluntary, and reliance on it should only be undertaken after an independent review by qualified experts.
+
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> Termination</h3>
         <p className="text-lg mb-6">
-        TechCreator shall have the right to suspend or terminate your account at any time, without notice to you, if you violate these Terms and Conditions. Upon termination, you shall discontinue all use of the platform and delete all content associated with your account.
+        Techcreator assumes no responsibility for consequences resulting from the use of the information contained herein, or from the use of the information obtained at linked sites, or in any respect for the content of such information. Techcreator is not responsible for, and expressly disclaims all liability for, damages of any kind arising out of use, reference to, reliance on, or performance of such information.
         </p>
 
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> Governing Law</h3>
+        <h3 className="text-2xl font-semibold text-purple-600 mb-4"> SEVERABILITY</h3>
         <p className="text-lg mb-6">
-        These terms and conditions are subject to the laws of the place where TechCreator is situated. Any disputes that arise shall be solved through the competent courts of such sito.
-        </p>
-
-        <h3 className="text-2xl font-semibold text-purple-600 mb-4">Changes to Terms and Conditions</h3>
-        <p className="text-lg mb-6">       
-TechCreator shall have the right to change or modify these Terms and Conditions at any time. Any changes will be posted on this page with the revision date also updated. Please review these terms from time to time for updates.
+        The invalidity or unenforceability of any particular provision of this Policy shall not affect the remaining provisions hereof, and this Policy shall be construed in all respects as if such invalid or unenforceable provision had been omitted.
         </p>
 
         <h3 className="text-2xl font-semibold text-purple-600 mb-4"> Contact Us</h3>
@@ -84,7 +67,9 @@ TechCreator shall have the right to change or modify these Terms and Conditions 
         </p>
         <div className="text-lg mb-6">
           <strong>Email:</strong> <a href="mailto:contact@techcreator.co" className="text-blue-600">contact@techcreator.co</a><br />
-          <strong>Phone:</strong> +1 (321) 407-3272<br />
+          <strong>Phone:</strong>  <a href="callto:+13214073272" className="hover:underline">
+                      +1 (321) 407-3272
+                    </a><br />
           <strong>Address:</strong> TechCreator Software Company, 123 Tech Lane, Orlando, FL, USA
         </div>
       </div>
