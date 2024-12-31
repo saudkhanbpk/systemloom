@@ -449,7 +449,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center  justify-end">
+        <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center md:p-0 p-4 justify-around px-10 ">
+          <div className="flex gap-5">
+          <Link href="/terms-conditions" className="text-xs md:text-sm text-gray-400  hover:text-purple-600 cursor-pointer md:mt-3">Terms & Conditions</Link>
+          <Link href="/privacy-policy" className="text-xs md:text-sm text-gray-400  hover:text-purple-600 cursor-pointer md:mt-3">Privacy Policy</Link>
+          </div>
           <p className="text-xs md:text-sm text-gray-400 mt-3 ">
             © 2024 <span className="text-[#9A00FF]">TechCreator</span>. All
             rights reserved.
