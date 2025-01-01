@@ -16,46 +16,9 @@ import Head from "next/head";
 import WebDevRelatedProjects from "@/components/services/WebDevRelatedProjects";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
+import useGetAllProjects from "@/hooks/useGetAllProjects";
 
 const WebDevelopment = () => {
-  // const services = [
-  //   {
-  //     title: "Product Design",
-  //     description:
-  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-  //     icon: productDesignImage,
-  //   },
-  //   {
-  //     title: "App Design",
-  //     description:
-  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-  //     icon: appDesignImage,
-  //   },
-  //   {
-  //     title: "Web Design",
-  //     description:
-  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-  //     icon: webDesignImage,
-  //   },
-  //   {
-  //     title: "Development",
-  //     description:
-  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-  //     icon: developmentDesignImage,
-  //   },
-  //   {
-  //     title: "Illustration",
-  //     description:
-  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-  //     icon: illustrationDesignImage,
-  //   },
-  //   {
-  //     title: "Motion",
-  //     description:
-  //       "mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac",
-  //     icon: motionDesignImage,
-  //   },
-  // ];
 
   const services = [
     {

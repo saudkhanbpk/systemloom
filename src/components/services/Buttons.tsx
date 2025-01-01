@@ -15,7 +15,7 @@ const Buttons = () => {
   }
 
   return (
-    <div className='flex gap-4 mt-6'>
+    <div className='flex gap-4 mt-6 md:px-0 px-3'>
       <motion.button 
         whileHover={{ scale: 1.1, backgroundColor: "#7E22CE" }}
         whileTap={{ scale: 0.95 }}

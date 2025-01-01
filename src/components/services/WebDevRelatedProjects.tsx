@@ -4,6 +4,7 @@ import { FaEye } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import Image from 'next/image';
+import useGetAllProjects from '@/hooks/useGetAllProjects';
 
 
 type Project = {
@@ -20,6 +21,8 @@ type Project = {
 };
 
 const WebDevRelatedProjects = () => {
+  useGetAllProjects()
+
   // Access projects from Redux store
   const { projects } = useSelector((state: RootState) => state.projects);
 
@@ -44,8 +47,8 @@ const WebDevRelatedProjects = () => {
   return (
     <div>
       {/* RecentWorks section start */}
-      <div className="mx-auto">
-        <div className=" px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className=" ">
           <div className="md:w-[92%] mx-auto">
             {/* Heading Section */}
             <div className="text-center mb-12 mt-5 md:mt-0">
