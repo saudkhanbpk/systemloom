@@ -251,37 +251,37 @@ const Footer: React.FC = () => {
             </h2>
             <ul className="flex flex-col gap-4 text-sm">
               <Link
-                href="/healthcare-projects"
+                href="/healthcare"
                 className="hover:text-[#9A00FF]"
               >
                 <li>HealthCare</li>
               </Link>
               <Link
-                href="/e-commerce-projects"
+                href="/e-commerce"
                 className="hover:text-[#9A00FF]"
               >
                 <li>E-Commerce</li>
               </Link>
               <Link
-                href="/hospitality-projects"
+                href="/hospitality"
                 className="hover:text-[#9A00FF]"
               >
                 <li>Hospitality</li>
               </Link>
               <Link
-                href="/real-estate-projects"
+                href="/real-estate"
                 className="hover:text-[#9A00FF]"
               >
                 <li>Real Estate</li>
               </Link>
               <Link
-                href="/restaurants-projects"
+                href="/restaurants"
                 className="hover:text-[#9A00FF]"
               >
                 <li>Restaurants</li>
               </Link>
               <Link
-                href="/green-energy-projects"
+                href="/green-energy"
                 className="hover:text-[#9A00FF]"
               >
                 <li>Green Energy</li>

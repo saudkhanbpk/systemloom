@@ -14,8 +14,8 @@ const Companies = () => {
   const companies = [company1, company2, company3, company4, company5];
 
   return (
-    <div className="container overflow-x-hidden bg-[#9A00FF]">
-      <div className="container mx-auto">
+    <div className=" overflow-x-hidden   bg-[#9A00FF]">
+      <div className="  mx-auto">
         <div className=" mx-auto max-w-6xl flex py-4 ">
           <motion.div
             initial={{ x: 0 }}
