@@ -143,7 +143,7 @@ const WebDevelopment = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h2 className="text-center text-3xl font-bold md:mt-52">Why Choose Us</h2>
+      <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
       <div className='my-16 md:mt-20 flex flex-wrap justify-center  gap-7 border-b  "'>
         <div className="border-r  w-[280px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -262,7 +262,7 @@ const WebDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-28 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
@@ -302,12 +302,12 @@ const WebDevelopment = () => {
     Related Services
   </h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 justify-items-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5  lg:gap-16 justify-items-center">
     {services.map((service, index) => (
       <Link 
         href={service.link} 
         key={index} 
-        className="relative p-6 bg-white w-full max-w-[350px] h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
+        className="relative p-6 bg-white w-full  h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
       >
         <div className="absolute -top-10 left-6 p-3 rounded-lg">
           <Image

@@ -44,36 +44,51 @@ const WebDevRelatedProjects = () => {
   return (
     <div>
       {/* RecentWorks section start */}
-      <div className="max-w-7xl mx-auto">
-        <div className="py-16 px-4 ml-2 sm:ml-0">
+      <div className="mx-auto">
+        <div className=" px-4 sm:px-6 lg:px-8">
           <div className="md:w-[92%] mx-auto">
             {/* Heading Section */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 mt-5 md:mt-0">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Works</h2>
-              <p className="mt-3 text-lg">
-              Our latest web development initiatives feature innovative designs and smooth functionality, customized to address various business requirements. We prioritize creating responsive layouts and comprehensive solutions that provide outstanding performance, user-friendly experiences, and trackable outcomes for every website built.
+              <p className="mt-4 text-lg text-gray-600 md:w-[70vw]  mx-auto">
+                Our latest web development initiatives feature innovative designs and smooth functionality, customized to address various business requirements. We prioritize creating responsive layouts and comprehensive solutions that provide outstanding performance, user-friendly experiences, and trackable outcomes for every website built.
               </p>
             </div>
 
             {/* Works Section */}
             <div className="w-full">
               {filteredProjects.length > 0 ? (
-                <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredProjects.map((project) => (
-                    <div key={project._id} className="relative overflow-hidden group border-2 rounded-md">
+                    <div
+                      key={project._id}
+                      className="relative group overflow-hidden rounded-lg border w-full   border-gray-300 shadow-md hover:shadow-lg transition-shadow duration-300"
+                    >
                       {/* Main Feature Image */}
                       <Image
-                        src={project.projectScreenshot || "/path/to/fallback-image.jpg"}  // Provide a fallback image if projectScreenshot is undefined
+                        src={project.projectScreenshot || "/path/to/fallback-image.jpg"}
                         alt={project.title}
-                        className="h-64 md:h-[300px] rounded-md  object-cover"
-                        width={500}
-                        height={500}
+                        className="w-full  object-contain rounded-t-lg"
+                        width={800}
+                        height={600}
+                        quality={100}
+                        priority
+                        placeholder="blur"
+                        blurDataURL="/path/to/low-res-placeholder.jpg"
                       />
-                      <p className='bg-[#9A00FF] p-2 text-lg text-white'>{project.title}</p>
+                   <div className='pt-20'>
+                   <p className="absolute bottom-0 left-0 w-full  bg-purple-600 text-white text-center md:p-2 p-1 text-lg font-semibold">
+    {project.title}
+  </p>
+                   </div>
+
                       {/* Eye Icon on Hover */}
                       <div
-                        className="absolute inset-0 flex justify-center items-center rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 cursor-pointer"
+                        className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-70 cursor-pointer"
                         onClick={() => handleRedirect(project.websiteLink)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === "Enter" && handleRedirect(project.websiteLink)}
                       >
                         <FaEye className="text-white text-4xl" />
                       </div>
