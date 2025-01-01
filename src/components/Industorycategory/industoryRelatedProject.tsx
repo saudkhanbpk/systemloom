@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import greenEnergyImage from "../../../public/assets/portfolioImages/greenenergy.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
@@ -20,7 +19,7 @@ const IndustryRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
   const filteredProjects = projects.filter((project) =>
     project.industry.includes(slug)
   );
-console.log("slug", slug)
+// console.log("slug", slug)
 
 
   const indexOfLastProject = currentPage * itemsPerPage;
@@ -55,29 +54,7 @@ console.log("slug", slug)
 
   return (
     <div>
-      {/* Hero section */}
-      <div className="relative bg-gray-900 text-white h-[500px] md:min-h-screen">
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src={greenEnergyImage}
-            alt="Background"
-            layout="fill"
-            objectFit="cover"
-            priority
-            className="opacity-25"
-          />
-        </div>
-        <div className="relative md:max-w-[1440px] w-full mx-auto md:pt-0 pt-24 md:pb-0 pb-10 px-2 sm:px-6 md:px-8 h-full flex items-center">
-          <div className="w-full text-center md:max-w-4xl flex flex-col justify-center gap-5 md:mx-auto">
-            <h1 className="font-semibold text-[22px] sm:text-[48px] md:text-[48px] font-poppins leading-[1.2] mb-0">
-              Green Energy Software Solutions for Sustainable Future
-            </h1>
-            <p className="md:text-xl">
-              With a mission to help usher in the future of innovation in renewable energy, TechCreator Software Company also creates custom software solutions for sustainability and efficiency.
-            </p>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Projects section */}
       <div className="grid grid-cols-1 sm:grid-cols-2  w-[85vw] gap-3 mx-auto my-10">

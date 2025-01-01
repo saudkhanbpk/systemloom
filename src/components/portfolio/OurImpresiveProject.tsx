@@ -30,16 +30,16 @@ const OurImpressiveProject = () => {
           {
             image: restaurantImage,
             title: "Restaurant",
-            link: "/restaurants-projects",
+            link: "/restaurants",
           },
-          { image: realstateImage, title: "Real Estate", link: "/real-estate-projects", },
+          { image: realstateImage, title: "Real Estate", link: "/real-estate", },
           { image: ecommerceImage, title: "E-commerce", link: "/e-commerce", },
           {
             image: HospitalityImage,
             title: "Hospitality",
             link: "/hospitality",
           },
-          { image: greenEnergyImage, title: "Green Energy", link: "/green-energy-projects", },
+          { image: greenEnergyImage, title: "Green Energy", link: "/green-energy", },
         ].map((project, index) => (
           <div
             key={index}
