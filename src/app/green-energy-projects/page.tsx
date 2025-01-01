@@ -1,10 +1,12 @@
-import GreenEnergyProject from '@/components/Industorycategory/GreenEnergy'
+import IndustryRelatedProjects from '@/components/Industorycategory/industoryRelatedProject';
+import GreenEnergyProject from '@/components/Industorycategory/industoryRelatedProject'
 import React from 'react'
 
 const GreenEnergy = () => {
+  const industrySlug = "green-energy";
   return (
     <div>
-      <GreenEnergyProject />
+      <IndustryRelatedProjects slug={industrySlug} />
     </div>
   )
 }

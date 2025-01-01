@@ -1,10 +1,13 @@
 import HospitalityProject from '@/components/Industorycategory/Hospitility'
+import IndustryRelatedProjects from '@/components/Industorycategory/industoryRelatedProject';
 import React from 'react'
 
 const Hospitality = () => {
+  const industrySlug = "hospitality";
+
   return (
     <div>
-      <HospitalityProject/>
+      <IndustryRelatedProjects slug={industrySlug} />
     </div>
   )
 }
