@@ -12,11 +12,9 @@ import webimage5 from "../../../../public/assets/ServiceDetailsImages/webimage5.
 import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import Head from "next/head";
 import WebDevRelatedProjects from "@/components/services/WebDevRelatedProjects";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
-import useGetAllProjects from "@/hooks/useGetAllProjects";
 
 const WebDevelopment = () => {
 
@@ -48,10 +46,10 @@ const WebDevelopment = () => {
     <div>
 
       {/* hero section start */}
-      <div className="bg-black w-full lg:min-h-screen md:pt-36 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
+      <div className="bg-black w-full lg:min-h-screen md:pt-36 pt-20 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
-        <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-0  md:px-12  mt-20">
-          <h1 className="text-3xl lg:text-5xl  font-bold">
+        <div className="w-full md:w-[50vw] text-center md:text-left">
+          <h1 className="text-3xl  lg:text-5xl  font-bold">
           Empower your business with custom web development
           </h1>
           <p className="text-base lg:text-lg mt-3">
@@ -75,9 +73,9 @@ const WebDevelopment = () => {
       {/* hero section end */}
 
       {/* FeatureSection section start */}
-      <div className="max-w-7xl  mx-auto">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
-          <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
+      <div className="max-w-7xl  mx-auto  ">
+        <div className="flex flex-col lg:flex-row items-center  lg:items-start  justify-center lg:mt-12 my-6  relative   ">
+          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
             <Image
               src={webimage1}
               alt="Bespoke Web Development to attract your audience"
@@ -87,8 +85,8 @@ const WebDevelopment = () => {
             />
           </div>
           <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
-            <div className="text-white xl:py-20 lg:px-40">
-              <h2 className="text-xl sm:text-3xl font-bold mb-3">
+            <div className="text-white xl:py-20 lg:px-52  ">
+              <h2 className="text-xl sm:text-3xl font-bold mb-3 lg:w-[500px]  ">
                 Bespoke Web Development Tailored to Your Vision
               </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
@@ -265,12 +263,12 @@ const WebDevelopment = () => {
     Related Services
   </h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5  lg:gap-16 justify-items-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5   lg:gap-8 justify-items-center">
     {services.map((service, index) => (
       <Link 
         href={service.link} 
         key={index} 
-        className="relative p-6 bg-white w-full  h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
+        className="relative p-6 bg-white w-full h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
       >
         <div className="absolute -top-10 left-6 p-3 rounded-lg">
           <Image

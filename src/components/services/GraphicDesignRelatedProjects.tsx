@@ -4,6 +4,7 @@ import { FaEye } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import Image from 'next/image';
+import useGetAllProjects from '@/hooks/useGetAllProjects';
 
 // Define a type for the project data
 type Project = {
@@ -20,6 +21,8 @@ type Project = {
 };
 
 const GraphicDesigningRelatedProjects = () => {
+  useGetAllProjects()
+
   // Access projects from Redux store
   const { projects } = useSelector((state: RootState) => state.projects);
 
