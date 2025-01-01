@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css"; // Import default styles
+import { motion } from "framer-motion";
 import company1 from "../../../public/assets/companies/petronworklogo.png";
 import company2 from "../../../public/assets/companies/GeekshubLogo.png";
 import company3 from "../../../public/assets/companies/bnblogo.png";
@@ -10,29 +9,8 @@ import company4 from "../../../public/assets/companies/musafirLogo.svg";
 import company5 from "../../../public/assets/companies/PatronPal logo.png";
 import company7 from "../../../public/assets/companies/Rectangle 21848.png";
 import Link from "next/link";
-import CommonButton from "../common/Button";
-import {motion } from 'framer-motion'
 
 const Companies = () => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 768, min: 480 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 480, min: 0 },
-      items: 1,
-    },
-  };
-
   return (
     <div className="relative bg-[#9A00FF] py-5 px-4 md:px-10 md:mb-0 mb-8">
       {/* Video Background */}
@@ -54,44 +32,43 @@ const Companies = () => {
       </div> */}
 
       {/* Carousel Section */}
-      <div className="relative z-10 ">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={1000}
-          transitionDuration={800}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          arrows={false}
-          containerClass="carousel-container"
-          centerMode={true}
-          swipeable={true}
-          draggable={true}
-          customTransition="transform 0.8s ease-in-out"
-          dotListClass="custom-dot-list-style"
+      <div className="relative z-10 overflow-hidden w-full border">
+        {/* Motion animation for logos in a horizontal scroll */}
+        <motion.div
+          className="flex gap-20 space-x-6 animate-marquee "
+          animate={{ x: ["100%", "-100%"] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 30,
+            ease: "linear",
+          }}
         >
-          <div className="flex justify-center  items-center mb-2  mt-11 sm:mx-0 mx-3">
+          <div className="flex justify-center items-center">
             <Image src={company1} alt="Company 1" width={140} height={45} />
           </div>
-          <div className="flex justify-center items-center mb-2 mx-3 sm:mx-0">
+          <div className="flex justify-center items-center">
             <Image src={company2} alt="Company 2" width={140} height={45} />
           </div>
-          <div className="flex justify-center items-center mt-9 mb-2 mx-3 sm:mx-0">
-            <Image src={company4} alt="Company 4" width={140} height={45} />
-          </div>
-          <div className="flex justify-center items-center mb-2 mx-3 sm:mx-0">
+          <div className="flex justify-center items-center">
             <Image src={company3} alt="Company 3" width={140} height={45} />
           </div>
-          <div className="flex justify-center items-center mt-10 mb-2 mx-3 sm:mx-0">
+          <div className="flex justify-center items-center">
+            <Image src={company4} alt="Company 4" width={140} height={45} />
+          </div>
+          <div className="flex justify-center items-center">
             <Image src={company5} alt="Company 5" width={140} height={45} />
           </div>
-        </Carousel>
+         
+        </motion.div>
       </div>
     </div>
   );
 };
 
 export default Companies;
+
+
 
 export const CTASection = () => {
   return (

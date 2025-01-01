@@ -70,6 +70,18 @@ export default function RootLayout({
   `}
 </Script>
 
+
+ {/* Google Ads Conversion Tracking */}
+ <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10843350784"></Script>
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-10843350784');
+          `}
+        </Script>
+
         {/* Metadata */}
         <meta
           name="google-site-verification"

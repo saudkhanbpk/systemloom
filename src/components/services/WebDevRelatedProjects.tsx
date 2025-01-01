@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import Image from 'next/image';
 
-// Define a type for the project data
+
 type Project = {
   _id: string;
   title: string;

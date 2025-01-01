@@ -17,14 +17,14 @@ const createSlug = (title: string | undefined): string =>
     : "untitled";
 
 // Function to truncate HTML content to plain text
-const truncateText = (htmlContent: string, limit: number): string => {
-  const div = document.createElement("div");
-  div.innerHTML = htmlContent;
-  const textContent = div.textContent || div.innerText || "";
-  return textContent.length > limit
-    ? textContent.substring(0, limit) + "..."
-    : textContent;
-};
+// const truncateText = (htmlContent: string, limit: number): string => {
+//   const div = document.createElement("div");
+//   div.innerHTML = htmlContent;
+//   const textContent = div.textContent || div.innerText || "";
+//   return textContent.length > limit
+//     ? textContent.substring(0, limit) + "..."
+//     : textContent;
+// };
 
 const BlogCards: React.FC = () => {
   useGetAllBlogs();

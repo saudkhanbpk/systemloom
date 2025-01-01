@@ -4,7 +4,7 @@ import React from 'react'
 const GreenEnergy = () => {
   return (
     <div>
-      <GreenEnergyProject/>
+      <GreenEnergyProject />
     </div>
   )
 }
