@@ -53,7 +53,7 @@ const WebDevRelatedProjects = () => {
             {/* Heading Section */}
             <div className="text-center mb-12 mt-5 md:mt-0">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Work</h2>
-              <p className="mt-4 text-lg text-gray-600 md:w-[70vw]  mx-auto">
+              <p className="mt-4 text-lg text-gray-600   mx-auto">
                 Our latest web development initiatives feature innovative designs and smooth functionality, customized to address various business requirements. We prioritize creating responsive layouts and comprehensive solutions that provide outstanding performance, user-friendly experiences, and trackable outcomes for every website built.
               </p>
             </div>
