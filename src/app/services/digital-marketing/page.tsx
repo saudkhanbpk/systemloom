@@ -102,7 +102,7 @@ const DigitalMarketing = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h2 className="text-center text-3xl font-bold md:mt-52">Why Choose Us</h2>
+      <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
       <div className='my-16 md:mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[280px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -223,7 +223,7 @@ const DigitalMarketing = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-28 md:mb-40">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative webDevtext z-10 md:max-w-[600px] text-wrap text-center md:text-left">

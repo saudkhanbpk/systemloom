@@ -102,7 +102,7 @@ const projectManagement = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h2 className="text-center text-3xl font-bold md:mt-52">Why Choose Us</h2>
+      <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
       <div className='my-16 md:mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
         <div className="border-r  w-[280px] p-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -222,26 +222,27 @@ const projectManagement = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className=" md:relative bg-[#9A00FF]   mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-28 md:mb-28">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative webDevtext z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Driving Results Through Expertise
+              Comprehensive Web Development Services with Ongoing Support
             </h2>
             <p className="text-base md:text-lg text-white  ">
-              In a recent collaboration with a tech startup, our project
-              management services helped streamline their product launch,
-              reducing time-to-market by 30%. We also provided guidance to a
-              growing enterprise, improving task coordination and achieving
-              significant cost savings.
+              Our commitment doesn’t end with the launch of your website or app.
+              We provide comprehensive{" "}
+              <strong>web development services,</strong> from concept to
+              deployment, with continuous support to ensure your platform
+              evolves with your business. Trust us to deliver innovation,
+              functionality, and unmatched quality in every project.
             </p>
           </div>
           {/* Image */}
           <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={projectimage5}
-              alt="Project Management Portfolio  by TechCreator"
+              alt="Feature illustration"
               width={400}
               height={500}
               className="rounded-lg mx-auto  md:mx-0"
