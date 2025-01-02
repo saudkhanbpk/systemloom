@@ -12,8 +12,6 @@ import devopimage5 from "../../../../public/assets/graphice design images/devopi
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import DevopsRelatedProjects from "@/components/services/DevopsRelatedProjects";
-import Head from "next/head";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";

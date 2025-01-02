@@ -12,8 +12,6 @@ import marketingImage5 from "../../../../public/assets/graphice design images/di
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
 import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import MarketingRelatedProjects from "@/components/services/MarketingRelatedProjects";
-import Head from "next/head";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";

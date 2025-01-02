@@ -12,8 +12,6 @@ import FeatureImage from "../../../../public/assets/graphice design images/featu
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
 import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import GraphicDesigningRelatedProjects from "@/components/services/GraphicDesignRelatedProjects";
-import Head from "next/head";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";

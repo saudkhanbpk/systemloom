@@ -12,7 +12,6 @@ import qaimage5 from "../../../../public/assets/graphice design images/qaimage5.
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import QaTestingRelatedProjects from "@/components/services/QATestingRelatedProjects";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";

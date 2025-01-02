@@ -13,8 +13,6 @@ import seoimage5 from "../../../../public/assets/graphice design images/seoimage
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
 import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import SeoContentWritingRelatedProjects from "@/components/services/SerContentWritingRelatedProjects";
-import Head from "next/head";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
