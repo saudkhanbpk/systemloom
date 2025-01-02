@@ -1,47 +1,54 @@
 "use client";
-import React from 'react';
-import { FaEye } from 'react-icons/fa'; 
-import { useSelector } from 'react-redux';
-import { RootState } from '@/redux/store';
-import Image from 'next/image';
-import useGetAllProjects from '@/hooks/useGetAllProjects';
-
+import React from "react";
+import { FaEye } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+import Image from "next/image";
+import useGetAllProjects from "@/hooks/useGetAllProjects";
 
 type Project = {
   _id: string;
   title: string;
   description: string;
-  category: string[];  
-  projectScreenshot: string | undefined; 
+  category: string[];
+  projectScreenshot?: string;
   createdAt: string;
   updatedAt: string;
   figmaLink: string;
   githubLink: string;
-  websiteLink: string | undefined;
+  websiteLink?: string;
 };
 
-const WebDevRelatedProjects = () => {
-  useGetAllProjects()
+interface IndustryProjectsProps {
+  slug: string;
+}
 
-  // Access projects from Redux store
+const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
+  useGetAllProjects();
+
   const { projects } = useSelector((state: RootState) => state.projects);
 
-  // Filter projects by category 'web-development'
+  // Filter and limit projects
   const filteredProjects = projects
-    .filter((project) => project.category.includes("web-development"))
+    ?.filter((project) => project.category.includes(slug))
     .slice(0, 6);
 
-  // Handle the redirect to the website link
-  const handleRedirect = (websiteLink: string | undefined) => {
+    console.log("slug", slug)
+
+  const handleRedirect = (websiteLink?: string) => {
     if (websiteLink) {
-      window.open(websiteLink, '_blank');
+      window.open(websiteLink, "_blank");
     } else {
       alert("Website link is not available for this project.");
     }
   };
 
-  if (projects.length === 0) {
-    return <div className='text-center text-2xl font-bold text-red-500'>Loading projects...</div>;
+  if (!projects || projects.length === 0) {
+    return (
+      <div className="text-center text-2xl font-bold text-red-500">
+        Loading projects...
+      </div>
+    );
   }
 
   return (
@@ -54,7 +61,8 @@ const WebDevRelatedProjects = () => {
             <div className="text-center mb-12 mt-5 md:mt-0">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Work</h2>
               <p className="mt-4 text-lg text-gray-600   mx-auto">
-                Our latest web development initiatives feature innovative designs and smooth functionality, customized to address various business requirements. We prioritize creating responsive layouts and comprehensive solutions that provide outstanding performance, user-friendly experiences, and trackable outcomes for every website built.
+              Explore our related work that highlights our commitment to innovation, seamless functionality, and delivering solutions tailored to meet diverse business needs. We specialize in creating responsive and user-friendly designs that yield measurable results.
+Want to bring your ideas to life? Let us help you achieve your goals with precision and creativity. Get in touch with us today to start your project!
               </p>
             </div>
 
@@ -113,4 +121,4 @@ const WebDevRelatedProjects = () => {
   );
 };
 
-export default WebDevRelatedProjects;
+export default ServicesRelatedProjects;

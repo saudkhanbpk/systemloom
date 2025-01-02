@@ -12,11 +12,12 @@ import webimage5 from "../../../../public/assets/ServiceDetailsImages/webimage5.
 import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
 import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
-import WebDevRelatedProjects from "@/components/services/WebDevRelatedProjects";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
+import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
 const WebDevelopment = () => {
+  const categorySlug = "web-development";
 
   const services = [
     {
@@ -46,10 +47,10 @@ const WebDevelopment = () => {
     <div>
 
       {/* hero section start */}
-      <div className="bg-black w-full lg:min-h-screen md:pt-36 pt-20 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
+      <div className="bg-black w-full  pt-24 md:pt-36 lg:pt-20 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
-        <div className="w-full md:w-[50vw] text-center md:text-left">
-          <h1 className="text-3xl  lg:text-5xl  font-bold">
+        <div className="w-full md:w-[50vw]  text-center md:text-left">
+          <h1 className="text-3xl  lg:text-5xl   font-bold">
           Empower your business with custom web development
           </h1>
           <p className="text-base lg:text-lg mt-3">
@@ -81,10 +82,10 @@ const WebDevelopment = () => {
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
+              className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute  lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full md:w-[800px] lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:px-52  ">
               <h2 className="text-xl sm:text-3xl font-bold mb-3 lg:w-[500px]  ">
                 Bespoke Web Development Tailored to Your Vision
@@ -226,11 +227,11 @@ const WebDevelopment = () => {
       <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-28 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
-          <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+          <div className="relative webDevtext z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Web Development Services with Ongoing Support
             </h2>
-            <p className="text-base md:text-lg text-white webDevtext ">
+            <p className="text-base md:text-lg text-white  ">
               Our commitment doesn’t end with the launch of your website or app.
               We provide comprehensive{" "}
               <strong>web development services,</strong> from concept to
@@ -254,11 +255,13 @@ const WebDevelopment = () => {
       {/* FramedFeatureSection section end */}
 
       {/* RecentWorks section start */}
-      <WebDevRelatedProjects />
+      <ServicesRelatedProjects slug={categorySlug} />
       {/* RecentWorks section end */}
 
+
+
       {/* RelatedServices section start */}
-      <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0 py-12 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 md:px-12 lg:px-0 py-12 sm:py-16">
   <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
     Related Services
   </h2>

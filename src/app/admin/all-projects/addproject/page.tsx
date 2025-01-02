@@ -463,18 +463,18 @@ const AddProjectPage: React.FC = () => {
     <div>
       <button
         type="button"
-        id="social-media-marketing"
-        value="social-media-marketing"
-        onClick={() => handleCategoryChange("social-media-marketing")}
+        id="digital-marketing"
+        value="digital-marketing"
+        onClick={() => handleCategoryChange("digital-marketing")}
         className="mr-2"
       >
-        {formData.category.includes("social-media-marketing") ? (
+        {formData.category.includes("digital-marketing") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="social-media-marketing" className="text-sm text-gray-700">Social Media Marketing & Branding</label>
+      <label htmlFor="digital-marketing" className="text-sm text-gray-700">digital-marketing</label>
     </div>
   </div>
 </div>

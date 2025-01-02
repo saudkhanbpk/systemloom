@@ -48,12 +48,12 @@ const Header: React.FC = () => {
         },
         {
           name: "Mobile App Development",
-          href: "/services/mobile-app-development",
+          href: "/services/app-development",
           icon: <FaMobileAlt />,
         },
         {
           name: "UI & UX Designing",
-          href: "/services/ui-ux-designing",
+          href: "/services/ui-ux-design",
           icon: <FaPaintBrush />,
         },
         { name: "DevOps", href: "/services/devops", icon: <FaCogs /> },

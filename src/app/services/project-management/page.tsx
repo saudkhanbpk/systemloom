@@ -16,8 +16,11 @@ import ProjectManagementRelatedProjects from "@/components/services/ProjectManag
 import Head from "next/head";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
+import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
 const projectManagement = () => {
+  const categorySlug = "project-management";
+
   const services = [
     {
       title: "DevOps",
@@ -46,9 +49,9 @@ const projectManagement = () => {
     <div>
      
       {/* hero section start */}
-      <div className="bg-black w-full min-h-screen flex flex-col md:flex-row   justify-around items-center text-white p-4">
+      <div className="bg-black w-full  pt-24 md:pt-36 lg:pt-20 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
-        <div className="w-full md:w-[50vw] text-center md:text-left mb-6 md:mb-0 md:mt-10  md:px-12   mt-20">
+        <div className="w-full md:w-[50vw]  text-center md:text-left">
           <h1 className="text-3xl lg:text-5xl font-bold">
             Efficient Project Management Services
           </h1>
@@ -75,28 +78,24 @@ const projectManagement = () => {
       {/* hero section end */}
 
       {/* FeatureSection section start */}
-      <div className="max-w-7xl  mx-auto">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start  justify-center lg:mt-12 my-6  relative   ">
-          <div className="relative lg:static lg:flex-shrink-0 lg:w-[300px]  lg:h-[450px] z-10">
+      <div className="max-w-7xl  mx-auto  ">
+        <div className="flex flex-col lg:flex-row items-center  lg:items-start  justify-center lg:mt-12 my-6  relative   ">
+          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
             <Image
               src={projectimage1}
-              alt="Trust Us to handle your Project Management"
+              alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute lg:left-20 lg:top-10 shadow-xl"
+              className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute  lg:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full md:w-[800px]   lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
-            <div className="text-white xl:py-20 lg:px-40">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-                Partner with Expert Consultants
+          <div className="bg-[#9A00FF] w-full md:w-[800px] lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:px-52  ">
+              <h2 className="text-xl sm:text-3xl font-bold mb-3 lg:w-[500px]  ">
+              Partner with Expert Consultants
               </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-                As trusted project management consultants, we bring a wealth of
-                experience to guide your projects from initiation to completion.
-                Whether it's resource allocation, risk assessment, or task
-                prioritization, our consultants deliver strategies that drive
-                measurable success.{" "}
+              As trusted <strong>project management consultants,</strong> we bring a wealth of experience to guide your projects from initiation to completion. Whether it's resource allocation, risk assessment, or task prioritization, our consultants deliver strategies that drive measurable success.
               </p>
             </div>
           </div>
@@ -225,14 +224,14 @@ const projectManagement = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-52 md:mb-52">
+      <div className=" md:relative bg-[#9A00FF]   mx-auto md:py-16  md:mt-52 md:mb-52">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
-          <div className="relative z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+          <div className="relative webDevtext z-10 md:max-w-[600px] text-wrap text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Driving Results Through Expertise
             </h2>
-            <p className="text-base md:text-lg text-white webDevtext ">
+            <p className="text-base md:text-lg text-white  ">
               In a recent collaboration with a tech startup, our project
               management services helped streamline their product launch,
               reducing time-to-market by 30%. We also provided guidance to a
@@ -255,7 +254,7 @@ const projectManagement = () => {
       {/* FramedFeatureSection section end */}
 
       {/* RecentWorks section start */}
-      <ProjectManagementRelatedProjects />
+      <ServicesRelatedProjects  slug={categorySlug} />
       {/* RecentWorks section end */}
 
       {/* RelatedServices section start */}
