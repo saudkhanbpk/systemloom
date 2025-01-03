@@ -76,7 +76,7 @@ router.push("/confirmation")
         </p>
       </div>
       <div className="mt-4">
-        <p className="flex gap-2 items-center text-lg mt-1">
+        <div className="flex gap-2 items-center text-lg mt-1">
         <a
                   href="https://wa.me/+447511801699"
                   target="_blank"
@@ -86,7 +86,7 @@ router.push("/confirmation")
                     <FaWhatsapp size={28} color="#9A00FF" />
                     <span className='text-lg hover:underline'>+44 7511 801699</span>
                   </div>
-
+                  </a>
                   <div className="md:hidden block">
                     <div className=" flex gap-2 items-center text-base mt-2 ">
                       <PhoneCall color="#9A00FF" />
@@ -97,8 +97,8 @@ router.push("/confirmation")
                       </span>
                     </div>
                   </div>
-                </a>
-        </p>
+                
+        </div>
 
         <div className=" md:block hidden">
                 <div className="flex gap-2 items-center text-base ">

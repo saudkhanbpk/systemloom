@@ -354,13 +354,13 @@ const Footer: React.FC = () => {
                 },
                 {
                   name: "Mobile App Development",
-                  link: "/services/mobile-app-development",
+                  link: "/services/app-development",
                 },
                 {
                   name: "DevOps Services & Optimization",
                   link: "/services/devops",
                 },
-                { name: "UI/UX Designing", link: "/services/ui-ux-designing" },
+                { name: "UI/UX Designing", link: "/services/ui-ux-design" },
                 {
                   name: "Software Maintenance",
                   link: "/services/software-maintenance",
@@ -403,29 +403,30 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               <div className="text-xs md:text-sm">
-                <a
-                  href="https://wa.me/+447511801699"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  <div className="flex gap-2 items-center text-base mt-1">
-                    <FaWhatsapp size={28} color="#9A00FF" />
-                    <span>+44 7511 801699</span>
-                  </div>
+  <a
+    href="https://wa.me/+447511801699"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    <div className="flex gap-2 items-center text-base mt-1">
+      <FaWhatsapp size={28} color="#9A00FF" />
+      <span>+44 7511 801699</span>
+    </div>
+  </a>
 
-                  <div className="md:hidden block">
-                    <div className=" flex gap-2 items-center text-base mt-2 ">
-                      <PhoneCall color="#9A00FF" />
-                      <span>
-                        <a href="tel:+13214073272" className="hover:underline">
-                          +1 (321) 407-3272
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
+  <div className="md:hidden block">
+    <div className=" flex gap-2 items-center text-base mt-2 ">
+      <PhoneCall color="#9A00FF" />
+      <span>
+        <a href="tel:+13214073272" className="hover:underline">
+          +1 (321) 407-3272
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+
               <div className=" md:block hidden">
                 <div className="flex gap-2 items-center text-base ">
                   <PhoneCall color="#9A00FF" />

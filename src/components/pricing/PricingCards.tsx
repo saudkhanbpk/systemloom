@@ -43,7 +43,7 @@ const PricingCards: React.FC = () => {
 
   return (
     <>
-      <div className="relative text-white h-screen md:px-4 px-2">
+      <div className="relative text-white md:py-52 py-28 md:px-4 px-2">
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
           <Image

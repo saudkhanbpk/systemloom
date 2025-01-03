@@ -47,7 +47,7 @@ const Devops = () => {
   return (
     <>
       {/* hero section start */}
-      <div className="bg-black w-full  pt-24 md:pt-36 lg:pt-20 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
+      <div className="bg-black w-full  pt-24 md:pt-36 lg:pt-40 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left">
           <h1 className="text-3xl lg:text-5xl font-bold">
