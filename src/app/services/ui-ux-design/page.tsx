@@ -31,7 +31,7 @@ const UIUXDesign = () => {
       description:
         "Creating powerful mobile applications that will capture users and enhance your brand.",
       icon: appDesignImage,
-      link: "/services/mobile-app-development",
+      link: "/services/app-development",
     },
     {
       title: "Graphic Designing",

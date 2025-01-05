@@ -44,7 +44,7 @@ const TeamScalingSection = () => {
 
               <div>
                 <p className="font-normal text-base">Saud Khan</p>
-                <p className="text-sm font-normal text-[#718096]">CEO</p>
+                <p className="text-sm font-normal text-[#2D3748]">CEO</p>
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ const TeamScalingSection = () => {
               />
               <div>
                 <p className="font-normal text-base">Hamdan Khan</p>
-                <p className="text-sm font-normal text-[#718096]">
+                <p className="text-sm font-normal text-[#2D3748]">
                   Project Manager
                 </p>
               </div>
@@ -135,7 +135,7 @@ const TeamScalingSection = () => {
               />
               <div>
                 <p className="font-normal text-base">Aamad Khan</p>
-                <p className="text-sm font-normal text-[#718096]">
+                <p className="text-sm font-normal text-[#2D3748]">
                   Admin Officer
                 </p>
               </div>

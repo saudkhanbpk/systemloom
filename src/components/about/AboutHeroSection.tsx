@@ -1,8 +1,11 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import backgroundImage from "../../../public/assets/aboutImages/backgroundImage.jpeg";
 
 const AboutHeroSection: React.FC = () => {
+  
+
   return (
     <div className="relative bg-gray-900 text-white h-[500px] md:h-[700px]">
       {/* Background Image */}

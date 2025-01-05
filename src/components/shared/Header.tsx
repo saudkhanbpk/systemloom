@@ -237,16 +237,18 @@ const Header: React.FC = () => {
             </p>
           </div>
           <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
-            >
-              {isOpen ? (
-                <X className="block h-6 w-6" />
-              ) : (
-                <Menu className="block h-6 w-6" />
-              )}
-            </button>
+          <button
+  onClick={() => setIsOpen(!isOpen)}
+  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+  aria-label={isOpen ? 'Close menu' : 'Open menu'} // Accessible name for screen readers
+>
+  {isOpen ? (
+    <X className="block h-6 w-6" />
+  ) : (
+    <Menu className="block h-6 w-6" />
+  )}
+</button>
+
           </div>
         </motion.div>
 

@@ -33,7 +33,7 @@ const MobileAppDevelopment = () => {
       description:
         "Building intuitive interfaces that provide a seamless promised user experience.",
       icon: webDesignImage,
-      link: "/services/ui-ux-designing",
+      link: "/services/ui-ux-design",
     },
    
     

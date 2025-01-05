@@ -245,101 +245,101 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col  gap-4">
-            <h2 className="text-base  md:text-lg font-semibold">
-              Industries We Serve
-            </h2>
-            <ul className="flex flex-col gap-4 text-sm">
-              <Link
-                href="/healthcare"
-                className="hover:text-[#9A00FF]"
-              >
-                <li>HealthCare</li>
-              </Link>
-              <Link
-                href="/e-commerce"
-                className="hover:text-[#9A00FF]"
-              >
-                <li>E-Commerce</li>
-              </Link>
-              <Link
-                href="/hospitality"
-                className="hover:text-[#9A00FF]"
-              >
-                <li>Hospitality</li>
-              </Link>
-              <Link
-                href="/real-estate"
-                className="hover:text-[#9A00FF]"
-              >
-                <li>Real Estate</li>
-              </Link>
-              <Link
-                href="/restaurants"
-                className="hover:text-[#9A00FF]"
-              >
-                <li>Restaurants</li>
-              </Link>
-              <Link
-                href="/green-energy"
-                className="hover:text-[#9A00FF]"
-              >
-                <li>Green Energy</li>
-              </Link>
-            </ul>
-          </div>
+          <div className="flex flex-col gap-4">
+  <h2 className="text-base md:text-lg font-semibold">
+    Industries We Serve
+  </h2>
+  <ul className="flex flex-col gap-4 text-sm">
+    <li>
+      <Link href="/healthcare" className="hover:text-[#9A00FF]">
+        HealthCare
+      </Link>
+    </li>
+    <li>
+      <Link href="/e-commerce" className="hover:text-[#9A00FF]">
+        E-Commerce
+      </Link>
+    </li>
+    <li>
+      <Link href="/hospitality" className="hover:text-[#9A00FF]">
+        Hospitality
+      </Link>
+    </li>
+    <li>
+      <Link href="/real-estate" className="hover:text-[#9A00FF]">
+        Real Estate
+      </Link>
+    </li>
+    <li>
+      <Link href="/restaurants" className="hover:text-[#9A00FF]">
+        Restaurants
+      </Link>
+    </li>
+    <li>
+      <Link href="/green-energy" className="hover:text-[#9A00FF]">
+        Green Energy
+      </Link>
+    </li>
+  </ul>
+</div>
+
 
           <div className="">
-            <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
-            <ul className="space-y-2">
-              {[
-                "Home",
-                "About",
-                "Contact",
-                "Blog",
-                "Pricing",
-                "Portfolio",
-                "Career",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+  <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
+  <ul className="space-y-2">
+    {[
+      "Home",
+      "About",
+      "Contact",
+      "Blog",
+      "Pricing",
+      "Portfolio",
+      "Career",
+    ].map((item) => (
+      <li key={item}>
+        <Link
+          href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+          className="text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
+        >
+          {item}
+        </Link>
+      </li>
+    ))}
 
-              {user ? (
-                <>
-                  {user.role === "admin" && (
-                    <Link
-                      href="/admin"
-                      className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
-                    >
-                      Admin
-                    </Link>
-                  )}
-                  <button
-                    onClick={handleLogout}
-                    className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
-                  >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link
-                    href="/login"
-                    className="flex items-center text-sm gap-2 hover:text-[#9A00FF] "
-                  >
-                    Admin
-                  </Link>
-                </>
-              )}
-            </ul>
-          </div>
+    {user ? (
+      <>
+        {user.role === "admin" && (
+          <li>
+            <Link
+              href="/admin"
+              className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
+            >
+              Admin
+            </Link>
+          </li>
+        )}
+        <li>
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
+          >
+            Logout
+          </button>
+        </li>
+      </>
+    ) : (
+      <li>
+        <Link
+          href="/login"
+          className="flex items-center text-sm gap-2 hover:text-[#9A00FF]"
+        >
+          Admin
+        </Link>
+      </li>
+    )}
+  </ul>
+</div>
+
 
           <div>
             <h3 className="text-base md:text-lg font-semibold mb-4">
