@@ -50,10 +50,10 @@ export default function Page() {
       <AboutSection />
       <ServicesSection />
       <TeamScalingSection />
-      <ClientTestimonialsSection />
-      <ProjectsCount />
-      <Companies />
-      <CTASection />
+      {/* <ClientTestimonialsSection /> */}
+      {/* <ProjectsCount /> */}
+      {/* <Companies /> */}
+      {/* <CTASection /> */}
     </div>
   );
 }

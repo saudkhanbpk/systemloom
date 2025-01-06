@@ -47,7 +47,7 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 26)
           .join(" ") + "...",
-      image: "/assets/icons/webdesignicon.png",
+      image: "/assets/homepage/webdesignicon.webp",
       link: "/services/web-development",
       altText: "Web design and development services",
     },
@@ -59,8 +59,8 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 20)
           .join(" ") + "...",
-      image: "/assets/icons/appdevicon.png",
-      link: "/services/mobile-app-development",
+      image: "/assets/homepage/appdevicon.webp",
+      link: "/services/app-development",
       altText: "Providing mobile app development and maintenance",
     },
     {
@@ -71,7 +71,7 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 20)
           .join(" ") + "...",
-      image: "https://cdn-icons-png.flaticon.com/512/5084/5084071.png",
+      image: "/assets/homepage/devops.webp",
       link: "/services/devops",
       altText: "Development and maintenance all at one place",
     },
@@ -83,7 +83,7 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 23)
           .join(" ") + "...",
-      image: "/assets/icons/webdevicon.png",
+      image: "/assets/homepage/webdevicon.webp",
       link: "/services/qa-testing",
       altText: "Software testing solutions at TechCreator",
     },
@@ -95,8 +95,8 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 27)
           .join(" ") + "...",
-      image: "https://cdn-icons-png.flaticon.com/512/17109/17109606.png",
-      link: "/services/ui-ux-designing",
+      image: "/assets/homepage/uiuxdesign.webp",
+      link: "/services/ui-ux-design",
       altText: "Design your dream into reality",
     },
     {
@@ -120,7 +120,7 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 27)
           .join(" ") + "...",
-      image: "https://cdn-icons-png.flaticon.com/512/9402/9402518.png",
+      image: "/assets/homepage/projectmanagement.webp",
       link: "/services/project-management",
       altText: "Project Management Services",
     },
@@ -132,7 +132,7 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 27)
           .join(" ") + "...",
-      image: "https://cdn-icons-png.flaticon.com/512/13122/13122980.png",
+      image: "/assets/homepage/seo.webp",
       link: "/services/seo-content-writing",
       altText: "SEO and content writing for better optimization",
     },
@@ -144,7 +144,7 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 24)
           .join(" ") + "...",
-      image: "https://cdn-icons-png.flaticon.com/512/8463/8463643.png",
+      image: "/assets/homepage/softwaremaintanence.webp",
       link: "/services/software-maintenance",
       altText: "Software maintenance services at TechCreator",
     },
@@ -156,7 +156,7 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 24)
           .join(" ") + "...",
-      image: "https://cdn-icons-png.flaticon.com/512/3050/3050467.png",
+      image: "/assets/homepage/digitalmarketing.webp",
       link: "/services/digital-marketing",
       altText: "Social media marketing and branding services",
     },

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import squareImage from "../../../public/assets/aboutImages/Group 143725868.png";
-import group1 from "../../../public/assets/aboutImages/Mask group.png";
-import group2 from "../../../public/assets/aboutImages/Mask group (1).png";
-import group3 from "../../../public/assets/aboutImages/Mask group (2).png";
+import group1 from "../../../public/assets/homepage/Mask group.webp";
+import group2 from "../../../public/assets/homepage/Mask group (1).webp";
+import group3 from "../../../public/assets/homepage/Mask group (2).webp";
 
 function AboutSection() {
   return (

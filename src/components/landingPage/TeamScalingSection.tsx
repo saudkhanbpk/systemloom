@@ -1,8 +1,7 @@
 import Image from "next/image";
-import team1 from "../../../public/assets/landingPage/Rectangle 17.png";
-import person1 from "../../../public/assets/landingPage/Ellipse 185.png";
-import team2 from "../../../public/assets/landingPage/Rectangle 18.png";
-import teemImage3 from "../../../public/assets/landingPage/team3.avif";
+import team1 from "../../../public/assets/homepage/Rectangle 17.webp";
+import team2 from "../../../public/assets/homepage/Rectangle 18.webp";
+import teemImage3 from "../../../public/assets/homepage/teamimage3.webp";
 import projectManagerImage from "../../../public/assets/Teamimages/hamdan.jpg";
 import CeoImage from "../../../public/assets/Teamimages/ceoimage2.jpg";
 import AdminOfficerImage from "../../../public/assets/Teamimages/hamdad.jpg";
@@ -61,13 +60,13 @@ const TeamScalingSection = () => {
         </div>
 
         <div className="flex flex-col gap-10 lg:flex-row mb-10">
-          <div className="w-full mx-auto md:mx-0">
+        <div className="w-full  lg:max-w-[600px] mx-auto md:mx-0">
             <Image
               src={team2}
-              alt="Bringing Tech and Marketing together "
+              alt="Organizing TecCreator team to offer development services"
               width={700}
               height={450}
-              className="w-full md:w-[120vw] h-[350px] rounded-lg shadow-lg object-cover"
+              className="w-full  md:w-[120vw] h-[350px] rounded-lg shadow-lg object-cover"
             />
           </div>
 
@@ -105,12 +104,13 @@ const TeamScalingSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row">
-          <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
+
+        <div className="flex flex-col lg:flex-row mb-10 gap-2">
+          <div className=" md:w-[700px] mb-8 leading-[44px] mt-5 lg:mb-0 ">
             <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">
               What makes us Apart from Others
             </h2>
-            <p className=" mb-4 font-normal text-lg  ">
+            <p className="mb-4 font-normal text-lg  ">
               We don’t just deliver services; we work closely with our clients
               to understand their vision and align our strategies to achieve
               their goals. By staying ahead of market trends, we are able to
@@ -118,7 +118,7 @@ const TeamScalingSection = () => {
               marketing solutions.
             </p>
 
-            <div className="border-l-4 border-purple-600 pl-4 mb-6">
+            <div className="border-l-4 border-[#9A00FF] pl-4 mb-6">
               <p className="text-[#9A00FF] italic font-light text-base mb-2">
                 "With us, you don’t just get a service provider—you get a
                 partner dedicated to your growth."
@@ -141,13 +141,13 @@ const TeamScalingSection = () => {
               </div>
             </div>
           </div>
-          <div className=" mx-auto md:mx-0">
+          <div className="w-full  lg:max-w-[600px] mx-auto md:mx-0">
             <Image
               src={teemImage3}
-              alt="top developers and designers at TechCreator"
+              alt="Organizing TecCreator team to offer development services"
               width={700}
               height={450}
-              className="w-full md:w-[120vw] h-[350px] rounded-lg shadow-lg object-cover"
+              className="w-full  md:w-[120vw] h-[350px] rounded-lg shadow-lg object-cover"
             />
           </div>
         </div>
