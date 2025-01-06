@@ -1,5 +1,5 @@
 import IndustryRelatedProjects from '@/components/Industorycategory/industoryRelatedProject';
-import healthcareImage from "../../../public/assets/portfolioImages/healthcare.png";
+import healthcareImage from "../../../public/assets/portfoliopage/healthcare.webp";
 import Image from 'next/image';
 import React from 'react'
 

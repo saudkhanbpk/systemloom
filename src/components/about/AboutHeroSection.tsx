@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import backgroundImage from "../../../public/assets/aboutImages/backgroundImage.jpeg";
+import backgroundImage from "../../../public/assets/aboutpage/backgroundImage .webp";
 
 const AboutHeroSection: React.FC = () => {
   

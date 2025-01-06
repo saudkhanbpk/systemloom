@@ -12,18 +12,18 @@ interface Profile {
 
 const profiles: Profile[] = [
 
-  {
-    name: "Saad",
-    position: "Angular Developer ",
-    imageUrl: "/assets/Teamimages/saad.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/saad-khan-42716a222",
-    width: 300,
-    height: 300,
-  },
+  // {
+  //   name: "Saad",
+  //   position: "Angular Developer ",
+  //   imageUrl: "/assets/Teamimages/saad.jpg",
+  //   linkedInUrl: "https://www.linkedin.com/in/saad-khan-42716a222",
+  //   width: 300,
+  //   height: 300,
+  // },
   {
     name: "Aamad Khan",
     position: "Admin Officer",
-    imageUrl: "/assets/Teamimages/hamdad.jpg",
+    imageUrl: "/assets/aboutpage/hamdad.webp",
     linkedInUrl: "https://www.linkedin.com/in/amad-khan-11b394263",
     width: 300,
     height: 300,
@@ -31,32 +31,34 @@ const profiles: Profile[] = [
   {
     name: "Hamdan Khan",
     position: "Project Manager",
-    imageUrl: "/assets/Teamimages/hamdan.jpg",
+    imageUrl: "/assets/aboutpage/hamdan.webp",
     linkedInUrl: "http://www.linkedin.com/in/hamdan-khan-60b03a1ba",
     width: 300,
     height: 300,
   },
+ 
+
   {
-    name: "Zakarya Khan",
-    position: "Mern Stack Developer",
-    imageUrl: "/assets/Teamimages/zaki.jpg",
-    linkedInUrl: "http://www.linkedin.com/in/zakarya-khan-4038162a5",
+    name: "Aamir Shahzad",
+    position: "SEO expert & Project Manager",
+    imageUrl: "/assets/aboutpage/amir.webp",
+    linkedInUrl: "https://www.linkedin.com/in/aamirshahzads",
     width: 300,
     height: 300,
   },
 
-  // {
-  //   name: "Aamir Shahzad",
-  //   position: "SEO expert & Project Manager",
-  //   imageUrl: "/assets/Teamimages/amir.jpg",
-  //   linkedInUrl: "https://www.linkedin.com/in/ihtishamsaeed/",
-  //   width: 300,
-  //   height: 300,
-  // },
+  {
+    name: "Zakarya Khan",
+    position: "Mern Stack Developer",
+    imageUrl: "/assets/aboutpage/zaki.webp",
+    linkedInUrl: "http://www.linkedin.com/in/zakarya-khan-4038162a5",
+    width: 300,
+    height: 300,
+  },
   {
     name: "Ihtizaz",
     position: "Angular Developer",
-    imageUrl: "/assets/Teamimages/ihtizaz.jpg",
+    imageUrl: "/assets/aboutpage/ihtizaz.webp",
     linkedInUrl: "https://www.linkedin.com/in/ihtizazahmad",
     width: 300,
     height: 300,
@@ -64,7 +66,7 @@ const profiles: Profile[] = [
   {
     name: "Imran Khan",
     position: "Mern Stack Developer",
-    imageUrl: "/assets/Teamimages/imran.jpg",
+    imageUrl: "/assets/aboutpage/imran.webp",
     linkedInUrl: "https://linkedin.com/in/imrookhan44",
     width: 300,
     height: 300,
@@ -72,7 +74,7 @@ const profiles: Profile[] = [
   {
     name: "Ishaq Khan",
     position: "Frontend Developer",
-    imageUrl: "/assets/Teamimages/ishaq.jpg",
+    imageUrl: "/assets/aboutpage/ishaq.webp",
     linkedInUrl: "https://www.linkedin.com/in/ishaqcoder",
     width: 300,
     height: 300,
@@ -80,7 +82,7 @@ const profiles: Profile[] = [
   {
     name: "Saad",
     position: "Angular Developer ",
-    imageUrl: "/assets/Teamimages/saad.jpg",
+    imageUrl: "/assets/aboutpage/saad.webp",
     linkedInUrl: "https://www.linkedin.com/in/saad-khan-42716a222",
     width: 300,
     height: 300,
@@ -88,7 +90,7 @@ const profiles: Profile[] = [
   {
     name: "Sameer Khan",
     position: "Mern Stack Developer",
-    imageUrl: "/assets/Teamimages/sameer.jpg",
+    imageUrl: "/assets/aboutpage/sameer.webp",
     linkedInUrl: "https://www.linkedin.com/in/sameer-khan-660966251",
     width: 300,
     height: 300,
@@ -96,7 +98,7 @@ const profiles: Profile[] = [
   {
     name: "Sulaiman Khan",
     position: "Frontend Developer",
-    imageUrl: "/assets/Teamimages/sulaiman.jpg",
+    imageUrl: "/assets/aboutpage/sulaiman.webp",
     linkedInUrl: "https://www.linkedin.com/in/sulaiman-khan-5932bb308",
     width: 300,
     height: 300,
@@ -104,7 +106,7 @@ const profiles: Profile[] = [
   {
     name: "Waheed Khan",
     position: "App Developer",
-    imageUrl: "/assets/Teamimages/waheed.jpg",
+    imageUrl: "/assets/aboutpage/waheed.webp",
     linkedInUrl: "https://www.linkedin.com/in/waheed-ahmad-khan-3570491ba",
     width: 300,
     height: 300,
@@ -112,7 +114,7 @@ const profiles: Profile[] = [
   {
     name: "Afaq Khan",
     position: "App Developer ",
-    imageUrl: "/assets/Teamimages/afaq.jpg",
+    imageUrl: "/assets/aboutpage/afaq.webp",
     linkedInUrl: "https://www.linkedin.com/in/theafaq-ul-islam",
     width: 300,
     height: 300,

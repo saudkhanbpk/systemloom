@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import sunGlasses from '../../../public/assets/careerImages/face-sunglasses 1.png';
+import sunGlasses from '../../../public/assets/careerpage/face-sunglasses 1.png';
 
 interface ValueCardType {
   icon: StaticImageData | string; 
@@ -30,7 +30,7 @@ const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
 
 const CoreValues: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16 md:mt-44 mt-32">
+    <div className="max-w-6xl mx-auto px-4 py-16 md:mt-44 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 space-x-3 ">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Our core values</h2>

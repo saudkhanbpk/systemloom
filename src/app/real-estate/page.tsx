@@ -1,5 +1,5 @@
 import IndustryRelatedProjects from '@/components/Industorycategory/industoryRelatedProject';
-import realstateImage from "../../../public/assets/portfolioImages/realstate.png";
+import realstateImage from "../../../public/assets/portfoliopage/realstate.webp";
 import Image from 'next/image';
 import React from 'react'
 

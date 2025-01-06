@@ -3,11 +3,11 @@
 import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
 import { Instagram } from 'lucide-react';
-import image from "../../../public/assets/careerImages/andreea-avramescu-wR56AUlEsE4-unsplash 1.png";
-import image1 from "../../../public/assets/careerImages/Mask group.png";
-import image2 from "../../../public/assets/careerImages/thisisengineering-raeng-8Jw2WhafOOg-unsplash 1.png";
-import image3 from "../../../public/assets/careerImages/Mask group (1).png";
-import image4 from "../../../public/assets/careerImages/Mask group (2).png";
+import image from "../../../public/assets/careerpage/career1.webp";
+import image1 from "../../../public/assets/careerpage/career2.webp";
+import image2 from "../../../public/assets/careerpage/careeer3.webp";
+import image3 from "../../../public/assets/careerpage/career4.webp";
+import image4 from "../../../public/assets/careerpage/career5.webp";
 import Link from 'next/link';
 
 const DiversitySection: FC = () => {

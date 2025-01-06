@@ -1,12 +1,12 @@
 import React from "react";
-import qatestinImage from "../../../../public/assets/graphice design images/qatesting.png";
+import qatestinImage from "../../../../public/assets/servicespages/qatesting.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import qaimage1 from "../../../../public/assets/graphice design images/qaimage1.png";
-import qaimage2 from "../../../../public/assets/graphice design images/qaimage2.png";
-import qaimage3 from "../../../../public/assets/graphice design images/qaimage3.png";
-import qaimage4 from "../../../../public/assets/graphice design images/qaimage4.png";
-import qaimage5 from "../../../../public/assets/graphice design images/qaimage5.png";
+import qaimage1 from "../../../../public/assets/servicespages/qaimage1.webp";
+import qaimage2 from "../../../../public/assets/servicespages/qaimage2.webp";
+import qaimage3 from "../../../../public/assets/servicespages/qaimage3.webp";
+import qaimage4 from "../../../../public/assets/servicespages/qaimage4.webp";
+import qaimage5 from "../../../../public/assets/servicespages/qaimage5.webp";
 
 // RelatedServices images
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";

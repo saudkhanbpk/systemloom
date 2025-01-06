@@ -1,17 +1,19 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import company1 from "../../../public/assets/companies/petronworklogo.png";
-import company2 from "../../../public/assets/companies/GeekshubLogo.png";
-import company3 from "../../../public/assets/companies/bnblogo.png";
-import company4 from "../../../public/assets/companies/musafirLogo.svg";
-import company5 from "../../../public/assets/companies/PatronPal logo.png";
-import company7 from "../../../public/assets/companies/Rectangle 21848.png";
+import company1 from "../../../public/assets/homepage/image 149.webp";
+import company2 from "../../../public/assets/homepage/image 150.webp";
+import company3 from "../../../public/assets/homepage/bnblogo.webp";
+import company4 from "../../../public/assets/homepage/image 152.webp";
+import company5 from "../../../public/assets/homepage/PatronPal logo.webp";
+import company6 from "../../../public/assets/homepage/image 181.webp";
+import company7 from "../../../public/assets/homepage/image 182.webp";
+import company8 from "../../../public/assets/homepage/hiredeveloper.webp";
 import Link from "next/link";
 import Image from "next/image";
 
 const Companies = () => {
-  const companies = [company1, company2, company3, company4, company5];
+  const companies = [company1, company2, company3, company4, company5, company6, company7];
 
   return (
     <div className=" overflow-x-hidden   bg-[#9A00FF]">
@@ -85,7 +87,7 @@ export const CTASection = () => {
           </div>
           <div className=" ">
             <Image
-              src={company7}
+              src={company8}
               alt="Team working together"
               width={300}
               height={280}

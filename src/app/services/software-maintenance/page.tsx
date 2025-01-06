@@ -1,12 +1,12 @@
 import React from "react";
-import heroimage from "../../../../public/assets/ServiceDetailsImages/soft.png";
+import heroimage from "../../../../public/assets/servicespages/softwareMaintenece.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import softwareImage1 from "../../../../public/assets/graphice design images/softImage1.png";
-import softwareImage2 from "../../../../public/assets/graphice design images/softimage2.png";
-import softwareImage3 from "../../../../public/assets/graphice design images/softImage3.png";
-import softwareImage4 from "../../../../public/assets/graphice design images/softImage4.png";
-import softwareImage5 from "../../../../public/assets/graphice design images/softimage5.png";
+import softwareImage1 from "../../../../public/assets/servicespages/softImage1.webp";
+import softwareImage2 from "../../../../public/assets/servicespages/softimage2.webp";
+import softwareImage3 from "../../../../public/assets/servicespages/softImage3.webp";
+import softwareImage4 from "../../../../public/assets/servicespages/softImage4.webp";
+import softwareImage5 from "../../../../public/assets/servicespages/softimage5.webp";
 
 // RelatedServices images
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";

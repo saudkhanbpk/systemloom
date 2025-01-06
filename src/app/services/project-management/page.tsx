@@ -1,12 +1,12 @@
 import React from "react";
-import projectManagementImage from "../../../../public/assets/graphice design images/projectmanagement.png";
+import projectManagementImage from "../../../../public/assets/servicespages/projectmanagement.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import projectimage1 from "../../../../public/assets/graphice design images/project1.png";
-import projectimage2 from "../../../../public/assets/graphice design images/project2.png";
-import projectimage3 from "../../../../public/assets/graphice design images/project3.png";
-import projectimage4 from "../../../../public/assets/graphice design images/project4.png";
-import projectimage5 from "../../../../public/assets/graphice design images/project5.png";
+import projectimage1 from "../../../../public/assets/servicespages/project1.webp";
+import projectimage2 from "../../../../public/assets/servicespages/project2.webp";
+import projectimage3 from "../../../../public/assets/servicespages/project3.webp";
+import projectimage4 from "../../../../public/assets/servicespages/project4.webp";
+import projectimage5 from "../../../../public/assets/servicespages/project5.webp";
 
 // RelatedServices images
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";

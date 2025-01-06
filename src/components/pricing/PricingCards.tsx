@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import backgroundImage from "../../../public/assets/pricingPage/backgroundImage.jpeg";
+import backgroundImage from "../../../public/assets/pricingpage/backgroundImage .webp";
 import React, { useRef } from "react";
-import frontImage from "../../../public/assets/pricing_images/List → Listitem.png";
-import pricing2 from "../../../public/assets/pricing_images/pricing1 (2).png";
-import pricing1 from "../../../public/assets/pricing_images/pricing1 (1).png";
+import frontImage from "../../../public/assets/pricingpage/List → Listitem.webp";
+import pricing2 from "../../../public/assets/pricingpage/pricing1 (1).webp";
+import pricing1 from "../../../public/assets/pricingpage/pricing1 (2).webp";
 import PricingForm from "./PricingForm";
 import { FaArrowDown } from "react-icons/fa";
 

@@ -1,12 +1,12 @@
 import React from "react";
-import SEOImage from "../../../../public/assets/ServiceDetailsImages/seo1.png";
+import SEOImage from "../../../../public/assets/servicespages/seoheroimage.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import seoimage1 from "../../../../public/assets/graphice design images/seoimage1.png";
-import seoimage2 from "../../../../public/assets/graphice design images/seoimade2.png";
-import seoimage3 from "../../../../public/assets/graphice design images/seoimage3.png";
-import seoimage4 from "../../../../public/assets/graphice design images/seoimage4.png";
-import seoimage5 from "../../../../public/assets/graphice design images/seoimage5.png";
+import seoimage1 from "../../../../public/assets/servicespages/seoimage1.webp";
+import seoimage2 from "../../../../public/assets/servicespages/seoimade2.webp";
+import seoimage3 from "../../../../public/assets/servicespages/seoimage3.webp";
+import seoimage4 from "../../../../public/assets/servicespages/seoimage4.webp";
+import seoimage5 from "../../../../public/assets/servicespages/seoimage5.webp";
 
 
 // RelatedServices images

@@ -1,12 +1,12 @@
 import React from "react";
-import webDevelopmentImagehero from "../../../../public/assets/graphice design images/webdevelopment.png";
+import webDevelopmentImagehero from "../../../../public/assets/servicespages/webdevelopment.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import webimage1 from "../../../../public/assets/ServiceDetailsImages/webImage1.png";
-import webimage2 from "../../../../public/assets/ServiceDetailsImages/webserviceImage1.png";
-import webimage3 from "../../../../public/assets/ServiceDetailsImages/webserviceimage2.png";
-import webimage4 from "../../../../public/assets/ServiceDetailsImages/webserviceimage3.png";
-import webimage5 from "../../../../public/assets/ServiceDetailsImages/webimage5.png";
+import webimage1 from "../../../../public/assets/servicespages/webImage1.webp";
+import webimage2 from "../../../../public/assets/servicespages/webserviceImage1.webp";
+import webimage3 from "../../../../public/assets/servicespages/webserviceimage2.webp";
+import webimage4 from "../../../../public/assets/servicespages/webserviceimage3.webp";
+import webimage5 from "../../../../public/assets/servicespages/webimage5.webp";
 
 // RelatedServices images
 import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";

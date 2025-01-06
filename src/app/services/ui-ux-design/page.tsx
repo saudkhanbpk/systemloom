@@ -1,12 +1,12 @@
 import React from "react";
-import UIUXDesignImage from "../../../../public/assets/graphice design images/UIDesign.png";
+import UIUXDesignImage from "../../../../public/assets/servicespages/UIDesign.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import uxdesignimage1 from "../../../../public/assets/graphice design images/uxdesign1.png";
-import uxdesignimage2 from "../../../../public/assets/graphice design images/uxdesign2.png";
-import uxdesignimage3 from "../../../../public/assets/graphice design images/uxdesign3.png";
-import uxdesignimage4 from "../../../../public/assets/graphice design images/uxdesign4.png";
-import uxdesignimage5 from "../../../../public/assets/graphice design images/uxeesign5.png";
+import uxdesignimage1 from "../../../../public/assets/servicespages/uxdesign1.webp";
+import uxdesignimage2 from "../../../../public/assets/servicespages/uxdesign2.webp";
+import uxdesignimage3 from "../../../../public/assets/servicespages/uxdesign3.webp";
+import uxdesignimage4 from "../../../../public/assets/servicespages/uxdesign4.webp";
+import uxdesignimage5 from "../../../../public/assets/servicespages/uxeesign5.webp";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";

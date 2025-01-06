@@ -1,4 +1,4 @@
-import staticImage from '../../../public/assets/portfolioImages/Frame 5073.png';
+import staticImage from '../../../public/assets/portfoliopage/heroimage.webp';
 import Image from 'next/image';
 
 

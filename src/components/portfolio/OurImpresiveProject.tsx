@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import healthcareImage from "../../../public/assets/portfolioImages/healthcare.png";
-import restaurantImage from "../../../public/assets/portfolioImages/restaurant.png";
-import realstateImage from "../../../public/assets/portfolioImages/realstate.png";
-import ecommerceImage from "../../../public/assets/portfolioImages/eccommerce.png";
-import HospitalityImage from "../../../public/assets/portfolioImages/hospitality.png";
-import greenEnergyImage from "../../../public/assets/portfolioImages/greenenergy.png";
+import healthcareImage from "../../../public/assets/portfoliopage/healthcare.webp";
+import restaurantImage from "../../../public/assets/portfoliopage/restaurant.webp";
+import realstateImage from "../../../public/assets/portfoliopage/realstate.webp";
+import ecommerceImage from "../../../public/assets/portfoliopage/eccommerce.webp";
+import HospitalityImage from "../../../public/assets/portfoliopage/hospitality.webp";
+import greenEnergyImage from "../../../public/assets/portfoliopage/greenenergy.webp";
 import Link from "next/link";
 
 const OurImpressiveProject = () => {

@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import digitalMarketingHeroImage from "../../../../public/assets/graphice design images/digitalmarketionHeroImage.png";
-import marketingImage1 from "../../../../public/assets/graphice design images/digitalmarketing1.png";
-import marketingImage2 from "../../../../public/assets/graphice design images/digitalmarketing2.png";
-import marketingImage3 from "../../../../public/assets/graphice design images/digitalmarketing3.png";
-import marketingImage4 from "../../../../public/assets/graphice design images/digitalmarketing4.png";
-import marketingImage5 from "../../../../public/assets/graphice design images/digitalmarketing5.png";
+import digitalMarketingHeroImage from "../../../../public/assets/servicespages/digitalmarketionHeroImage.webp";
+import marketingImage1 from "../../../../public/assets/servicespages/digitalmarketing1.webp";
+import marketingImage2 from "../../../../public/assets/servicespages/digitalmarketing2.webp";
+import marketingImage3 from "../../../../public/assets/servicespages/digitalmarketing3.webp";
+import marketingImage4 from "../../../../public/assets/servicespages/digitalmarketing4.webp";
+import marketingImage5 from "../../../../public/assets/servicespages/digitalmarketing5.webp";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";

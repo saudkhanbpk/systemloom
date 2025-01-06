@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import portfolioImage from "../../../public/assets/portfolioImages/portfolioImage.png";
+import portfolioImage from "../../../public/assets/portfoliopage/portfolioImage.webp";
 
 const PortfolioSection = () => {
   return (
@@ -10,8 +10,8 @@ const PortfolioSection = () => {
         <Image
           src={portfolioImage}
           alt="TechCreator storing your vision into impactful and scalable secured solutions"
-          width={300}
-          height={300}
+          width={500}
+          height={500}
           className="object-cover w-full"
         />
       </div>

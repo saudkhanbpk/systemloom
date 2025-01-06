@@ -1,12 +1,12 @@
 import React from "react";
-import heroimage from "../../../../public/assets/ServiceDetailsImages/QA.png";
+import heroimage from "../../../../public/assets/servicespages/devops.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import devopimage1 from "../../../../public/assets/graphice design images/devopimag1.png";
-import devopimage2 from "../../../../public/assets/graphice design images/devopimage2.png";
-import devopimage3 from "../../../../public/assets/graphice design images/devopimage3.png";
-import devopimage4 from "../../../../public/assets/graphice design images/devopimage4.png";
-import devopimage5 from "../../../../public/assets/graphice design images/devopimage5.png";
+import devopimage1 from "../../../../public/assets/servicespages/devopimag1.webp";
+import devopimage2 from "../../../../public/assets/servicespages/devopimage2.webp";
+import devopimage3 from "../../../../public/assets/servicespages/devopimage3.webp";
+import devopimage4 from "../../../../public/assets/servicespages/devopimage4.webp";
+import devopimage5 from "../../../../public/assets/servicespages/devopimage5.webp";
 
 // RelatedServices images
 import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";

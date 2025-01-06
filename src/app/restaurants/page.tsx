@@ -1,5 +1,5 @@
 import IndustryRelatedProjects from '@/components/Industorycategory/industoryRelatedProject';
-import restaurantImage from "../../../public/assets/portfolioImages/restaurant.png";
+import restaurantImage from "../../../public/assets/portfoliopage/restaurant.webp";
 import Image from 'next/image';
 import React from 'react'
 

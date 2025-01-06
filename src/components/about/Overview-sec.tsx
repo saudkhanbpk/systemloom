@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Linkedin from "../../../public/assets/icons/Vector.png";
+import croImage from "../../../public/assets/aboutpage/ceoimage2.webp"
 
 const OverviewSec: React.FC = () => {
   return (
@@ -36,7 +37,7 @@ const OverviewSec: React.FC = () => {
         <div className="relative flex w-full justify-end items-center   md:w-[478px] h-[400px] md:h-[380px] rounded-[15px] group  max-w-xs mx-auto  overflow-hidden">
           {/* Image with opacity on hover */}
           <Image
-            src="/assets/Teamimages/ceoimage2.jpg"
+            src={croImage}
             width={330}
             height={300}
             alt="ceo_image"

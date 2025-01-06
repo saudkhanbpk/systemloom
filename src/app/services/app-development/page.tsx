@@ -1,12 +1,12 @@
 import React from "react";
-import heroappdevelopmentImage from "../../../../public/assets/ServiceDetailsImages/appimg.png";
+import heroappdevelopmentImage from "../../../../public/assets/servicespages/appimage.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import appImage1 from "../../../../public/assets/graphice design images/appimage1.png";
-import appImage2 from "../../../../public/assets/graphice design images/appImage2.png";
-import appImage3 from "../../../../public/assets/graphice design images/appImage3.png";
-import appImage4 from "../../../../public/assets/graphice design images/appImag4.png";
-import appImage from "../../../../public/assets/graphice design images/MobileAppDevelopment.png";
+import appImage1 from "../../../../public/assets/servicespages/appimage1.webp";
+import appImage2 from "../../../../public/assets/servicespages/appImage2.webp";
+import appImage3 from "../../../../public/assets/servicespages/appImage3.webp";
+import appImage4 from "../../../../public/assets/servicespages/appImag4.webp";
+import appImage from "../../../../public/assets/servicespages/MobileAppDevelopment.webp";
 
 
 // RelatedServices images

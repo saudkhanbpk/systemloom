@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import CommonButton from "../common/Button";
 import { FC } from "react";
-import CareerSectionImage from "../../../public/assets/careerImages/Rectangle 402.png";
+import CareerSectionImage from "../../../public/assets/careerpage/Rectangle 402.webp";
 import axios from "axios";
 import { backend_url } from "@/newLayout";
 import { toast } from "react-toastify";

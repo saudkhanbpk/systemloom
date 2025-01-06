@@ -1,6 +1,5 @@
 import IndustryRelatedProjects from '@/components/Industorycategory/industoryRelatedProject';
-import GreenEnergyProject from '@/components/Industorycategory/industoryRelatedProject'
-import greenEnergyImage from "../../../public/assets/portfolioImages/greenenergy.png";
+import greenEnergyImage from "../../../public/assets/portfoliopage/greenenergy.webp";
 
 import React from 'react'
 import Image from 'next/image';

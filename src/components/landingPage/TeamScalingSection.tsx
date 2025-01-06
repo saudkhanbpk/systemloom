@@ -2,9 +2,9 @@ import Image from "next/image";
 import team1 from "../../../public/assets/homepage/Rectangle 17.webp";
 import team2 from "../../../public/assets/homepage/Rectangle 18.webp";
 import teemImage3 from "../../../public/assets/homepage/teamimage3.webp";
-import projectManagerImage from "../../../public/assets/Teamimages/hamdan.jpg";
-import CeoImage from "../../../public/assets/Teamimages/ceoimage2.jpg";
-import AdminOfficerImage from "../../../public/assets/Teamimages/hamdad.jpg";
+import projectManagerImage from "../../../public/assets/aboutpage/hamdan.webp";
+import CeoImage from "../../../public/assets/aboutpage/ceoimage2.webp";
+import AdminOfficerImage from "../../../public/assets/aboutpage/hamdad.webp";
 
 const TeamScalingSection = () => {
   return (

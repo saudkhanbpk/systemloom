@@ -1,12 +1,12 @@
 import React from "react";
-import heroimage from "../../../../public/assets/ServiceDetailsImages/Designer_working_with_pen_display_Illustration-removebg-preview 1.png";
+import heroimage from "../../../../public/assets/servicespages/graphichero.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import graphic1 from "../../../../public/assets/graphice design images/graphi1.png";
-import graphic2 from "../../../../public/assets/graphice design images/graphic2.png";
-import graphic3 from "../../../../public/assets/graphice design images/graphic3.png";
-import FramedFeatureSectionImage from "../../../../public/assets/graphice design images/FramedFeatureSection.png";
-import FeatureImage from "../../../../public/assets/graphice design images/featureimage.png";
+import graphic1 from "../../../../public/assets/servicespages/graphi1.webp";
+import graphic2 from "../../../../public/assets/servicespages/graphic2.webp";
+import graphic3 from "../../../../public/assets/servicespages/graphic3.webp";
+import FramedFeatureSectionImage from "../../../../public/assets/servicespages/FramedFeatureSection.webp";
+import FeatureImage from "../../../../public/assets/servicespages/featureimage.webp";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";

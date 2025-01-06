@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import about1 from "../../../public/assets/aboutImages/about1.png";
-import about2 from "../../../public/assets/aboutImages/about2.png";
-import about3 from "../../../public/assets/aboutImages/about3.png";
+import about1 from "../../../public/assets/aboutpage/about1.webp";
+import about2 from "../../../public/assets/aboutpage/about2.webp";
+import about3 from "../../../public/assets/aboutpage/about3.webp";
 
 const Overview: React.FC = () => {
   return (

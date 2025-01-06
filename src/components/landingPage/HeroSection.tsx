@@ -12,11 +12,11 @@ function HeroSection() {
           loop
           muted
           playsInline
-          preload="auto" // Ensure the video is loaded early
+          preload="auto" 
           className="object-cover w-full h-full opacity-25"
         >
           <source
-            src="/assets/landingPage/backgroundVideo.webm"
+            src="/assets/homepage/backgroundVideo.webm"
             type="video/webm"
           />
           Your browser does not support the video tag.
