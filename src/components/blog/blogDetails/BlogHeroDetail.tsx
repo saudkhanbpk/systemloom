@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImage from "../../../../public/assets/blog/blogbg.jpeg"
+import backgroundImage from "../../../../public/assets/homepage/blogbg (convert.io).webp"
 import Image from 'next/image';
 
 const BlogHeroDetail = () => {
