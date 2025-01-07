@@ -46,14 +46,25 @@ export default function Page() {
         }}
       />
 
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <TeamScalingSection />
-      <ClientTestimonialsSection />
+    
+<HeroSection />
+      
+      {/* Sections with max-w-7xl */}
+      <div className="max-w-7xl mx-auto">
+        <AboutSection />
+        <ServicesSection />
+        <TeamScalingSection />
+        <ClientTestimonialsSection />
+      </div>
+
+      
       <ProjectsCount />
       <Companies />
-      <CTASection />
+      
+     
+      <div className="max-w-7xl mx-auto">
+        <CTASection />
+      </div>
     </div>
   );
 }

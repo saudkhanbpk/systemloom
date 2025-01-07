@@ -8,8 +8,8 @@ import AdminOfficerImage from "../../../public/assets/aboutpage/hamdad.webp";
 
 const TeamScalingSection = () => {
   return (
-    <section className="py-16 md:p-16 ">
-      <div className="md:mx-10 px-2">
+    <section className="py-16 xl:px-0 sm:px-6 px-1  ">
+      <div className=" ">
         {/* section 1 */}
         <div className="flex flex-col lg:flex-row mb-10">
           <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">

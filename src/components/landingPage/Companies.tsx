@@ -17,8 +17,8 @@ const Companies = () => {
 
   return (
     <div className=" overflow-x-hidden   bg-[#9A00FF]">
-      <div className="  mx-auto">
-        <div className=" mx-auto max-w-6xl flex py-4 ">
+      <div className=" w-[90vw">
+        <div className="  flex py-4 ">
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
@@ -67,10 +67,10 @@ export default Companies;
 
 export const CTASection = () => {
   return (
-    <section className="mb-32 mt-16 ">
-      <div className=" mx-auto w-[95%] h-auto md:h-[300px]">
-        <div className="flex flex-col    md:flex-row justify-around">
-          <div className="md:w-1/2 mb-8 md:mb-0 px-6 py-16 leading-10">
+    <section className="mb-32 mt-16  ">
+      <div className="  h-auto md:h-[300px]">
+        <div className="flex flex-col    md:flex-row ">
+          <div className=" mb-8 md:mb-0  py-16 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
               "Looking for top developers and designers? Let's build something
               great together. Get in touch today!"
@@ -91,7 +91,7 @@ export const CTASection = () => {
               alt="Team working together"
               width={300}
               height={280}
-              className="w-full hide-at-936 rounded-lg shadow-lg h-[280px] md:h-[330px]"
+              className="w-full hide-at-936 rounded-lg shadow-lg h-[280px] md:h-[330px] md:w-[700px]"
             />
           </div>
         </div>

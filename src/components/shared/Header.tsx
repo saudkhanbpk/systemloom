@@ -30,8 +30,8 @@ import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png";
 const Header: React.FC = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDropdownOpens, setIsDropdownOpens] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  let timer: NodeJS.Timeout;
 
   const navItems = [
     { name: "Home", href: "/", icon: <FaHome /> },
@@ -96,8 +96,15 @@ const Header: React.FC = () => {
   //   setIsDropdownOpen(!isDropdownOpen);
   // };
 
-  const toggleDropdowns = () => {
-    setIsDropdownOpens(!isDropdownOpens);
+  const handleMouseEnter = (name: string) => {
+    clearTimeout(timer); // Clear any existing timers
+    setActiveDropdown(name);
+  };
+
+  const handleMouseLeave = () => {
+    timer = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 200); // Add a delay to prevent accidental closing
   };
 
   return (
@@ -132,10 +139,10 @@ const Header: React.FC = () => {
                 {navItems.map((item) =>
                   item.dropdown ? (
                     <div
-                      key={item.name}
-                      className="relative group"
-                      onMouseEnter={() => setIsDropdownOpen(true)}
-                      onMouseLeave={() => setIsDropdownOpen(false)}
+                    key={item.name}
+                    className="relative group"
+                    onMouseEnter={() => handleMouseEnter(item.name)}
+                    onMouseLeave={handleMouseLeave}
                     >
                       <span
                         className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF] text-white ${
@@ -146,7 +153,7 @@ const Header: React.FC = () => {
                       >
                         {item.name}
                       </span>
-                      {isDropdownOpen && (
+                      {activeDropdown === item.name && (
                         <div className="absolute bg-white text-black shadow-lg rounded-md mt-2 z-20 w-full md:w-auto">
                           <div className="flex flex-col md:flex-row  justify-between p-4 gap-4 md:w-[450px] text-wrap ">
                             {/* Left Column */}
@@ -240,7 +247,7 @@ const Header: React.FC = () => {
           <button
   onClick={() => setIsOpen(!isOpen)}
   className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
-  aria-label={isOpen ? 'Close menu' : 'Open menu'} // Accessible name for screen readers
+  aria-label={isOpen ? 'Close menu' : 'Open menu'} 
 >
   {isOpen ? (
     <X className="block h-6 w-6" />
@@ -255,7 +262,7 @@ const Header: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
+        <div  className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <div key={item.name}>
@@ -263,7 +270,7 @@ const Header: React.FC = () => {
                   // Dropdown menu for Services
                   <div className="flex flex-col">
                     <button
-                      onClick={() => setIsDropdownOpen((prev) => !prev)}
+                      onClick={() => setActiveDropdown(item.name)}
                       className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 ${
                         pathname === item.href ? "bg-[#0c080f] text-white" : ""
                       }`}
@@ -271,9 +278,9 @@ const Header: React.FC = () => {
                       <span className="flex items-center gap-3">
                         {item.icon} {item.name}
                       </span>
-                      <span>{isDropdownOpen ? "-" : "+"}</span>
+                      <span>{activeDropdown === item.name ? "-" : "+"}</span>
                     </button>
-                    {isDropdownOpen && (
+                    {activeDropdown === item.name &&  (
                       <div className="pl-6">
                         {item.dropdown.map((subItem) => (
                           <Link

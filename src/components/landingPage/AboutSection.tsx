@@ -6,16 +6,16 @@ import group3 from "../../../public/assets/homepage/Mask group (2).webp";
 
 function AboutSection() {
   return (
-    <section className="py-12 md:py-16 md:p-10 mx-auto">
-      <div className="flex flex-col md:flex-row justify-center gap-12 items-center">
+    <section className="py-12 md:py-16 md:px-10 xl:px-0 mt-5 mx-auto">
+      <div className="flex flex-col md:flex-row  gap-12 items-center">
         {/* Image Section */}
-        <div className="flex flex-col sm:flex-row items-center md:w-1/2 w-full justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center  w-full justify-center gap-4">
           {/* Group1 */}
-          <div className="mb-4 md:mb-0 md:mr-2">
+          <div className="mb-4 md:mb-0 ">
             <Image
               src={group1}
               alt="image1"
-              className="w-[290px] h-[180px] md:w-[280px] md:h-[290px] rounded-md object-cover"
+              className="w-[290px] h-[180px] md:w-[280px] md:h-[290px] xl:w-[340px] rounded-md object-cover"
             />
           </div>
           {/* Group2 and Group3 */}
@@ -24,21 +24,21 @@ function AboutSection() {
               <Image
                 src={group2}
                 alt="image2"
-                className="w-[290px] h-[180px] md:w-[280px] md:h-[280px] rounded-md object-cover"
+                className="w-[290px] h-[180px] md:w-[280px] md:h-[280px] xl:w-[340px] rounded-md object-cover"
               />
             </div>
             <div>
               <Image
                 src={group3}
                 alt="image3"
-                className="w-[290px] h-[180px] md:w-[280px] md:h-[100px] rounded-md object-cover"
+                className="w-[290px] h-[180px] md:w-[280px] md:h-[100px] xl:w-[350px] rounded-md object-cover"
               />
             </div>
           </div>
         </div>
 
         {/* Text Section */}
-        <div className="flex flex-col items-center md:items-start md:w-1/2 w-full relative">
+        <div className="flex flex-col items-center md:items-start  w-full relative">
           {/* Image aligned to the right */}
           {/* <div className="absolute -top-20 hide-at-970 right-52 transform translate-x-3">
             <Image
@@ -53,11 +53,11 @@ function AboutSection() {
           </div> */}
 
           {/* Text Content */}
-          <div className="text-center md:text-left mx-auto">
+          <div className="text-center md:text-left">
             <h2 className="text-[#9A00FF]  font-bold text-3xl md:text-[35px] leading-tight md:leading-[45px] mb-4">
             We Bring Maximum value to your business
             </h2>
-            <p className="font-normal text-xl p-2 md:text-lg leading-7 md:leading-[36px]">
+            <p className="font-normal text-xl p-2 xl:p-0 md:text-lg leading-7 md:leading-[36px]">
               TechCreator is a software development company helping businesses
               scale up their growth. Your potential customers will find you
               online. Our team made it happen. Engage them with contemporary,

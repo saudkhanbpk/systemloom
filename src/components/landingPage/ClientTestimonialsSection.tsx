@@ -118,7 +118,7 @@ const ClientTestimonialsSection: React.FC = () => {
       animate="visible"
       variants={sectionVariants}
     >
-      <div className="mx-auto px-4">
+      <div className="">
         <motion.h2
           className="text-[35px] font-bold text-center text-[#9A00FF] mb-2"
           initial={{ opacity: 0 }}
