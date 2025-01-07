@@ -47,10 +47,10 @@ const WebDevelopment = () => {
     <div className="">
 
       {/* hero section start */}
-      <div className="bg-black w-full  pt-24 md:pt-36 lg:pt-10 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
+      <div className="bg-black w-full  pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left">
-          <h1 className="text-3xl  lg:text-5xl   font-bold">
+          <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
           Empower your business with custom web development
           </h1>
           <p className="text-base lg:text-lg mt-3">
@@ -67,12 +67,12 @@ const WebDevelopment = () => {
             alt="Custom Web Development and Design"
             width={300}
             height={300}
-            className="w-[50vw] md:w-[25vw] lg:mt-52 "
+            className=" "
           />
         </div>
       </div>
       {/* hero section end */}
-<div className="max-w-7xl mx-auto ">
+<div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
       {/* FeatureSection section start */}
       <div className=" ">
         <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
@@ -147,16 +147,16 @@ const WebDevelopment = () => {
       {/* FeaturesList section end */}
 
       {/* DiagonalFeatureSection section start */}
-      <div className="mb-16 xl:px-0 px-3">
+      <div className="mb-16 ">
         {/* card1 */}
-        <div className="flex flex-col md:flex-row  items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+        <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
           {/* Image Section */}
           <Image
             src={webimage2}
             alt="Digital Web Development solution for your business needs"
             width={300}
             height={300}
-            className="sm:w-[500px] md:w-[650px] "
+            className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
           />
 
           {/* Text Section */}
@@ -196,7 +196,7 @@ const WebDevelopment = () => {
             alt="Execute perfect planing with php web development services "
             width={300}
             height={300}
-            className=" sm:w-[500px] md:w-[650px]  "
+            className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
           />
         </div>
 
@@ -208,7 +208,7 @@ const WebDevelopment = () => {
             alt="progressive web app development company providing its best"
             width={300}
             height={300}
-            className=" sm:w-[500px] md:w-[650px] "
+            className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
           />
 
           {/* Text Section */}
@@ -229,7 +229,7 @@ const WebDevelopment = () => {
       <div className="md:relative bg-[#9A00FF] sm:mt-0 mt-2 xl:h-[420px] border mx-auto md:py-16  md:mt-28 md:mb-52 ">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
-          <div className="relative webDevtext z-10 md:max-w-[600px] text-wrap text-center md:text-left">
+          <div className="relative webDevtext z-10 md:max-w-[600px] xl:max-w-[800px] text-wrap text-center md:text-left">
             <h2 className="text-3xl md:text-4xl  font-bold text-white mb-4">
               Comprehensive Web Development Services with Ongoing Support
             </h2>
@@ -243,7 +243,7 @@ const WebDevelopment = () => {
             </p>
           </div>
           {/* Image */}
-          <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
+          <div className="relative md:absolute md:top-1/2 xl:top-2/3 md:right-5 md:transform md:-translate-y-1/2">
             <Image
               src={webimage5}
               alt="Feature illustration"
