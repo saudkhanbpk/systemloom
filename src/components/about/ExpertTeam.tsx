@@ -38,23 +38,23 @@ const profiles: Profile[] = [
   },
  
 
-  {
-    name: "Aamir Shahzad",
-    position: "SEO expert & Project Manager",
-    imageUrl: "/assets/aboutpage/amir.webp",
-    linkedInUrl: "https://www.linkedin.com/in/aamirshahzads",
-    width: 300,
-    height: 300,
-  },
+  // {
+  //   name: "Aamir Shahzad",
+  //   position: "SEO expert & Project Manager",
+  //   imageUrl: "/assets/aboutpage/amir.webp",
+  //   linkedInUrl: "https://www.linkedin.com/in/aamirshahzads",
+  //   width: 300,
+  //   height: 300,
+  // },
 
-  {
-    name: "Zakarya Khan",
-    position: "Mern Stack Developer",
-    imageUrl: "/assets/aboutpage/zaki.webp",
-    linkedInUrl: "http://www.linkedin.com/in/zakarya-khan-4038162a5",
-    width: 300,
-    height: 300,
-  },
+  // {
+  //   name: "Zakarya Khan",
+  //   position: "Mern Stack Developer",
+  //   imageUrl: "/assets/aboutpage/zaki.webp",
+  //   linkedInUrl: "http://www.linkedin.com/in/zakarya-khan-4038162a5",
+  //   width: 300,
+  //   height: 300,
+  // },
   {
     name: "Ihtizaz",
     position: "Angular Developer",

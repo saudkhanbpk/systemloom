@@ -10,6 +10,7 @@ const TeamScalingSection = () => {
   return (
     <section className="py-16 md:p-16 ">
       <div className="md:mx-10 px-2">
+        {/* section 1 */}
         <div className="flex flex-col lg:flex-row mb-10">
           <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
             <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">
@@ -59,6 +60,7 @@ const TeamScalingSection = () => {
           </div>
         </div>
 
+{/* section 2 */}
         <div className="flex flex-col gap-10 lg:flex-row mb-10">
         <div className="w-full  lg:max-w-[600px] mx-auto md:mx-0">
             <Image
@@ -105,6 +107,7 @@ const TeamScalingSection = () => {
           </div>
         </div>
 
+{/* section 3 */}
         <div className="flex flex-col lg:flex-row mb-10 gap-2">
           <div className=" md:w-[700px] mb-8 leading-[44px] mt-5 lg:mb-0 ">
             <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">

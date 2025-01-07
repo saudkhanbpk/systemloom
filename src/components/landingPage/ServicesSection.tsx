@@ -17,12 +17,12 @@ interface Service {
 const ServicesSection: React.FC = () => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1440 },
+      breakpoint: { max: 3000, min: 1240 },
       items: 4,
       slidesToSlide: 1,
     },
     tablet: {
-      breakpoint: { max: 1440, min: 1024 },
+      breakpoint: { max: 1240, min: 1024 },
       items: 3,
       slidesToSlide: 1,
     },
