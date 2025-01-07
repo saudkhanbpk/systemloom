@@ -43,13 +43,13 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
     }
   };
 
-  if (!projects || projects.length === 0) {
-    return (
-      <div className="text-center text-2xl font-bold text-red-500">
-        Loading projects...
-      </div>
-    );
-  }
+  // if (!projects || projects.length === 0) {
+  //   return (
+  //     <div className="text-center text-2xl font-bold text-red-500">
+  //       Loading projects...
+  //     </div>
+  //   );
+  // }
 
   return (
     <div>
