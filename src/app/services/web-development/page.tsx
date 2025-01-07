@@ -107,7 +107,7 @@ const WebDevelopment = () => {
       {/* FeaturesList section start */}
       <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
       
-      <div className='my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 border'>
+      <div className='my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 '>
         <div className="border-r  xl:pr-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 
