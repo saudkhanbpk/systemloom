@@ -87,10 +87,10 @@ const WebDevelopment = () => {
           </div>
           <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:pl-52  ">
-              <h2 className="text-xl sm:text-3xl lg:text-5xl font-bold mb-3  ">
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Bespoke Web Development Tailored to Your Vision
               </h2>
-              <p className="text-sm sm:text-base lg:text-2xl leading-relaxed   w-full  text-wrap">
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
                 Stand out from the crowd with{" "}
                 <strong>bespoke web development</strong> crafted to meet your
                 specific needs. Our team of skilled developers creates custom
@@ -164,7 +164,7 @@ const WebDevelopment = () => {
             <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
               Custom Web App Development for Dynamic Digital Solutions
             </h2>
-            <p className="text-base md:text-lg xl:text-xl text-gray-700">
+            <p className="text-base md:text-lg xl:text-lg text-gray-700">
               <strong>
                 We love working on fresh concepts, ideas and technologies that
                 break industry standards and generate online traction.
@@ -187,7 +187,7 @@ const WebDevelopment = () => {
             <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
             MERN & MEAN Web Development Services for High Performance
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-gray-700">
+            <p className="text-base md:text-lg lg:text-lg text-gray-700">
             Being a specialist in <strong>MERN and MEAN web development services,</strong> we build scalable, secure, and high-performance websites based on your business needs. No matter if your need is a content-heavy website, a feature-rich e-commerce platform, or an advanced web application, our developers harness the power and flexibility of MERN (MongoDB, Express, React, Node.js) and MEAN (MongoDB, Express, Angular, Node.js) to provide exemplary solutions. 
             </p>
           </div>
@@ -216,7 +216,7 @@ const WebDevelopment = () => {
             <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
             React Native Development Services for Cross-Platform Excellence
             </h2>
-            <p className="text-base md:text-lg xl:text-xl text-gray-700 mt-3">
+            <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
             By means of <strong>React Native development service experts,</strong> we built cross-platform mobile applications that provide native-like experience on iOS and Android. To build high-performing and cost-effective mobile solutions, our developers use the power of React Native for building everything-from feature-rich business applications, dynamic e-commerce solutions to interactive social platforms. 
             </p>
           </div>
@@ -233,7 +233,7 @@ const WebDevelopment = () => {
             <h2 className="text-3xl md:text-4xl  font-bold text-white mb-4">
               Comprehensive Web Development Services with Ongoing Support
             </h2>
-            <p className="text-base md:text-lg xl:text-xl text-white  ">
+            <p className="text-base md:text-lg xl:text-lg text-white  ">
               Our commitment doesn’t end with the launch of your website or app.
               We provide comprehensive{" "}
               <strong>web development services,</strong> from concept to
