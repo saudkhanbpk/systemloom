@@ -92,7 +92,7 @@ useGetAllJobs()
 
   return (
     <>
-      <div className=" py-12 max-w-6xl mx-auto  px-1">
+      <div className=" py-12   px-1">
         <div className=" ">
           <p className="font-inter font-semibold text-[42px]">Open positions</p>
           <p className="font-inter font-normal text-[22px] text-[#838696]">

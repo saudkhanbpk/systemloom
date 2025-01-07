@@ -84,20 +84,28 @@ const PricingForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-black p-4">
-      <div className="flex flex-col md:flex-row gap-6 justify-between max-w-7xl md:px-7 mx-auto">
+    <div className="bg-black pt-3 pb-3">
+      <div className="flex flex-col md:flex-row gap-6 justify-between  md:px-16 mx-auto">
         {/* Left Section */}
         <div className="text-white flex md:mx-0 mx-auto flex-col mb-6 lg:mb-0">
-          <h2 className="text-4xl lg:text-6xl font-bold leading-snug">
-            Share your <br /> requirements <br /> with us
+          <div className="flex flex-col gap-4 text-2xl lg:text-6xl font-bold ">
+          <h2 className="  ">
+            Share your 
           </h2>
+          <h2 className=" ">
+          requirements 
+          </h2>
+          <h2 className="">
+           with us
+          </h2>
+          </div>
           <p className="text-lg lg:text-xl mt-2">By filling this simple form</p>
         </div>
 
         {/* Right Section */}
-        <div className="bg-white p-9 shadow-lg w-full lg:w-auto">
+        <div className="bg-white p-9 shadow-lg w-full lg:w-auto rounded-md">
           <form
-            className="space-y-4 md:w-[400px] lg:w-[500px]"
+            className="space-y-4 md:w-[400px] lg:w-[500px] "
             onSubmit={handleSubmit}
           >
             {/* Name Field */}

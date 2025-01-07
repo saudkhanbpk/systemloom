@@ -113,7 +113,7 @@ const ClientTestimonialsSection: React.FC = () => {
 
   return (
     <motion.section
-      className="py-16"
+      className="md:py-16 py-7"
       initial="hidden"
       animate="visible"
       variants={sectionVariants}

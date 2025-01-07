@@ -8,7 +8,7 @@ interface ValueCardType {
 }
 
 const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
-  <div className="bg-[#FFFFFF] w-[240px] h-auto -top-2 p-6 rounded-[24px] shadow-md">
+  <div className="bg-[#FFFFFF] sm:w-[240px] w-full h-auto -top-2 p-3 rounded-[24px] shadow-md">
     <div className="flex justify-between">
       <div className="flex items-center mb-4">
         <h3>
@@ -24,21 +24,22 @@ const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
         
       </div>
     </div>
-    <p className="text-gray-600  mt-8">{description}</p>
+    <p className="text-gray-600  mt-3">{description}</p>
   </div>
 );
 
 const CoreValues: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16 md:mt-44 ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 space-x-3 ">
+    <div className=" py-16 md:mt-44 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 sm:space-x-3 ">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Our core values</h2>
           <p className=" max-w-2xl">
           Throughout everything we do at TechCreator, our core values guide us. Inspire our team, shape our culture, and ensure that our clients receive exceptional results.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 space-x-2 space-y-2 sm:space-y-0 ">
+
+        <div className="flex flex-wrap sm:justify-end justify-center gap-10">
           <ValueCard
             icon={sunGlasses}
             title="Be You"
@@ -51,8 +52,9 @@ const CoreValues: React.FC = () => {
           />
         </div>
       </div>
+
       <div className="mt-10">
-        <div className="flex flex-wrap justify-end gap-5 w-full">
+        <div className="flex flex-wrap sm:justify-end justify-center gap-10 w-full">
           <ValueCard
             icon={sunGlasses}
             title="Push the Boundaries"
@@ -71,7 +73,7 @@ const CoreValues: React.FC = () => {
         </div>
       </div>
       <div className="mt-10">
-        <div className="flex flex-wrap justify-start gap-5 w-full">
+        <div className="flex flex-wrap sm:justify-start justify-center 2xl:gap-14 gap-10  w-full">
           <ValueCard
             icon={sunGlasses}
             title="Be Transparent"

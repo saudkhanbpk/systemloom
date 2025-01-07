@@ -43,7 +43,7 @@ const PricingCards: React.FC = () => {
 
   return (
     <>
-      <div className="relative text-white md:py-52 py-28 md:px-4 px-2">
+      <div className="relative text-white md:py-44 py-28 md:px-4 px-2">
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
@@ -78,12 +78,10 @@ const PricingCards: React.FC = () => {
       </div>
 
       <div>
-        <div className="  p-4 md:p-8">
-          <div className="max-w-7xl mx-auto"></div>
-        </div>
+       
 
-        <div className="flex flex-col md:flex-row justify-around  gap-6 py-10 md:py-20 px-2 lg:px-20 ">
-          <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
+        <div className="flex flex-col md:flex-row justify-between  gap-16 py-10 md:py-10  px-2 lg:px-16 ">
+          <div className=" ">
             <h2 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
               Affordable Solutions Without Sacrificing Quality
             </h2>
@@ -94,7 +92,7 @@ const PricingCards: React.FC = () => {
               marketing, or app development.
             </p>
           </div>
-          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px] mx-auto md:mx-0">
+          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px]  md:h-[349.42px] mx-auto md:mx-0">
             <div className="relative z-10 w-full h-full">
               <Image
                 src={frontImage}
@@ -107,8 +105,8 @@ const PricingCards: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-2 lg:px-20 ">
-          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px]  mx-auto md:mx-0">
+        <div className="flex flex-col md:flex-row justify-between gap-16 py-4 md:py-10 px-2 lg:px-16 ">
+          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px]  md:h-[349.42px]  mx-auto md:mx-0">
             <div className="relative z-10 w-full h-full">
               <Image
                 src={pricing2}
@@ -119,7 +117,7 @@ const PricingCards: React.FC = () => {
               />
             </div>
           </div>
-          <div className="md:w-[600px]  ">
+          <div className=" ">
             <h2 className="font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
               Flexible Packages for All Businesses
             </h2>
@@ -135,8 +133,8 @@ const PricingCards: React.FC = () => {
           <PricingForm />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-around gap-6 py-10 md:py-20 px-2 lg:px-20">
-          <div className="mt-6 md:mt-10 space-y-5 md:w-[600px]">
+        <div className="flex flex-col md:flex-row justify-between gap-6 py-10 md:py-10 px-2 lg:px-16">
+          <div className=" ">
             <h2 className=" font-inter font-medium text-3xl md:text-[45.25px] leading-[1.2]">
               Why Choose TechCreator for Your Next Project?
             </h2>
@@ -148,7 +146,7 @@ const PricingCards: React.FC = () => {
             </p>
           </div>
 
-          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[480px]  md:h-[449.42px]  mx-auto md:mx-0">
+          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px]  md:h-[349.42px]  mx-auto md:mx-0">
             <div className="relative z-10 w-full h-full">
               <Image
                 src={pricing1}

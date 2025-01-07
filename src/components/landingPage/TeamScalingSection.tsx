@@ -8,10 +8,10 @@ import AdminOfficerImage from "../../../public/assets/aboutpage/hamdad.webp";
 
 const TeamScalingSection = () => {
   return (
-    <section className="py-16 xl:px-0 sm:px-6 px-1  ">
+    <section className="md:py-16 py-7 xl:px-0 sm:px-6 px-1  ">
       <div className=" ">
         {/* section 1 */}
-        <div className="flex flex-col lg:flex-row mb-10">
+        <div className="flex flex-col items-center gap-6 lg:flex-row mb-10">
           <div className=" mb-8 leading-[44px] mt-5 lg:mb-0">
             <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">
               Empowering Your Business with Innovation
@@ -49,26 +49,26 @@ const TeamScalingSection = () => {
             </div>
           </div>
 
-          <div className="w-full  lg:max-w-[600px] mx-auto md:mx-0">
+          <div className=" mx-auto md:mx-0">
             <Image
               src={team1}
               alt="Organizing TecCreator team to offer development services"
               width={700}
               height={450}
-              className="w-full  md:w-[120vw] h-[350px] rounded-lg shadow-lg object-cover"
+              className="  xl:h-[350px] h-[260px] w-[800px] x:w-[800px]  rounded-lg shadow-lg object-cover"
             />
           </div>
         </div>
 
 {/* section 2 */}
-        <div className="flex flex-col gap-10 lg:flex-row mb-10">
-        <div className="w-full  lg:max-w-[600px] mx-auto md:mx-0">
+        <div className="flex flex-col items-center gap-6 lg:flex-row mb-10">
+        <div className="  md:mx-0">
             <Image
               src={team2}
               alt="Organizing TecCreator team to offer development services"
               width={700}
               height={450}
-              className="w-full  md:w-[120vw] h-[350px] rounded-lg shadow-lg object-cover"
+              className="xl:h-[350px] h-[260px] w-[800px] xl:w-[1000px] rounded-lg shadow-lg object-cover"
             />
           </div>
 
@@ -108,8 +108,8 @@ const TeamScalingSection = () => {
         </div>
 
 {/* section 3 */}
-        <div className="flex flex-col lg:flex-row mb-10 gap-2">
-          <div className=" md:w-[700px] mb-8 leading-[44px] mt-5 lg:mb-0 ">
+        <div className="flex flex-col items-center gap-6 lg:flex-row  ">
+          <div className="  leading-[44px]  lg:mb-0 ">
             <h2 className="text-[28px] font-semibold text-[#9A00FF] mb-4">
               What makes us Apart from Others
             </h2>
@@ -150,7 +150,7 @@ const TeamScalingSection = () => {
               alt="Organizing TecCreator team to offer development services"
               width={700}
               height={450}
-              className="w-full  md:w-[120vw] h-[350px] rounded-lg shadow-lg object-cover"
+              className="xl:h-[350px] h-[260px]  xl:w-[1000px] rounded-lg shadow-lg object-cover"
             />
           </div>
         </div>

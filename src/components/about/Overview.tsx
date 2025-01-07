@@ -6,7 +6,7 @@ import about3 from "../../../public/assets/aboutpage/about3.webp";
 
 const Overview: React.FC = () => {
   return (
-    <div className="py-10  md:px-10">
+    <div className="md:py-10 py-6 px-2 md:px-10">
       <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-10">
         {/* Images Section */}
         <div className="flex w-full about-page justify-center md:justify-start gap-4 mb-6 md:mb-0">
@@ -37,7 +37,7 @@ const Overview: React.FC = () => {
         </div>
 
         {/* Text Section */}
-        <div className="w-full py-12 md:py-16 px-6">
+        <div className="w-full py- md:py-16 px-2">
           <h2 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-6">
             About TechCreator
           </h2>

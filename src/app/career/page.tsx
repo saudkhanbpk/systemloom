@@ -8,10 +8,12 @@ const Career = () => {
   return (
     <>
       <CareerHeroSection/>
+
+    <div className='max-w-full xl:px-16 md:px-8 px-3 mx-auto border'>
       <CoreValues/>
       <JobsCard />
       <DiversitySection/>
-   
+      </div>
     </>
   )
 }

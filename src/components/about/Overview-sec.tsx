@@ -6,10 +6,10 @@ import croImage from "../../../public/assets/aboutpage/ceoimage2.webp"
 
 const OverviewSec: React.FC = () => {
   return (
-    <div className="px-4 md:px-20 py-10">
+    <div className="px-2 md:px-10 md:py-10 ">
       <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
         {/* Text Section */}
-        <div className="w-full mb-6 mt-10 md:mb-12">
+        <div className="w-full md:mb-12">
           <h2 className="text-[#9A00FF] font-inter text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-semibold mb-4">
             CEO Message
           </h2>

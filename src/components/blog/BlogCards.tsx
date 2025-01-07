@@ -53,7 +53,8 @@ const BlogCards: React.FC = () => {
       </p>
     ) : (
       <>
-        <div className="container mb-10 mt-10 mx-auto cursor-pointer max-w-7xl md:px-12 px-2 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
+        <div className="xl:px-16 px-3">
+        <div className="container mb-10 mt-10 cursor-pointer   mx-auto grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
         {currentBlogs.map((blog: any) => (
   <div key={blog._id}>
     <Link href={`/blog/blogDetail/${createSlug(blog.title)}`}>
@@ -84,6 +85,7 @@ const BlogCards: React.FC = () => {
   </div>
 ))}
 
+        </div>
         </div>
         {/* Pagination Controls */}
         {blogs.length > blogsPerPage && (

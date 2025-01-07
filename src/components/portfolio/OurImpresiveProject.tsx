@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const OurImpressiveProject = () => {
   return (
-    <div className="my-20 px-4">
+    <div className="xl:px-16 md:px-10 px-2 mt-7 ">
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-2xl md:text-4xl font-bold">
@@ -23,27 +23,19 @@ const OurImpressiveProject = () => {
       </div>
 
       {/* Project Section */}
-      <div className="mt-16 flex flex-wrap justify-center gap-4 lg:gap-8 max-w-7xl  mx-auto">
+      <div className="mt-16 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8 ">
         {/* Card Component */}
         {[
-          { image: healthcareImage, title: "Healthcare",link: "/healthcare", },
-          {
-            image: restaurantImage,
-            title: "Restaurant",
-            link: "/restaurants",
-          },
-          { image: realstateImage, title: "Real Estate", link: "/real-estate", },
-          { image: ecommerceImage, title: "E-commerce", link: "/e-commerce", },
-          {
-            image: HospitalityImage,
-            title: "Hospitality",
-            link: "/hospitality",
-          },
-          { image: greenEnergyImage, title: "Green Energy", link: "/green-energy", },
+          { image: healthcareImage, title: "Healthcare", link: "/healthcare" },
+          { image: restaurantImage, title: "Restaurant", link: "/restaurants" },
+          { image: realstateImage, title: "Real Estate", link: "/real-estate" },
+          { image: ecommerceImage, title: "E-commerce", link: "/e-commerce" },
+          { image: HospitalityImage, title: "Hospitality", link: "/hospitality" },
+          { image: greenEnergyImage, title: "Green Energy", link: "/green-energy" },
         ].map((project, index) => (
           <div
             key={index}
-            className="relative group overflow-hidden rounded-lg shadow-lg w-full sm:w-[480px] md:w-[420px] lg:w-[380px]"
+            className="relative group overflow-hidden rounded-lg shadow-lg  "
           >
             {/* Project Image */}
             <Image
@@ -54,17 +46,11 @@ const OurImpressiveProject = () => {
               className="transition-transform duration-300 w-full ease-in-out group-hover:scale-110"
             />
             {/* Title with Background */}
-            {project.link ? (
-              <Link href={project.link}>
-                <h2 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
-                  {project.title}
-                </h2>
-              </Link>
-            ) : (
+            <Link href={project.link}>
               <h2 className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg md:text-2xl bg-[#726767]/70 hover:bg-[#9A00FF]/90 transition-all duration-300 cursor-pointer px-6 py-6">
                 {project.title}
               </h2>
-            )}
+            </Link>
           </div>
         ))}
       </div>

@@ -10,7 +10,9 @@ const About = () => {
   return (
     <>
       <AboutHeroSection/>
+      <div className=" ">
       <Overview/>
+</div>
       <ServicesSection/>
       <ProjectsCount/>
       <OverviewSec/>

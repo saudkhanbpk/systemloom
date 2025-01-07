@@ -67,25 +67,27 @@ export default Companies;
 
 export const CTASection = () => {
   return (
-    <section className="mb-32 mt-16  ">
-      <div className="  h-auto md:h-[300px]">
-        <div className="flex flex-col    md:flex-row ">
-          <div className=" mb-8 md:mb-0  py-16 leading-10">
+    <section className="md:mb-32 md:mt-16 mt-7">
+      <div className="h-auto md:h-[300px]">
+        <div className="flex flex-col gap-6 md:flex-row">
+          <div className="mb-8 md:mb-0 leading-10">
             <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
               "Looking for top developers and designers? Let's build something
               great together. Get in touch today!"
             </h2>
-            <Link href="/contact">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#9A00FF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5"
-            >
-              Hire Top Developers
-            </motion.button>
-            </Link>
+            <div className="text-center md:text-left">
+              <Link href="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-[#9A00FF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5 mx-auto md:mx-0"
+                >
+                  Hire Top Developers
+                </motion.button>
+              </Link>
+            </div>
           </div>
-          <div className=" ">
+          <div className="mb-4">
             <Image
               src={company8}
               alt="Team working together"
@@ -99,3 +101,4 @@ export const CTASection = () => {
     </section>
   );
 };
+

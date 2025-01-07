@@ -6,7 +6,7 @@ import group3 from "../../../public/assets/homepage/Mask group (2).webp";
 
 function AboutSection() {
   return (
-    <section className="py-12 md:py-16 md:px-10 xl:px-0 mt-5 mx-auto">
+    <section className="py-8 md:py-16 md:px-10 xl:px-0 mt-5 mx-auto">
       <div className="flex flex-col md:flex-row  gap-12 items-center">
         {/* Image Section */}
         <div className="flex flex-col sm:flex-row items-center  w-full justify-center gap-4">

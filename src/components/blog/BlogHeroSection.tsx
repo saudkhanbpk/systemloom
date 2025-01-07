@@ -6,7 +6,7 @@ const BlogHeroSection: React.FC = () => {
   return (
     <>
       <div>
-        <div className="relative bg-gray-900 text-white h-[700px]">
+        <div className="relative bg-gray-900 text-white ">
           <div className="absolute inset-0 overflow-hidden opacity-25">
             <Image
               src={backgroundImage}

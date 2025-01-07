@@ -46,7 +46,7 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
 
   return (
     <>
-    <div className="container mx-auto pt-12 px-4 md:px-16 lg:px-24 my-8 ">
+    <div className="container mx-auto pt-12 px-4 md:px-8 xl:px-16 my-8 ">
       {/* Title Section */}
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800">

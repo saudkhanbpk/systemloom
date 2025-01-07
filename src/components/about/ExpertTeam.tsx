@@ -124,12 +124,12 @@ const profiles: Profile[] = [
 const ExpertTeam: React.FC = () => {
   return (
     <div>
-      <div className="py-20  text-center">
+      <div className="py-7  text-center ">
         <p className="font-inter font-bold text-[35px] text-[#9A00FF]">
           Expert Team
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  md:gap-12 xl:mx-20   ">
+      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  md:gap-12 xl:px-10 md:px-7 px-4   ">
         {profiles.map((profile, index) => (
           <ProfileCard
             key={index}
