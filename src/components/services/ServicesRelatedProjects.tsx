@@ -54,9 +54,9 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
   return (
     <div>
       {/* RecentWorks section start */}
-      <div className="mx-auto max-w-7xl">
+      <div className="xl:px-0 sm:px-3 px-1">
         <div className="p-2 md:p-0 ">
-          <div className="md:w-[92%] mx-auto">
+          <div className=" mx-auto">
             {/* Heading Section */}
             <div className="text-center mb-12 mt-5 md:mt-0">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Work</h2>

@@ -44,7 +44,7 @@ const WebDevelopment = () => {
   ];
 
   return (
-    <div>
+    <div className="">
 
       {/* hero section start */}
       <div className="bg-black w-full  pt-24 md:pt-36 lg:pt-10 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
@@ -72,25 +72,25 @@ const WebDevelopment = () => {
         </div>
       </div>
       {/* hero section end */}
-
+<div className="max-w-7xl mx-auto ">
       {/* FeatureSection section start */}
-      <div className="max-w-7xl  mx-auto  ">
-        <div className="flex flex-col lg:flex-row items-center  lg:items-start  justify-center lg:mt-12 my-6  relative   ">
+      <div className=" ">
+        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
             <Image
               src={webimage1}
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute  lg:top-10 shadow-xl"
+              className=" lg:w-[400px]  h-auto sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full md:w-[800px] lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
-            <div className="text-white xl:py-20 lg:px-52  ">
-              <h2 className="text-xl sm:text-3xl font-bold mb-3 lg:w-[500px]  ">
+          <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:pl-52  ">
+              <h2 className="text-xl sm:text-3xl lg:text-5xl font-bold mb-3  ">
                 Bespoke Web Development Tailored to Your Vision
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
+              <p className="text-sm sm:text-base lg:text-2xl leading-relaxed   w-full  text-wrap">
                 Stand out from the crowd with{" "}
                 <strong>bespoke web development</strong> crafted to meet your
                 specific needs. Our team of skilled developers creates custom
@@ -106,39 +106,40 @@ const WebDevelopment = () => {
 
       {/* FeaturesList section start */}
       <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
-      <div className='my-16 md:mt-20 flex flex-wrap justify-center  gap-7 border-b  "'>
-        <div className="border-r  w-[280px] p-3">
+      
+      <div className='my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 border'>
+        <div className="border-r  xl:pr-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 
           {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
+          <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
           Build scalable websites with modern technologies tailored to your business goals.
           </p>
         </div>
 
-        <div className="border-r w-[280px] p-3">
+        <div className="border-r  xl:pr-3">
           <FileText className="w-6 h-6 text-purple-500 flex-shrink-0" />
 
           {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
+          <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
           Ensure seamless performance and intuitive user experience with our web solutions.
           </p>
         </div>
 
-        <div className="border-r w-[280px] p-3">
+        <div className="border-r  xl:pr-3">
           <Zap className="w-6 h-6 text-yellow-500 flex-shrink-0" />
 
           {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
+          <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
           Integrate powerful features and tools to enhance your website’s functionality.
           </p>
         </div>
 
-        <div className=" w-[280px] p-3">
+        <div className="  xl:pr-3">
           <Clock className="w-6 h-6 text-blue-500 flex-shrink-0" />
 
           {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
+          <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
           Deliver projects on time with precision and a focus on quality.
           </p>
         </div>
@@ -146,24 +147,24 @@ const WebDevelopment = () => {
       {/* FeaturesList section end */}
 
       {/* DiagonalFeatureSection section start */}
-      <div className="max-w-7xl mx-auto mb-16">
+      <div className="mb-16 xl:px-0 px-3">
         {/* card1 */}
-        <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row  items-center px-1 sm:px-4 xl:px-0  md:gap-12">
           {/* Image Section */}
           <Image
             src={webimage2}
             alt="Digital Web Development solution for your business needs"
             width={300}
             height={300}
-            className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
+            className="sm:w-[500px] md:w-[650px] "
           />
 
           {/* Text Section */}
-          <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+          <div className=" text-center md:text-start">
+            <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
               Custom Web App Development for Dynamic Digital Solutions
             </h2>
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg xl:text-xl text-gray-700">
               <strong>
                 We love working on fresh concepts, ideas and technologies that
                 break industry standards and generate online traction.
@@ -178,15 +179,15 @@ const WebDevelopment = () => {
         </div>
 
         {/* card 2 */}
-        <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
           {/* Image Section */}
 
           {/* Text Section */}
-          <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+          <div className=" text-center md:text-left">
+            <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
             MERN & MEAN Web Development Services for High Performance
             </h2>
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg lg:text-xl text-gray-700">
             Being a specialist in <strong>MERN and MEAN web development services,</strong> we build scalable, secure, and high-performance websites based on your business needs. No matter if your need is a content-heavy website, a feature-rich e-commerce platform, or an advanced web application, our developers harness the power and flexibility of MERN (MongoDB, Express, React, Node.js) and MEAN (MongoDB, Express, Angular, Node.js) to provide exemplary solutions. 
             </p>
           </div>
@@ -195,27 +196,27 @@ const WebDevelopment = () => {
             alt="Execute perfect planing with php web development services "
             width={300}
             height={300}
-            className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
+            className=" sm:w-[500px] md:w-[650px]  "
           />
         </div>
 
         {/* card 3 */}
-        <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
           {/* Image Section */}
           <Image
             src={webimage4}
             alt="progressive web app development company providing its best"
             width={300}
             height={300}
-            className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
+            className=" sm:w-[500px] md:w-[650px] "
           />
 
           {/* Text Section */}
-          <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-7">
+          <div className="text-center md:text-left">
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
             React Native Development Services for Cross-Platform Excellence
             </h2>
-            <p className="text-base md:text-lg text-gray-700 mt-3">
+            <p className="text-base md:text-lg xl:text-xl text-gray-700 mt-3">
             By means of <strong>React Native development service experts,</strong> we built cross-platform mobile applications that provide native-like experience on iOS and Android. To build high-performing and cost-effective mobile solutions, our developers use the power of React Native for building everything-from feature-rich business applications, dynamic e-commerce solutions to interactive social platforms. 
             </p>
           </div>
@@ -224,14 +225,15 @@ const WebDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-28 md:mb-52">
+      <div className="xl:px-0 sm:px-3 px-1  ">
+      <div className="md:relative bg-[#9A00FF] sm:mt-0 mt-2 xl:h-[420px] border mx-auto md:py-16  md:mt-28 md:mb-52 ">
         <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Text Content */}
           <div className="relative webDevtext z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl  font-bold text-white mb-4">
               Comprehensive Web Development Services with Ongoing Support
             </h2>
-            <p className="text-base md:text-lg text-white  ">
+            <p className="text-base md:text-lg xl:text-xl text-white  ">
               Our commitment doesn’t end with the launch of your website or app.
               We provide comprehensive{" "}
               <strong>web development services,</strong> from concept to
@@ -252,6 +254,7 @@ const WebDevelopment = () => {
           </div>
         </div>
       </div>
+      </div>
       {/* FramedFeatureSection section end */}
 
       {/* RecentWorks section start */}
@@ -261,7 +264,7 @@ const WebDevelopment = () => {
 
 
       {/* RelatedServices section start */}
-      <div className="mx-auto max-w-6xl px-4 md:px-12 lg:px-0 py-12 sm:py-16">
+      <div className=" px-3 xl:px-0 py-12 sm:py-16">
   <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
     Related Services
   </h2>
@@ -291,6 +294,7 @@ const WebDevelopment = () => {
       </Link>
     ))}
   </div>
+</div>
 </div>
 
       {/* RelatedServices section end */}
