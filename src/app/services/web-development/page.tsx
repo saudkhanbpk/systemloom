@@ -82,7 +82,7 @@ const WebDevelopment = () => {
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className=" lg:w-[400px]  h-auto sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+              className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
             />
           </div>
           <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
@@ -161,7 +161,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className=" text-center md:text-start">
-            <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
               Custom Web App Development for Dynamic Digital Solutions
             </h2>
             <p className="text-base md:text-lg xl:text-lg text-gray-700">
@@ -179,7 +179,7 @@ const WebDevelopment = () => {
         </div>
 
         {/* card 2 */}
-        <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+        <div className="flex flex-col-reverse md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
           {/* Image Section */}
 
           {/* Text Section */}
@@ -225,36 +225,36 @@ const WebDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="xl:px-0 sm:px-3 px-1  ">
-      <div className="md:relative bg-[#9A00FF] sm:mt-0 mt-2 xl:h-[420px] border mx-auto md:py-16  md:mt-28 md:mb-52 ">
-        <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
-          {/* Text Content */}
-          <div className="relative webDevtext z-10 md:max-w-[600px] xl:max-w-[800px] text-wrap text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl  font-bold text-white mb-4">
-              Comprehensive Web Development Services with Ongoing Support
-            </h2>
-            <p className="text-base md:text-lg xl:text-lg text-white  ">
-              Our commitment doesn’t end with the launch of your website or app.
-              We provide comprehensive{" "}
-              <strong>web development services,</strong> from concept to
-              deployment, with continuous support to ensure your platform
-              evolves with your business. Trust us to deliver innovation,
-              functionality, and unmatched quality in every project.
-            </p>
-          </div>
-          {/* Image */}
-          <div className="relative md:absolute md:top-1/2 xl:top-2/3 md:right-5 md:transform md:-translate-y-1/2">
-            <Image
-              src={webimage5}
-              alt="Feature illustration"
-              width={400}
-              height={500}
-              className="rounded-lg mx-auto  md:mx-0"
-            />
-          </div>
-        </div>
-      </div>
-      </div>
+      <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 md:mb-52">
+  <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
+    {/* Text Content */}
+    <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
+      <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
+        Comprehensive Web Development Services with Ongoing Support
+      </h2>
+      <p className="text-base md:text-lg xl:text-lg text-white">
+        Our commitment doesn’t end with the launch of your website or app.
+        We provide comprehensive{" "}
+        <strong>web development services,</strong> from concept to
+        deployment, with continuous support to ensure your platform
+        evolves with your business. Trust us to deliver innovation,
+        functionality, and unmatched quality in every project.
+      </p>
+    </div>
+    {/* Image */}
+    <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+      <Image
+        src={webimage5}
+        alt="Feature illustration"
+        width={400}
+        height={500}
+        className="rounded-lg mx-auto mb-2 md:mx-0"
+      />
+    </div>
+  </div>
+</div>
+
+
       {/* FramedFeatureSection section end */}
 
       {/* RecentWorks section start */}

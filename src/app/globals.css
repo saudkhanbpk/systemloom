@@ -21,24 +21,12 @@ textarea:-webkit-autofill {
 
 
 /* Media query for screens between 841px and 941px */
-@media screen and (max-width: 1139px) and (min-width: 944px) {
+@media screen and (max-width: 1107px) and (min-width: 1024px) {
   .webDevtext {
-    width: 400px;
+    width: 450px;
   }
 }
 
-/* Media query for screens 841px or smaller */
- @media screen and (max-width: 958px) and (min-width: 859px) {
-  .webDevtext {
-    width: 320px;
-  }
-}
-
-@media screen and (max-width: 941px) and (min-width: 770px) {
-  .webDevtext {
-    width: 250px;
-  }
-} 
 
 
 @media (max-width: 1119px) {

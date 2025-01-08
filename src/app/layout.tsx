@@ -15,6 +15,19 @@ Sentry.init({
 });
 
 
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [
+//     new BrowserTracing(),
+//     new Sentry.Replay(), // Session Replay integration
+//   ],
+//   // Performance monitoring ke liye
+//   tracesSampleRate: 1.0, // 100% transactions capture honge
+//   replaysSessionSampleRate: 0.1, // 10% sessions ke replay capture honge
+//   replaysOnErrorSampleRate: 1.0, // Errors par 100% replay capture hoga
+// });
+
+
 
 // Font configurations
 const geistSans = localFont({
