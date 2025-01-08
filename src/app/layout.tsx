@@ -128,13 +128,18 @@ export default function RootLayout({
         {/* WhatsApp Floating Button */}
         <Link
   href="https://wa.me/+447511801699"
-  // target="_blank"
+  target="_blank"
   rel="noopener noreferrer"
+  onClick={(e) => {
+    e.preventDefault(); 
+    window.location.href = "https://wa.me/+447511801699"; 
+  }}
   className="fixed bottom-20 right-3 p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
-  aria-label="Chat with us on WhatsApp" 
+  aria-label="Chat with us on WhatsApp"
 >
   <FaWhatsapp size={40} />
 </Link>
+
 
       </body>
     </html>
