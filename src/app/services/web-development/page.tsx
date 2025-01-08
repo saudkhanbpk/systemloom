@@ -72,6 +72,7 @@ const WebDevelopment = () => {
         </div>
       </div>
       {/* hero section end */}
+      
 <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
       {/* FeatureSection section start */}
       <div className=" ">
@@ -225,7 +226,7 @@ const WebDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 md:mb-52">
+      <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
   <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
     {/* Text Content */}
     <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">

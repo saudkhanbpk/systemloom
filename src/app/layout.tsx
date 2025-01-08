@@ -9,10 +9,10 @@ import "./globals.css";
 import Link from "next/link";
 import * as Sentry from "@sentry/react";
 
-Sentry.init({
-  dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-  integrations: [],
-});
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [],
+// });
 
 
 // Sentry.init({
@@ -128,7 +128,7 @@ export default function RootLayout({
         {/* WhatsApp Floating Button */}
         <Link
   href="https://wa.me/+447511801699"
-  target="_blank"
+  // target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-20 right-3 p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
   aria-label="Chat with us on WhatsApp" 

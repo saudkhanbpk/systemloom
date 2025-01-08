@@ -46,19 +46,17 @@ const SoftwareMaintenance = () => {
     <div>
      
       {/* hero section start */}
-      <div className="bg-black w-full  pt-24 md:pt-36 lg:pt-20 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
+      <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
-        <div className="w-full md:w-[50vw]  text-center md:text-left">
-          <h1 className="text-3xl lg:text-5xl font-bold">
-            Reliable Software Maintenance Services
+        <div className="w-full md:w-[50vw]  text-center md:text-left ">
+          <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
+          Reliable Software Maintenance Services
           </h1>
-          <p className="text-base md:text-lg mt-3">
-            At TechCreator, our software maintenance services are designed to
-            keep your applications running smoothly. From bug fixes to
-            performance optimization, we ensure your software stays updated,
-            secure, and aligned with your evolving business needs.
+          <p className="text-base lg:text-lg mt-3">
+          At TechCreator, our software maintenance services are designed to keep your applications running smoothly. From bug fixes to performance optimization, we ensure your software stays updated, secure, and aligned with your evolving business needs.
           </p>
           <Buttons/>
+          
         </div>
 
         {/* Right Section */}
@@ -68,227 +66,217 @@ const SoftwareMaintenance = () => {
             alt="Boost stability and growth with software solutions that improve tracking efficiency and reduce disruptions"
             width={300}
             height={300}
-            className="w-[80vw] md:w-[35vw]"
+            className=" "
           />
         </div>
       </div>
       {/* hero section end */}
 
-      {/* FeatureSection section start */}
-      <div className="max-w-7xl  mx-auto  ">
-        <div className="flex flex-col lg:flex-row items-center  lg:items-start  justify-center lg:mt-12 my-6  relative   ">
-          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
+      <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
+        {/* FeatureSection section start */}
+        <div className=" ">
+          <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+            <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
+              <Image
+                src={softwareImage1}
+                alt="Bespoke Web Development to attract your audience"
+                width={300}
+                height={450}
+                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+              />
+            </div>
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+              <div className="text-white xl:py-20 lg:pl-52  ">
+                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
+                Specialized Maintenance and Support Services
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
+                Our comprehensive <strong>software maintenance and support services include troubleshooting,</strong> upgrades, and feature enhancements. With a dedicated team of experts, we provide consistent support to minimize downtime and maximize operational efficiency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* FeatureSection section end */}
+
+        {/* FeaturesList section start */}
+        <h2 className="text-center text-3xl font-bold md:mt-28">
+          Why Choose Us
+        </h2>
+
+        <div className="my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 ">
+          <div className="border-r  xl:pr-3">
+            <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
+
+            {/* Text */}
+            <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
+            Keep your software running smoothly with regular updates and maintenance.
+            </p>
+          </div>
+
+          <div className="border-r  xl:pr-3">
+            <FileText className="w-6 h-6 text-purple-500 flex-shrink-0" />
+
+            {/* Text */}
+            <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
+            Identify and resolve issues to enhance software performance and reliability.
+            </p>
+          </div>
+
+          <div className="border-r  xl:pr-3">
+            <Zap className="w-6 h-6 text-yellow-500 flex-shrink-0" />
+
+            {/* Text */}
+            <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
+            Implement upgrades to align with the latest technologies and trends.
+            </p>
+          </div>
+
+          <div className="  xl:pr-3">
+            <Clock className="w-6 h-6 text-blue-500 flex-shrink-0" />
+
+            {/* Text */}
+            <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
+            Provide comprehensive support to address all your software maintenance needs.
+            </p>
+          </div>
+        </div>
+        {/* FeaturesList section end */}
+
+        {/* DiagonalFeatureSection section start */}
+        <div className="mb-16 ">
+          {/* card1 */}
+          <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+            {/* Image Section */}
             <Image
-              src={softwareImage1}
-              alt="Bespoke Web Development to attract your audience"
+              src={softwareImage2}
+              alt="Streamlined construction equipment maintenance software for tracking, scheduling, and monitoring performance"
               width={300}
-              height={450}
-              className=" lg:w-[400px] lg:h-[450px] h-auto sm:w-[400px]   mx-auto lg:absolute  lg:top-10 shadow-xl"
+              height={300}
+              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+            />
+
+            {/* Text Section */}
+            <div className=" text-center md:text-start">
+              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              Enhance Operations with Construction
+              </h2>
+              <p className="text-base md:text-lg xl:text-lg text-gray-700">
+              For industries relying on heavy machinery, our construction equipment maintenance software ensures streamlined tracking and management of equipment. From scheduling maintenance to monitoring performance, we deliver tailored solutions that enhance reliability and reduce costs.
+              </p>
+            </div>
+          </div>
+
+          {/* card 2 */}
+          <div className="flex flex-col-reverse md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+            {/* Image Section */}
+
+            {/* Text Section */}
+            <div className=" text-center md:text-left">
+              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              Proactive Solutions for Long-Term Software Success
+              </h2>
+              <p className="text-base md:text-lg lg:text-lg text-gray-700">
+              Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing regular updates and monitoring, we ensure your software remains secure, efficient, and ready for future challenges.
+              </p>
+            </div>
+            <Image
+              src={softwareImage3}
+              alt="Take advantage of enhanced security, efficiency, and longevity with proactive maintenance solutions "
+              width={300}
+              height={300}
+              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
             />
           </div>
-          <div className="bg-[#9A00FF] w-full md:w-[800px] lg:h-[450px] p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
-            <div className="text-white xl:py-20 lg:px-52  ">
-              <h2 className="text-xl sm:text-3xl font-bold mb-3 lg:w-[500px]  ">
-              Specialized Maintenance and Support Services
+
+          {/* card 3 */}
+          <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+            {/* Image Section */}
+            <Image
+              src={softwareImage4}
+              alt="Software maintenance plans developed to cater to unique business needs and the peculiarities of distinct industries"
+              width={300}
+              height={300}
+              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+            />
+
+            {/* Text Section */}
+            <div className="text-center md:text-left">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              Custom Maintenance Plans for Business Needs
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed  md:w-[500px] w-full  text-wrap">
-              Our comprehensive <strong>software maintenance and support services include troubleshooting,</strong> upgrades, and feature enhancements. With a dedicated team of experts, we provide consistent support to minimize downtime and maximize operational efficiency.
+              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
+              Every business is unique, and so are its software requirements. At TechCreator, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.
               </p>
             </div>
           </div>
         </div>
-      </div>
-      {/* FeatureSection section end */}
+        {/* DiagonalFeatureSection section end */}
 
-      {/* FeaturesList section start */}
-      <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
-      <div className='my-16 md:mt-20 flex flex-wrap justify-center gap-7 border-b  "'>
-        <div className="border-r  w-[280px] p-3">
-          <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
-
-          {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
-          Keep your software running smoothly with regular updates and maintenance.
-          </p>
-        </div>
-
-        <div className="border-r w-[280px] p-3">
-          <FileText className="w-6 h-6 text-purple-500 flex-shrink-0" />
-
-          {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
-          Identify and resolve issues to enhance software performance and reliability.
-          </p>
-        </div>
-
-        <div className="border-r w-[280px] p-3">
-          <Zap className="w-6 h-6 text-yellow-500 flex-shrink-0" />
-
-          {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
-          Implement upgrades to align with the latest technologies and trends.
-          </p>
-        </div>
-
-        <div className=" w-[280px] p-3">
-          <Clock className="w-6 h-6 text-blue-500 flex-shrink-0" />
-
-          {/* Text */}
-          <p className="text-gray-700 text-sm md:text-base mt-2">
-          Provide comprehensive support to address all your software maintenance needs.
-          </p>
-        </div>
-      </div>
-      {/* FeaturesList section end */}
-
-      {/* DiagonalFeatureSection section start */}
-      <div className="max-w-7xl mx-auto mb-16">
-        {/* card1 */}
-        <div className="flex flex-col md:flex-row justify-around items-center px-4 md:px-8 gap-8 md:gap-12">
-          {/* Image Section */}
-          <Image
-            src={softwareImage2}
-            alt="Streamlined construction equipment maintenance software for tracking, scheduling, and monitoring performance"
-            width={300}
-            height={300}
-            className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
-          />
-
-          {/* Text Section */}
-          <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              Enhance Operations with Construction
-            </h2>
-            <p className="text-base md:text-xl text-gray-700">
-              For industries relying on heavy machinery, our construction
-              equipment maintenance software ensures streamlined tracking and
-              management of equipment. From scheduling maintenance to monitoring
-              performance, we deliver tailored solutions that enhance
-              reliability and reduce costs.
-            </p>
-          </div>
-        </div>
-
-        {/* card 2 */}
-        <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
-          {/* Image Section */}
-
-          {/* Text Section */}
-          <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              Proactive Solutions for Long-Term Software Success
-            </h2>
-            <p className="text-base md:text-xl text-gray-700">
-              Our proactive approach to software maintenance services focuses on
-              identifying potential issues before they occur. By implementing
-              regular updates and monitoring, we ensure your software remains
-              secure, efficient, and ready for future challenges.
-            </p>
-          </div>
-          <Image
-            src={softwareImage3}
-            alt="Take advantage of enhanced security, efficiency, and longevity with proactive maintenance solutions"
-            width={300}
-            height={300}
-            className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
-          />
-        </div>
-
-        {/* card 3 */}
-        <div className="flex flex-col md:flex-row justify-around mt-20 items-center px-4 md:px-8 gap-8 md:gap-12">
-          {/* Image Section */}
-          <Image
-            src={softwareImage4}
-            alt=" Software maintenance plans developed to cater to unique business needs and the peculiarities of distinct industries"
-            width={300}
-            height={300}
-            className="w-[80vw]  sm:w-[55vw] md:w-[25vw] flex-shrink-0"
-          />
-
-          {/* Text Section */}
-          <div className="w-full md:w-[40vw] text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-7">
-              Custom Maintenance Plans for Business Needs
-            </h2>
-            <p className="text-base md:text-xl text-gray-700">
-              Every business is unique, and so are its software requirements. At
-              TechCreator, we craft maintenance plans tailored to your goals,
-              whether you need ongoing software maintenance and support services
-              or assistance with industry-specific tools like construction
-              equipment maintenance software.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* DiagonalFeatureSection section end */}
-
-      {/* FramedFeatureSection section start */}
-      <div className="md:relative bg-[#9A00FF] md:max-w-6xl mx-auto md:py-16  md:mt-28 md:mb-36">
-        <div className="md:relative px-5 flex flex-col md:flex-row items-center md:items-start gap-10">
-          {/* Text Content */}
-          <div className="relative webDevtext z-10 md:max-w-[600px] text-wrap text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* FramedFeatureSection section start */}
+        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+          <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
+            {/* Text Content */}
+            <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
               Ensuring Stability and Growth
-            </h2>
-            <p className="text-base md:text-lg text-white  ">
-              We recently helped a construction company implement construction
-              equipment maintenance software, improving their tracking
-              efficiency by 40%. Additionally, our software maintenance services
-              have enabled businesses across industries to reduce operational
-              disruptions and enhance performance.
-            </p>
+              </h2>
+              <p className="text-base md:text-lg xl:text-lg text-white">
+              We recently helped a construction company implement construction equipment maintenance software, improving their tracking efficiency by 40%. Additionally, our software maintenance services have enabled businesses across industries to reduce operational disruptions and enhance performance.
+              </p>
+            </div>
+            {/* Image */}
+            <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+              <Image
+                src={softwareImage5}
+                alt="Permit stability and growth through software solutions for improved tracking efficiency while ensuring mere minimal disruption"
+                width={400}
+                height={500}
+                className="rounded-lg mx-auto mb-2 md:mx-0"
+              />
+            </div>
           </div>
-          {/* Image */}
-          <div className="relative md:absolute md:top-1/2 md:right-5 md:transform md:-translate-y-1/2">
-            <Image
-              src={softwareImage5}
-              alt="Permit stability and growth through software solutions for improved tracking efficiency while ensuring mere minimal disruption"
-              width={400}
-              height={500}
-              className="rounded-lg mx-auto  md:mx-0"
-            />
+        </div>
+
+        {/* FramedFeatureSection section end */}
+
+        {/* RecentWorks section start */}
+        <ServicesRelatedProjects slug={categorySlug} />
+        {/* RecentWorks section end */}
+
+        {/* RelatedServices section start */}
+        <div className=" px-3 xl:px-0 py-12 sm:py-16">
+          <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
+            Related Services
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5   lg:gap-8 justify-items-center">
+            {services.map((service, index) => (
+              <Link
+                href={service.link}
+                key={index}
+                className="relative p-6 bg-white w-full h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="absolute -top-10 left-6 p-3 rounded-lg">
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={70}
+                    height={70}
+                    className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px]"
+                  />
+                </div>
+                <div className="mt-8 sm:mt-12">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
-      {/* FramedFeatureSection section end */}
-
-      {/* RecentWorks section start */}
-      <ServicesRelatedProjects slug={categorySlug} />
-      {/* RecentWorks section end */}
-
-      {/* RelatedServices section start */}
-      <div className="mx-auto max-w-6xl px-4 md:px-20 lg:px-0 py-12 sm:py-16">
-  <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
-    Related Services
-  </h2>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16 justify-items-center">
-    {services.map((service, index) => (
-      <Link 
-        href={service.link} 
-        key={index} 
-        className="relative p-6 bg-white w-full max-w-[350px] h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
-      >
-        <div className="absolute -top-10 left-6 p-3 rounded-lg">
-          <Image
-            src={service.icon}
-            alt={service.title}
-            width={70}
-            height={70}
-            className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px]"
-          />
-        </div>
-        <div className="mt-8 sm:mt-12">
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">
-            {service.title}
-          </h3>
-          <p className="text-gray-600 text-sm">{service.description}</p>
-        </div>
-      </Link>
-    ))}
-  </div>
-</div>
-      {/* RelatedServices section end */}
     </div>
   );
 };
