@@ -10,12 +10,12 @@ const Buttons = () => {
 
   // Open the strategy link in the same tab
   const handleStrategyClick = () => {
-    router.push("https://calendly.com/contact-techcreator/30min");
+    window.location.href = "https://calendly.com/contact-techcreator/30min";
   };
 
   // Open the WhatsApp link in the same tab
   const handleWhatsappClick = () => {
-    router.push("https://wa.me/+447511801699");
+    window.location.href = "https://wa.me/+447511801699";
   };
 
   // Navigate to the contact page

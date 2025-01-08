@@ -262,56 +262,61 @@ const Header: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div  className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <div key={item.name}>
-                {item.dropdown ? (
-                  // Dropdown menu for Services
-                  <div className="flex flex-col">
-                    <button
-                      onClick={() => setActiveDropdown(item.name)}
-                      className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 ${
-                        pathname === item.href ? "bg-[#0c080f] text-white" : ""
-                      }`}
+  <div className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
+    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      {navItems.map((item) => (
+        <div key={item.name}>
+          {item.dropdown ? (
+            // Dropdown menu for Services
+            <div className="flex flex-col">
+              <button
+                onClick={() => {
+                  setActiveDropdown(item.name === activeDropdown ? null : item.name);
+                }}
+                className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 ${
+                  pathname === item.href ? "bg-[#0c080f] text-white" : ""
+                }`}
+              >
+                <span className="flex items-center gap-3">
+                  {item.icon} {item.name}
+                </span>
+                <span>{activeDropdown === item.name ? "-" : "+"}</span>
+              </button>
+              {activeDropdown === item.name && (
+                <div className="pl-6">
+                  {item.dropdown.map((subItem) => (
+                    <Link
+                      key={subItem.name}
+                      href={subItem.href}
+                      onClick={() => {
+                        setIsOpen(false); // Close menu on click
+                      }}
+                      className="flex items-center gap-3 text-wrap px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-600"
                     >
-                      <span className="flex items-center gap-3">
-                        {item.icon} {item.name}
-                      </span>
-                      <span>{activeDropdown === item.name ? "-" : "+"}</span>
-                    </button>
-                    {activeDropdown === item.name &&  (
-                      <div className="pl-6">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            onClick={() => setIsOpen(false)}
-                            className="flex items-center gap-3 text-wrap px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-600"
-                          >
-                            {subItem.icon} {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  // Regular menu items
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 ${
-                      pathname === item.href ? "bg-[#0c080f] text-white" : ""
-                    }`}
-                  >
-                    {item.icon} {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
+                      {subItem.icon} {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            // Regular menu items
+            <Link
+              href={item.href}
+              onClick={() => setIsOpen(false)} // Close menu on click
+              className={`flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 ${
+                pathname === item.href ? "bg-[#0c080f] text-white" : ""
+              }`}
+            >
+              {item.icon} {item.name}
+            </Link>
+          )}
         </div>
-      )}
+      ))}
+    </div>
+  </div>
+)}
+
     </nav>
   );
 };

@@ -47,7 +47,7 @@ const WebDevelopment = () => {
     <div className="">
 
       {/* hero section start */}
-      <div className="bg-black w-full  pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
+      <div className="bg-black w-full md:px-0 px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left">
           <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">

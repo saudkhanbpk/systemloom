@@ -28,7 +28,7 @@ function HeroSection() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="relative max-w-[1440px] mx-auto md:px-4 sm:px-6 lg:px-8 py-16 md:py-32"
+        className="relative max-w-[1440px] mx-auto md:px-4 sm:px-6 lg:px-8 px-2 py-16 md:py-32"
       >
         <motion.div
           initial={{ opacity: 0 }}
