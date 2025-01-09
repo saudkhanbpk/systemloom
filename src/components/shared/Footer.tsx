@@ -13,7 +13,7 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../../public/assets/icons/Logo.png";
 import CommonButton from "../common/Button";
 import Footerbg from "../../../public/assets/footerImages/footer_bg_image.svg";
-import { act, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
 import { PhoneCall } from "lucide-react";
@@ -31,10 +31,7 @@ import {motion} from "framer-motion"
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [activeLink, setActiveLink] = useState('');
-  const handleLinkClick = (path:any) => {
-    setActiveLink(path);
-  };
+  
 
   const router = useRouter();
   
@@ -256,58 +253,32 @@ const Footer: React.FC = () => {
   </h2>
   <ul className="flex flex-col gap-4 text-sm">
     <li>
-      <Link href="/healthcare" 
-              className={`hover:text-[#9A00FF] ${
-                activeLink === "/healthcare" ? "text-[#9A00FF]" : ""
-              }`}
-              onClick={() => handleLinkClick("/healthcare")}
-            >
-              HealthCare
-           
+      <Link href="/healthcare" className="hover:text-[#9A00FF]">
+        HealthCare
       </Link>
     </li>
     <li>
-      <Link href="/e-commerce" className={`hover:text-[#9A00FF] ${
-        activeLink === "/e-commerce" ? "text-[#9A00FF]" : ""
-      }`}
-      onClick={() => handleLinkClick("/e-commerce")}
-      >
+      <Link href="/e-commerce" className="hover:text-[#9A00FF]">
         E-Commerce
       </Link>
     </li>
     <li>
-      <Link href="/hospitality" className={`hover:text-[#9A00FF] ${
-        activeLink === "/hospitality" ? "text-[#9A00FF]" : ""
-      }`}
-      onClick={() => handleLinkClick("/hospitality")}
-      >
+      <Link href="/hospitality" className="hover:text-[#9A00FF]">
         Hospitality
       </Link>
     </li>
     <li>
-      <Link href="/real-estate" className={`hover:text-[#9A00FF] ${
-        activeLink === "/real-estate" ? "text-[#9A00FF]" : ""
-      }`}
-      onClick={() => handleLinkClick("/real-estate")}
-      >
+      <Link href="/real-estate" className="hover:text-[#9A00FF]">
         Real Estate
       </Link>
     </li>
     <li>
-      <Link href="/restaurants" className={`hover:text-[#9A00FF] ${
-        activeLink === "/restaurants" ? "text-[#9A00FF]" : ""
-      }`}
-      onClick={() => handleLinkClick("/restaurants")}
-      >
+      <Link href="/restaurants" className="hover:text-[#9A00FF]">
         Restaurants
       </Link>
     </li>
     <li>
-      <Link href="/green-energy" className={`hover:text-[#9A00FF] ${
-        activeLink === "/green-energy" ? "text-[#9A00FF]" : ""
-      }`}
-      onClick={() => handleLinkClick("/green-energy")}
-      >
+      <Link href="/green-energy" className="hover:text-[#9A00FF]">
         Green Energy
       </Link>
     </li>

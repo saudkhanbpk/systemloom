@@ -268,7 +268,7 @@ const WebDevelopment = () => {
 </div>
 
       {/* RelatedServices section start */}
-      <div className=" px-3 xl:px-0 py-12 sm:py-16">
+      <div className=" px-3 xl:px-0 py-12 sm:py-2">
   <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
     Related Services
   </h2>
