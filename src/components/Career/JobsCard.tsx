@@ -92,14 +92,14 @@ useGetAllJobs()
 
   return (
     <>
-      <div className=" py-12   px-1">
+      <div className=" py-2   px-1">
         <div className=" ">
           <p className="font-inter font-semibold text-[42px]">Open positions</p>
           <p className="font-inter font-normal text-[22px] text-[#838696]">
             Come join the team!
           </p>
         </div>
-        <div className="flex flex-wrap py-14  md:gap-5  justify-center  gap-4  ">
+        <div className="flex flex-wrap py-8  md:gap-5  justify-center  gap-4  ">
         {allJobs?.length > 0 ? (
             allJobs.map((job) => (
               <div

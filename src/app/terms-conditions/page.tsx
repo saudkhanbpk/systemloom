@@ -15,7 +15,7 @@ const TermsAndConditionsPage = () => {
       </div>
 
       {/* Terms and Conditions Content Section */}
-      <div className="max-w-6xl px-5 py-10 my-10 text-lg">
+      <div className="max-w-6xl px-5 py-4 my-4 text-lg">
         <p className="text-lg mb-6">
           <strong className="text-2xl font-semibold text-purple-600 mb-3"> Website Usage Terms</strong><br />
           These Terms and Conditions govern your access to and use of our websites, including those available through <strong>www.techcreator.co,</strong> along with any associated services, features, or resources provided on or linked through our sites. This includes, but is not limited to, accessing information, registering in our database, subscribing to newsletters, receiving promotional emails, or engaging with related links (collectively referred to as "our Sites"). By visiting or using any part of our Sites, you confirm that you understand and agree to abide by these Terms and Conditions, as well as all relevant laws and regulations that apply to the use of our services.

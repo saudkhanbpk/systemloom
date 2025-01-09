@@ -15,6 +15,7 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 
 const WebDevelopment = () => {
   const categorySlug = "web-development";
@@ -262,7 +263,9 @@ const WebDevelopment = () => {
       <ServicesRelatedProjects slug={categorySlug} />
       {/* RecentWorks section end */}
 
-
+<div>
+<ClientTestimonialsSection />
+</div>
 
       {/* RelatedServices section start */}
       <div className=" px-3 xl:px-0 py-12 sm:py-16">

@@ -14,7 +14,7 @@ const PrivacyPolicyPage = () => {
       </div>
 
       {/* Privacy Policy Content Section */}
-      <div className="max-w-6xl px-5 py-10 my-10  mx-4 md:mx-auto">
+      <div className="max-w-6xl px-5 py-4 my-4  mx-4 md:mx-auto">
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
         The website ("Site") for Techcreator LLC (“Techcreator”, “We”, “Our”, “Us” or “Company”) was created to provide software development services (the "Services"). <br/><br/>
         The privacy of our Site visitors ("you," "your," or "user") is important to us, and in order to protect your personal information, we have implemented the following Privacy Policy with provisions that apply to the collection of data by Techcreator, its subsidiaries, and its affiliates. <br/><br/>

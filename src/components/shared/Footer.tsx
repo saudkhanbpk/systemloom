@@ -13,7 +13,7 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../../public/assets/icons/Logo.png";
 import CommonButton from "../common/Button";
 import Footerbg from "../../../public/assets/footerImages/footer_bg_image.svg";
-import { useEffect, useState } from "react";
+import { act, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
 import { PhoneCall } from "lucide-react";
@@ -31,8 +31,13 @@ import {motion} from "framer-motion"
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
+  const handleLinkClick = (path:any) => {
+    setActiveLink(path);
+  };
 
   const router = useRouter();
+  
   useEffect(() => {
     const footerBackground = document.querySelector(
       ".footer-bg"
@@ -251,32 +256,58 @@ const Footer: React.FC = () => {
   </h2>
   <ul className="flex flex-col gap-4 text-sm">
     <li>
-      <Link href="/healthcare" className="hover:text-[#9A00FF]">
-        HealthCare
+      <Link href="/healthcare" 
+              className={`hover:text-[#9A00FF] ${
+                activeLink === "/healthcare" ? "text-[#9A00FF]" : ""
+              }`}
+              onClick={() => handleLinkClick("/healthcare")}
+            >
+              HealthCare
+           
       </Link>
     </li>
     <li>
-      <Link href="/e-commerce" className="hover:text-[#9A00FF]">
+      <Link href="/e-commerce" className={`hover:text-[#9A00FF] ${
+        activeLink === "/e-commerce" ? "text-[#9A00FF]" : ""
+      }`}
+      onClick={() => handleLinkClick("/e-commerce")}
+      >
         E-Commerce
       </Link>
     </li>
     <li>
-      <Link href="/hospitality" className="hover:text-[#9A00FF]">
+      <Link href="/hospitality" className={`hover:text-[#9A00FF] ${
+        activeLink === "/hospitality" ? "text-[#9A00FF]" : ""
+      }`}
+      onClick={() => handleLinkClick("/hospitality")}
+      >
         Hospitality
       </Link>
     </li>
     <li>
-      <Link href="/real-estate" className="hover:text-[#9A00FF]">
+      <Link href="/real-estate" className={`hover:text-[#9A00FF] ${
+        activeLink === "/real-estate" ? "text-[#9A00FF]" : ""
+      }`}
+      onClick={() => handleLinkClick("/real-estate")}
+      >
         Real Estate
       </Link>
     </li>
     <li>
-      <Link href="/restaurants" className="hover:text-[#9A00FF]">
+      <Link href="/restaurants" className={`hover:text-[#9A00FF] ${
+        activeLink === "/restaurants" ? "text-[#9A00FF]" : ""
+      }`}
+      onClick={() => handleLinkClick("/restaurants")}
+      >
         Restaurants
       </Link>
     </li>
     <li>
-      <Link href="/green-energy" className="hover:text-[#9A00FF]">
+      <Link href="/green-energy" className={`hover:text-[#9A00FF] ${
+        activeLink === "/green-energy" ? "text-[#9A00FF]" : ""
+      }`}
+      onClick={() => handleLinkClick("/green-energy")}
+      >
         Green Energy
       </Link>
     </li>
@@ -456,7 +487,7 @@ const Footer: React.FC = () => {
           <Link href="/privacy-policy" className="text-xs md:text-sm text-gray-400  hover:text-purple-600 cursor-pointer md:mt-3">Privacy Policy</Link>
           </div>
           <p className="text-xs md:text-sm text-gray-400 mt-3 ">
-            © 2024 <span className="text-[#9A00FF]">TechCreator</span>. All
+            © 2025 <span className="text-[#9A00FF]">TechCreator</span>. All
             rights reserved.
           </p>
         </div>
