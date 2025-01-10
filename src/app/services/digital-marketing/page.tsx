@@ -82,11 +82,11 @@ const DigitalMarketing = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
-              <div className="text-white xl:py-20 lg:pl-52  ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-8 lg:mt-0 ">
+              <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Social Media Marketing: Your Audience, Engaged
                 </h2>
@@ -214,7 +214,7 @@ const DigitalMarketing = () => {
         {/* DiagonalFeatureSection section end */}
 
         {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
           <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
@@ -222,11 +222,11 @@ const DigitalMarketing = () => {
               Proven Results Across Industries
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic <strong>Meta Ads</strong> increase conversions by 60%. For startups, our targeted <strong>social media marketing</strong> campaigns have driven audience growth and brand loyalty.
+              With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.
               </p>
             </div>
             {/* Image */}
-            <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+            <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
                 src={marketingImage5}
                 alt="Bespoke solutions show 60% increase in conversion and audience growth"

@@ -75,28 +75,28 @@ const UIUXDesign = () => {
       <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
         {/* FeatureSection section start */}
         <div className=" ">
-          <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
-            <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
-              <Image
-                src={uxdesignimage1}
-                alt="Bespoke Web Development to attract your audience"
-                width={300}
-                height={450}
-                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute lg:top-16  xl:top-20 shadow-xl "
-              />
-            </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-5 mt-8 lg:mt-0 ">
-              <div className="text-white xl:py-20 lg:pl-52  ">
-                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-                Your Partner as a Top UI/UX Design Agency
-                </h2>
-                <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.Our designs are optimized for performance, ensuring seamless navigation and an exceptional user experience. Let’s work together to elevate your online presence and enhance user satisfaction. 
-                </p>
-              </div>
+        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
+            <Image
+              src={uxdesignimage1}
+              alt="Bespoke Web Development to attract your audience"
+              width={300}
+              height={450}
+              className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+            />
+          </div>
+          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
+              Your Partner as a Top UI/UX Design Agency
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
+              Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.Our designs are optimized for performance, ensuring seamless navigation and an exceptional user experience. Let’s work together to elevate your online presence and enhance user satisfaction.
+              </p>
             </div>
           </div>
         </div>
+      </div>
         {/* FeatureSection section end */}
 
         {/* FeaturesList section start */}
@@ -216,7 +216,7 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
         {/* DiagonalFeatureSection section end */}
 
         {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
           <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
@@ -224,11 +224,11 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
               Recent Work: Turning Ideas into Impactful Designs
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              Recently, we partnered with a healthcare startup to deliver a user-friendly mobile UI/UX design that improved patient engagement. Additionally, our work with an e-commerce platform as a <strong>top UI/UX design agency</strong> enhanced their customer journey, leading to increased conversions and user satisfaction.
+              Recently, we partnered with a healthcare startup to deliver a user-friendly mobile UI/UX design that improved patient engagement. Additionally, our work with an e-commerce platform as a top UI/UX design agency enhanced their customer journey, leading to increased conversions and user satisfaction.These projects highlight our ability to create designs that solve real problems while driving business success. 
               </p>
             </div>
             {/* Image */}
-            <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+            <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
                 src={uxdesignimage5}
                 alt=" Featuring great designs: Healthcare UI/UX that drives engagement and eCommerce design that boosts conversions"

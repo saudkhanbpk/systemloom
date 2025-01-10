@@ -85,11 +85,11 @@ const projectManagement = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute lg:top-16  xl:top-20 shadow-xl "
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-5 mt-8 lg:mt-0 ">
-              <div className="text-white xl:py-20 lg:pl-52  ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+              <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Efficient Project Management Services
                 </h2>
@@ -218,7 +218,7 @@ const projectManagement = () => {
         {/* DiagonalFeatureSection section end */}
 
         {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
           <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
@@ -226,11 +226,11 @@ const projectManagement = () => {
               Comprehensive Web Development Services with Ongoing Support
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              Our commitment doesn’t end with the launch of your website or app. We provide comprehensive web development services, from concept to deployment, with continuous support to ensure your platform evolves with your business. Trust us to deliver innovation, functionality, and unmatched quality in every project.
+              Our commitment doesn’t end with the launch of your website or app. We provide comprehensive web development services, from concept to deployment, with continuous support to ensure your platform evolves with your business. Trust us to deliver innovation, functionality, and unmatched quality in every project.With regular updates and maintenance, your platform stays ahead of the competition.
               </p>
             </div>
             {/* Image */}
-            <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+            <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
                 src={projectimage5}
                 alt="Feature illustration"

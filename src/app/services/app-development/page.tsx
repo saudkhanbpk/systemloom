@@ -65,7 +65,7 @@ const MobileAppDevelopment = () => {
           <Image
             src={heroappdevelopmentImage}
             alt="Mobile App Design and development for your business"
-            width={500}
+            width={400}
             height={300}
             className=" "
           />
@@ -75,26 +75,24 @@ const MobileAppDevelopment = () => {
 
       <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
         {/* FeatureSection section start */}
-        <div className=" ">
-          <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
-            <div className="relative lg:static lg:flex-shrink-0  lg:w-[200px]  lg:h-[400px] z-10">
-              <Image
-                src={appImage}
-                alt="Bespoke Web Development to attract your audience"
-                width={300}
-                height={450}
-                className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px] lg:absolute  xl:top-20 shadow-xl "
-              />
-            </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-4 mt-8 lg:mt-0 ">
-              <div className="text-white xl:py-20 lg:pl-52  ">
-                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-                  Healthcare Mobile App Development Transforming Industries
-                </h2>
-                <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                As a trusted healthcare mobile app development company, we craft innovative solutions that enhance patient care and streamline medical workflows. Our services include secure data management, user-friendly interfaces, and tailored features to meet the unique needs of healthcare providers and patients. We bridge the gap between technology and healthcare for better outcomes and improved efficiency.
-                </p>
-              </div>
+        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
+            <Image
+              src={appImage}
+              alt="Bespoke Web Development to attract your audience"
+              width={300}
+              height={450}
+              className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+            />
+          </div>
+          <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
+              Healthcare Mobile App Development Transforming Industries
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
+              As a trusted healthcare mobile app development company, we craft innovative solutions that enhance patient care and streamline medical workflows. Our services include secure data management, user-friendly interfaces, and tailored features to meet the unique needs of healthcare providers and patients. We bridge the gap between technology and healthcare for better outcomes and improved efficiency.
+              </p>
             </div>
           </div>
         </div>
@@ -235,7 +233,7 @@ const MobileAppDevelopment = () => {
         {/* DiagonalFeatureSection section end */}
 
         {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
           <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
@@ -248,16 +246,14 @@ const MobileAppDevelopment = () => {
                 reach users across iOS and Android seamlessly. Additionally, we
                 developed a specialized healthcare app for a clinic, integrating
                 appointment scheduling, patient records, and secure
-                communication features, transforming their service delivery.
-                <br />
-                <br />
+                communication features, transforming their service delivery.   
                 Choose TechCreator to turn your mobile app ideas into reality
                 with innovative solutions designed to meet your business
                 objectives.
               </p>
             </div>
             {/* Image */}
-            <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+            <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
                 src={appImage4}
                 alt="Feature illustration"

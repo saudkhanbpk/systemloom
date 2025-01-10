@@ -82,11 +82,11 @@ const SoftwareMaintenance = () => {
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl "
+              className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-5 lg:py-5 mt-8 lg:mt-0 ">
-            <div className="text-white xl:py-20 lg:pl-52  ">
+          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
               Specialized Maintenance and Support Services
               </h2>
@@ -215,19 +215,19 @@ const SoftwareMaintenance = () => {
         {/* DiagonalFeatureSection section end */}
 
         {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
           <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
-            <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
+            <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px]  lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
               Ensuring Stability and Growth
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              We recently helped a construction company implement construction equipment maintenance software, improving their tracking efficiency by 40%. Additionally, our software maintenance services have enabled businesses across industries to reduce operational disruptions and enhance performance.
+              We recently helped a construction company implement construction equipment maintenance software, improving their tracking efficiency by 40%. Additionally, our software maintenance services have enabled businesses across industries to reduce operational disruptions and enhance performance.Our clients have already noted improvements in their workflow and have credited us for our hardwrok. Positive feedback reflects our dedication to digital solutions. We are ambitious about your ease and stability to your business with our constant support system. 
               </p>
             </div>
             {/* Image */}
-            <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+            <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
                 src={softwareImage5}
                 alt="Permit stability and growth through software solutions for improved tracking efficiency while ensuring mere minimal disruption"
