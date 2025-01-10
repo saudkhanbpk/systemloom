@@ -82,16 +82,16 @@ const GraphicDesign = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl "
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 xl:py-6 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52  ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Partner with One of the Top Graphic Design Companies
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                As one of the leading <strong>graphic design companies,</strong> we provide professional services that enhance your brand’s identity. Our team of skilled designers specializes in creating high-impact visuals that drive engagement and leave a lasting impression.
+                As one of the leading graphic design companies, we provide professional services that enhance your brand’s identity. Our team of skilled designers specializes in creating high-impact visuals that drive engagement and leave a lasting impression.Our designs reflect your brand personality and attracts your targeted audience. We ensure quality, whether it is logo or other marketing materials. Being creative and innovative is our identity.   
                 </p>
               </div>
             </div>
@@ -146,23 +146,23 @@ const GraphicDesign = () => {
         {/* DiagonalFeatureSection section start */}
         <div className="mb-16 ">
           {/* card1 */}
-          <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+          <div className="flex flex-col md:flex-row items-center px-1 sm:px-4 xl:px-0  md:gap-12">
             {/* Image Section */}
             <Image
               src={graphic1}
               alt="TechCreator attracts audience to your products graphic designing"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
               Agency for Graphic Design Tailored to Your Brand
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
-              At TechCreator, we understand the importance of design diversity. Our expertise spans various <strong>graphic design styles,</strong> ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.
+              <p className="text-base md:text-base  lg:text-lg text-gray-700">
+              At TechCreator, we understand the importance of design diversity. Our expertise spans various graphic design styles, ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.We work closely and understand the needs of your business and then translating them into audience-oriented designs. We deal in different categories such as digital assets, print materials or full brand overhauls. Our designs will always resonate with your target market. 
               </p>
             </div>
           </div>
@@ -173,11 +173,11 @@ const GraphicDesign = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Custom Designs for Every Need
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              We offer a wide range of services, including branding, infographics, and digital marketing assets. With our <strong>agency for graphic design,</strong> you’ll receive personalized solutions designed to stand out in today’s competitive market.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              We offer a wide range of services, including branding, infographics, and digital marketing assets. With our agency for graphic design, you’ll receive personalized solutions designed to stand out in today’s competitive market.Our team of experts make sure that every element in design reflect your unique identity of your brand. Along with attention-grabbing logos to engaging social media visuals we guarantee designs that not only look great but also driven results and elevate your brand’s online presence. 
               </p>
             </div>
             <Image
@@ -185,7 +185,7 @@ const GraphicDesign = () => {
               alt="TechCreator offers services in graphic designing for your brand "
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -197,16 +197,16 @@ const GraphicDesign = () => {
               alt="Strategic design to boost brand visibility and industry leadership."
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Brand with Strategic Visuals
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              Effective design goes beyond aesthetics. Our designs are strategically crafted to enhance your brand’s visibility and connect with your target audience, positioning your business as a leader in its industry.
+              <p className="text-base md:text-base  lg:text-lg text-gray-700 ">
+              Effective design goes beyond aesthetics. Our designs are strategically crafted to enhance your brand’s visibility and connect with your target audience, positioning your business as a leader in its industry.Our every designs convey a full story of your business and its core message. Each design is purposeful that speaks directly to your customer and build your brand recognition.  These aesthetic and self-speaking will ultimately drive customer loyalty and growth. 
               </p>
             </div>
           </div>

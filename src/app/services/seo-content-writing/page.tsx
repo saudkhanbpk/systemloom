@@ -83,16 +83,16 @@ const SeoContentWriting = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute lg:top-16 xl:top-20 shadow-xl"
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-6 xl:py-5 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52  ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Go-To Technical SEO Agency
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                As a trusted <strong>technical SEO agency,</strong> we ensure every piece of content is optimized for search engine success. From metadata to keyword placement, our team blends technical expertise with creative writing to help your site rank higher and convert better.
+                As a trusted technical SEO agency, we ensure every piece of content is optimized for search engine success. From metadata to keyword placement, our team blends technical expertise with creative writing to help your site rank higher and convert better.We conduct thorough audits to identify and fix any SEO issues, ensuring your website performs at its best. By focusing on on-page optimization, site speed, and mobile responsiveness, we drive organic traffic and improve user engagement. 
                 </p>
               </div>
             </div>
@@ -154,17 +154,16 @@ const SeoContentWriting = () => {
               alt="Achieve better visibility with expert SEO consulting offering strategy, keyword research, and page optimization"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
               Strategic Consulting for Better Visibility
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
-              Beyond content creation, <strong>we offer SEO consulting services</strong> to help you craft a results-driven strategy. Whether you need guidance on keyword research or optimizing existing pages, our consultants ensure your content aligns with your broader SEO goals.
-              
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Beyond content creation, we offer SEO consulting services to help you craft a results-driven strategy. Whether you need guidance on keyword research or optimizing existing pages, our consultants ensure your content aligns with your broader SEO goals.We focus on actionable insights that improve search rankings and drive targeted traffic. With continuous monitoring and adjustments, we help your business stay competitive in ever-evolving search engine algorithms.
               </p>
             </div>
           </div>
@@ -175,11 +174,11 @@ const SeoContentWriting = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Optimization For Every Business Niche
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our <strong>SEO content strategy</strong> focuses on natural keyword integration that aligns with search intent. By incorporating industry-specific keywords, we help your website attract targeted traffic and boost engagement, leading to improved rankings and conversions.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Our SEO content strategy focuses on natural keyword integration that aligns with search intent. By incorporating industry-specific keywords, we help your website attract targeted traffic and boost engagement, leading to improved rankings and conversions.We create customized content plans tailored to your business's unique needs, ensuring that your message resonates with the right audience. This approach not only increases visibility but also builds long-term trust with your customers. 
               </p>
             </div>
             <Image
@@ -187,7 +186,7 @@ const SeoContentWriting = () => {
               alt="Drive targeted traffic with every business niche's SEO content-enhanced experiences, driving engagement and conversions "
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -199,16 +198,16 @@ const SeoContentWriting = () => {
               alt="Boost authority with technical SEO expertise in delivering content that attracts, retains visitors, and supports long-term growth"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Enhance Authority with Technical SEO Expertise
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              Combining <strong>SEO content writing services</strong> with technical SEO knowledge, we ensure that your website content not only attracts but also retains visitors. From readability improvements to optimized linking structures, we deliver content that supports long-term growth.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Combining SEO content writing services with technical SEO knowledge, we ensure that your website content not only attracts but also retains visitors. From readability improvements to optimized linking structures, we deliver content that supports long-term growth.Our approach strengthens your site’s authority in search engines, driving higher rankings and sustained traffic. By addressing technical issues, we improve user experience and ensure that your content reaches its full potential.
               </p>
             </div>
           </div>
@@ -224,7 +223,7 @@ const SeoContentWriting = () => {
               Results That Speak for Themselves
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              In a recent project, we partnered with an e-commerce platform to revamp their <strong>SEO content strategy,</strong> resulting in a 50% increase in organic traffic. Additionally, as a <strong>technical SEO agency,</strong> we helped a tech company optimize its blog content, improving keyword rankings and audience engagement.
+              In a recent project, we partnered with an e-commerce platform to revamp their SEO content strategy, resulting in a 50% increase in organic traffic. Additionally, as a technical SEO agency, we helped a tech company optimize its blog content, improving keyword rankings and audience engagement.
               </p>
             </div>
             {/* Image */}

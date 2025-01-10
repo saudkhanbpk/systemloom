@@ -68,7 +68,7 @@ const WebDevelopment = () => {
             alt="Custom Web Development and Design"
             width={300}
             height={300}
-            className=" "
+            className="  "
           />
         </div>
       </div>
@@ -78,16 +78,16 @@ const WebDevelopment = () => {
       {/* FeatureSection section start */}
       <div className=" ">
         <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
-          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
+          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
             <Image
               src={webimage1}
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+              className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-5 lg:py-5 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:pl-52  ">
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Bespoke Web Development Tailored to Your Vision
@@ -99,6 +99,7 @@ const WebDevelopment = () => {
                 solutions that align with your brand and business goals,
                 offering unique designs and functionalities to captivate your
                 audience and elevate your online presence.
+                From concept to launch, we ensure every detail is perfected to deliver an exceptional user experience. Let us transform your vision into a dynamic digital reality. 
               </p>
             </div>
           </div>
@@ -158,15 +159,15 @@ const WebDevelopment = () => {
             alt="Digital Web Development solution for your business needs"
             width={300}
             height={300}
-            className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+            className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
           />
 
           {/* Text Section */}
           <div className=" text-center md:text-start">
-            <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
               Custom Web App Development for Dynamic Digital Solutions
             </h2>
-            <p className="text-base md:text-lg xl:text-lg text-gray-700">
+            <p className="text-base md:text-base xl:text-lg text-gray-700">
               <strong>
                 We love working on fresh concepts, ideas and technologies that
                 break industry standards and generate online traction.
@@ -186,10 +187,10 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className=" text-center md:text-left">
-            <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
             MERN & MEAN Web Development Services for High Performance
             </h2>
-            <p className="text-base md:text-lg lg:text-lg text-gray-700">
+            <p className="text-base md:text-base lg:text-lg text-gray-700">
             Being a specialist in <strong>MERN and MEAN web development services,</strong> we build scalable, secure, and high-performance websites based on your business needs. No matter if your need is a content-heavy website, a feature-rich e-commerce platform, or an advanced web application, our developers harness the power and flexibility of MERN (MongoDB, Express, React, Node.js) and MEAN (MongoDB, Express, Angular, Node.js) to provide exemplary solutions. 
             </p>
           </div>
@@ -198,7 +199,7 @@ const WebDevelopment = () => {
             alt="Execute perfect planing with php web development services "
             width={300}
             height={300}
-            className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+            className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
           />
         </div>
 
@@ -210,15 +211,15 @@ const WebDevelopment = () => {
             alt="progressive web app development company providing its best"
             width={300}
             height={300}
-            className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
+            className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
           />
 
           {/* Text Section */}
           <div className="text-center md:text-left">
-            <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
             React Native Development Services for Cross-Platform Excellence
             </h2>
-            <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
+            <p className="text-base md:text-base lg:text-lg xl:text-lg text-gray-700 ">
             By means of <strong>React Native development service experts,</strong> we built cross-platform mobile applications that provide native-like experience on iOS and Android. To build high-performing and cost-effective mobile solutions, our developers use the power of React Native for building everything-from feature-rich business applications, dynamic e-commerce solutions to interactive social platforms. 
             </p>
           </div>
@@ -227,10 +228,10 @@ const WebDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[420px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+      <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-auto  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
   <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
     {/* Text Content */}
-    <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
+    <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] xl:p-10  text-wrap text-center lg:text-left">
       <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
         Comprehensive Web Development Services with Ongoing Support
       </h2>
@@ -241,10 +242,11 @@ const WebDevelopment = () => {
         deployment, with continuous support to ensure your platform
         evolves with your business. Trust us to deliver innovation,
         functionality, and unmatched quality in every project.
+        Whether you need updates, maintenance, or new features, we’re here every step of the way. Our team values collaboration and ensures your vision remains at the forefront. With us, your digital presence is always in expert hands.
       </p>
     </div>
     {/* Image */}
-    <div className="relative lg:absolute lg:top-48 xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
+    <div className="relative lg:absolute lg:top-44 image-height xl:top-48 lg:right-5 lg:transform lg:-translate-y-1/2">
       <Image
         src={webimage5}
         alt="Feature illustration"

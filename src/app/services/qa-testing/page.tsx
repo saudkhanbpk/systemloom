@@ -82,16 +82,16 @@ const QATesting = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl "
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10  xl:py-6 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52  ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Comprehensive Quality Assurance Testing
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                <strong>Our quality assurance process covers every aspect of your software,</strong> from performance and usability to security. With meticulous testing techniques, we ensure that your applications function seamlessly across all platforms.
+                Our quality assurance process covers every aspect of your software, from performance and usability to security. With meticulous testing techniques, we ensure that your applications function seamlessly across all platforms.Our work of nature is to identify potential issues at early stages. This helps us in reducing risks and ensure to provide easy to-go platform to users. Going through thorough testing in real-world scenarios to make sure your software is ready to make impact online, delivering high performance and seamless functionality.  
                 </p>
               </div>
             </div>
@@ -153,16 +153,17 @@ const QATesting = () => {
               alt="Customized QA solutions for different sectors toward achieving error-free working"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
               Specialized For Diverse Industries
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
               No matter your industry, TechCreator offers tailored QA solutions. From e-commerce to healthcare and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance.
+              We have councilors to understand the unique requirements of each industry and make sure our testing methods align with your business end goals. Whether it's compliance for healthcare or scalability for e-commerce, we ensure your software meets the expectations you desire and get you to your targeted audience and results that support your business growth.  
               </p>
             </div>
           </div>
@@ -173,11 +174,12 @@ const QATesting = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
               Accelerate Time-to-Market with Agile QA Services
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
               Our Agile QA approach integrates testing throughout the development cycle. By detecting and resolving issues early, we help you speed up delivery timelines without compromising on quality or user experience.
+              This continuous feedbacks loop makes sure that we are aware of the vulnerabilities of the system and allow us for faster and on time development. With the help our experienced and hardworking team we assist you in launching your product faster and ensure reliability.
               </p>
             </div>
             <Image
@@ -185,7 +187,7 @@ const QATesting = () => {
               alt="Agile QA continues to be an invaluable way of ensuring faster delivery with impeccable quality "
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -197,16 +199,17 @@ const QATesting = () => {
               alt="Manual and automated testing for total security and protection of software"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
               Automation and Manual Testing
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
+              <p className="text-base md:text-base lg:text-lg text-gray-700 mt-3">
               We combine manual and automated testing methods to provide comprehensive coverage and efficient results. Our team leverages the latest tools and technologies to identify and fix vulnerabilities, ensuring your software is robust and secure.
+              This dual approach allows us to address complex scenarios manually while automating repetitive tasks for faster outcomes. By striking the perfect balance between human insight and technological precision, we deliver thorough testing that guarantees seamless performance across all platforms.  
               </p>
             </div>
           </div>

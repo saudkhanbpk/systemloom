@@ -83,16 +83,16 @@ const Devops = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute lg:top-16  xl:top-20 shadow-xl"
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-4 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52  ">
-                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
+                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3">
                 Partner with One of the Leading DevOps Companies
                 </h2>
-                <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                As one of the trusted DevOps companies, we deliver innovative solutions designed to meet your business needs. From infrastructure management to process automation, our team ensures seamless integration of development and IT operations for faster and more reliable software delivery.
+                <p className="text-sm sm:text-base lg:text-lg leading-relaxed w-full text-wrap">
+                As one of the trusted DevOps companies, we deliver innovative solutions designed to meet your business needs. From infrastructure management to process automation, our team ensures seamless integration of development and IT operations for faster and more reliable software delivery.Enhancing collaboration, efficiency, and scalability across operations drives continuous improvement. Accelerate product releases and stay ahead in the competitive market with optimized DevOps practices.
                 </p>
               </div>
             </div>
@@ -154,17 +154,16 @@ const Devops = () => {
               alt="Speed up your workflows while reducing errors through DevOps automation with shorter and more accurate outputs"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
               Transform Processes with DevOps Automation
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
-              Our DevOps automation services eliminate manual tasks and streamline workflows, reducing errors and deployment times. We utilize advanced tools to automate testing, integration, and delivery, empowering your business to operate with greater agility and precision.
-              
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Our DevOps automation services eliminate manual tasks and streamline workflows, reducing errors and deployment times. We utilize advanced tools to automate testing, integration, and delivery, empowering your business to operate with greater agility and precision.Automation drives consistency and accelerates time-to-market, enabling faster innovation. With optimized workflows, businesses can focus on strategic growth and customer satisfaction. 
               </p>
             </div>
           </div>
@@ -175,11 +174,11 @@ const Devops = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Empowering Growth with Business
               </h2>
               <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our business DevOps solutions are designed to align development practices with organizational goals. By enhancing collaboration between teams, we help businesses reduce time-to-market, improve quality, and achieve consistent performance.
+              Our business DevOps solutions are designed to align development practices with organizational goals. By enhancing collaboration between teams, we help businesses reduce time-to-market, improve quality, and achieve consistent performance.These solutions foster a culture of continuous improvement, ensuring agility and efficiency across every stage of the development lifecycle. With streamlined processes, your business can adapt to changes faster and drive long-term success.
               </p>
             </div>
             <Image
@@ -187,7 +186,7 @@ const Devops = () => {
               alt="Aligning development with business goals for quicker time-to-market, better quality, and better performance "
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -199,16 +198,16 @@ const Devops = () => {
               alt="Get personalized DevOps support for cloud migration, CI/CD pipelines, and workflow optimization"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Get a Tailored Support
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              Work with a dedicated DevOps consultant to implement strategies that cater to your unique challenges. Whether you need help with cloud migration, CI/CD pipelines, or workflow optimization, our consultants deliver results-driven guidance and ongoing support.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Work with a dedicated DevOps consultant to implement strategies that cater to your unique challenges. Whether you need help with cloud migration, CI/CD pipelines, or workflow optimization, our consultants deliver results-driven guidance and ongoing support.With expert advice and personalized solutions, businesses can streamline operations and enhance performance. Continuous support ensures that your DevOps strategy evolves as your business grows and technology advances. 
               </p>
             </div>
           </div>

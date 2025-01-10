@@ -85,16 +85,16 @@ const projectManagement = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute lg:top-16  xl:top-20 shadow-xl "
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-5 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52  ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Efficient Project Management Services
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                TechCreator offers reliable <strong>project management services</strong> designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.
+                TechCreator offers reliable <strong>project management services</strong> designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.With a keen focus on communication and collaboration, projects are delivered on time and within budget. Our approach minimizes risks and maximizes project success, driving growth and efficiency. 
                 </p>
               </div>
             </div>
@@ -156,17 +156,17 @@ const projectManagement = () => {
               alt="We handel every matter professionally and precisely"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
               Custom Solutions for Every Challenge
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
               Every project is unique, and so are our solutions. We specialize in creating tailored project management strategies that address your specific needs, ensuring smooth coordination, accountability, and optimal resource utilization.
-              
+              By understanding your objectives, we provide flexible solutions that adapt as your project evolves. Our proactive approach ensures potential challenges are identified and addressed early, keeping your project on track for success. 
               </p>
             </div>
           </div>
@@ -177,11 +177,11 @@ const projectManagement = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Streamline Operations with Agile Project Management
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our expertise in Agile project management empowers businesses to adapt to change, enhance team collaboration, and deliver value quickly. By implementing Agile methodologies, we ensure flexibility without compromising on quality or deadlines.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Our expertise in Agile project management empowers businesses to adapt to change, enhance team collaboration, and deliver value quickly. By implementing Agile methodologies, we ensure flexibility without compromising on quality or deadlines.Through continuous feedback and iterative development, we improve project outcomes and align with evolving business needs. This approach fosters a culture of innovation and efficiency, helping your team stay focused and motivated throughout the project lifecycle. 
               </p>
             </div>
             <Image
@@ -189,7 +189,7 @@ const projectManagement = () => {
               alt="Project Management Services by TechCreator "
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
           </div>
 
@@ -201,16 +201,16 @@ const projectManagement = () => {
               alt="Best Project Management boost efficiency"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               Efficiency with End-to-End Project Oversight
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              From planning to execution, we provide comprehensive oversight to ensure every stage of your project runs smoothly. Our focus on communication, timeline adherence, and quality ensures that your projects achieve their desired outcomes with minimal disruptions.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              From planning to execution, we provide comprehensive oversight to ensure every stage of your project runs smoothly. Our focus on communication, timeline adherence, and quality ensures that your projects achieve their desired outcomes with minimal disruptions.We proactively address challenges, ensuring that adjustments are made swiftly to maintain progress. With a dedicated team overseeing every aspect, your project remains aligned with your goals, leading to a successful and timely delivery. 
               </p>
             </div>
           </div>

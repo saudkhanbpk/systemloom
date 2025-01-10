@@ -10,9 +10,13 @@ const Portfolio = () => {
   return (
     <>
       <HeroSection/>
-      <PortfolioSection/>
+
+    <div className="">
+    <PortfolioSection/>
       <OurImpresiveProject/>
       <ClientTestimonialsSection/>
+    </div>
+     
     </>
   )
 }

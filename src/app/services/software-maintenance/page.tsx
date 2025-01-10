@@ -75,28 +75,29 @@ const SoftwareMaintenance = () => {
       <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
         {/* FeatureSection section start */}
         <div className=" ">
-          <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
-            <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
-              <Image
-                src={softwareImage1}
-                alt="Bespoke Web Development to attract your audience"
-                width={300}
-                height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
-              />
-            </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
-              <div className="text-white xl:py-20 lg:pl-52  ">
-                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-                Specialized Maintenance and Support Services
-                </h2>
-                <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Our comprehensive <strong>software maintenance and support services include troubleshooting,</strong> upgrades, and feature enhancements. With a dedicated team of experts, we provide consistent support to minimize downtime and maximize operational efficiency.
-                </p>
-              </div>
+        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
+            <Image
+              src={softwareImage1}
+              alt="Bespoke Web Development to attract your audience"
+              width={300}
+              height={450}
+              className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl "
+            />
+          </div>
+          <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-5 lg:py-5 mt-8 lg:mt-0 ">
+            <div className="text-white xl:py-20 lg:pl-52  ">
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
+              Specialized Maintenance and Support Services
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
+              Our comprehensive software maintenance and support services include troubleshooting, upgrades, and feature enhancements. With a dedicated team of experts, we provide consistent support to minimize downtime and maximize operational efficiency.Our support system is much robust that any issue arises, it is our duty to ensure seamless functionality and upgradation of your systems. We come with one goal of growing your business and flawless functionality.
+ 
+              </p>
             </div>
           </div>
         </div>
+      </div>
         {/* FeatureSection section end */}
 
         {/* FeaturesList section start */}
@@ -153,16 +154,16 @@ const SoftwareMaintenance = () => {
               alt="Streamlined construction equipment maintenance software for tracking, scheduling, and monitoring performance"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
               Enhance Operations with Construction
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
-              For industries relying on heavy machinery, our construction equipment maintenance software ensures streamlined tracking and management of equipment. From scheduling maintenance to monitoring performance, we deliver tailored solutions that enhance reliability and reduce costs.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              For industries relying on heavy machinery, our construction equipment maintenance software ensures streamlined tracking and management of equipment. From scheduling maintenance to monitoring performance, we deliver tailored solutions that enhance reliability and reduce costs.We provide you with the option of automatic maintenance and let you know the performance of your software also preventing costly downtime. To operate well and meet your need, we have got solutions for you by improving efficiency and long lasting lifespan of your equipment.
               </p>
             </div>
           </div>
@@ -173,11 +174,11 @@ const SoftwareMaintenance = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
               Proactive Solutions for Long-Term Software Success
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing regular updates and monitoring, we ensure your software remains secure, efficient, and ready for future challenges.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing regular updates and monitoring, we ensure your software remains secure, efficient, and ready for future challenges.Techcreator adapt such approaches to avoid disruptions and keep your software running without any interruption. Our constant support system keeps you ahead of the trends and ensures better performance.  
               </p>
             </div>
             <Image
@@ -185,7 +186,7 @@ const SoftwareMaintenance = () => {
               alt="Take advantage of enhanced security, efficiency, and longevity with proactive maintenance solutions "
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -197,16 +198,16 @@ const SoftwareMaintenance = () => {
               alt="Software maintenance plans developed to cater to unique business needs and the peculiarities of distinct industries"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
               Custom Maintenance Plans for Business Needs
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              Every business is unique, and so are its software requirements. At TechCreator, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.
+              <p className="text-base md:text-base lg:text-lg text-gray-700 mt-3">
+              Every business is unique, and so are its software requirements. At TechCreator, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.Before execution or practical work, we go through a proper plan in order to understand your needs that align perfectly to your business. We have expertise that analyze the basic needs and ensure your software always meet your core business objectives.  
               </p>
             </div>
           </div>

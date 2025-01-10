@@ -82,16 +82,16 @@ const UIUXDesign = () => {
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px]   mx-auto lg:absolute lg:top-16  xl:top-20 shadow-xl "
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-5 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52  ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Your Partner as a Top UI/UX Design Agency
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Recognized as a top <strong>UI/UX design agency,</strong> we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.
+                Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.Our designs are optimized for performance, ensuring seamless navigation and an exceptional user experience. Let’s work together to elevate your online presence and enhance user satisfaction. 
                 </p>
               </div>
             </div>
@@ -153,16 +153,17 @@ const UIUXDesign = () => {
               alt="Mobile UI/UX design from TechCreator comes with sleek, responsive, and intuitive interfaces for maximum engaging on-the-go experience"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
               Mobile UI/UX Design for On-the-Go Excellence
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
+              <p className="text-base md:text-base lg:text-lg xl:text-lg text-gray-700">
               In a mobile-first world, our expertise in <strong>mobile UI/UX design</strong> ensures your applications are optimized for smaller screens without compromising user experience. We design sleek, responsive, and intuitive interfaces that captivate users across all devices.
+Our focus on simplicity and accessibility ensures a seamless experience for users on the go. We create mobile interfaces that engage users and keep them coming back for more. 
               </p>
             </div>
           </div>
@@ -173,11 +174,11 @@ const UIUXDesign = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
               End-to-End UI/UX Solutions for Your Business Needs
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              We provide comprehensive <strong>UI/UX design services,</strong> covering every step from ideation to implementation. Our goal is to deliver designs that not only look great but also solve real user challenges, driving results for your business.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              We provide comprehensive <strong>UI/UX design services,</strong> covering every step from ideation to implementation. Our goal is to deliver designs that not only look great but also solve real user challenges, driving results for your business.Designs are crafted with user behavior in mind, ensuring a seamless experience that leads to higher engagement. Tailored to your business goals, the result is a user-friendly interface that fuels growth and satisfaction. 
               </p>
             </div>
             <Image
@@ -185,7 +186,7 @@ const UIUXDesign = () => {
               alt="Comprehensive UI/UX solutions by TechCreator, solving user challenges and driving business results from ideation to implementation"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -197,16 +198,17 @@ const UIUXDesign = () => {
               alt="The UI/UX design is formulated for the individual industries to exceed expectations for apps and digital platforms"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-2">
               Customized UI/UX for Every Industry
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              From startups to enterprises, our design solutions cater to diverse industries. Whether you need a mobile UI/UX design for an app or a complete overhaul of your digital presence, we ensure the final product exceeds your expectations.
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              From startups to enterprises, our design solutions cater to diverse industries. Whether you need a mobile UI/UX design for an app or a complete overhaul of your digital presence, we ensure the final product exceeds your expectations.Each design is tailored to your industry’s specific needs, ensuring maximum impact. The goal is to create intuitive, engaging experiences that drive user loyalty and business growth. 
+
               </p>
             </div>
           </div>

@@ -23,10 +23,15 @@ textarea:-webkit-autofill {
 /* Media query for screens between 841px and 941px */
 @media screen and (max-width: 1107px) and (min-width: 1024px) {
   .webDevtext {
-    width: 450px;
+    width: 480px;
   }
 }
 
+@media (max-width: 1107px) {
+  .image-height {
+    margin-top: 4%;
+  }
+}
 
 
 @media (max-width: 1119px) {

@@ -77,28 +77,22 @@ const MobileAppDevelopment = () => {
         {/* FeatureSection section start */}
         <div className=" ">
           <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
-            <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
+            <div className="relative lg:static lg:flex-shrink-0  lg:w-[200px]  lg:h-[400px] z-10">
               <Image
                 src={appImage}
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto lg:h-[450px] sm:w-[400px]   mx-auto lg:absolute  xl:top-20 shadow-xl"
+                className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[400px] sm:w-[400px] lg:absolute  xl:top-20 shadow-xl "
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-14 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 sm:p-10 lg:p-16 py-10 lg:py-4 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52  ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                   Healthcare Mobile App Development Transforming Industries
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                  As a trusted healthcare{" "}
-                  <strong>mobile app development company,</strong> we design
-                  solutions that improve patient care and streamline medical
-                  processes. Our healthcare mobile app development services
-                  include secure data handling, user-friendly interfaces, and
-                  features tailored to meet the demands of healthcare providers
-                  and patients alike.
+                As a trusted healthcare mobile app development company, we craft innovative solutions that enhance patient care and streamline medical workflows. Our services include secure data management, user-friendly interfaces, and tailored features to meet the unique needs of healthcare providers and patients. We bridge the gap between technology and healthcare for better outcomes and improved efficiency.
                 </p>
               </div>
             </div>
@@ -163,21 +157,22 @@ const MobileAppDevelopment = () => {
               alt="Flutter Mobile App Development: Enjoy the process"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
                 Flutter Mobile App Development for High-Performance Solutions
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
                 Our expertise in <strong>Flutter mobile app development</strong>{" "}
                 enables us to deliver fast, reliable, and visually consistent
                 apps for both iOS and Android platforms. Leveraging this
                 inventive framework, we create apps that provide smooth
                 performance, enhanced flexibility, and a unified codebase,
                 saving time and resources.
+                From startups to enterprises, we craft solutions tailored to diverse business needs. With Flutter, we ensure a seamless user experience and quick time-to-market for your app. Our focus on modern design and robust functionality guarantees apps that stand out in the competitive mobile market. 
               </p>
             </div>
           </div>
@@ -188,16 +183,17 @@ const MobileAppDevelopment = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
                 Your Choice for Multi-Device Reach
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
                 Our cross-platform{" "}
                 <strong>mobile app development services</strong> enable
                 businesses to reach a wider audience with a single solution. We
                 ensure your app functions seamlessly across multiple devices and
                 operating systems, offering a consistent experience to all users
                 while optimizing development efficiency.
+                By using a unified codebase, we reduce costs and speed up the development process. This approach allows your business to stay agile and adapt quickly to market changes.
               </p>
             </div>
             <Image
@@ -205,7 +201,7 @@ const MobileAppDevelopment = () => {
               alt="cross-platform mobile app development services"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -217,20 +213,21 @@ const MobileAppDevelopment = () => {
               alt="Enterprise mobile app development company"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
                 Enhancing Efficiency while Optimizing Functionality
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
                 Enterprise <strong>mobile app development company</strong>{" "}
                 specializes in enhancing productivity and streamlining
                 operations. We develop secure, scalable apps that empower
                 businesses to manage workflows, collaborate effectively, and
                 achieve organizational goals.
+                Our solutions are tailored to meet the unique needs of your business, ensuring seamless integration with existing systems. With a focus on user-friendly interfaces, we deliver apps that improve performance and drive business growth. 
               </p>
             </div>
           </div>

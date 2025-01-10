@@ -155,7 +155,7 @@ const Header: React.FC = () => {
                       </span>
                       {activeDropdown === item.name && (
                         <div className="absolute bg-white text-black shadow-lg rounded-md mt-2 z-20 w-full md:w-auto">
-                          <div className="flex flex-col md:flex-row  justify-between p-4 gap-4 md:w-[450px] text-wrap ">
+                          <div className="flex flex-col md:flex-row  justify-between p-4 gap-4 lg:w-[450px] text-wrap ">
                             {/* Left Column */}
                             <ul className="flex flex-col gap-2  ">
                               {item.dropdown.slice(0, 5).map((subItem) => (
