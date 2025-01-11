@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import Link from "next/link";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 function HeroSection() {
   return (
@@ -12,13 +12,10 @@ function HeroSection() {
           loop
           muted
           playsInline
-          preload="auto" 
+          preload="auto"
           className="object-cover w-full h-full opacity-25"
         >
-          <source
-            src="/assets/homepage/backgroundVideo.webm"
-            type="video/webm"
-          />
+          <source src="/assets/homepage/backgroundVideo.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -28,7 +25,7 @@ function HeroSection() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="relative max-w-[1440px] mx-auto md:px-4 sm:px-6 lg:px-8 px-2 py-16 md:py-32"
+        className="relative max-w-[1440px] mx-auto md:px-4 sm:px-6 lg:px-8 px-2 py-16 md:pt-32"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -41,7 +38,7 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
             className="font-semibold text-3xl md:text-[57px] leading-tight md:leading-[65px] mb-6 md:mb-8"
-            style={{ transition: "opacity 1s ease-in-out, transform 1s ease-in-out" }} // Ensure smooth transitions
+            style={{ transition: "opacity 1s ease-in-out, transform 1s ease-in-out" }}
           >
             Develop your{" "}
             <motion.span
@@ -71,11 +68,34 @@ function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               style={{ background: "rgba(255, 255, 255, 0.24)" }}
-              className="text-white font-bold py-4 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="text-white font-bold py-4 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600"
             >
               Automate your Business &nbsp;&nbsp;→
             </motion.button>
           </Link>
+
+          {/* Animated Arrow */}
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, 15, 0] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 2.5,
+            }}
+            className="mt-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="rgb(139, 92, 246)"
+              className="w-8 h-8 mx-auto"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m0 0l6-6m-6 6l-6-6" />
+            </svg>
+          </motion.div>
         </motion.div>
       </motion.div>
     </main>

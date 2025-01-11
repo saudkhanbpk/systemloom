@@ -124,12 +124,12 @@ const CareerHeroSection: FC = () => {
       {/* Dialog */}
       {isDialogOpen && (
         <div
-        className="absolute inset-0 mt-2  flex items-center justify-center  p-4 sm:p-6 z-10 overflow-y-auto "
+        className="absolute inset-0 mt-2  flex items-center justify-center  p-4 sm:p-6 z-10  "
 
           onClick={handleDialogClose}
         >
           <div
-            className="text-white px-2 pb-2 sm:w-[400px] md:w-[600px] max-w-full relative z-10 h-fit w-full bg-white rounded-md  mt-44"
+            className="text-white px-2 pb-2 sm:w-[400px] md:w-[600px] border-2 max-w-full relative z-10 h-fit w-full bg-white rounded-md  mt-44"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-2xl font-semibold ">Submit Your Resume</h2>

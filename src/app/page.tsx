@@ -3,6 +3,7 @@ import AboutSection from "@/components/landingPage/AboutSection";
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 import Companies, { CTASection } from "@/components/landingPage/Companies";
 import HeroSection from "@/components/landingPage/HeroSection";
+import Products from "@/components/landingPage/Products";
 import ProjectsCount from "@/components/landingPage/ProjectsCount";
 import ServicesSection from "@/components/landingPage/ServicesSection";
 import TeamScalingSection from "@/components/landingPage/TeamScalingSection";
@@ -59,7 +60,7 @@ export default function Page() {
         <ServicesSection />
           </div>
       <div className="max-w-full xl:px-16 px-2 ">
-
+<Products/>
         <TeamScalingSection />
         <ClientTestimonialsSection />
 </div>

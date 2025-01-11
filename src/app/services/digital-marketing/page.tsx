@@ -91,7 +91,7 @@ const DigitalMarketing = () => {
                 Social Media Marketing: Your Audience, Engaged
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Our personalized approach to <strong>social media marketing</strong> helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on Instagram, Facebook, and beyond to captivate and grow your audience.
+                Our personalized approach to social media marketing helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on Instagram, Facebook, and beyond to captivate and grow your audience.We promote your business digitally through engaging posts and targeted ads. We ensure your brand gets a spotlights online among your competitors. Our experts in marketing department analyze insights and adapt strategies which maximizes reach and hunt targeted audience which then turn into loyal customers.  
                 </p>
               </div>
             </div>
@@ -153,7 +153,7 @@ const DigitalMarketing = () => {
               alt="PPC campaigns designed for traffic and conversion maximization"
               width={300}
               height={300}
-              className="sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px]  "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
@@ -162,7 +162,7 @@ const DigitalMarketing = () => {
               PPC Campaigns Designed for Maximum ROI
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-gray-700">
-              As specialists in <strong>PPC</strong>, we design campaigns that deliver high-impact results. Our team analyzes your business needs and targets the right audience with precision, ensuring your ads—whether Google or <strong> Meta Ads—generate</strong> maximum traffic and conversions.
+              As specialists in PPC, we design campaigns that deliver high-impact results. Our team analyzes your business needs and targets the right audience with precision, ensuring your ads—whether Google or Meta Ads—generate maximum traffic and conversions.We go through a deep keyword research and competitor analysis to come up with the strategies that are data-driven and tailored to your goals. We thoroughly monitor and optimize your campaigns to ensure you stay ahead in a competitive market. 
               </p>
             </div>
           </div>
@@ -177,7 +177,8 @@ const DigitalMarketing = () => {
               Insta and FB Ads That Deliver Impact
               </h2>
               <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our expertise in <strong>Insta and FB ads</strong> guarantees attention-grabbing campaigns that drive engagement and sales. We combine creativity with advanced analytics to craft ads that resonate with your audience and achieve your goals.
+              Our expertise in Insta and FB ads guarantees attention-grabbing campaigns that drive engagement and sales. We combine creativity with advanced analytics to craft ads that resonate with your audience and achieve your goals.We ensure your brand’s online presence through eye catching visuals and compelling ad copy. Our strategies are tailored to target the right audience to maximize the ROI. We also constantly monitor and optimize with time to time to keep your campaigns go along  with the trends. Let’s work together and grab the right audience for your business.  
+
               </p>
             </div>
             <Image
@@ -185,7 +186,7 @@ const DigitalMarketing = () => {
               alt="Engaging Insta and FB ads that drive sales with creativity and analytics"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -197,7 +198,7 @@ const DigitalMarketing = () => {
               alt="Branding that defines you and leaves a lasting impression"
               width={300}
               height={300}
-              className=" sm:w-[500px] md:w-[650px] lg:w-[750px] xl:w-[800px] "
+              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
@@ -206,7 +207,7 @@ const DigitalMarketing = () => {
               Strategic Branding For Your Business
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              Branding is more than a logo—it’s how the world perceives your business. Our experts take the time to understand your vision and values, delivering branding solutions that define your identity and leave a lasting impression on your audience.
+              Branding is more than a logo—it’s how the world perceives your business. Our experts take the time to understand your vision and values, delivering branding solutions that define your identity and leave a lasting impression on your audience.Every element of our strategy align with your business, whether it is visual aesthetics or messaging tone. We aim to connect you to your audience emotionally and your brand stand out by combining our creativity and our market research. Our strategies will make your brand trustworthy that inspires trust, loyalty and recognition across all touch points. 
               </p>
             </div>
           </div>
@@ -222,7 +223,7 @@ const DigitalMarketing = () => {
               Proven Results Across Industries
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.
+              With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.Our diverse portfolio shows our excellence and the values we bring to industries such as technology, healthcare, real estate and e-commerce. Our past excellency push us to deliver more and come with the solutions for your business that not only exceed expectations but to bring dignity.
               </p>
             </div>
             {/* Image */}

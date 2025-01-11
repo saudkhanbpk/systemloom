@@ -1,5 +1,13 @@
 import Image, { StaticImageData } from 'next/image';
 import sunGlasses from '../../../public/assets/careerpage/face-sunglasses 1.png';
+import grow from '../../../public/assets/careerpage/grow.png'
+import fun from '../../../public/assets/careerpage/fun.png'
+import impact from '../../../public/assets/careerpage/impact.png'
+import tranperent from '../../../public/assets/careerpage/tranperent.png'
+import push from '../../../public/assets/careerpage/push.png'
+import pride from '../../../public/assets/careerpage/pride.png'
+import unite from '../../../public/assets/careerpage/unite.png'
+
 
 interface ValueCardType {
   icon: StaticImageData | string; 
@@ -8,7 +16,7 @@ interface ValueCardType {
 }
 
 const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
-  <div className="bg-[#FFFFFF] sm:w-[240px] w-full h-auto -top-2 p-3 rounded-[24px] shadow-md">
+  <div className="bg-[#FFFFFF] sm:w-[240px] w-full h-auto -top-2 p-3 border rounded-[24px] shadow-md">
     <div className="flex justify-between">
       <div className="flex items-center mb-4">
         <h3>
@@ -20,7 +28,7 @@ const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
       </div>
       <div className="font-inter font-normal text-base leading-7 text-[#838696]">
         
-          <Image src={icon} alt="icon" className="w-5 h-5 text-purple-600" />
+          <Image src={icon} alt="icon" className="w-12 h-10 text-purple-900 object-contain" />
         
       </div>
     </div>
@@ -46,7 +54,7 @@ const CoreValues: React.FC = () => {
             description="Celebrating individuality while nurturing an environment in which everyone is heard, valued and respected."
           />
           <ValueCard
-            icon={sunGlasses}
+            icon={grow}
             title="Strive to Grow"
             description="Become shaped through continuous evolution and exploration of ideas in ways to open the door to personal and professional development."
           />
@@ -56,36 +64,36 @@ const CoreValues: React.FC = () => {
       <div className="mt-10">
         <div className="flex flex-wrap sm:justify-end justify-center gap-10 w-full">
           <ValueCard
-            icon={sunGlasses}
+            icon={push}
             title="Push the Boundaries"
             description="Do not believe in mediocrity but rather value the amazing ideas by which new solutions can be created."
           />
           <ValueCard
-            icon={sunGlasses}
+            icon={impact}
             title="Strive to Impact"
             description="In your unwavering conviction to make a difference, create solutions that would be most relevant to clients and the communities in which we engage."
           />
           <ValueCard
-            icon={sunGlasses}
+            icon={unite}
             title="Unite As One"
             description="We come together, combining all that we have to reach a common target and build lasting relationships"
           />
         </div>
       </div>
       <div className="mt-10">
-        <div className="flex flex-wrap sm:justify-start justify-center 2xl:gap-14 gap-10  w-full">
+        <div className="flex flex-wrap sm:justify-end pr-72  justify-center  gap-10 w-full">
           <ValueCard
-            icon={sunGlasses}
+            icon={tranperent}
             title="Be Transparent"
             description="Open communication, clear expectations to empower trust, and honesty in everything we say and do."
           />
           <ValueCard
-            icon={sunGlasses}
+            icon={pride}
             title="Take Pride"
             description="With every project we execute, put your heart into it and take pride in the work we accomplish."
           />
           <ValueCard
-            icon={sunGlasses}
+            icon={fun}
             title="Have Fun"
             description="Because work is more than just about doing tasks; it is about work, passion, creativity, and sharing an amazing journey with the team."
           />
