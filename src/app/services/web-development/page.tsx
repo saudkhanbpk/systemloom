@@ -48,30 +48,31 @@ const WebDevelopment = () => {
     <div className="">
 
       {/* hero section start */}
-      <div className="bg-black w-full md:px-0 px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
-        {/* Left Section */}
-        <div className="w-full md:w-[50vw]  text-center md:text-left">
-          <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          Empower your business with custom web development
-          </h1>
-          <p className="text-base lg:text-lg mt-3">
-          Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like Healthcare, Real Estates, Restaurants, E-Commerce stores- that ensure seamless functionality and innovation.
-          </p>
-          <Buttons/>
-          
-        </div>
+      <div className="bg-black w-full md:px-0 px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0 justify-around items-center text-white">
+  {/* Left Section */}
+  <div className="w-full md:w-[50vw] text-center md:text-left">
+    <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
+      Empower your business with custom web development
+    </h1>
+    <p className="text-base lg:text-lg mt-3 leading-relaxed">
+      Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like Healthcare, Real Estates, Restaurants, E-Commerce stores—that ensure seamless functionality and innovation.
+    </p>
+    <Buttons />
+  </div>
 
-        {/* Right Section */}
-        <div className="w-full md:w-auto flex justify-center">
-          <Image
-            src={webDevelopmentImagehero}
-            alt="Custom Web Development and Design"
-            width={300}
-            height={300}
-            className="  "
-          />
-        </div>
-      </div>
+  {/* Right Section */}
+  <div className="w-full md:w-auto flex justify-center">
+    <Image
+      src={webDevelopmentImagehero}
+      alt="Custom Web Development and Design"
+      width={300}
+      height={300}
+      priority={true} 
+      className="rounded-lg shadow-md" 
+    />
+  </div>
+</div>
+
       {/* hero section end */}
       
 <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
@@ -79,12 +80,16 @@ const WebDevelopment = () => {
       <div className=" ">
         <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
-            <Image
-              src={webimage1}
-              alt="Bespoke Web Development to attract your audience"
-              width={300}
-              height={450}
-              className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+          <Image
+        src={webimage1}
+        alt="Bespoke Web Development to attract your audience"
+        width={400} 
+        height={450} 
+        loading="lazy" 
+        quality={90} 
+        placeholder="blur"
+        blurDataURL="/path/to/low-res-placeholder.jpg" 
+        className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
             />
           </div>
           <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
