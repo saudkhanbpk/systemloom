@@ -32,6 +32,7 @@ const Buttons = () => {
         animate={{ opacity: 1, y: 0 }}
         className='bg-purple-700 p-2 rounded-full text-white'
         onClick={handleStrategyClick}
+        aria-label="Schedule a strategy call"
       >
         <AiOutlineCalendar size={30} />
       </motion.button>
@@ -43,6 +44,7 @@ const Buttons = () => {
         animate={{ opacity: 1, y: 0 }}
         className='bg-green-600 p-2 rounded-full text-white'
         onClick={handleWhatsappClick}
+        aria-label="Contact us on WhatsApp"
       >
         <FaWhatsapp size={30} />
       </motion.button>
@@ -54,6 +56,7 @@ const Buttons = () => {
         animate={{ opacity: 1, y: 0 }}
         className='bg-orange-500 p-2 rounded-full text-white'
         onClick={handleContactClick}
+        aria-label="Go to contact page"
       >
         <AiOutlineMail size={30} />
       </motion.button>

@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 
 const Products = () => {
   return (
-    <div className="py-16 ">
+    <div className="py-16  ">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold  text-purple-600">Our Products</h2>
        
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  md:gap-6 gap-10">
         {/* Product Card 1 */}
-        <div className="bg-white border rounded-lg p-6 shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 flex flex-col h-full">
+        <div className="bg-white border rounded-lg p-6 shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 flex flex-col ">
   <h3 className="text-2xl font-semibold text-gray-900">Business Management System</h3>
   <p className="text-gray-600 mt-4 text-base flex-grow">
   Our Business Management System is a robust and easily scalable system that streamlines business operations, increases efficiency, and ultimately drives growth and profitability for your business. With features such as employee management, finance control, and many more modules to effectively manage all aspects of a business. All data is stored in the cloud and is easily accessible from all devices and any location.

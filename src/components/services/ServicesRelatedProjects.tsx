@@ -33,7 +33,7 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
     ?.filter((project) => project.category.includes(slug))
     .slice(0, 6);
 
-    console.log("slug", slug)
+    // console.log("slug", slug)
 
   const handleRedirect = (websiteLink?: string) => {
     if (websiteLink) {
@@ -100,6 +100,7 @@ Want to bring your ideas to life? Let us help you achieve your goals with precis
                         role="button"
                         tabIndex={0}
                         onKeyDown={(e) => e.key === "Enter" && handleRedirect(project.websiteLink)}
+                        aria-label={`View project: ${project.title}`}
                       >
                         <FaEye className="text-white text-4xl" />
                       </div>

@@ -51,15 +51,15 @@ export default function Page() {
 <HeroSection />
       
       {/* Sections with max-w-7xl */}
-      <div className="max-w-full xl:px-16 px-2 ">
+      <div className="max-w-full xl:px-16 md:px-8 px-2 ">
        
         <AboutSection />
       </div>
 
-        <div className="px-2">
+        <div className="px-2 ">
         <ServicesSection />
           </div>
-      <div className="max-w-full xl:px-16 px-2 ">
+      <div className="max-w-full xl:px-16 md:px-8 px-2 ">
 <Products/>
         <TeamScalingSection />
         <ClientTestimonialsSection />
