@@ -57,7 +57,7 @@ const BlogCards: React.FC = () => {
         <div className="container mb-10 mt-10 cursor-pointer   mx-auto grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
         {currentBlogs.map((blog: any) => (
   <div key={blog._id}>
-    <Link href={`/blog/blogDetail/${createSlug(blog.title)}`}>
+    <Link href={`/blog/${createSlug(blog.title)}`}>
 
     <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:h-[390px]">
       <Image

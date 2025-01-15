@@ -31,7 +31,7 @@ export async function GET(req, res) {
       .map(
         (post) => `
         <url>
-          <loc>https://www.techcreator.co/blog/blogDetail/${post.title}</loc>
+          <loc>https://www.techcreator.co/blog/${post.title}</loc>
           <lastmod>${post.lastmod}</lastmod>
         </url>
       `
