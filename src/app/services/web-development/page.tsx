@@ -64,11 +64,11 @@ const WebDevelopment = () => {
   <div className="w-full md:w-auto flex justify-center">
   <Image
     src={webDevelopmentImagehero}
-    alt="Custom Web Development and Design"
-    layout="responsive" // Automatically handles responsive sizing
-    width={300} // Original image width (use the aspect ratio with responsive layout)
-    height={200} // Original image height
-    priority={true} // Improves LCP by preloading the image
+    alt="Web Development and Design"
+    layout="responsive" 
+    width={300} 
+    height={200}
+    priority={true} 
     className="rounded-lg shadow-md object-cover"
   />
 </div>

@@ -9,10 +9,10 @@ import "./globals.css";
 import Link from "next/link";
 import * as Sentry from "@sentry/react";
 
-Sentry.init({
-  dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-  integrations: [],
-});
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [],
+// });
 
 
 // Sentry.init({
@@ -66,6 +66,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/assets/icons/Logo.png" type="image/png" />
 
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PHQXJH3N0Z"
@@ -87,7 +88,7 @@ export default function RootLayout({
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M7VGW76P');
+    })(window,document,'script','dataLayer','GTM-MSPBKQM2');
   `}
 </Script>
 
@@ -115,7 +116,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
   <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-M7VGW76P"
+    src="https://www.googletagmanager.com/ns.html?id=GTM-MSPBKQM2"
     height="0"
     width="0"
     style={{ display: "none", visibility: "hidden" }}
