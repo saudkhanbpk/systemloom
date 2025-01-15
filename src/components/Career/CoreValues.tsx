@@ -81,7 +81,7 @@ const CoreValues: React.FC = () => {
         </div>
       </div>
       <div className="mt-10">
-        <div className="flex flex-wrap sm:justify-end pr-72  justify-center  gap-10 w-full">
+        <div className="flex flex-wrap sm:justify-end lg:pr-72  justify-center  gap-10 w-full">
           <ValueCard
             icon={tranperent}
             title="Be Transparent"
