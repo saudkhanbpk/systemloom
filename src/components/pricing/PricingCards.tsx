@@ -47,6 +47,8 @@ const PricingCards: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
+          width={50}
+          height={30}
             src={backgroundImage}
             alt="Competitive pricing allows you to maximize value without compromising quality"
             className="w-full h-full object-cover animate-fade-in"

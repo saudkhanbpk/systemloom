@@ -1,5 +1,155 @@
+// "use client";
+// // app/layout.tsx
+// import { useEffect } from "react";
+// import Script from "next/script";
+// import Layout from "../newLayout";
+// import { FaWhatsapp } from "react-icons/fa";
+// import localFont from "next/font/local";
+// import "./globals.css";
+// import Link from "next/link";
+// import * as Sentry from "@sentry/react";
+
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [],
+// });
+
+
+// // Sentry.init({
+// //   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+// //   integrations: [
+// //     new BrowserTracing(),
+// //     new Sentry.Replay(), // Session Replay integration
+// //   ],
+// //   // Performance monitoring ke liye
+// //   tracesSampleRate: 1.0, // 100% transactions capture honge
+// //   replaysSessionSampleRate: 0.1, // 10% sessions ke replay capture honge
+// //   replaysOnErrorSampleRate: 1.0, // Errors par 100% replay capture hoga
+// // });
+
+
+
+// // Font configurations
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+
+
+// declare global {
+//   interface Window {
+//     gtag: (...args: any[]) => void;
+//   }
+// }
+
+// export default function RootLayout({
+//   children,
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+//   useEffect(() => {
+//     if (typeof window !== "undefined" && typeof window.gtag === "function") {
+//       window.gtag("config", "G-PHQXJH3N0Z", {
+//         page_path: window.location.pathname + window.location.search,
+//       });
+//     }
+//   }, []);
+
+//   return (
+//     <html lang="en">
+//       <head>
+//         <link rel="icon" href="/assets/icons/Logo.png" type="image/png" />
+
+
+//         {/* Google Analytics */}
+//         <Script
+//           src="https://www.googletagmanager.com/gtag/js?id=G-PHQXJH3N0Z"
+//           strategy="afterInteractive"
+//         />
+//         <Script id="google-analytics" strategy="afterInteractive">
+//           {`
+//             window.dataLayer = window.dataLayer || [];
+//             function gtag(){dataLayer.push(arguments);}
+//             gtag('js', new Date());
+//             gtag('config', 'G-PHQXJH3N0Z');
+//           `}
+//         </Script>
+
+//         {/* Google Tag Manager */}
+//         <Script id="google-tag-manager" strategy="afterInteractive">
+//   {`
+//     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+//     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+//     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+//     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+//     })(window,document,'script','dataLayer','GTM-MSPBKQM2');
+//   `}
+// </Script>
+
+
+//  {/* Google Ads Conversion Tracking */}
+//  <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10843350784"></Script>
+//         <Script id="google-ads" strategy="afterInteractive">
+//           {`
+//             window.dataLayer = window.dataLayer || [];
+//             function gtag(){dataLayer.push(arguments);}
+//             gtag('js', new Date());
+//             gtag('config', 'AW-10843350784');
+//           `}
+//         </Script>
+
+//         {/* Metadata */}
+//         <meta
+//           name="google-site-verification"
+//           content="AVdrxyNjezX0QpeAA-BxrpT19BFeEwwfp5Tof-aLtsY"
+//         />
+//       </head>
+//       <body
+//         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+//       >
+//         {/* Google Tag Manager (noscript) */}
+//         <noscript>
+//   <iframe
+//     src="https://www.googletagmanager.com/ns.html?id=GTM-MSPBKQM2"
+//     height="0"
+//     width="0"
+//     style={{ display: "none", visibility: "hidden" }}
+//   ></iframe>
+// </noscript>
+
+//         {/* Layout Wrapper */}
+//         <Layout>{children}</Layout>
+
+//         {/* WhatsApp Floating Button */}
+//         <Link
+//   href="https://wa.me/+447511801699"
+//   target="_blank"
+//   rel="noopener noreferrer"
+//   onClick={(e) => {
+//     e.preventDefault(); 
+//     window.location.href = "https://wa.me/+447511801699"; 
+//   }}
+//   className="fixed bottom-20 right-3 p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
+//   aria-label="Chat with us on WhatsApp"
+// >
+//   <FaWhatsapp size={40} />
+// </Link>
+
+
+//       </body>
+//     </html>
+//   );
+// }
+
+
+
 "use client";
-// app/layout.tsx
 import { useEffect } from "react";
 import Script from "next/script";
 import Layout from "../newLayout";
@@ -9,25 +159,11 @@ import "./globals.css";
 import Link from "next/link";
 import * as Sentry from "@sentry/react";
 
+// Sentry Initialization
 Sentry.init({
   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-  integrations: [],
+  integrations: [], // Add integrations as needed
 });
-
-
-// Sentry.init({
-//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-//   integrations: [
-//     new BrowserTracing(),
-//     new Sentry.Replay(), // Session Replay integration
-//   ],
-//   // Performance monitoring ke liye
-//   tracesSampleRate: 1.0, // 100% transactions capture honge
-//   replaysSessionSampleRate: 0.1, // 10% sessions ke replay capture honge
-//   replaysOnErrorSampleRate: 1.0, // Errors par 100% replay capture hoga
-// });
-
-
 
 // Font configurations
 const geistSans = localFont({
@@ -41,7 +177,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-
+// Google Analytics Config Function
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
@@ -54,6 +190,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   useEffect(() => {
+    // Set up Google Analytics tracking
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("config", "G-PHQXJH3N0Z", {
         page_path: window.location.pathname + window.location.search,
@@ -64,38 +201,69 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon */}
         <link rel="icon" href="/assets/icons/Logo.png" type="image/png" />
 
+        {/* Metadata */}
+        <meta
+          name="google-site-verification"
+          content="AVdrxyNjezX0QpeAA-BxrpT19BFeEwwfp5Tof-aLtsY"
+        />
 
+        {/* Fonts Preload */}
+        <link
+          rel="preload"
+          href="/fonts/GeistVF.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/GeistMonoVF.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PHQXJH3N0Z"
-          strategy="afterInteractive"
+          strategy="lazyOnload" // Lazy load the script
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-PHQXJH3N0Z');
+            gtag('config', 'G-PHQXJH3N0Z', { 'anonymize_ip': true });
           `}
         </Script>
 
         {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
-  {`
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MSPBKQM2');
-  `}
-</Script>
+        <Script
+          id="google-tag-manager"
+          strategy="lazyOnload" // Defer GTM loading
+        >
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MSPBKQM2');
+          `}
+        </Script>
 
-
- {/* Google Ads Conversion Tracking */}
- <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10843350784"></Script>
-        <Script id="google-ads" strategy="afterInteractive">
+        {/* Google Ads Conversion Tracking */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10843350784"
+          strategy="lazyOnload"
+          async
+        />
+        <Script id="google-ads" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -104,44 +272,29 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Metadata */}
-        <meta
-          name="google-site-verification"
-          content="AVdrxyNjezX0QpeAA-BxrpT19BFeEwwfp5Tof-aLtsY"
-        />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {/* Google Tag Manager (noscript) */}
+        {/* Google Tag Manager (noscript fallback) */}
         <noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-MSPBKQM2"
-    height="0"
-    width="0"
-    style={{ display: "none", visibility: "hidden" }}
-  ></iframe>
-</noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MSPBKQM2"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
 
         {/* Layout Wrapper */}
         <Layout>{children}</Layout>
 
         {/* WhatsApp Floating Button */}
         <Link
-  href="https://wa.me/+447511801699"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={(e) => {
-    e.preventDefault(); 
-    window.location.href = "https://wa.me/+447511801699"; 
-  }}
-  className="fixed bottom-20 right-3 p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
-  aria-label="Chat with us on WhatsApp"
->
-  <FaWhatsapp size={40} />
-</Link>
-
-
+          href="https://wa.me/+447511801699"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-20 right-3 p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 z-50"
+          aria-label="Chat with us on WhatsApp"
+        >
+          <FaWhatsapp size={40} />
+        </Link>
       </body>
     </html>
   );

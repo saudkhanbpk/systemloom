@@ -63,17 +63,14 @@ const WebDevelopment = () => {
   {/* Right Section */}
   <div className="w-full md:w-auto flex justify-center">
   <Image
-    src={webDevelopmentImagehero}
-    alt="Web Development and Design"
-    layout="responsive" 
-    width={300} 
-    height={200}
-    loading="lazy"
-    className="rounded-lg shadow-md object-cover"
-  />
+  src={webDevelopmentImagehero}
+  alt="Web Development and Design"
+  width={300}
+  height={200}
+  priority={true} 
+  className="rounded-lg shadow-md object-cover"
+/>
 </div>
-
-
 </div>
 
       {/* hero section end */}
@@ -88,7 +85,6 @@ const WebDevelopment = () => {
         alt="Bespoke Web Development to attract your audience"
         width={400} 
         height={450} 
-        loading="lazy" 
         quality={90} 
         placeholder="blur"
         blurDataURL="/path/to/low-res-placeholder.jpg" 

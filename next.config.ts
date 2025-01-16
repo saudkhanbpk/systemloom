@@ -7,33 +7,48 @@
 
 // module.exports = nextConfig;
 
-
-
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, // Helps catch errors during development
   images: {
     domains: ['s3-alpha-sig.figma.com', 'res.cloudinary.com'], 
   },
+
+  // Define headers for caching
   async headers() {
     return [
+      // Cache static media files
       {
-        // Apply caching headers for all routes
-        source: '/(.*)',
+        source: '/_next/static/media/(.*)',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'no-store, max-age=0, must-revalidate',
+            value: 'public, max-age=31536000, immutable', 
+          },
+        ],
+      },
+      // Cache static Next.js assets
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', 
+          },
+        ],
+      },
+      // Cache fonts
+      {
+        source: '/fonts/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable', 
           },
         ],
       },
     ];
-  },
-  generateBuildId: async () => {
-    // Return a unique build ID based on the current timestamp
-    return `build-${new Date().getTime()}`;
-  },
+  }
+  
 };
 
-export default nextConfig;
+module.exports = nextConfig;
