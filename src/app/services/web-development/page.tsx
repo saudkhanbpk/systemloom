@@ -68,7 +68,7 @@ const WebDevelopment = () => {
     layout="responsive" 
     width={300} 
     height={200}
-    priority={true} 
+    loading="lazy"
     className="rounded-lg shadow-md object-cover"
   />
 </div>
