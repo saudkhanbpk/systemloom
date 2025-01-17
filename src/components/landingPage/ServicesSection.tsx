@@ -49,7 +49,7 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/webdesignicon.webp",
       link: "/services/web-development",
-      altText: "Web design and development services",
+      altText: "Web design services",
     },
     {
       id: 2,
@@ -61,7 +61,7 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/appdevicon.webp",
       link: "/services/app-development",
-      altText: "Providing mobile app development and maintenance",
+      altText: "Mobile app development",
     },
     {
       id: 3,
@@ -73,7 +73,7 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/devops.webp",
       link: "/services/devops",
-      altText: "Development and maintenance all at one place",
+      altText: "DevOps services",
     },
     {
       id: 4,
@@ -85,7 +85,7 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/webdevicon.webp",
       link: "/services/qa-testing",
-      altText: "Software testing solutions at TechCreator",
+      altText: "Software testing",
     },
     {
       id: 5,
@@ -97,7 +97,7 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/uiuxdesign.webp",
       link: "/services/ui-ux-design",
-      altText: "Design your dream into reality",
+      altText: "UI/UX design",
     },
     {
       id: 6,
@@ -107,10 +107,9 @@ const ServicesSection: React.FC = () => {
           .split(" ")
           .slice(0, 27)
           .join(" ") + "...",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB8CSayoy_gkUrkW4-D9Vq82e_gcDBNfOM1w&s",
+      image:"/assets/homepage/softwaremaintanence.webp",
       link: "/services/graphic-designing",
-      altText: "Attract and grab audience attention",
+      altText: "Graphic design",
     },
     {
       id: 7,
@@ -122,7 +121,7 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/projectmanagement.webp",
       link: "/services/project-management",
-      altText: "Project Management Services",
+      altText: "Project management",
     },
     {
       id: 8,
@@ -134,7 +133,7 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/seo.webp",
       link: "/services/seo-content-writing",
-      altText: "SEO and content writing for better optimization",
+      altText: "SEO services",
     },
     {
       id: 9,
@@ -146,21 +145,22 @@ const ServicesSection: React.FC = () => {
           .join(" ") + "...",
       image: "/assets/homepage/softwaremaintanence.webp",
       link: "/services/software-maintenance",
-      altText: "Software maintenance services at TechCreator",
+      altText: "Software maintenance",
     },
     {
       id: 10,
-      title: "Digital Marketing ",
+      title: "Digital Marketing",
       des:
-        " We create good ads campaigns on Facebook, Instagram, LinkedIn, and Twitter to increase the reach of your brand. We focus on creating viral content, targeted ads, and communities. When paired with a solid branding strategy, we make sure your social presence hits home. From influencer collaborations to data-driven analytics, we empower social media platforms to be your leading tools in achieving growth and success."
+        "We create good ads campaigns on Facebook, Instagram, LinkedIn, and Twitter to increase the reach of your brand. We focus on creating viral content, targeted ads, and communities. When paired with a solid branding strategy, we make sure your social presence hits home. From influencer collaborations to data-driven analytics, we empower social media platforms to be your leading tools in achieving growth and success."
           .split(" ")
           .slice(0, 24)
           .join(" ") + "...",
       image: "/assets/homepage/digitalmarketing.webp",
       link: "/services/digital-marketing",
-      altText: "Social media marketing and branding services",
+      altText: "Digital marketing",
     },
   ];
+  
 
   return (
     <div className="mx-auto">

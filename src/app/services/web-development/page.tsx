@@ -1,5 +1,5 @@
 import React from "react";
-import webDevelopmentImagehero from "../../../../public/assets/servicespages/webdevelopment.webp";
+import webDevelopmentImagehero from "../../../../public/assets/servicespages/webdevelopment (1).webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
 import webimage1 from "../../../../public/assets/servicespages/webImage1.webp";
@@ -55,22 +55,25 @@ const WebDevelopment = () => {
       Empower your business with custom web development
     </h1>
     <p className="text-base lg:text-lg mt-3 leading-relaxed">
-      Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like Healthcare, Real Estates, Restaurants, E-Commerce stores—that ensure seamless functionality and innovation.
-    </p>
+  Techcreator helps accelerate your business growth with custom web solutions. Our expert team delivers tailored websites for industries like Healthcare, Real Estate, Restaurants, and E-Commerce, ensuring seamless functionality and innovation.
+</p>
+
     <Buttons />
   </div>
 
   {/* Right Section */}
   <div className="w-full md:w-auto flex justify-center">
   <Image
-  src={webDevelopmentImagehero}
-  alt="Web Development and Design"
-  width={300}
-  height={200}
-  priority={true} 
-  className="rounded-lg shadow-md object-cover"
-/>
+    src={webDevelopmentImagehero}
+    alt="Web Development and Design"
+    width={200}       
+    height={100}     
+    priority={true} 
+    className="rounded-lg shadow-md object-cover w-[200px] md:w-[300px] h-[200px] md:h-auto"  
+    layout="intrinsic"
+  />
 </div>
+
 </div>
 
       {/* hero section end */}
@@ -83,12 +86,10 @@ const WebDevelopment = () => {
           <Image
         src={webimage1}
         alt="Bespoke Web Development to attract your audience"
-        width={400} 
-        height={450} 
+        width={300} 
+        height={150} 
         quality={90} 
-        placeholder="blur"
-        blurDataURL="/path/to/low-res-placeholder.jpg" 
-        className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+        className="lg:w-[400px]  h-[300px] w-[300px] sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
             />
           </div>
           <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
@@ -162,8 +163,9 @@ const WebDevelopment = () => {
             src={webimage2}
             alt="Digital Web Development solution for your business needs"
             width={300}
-            height={300}
-            className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+            height={150}
+            loading="lazy"
+            className="w-[300px]  md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
           />
 
           {/* Text Section */}
@@ -202,8 +204,9 @@ const WebDevelopment = () => {
             src={webimage3}
             alt="Execute perfect planing with php web development services "
             width={300}
-            height={300}
-            className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+            height={150}
+            loading="lazy"
+            className=" w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
           />
         </div>
 
@@ -214,8 +217,9 @@ const WebDevelopment = () => {
             src={webimage4}
             alt="progressive web app development company providing its best"
             width={300}
-            height={300}
-            className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
+            height={150}
+            loading="lazy"
+            className=" w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
           />
 
           {/* Text Section */}
@@ -255,7 +259,7 @@ const WebDevelopment = () => {
         src={webimage5}
         alt="Feature illustration"
         width={400}
-        height={500}
+        height={200}
         className="rounded-lg mx-auto mb-2 md:mx-0"
       />
     </div>

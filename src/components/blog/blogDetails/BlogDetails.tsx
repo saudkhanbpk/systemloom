@@ -69,8 +69,7 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
               src={post.image.imageUrl}
               alt={post.image.altDescription}
               layout="fill"
-              objectFit="cover"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg object-fill md:object-cover"
             />
           )}
         </div>

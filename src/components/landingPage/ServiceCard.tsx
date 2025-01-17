@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ServiceCardProps {
@@ -19,7 +20,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className="p-2 rounded-md transition-all h-[340px] md:mr-2 duration-300 ease-in-out border-2 mt-9  hover:-translate-y-9 hover:border-4 hover:border-[#9A00FF] cursor-pointer shadow-md ">
       <div className="flex justify-center">
-        <img
+        <Image
+        width={10}
+        height={10}
           src={icon}
           alt={altText}
           className="w-[100px] h-auto object-contain"
