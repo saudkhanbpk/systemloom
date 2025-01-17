@@ -1,4 +1,3 @@
-// app/page.js or app/page.tsx
 import AboutSection from "@/components/landingPage/AboutSection";
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 import Companies, { CTASection } from "@/components/landingPage/Companies";
@@ -19,7 +18,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -47,31 +46,23 @@ export default function Page() {
         }}
       />
 
-    
-<HeroSection />
-      
-      {/* Sections with max-w-7xl */}
+      <HeroSection />
       <div className="max-w-full xl:px-16 md:px-8 px-2 ">
-       
         <AboutSection />
       </div>
-
-        <div className="px-2 ">
+      <div className="px-2 ">
         <ServicesSection />
-          </div>
+      </div>
       <div className="max-w-full xl:px-16 md:px-8 px-2 ">
-<Products/>
+        <Products />
         <TeamScalingSection />
         <ClientTestimonialsSection />
-</div>
-      
+      </div>
       <ProjectsCount />
       <Companies />
-      
-     
       <div className="max-w-full xl:px-16 px-4 ">
         <CTASection />
       </div>
-    </div>
+    </>
   );
 }

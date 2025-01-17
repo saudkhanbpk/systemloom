@@ -8,7 +8,7 @@ import AdminOfficerImage from "../../../public/assets/aboutpage/hamdad.webp";
 
 const TeamScalingSection = () => {
   return (
-    <section className="md:py-16 py-7   ">
+    <section className="md:py-16 py-2   ">
       <div className=" ">
         {/* section 1 */}
         <div className="flex flex-col items-center gap-6 lg:flex-row mb-10">
@@ -53,8 +53,8 @@ const TeamScalingSection = () => {
             <Image
               src={team1}
               alt="Organizing TecCreator team to offer development services"
-              width={700}
-              height={450}
+              width={300}
+              height={100}
               className="  xl:h-[350px] h-[260px] w-[800px] x:w-[800px]  rounded-lg shadow-lg object-cover"
             />
           </div>
@@ -66,8 +66,8 @@ const TeamScalingSection = () => {
             <Image
               src={team2}
               alt="Organizing TecCreator team to offer development services"
-              width={700}
-              height={450}
+              width={300}
+              height={100}
               className="xl:h-[350px] h-[260px] w-[800px] xl:w-[1000px] rounded-lg shadow-lg object-cover"
             />
           </div>
@@ -148,9 +148,9 @@ const TeamScalingSection = () => {
             <Image
               src={teemImage3}
               alt="Organizing TecCreator team to offer development services"
-              width={700}
-              height={450}
-              className="xl:h-[350px] h-[260px]  xl:w-[1000px] rounded-lg shadow-lg object-cover"
+              width={300}
+              height={100}
+              className="xl:h-[350px] h-[260px] w-[800px] x:w-[800px]  rounded-lg shadow-lg object-cover"
             />
           </div>
         </div>

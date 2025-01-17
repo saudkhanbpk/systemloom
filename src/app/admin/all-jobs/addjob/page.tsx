@@ -45,7 +45,6 @@ const Page: React.FC = () => {
 
   useEffect(() => {
     if (jobId) {
-      // Fetch job data for the given jobId
       const fetchJobData = async () => {
         try {
           const res = await axios.get(`${backend_url}/api/v1/job/get/${jobId}`);
@@ -60,7 +59,6 @@ const Page: React.FC = () => {
     }
   }, [jobId]);
 
-  // Handle input change
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -69,10 +67,8 @@ const Page: React.FC = () => {
     }));
   };
 
-  // Handle array field changes (skills and qualifications)
   const handleArrayChange = (e: ChangeEvent<HTMLInputElement>, field: 'skills' | 'qualifications') => {
     const value = e.target.value;
-    // Ensure the value is split by commas, trimmed, and any empty values are removed
     setFormData((prevData) => ({
       ...prevData,
       [field]: value.split(',').map(item => item.trim()).filter(Boolean)

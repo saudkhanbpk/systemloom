@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import {  FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { backend_url } from '@/newLayout';
@@ -66,17 +66,6 @@ const Login: React.FC = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div className='flex flex-col lg:flex-row justify-between lg:gap-8 md:gap-16 items-center'>
-        
-        {/* Image - Hidden on small screens */}
-        {/* <div className='lg:w-[600px] w-[400px]  md:mt-10 lg:mt-0 hidden md:block'>
-          <motion.img
-            src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-            alt="Login Illustration"
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
-        </div> */}
 
         {/* Form Container */}
         <div className='text-white sm:w-[400px] w-[300px] '>

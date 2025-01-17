@@ -6,11 +6,10 @@ import AdminLayout from '@/components/shared/AdminLayout'
 import useGetAllJobs from '@/hooks/useGetAllJobs'
 import React, { useState } from 'react'
 
-// Define the component using React.FC type
+
 const Page: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("")
 
-  // Invoke the custom hook
   useGetAllJobs()
 
   return (

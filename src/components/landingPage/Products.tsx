@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Products = () => {
   return (
-    <div className="py-16  ">
+    <div className="md:py-16  ">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold  text-purple-600">Our Products</h2>
        

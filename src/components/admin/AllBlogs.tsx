@@ -22,10 +22,9 @@ const generateSlug = (title: string) => {
     .replace(/^-+|-+$/g, "");
 };
 
-// Define a type for the blog data
 interface Blog {
   _id: string;
-  slug: string;  // Make sure you have the slug in your data
+  slug: string;  
   image: string | { imageUrl: string };
   content: string;
   tags: string[];
@@ -69,14 +68,14 @@ const AllBlogs: React.FC = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  // Update the handleEdit to use the slug
+  
   const handleEdit = (slug: string) => {
     router.push(`/admin/create-blog?slug=${slug}`);
   };
 
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // Update the deletedblogHandler to use the slug
+  
   const deletedblogHandler = async (slug: string) => {
     setIsDeleting(true);
     try {
@@ -214,12 +213,8 @@ const AllBlogs: React.FC = () => {
             </td>
           </tr>
         </tfoot>
-      </table>
-       
+      </table> 
     </section>
-
-   
-
   </main>
 );
 };
