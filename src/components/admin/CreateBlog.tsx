@@ -105,7 +105,6 @@ const CreateBlogForm = () => {
       const fetchBlogData = async () => {
         try {
           const res = await axios.get(`${backend_url}/api/v1/blogs/get/${slug}`);
-          // console.log("single project data", res);
           if (res.data.success) {
             setFormData({
               storyContent: res.data.blog.content,

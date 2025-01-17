@@ -68,7 +68,6 @@ const Contacts: React.FC = () => {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
-      // console.log(res);
 
       if (res.data.success) {
         setSelectedContact(res.data.message);

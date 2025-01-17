@@ -1,9 +1,6 @@
 import BlogCards from '@/components/blog/BlogCards';
 import BlogHeroSection from '@/components/blog/BlogHeroSection';
 
-
-
-// Define types for the blog structure
 interface Blog {
   _id: string;
   title: string;

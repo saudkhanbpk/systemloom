@@ -57,7 +57,6 @@ const CareerHeroSection: FC = () => {
           withCredentials: true,
         }
       );
-// console.log("resume",res)
       if (res.data.success) {
         toast.success(res.data.message);
         setFormData({

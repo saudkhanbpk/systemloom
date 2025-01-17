@@ -12,7 +12,7 @@ const useGetAllProjects = () => {
     const fetchAllProjects = async () => {
       try {
         const res = await axios.get(`${backend_url}/api/v1/project/all`, { withCredentials: true });
-        // console.log(res);  
+     
 
         if (res.data.success) {
           dispatch(setAllProjects(res.data.projects));  

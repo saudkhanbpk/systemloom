@@ -36,7 +36,7 @@ const AddProjectPage: React.FC = () => {
           const res = await axios.get(
             `${backend_url}/api/v1/project/get/${projectId}`
           );
-          // console.log("single project data", res);
+          
 
           if (res.data.success) {
             setFormData({
@@ -128,8 +128,6 @@ const AddProjectPage: React.FC = () => {
       formPayload.append("category[]", category);
     });
   }
-
-    // console.log("Industry Value:", formData.industry);
 
     if (formData.projectScreenshot) {
       formPayload.append("projectScreenshot", formData.projectScreenshot);

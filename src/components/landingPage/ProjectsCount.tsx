@@ -33,23 +33,6 @@ const StatItem: FC<StatItemProps> = ({ value, label }) => {
 const ProjectsCount: FC = () => {
   return (
     <div className="relative bg-[#9A00FF] py-8 overflow-hidden">
-      {/* <div className="absolute inset-0">
-      <video
-  autoPlay
-  muted
-  loop
-  className="absolute inset-0 w-full h-full object-cover opacity-70 pointer-events-none"
-  aria-hidden="true"
-  poster="/assets/vecteezy_video-placeholder.jpg"
->
-  <source
-    src="/assets/vecteezy_digital-waves-motion-background-video-animation_3006226.mp4"
-    type="video/mp4"
-  />
-  Your browser does not support the video tag.
-</video>
-
-      </div> */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
           <StatItem value={90} label="Clients" />

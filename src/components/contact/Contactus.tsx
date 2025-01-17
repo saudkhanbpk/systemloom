@@ -8,6 +8,8 @@ function ContactUs() {
     <div className="relative text-white ">
       <div className="absolute inset-0 overflow-hidden bg-gray-900">
         <Image
+        width={300}
+        height={200}
           src={HeroSection_BG}
           alt="Background"
           className="w-full h-full object-cover opacity-25"

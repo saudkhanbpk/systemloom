@@ -19,8 +19,6 @@ const IndustryRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
   const filteredProjects = projects.filter((project) =>
     project.industry.includes(slug)
   );
-// console.log("slug", slug)
-
 
   const indexOfLastProject = currentPage * itemsPerPage;
   const indexOfFirstProject = indexOfLastProject - itemsPerPage;

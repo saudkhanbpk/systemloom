@@ -1,5 +1,3 @@
-
-
 import Image, { StaticImageData } from 'next/image';
 import { FC } from 'react';
 import { Instagram } from 'lucide-react';

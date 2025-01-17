@@ -4,8 +4,6 @@ import Image from 'next/image';
 import backgroundImage from "../../../public/assets/aboutpage/backgroundImage .webp";
 
 const AboutHeroSection: React.FC = () => {
-  
-
   return (
     <div className="relative bg-gray-900 text-white h-[500px] md:h-[700px]">
       {/* Background Image */}

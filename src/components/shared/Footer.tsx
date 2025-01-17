@@ -110,10 +110,10 @@ const Footer: React.FC = () => {
           },
         }
       );
-      // console.log("email", res)
+      
       if (res.data.success) {
         toast.success(res.data.message);
-        setEmail(""); // Clear email input after successful subscription
+        setEmail("");
       } else {
         toast.error(res.data.message || "Subscription failed!");
       }

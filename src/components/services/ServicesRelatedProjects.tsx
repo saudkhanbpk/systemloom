@@ -33,7 +33,7 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
     ?.filter((project) => project.category.includes(slug))
     .slice(0, 6);
 
-    // console.log("slug", slug)
+   
 
   const handleRedirect = (websiteLink?: string) => {
     if (websiteLink) {
@@ -42,14 +42,6 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
       alert("Website link is not available for this project.");
     }
   };
-
-  // if (!projects || projects.length === 0) {
-  //   return (
-  //     <div className="text-center text-2xl font-bold text-red-500">
-  //       Loading projects...
-  //     </div>
-  //   );
-  // }
 
   return (
     <div>

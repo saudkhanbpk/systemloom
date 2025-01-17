@@ -27,7 +27,7 @@ const ProfileCard: React.FC<TeamProfile> = ({
           alt={name}
           width={width}
           height={height}
-          style={{ height: `${height * 0.8}px`, width: `${width}px` }}  // Reduced image height
+          style={{ height: `${height * 0.8}px`, width: `${width}px` }}  
           className="object-cover transition-transform duration-300"
         />
         <div className="absolute inset-0 flex justify-center items-center bg-[#F4F6FCD4] bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

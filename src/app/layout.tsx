@@ -160,21 +160,23 @@ import Link from "next/link";
 import * as Sentry from "@sentry/react";
 
 // Sentry Initialization
-Sentry.init({
-  dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-  integrations: [], // Add integrations as needed
-});
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [],
+// });
 
 // Font configurations
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
+  display: "swap",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+  display: "swap",
 });
 
 // Google Analytics Config Function
@@ -232,9 +234,10 @@ export default function RootLayout({
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PHQXJH3N0Z"
-          strategy="lazyOnload" // Lazy load the script
+          strategy="lazyOnload" 
+          defer
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="lazyOnload" defer>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -246,7 +249,8 @@ export default function RootLayout({
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
-          strategy="lazyOnload" // Defer GTM loading
+          strategy="lazyOnload" 
+          defer
         >
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -263,7 +267,7 @@ export default function RootLayout({
           strategy="lazyOnload"
           async
         />
-        <Script id="google-ads" strategy="lazyOnload">
+        <Script id="google-ads" strategy="lazyOnload" defer>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
