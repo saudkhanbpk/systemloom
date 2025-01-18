@@ -60,11 +60,10 @@ const BlogCards: React.FC = () => {
       />
     <div className="md:p-3 p-1">
   <div className="line-clamp-6">
-    <Link href={`/blog/blogDetail/${createSlug(blog.title)}`}>
       <h2 className="text-xl font-semibold text-blue-600 mb-2 cursor-pointer">
         {blog.title}
       </h2>
-    </Link>
+  
     <p className="text-gray-600 mb-4">
       {blog.description}
     </p>
