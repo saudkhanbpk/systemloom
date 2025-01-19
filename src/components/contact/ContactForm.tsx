@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 import { FaWhatsapp } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 
 interface FormData {
@@ -34,6 +36,10 @@ const ContactForm: React.FC = () => {
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handlePhoneChange = (value: string) => {
+    setFormData({ ...formData, phoneNumber: value });
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -137,15 +143,21 @@ const ContactForm: React.FC = () => {
           required
           className="w-full rounded-lg border border-gray-300 p-3 focus:border-purple-700 focus:outline-none mb-4"
         />
-        <input
-          placeholder="Phone Number*"
-          type="tel"
-          name="phoneNumber"
-          value={formData.phoneNumber}
-          onChange={changeEventHandler}
-          required
-          className="w-full rounded-lg border border-gray-300 p-3 focus:border-purple-700 focus:outline-none mb-4"
-        />
+     {/* PhoneInput  */}
+     <div className="w-full mb-4">
+  <PhoneInput
+    country={"us"} // Default country code
+    value={formData.phoneNumber}
+    onChange={handlePhoneChange}
+    containerClass="w-full" // Ensure the PhoneInput wrapper takes full width
+    inputClass="w-full text-black bg-gray-100 border-none rounded-lg p-5 focus:ring-1 focus:ring-purple-700 focus:outline-none"
+    buttonClass="bg-gray-100 rounded-l-lg border-r border-gray-300"
+    dropdownClass="bg-white text-black rounded-lg shadow-lg"
+  />
+</div>
+
+
+
         <textarea
           placeholder="Your Message..."
           rows={4}
