@@ -86,8 +86,6 @@ const WebDevelopment = () => {
         width={400} 
         height={450} 
         quality={90} 
-        placeholder="blur"
-        blurDataURL="/path/to/low-res-placeholder.jpg" 
         className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
             />
           </div>

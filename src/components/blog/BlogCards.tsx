@@ -21,7 +21,7 @@ const BlogCards: React.FC = () => {
   useGetAllBlogs();
   const blogs = useSelector((state: RootState) => state.blogs.blogs);
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 6;
+  const blogsPerPage = 12;
 
   // Calculate the index of the last and first blog on the current page
   const indexOfLastBlog = currentPage * blogsPerPage;
