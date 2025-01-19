@@ -107,7 +107,7 @@ const ContactForm: React.FC = () => {
       </div>
   
       {/* Form Section */}
-      <div className="sm:w-[565px] shadow-lg p-6 sm:p-10 bg-white rounded-md">
+      <div className="sm:w-[565px] shadow-lg p-6 sm:p-10 bg-white text-black rounded-md">
         <div className="flex flex-col sm:flex-row gap-4 mb-4">
           <input
             placeholder="First name*"
