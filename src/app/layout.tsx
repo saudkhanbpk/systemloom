@@ -160,10 +160,10 @@ import Link from "next/link";
 import * as Sentry from "@sentry/react";
 
 // Sentry Initialization
-// Sentry.init({
-//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-//   integrations: [],
-// });
+Sentry.init({
+  dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+  integrations: [],
+});
 
 // Font configurations
 const geistSans = localFont({
@@ -213,7 +213,7 @@ export default function RootLayout({
         />
 
         {/* Fonts Preload */}
-        <link
+        {/* <link
           rel="preload"
           href="/fonts/GeistVF.woff"
           as="font"
@@ -226,7 +226,7 @@ export default function RootLayout({
           as="font"
           type="font/woff"
           crossOrigin="anonymous"
-        />
+        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

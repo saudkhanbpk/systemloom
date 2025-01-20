@@ -146,11 +146,13 @@ const ContactForm: React.FC = () => {
      {/* PhoneInput  */}
      <div className="w-full mb-4">
   <PhoneInput
-    country={"us"} // Default country code
+    country={"us"} 
     value={formData.phoneNumber}
     onChange={handlePhoneChange}
-    containerClass="w-full" // Ensure the PhoneInput wrapper takes full width
-    inputClass="w-full text-black bg-gray-100 border-none rounded-lg p-5 focus:ring-1 focus:ring-purple-700 focus:outline-none"
+    containerClass=" rounded-lg " 
+    containerStyle={{ width: '100%' }}
+  inputStyle={{ width: '100%' }}
+    inputClass="w-full text-black bg-gray-100 border-none rounded-lg p-6 focus:ring-1 focus:ring-purple-700 focus:outline-none"
     buttonClass="bg-gray-100 rounded-l-lg border-r border-gray-300"
     dropdownClass="bg-white text-black rounded-lg shadow-lg"
   />
