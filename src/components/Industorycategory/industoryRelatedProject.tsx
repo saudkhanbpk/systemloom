@@ -12,7 +12,7 @@ interface IndustryProjectsProps {
 const IndustryRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
   useGetAllProjects();
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 12;
 
   const { projects } = useSelector((state: RootState) => state.projects);
 
@@ -55,7 +55,7 @@ const IndustryRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
       
 
       {/* Projects section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2  w-[85vw] gap-3 mx-auto my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2  md:px-8 px-3 gap-3 mx-auto my-10">
         {currentProjects.length > 0 ? (
           currentProjects.map((project) => (
             <div

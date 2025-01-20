@@ -54,8 +54,8 @@ const BlogCards: React.FC = () => {
       <Image
         src={blog.image?.imageUrl || "/path/to/default-image.jpg"}
         alt={blog.image?.altDescription || blog.title}
-        width={350}
-        height={200}
+        width={200}
+        height={100}
         className="w-full h-48 object-cover"
       />
     <div className="md:p-3 p-1">

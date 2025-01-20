@@ -11,10 +11,11 @@ const AboutHeroSection: React.FC = () => {
         <Image
           src={backgroundImage}
           alt="Background"
-          layout="fill"        
+          width={300} 
+          height={150}       
           objectFit="cover"    
           priority             
-          className="opacity-25" 
+          className="opacity-25 w-full" 
         />
       </div>
 

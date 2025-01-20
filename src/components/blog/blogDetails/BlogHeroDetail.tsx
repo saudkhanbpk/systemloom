@@ -10,6 +10,8 @@ const BlogHeroDetail = () => {
         <Image
           src={backgroundImage}
           alt="Background"
+          width={300}
+          height={150}
           className="w-full h-full object-cover" 
         />
       </div>
