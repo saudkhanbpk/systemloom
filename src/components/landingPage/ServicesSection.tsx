@@ -182,7 +182,6 @@ const ServicesSection: React.FC = () => {
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px flex justify-center"
-        aria-hidden="true"
       >
         {servicesArr.map((item) => (
           <div

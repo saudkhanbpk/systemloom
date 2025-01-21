@@ -7,15 +7,15 @@ const AboutHeroSection: React.FC = () => {
   return (
     <div className="relative bg-gray-900 text-white h-[500px] md:h-[700px]">
       {/* Background Image */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden ">
         <Image
           src={backgroundImage}
           alt="Background"
-          width={300} 
-          height={150}       
-          objectFit="cover"    
+          width={1920}  
+          height={1080}     
           priority             
-          className="opacity-25 w-full" 
+          className="opacity-25 w-full h-screen "
+          style={{ objectFit: 'cover' }}  
         />
       </div>
 

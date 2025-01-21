@@ -38,7 +38,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeInOut" }}
-          className="font-semibold text-3xl md:text-[57px] leading-tight md:leading-[65px] mb-6 md:mb-8"
+          className="font-semibold text-3xl md:text-[57px] leading-tight md:leading-[65px] mb-6 text-center"
         >
           Develop your{" "}
           <motion.span
