@@ -73,9 +73,9 @@ const AddProjectPage: React.FC = () => {
     const files = e.target.files;
     if (files && files.length > 0) {
       setFormData((prevData) => ({
-        ...prevData,  // Spread the previous form data
-        projectScreenshot: files[0],  // Save the selected file
-        screenshotUrl: URL.createObjectURL(files[0]),  // Create an object URL for the file to preview
+        ...prevData,  
+        projectScreenshot: files[0],  
+        screenshotUrl: URL.createObjectURL(files[0]),  
       }));
     }
   };
@@ -112,8 +112,6 @@ const AddProjectPage: React.FC = () => {
     formPayload.append("figmaLink", formData.figmaLink);
     formPayload.append("websiteLink", formData.websiteLink);
     formPayload.append("githubLink", formData.githubLink);
-    // formPayload.append("category", formData.category);
-    // formPayload.append("industry", formData.industry);
 
      // Add multiple Industries to the payload
     if (Array.isArray(formData.industry)) {
@@ -317,36 +315,36 @@ const AddProjectPage: React.FC = () => {
     <div>
       <button
         type="button"
-        id="app-development"
-        value="app-development"
-        onClick={() => handleCategoryChange("app-development")}
+        id="mobile-app-development-company"
+        value="mobile-app-development-company"
+        onClick={() => handleCategoryChange("mobile-app-development-company")}
         className="mr-2"
       >
-        {formData.category.includes("app-development") ? (
+        {formData.category.includes("mobile-app-development-company") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="app-development" className="text-sm text-gray-700">App Development</label>
+      <label htmlFor="mobile-app-development-company" className="text-sm text-gray-700">App Development</label>
     </div>
 
     {/* UI & UX Design Icon */}
     <div>
       <button
         type="button"
-        id="ui-ux-design"
-        value="ui-ux-design"
-        onClick={() => handleCategoryChange("ui-ux-design")}
+        id="ui-ux-design-agency"
+        value="ui-ux-design-agency"
+        onClick={() => handleCategoryChange("ui-ux-design-agency")}
         className="mr-2"
       >
-        {formData.category.includes("ui-ux-design") ? (
+        {formData.category.includes("ui-ux-design-agency") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="ui-ux-design" className="text-sm text-gray-700">UI & UX Design</label>
+      <label htmlFor="ui-ux-design-agency" className="text-sm text-gray-700">UI & UX Design</label>
     </div>
 
     {/* DevOps Icon */}
@@ -371,18 +369,18 @@ const AddProjectPage: React.FC = () => {
     <div>
       <button
         type="button"
-        id="graphic-designing"
-        value="graphic-designing"
-        onClick={() => handleCategoryChange("graphic-designing")}
+        id="affordable-graphic-design-services"
+        value="affordable-graphic-design-services"
+        onClick={() => handleCategoryChange("affordable-graphic-design-services")}
         className="mr-2"
       >
-        {formData.category.includes("graphic-designing") ? (
+        {formData.category.includes("affordable-graphic-design-services") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="graphic-designing" className="text-sm text-gray-700">Graphic Designing</label>
+      <label htmlFor="affordable-graphic-design-services" className="text-sm text-gray-700">Graphic Designing</label>
     </div>
 
     {/* Project Management Icon */}
@@ -407,72 +405,72 @@ const AddProjectPage: React.FC = () => {
     <div>
       <button
         type="button"
-        id="seo-content-writing"
-        value="seo-content-writing"
-        onClick={() => handleCategoryChange("seo-content-writing")}
+        id="seo-services-for-small-business"
+        value="seo-services-for-small-business"
+        onClick={() => handleCategoryChange("seo-services-for-small-business")}
         className="mr-2"
       >
-        {formData.category.includes("seo-content-writing") ? (
+        {formData.category.includes("seo-services-for-small-business") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="seo-content-writing" className="text-sm text-gray-700">SEO & Content Writing</label>
+      <label htmlFor="seo-services-for-small-business" className="text-sm text-gray-700">SEO & Content Writing</label>
     </div>
 
     {/* Software Maintenance Icon */}
     <div>
       <button
         type="button"
-        id="software-maintenance"
-        value="software-maintenance"
-        onClick={() => handleCategoryChange("software-maintenance")}
+        id="software-maintenance-services"
+        value="software-maintenance-services"
+        onClick={() => handleCategoryChange("software-maintenance-services")}
         className="mr-2"
       >
-        {formData.category.includes("software-maintenance") ? (
+        {formData.category.includes("software-maintenance-services") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="software-maintenance" className="text-sm text-gray-700">Software Maintenance</label>
+      <label htmlFor="software-maintenance-services" className="text-sm text-gray-700">Software Maintenance</label>
     </div>
 
     {/* QA Testing Icon */}
     <div>
       <button
         type="button"
-        id="qa-testing"
-        value="qa-testing"
-        onClick={() => handleCategoryChange("qa-testing")}
+        id="web-qa-tester"
+        value="web-qa-tester"
+        onClick={() => handleCategoryChange("web-qa-tester")}
         className="mr-2"
       >
-        {formData.category.includes("qa-testing") ? (
+        {formData.category.includes("web-qa-tester") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="qa-testing" className="text-sm text-gray-700">QA Testing</label>
+      <label htmlFor="web-qa-tester" className="text-sm text-gray-700">QA Testing</label>
     </div>
 
     {/* Social Media Marketing Icon */}
     <div>
       <button
         type="button"
-        id="digital-marketing"
-        value="digital-marketing"
-        onClick={() => handleCategoryChange("digital-marketing")}
+        id="digital-marketing-for-"
+        value="digital-marketing-for-"
+        onClick={() => handleCategoryChange("digital-marketing-for-")}
         className="mr-2"
       >
-        {formData.category.includes("digital-marketing") ? (
+        {formData.category.includes("digital-marketing-for-") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="digital-marketing" className="text-sm text-gray-700">digital-marketing</label>
+      <label htmlFor="digital-marketing-for-" className="text-sm text-gray-700">digital-marketing</label>
     </div>
   </div>
 </div>

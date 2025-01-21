@@ -1,59 +1,60 @@
 import React from "react";
-import heroimage from "../../../../public/assets/servicespages/softwareMaintenece.webp";
+import heroappdevelopmentImage from "../../../../public/assets/servicespages/appimage.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import softwareImage1 from "../../../../public/assets/servicespages/softImage1.webp";
-import softwareImage2 from "../../../../public/assets/servicespages/softimage2.webp";
-import softwareImage3 from "../../../../public/assets/servicespages/softImage3.webp";
-import softwareImage4 from "../../../../public/assets/servicespages/softImage4.webp";
-import softwareImage5 from "../../../../public/assets/servicespages/softimage5.webp";
+import appImage1 from "../../../../public/assets/servicespages/appimage1.webp";
+import appImage2 from "../../../../public/assets/servicespages/appImage2.webp";
+import appImage3 from "../../../../public/assets/servicespages/appImage3.webp";
+import appImage4 from "../../../../public/assets/servicespages/appImag4.webp";
+import appImage from "../../../../public/assets/servicespages/MobileAppDevelopment.webp";
 
 // RelatedServices images
-import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
-import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
+import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
+import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
-const SoftwareMaintenance = () => {
-  const categorySlug = "software-maintenance";
+const MobileAppDevelopment = () => {
+  const categorySlug = "mobile-app-development-company";
   const services = [
     {
-      title: "DevOps",
+      title: "Software Maintenance",
       description:
-        "Streamlining your development pipeline for guided efficiency with automation to allow for automated daily deployment.",
-      icon: developmentDesignImage,
-      link: "/services/devops",
+        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
+      icon: productDesignImage,
+      link: "/services/software-maintenance-services",
     },
+
     {
-      title: "Project Management",
+      title: "Ui & Ux Design",
       description:
-        "Executing precise project management potentially geared to step-out on time; it facilitates efficient collaboration by leading the project stakeholders.",
-      icon: illustrationDesignImage,
-      link: "/services/project-management",
+        "Building intuitive interfaces that provide a seamless promised user experience.",
+      icon: webDesignImage,
+      link: "/services/ui-ux-design-agency",
     },
+
     {
-      title: "QA Testing",
+      title: "Graphic Designing",
       description:
-        "Having exhaustive testing done assures your software has no errors and delivers great performance to the customer.",
+        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
       icon: motionDesignImage,
-      link: "/services/qa-testing",
+      link: "/services/affordable-graphic-design-services",
     },
   ];
 
   return (
     <div>
-     
       {/* hero section start */}
       <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left ">
           <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          Reliable Software Maintenance Services
+          Mobile App Design and Development Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          At TechCreator, our software maintenance services are designed to keep your applications running smoothly. From bug fixes to performance optimization, we ensure your software stays updated, secure, and aligned with your evolving business needs.
+          From concept to deployment, we ensure every detail is meticulously crafted just according to your business needs. At TechCreator, we specialize in mobile app development that prioritizes functionality and user engagement. Our team creates intuitive and visually appealing apps that meet your customer complex needs while delivering exceptional user experiences. 
           </p>
           <Buttons/>
           
@@ -62,9 +63,9 @@ const SoftwareMaintenance = () => {
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
           <Image
-            src={heroimage}
-            alt="Boost stability and growth with software solutions that improve tracking efficiency and reduce disruptions"
-            width={300}
+            src={heroappdevelopmentImage}
+            alt="Mobile App Design and development for your business"
+            width={400}
             height={300}
             className=" "
           />
@@ -74,30 +75,27 @@ const SoftwareMaintenance = () => {
 
       <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
         {/* FeatureSection section start */}
-        <div className=" ">
         <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
             <Image
-              src={softwareImage1}
+              src={appImage}
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
               className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-              Specialized Maintenance and Support Services
+              Healthcare Mobile App Development Transforming Industries
               </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-              Our comprehensive software maintenance and support services include troubleshooting, upgrades, and feature enhancements. With a dedicated team of experts, we provide consistent support to minimize downtime and maximize operational efficiency.Our support system is much robust that any issue arises, it is our duty to ensure seamless functionality and upgradation of your systems. We come with one goal of growing your business and flawless functionality.
- 
+              As a trusted healthcare mobile app development company, we craft innovative solutions that enhance patient care and streamline medical workflows. Our services include secure data management, user-friendly interfaces, and tailored features to meet the unique needs of healthcare providers and patients. We bridge the gap between technology and healthcare for better outcomes and improved efficiency.
               </p>
             </div>
           </div>
         </div>
-      </div>
         {/* FeatureSection section end */}
 
         {/* FeaturesList section start */}
@@ -111,7 +109,7 @@ const SoftwareMaintenance = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
-            Keep your software running smoothly with regular updates and maintenance.
+              Design and develop robust mobile applications for iOS and Android.
             </p>
           </div>
 
@@ -120,7 +118,8 @@ const SoftwareMaintenance = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Identify and resolve issues to enhance software performance and reliability.
+              Create user-friendly apps with seamless navigation and stunning
+              interfaces.
             </p>
           </div>
 
@@ -129,7 +128,8 @@ const SoftwareMaintenance = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Implement upgrades to align with the latest technologies and trends.
+              Incorporate cutting-edge technologies for faster and smoother
+              performance.
             </p>
           </div>
 
@@ -138,7 +138,8 @@ const SoftwareMaintenance = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Provide comprehensive support to address all your software maintenance needs.
+              Ensure on-time delivery with a focus on quality and user
+              satisfaction.
             </p>
           </div>
         </div>
@@ -150,8 +151,8 @@ const SoftwareMaintenance = () => {
           <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
             {/* Image Section */}
             <Image
-              src={softwareImage2}
-              alt="Streamlined construction equipment maintenance software for tracking, scheduling, and monitoring performance"
+              src={appImage1}
+              alt="Flutter Mobile App Development: Enjoy the process"
               width={300}
               height={300}
               className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
@@ -159,11 +160,17 @@ const SoftwareMaintenance = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
-              Enhance Operations with Construction
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
+                Flutter Mobile App Development for High-Performance Solutions
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              For industries relying on heavy machinery, our construction equipment maintenance software ensures streamlined tracking and management of equipment. From scheduling maintenance to monitoring performance, we deliver tailored solutions that enhance reliability and reduce costs.We provide you with the option of automatic maintenance and let you know the performance of your software also preventing costly downtime. To operate well and meet your need, we have got solutions for you by improving efficiency and long lasting lifespan of your equipment.
+                Our expertise in <strong>Flutter mobile app development</strong>{" "}
+                enables us to deliver fast, reliable, and visually consistent
+                apps for both iOS and Android platforms. Leveraging this
+                inventive framework, we create apps that provide smooth
+                performance, enhanced flexibility, and a unified codebase,
+                saving time and resources.
+                From startups to enterprises, we craft solutions tailored to diverse business needs. With Flutter, we ensure a seamless user experience and quick time-to-market for your app. Our focus on modern design and robust functionality guarantees apps that stand out in the competitive mobile market. 
               </p>
             </div>
           </div>
@@ -174,16 +181,22 @@ const SoftwareMaintenance = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
-              Proactive Solutions for Long-Term Software Success
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
+                Your Choice for Multi-Device Reach
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing regular updates and monitoring, we ensure your software remains secure, efficient, and ready for future challenges.Techcreator adapt such approaches to avoid disruptions and keep your software running without any interruption. Our constant support system keeps you ahead of the trends and ensures better performance.  
+                Our cross-platform{" "}
+                <strong>mobile app development services</strong> enable
+                businesses to reach a wider audience with a single solution. We
+                ensure your app functions seamlessly across multiple devices and
+                operating systems, offering a consistent experience to all users
+                while optimizing development efficiency.
+                By using a unified codebase, we reduce costs and speed up the development process. This approach allows your business to stay agile and adapt quickly to market changes.
               </p>
             </div>
             <Image
-              src={softwareImage3}
-              alt="Take advantage of enhanced security, efficiency, and longevity with proactive maintenance solutions "
+              src={appImage2}
+              alt="cross-platform mobile app development services"
               width={300}
               height={300}
               className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
@@ -194,20 +207,25 @@ const SoftwareMaintenance = () => {
           <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
             {/* Image Section */}
             <Image
-              src={softwareImage4}
-              alt="Software maintenance plans developed to cater to unique business needs and the peculiarities of distinct industries"
+              src={appImage3}
+              alt="Enterprise mobile app development company"
               width={300}
               height={300}
-              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
-              Custom Maintenance Plans for Business Needs
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
+                Enhancing Efficiency while Optimizing Functionality
               </h2>
-              <p className="text-base md:text-base lg:text-lg text-gray-700 mt-3">
-              Every business is unique, and so are its software requirements. At TechCreator, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.Before execution or practical work, we go through a proper plan in order to understand your needs that align perfectly to your business. We have expertise that analyze the basic needs and ensure your software always meet your core business objectives.  
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+                Enterprise <strong>mobile app development company</strong>{" "}
+                specializes in enhancing productivity and streamlining
+                operations. We develop secure, scalable apps that empower
+                businesses to manage workflows, collaborate effectively, and
+                achieve organizational goals.
+                Our solutions are tailored to meet the unique needs of your business, ensuring seamless integration with existing systems. With a focus on user-friendly interfaces, we deliver apps that improve performance and drive business growth. 
               </p>
             </div>
           </div>
@@ -218,19 +236,27 @@ const SoftwareMaintenance = () => {
         <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
           <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
-            <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px]  lg:p-5  text-wrap text-center lg:text-left">
+            <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
-              Ensuring Stability and Growth
+                Recent Work: Redefining Mobile Solutions
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              We recently helped a construction company implement construction equipment maintenance software, improving their tracking efficiency by 40%. Additionally, our software maintenance services have enabled businesses across industries to reduce operational disruptions and enhance performance.Our clients have already noted improvements in their workflow and have credited us for our hardwrok. Positive feedback reflects our dedication to digital solutions. We are ambitious about your ease and stability to your business with our constant support system. 
+                We recently collaborated with a leading startup to deliver a
+                cross-platform mobile app development project, enabling them to
+                reach users across iOS and Android seamlessly. Additionally, we
+                developed a specialized healthcare app for a clinic, integrating
+                appointment scheduling, patient records, and secure
+                communication features, transforming their service delivery.   
+                Choose TechCreator to turn your mobile app ideas into reality
+                with innovative solutions designed to meet your business
+                objectives.
               </p>
             </div>
             {/* Image */}
             <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
-                src={softwareImage5}
-                alt="Permit stability and growth through software solutions for improved tracking efficiency while ensuring mere minimal disruption"
+                src={appImage4}
+                alt="Feature illustration"
                 width={400}
                 height={500}
                 className="rounded-lg mx-auto mb-2 md:mx-0"
@@ -282,15 +308,13 @@ const SoftwareMaintenance = () => {
   );
 };
 
-export default SoftwareMaintenance;
-
-
+export default MobileAppDevelopment;
 
 export const metadata = {
-  title: "Software Maintenance Services | Maintenance & Support Solutions",
+  title: "Cross-Platform Mobile App Design and Development | TechCreator",
   description:
-    "TechCreator offers expert software maintenance services, including construction equipment maintenance software and support. Ensure seamless performance with our maintenance solutions.",
+    "Explore expert mobile app design and development services at TechCreator. Specializing in Flutter, cross-platform, healthcare, and enterprise app solutions tailored to meet your business needs.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/software-maintenance",
+    canonical: "https://www.techcreator.co/services/app-development",
   },
 };

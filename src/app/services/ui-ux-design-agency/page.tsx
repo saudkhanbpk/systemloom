@@ -1,47 +1,46 @@
 import React from "react";
-import heroappdevelopmentImage from "../../../../public/assets/servicespages/appimage.webp";
+import UIUXDesignImage from "../../../../public/assets/servicespages/UIDesign.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import appImage1 from "../../../../public/assets/servicespages/appimage1.webp";
-import appImage2 from "../../../../public/assets/servicespages/appImage2.webp";
-import appImage3 from "../../../../public/assets/servicespages/appImage3.webp";
-import appImage4 from "../../../../public/assets/servicespages/appImag4.webp";
-import appImage from "../../../../public/assets/servicespages/MobileAppDevelopment.webp";
+import uxdesignimage1 from "../../../../public/assets/servicespages/uxdesign1.webp";
+import uxdesignimage2 from "../../../../public/assets/servicespages/uxdesign2.webp";
+import uxdesignimage3 from "../../../../public/assets/servicespages/uxdesign3.webp";
+import uxdesignimage4 from "../../../../public/assets/servicespages/uxdesign4.webp";
+import uxdesignimage5 from "../../../../public/assets/servicespages/uxeesign5.webp";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
+import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
-const MobileAppDevelopment = () => {
-  const categorySlug = "app-development";
+const UIUXDesign = () => {
+  const categorySlug = "ui-ux-design-agency";
   const services = [
     {
-      title: "Software Maintenance",
+      title: "Web Developement",
       description:
-        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
+        "Making dynamic, responsive websites that put user satisfaction first.",
       icon: productDesignImage,
-      link: "/services/software-maintenance",
+      link: "/services/web-development",
     },
-
     {
-      title: "Ui & Ux Design",
+      title: "Mobile App Development",
       description:
-        "Building intuitive interfaces that provide a seamless promised user experience.",
-      icon: webDesignImage,
-      link: "/services/ui-ux-design",
+        "Creating powerful mobile applications that will capture users and enhance your brand.",
+      icon: appDesignImage,
+      link: "/services/mobile-app-development-company",
     },
-
     {
       title: "Graphic Designing",
       description:
         "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
       icon: motionDesignImage,
-      link: "/services/graphic-designing",
+      link: "/services/affordable-graphic-design-services",
     },
+    
   ];
 
   return (
@@ -51,10 +50,10 @@ const MobileAppDevelopment = () => {
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left ">
           <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          Empower your business with custom web development
+          Exceptional Digital Experiences: UI/UX Design Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like Healthcare, Real Estates, Restaurants, E-Commerce stores- that ensure seamless functionality and innovation.
+          At TechCreator, our UI/UX design is built around delivering intuitive and visually engaging interfaces. We focus on creating user journeys that enhance interaction and improve satisfaction, ensuring your platform stands out in a competitive digital landscape.
           </p>
           <Buttons/>
           
@@ -63,9 +62,9 @@ const MobileAppDevelopment = () => {
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
           <Image
-            src={heroappdevelopmentImage}
-            alt="Mobile App Design and development for your business"
-            width={400}
+            src={UIUXDesignImage}
+            alt="The TechCreator will design intuitive and engaging user interfaces and enhance UI and UX to create greater satisfaction for the user"
+            width={300}
             height={300}
             className=" "
           />
@@ -75,27 +74,29 @@ const MobileAppDevelopment = () => {
 
       <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
         {/* FeatureSection section start */}
+        <div className=" ">
         <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
             <Image
-              src={appImage}
+              src={uxdesignimage1}
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+              className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-              Healthcare Mobile App Development Transforming Industries
+              Your Partner as a Top UI/UX Design Agency
               </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-              As a trusted healthcare mobile app development company, we craft innovative solutions that enhance patient care and streamline medical workflows. Our services include secure data management, user-friendly interfaces, and tailored features to meet the unique needs of healthcare providers and patients. We bridge the gap between technology and healthcare for better outcomes and improved efficiency.
+              Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.Our designs are optimized for performance, ensuring seamless navigation and an exceptional user experience. Let’s work together to elevate your online presence and enhance user satisfaction.
               </p>
             </div>
           </div>
         </div>
+      </div>
         {/* FeatureSection section end */}
 
         {/* FeaturesList section start */}
@@ -109,7 +110,7 @@ const MobileAppDevelopment = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
-              Design and develop robust mobile applications for iOS and Android.
+            Design intuitive interfaces that enhance user experience across platforms.
             </p>
           </div>
 
@@ -118,8 +119,7 @@ const MobileAppDevelopment = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-              Create user-friendly apps with seamless navigation and stunning
-              interfaces.
+            Simplify navigation with creative and responsive UI designs.
             </p>
           </div>
 
@@ -128,8 +128,7 @@ const MobileAppDevelopment = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-              Incorporate cutting-edge technologies for faster and smoother
-              performance.
+            Incorporate user feedback to deliver tailored designs that engage and delight.
             </p>
           </div>
 
@@ -138,8 +137,7 @@ const MobileAppDevelopment = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-              Ensure on-time delivery with a focus on quality and user
-              satisfaction.
+            Ensure every design aligns with your brand and user expectations.
             </p>
           </div>
         </div>
@@ -151,8 +149,8 @@ const MobileAppDevelopment = () => {
           <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
             {/* Image Section */}
             <Image
-              src={appImage1}
-              alt="Flutter Mobile App Development: Enjoy the process"
+              src={uxdesignimage2}
+              alt="Mobile UI/UX design from TechCreator comes with sleek, responsive, and intuitive interfaces for maximum engaging on-the-go experience"
               width={300}
               height={300}
               className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
@@ -161,16 +159,11 @@ const MobileAppDevelopment = () => {
             {/* Text Section */}
             <div className=" text-center md:text-start">
               <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
-                Flutter Mobile App Development for High-Performance Solutions
+              Mobile UI/UX Design for On-the-Go Excellence
               </h2>
-              <p className="text-base md:text-base lg:text-lg text-gray-700">
-                Our expertise in <strong>Flutter mobile app development</strong>{" "}
-                enables us to deliver fast, reliable, and visually consistent
-                apps for both iOS and Android platforms. Leveraging this
-                inventive framework, we create apps that provide smooth
-                performance, enhanced flexibility, and a unified codebase,
-                saving time and resources.
-                From startups to enterprises, we craft solutions tailored to diverse business needs. With Flutter, we ensure a seamless user experience and quick time-to-market for your app. Our focus on modern design and robust functionality guarantees apps that stand out in the competitive mobile market. 
+              <p className="text-base md:text-base lg:text-lg xl:text-lg text-gray-700">
+              In a mobile-first world, our expertise in <strong>mobile UI/UX design</strong> ensures your applications are optimized for smaller screens without compromising user experience. We design sleek, responsive, and intuitive interfaces that captivate users across all devices.
+Our focus on simplicity and accessibility ensures a seamless experience for users on the go. We create mobile interfaces that engage users and keep them coming back for more. 
               </p>
             </div>
           </div>
@@ -182,21 +175,15 @@ const MobileAppDevelopment = () => {
             {/* Text Section */}
             <div className=" text-center md:text-left">
               <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
-                Your Choice for Multi-Device Reach
+              End-to-End UI/UX Solutions for Your Business Needs
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-                Our cross-platform{" "}
-                <strong>mobile app development services</strong> enable
-                businesses to reach a wider audience with a single solution. We
-                ensure your app functions seamlessly across multiple devices and
-                operating systems, offering a consistent experience to all users
-                while optimizing development efficiency.
-                By using a unified codebase, we reduce costs and speed up the development process. This approach allows your business to stay agile and adapt quickly to market changes.
+              We provide comprehensive <strong>UI/UX design services,</strong> covering every step from ideation to implementation. Our goal is to deliver designs that not only look great but also solve real user challenges, driving results for your business.Designs are crafted with user behavior in mind, ensuring a seamless experience that leads to higher engagement. Tailored to your business goals, the result is a user-friendly interface that fuels growth and satisfaction. 
               </p>
             </div>
             <Image
-              src={appImage2}
-              alt="cross-platform mobile app development services"
+              src={uxdesignimage3}
+              alt="Comprehensive UI/UX solutions by TechCreator, solving user challenges and driving business results from ideation to implementation"
               width={300}
               height={300}
               className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
@@ -207,25 +194,21 @@ const MobileAppDevelopment = () => {
           <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
             {/* Image Section */}
             <Image
-              src={appImage3}
-              alt="Enterprise mobile app development company"
+              src={uxdesignimage4}
+              alt="The UI/UX design is formulated for the individual industries to exceed expectations for apps and digital platforms"
               width={300}
               height={300}
-              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
-                Enhancing Efficiency while Optimizing Functionality
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-2">
+              Customized UI/UX for Every Industry
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-                Enterprise <strong>mobile app development company</strong>{" "}
-                specializes in enhancing productivity and streamlining
-                operations. We develop secure, scalable apps that empower
-                businesses to manage workflows, collaborate effectively, and
-                achieve organizational goals.
-                Our solutions are tailored to meet the unique needs of your business, ensuring seamless integration with existing systems. With a focus on user-friendly interfaces, we deliver apps that improve performance and drive business growth. 
+              From startups to enterprises, our design solutions cater to diverse industries. Whether you need a mobile UI/UX design for an app or a complete overhaul of your digital presence, we ensure the final product exceeds your expectations.Each design is tailored to your industry’s specific needs, ensuring maximum impact. The goal is to create intuitive, engaging experiences that drive user loyalty and business growth. 
+
               </p>
             </div>
           </div>
@@ -238,25 +221,17 @@ const MobileAppDevelopment = () => {
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
-                Recent Work: Redefining Mobile Solutions
+              Recent Work: Turning Ideas into Impactful Designs
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-                We recently collaborated with a leading startup to deliver a
-                cross-platform mobile app development project, enabling them to
-                reach users across iOS and Android seamlessly. Additionally, we
-                developed a specialized healthcare app for a clinic, integrating
-                appointment scheduling, patient records, and secure
-                communication features, transforming their service delivery.   
-                Choose TechCreator to turn your mobile app ideas into reality
-                with innovative solutions designed to meet your business
-                objectives.
+              Recently, we partnered with a healthcare startup to deliver a user-friendly mobile UI/UX design that improved patient engagement. Additionally, our work with an e-commerce platform as a top UI/UX design agency enhanced their customer journey, leading to increased conversions and user satisfaction.These projects highlight our ability to create designs that solve real problems while driving business success. 
               </p>
             </div>
             {/* Image */}
             <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
-                src={appImage4}
-                alt="Feature illustration"
+                src={uxdesignimage5}
+                alt=" Featuring great designs: Healthcare UI/UX that drives engagement and eCommerce design that boosts conversions"
                 width={400}
                 height={500}
                 className="rounded-lg mx-auto mb-2 md:mx-0"
@@ -308,13 +283,15 @@ const MobileAppDevelopment = () => {
   );
 };
 
-export default MobileAppDevelopment;
+export default UIUXDesign;
+
+
 
 export const metadata = {
-  title: "Cross-Platform Mobile App Design and Development | TechCreator",
+  title: "UI/UX Design Service | Top UI/UX Design Agency for Mobile Solutions",
   description:
-    "Explore expert mobile app design and development services at TechCreator. Specializing in Flutter, cross-platform, healthcare, and enterprise app solutions tailored to meet your business needs.",
+    "Expert UI/UX design services at TechCreator. As a top UI/UX design agency, we specialize in mobile & Desktop UI/UX design and creating user-centric digital experiences.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/app-development",
+    canonical: "https://www.techcreator.co/services/ui-ux-design",
   },
 };

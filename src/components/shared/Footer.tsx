@@ -352,33 +352,33 @@ const Footer: React.FC = () => {
                 { name: "Web Development", link: "/services/web-development" },
                 {
                   name: "Graphic Designing",
-                  link: "/services/graphic-designing",
+                  link: "/services/affordable-graphic-design-services",
                 },
                 {
                   name: "Mobile App Development",
-                  link: "/services/app-development",
+                  link: "/services/mobile-app-development-company",
                 },
                 {
                   name: "DevOps Services & Optimization",
                   link: "/services/devops",
                 },
-                { name: "UI/UX Designing", link: "/services/ui-ux-design" },
+                { name: "UI/UX Designing", link: "/services/ui-ux-design-agency" },
                 {
                   name: "Software Maintenance",
-                  link: "/services/software-maintenance",
+                  link: "/services/software-maintenance-services",
                 },
                 {
                   name: "SEO & Content Writing",
-                  link: "/services/seo-content-writing",
+                  link: "/services/seo-services-for-small-business",
                 },
                 {
                   name: "Project Management",
                   link: "/services/project-management",
                 },
-                { name: "QA Testing", link: "/services/qa-testing" },
+                { name: "QA Testing", link: "/services/web-qa-tester" },
                 {
                   name: "Digital Marketing",
-                  link: "/services/digital-marketing",
+                  link: "/services/digital-marketing-for-",
                 },
               ].map((service) => (
                 <li key={service.name}>

@@ -1,12 +1,13 @@
 import React from "react";
-import UIUXDesignImage from "../../../../public/assets/servicespages/UIDesign.webp";
+import SEOImage from "../../../../public/assets/servicespages/seoheroimage.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import uxdesignimage1 from "../../../../public/assets/servicespages/uxdesign1.webp";
-import uxdesignimage2 from "../../../../public/assets/servicespages/uxdesign2.webp";
-import uxdesignimage3 from "../../../../public/assets/servicespages/uxdesign3.webp";
-import uxdesignimage4 from "../../../../public/assets/servicespages/uxdesign4.webp";
-import uxdesignimage5 from "../../../../public/assets/servicespages/uxeesign5.webp";
+import seoimage1 from "../../../../public/assets/servicespages/seoimage1.webp";
+import seoimage2 from "../../../../public/assets/servicespages/seoimade2.webp";
+import seoimage3 from "../../../../public/assets/servicespages/seoimage3.webp";
+import seoimage4 from "../../../../public/assets/servicespages/seoimage4.webp";
+import seoimage5 from "../../../../public/assets/servicespages/seoimage5.webp";
+
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
@@ -16,8 +17,8 @@ import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
-const UIUXDesign = () => {
-  const categorySlug = "ui-ux-design";
+const SeoContentWriting = () => {
+  const categorySlug = "seo-services-for-small-business";
   const services = [
     {
       title: "Web Developement",
@@ -31,29 +32,29 @@ const UIUXDesign = () => {
       description:
         "Creating powerful mobile applications that will capture users and enhance your brand.",
       icon: appDesignImage,
-      link: "/services/app-development",
+      link: "/services/mobile-app-development-company",
     },
     {
       title: "Graphic Designing",
       description:
         "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
       icon: motionDesignImage,
-      link: "/services/graphic-designing",
+      link: "/services/affordable-graphic-design-services",
     },
-    
   ];
 
   return (
     <div>
+      
       {/* hero section start */}
       <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left ">
           <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          Exceptional Digital Experiences: UI/UX Design Services
+          SEO Content Writing Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          At TechCreator, our UI/UX design is built around delivering intuitive and visually engaging interfaces. We focus on creating user journeys that enhance interaction and improve satisfaction, ensuring your platform stands out in a competitive digital landscape.
+          At TechCreator, we provide professional SEO content writing services designed to align with your business goals and improve search engine visibility. With a focus on quality and relevance, our content engages audiences and supports a comprehensive SEO content strategy that drives measurable results.
           </p>
           <Buttons/>
           
@@ -62,8 +63,8 @@ const UIUXDesign = () => {
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
           <Image
-            src={UIUXDesignImage}
-            alt="The TechCreator will design intuitive and engaging user interfaces and enhance UI and UX to create greater satisfaction for the user"
+            src={SEOImage}
+            alt="Improve search engine results with professional SEO content writing services, which deliver results and engage audiences"
             width={300}
             height={300}
             className=" "
@@ -75,28 +76,28 @@ const UIUXDesign = () => {
       <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
         {/* FeatureSection section start */}
         <div className=" ">
-        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
-          <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
-            <Image
-              src={uxdesignimage1}
-              alt="Bespoke Web Development to attract your audience"
-              width={300}
-              height={450}
-              className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
-            />
-          </div>
-          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
-            <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
-              <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-              Your Partner as a Top UI/UX Design Agency
-              </h2>
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-              Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.Our designs are optimized for performance, ensuring seamless navigation and an exceptional user experience. Let’s work together to elevate your online presence and enhance user satisfaction.
-              </p>
+          <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+            <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
+              <Image
+                src={seoimage1}
+                alt="Bespoke Web Development to attract your audience"
+                width={300}
+                height={450}
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+              />
+            </div>
+            <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+              <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
+                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
+                Go-To Technical SEO Agency
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
+                As a trusted technical SEO agency, we ensure every piece of content is optimized for search engine success. From metadata to keyword placement, our team blends technical expertise with creative writing to help your site rank higher and convert better.We conduct thorough audits to identify and fix any SEO issues, ensuring your website performs at its best. By focusing on on-page optimization, site speed, and mobile responsiveness, we drive organic traffic and improve user engagement. 
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         {/* FeatureSection section end */}
 
         {/* FeaturesList section start */}
@@ -110,7 +111,7 @@ const UIUXDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
-            Design intuitive interfaces that enhance user experience across platforms.
+            Improve your search engine rankings with optimized and engaging content.
             </p>
           </div>
 
@@ -119,7 +120,7 @@ const UIUXDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Simplify navigation with creative and responsive UI designs.
+            Craft compelling content tailored to your audience and business goals.
             </p>
           </div>
 
@@ -128,7 +129,7 @@ const UIUXDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Incorporate user feedback to deliver tailored designs that engage and delight.
+            Implement effective strategies to drive traffic and boost online visibility.
             </p>
           </div>
 
@@ -137,7 +138,7 @@ const UIUXDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Ensure every design aligns with your brand and user expectations.
+            Deliver consistent and high-quality content on time to meet your needs.
             </p>
           </div>
         </div>
@@ -149,21 +150,20 @@ const UIUXDesign = () => {
           <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
             {/* Image Section */}
             <Image
-              src={uxdesignimage2}
-              alt="Mobile UI/UX design from TechCreator comes with sleek, responsive, and intuitive interfaces for maximum engaging on-the-go experience"
+              src={seoimage2}
+              alt="Achieve better visibility with expert SEO consulting offering strategy, keyword research, and page optimization"
               width={300}
               height={300}
-              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
               <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
-              Mobile UI/UX Design for On-the-Go Excellence
+              Strategic Consulting for Better Visibility
               </h2>
-              <p className="text-base md:text-base lg:text-lg xl:text-lg text-gray-700">
-              In a mobile-first world, our expertise in <strong>mobile UI/UX design</strong> ensures your applications are optimized for smaller screens without compromising user experience. We design sleek, responsive, and intuitive interfaces that captivate users across all devices.
-Our focus on simplicity and accessibility ensures a seamless experience for users on the go. We create mobile interfaces that engage users and keep them coming back for more. 
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Beyond content creation, we offer SEO consulting services to help you craft a results-driven strategy. Whether you need guidance on keyword research or optimizing existing pages, our consultants ensure your content aligns with your broader SEO goals.We focus on actionable insights that improve search rankings and drive targeted traffic. With continuous monitoring and adjustments, we help your business stay competitive in ever-evolving search engine algorithms.
               </p>
             </div>
           </div>
@@ -175,15 +175,15 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
             {/* Text Section */}
             <div className=" text-center md:text-left">
               <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
-              End-to-End UI/UX Solutions for Your Business Needs
+              Optimization For Every Business Niche
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              We provide comprehensive <strong>UI/UX design services,</strong> covering every step from ideation to implementation. Our goal is to deliver designs that not only look great but also solve real user challenges, driving results for your business.Designs are crafted with user behavior in mind, ensuring a seamless experience that leads to higher engagement. Tailored to your business goals, the result is a user-friendly interface that fuels growth and satisfaction. 
+              Our SEO content strategy focuses on natural keyword integration that aligns with search intent. By incorporating industry-specific keywords, we help your website attract targeted traffic and boost engagement, leading to improved rankings and conversions.We create customized content plans tailored to your business's unique needs, ensuring that your message resonates with the right audience. This approach not only increases visibility but also builds long-term trust with your customers. 
               </p>
             </div>
             <Image
-              src={uxdesignimage3}
-              alt="Comprehensive UI/UX solutions by TechCreator, solving user challenges and driving business results from ideation to implementation"
+              src={seoimage3}
+              alt="Drive targeted traffic with every business niche's SEO content-enhanced experiences, driving engagement and conversions "
               width={300}
               height={300}
               className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
@@ -194,21 +194,20 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
           <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
             {/* Image Section */}
             <Image
-              src={uxdesignimage4}
-              alt="The UI/UX design is formulated for the individual industries to exceed expectations for apps and digital platforms"
+              src={seoimage4}
+              alt="Boost authority with technical SEO expertise in delivering content that attracts, retains visitors, and supports long-term growth"
               width={300}
               height={300}
-              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-2">
-              Customized UI/UX for Every Industry
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
+              Enhance Authority with Technical SEO Expertise
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              From startups to enterprises, our design solutions cater to diverse industries. Whether you need a mobile UI/UX design for an app or a complete overhaul of your digital presence, we ensure the final product exceeds your expectations.Each design is tailored to your industry’s specific needs, ensuring maximum impact. The goal is to create intuitive, engaging experiences that drive user loyalty and business growth. 
-
+              Combining SEO content writing services with technical SEO knowledge, we ensure that your website content not only attracts but also retains visitors. From readability improvements to optimized linking structures, we deliver content that supports long-term growth.Our approach strengthens your site’s authority in search engines, driving higher rankings and sustained traffic. By addressing technical issues, we improve user experience and ensure that your content reaches its full potential.
               </p>
             </div>
           </div>
@@ -221,17 +220,17 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
-              Recent Work: Turning Ideas into Impactful Designs
+              Results That Speak for Themselves
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              Recently, we partnered with a healthcare startup to deliver a user-friendly mobile UI/UX design that improved patient engagement. Additionally, our work with an e-commerce platform as a top UI/UX design agency enhanced their customer journey, leading to increased conversions and user satisfaction.These projects highlight our ability to create designs that solve real problems while driving business success. 
+              In a recent project, we partnered with an e-commerce platform to revamp their SEO content strategy, resulting in a 50% increase in organic traffic. Additionally, as a technical SEO agency, we helped a tech company optimize its blog content, improving keyword rankings and audience engagement.These successes showcase our ability to drive measurable improvements and deliver lasting results. By aligning strategies with business objectives, we ensure that every optimization contributes to overall growth and visibility.
               </p>
             </div>
             {/* Image */}
             <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
-                src={uxdesignimage5}
-                alt=" Featuring great designs: Healthcare UI/UX that drives engagement and eCommerce design that boosts conversions"
+                src={seoimage5}
+                alt="With a 50% increase in organic traffic and other measurable results, expert SEO strategies are producing improved keyword rankings"
                 width={400}
                 height={500}
                 className="rounded-lg mx-auto mb-2 md:mx-0"
@@ -283,15 +282,15 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
   );
 };
 
-export default UIUXDesign;
+export default SeoContentWriting;
 
 
 
 export const metadata = {
-  title: "UI/UX Design Service | Top UI/UX Design Agency for Mobile Solutions",
+  title: "SEO Content Writing Services | Technical SEO Agency & Consulting",
   description:
-    "Expert UI/UX design services at TechCreator. As a top UI/UX design agency, we specialize in mobile & Desktop UI/UX design and creating user-centric digital experiences.",
+    "TechCreator offers expert SEO content writing services and SEO consulting services. Partner with a leading technical SEO agency to boost visibility with a tailored SEO content strategy.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/ui-ux-design",
+    canonical: "https://www.techcreator.co/services/seo-content-writing",
   },
 };

@@ -33,14 +33,14 @@ const Devops = () => {
       description:
         "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
       icon: motionDesignImage,
-      link: "/services/software-maintenance",
+      link: "/services/software-maintenance-services",
     },
     {
       title: "QA Testing",
       description:
         "Having exhaustive testing done assures your software has no errors and delivers great performance to the customer.",
       icon: developmentDesignImage,
-      link: "/services/qa-testing",
+      link: "/services/web-qa-tester",
     },
   ];
 

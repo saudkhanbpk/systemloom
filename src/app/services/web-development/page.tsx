@@ -26,21 +26,21 @@ const WebDevelopment = () => {
       description:
         "Building intuitive interfaces that provide a seamless promised user experience.",
       icon: webDesignImage,
-      link: "/services/ui-ux-designing",
+      link: "/services/ui-ux-design-agency",
     },
     {
       title: "SEO & Content Writing",
       description:
         "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
       icon: motionDesignImage,
-      link: "/services/seo-content-writing",
+      link: "/services/seo-services-for-small-business",
     },
     {
       title: "Graphic Designing",
       description:
         "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
       icon: illustrationDesignImage,
-      link: "/services/graphic-designing",
+      link: "/services/affordable-graphic-design-services",
     },
   ];
 

@@ -1,59 +1,59 @@
 import React from "react";
+import qatestinImage from "../../../../public/assets/servicespages/qatesting.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import digitalMarketingHeroImage from "../../../../public/assets/servicespages/digitalmarketionHeroImage.webp";
-import marketingImage1 from "../../../../public/assets/servicespages/digitalmarketing1.webp";
-import marketingImage2 from "../../../../public/assets/servicespages/digitalmarketing2.webp";
-import marketingImage3 from "../../../../public/assets/servicespages/digitalmarketing3.webp";
-import marketingImage4 from "../../../../public/assets/servicespages/digitalmarketing4.webp";
-import marketingImage5 from "../../../../public/assets/servicespages/digitalmarketing5.webp";
+import qaimage1 from "../../../../public/assets/servicespages/qaimage1.webp";
+import qaimage2 from "../../../../public/assets/servicespages/qaimage2.webp";
+import qaimage3 from "../../../../public/assets/servicespages/qaimage3.webp";
+import qaimage4 from "../../../../public/assets/servicespages/qaimage4.webp";
+import qaimage5 from "../../../../public/assets/servicespages/qaimage5.webp";
 
 // RelatedServices images
-import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
+import developmentDesignImage from "../../../../public/assets/relatedServices/Frame 7 (3).png";
+import illustrationDesignImage from "../../../../public/assets/relatedServices/Frame 7 (4).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
-const DigitalMarketing = () => {
-  const categorySlug = "digital-marketing";
+const QATesting = () => {
+  const categorySlug = "web-qa-tester";
   const services = [
     {
-      title: "Web Developement",
+      title: "DevOps",
       description:
-        "Making dynamic, responsive websites that put user satisfaction first.",
-      icon: productDesignImage,
-      link: "/services/web-development",
+        "Streamlining your development pipeline for guided efficiency with automation to allow for automated daily deployment.",
+      icon: developmentDesignImage,
+      link: "/services/devops",
     },
     {
-      title: "SEO & Content Writing",
+      title: "Project Management",
       description:
-        "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
+        "Executing precise project management potentially geared to step-out on time; it facilitates efficient collaboration by leading the project stakeholders.",
+      icon: illustrationDesignImage,
+      link: "/services/project-management",
+    },
+    {
+      title: "Software Maintenance",
+      description:
+        "Keeping your software running smoothly with regular updates, bug fixes, and performance optimization.",
       icon: motionDesignImage,
-      link: "/services/seo-content-writing",
-    },
-    {
-      title: "Graphic Designing",
-      description:
-        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
-      icon: webDesignImage,
-      link: "/services/graphic-designing",
+      link: "/services/software-maintenance-services",
     },
   ];
 
   return (
     <div>
- 
+
       {/* hero section start */}
       <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left ">
           <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          Digital Marketing Services
+          QA Testing Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          At TechCreator, we combine creativity and strategy to offer tailored <strong>digital marketing services</strong> that meet your unique business goals. From effective branding to result-driven campaigns, our team’s expertise ensures your online success.
+          At TechCreator, Expert <strong>QA testing services</strong> ensure your software is flawless and reliable. From identifying bugs to improving functionality, we help businesses deliver top-quality applications that meet user expectations.
           </p>
           <Buttons/>
           
@@ -62,9 +62,9 @@ const DigitalMarketing = () => {
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
           <Image
-            src={digitalMarketingHeroImage}
-            alt="Bespoke internet marketing services for branding and online success"
-            width={400}
+            src={qatestinImage}
+            alt="Assured quality through expert software testing QA testing"
+            width={300}
             height={300}
             className=" "
           />
@@ -78,20 +78,20 @@ const DigitalMarketing = () => {
           <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
             <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
               <Image
-                src={marketingImage1}
+                src={qaimage1}
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+                className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
               />
             </div>
             <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-                Social Media Marketing: Your Audience, Engaged
+                Comprehensive Quality Assurance Testing
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Our personalized approach to social media marketing helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on Instagram, Facebook, and beyond to captivate and grow your audience.We promote your business digitally through engaging posts and targeted ads. We ensure your brand gets a spotlights online among your competitors. Our experts in marketing department analyze insights and adapt strategies which maximizes reach and hunt targeted audience which then turn into loyal customers.  
+                Our quality assurance process covers every aspect of your software, from performance and usability to security. With meticulous testing techniques, we ensure that your applications function seamlessly across all platforms.Our work of nature is to identify potential issues at early stages. This helps us in reducing risks and ensure to provide easy to-go platform to users. Going through thorough testing in real-world scenarios to make sure your software is ready to make impact online, delivering high performance and seamless functionality.  
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ const DigitalMarketing = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
-            Grow your online presence with targeted digital marketing campaigns.
+            Conduct rigorous testing to ensure bug-free and reliable applications.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ const DigitalMarketing = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Boost engagement with creative social media strategies and analytics.
+            Perform detailed testing for performance, security, and compatibility.
             </p>
           </div>
 
@@ -128,7 +128,7 @@ const DigitalMarketing = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Leverage data to drive traffic and convert leads effectively.
+            Deliver reports with actionable insights to enhance application quality.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ const DigitalMarketing = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Achieve consistent results with data-driven and time-tested techniques.
+            Ensure seamless user experience with comprehensive quality assurance.
             </p>
           </div>
         </div>
@@ -149,8 +149,8 @@ const DigitalMarketing = () => {
           <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
             {/* Image Section */}
             <Image
-              src={marketingImage2}
-              alt="PPC campaigns designed for traffic and conversion maximization"
+              src={qaimage2}
+              alt="Customized QA solutions for different sectors toward achieving error-free working"
               width={300}
               height={300}
               className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
@@ -158,11 +158,12 @@ const DigitalMarketing = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
-              PPC Campaigns Designed for Maximum ROI
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              Specialized For Diverse Industries
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700">
-              As specialists in PPC, we design campaigns that deliver high-impact results. Our team analyzes your business needs and targets the right audience with precision, ensuring your ads—whether Google or Meta Ads—generate maximum traffic and conversions.We go through a deep keyword research and competitor analysis to come up with the strategies that are data-driven and tailored to your goals. We thoroughly monitor and optimize your campaigns to ensure you stay ahead in a competitive market. 
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              No matter your industry, TechCreator offers tailored QA solutions. From e-commerce to healthcare and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance.
+              We have councilors to understand the unique requirements of each industry and make sure our testing methods align with your business end goals. Whether it's compliance for healthcare or scalability for e-commerce, we ensure your software meets the expectations you desire and get you to your targeted audience and results that support your business growth.  
               </p>
             </div>
           </div>
@@ -173,20 +174,20 @@ const DigitalMarketing = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
-              Insta and FB Ads That Deliver Impact
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              Accelerate Time-to-Market with Agile QA Services
               </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our expertise in Insta and FB ads guarantees attention-grabbing campaigns that drive engagement and sales. We combine creativity with advanced analytics to craft ads that resonate with your audience and achieve your goals.We ensure your brand’s online presence through eye catching visuals and compelling ad copy. Our strategies are tailored to target the right audience to maximize the ROI. We also constantly monitor and optimize with time to time to keep your campaigns go along  with the trends. Let’s work together and grab the right audience for your business.  
-
+              <p className="text-base md:text-base lg:text-lg text-gray-700">
+              Our Agile QA approach integrates testing throughout the development cycle. By detecting and resolving issues early, we help you speed up delivery timelines without compromising on quality or user experience.
+              This continuous feedbacks loop makes sure that we are aware of the vulnerabilities of the system and allow us for faster and on time development. With the help our experienced and hardworking team we assist you in launching your product faster and ensure reliability.
               </p>
             </div>
             <Image
-              src={marketingImage3}
-              alt="Engaging Insta and FB ads that drive sales with creativity and analytics"
+              src={qaimage3}
+              alt="Agile QA continues to be an invaluable way of ensuring faster delivery with impeccable quality "
               width={300}
               height={300}
-              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -194,20 +195,21 @@ const DigitalMarketing = () => {
           <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
             {/* Image Section */}
             <Image
-              src={marketingImage4}
-              alt="Branding that defines you and leaves a lasting impression"
+              src={qaimage4}
+              alt="Manual and automated testing for total security and protection of software"
               width={300}
               height={300}
-              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
-              Strategic Branding For Your Business
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              Automation and Manual Testing
               </h2>
-              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              Branding is more than a logo—it’s how the world perceives your business. Our experts take the time to understand your vision and values, delivering branding solutions that define your identity and leave a lasting impression on your audience.Every element of our strategy align with your business, whether it is visual aesthetics or messaging tone. We aim to connect you to your audience emotionally and your brand stand out by combining our creativity and our market research. Our strategies will make your brand trustworthy that inspires trust, loyalty and recognition across all touch points. 
+              <p className="text-base md:text-base lg:text-lg text-gray-700 mt-3">
+              We combine manual and automated testing methods to provide comprehensive coverage and efficient results. Our team leverages the latest tools and technologies to identify and fix vulnerabilities, ensuring your software is robust and secure.
+              This dual approach allows us to address complex scenarios manually while automating repetitive tasks for faster outcomes. By striking the perfect balance between human insight and technological precision, we deliver thorough testing that guarantees seamless performance across all platforms.  
               </p>
             </div>
           </div>
@@ -220,17 +222,17 @@ const DigitalMarketing = () => {
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
-              Proven Results Across Industries
+              Recent Work: Delivering Quality You Can Trust
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.Our diverse portfolio shows our excellence and the values we bring to industries such as technology, healthcare, real estate and e-commerce. Our past excellency push us to deliver more and come with the solutions for your business that not only exceed expectations but to bring dignity.
+              In a recent project, our QA testing services helped a SaaS company improve their application’s stability by 40%. Our comprehensive testing approach enabled the client to deliver a seamless user experience and gain higher customer satisfaction.We already have worked with e-commerce platforms when shopping online was at its peak. We enhanced their website’s load performance along with zero downtime. This level of dedication of our team has consistently helped business to build trust and do great in competitive markets. 
               </p>
             </div>
             {/* Image */}
             <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
-                src={marketingImage5}
-                alt="Bespoke solutions show 60% increase in conversion and audience growth"
+                src={qaimage5}
+                alt="QA testing increases SaaS app stability by 40%, thus enabling optimal user experience"
                 width={400}
                 height={500}
                 className="rounded-lg mx-auto mb-2 md:mx-0"
@@ -283,15 +285,14 @@ const DigitalMarketing = () => {
   );
 };
 
-export default DigitalMarketing;
-
+export default QATesting;
 
 
 export const metadata = {
-  title: "Digital Marketing Experts | Social Media Marketing & PPC Services",
+  title: "QA Testing Services | Comprehensive Quality Assurance Solutions",
   description:
-    "TechCreator offers expert digital marketing services, including social media marketing, branding, and PPC campaigns. Experience personalized solutions for measurable results.",
+    "TechCreator offers professional QA testing services to ensure software quality. Enhance reliability with tailored quality assurance testing for seamless performance.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/digital-marketing",
+    canonical: "https://www.techcreator.co/services/qa-testing",
   },
 };

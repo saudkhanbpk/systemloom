@@ -48,12 +48,12 @@ const Header: React.FC = () => {
         },
         {
           name: "Mobile App Development",
-          href: "/services/app-development",
+          href: "/services/mobile-app-development-company",
           icon: <FaMobileAlt />,
         },
         {
           name: "UI & UX Designing",
-          href: "/services/ui-ux-design",
+          href: "/services/ui-ux-design-agency",
           icon: <FaPaintBrush />,
         },
         { name: "DevOps", href: "/services/devops", icon: <FaCogs /> },
@@ -64,23 +64,23 @@ const Header: React.FC = () => {
         },
         {
           name: "SEO & Content Writing",
-          href: "/services/seo-content-writing",
+          href: "/services/seo-services-for-small-business",
           icon: <FaSearch />,
         },
         {
           name: "Software Maintenance",
-          href: "/services/software-maintenance",
+          href: "/services/software-maintenance-services",
           icon: <FaWrench />,
         },
         {
           name: "Graphic Designing",
-          href: "/services/graphic-designing",
+          href: "/services/affordable-graphic-design-services",
           icon: <FaPencilRuler />,
         },
-        { name: "QA Testing", href: "/services/qa-testing", icon: <FaCheck /> },
+        { name: "QA Testing", href: "/services/web-qa-tester", icon: <FaCheck /> },
         {
           name: "Digital Marketing ",
-          href: "/services/digital-marketing",
+          href: "/services/digital-marketing-for-",
           icon: <FaBullhorn />,
         },
       ],

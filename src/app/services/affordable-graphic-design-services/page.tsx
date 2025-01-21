@@ -1,13 +1,12 @@
 import React from "react";
-import SEOImage from "../../../../public/assets/servicespages/seoheroimage.webp";
+import heroimage from "../../../../public/assets/servicespages/graphichero.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import seoimage1 from "../../../../public/assets/servicespages/seoimage1.webp";
-import seoimage2 from "../../../../public/assets/servicespages/seoimade2.webp";
-import seoimage3 from "../../../../public/assets/servicespages/seoimage3.webp";
-import seoimage4 from "../../../../public/assets/servicespages/seoimage4.webp";
-import seoimage5 from "../../../../public/assets/servicespages/seoimage5.webp";
-
+import graphic1 from "../../../../public/assets/servicespages/graphi1.webp";
+import graphic2 from "../../../../public/assets/servicespages/graphic2.webp";
+import graphic3 from "../../../../public/assets/servicespages/graphic3.webp";
+import FramedFeatureSectionImage from "../../../../public/assets/servicespages/FramedFeatureSection.webp";
+import FeatureImage from "../../../../public/assets/servicespages/featureimage.webp";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
@@ -17,8 +16,8 @@ import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
-const SeoContentWriting = () => {
-  const categorySlug = "seo-content-writing";
+const GraphicDesign = () => {
+  const categorySlug = "affordable-graphic-design-services";
   const services = [
     {
       title: "Web Developement",
@@ -32,29 +31,29 @@ const SeoContentWriting = () => {
       description:
         "Creating powerful mobile applications that will capture users and enhance your brand.",
       icon: appDesignImage,
-      link: "/services/mobile-app-development",
+      link: "/services/mobile-app-development-company",
     },
     {
-      title: "Graphic Designing",
+      title: "SEO & Content Writing",
       description:
-        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
+        "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
       icon: motionDesignImage,
-      link: "/services/graphic-designing",
+      link: "/services/seo-services-for-small-business",
     },
   ];
 
   return (
     <div>
-      
+     
       {/* hero section start */}
       <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left ">
           <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          SEO Content Writing Services
+          Unique Styles for Your Business
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          At TechCreator, we provide professional SEO content writing services designed to align with your business goals and improve search engine visibility. With a focus on quality and relevance, our content engages audiences and supports a comprehensive SEO content strategy that drives measurable results.
+          TechCreator is your go-to agency for graphic design, offering creative solutions that bring your ideas to life. From logos to marketing materials, our designs are crafted to communicate your brand's message effectively and captivate your audience.
           </p>
           <Buttons/>
           
@@ -63,8 +62,8 @@ const SeoContentWriting = () => {
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
           <Image
-            src={SEOImage}
-            alt="Improve search engine results with professional SEO content writing services, which deliver results and engage audiences"
+            src={heroimage}
+            alt="TechCreator bringing technology innovations through graphic designing"
             width={300}
             height={300}
             className=" "
@@ -79,20 +78,20 @@ const SeoContentWriting = () => {
           <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
             <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
               <Image
-                src={seoimage1}
+                src={FramedFeatureSectionImage}
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+                className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl "
               />
             </div>
             <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-                Go-To Technical SEO Agency
+                Partner with One of the Top Graphic Design Companies
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                As a trusted technical SEO agency, we ensure every piece of content is optimized for search engine success. From metadata to keyword placement, our team blends technical expertise with creative writing to help your site rank higher and convert better.We conduct thorough audits to identify and fix any SEO issues, ensuring your website performs at its best. By focusing on on-page optimization, site speed, and mobile responsiveness, we drive organic traffic and improve user engagement. 
+                As one of the leading graphic design companies, we provide professional services that enhance your brand’s identity. Our team of skilled designers specializes in creating high-impact visuals that drive engagement and leave a lasting impression.Our designs reflect your brand personality and attracts your targeted audience. We ensure quality, whether it is logo or other marketing materials. Being creative and innovative is our identity.   
                 </p>
               </div>
             </div>
@@ -111,7 +110,7 @@ const SeoContentWriting = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
-            Improve your search engine rankings with optimized and engaging content.
+            Create eye-catching designs that represent your brand effectively.
             </p>
           </div>
 
@@ -120,7 +119,7 @@ const SeoContentWriting = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Craft compelling content tailored to your audience and business goals.
+            Deliver creative solutions for logos, banners, brochures, and more.
             </p>
           </div>
 
@@ -129,7 +128,7 @@ const SeoContentWriting = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Implement effective strategies to drive traffic and boost online visibility.
+            Focus on innovation to create stunning visuals that captivate your audience.
             </p>
           </div>
 
@@ -138,7 +137,7 @@ const SeoContentWriting = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Deliver consistent and high-quality content on time to meet your needs.
+            Ensure timely delivery of designs without compromising on quality.
             </p>
           </div>
         </div>
@@ -147,23 +146,23 @@ const SeoContentWriting = () => {
         {/* DiagonalFeatureSection section start */}
         <div className="mb-16 ">
           {/* card1 */}
-          <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+          <div className="flex flex-col md:flex-row items-center px-1 sm:px-4 xl:px-0  md:gap-12">
             {/* Image Section */}
             <Image
-              src={seoimage2}
-              alt="Achieve better visibility with expert SEO consulting offering strategy, keyword research, and page optimization"
+              src={graphic1}
+              alt="TechCreator attracts audience to your products graphic designing"
               width={300}
               height={300}
-              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
               <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
-              Strategic Consulting for Better Visibility
+              Agency for Graphic Design Tailored to Your Brand
               </h2>
-              <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Beyond content creation, we offer SEO consulting services to help you craft a results-driven strategy. Whether you need guidance on keyword research or optimizing existing pages, our consultants ensure your content aligns with your broader SEO goals.We focus on actionable insights that improve search rankings and drive targeted traffic. With continuous monitoring and adjustments, we help your business stay competitive in ever-evolving search engine algorithms.
+              <p className="text-base md:text-base  lg:text-lg text-gray-700">
+              At TechCreator, we understand the importance of design diversity. Our expertise spans various graphic design styles, ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.We work closely and understand the needs of your business and then translating them into audience-oriented designs. We deal in different categories such as digital assets, print materials or full brand overhauls. Our designs will always resonate with your target market. 
               </p>
             </div>
           </div>
@@ -175,18 +174,18 @@ const SeoContentWriting = () => {
             {/* Text Section */}
             <div className=" text-center md:text-left">
               <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
-              Optimization For Every Business Niche
+              Custom Designs for Every Need
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Our SEO content strategy focuses on natural keyword integration that aligns with search intent. By incorporating industry-specific keywords, we help your website attract targeted traffic and boost engagement, leading to improved rankings and conversions.We create customized content plans tailored to your business's unique needs, ensuring that your message resonates with the right audience. This approach not only increases visibility but also builds long-term trust with your customers. 
+              We offer a wide range of services, including branding, infographics, and digital marketing assets. With our agency for graphic design, you’ll receive personalized solutions designed to stand out in today’s competitive market.Our team of experts make sure that every element in design reflect your unique identity of your brand. Along with attention-grabbing logos to engaging social media visuals we guarantee designs that not only look great but also driven results and elevate your brand’s online presence. 
               </p>
             </div>
             <Image
-              src={seoimage3}
-              alt="Drive targeted traffic with every business niche's SEO content-enhanced experiences, driving engagement and conversions "
+              src={graphic2}
+              alt="TechCreator offers services in graphic designing for your brand "
               width={300}
               height={300}
-              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -194,20 +193,20 @@ const SeoContentWriting = () => {
           <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
             {/* Image Section */}
             <Image
-              src={seoimage4}
-              alt="Boost authority with technical SEO expertise in delivering content that attracts, retains visitors, and supports long-term growth"
+              src={graphic3}
+              alt="Strategic design to boost brand visibility and industry leadership."
               width={300}
               height={300}
-              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
             />
 
             {/* Text Section */}
             <div className="text-center md:text-left">
               <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
-              Enhance Authority with Technical SEO Expertise
+              Brand with Strategic Visuals
               </h2>
-              <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Combining SEO content writing services with technical SEO knowledge, we ensure that your website content not only attracts but also retains visitors. From readability improvements to optimized linking structures, we deliver content that supports long-term growth.Our approach strengthens your site’s authority in search engines, driving higher rankings and sustained traffic. By addressing technical issues, we improve user experience and ensure that your content reaches its full potential.
+              <p className="text-base md:text-base  lg:text-lg text-gray-700 ">
+              Effective design goes beyond aesthetics. Our designs are strategically crafted to enhance your brand’s visibility and connect with your target audience, positioning your business as a leader in its industry.Our every designs convey a full story of your business and its core message. Each design is purposeful that speaks directly to your customer and build your brand recognition.  These aesthetic and self-speaking will ultimately drive customer loyalty and growth. 
               </p>
             </div>
           </div>
@@ -220,17 +219,17 @@ const SeoContentWriting = () => {
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
-              Results That Speak for Themselves
+              Recent Work: Redefining Mobile Solutions
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              In a recent project, we partnered with an e-commerce platform to revamp their SEO content strategy, resulting in a 50% increase in organic traffic. Additionally, as a technical SEO agency, we helped a tech company optimize its blog content, improving keyword rankings and audience engagement.These successes showcase our ability to drive measurable improvements and deliver lasting results. By aligning strategies with business objectives, we ensure that every optimization contributes to overall growth and visibility.
+              Our recent projects include branding for a healthcare startup and social media graphics for a retail business. As one of the top graphic design companies, we’ve helped clients amplify their brand presence and achieve measurable success with unique graphic design styles.Our designs have already helped our clients engage their audiences and communicate their business purpose online effectively. From eye-catching logos to impactful visuals, our designs have improved businesses and they are still on their way to achieve new heights. 
               </p>
             </div>
             {/* Image */}
             <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
-                src={seoimage5}
-                alt="With a 50% increase in organic traffic and other measurable results, expert SEO strategies are producing improved keyword rankings"
+                src={FeatureImage}
+                alt="TechCreator graphic design for brand growth and success"
                 width={400}
                 height={500}
                 className="rounded-lg mx-auto mb-2 md:mx-0"
@@ -282,15 +281,14 @@ const SeoContentWriting = () => {
   );
 };
 
-export default SeoContentWriting;
-
+export default GraphicDesign;
 
 
 export const metadata = {
-  title: "SEO Content Writing Services | Technical SEO Agency & Consulting",
+  title: "Agency for Graphic Design | Expert Graphic Design Companies",
   description:
-    "TechCreator offers expert SEO content writing services and SEO consulting services. Partner with a leading technical SEO agency to boost visibility with a tailored SEO content strategy.",
+    "TechCreator is a top agency for graphic design offering diverse graphic design styles. Partner with one of the leading graphic design companies to elevate your brand.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/seo-content-writing",
+    canonical: "https://www.techcreator.co/services/digital-marketing",
   },
 };

@@ -1,23 +1,23 @@
 import React from "react";
-import heroimage from "../../../../public/assets/servicespages/graphichero.webp";
 import Image from "next/image";
 import { LayoutDashboard, FileText, Zap, Clock } from "lucide-react";
-import graphic1 from "../../../../public/assets/servicespages/graphi1.webp";
-import graphic2 from "../../../../public/assets/servicespages/graphic2.webp";
-import graphic3 from "../../../../public/assets/servicespages/graphic3.webp";
-import FramedFeatureSectionImage from "../../../../public/assets/servicespages/FramedFeatureSection.webp";
-import FeatureImage from "../../../../public/assets/servicespages/featureimage.webp";
+import digitalMarketingHeroImage from "../../../../public/assets/servicespages/digitalmarketionHeroImage.webp";
+import marketingImage1 from "../../../../public/assets/servicespages/digitalmarketing1.webp";
+import marketingImage2 from "../../../../public/assets/servicespages/digitalmarketing2.webp";
+import marketingImage3 from "../../../../public/assets/servicespages/digitalmarketing3.webp";
+import marketingImage4 from "../../../../public/assets/servicespages/digitalmarketing4.webp";
+import marketingImage5 from "../../../../public/assets/servicespages/digitalmarketing5.webp";
 
 // RelatedServices images
 import productDesignImage from "../../../../public/assets/relatedServices/Frame 7.png";
-import appDesignImage from "../../../../public/assets/relatedServices/Frame 7 (1).png";
+import webDesignImage from "../../../../public/assets/relatedServices/Frame 7 (2).png";
 import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7 (5).png";
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
-const GraphicDesign = () => {
-  const categorySlug = "graphic-designing";
+const DigitalMarketing = () => {
+  const categorySlug = "digital-marketing";
   const services = [
     {
       title: "Web Developement",
@@ -27,33 +27,33 @@ const GraphicDesign = () => {
       link: "/services/web-development",
     },
     {
-      title: "Mobile App Development",
-      description:
-        "Creating powerful mobile applications that will capture users and enhance your brand.",
-      icon: appDesignImage,
-      link: "/services/mobile-app-development",
-    },
-    {
       title: "SEO & Content Writing",
       description:
         "Optimizing content to produce traffic and are highly rated in the search engine results pages.",
       icon: motionDesignImage,
-      link: "/services/seo-content-writing",
+      link: "/services/seo-services-for-small-business",
+    },
+    {
+      title: "Graphic Designing",
+      description:
+        "Creating jaw-dropping design materials that lead to the offer of a brand with extreme professionalism.",
+      icon: webDesignImage,
+      link: "/services/affordable-graphic-design-services",
     },
   ];
 
   return (
     <div>
-     
+ 
       {/* hero section start */}
       <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left ">
           <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          Unique Styles for Your Business
+          Digital Marketing Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          TechCreator is your go-to agency for graphic design, offering creative solutions that bring your ideas to life. From logos to marketing materials, our designs are crafted to communicate your brand's message effectively and captivate your audience.
+          At TechCreator, we combine creativity and strategy to offer tailored <strong>digital marketing services</strong> that meet your unique business goals. From effective branding to result-driven campaigns, our team’s expertise ensures your online success.
           </p>
           <Buttons/>
           
@@ -62,9 +62,9 @@ const GraphicDesign = () => {
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
           <Image
-            src={heroimage}
-            alt="TechCreator bringing technology innovations through graphic designing"
-            width={300}
+            src={digitalMarketingHeroImage}
+            alt="Bespoke internet marketing services for branding and online success"
+            width={400}
             height={300}
             className=" "
           />
@@ -78,20 +78,20 @@ const GraphicDesign = () => {
           <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
             <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
               <Image
-                src={FramedFeatureSectionImage}
+                src={marketingImage1}
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl "
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-8 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
-                Partner with One of the Top Graphic Design Companies
+                Social Media Marketing: Your Audience, Engaged
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                As one of the leading graphic design companies, we provide professional services that enhance your brand’s identity. Our team of skilled designers specializes in creating high-impact visuals that drive engagement and leave a lasting impression.Our designs reflect your brand personality and attracts your targeted audience. We ensure quality, whether it is logo or other marketing materials. Being creative and innovative is our identity.   
+                Our personalized approach to social media marketing helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on Instagram, Facebook, and beyond to captivate and grow your audience.We promote your business digitally through engaging posts and targeted ads. We ensure your brand gets a spotlights online among your competitors. Our experts in marketing department analyze insights and adapt strategies which maximizes reach and hunt targeted audience which then turn into loyal customers.  
                 </p>
               </div>
             </div>
@@ -110,7 +110,7 @@ const GraphicDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
-            Create eye-catching designs that represent your brand effectively.
+            Grow your online presence with targeted digital marketing campaigns.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ const GraphicDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Deliver creative solutions for logos, banners, brochures, and more.
+            Boost engagement with creative social media strategies and analytics.
             </p>
           </div>
 
@@ -128,7 +128,7 @@ const GraphicDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Focus on innovation to create stunning visuals that captivate your audience.
+            Leverage data to drive traffic and convert leads effectively.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ const GraphicDesign = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Ensure timely delivery of designs without compromising on quality.
+            Achieve consistent results with data-driven and time-tested techniques.
             </p>
           </div>
         </div>
@@ -146,11 +146,11 @@ const GraphicDesign = () => {
         {/* DiagonalFeatureSection section start */}
         <div className="mb-16 ">
           {/* card1 */}
-          <div className="flex flex-col md:flex-row items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+          <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
             {/* Image Section */}
             <Image
-              src={graphic1}
-              alt="TechCreator attracts audience to your products graphic designing"
+              src={marketingImage2}
+              alt="PPC campaigns designed for traffic and conversion maximization"
               width={300}
               height={300}
               className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
@@ -158,11 +158,11 @@ const GraphicDesign = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
-              Agency for Graphic Design Tailored to Your Brand
+              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              PPC Campaigns Designed for Maximum ROI
               </h2>
-              <p className="text-base md:text-base  lg:text-lg text-gray-700">
-              At TechCreator, we understand the importance of design diversity. Our expertise spans various graphic design styles, ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.We work closely and understand the needs of your business and then translating them into audience-oriented designs. We deal in different categories such as digital assets, print materials or full brand overhauls. Our designs will always resonate with your target market. 
+              <p className="text-base md:text-lg xl:text-lg text-gray-700">
+              As specialists in PPC, we design campaigns that deliver high-impact results. Our team analyzes your business needs and targets the right audience with precision, ensuring your ads—whether Google or Meta Ads—generate maximum traffic and conversions.We go through a deep keyword research and competitor analysis to come up with the strategies that are data-driven and tailored to your goals. We thoroughly monitor and optimize your campaigns to ensure you stay ahead in a competitive market. 
               </p>
             </div>
           </div>
@@ -173,19 +173,20 @@ const GraphicDesign = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
-              Custom Designs for Every Need
+              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              Insta and FB Ads That Deliver Impact
               </h2>
-              <p className="text-base md:text-base lg:text-lg text-gray-700">
-              We offer a wide range of services, including branding, infographics, and digital marketing assets. With our agency for graphic design, you’ll receive personalized solutions designed to stand out in today’s competitive market.Our team of experts make sure that every element in design reflect your unique identity of your brand. Along with attention-grabbing logos to engaging social media visuals we guarantee designs that not only look great but also driven results and elevate your brand’s online presence. 
+              <p className="text-base md:text-lg lg:text-lg text-gray-700">
+              Our expertise in Insta and FB ads guarantees attention-grabbing campaigns that drive engagement and sales. We combine creativity with advanced analytics to craft ads that resonate with your audience and achieve your goals.We ensure your brand’s online presence through eye catching visuals and compelling ad copy. Our strategies are tailored to target the right audience to maximize the ROI. We also constantly monitor and optimize with time to time to keep your campaigns go along  with the trends. Let’s work together and grab the right audience for your business.  
+
               </p>
             </div>
             <Image
-              src={graphic2}
-              alt="TechCreator offers services in graphic designing for your brand "
+              src={marketingImage3}
+              alt="Engaging Insta and FB ads that drive sales with creativity and analytics"
               width={300}
               height={300}
-              className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
+              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
             />
           </div>
 
@@ -193,8 +194,8 @@ const GraphicDesign = () => {
           <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
             {/* Image Section */}
             <Image
-              src={graphic3}
-              alt="Strategic design to boost brand visibility and industry leadership."
+              src={marketingImage4}
+              alt="Branding that defines you and leaves a lasting impression"
               width={300}
               height={300}
               className="  sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px]"
@@ -202,11 +203,11 @@ const GraphicDesign = () => {
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
-              Brand with Strategic Visuals
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              Strategic Branding For Your Business
               </h2>
-              <p className="text-base md:text-base  lg:text-lg text-gray-700 ">
-              Effective design goes beyond aesthetics. Our designs are strategically crafted to enhance your brand’s visibility and connect with your target audience, positioning your business as a leader in its industry.Our every designs convey a full story of your business and its core message. Each design is purposeful that speaks directly to your customer and build your brand recognition.  These aesthetic and self-speaking will ultimately drive customer loyalty and growth. 
+              <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
+              Branding is more than a logo—it’s how the world perceives your business. Our experts take the time to understand your vision and values, delivering branding solutions that define your identity and leave a lasting impression on your audience.Every element of our strategy align with your business, whether it is visual aesthetics or messaging tone. We aim to connect you to your audience emotionally and your brand stand out by combining our creativity and our market research. Our strategies will make your brand trustworthy that inspires trust, loyalty and recognition across all touch points. 
               </p>
             </div>
           </div>
@@ -219,17 +220,17 @@ const GraphicDesign = () => {
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
-              Recent Work: Redefining Mobile Solutions
+              Proven Results Across Industries
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              Our recent projects include branding for a healthcare startup and social media graphics for a retail business. As one of the top graphic design companies, we’ve helped clients amplify their brand presence and achieve measurable success with unique graphic design styles.Our designs have already helped our clients engage their audiences and communicate their business purpose online effectively. From eye-catching logos to impactful visuals, our designs have improved businesses and they are still on their way to achieve new heights. 
+              With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.Our diverse portfolio shows our excellence and the values we bring to industries such as technology, healthcare, real estate and e-commerce. Our past excellency push us to deliver more and come with the solutions for your business that not only exceed expectations but to bring dignity.
               </p>
             </div>
             {/* Image */}
             <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
               <Image
-                src={FeatureImage}
-                alt="TechCreator graphic design for brand growth and success"
+                src={marketingImage5}
+                alt="Bespoke solutions show 60% increase in conversion and audience growth"
                 width={400}
                 height={500}
                 className="rounded-lg mx-auto mb-2 md:mx-0"
@@ -277,17 +278,19 @@ const GraphicDesign = () => {
           </div>
         </div>
       </div>
+      {/* RelatedServices section end */}
     </div>
   );
 };
 
-export default GraphicDesign;
+export default DigitalMarketing;
+
 
 
 export const metadata = {
-  title: "Agency for Graphic Design | Expert Graphic Design Companies",
+  title: "Digital Marketing Experts | Social Media Marketing & PPC Services",
   description:
-    "TechCreator is a top agency for graphic design offering diverse graphic design styles. Partner with one of the leading graphic design companies to elevate your brand.",
+    "TechCreator offers expert digital marketing services, including social media marketing, branding, and PPC campaigns. Experience personalized solutions for measurable results.",
   alternates: {
     canonical: "https://www.techcreator.co/services/digital-marketing",
   },
