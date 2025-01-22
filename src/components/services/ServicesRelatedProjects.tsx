@@ -71,13 +71,10 @@ Want to bring your ideas to life? Let us help you achieve your goals with precis
                       <Image
             src={project.projectScreenshot || "/path/to/fallback-image.jpg"}
             alt={project.title}
-            className="w-full object-cover rounded-t-lg"
-            width={600} // Reduced width for optimization
-            height={400} // Reduced height for optimization
-            quality={75} // Reduced quality to save bandwidth
-            placeholder="blur"
-            blurDataURL="/path/to/low-res-placeholder.jpg"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Responsive sizes
+            className="w-full h-[230px] object-cover rounded-t-lg"
+            width={600} 
+            height={400} 
+            quality={75} 
           />
                    <div className='pt-20'>
                    <p className="absolute bottom-0 left-0 w-full  bg-purple-600 text-white text-center md:p-2 p-1 text-lg font-semibold">
