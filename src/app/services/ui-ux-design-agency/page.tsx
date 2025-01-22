@@ -91,7 +91,7 @@ const UIUXDesign = () => {
               Your Partner as a Top UI/UX Design Agency
               </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-              Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.Our designs are optimized for performance, ensuring seamless navigation and an exceptional user experience. Let’s work together to elevate your online presence and enhance user satisfaction.
+              Recognized as a top UI/UX design agency, we collaborate closely with clients to craft designs that resonate with their audience. From wireframes to final designs, we prioritize functionality and creativity to reflect your brand’s identity and drive user engagement.Our designs are optimized for performance, ensuring seamless navigation and an exceptional user experience. Let’s work together to elevate your <Link href="/services/seo-services-for-small-business" className="cursor-pointer underline">online presence</Link> and enhance user satisfaction.
               </p>
             </div>
           </div>
@@ -207,7 +207,7 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
               Customized UI/UX for Every Industry
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              From startups to enterprises, our design solutions cater to diverse industries. Whether you need a mobile UI/UX design for an app or a complete overhaul of your digital presence, we ensure the final product exceeds your expectations.Each design is tailored to your industry’s specific needs, ensuring maximum impact. The goal is to create intuitive, engaging experiences that drive user loyalty and business growth. 
+              From startups to enterprises, our design solutions cater to diverse industries. Whether you need a mobile UI/UX design for <Link href="/services/mobile-app-development-company" className="cursor-pointer text-blue-600">an app or a complete overhaul</Link>  of your digital presence, we ensure the final product exceeds your expectations.Each design is tailored to your industry’s specific needs, ensuring maximum impact. The goal is to create intuitive, engaging experiences that drive user loyalty and business growth. 
 
               </p>
             </div>

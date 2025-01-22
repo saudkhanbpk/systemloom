@@ -56,7 +56,7 @@ const projectManagement = () => {
           Efficient Project Management Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          TechCreator offers reliable project management services designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.
+          <Link href="/" className="cursor-pointer text-blue-600">TechCreator</Link> offers reliable project management services designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.
           </p>
           <Buttons/>
           
@@ -94,7 +94,7 @@ const projectManagement = () => {
                 Efficient Project Management Services
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                TechCreator offers reliable <strong>project management services</strong> designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.With a keen focus on communication and collaboration, projects are delivered on time and within budget. Our approach minimizes risks and maximizes project success, driving growth and efficiency. 
+                <Link href="/" className="cursor-pointer underline">TechCreator</Link> offers reliable <strong>project management services</strong> designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.With a keen focus on communication and collaboration, projects are delivered on time and within budget. Our approach minimizes risks and maximizes project success, driving growth and efficiency. 
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ const projectManagement = () => {
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
               Every project is unique, and so are our solutions. We specialize in creating tailored project management strategies that address your specific needs, ensuring smooth coordination, accountability, and optimal resource utilization.
-              By understanding your objectives, we provide flexible solutions that adapt as your project evolves. Our proactive approach ensures potential challenges are identified and addressed early, keeping your project on track for success. 
+              By understanding your objectives, we provide flexible solutions that adapt as <Link href="/" className="cursor-pointer text-blue-600">your project evolves</Link> . Our proactive approach ensures potential challenges are identified and addressed early, keeping your project on track for success. 
               </p>
             </div>
           </div>

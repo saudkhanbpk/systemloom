@@ -53,7 +53,7 @@ const SoftwareMaintenance = () => {
           Reliable Software Maintenance Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          At TechCreator, our software maintenance services are designed to keep your applications running smoothly. From bug fixes to performance optimization, we ensure your software stays updated, secure, and aligned with your evolving business needs.
+          At <Link href="/" className="cursor-pointer text-blue-600">TechCreator</Link>, our software maintenance services are designed to keep your applications running smoothly. From <Link href="/services/web-qa-tester" className="cursor-pointer text-blue-600">bug fixes</Link> to performance optimization, we ensure your software stays updated, secure, and aligned with your evolving business needs.
           </p>
           <Buttons/>
           
@@ -178,7 +178,7 @@ const SoftwareMaintenance = () => {
               Proactive Solutions for Long-Term Software Success
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing regular updates and monitoring, we ensure your software remains secure, efficient, and ready for future challenges.Techcreator adapt such approaches to avoid disruptions and keep your software running without any interruption. Our constant support system keeps you ahead of the trends and ensures better performance.  
+              Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing <Link href="/services/project-management" className="cursor-pointer text-blue-600" >regular updates and monitoring</Link>, we ensure your software remains secure, efficient, and ready for future challenges.Techcreator adapt such approaches to avoid disruptions and keep your software running without any interruption. Our constant support system keeps you ahead of the trends and ensures better performance.  
               </p>
             </div>
             <Image
@@ -207,7 +207,7 @@ const SoftwareMaintenance = () => {
               Custom Maintenance Plans for Business Needs
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700 mt-3">
-              Every business is unique, and so are its software requirements. At TechCreator, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.Before execution or practical work, we go through a proper plan in order to understand your needs that align perfectly to your business. We have expertise that analyze the basic needs and ensure your software always meet your core business objectives.  
+              Every business is unique, and so are its software requirements. At <Link href="/" className="cursor-pointer text-blue-600">TechCreator</Link>, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.Before execution or practical work, we go through a proper plan in order to understand your needs that align perfectly to your business. We have expertise that analyze the basic needs and ensure your software always meet your core business objectives.  
               </p>
             </div>
           </div>

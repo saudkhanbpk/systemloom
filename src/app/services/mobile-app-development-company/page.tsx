@@ -54,7 +54,7 @@ const MobileAppDevelopment = () => {
           Mobile App Design and Development Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          From concept to deployment, we ensure every detail is meticulously crafted just according to your business needs. At TechCreator, we specialize in mobile app development that prioritizes functionality and user engagement. Our team creates intuitive and visually appealing apps that meet your customer complex needs while delivering exceptional user experiences. 
+          From concept to deployment, we ensure every detail is meticulously crafted just according to your business needs. At <Link href="/" className="cursor-pointer text-blue-600">TechCreator</Link>, we specialize in mobile app development that prioritizes functionality and user engagement. Our team creates intuitive and visually appealing apps that meet your customer complex needs while delivering exceptional user experiences. 
           </p>
           <Buttons/>
           
@@ -91,7 +91,7 @@ const MobileAppDevelopment = () => {
               Healthcare Mobile App Development Transforming Industries
               </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-              As a trusted healthcare mobile app development company, we craft innovative solutions that enhance patient care and streamline medical workflows. Our services include secure data management, user-friendly interfaces, and tailored features to meet the unique needs of healthcare providers and patients. We bridge the gap between technology and healthcare for better outcomes and improved efficiency.
+              As a trusted <Link href="/healthcare" className="cursor-pointer underline">healthcare mobile app development company</Link> , we craft innovative solutions that enhance patient care and streamline medical workflows. Our services include secure data management, user-friendly interfaces, and tailored features to meet the unique needs of healthcare providers and patients. We bridge the gap between technology and healthcare for better outcomes and improved efficiency.
               </p>
             </div>
           </div>
@@ -247,7 +247,7 @@ const MobileAppDevelopment = () => {
                 developed a specialized healthcare app for a clinic, integrating
                 appointment scheduling, patient records, and secure
                 communication features, transforming their service delivery.   
-                Choose TechCreator to turn your mobile app ideas into reality
+                Choose <Link href="/" className="cursor-pointer underline">TechCreator</Link> to turn your mobile app ideas into reality
                 with innovative solutions designed to meet your business
                 objectives.
               </p>

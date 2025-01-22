@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Linkedin from "../../../public/assets/icons/Vector.png";
 import croImage from "../../../public/assets/aboutpage/ceoimage2.webp"
+import Link from "next/link";
 
 const OverviewSec: React.FC = () => {
   return (
@@ -17,8 +18,7 @@ const OverviewSec: React.FC = () => {
             My name is <strong>Saud Khan,</strong> CEO of TecCreator.
           </p>
           <p className="text-[16px] md:text-[18px] text-gray-700 leading-7 md:leading-8 text-justify mt-4">
-            As the world rapidly transforming into global village through
-            digitalization, people are becoming more interconnected than ever
+            As the world rapidly transforming into global village through <Link href="/services/digital-marketing-for-software-companies" className="cursor-pointer text-blue-600">digitalization</Link> , people are becoming more interconnected than ever
             before. It forms our vision to deliver innovative IT solutions that
             are agile, AI driven and designed to adapt to the ever-changing
             digital landscape.
@@ -27,8 +27,7 @@ const OverviewSec: React.FC = () => {
             I believe, we are not just creating digital assets but are fostering
             long-term partnership built on trust, collaboration and a shared
             vision for success. In this era digital landscape, we are committed
-            to provide our agile services to clients across the globe. We,
-            TechCreator, are here to drive our head towards a future where
+            to provide our agile services to clients across the globe. We,<Link href="/" className="cursor-pointer text-blue-600">TechCreator</Link> , are here to drive our head towards a future where
             innovation meets the demands of the people of future.
           </p>
         </div>

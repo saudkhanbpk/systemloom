@@ -92,7 +92,7 @@ const Devops = () => {
                 Partner with One of the Leading DevOps Companies
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed w-full text-wrap">
-                As one of the trusted DevOps companies, we deliver innovative solutions designed to meet your business needs. From infrastructure management to process automation, our team ensures seamless integration of development and IT operations for faster and more reliable software delivery.Enhancing collaboration, efficiency, and scalability across operations drives continuous improvement. Accelerate product releases and stay ahead in the competitive market with optimized DevOps practices.
+                As one of the trusted DevOps companies, we deliver innovative solutions designed to meet your business needs. From infrastructure management to process automation, our team ensures seamless integration of <Link href="/services/web-development" className="cursor-pointer underline"> development and IT operations</Link> for faster and more reliable software delivery.Enhancing collaboration, efficiency, and scalability across operations drives continuous improvement. Accelerate product releases and stay ahead in the competitive market with optimized DevOps practices.
                 </p>
               </div>
             </div>
@@ -163,7 +163,7 @@ const Devops = () => {
               Transform Processes with DevOps Automation
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Our DevOps automation services eliminate manual tasks and streamline workflows, reducing errors and deployment times. We utilize advanced tools to automate testing, integration, and delivery, empowering your business to operate with greater agility and precision.Automation drives consistency and accelerates time-to-market, enabling faster innovation. With optimized workflows, businesses can focus on strategic growth and customer satisfaction. 
+              Our DevOps automation services eliminate manual tasks and streamline workflows, reducing <Link href="/services/web-qa-tester" className="cursor-pointer text-blue-600"> errors and deployment times</Link>. We utilize advanced tools to automate testing, integration, and delivery, empowering your business to operate with greater agility and precision.Automation drives consistency and accelerates time-to-market, enabling faster innovation. With optimized workflows, businesses can focus on strategic growth and customer satisfaction. 
               </p>
             </div>
           </div>
@@ -178,7 +178,7 @@ const Devops = () => {
               Empowering Growth with Business
               </h2>
               <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our business DevOps solutions are designed to align development practices with organizational goals. By enhancing collaboration between teams, we help businesses reduce time-to-market, improve quality, and achieve consistent performance.These solutions foster a culture of continuous improvement, ensuring agility and efficiency across every stage of the development lifecycle. With streamlined processes, your business can adapt to changes faster and drive long-term success.
+              Our business DevOps solutions are designed to align development practices with organizational goals. By enhancing collaboration between teams, we help businesses reduce time-to-market, improve quality, and achieve consistent performance.These solutions foster a culture of continuous improvement, ensuring agility and efficiency across every stage of the <Link href="/" className="cursor-pointer text-blue-600">development lifecycle</Link>. With streamlined processes, your business can adapt to changes faster and drive long-term success.
               </p>
             </div>
             <Image
@@ -207,7 +207,7 @@ const Devops = () => {
               Get a Tailored Support
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Work with a dedicated DevOps consultant to implement strategies that cater to your unique challenges. Whether you need help with cloud migration, CI/CD pipelines, or workflow optimization, our consultants deliver results-driven guidance and ongoing support.With expert advice and personalized solutions, businesses can streamline operations and enhance performance. Continuous support ensures that your DevOps strategy evolves as your business grows and technology advances. 
+              Work with a dedicated DevOps consultant to implement strategies that cater to your unique challenges. Whether you need help with cloud migration, CI/CD pipelines, or workflow optimization, our consultants deliver results-driven guidance and <Link href="/services/seo-services-for-small-business" className="cursor-pointer text-blue-600">ongoing support</Link>. With expert advice and personalized solutions, businesses can streamline operations and enhance performance. Continuous support ensures that your DevOps strategy evolves as your business grows and technology advances. 
               </p>
             </div>
           </div>

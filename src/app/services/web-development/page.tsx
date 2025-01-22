@@ -55,7 +55,7 @@ const WebDevelopment = () => {
       Empower your business with custom web development
     </h1>
     <p className="text-base lg:text-lg mt-3 leading-relaxed">
-      Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like Healthcare, Real Estates, Restaurants, E-Commerce stores—that ensure seamless functionality and innovation.
+      Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like <Link href="/healthcare" className="cursor-pointer text-blue-600">Healthcare</Link>, <Link href="/real-estate" className="cursor-pointer text-blue-600"> Real Estates</Link>, <Link href="/restaurants" className="cursor-pointer text-blue-600">Restaurants</Link> , <Link href="/e-commerce" className="cursor-pointer text-blue-600">E-Commerce</Link> stores—that ensure seamless functionality and innovation.
     </p>
     <Buttons />
   </div>
@@ -101,7 +101,7 @@ const WebDevelopment = () => {
                 solutions that align with your brand and business goals,
                 offering unique designs and functionalities to captivate your
                 audience and elevate your online presence.
-                From concept to launch, we ensure every detail is perfected to deliver an exceptional user experience. Let us transform your vision into a dynamic digital reality. 
+                From concept to launch, we ensure every detail is perfected to deliver an exceptional <Link href="/services/ui-ux-design-agency" className="cursor-pointer underline">user experience</Link>. Let us transform your vision into a <Link href="/services/digital-marketing-for-software-companies" className="cursor-pointer underline">dynamic digital reality</Link>. 
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ const WebDevelopment = () => {
 
           {/* Text */}
           <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-          Ensure seamless performance and intuitive user experience with our web solutions.
+          Ensure seamless performance and intuitive <Link href="/services/ui-ux-design-agency" className="cursor-pointer text-blue-600">user experience</Link> with our web solutions.
           </p>
         </div>
 
@@ -193,7 +193,7 @@ const WebDevelopment = () => {
             MERN & MEAN Web Development Services for High Performance
             </h2>
             <p className="text-base md:text-base lg:text-lg text-gray-700">
-            Being a specialist in <strong>MERN and MEAN web development services,</strong> we build scalable, secure, and high-performance websites based on your business needs. No matter if your need is a content-heavy website, a feature-rich e-commerce platform, or an advanced web application, our developers harness the power and flexibility of MERN (MongoDB, Express, React, Node.js) and MEAN (MongoDB, Express, Angular, Node.js) to provide exemplary solutions. 
+            Being a specialist in <strong>MERN and MEAN web development services,</strong> we build scalable, secure, and <Link href="/services/web-development" className="cursor-pointer text-blue-600">high-performance websites</Link> based on your business needs. No matter if your need is a <Link href="/blog" className="cursor-pointer text-blue-600">content-heavy website</Link>, a feature-rich <Link href="/e-commerce" className="cursor-pointer text-blue-600">e-commerce platform</Link> , or an advanced web application, our developers harness the power and flexibility of MERN (MongoDB, Express, React, Node.js) and MEAN (MongoDB, Express, Angular, Node.js) to provide exemplary solutions. 
             </p>
           </div>
           <Image

@@ -3,6 +3,7 @@ import Image from "next/image";
 import about1 from "../../../public/assets/aboutpage/about1.webp";
 import about2 from "../../../public/assets/aboutpage/about2.webp";
 import about3 from "../../../public/assets/aboutpage/about3.webp";
+import Link from "next/link";
 
 const Overview: React.FC = () => {
   return (
@@ -42,7 +43,7 @@ const Overview: React.FC = () => {
             About TechCreator
           </h2>
           <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8">
-            TechCreator is a software company, passionate about crafting
+            TechCreator is a <Link href="/" className="cursor-pointer text-blue-600">software company</Link>, passionate about crafting
             innovative solutions that help businesses thrive in an ever-evolving
             technological landscape. Our team of expertise is dedicated to
             deliver high-quality, scalable and user-friendly solutions that meet
@@ -50,8 +51,7 @@ const Overview: React.FC = () => {
           </p>
           <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8 mt-6">
             You are launching startup or scaling an enterprise, TechCreator is
-            here to boost your business online by serving you in web
-            development, app development, Devops and graphic design. We provide
+            here to boost your business online by serving you in <Link href="/services/web-development" className="cursor-pointer text-blue-600">web development</Link>, <Link href="/services/mobile-app-development-company" className="cursor-pointer text-blue-600">app development</Link> , <Link href="/services/devops" className="cursor-pointer text-blue-600">Devops</Link> and <Link href="/services/affordable-graphic-design-services " className="cursor-pointer text-blue-600">graphic design</Link>. We provide
             end-to-end services that bring your ideas to life. We have a team
             focusing on innovative solutions, customized approach and commitment
             to quality.
