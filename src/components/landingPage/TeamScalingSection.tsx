@@ -5,6 +5,7 @@ import teemImage3 from "../../../public/assets/homepage/teamimage3.webp";
 import projectManagerImage from "../../../public/assets/aboutpage/hamdan.webp";
 import CeoImage from "../../../public/assets/aboutpage/ceoimage2.webp";
 import AdminOfficerImage from "../../../public/assets/aboutpage/hamdad.webp";
+import Link from "next/link";
 
 const TeamScalingSection = () => {
   return (
@@ -17,10 +18,10 @@ const TeamScalingSection = () => {
               Empowering Your Business with Innovation
             </h2>
             <p className=" mb-4 font-normal text-lg">
-              Feeling short of the right expertise to build your product?
+              Feeling short of the right expertise to <Link href="/e-commerce" className="cursor-pointer text-blue-600">build your product</Link> ?
             </p>
             <p className=" mb-4 font-normal text-lg">
-              We can either take over your entire development project or augment
+              We can either take over your entire <Link href="/services/project-management" className="cursor-pointer text-blue-600">development project</Link> or augment
               your team to assist you at any stage of your product development
               cycle.
             </p>
@@ -78,8 +79,7 @@ const TeamScalingSection = () => {
             </h2>
 
             <p className=" mb-4 font-normal text-lg">
-              To make your business skyrocket, you must have both the quality
-              product to demonstrate and the optimization to grow. Our company
+              To make your business skyrocket, you must have both the <Link href="/services/web-qa-tester" className="cursor-pointer text-blue-600">quality product</Link> to demonstrate and the optimization to grow. Our company
               aims to help the community in both of them.
             </p>
 
@@ -117,8 +117,7 @@ const TeamScalingSection = () => {
               We don’t just deliver services; we work closely with our clients
               to understand their vision and align our strategies to achieve
               their goals. By staying ahead of market trends, we are able to
-              provide our clients with cutting-edge software and digital
-              marketing solutions.
+              provide our clients with cutting-edge software and <Link href="/services/digital-marketing-for-software-companies" className="cursor-pointer text-blue-600">digital marketing</Link> solutions.
             </p>
 
             <div className="border-l-4 border-[#9A00FF] pl-4 mb-6">

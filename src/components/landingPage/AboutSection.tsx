@@ -3,6 +3,7 @@ import squareImage from "../../../public/assets/aboutImages/Group 143725868.png"
 import group1 from "../../../public/assets/homepage/Mask group.webp";
 import group2 from "../../../public/assets/homepage/Mask group (1).webp";
 import group3 from "../../../public/assets/homepage/Mask group (2).webp";
+import Link from "next/link";
 
 function AboutSection() {
   return (
@@ -48,12 +49,9 @@ function AboutSection() {
             We Bring Maximum value to your business
           </h2>
           <p className="font-normal text-xl p-2 xl:p-0 md:text-lg leading-7 md:leading-[36px]">
-            TechCreator is a software development company helping businesses
-            scale up their growth. Your potential customers will find you
-            online. Our team made it happen. Engage them with contemporary,
-            attractive web design and content they were looking for on the
-            search engines. Then, watch your sales grow.
-          </p>
+  TechCreator is a <Link href="/services/web-development" className="cursor-pointer text-blue-600">software development company</Link> dedicated to helping businesses scale their growth. We ensure your potential customers can find you online. Our team makes it happen by creating contemporary, attractive <Link href="/services/ui-ux-design-agency" className="cursor-pointer text-blue-600">web designs</Link>  and delivering the content your audience is searching for. Let us help you engage your customers and watch your <Link href="/services/digital-marketing-for-software-companies" className="cursor-pointer text-blue-600">sales grow</Link>.
+</p>
+
         </div>
       </div>
     </div>
