@@ -16,11 +16,6 @@ const CreateBlogForm = () => {
 
   const generateSlug = (title: string): string => {
     return title
-      // .toLowerCase()
-      // .trim()
-      // .replace(/\s+/g, "-") 
-      // .replace(/[^\w-]+/g, ""); 
-
       .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
@@ -90,11 +85,11 @@ const CreateBlogForm = () => {
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const title = e.target.value;
-    const slug = generateSlug(title); // Generate slug from title
+    const slug = generateSlug(title); 
     setFormData((prevData) => ({
       ...prevData,
       title,
-      slug, // Update slug in the state
+      slug, 
     }));
   };
   
@@ -114,7 +109,7 @@ const CreateBlogForm = () => {
               description: res.data.blog.description,
               tags: res.data.blog.tags,
               tagInput: "",
-              image: null, // Image is initially null
+              image: null, 
               imagePreview: res.data.blog.image.imageUrl || null, 
             });
           }
@@ -143,7 +138,7 @@ const CreateBlogForm = () => {
     formDataToSubmit.append("title", title);
     formDataToSubmit.append("slug", slug); 
   
-    // Append the image to form data if available
+    
     if (image) {
       formDataToSubmit.append("image", image);
     }
@@ -151,7 +146,6 @@ const CreateBlogForm = () => {
     try {
       let res;
       if (isEditMode) {
-        // Update the blog if blogId exists
         res = await axios.put(`${backend_url}/api/v1/blogs/update/${slug}`, formDataToSubmit, {
           withCredentials: true,
         });
@@ -159,7 +153,6 @@ const CreateBlogForm = () => {
           toast.success(res.data.message);
         }
       } else {
-        // Create a new blog if no blogId exists
         res = await axios.post(`${backend_url}/api/v1/blogs/create`, formDataToSubmit, {
           withCredentials: true,
         });
@@ -168,7 +161,6 @@ const CreateBlogForm = () => {
         }
       }
   
-      // Redirect after successful operation
       router.push("/admin/all-blogs");
     } catch (error: any) {
       console.error(error);
@@ -180,7 +172,6 @@ const CreateBlogForm = () => {
   return (
     <div className="max-w-5xl mx-auto bg-white p-6 rounded-lg mt-20 shadow-md">
       <form onSubmit={handleSubmit}>
-        {/* Image Upload Section */}
         <div className="border-dashed border-2 border-gray-300 p-6 text-center rounded-lg mb-6">
           <label htmlFor="imageUpload">
             <i className="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
@@ -195,7 +186,6 @@ const CreateBlogForm = () => {
             />
           </label>
 
-          {/* Preview selected image */}
           {formData.imagePreview && (
             <div className="mt-4">
               <img
@@ -207,7 +197,6 @@ const CreateBlogForm = () => {
           )}
         </div>
 
-        {/* Alt Description */}
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Alt Description</label>
           <input
@@ -219,7 +208,6 @@ const CreateBlogForm = () => {
           />
         </div>
 
-        {/* Title */}
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Title</label>
           <input

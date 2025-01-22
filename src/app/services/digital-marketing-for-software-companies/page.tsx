@@ -17,7 +17,7 @@ import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 
 const DigitalMarketing = () => {
-  const categorySlug = "digital-marketing";
+  const categorySlug = "digital-marketing-for-software-companies";
   const services = [
     {
       title: "Web Developement",

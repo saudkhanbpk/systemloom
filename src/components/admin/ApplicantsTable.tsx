@@ -289,15 +289,6 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
                 )}
               </p>
             </div>
-
-            <div className="flex justify-center mt-4">
-              {/* <button
-                onClick={handleCloseModal}
-                className="bg-red-500 text-white px-6 py-2 rounded-md"
-              >
-                Close
-              </button> */}
-            </div>
           </div>
         </div>
       )}

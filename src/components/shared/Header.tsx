@@ -80,7 +80,7 @@ const Header: React.FC = () => {
         { name: "QA Testing", href: "/services/web-qa-tester", icon: <FaCheck /> },
         {
           name: "Digital Marketing ",
-          href: "/services/digital-marketing-for-",
+          href: "/services/digital-marketing-for-software-companies",
           icon: <FaBullhorn />,
         },
       ],

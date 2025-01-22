@@ -13,7 +13,7 @@ import { toast } from 'react-toastify'
 import { deleteJob } from '@/redux/jobSlice'
 import { useRouter } from 'next/navigation'
 
-// JobCard component with typed props
+
 interface JobCardProps {
   jobId: string;
   category: string;
@@ -33,7 +33,6 @@ const JobCard: React.FC<JobCardProps> = ({
   company = "Techcreator",
   timeAgo = new Date(),
 }) => {
-  // Convert `timeAgo` to Date object if it's a string
   const timeAgoFormatted = typeof timeAgo === 'string' ? new Date(timeAgo) : timeAgo
   const timeDistance = formatDistanceToNow(timeAgoFormatted, { addSuffix: true })
 
@@ -47,7 +46,6 @@ const JobCard: React.FC<JobCardProps> = ({
         },
         withCredentials:true
       })
-      // console.log(res);
       
       if (res.data.success){
         dispatch(deleteJob(jobId))
@@ -109,17 +107,16 @@ const JobCard: React.FC<JobCardProps> = ({
   )
 }
 
-// Define props for the JobsCard component
+
 interface JobsCardProps {
   searchTerm: string;
 }
 
-// JobsCard component to display the list of jobs
+
 const JobsCard: React.FC<JobsCardProps> = ({ searchTerm }) => {
-  // Define the type for Redux state
   const { allJobs } = useSelector((state: RootState) => state.job)
 
- // Filter jobs based on search term
+
 const filteredJobs = allJobs?.filter(job =>
   job.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
   job.company?.toLowerCase().includes(searchTerm.toLowerCase()) ||

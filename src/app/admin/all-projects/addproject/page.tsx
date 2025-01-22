@@ -41,7 +41,7 @@ const AddProjectPage: React.FC = () => {
           if (res.data.success) {
             setFormData({
               ...res.data.project,
-              screenshotUrl: res.data.project.projectScreenshot || "", // Set the screenshot URL for updates
+              screenshotUrl: res.data.project.projectScreenshot || "", 
             });
           }
         } catch (error) {
@@ -55,20 +55,18 @@ const AddProjectPage: React.FC = () => {
 
 
 
-  // Handle form data change
+ 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target; // Extract the name and value of the input
+    const { name, value } = e.target; 
     setFormData((prevData) => ({
-      ...prevData,  // Spread the previous form data
-      [name]: value, // Update the specific field using the name of the input
+      ...prevData,  
+      [name]: value, 
     }));
   };
   
   
-
-  // Handle file upload change
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files.length > 0) {
@@ -101,7 +99,6 @@ const AddProjectPage: React.FC = () => {
   };
 
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -459,27 +456,21 @@ const AddProjectPage: React.FC = () => {
     <div>
       <button
         type="button"
-        id="digital-marketing-for-"
-        value="digital-marketing-for-"
-        onClick={() => handleCategoryChange("digital-marketing-for-")}
+        id="digital-marketing-for-software-companies"
+        value="digital-marketing-for-software-companies"
+        onClick={() => handleCategoryChange("digital-marketing-for-software-companies")}
         className="mr-2"
       >
-        {formData.category.includes("digital-marketing-for-") ? (
+        {formData.category.includes("digital-marketing-for-software-companies") ? (
           <FaCheckCircle className="text-blue-500" />
         ) : (
           <FaRegCircle className="text-gray-500" />
         )}
       </button>
-      <label htmlFor="digital-marketing-for-" className="text-sm text-gray-700">digital-marketing</label>
+      <label htmlFor="digital-marketing-for-software-companies" className="text-sm text-gray-700">digital-marketing</label>
     </div>
   </div>
 </div>
-
-
-
-
-
-
 
             {/* Figma Link Field */}
             <div>
