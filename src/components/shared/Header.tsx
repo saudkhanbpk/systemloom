@@ -97,14 +97,14 @@ const Header: React.FC = () => {
   // };
 
   const handleMouseEnter = (name: string) => {
-    clearTimeout(timer); // Clear any existing timers
+    clearTimeout(timer); 
     setActiveDropdown(name);
   };
 
   const handleMouseLeave = () => {
     timer = setTimeout(() => {
       setActiveDropdown(null);
-    }, 200); // Add a delay to prevent accidental closing
+    }, 200); 
   };
 
   return (
@@ -114,8 +114,8 @@ const Header: React.FC = () => {
          initial={{ opacity: 0, scale: 0.8 }}
          animate={{ opacity: 1, scale: 1 }}
          transition={{
-           duration: 1.2,       // Duration of the animation
-           ease: [0.6, -0.05, 0.01, 0.99], // Custom cubic-bezier easing for a smooth effect
+           duration: 1.2,       
+           ease: [0.6, -0.05, 0.01, 0.99],
          }}
         
          className="flex items-center justify-between h-16">
@@ -147,7 +147,7 @@ const Header: React.FC = () => {
                       <span
                         className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF]  text-white ${
                           pathname === item.href
-                            ? "bg-[#9A00FF] shadow-[0_4px_16px_-4px_rgba(154,0,255,0.6)] text-white"
+                            ? "bg-[#9A00FF] text-white"
                             : ""
                         }`}
                       >
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#9A00FF]  shadow-[0_4px_16px_-4px_#3b71ca] font-semibold "
+                                      ? "text-[#9A00FF] font-semibold "
                                       : "hover:text-[#9A00FF]"
                                   }`}
                                 >
@@ -289,7 +289,7 @@ const Header: React.FC = () => {
                       key={subItem.name}
                       href={subItem.href}
                       onClick={() => {
-                        setIsOpen(false); // Close menu on click
+                        setIsOpen(false); 
                       }}
                       className="flex items-center gap-3 text-wrap px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-600"
                     >
@@ -303,7 +303,7 @@ const Header: React.FC = () => {
             // Regular menu items
             <Link
               href={item.href}
-              onClick={() => setIsOpen(false)} // Close menu on click
+              onClick={() => setIsOpen(false)} 
               className={`flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 ${
                 pathname === item.href ? "bg-[#0c080f] text-white" : ""
               }`}

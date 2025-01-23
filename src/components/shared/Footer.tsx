@@ -134,7 +134,6 @@ const Footer: React.FC = () => {
     <footer className="relative bg-black text-white py-4 md:py-4 w-full">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 footer-bg"
-        // Background image will load dynamically with Intersection Observer
       ></div>
       <div className="relative mx-auto  px-3 mt-6">
         <div className="flex flex-wrap md:gap-10 gap-9 justify-between px-5">
@@ -177,20 +176,6 @@ const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
                 />
               </a>
-              {/* <a
-                href="https://www.upwork.com/agencies/1479726519577280512/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Upwork"
-              >
-                <FontAwesomeIcon
-                  icon={faBriefcase}
-                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
-                />
-              </a> */}
-              {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <FontAwesomeIcon icon={faTwitter} className="text-gray-400 hover:text-purple-500 text-lg md:text-xl" />
-            </a> */}
               <a
                 href="https://www.youtube.com/@techcreator9512"
                 target="_blank"

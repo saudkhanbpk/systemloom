@@ -10,7 +10,7 @@ const PrivacyPolicyPage = () => {
 
       {/* Last Updated Section */}
       <div className="w-full text-center py-4 bg-gray-200">
-        <h2 className="text-lg md:text-xl font-medium text-gray-700">Last Updated: January 1, 2024</h2>
+        <h2 className="text-lg md:text-xl font-medium text-gray-700">Last Updated: January 1, 2025</h2>
       </div>
 
       {/* Privacy Policy Content Section */}
