@@ -80,7 +80,7 @@ export const CTASection = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-[#9A00FF] text-white font-semibold p-2 rounded-[5px] w-[220px] mt-5 mx-auto md:mx-0"
+                  className="bg-[#9A00FF] text-white shadow-[0_4px_16px_-4px_#3b71ca] font-semibold p-2 rounded-[5px] w-[220px] mt-5 mx-auto md:mx-0"
                 >
                   Hire Top Developers
                 </motion.button>

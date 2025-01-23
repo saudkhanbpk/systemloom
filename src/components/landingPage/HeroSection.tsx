@@ -71,9 +71,9 @@ function HeroSection() {
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeInOut" }}
             style={{ background: "rgba(255, 255, 255, 0.24)" }}
-            className="text-white font-bold md:py-4 md:px-8 px-2 py-2 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="text-white font-bold md:py-4 md:px-8 px-2 py-2 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_rgba(154,0,255,0.6)]"
           >
             Automate your Business &nbsp;&nbsp;→
           </motion.button>

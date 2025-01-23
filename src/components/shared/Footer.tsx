@@ -230,14 +230,14 @@ const Footer: React.FC = () => {
                     placeholder="Enter your email"
                     disabled={loading}
                     required
-                    className="text-black p-2 outline-none rounded-md "
+                    className="text-black p-2 outline-none rounded-md  "
                   />
                  <motion.button
   whileHover={{ scale: 1.1 }}
   whileTap={{ scale: 0.95 }}
   type="submit"
   disabled={loading}
-  className="bg-[#9A00FF] text-white rounded-md p-2 w-fit"
+  className="bg-[#9A00FF] text-white rounded-md p-2 w-fit shadow-[0_4px_16px_-4px_#3b71ca]"
 >
   {loading ? "Subscribing..." : "Subscribe"}
 </motion.button>
@@ -378,7 +378,7 @@ const Footer: React.FC = () => {
                 { name: "QA Testing", link: "/services/web-qa-tester" },
                 {
                   name: "Digital Marketing",
-                  link: "/services/digital-marketing-for-",
+                  link: "/services/digital-marketing-for-software-companies",
                 },
               ].map((service) => (
                 <li key={service.name}>
@@ -441,12 +441,6 @@ const Footer: React.FC = () => {
               </div>
 
               <div>
-                {/* <CommonButton
-  className="bg-[#9A00FF] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm"
-  title="Consultancy"
-  handleClick={() => window.open("https://mentoga.com/saudkhan", "_blank")} 
-/> */}
-
                 <AppointmentSection  />
               </div>
             </div>

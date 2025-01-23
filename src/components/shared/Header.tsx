@@ -145,9 +145,9 @@ const Header: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                     >
                       <span
-                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF] text-white ${
+                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF]  text-white ${
                           pathname === item.href
-                            ? "bg-[#9A00FF] text-white"
+                            ? "bg-[#9A00FF] shadow-[0_4px_16px_-4px_rgba(154,0,255,0.6)] text-white"
                             : ""
                         }`}
                       >
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#9A00FF] font-semibold "
+                                      ? "text-[#9A00FF]  shadow-[0_4px_16px_-4px_#3b71ca] font-semibold "
                                       : "hover:text-[#9A00FF]"
                                   }`}
                                 >

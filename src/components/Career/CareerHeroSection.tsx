@@ -101,7 +101,7 @@ const CareerHeroSection: FC = () => {
               That's our working style.
             </p>
             <CommonButton
-              className="bg-[#9A00FF] hover:bg-purple-700 text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
+              className="bg-[#9A00FF] hover:bg-purple-700 shadow-[0_4px_16px_-4px_#3b71ca] text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
               title="Send your resume"
               handleClick={handleDialogOpen}
             />

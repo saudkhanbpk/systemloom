@@ -18,7 +18,7 @@ const Login: React.FC = () => {
     email: '',
     password: '',
   });
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false); 
   const [showPassword, setShowPassword] = useState(false);
 
   const changeEventHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +60,7 @@ const Login: React.FC = () => {
 
   return (
     <motion.div
-      className="flex items-center justify-center min-h-screen bg-gray-900 p-4"
+      className="flex items-center justify-center h-screen bg-gray-900 p-4"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
