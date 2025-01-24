@@ -9,9 +9,6 @@ import {
   faYoutube,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../../../public/assets/icons/Logo.png";
-import CommonButton from "../common/Button";
 import Footerbg from "../../../public/assets/footerImages/footer_bg_image.svg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -27,12 +24,13 @@ import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png";
 import AppointmentSection from "./AppointmentSection";
 import { AiOutlineMail } from "react-icons/ai";
 import {motion} from "framer-motion"
+import { usePathname } from 'next/navigation';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   
-
+  const pathname = usePathname();
   const router = useRouter();
   
   useEffect(() => {
@@ -54,9 +52,8 @@ const Footer: React.FC = () => {
       );
 
       observer.observe(footerBackground);
-      return () => observer.disconnect(); // Cleanup observer on component unmount
+      return () => observer.disconnect(); 
     } else if (footerBackground) {
-      // Fallback in case IntersectionObserver is not supported
       footerBackground.style.backgroundImage = `url(${Footerbg.src})`;
     }
   }, []);
@@ -91,12 +88,6 @@ const Footer: React.FC = () => {
       return;
     }
 
-    // Validate email format
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!emailRegex.test(email)) {
-    //   toast.error("Please enter a valid email address!");
-    //   return;
-    // }
 
     setLoading(true);
 
@@ -233,99 +224,100 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-  <h2 className="text-base md:text-lg font-semibold">
-    Industries We Serve
-  </h2>
-  <ul className="flex flex-col gap-4 text-sm">
-    <li>
-      <Link href="/healthcare" className="hover:text-[#9A00FF]">
-        HealthCare
-      </Link>
-    </li>
-    <li>
-      <Link href="/e-commerce" className="hover:text-[#9A00FF]">
-        E-Commerce
-      </Link>
-    </li>
-    <li>
-      <Link href="/hospitality" className="hover:text-[#9A00FF]">
-        Hospitality
-      </Link>
-    </li>
-    <li>
-      <Link href="/real-estate" className="hover:text-[#9A00FF]">
-        Real Estate
-      </Link>
-    </li>
-    <li>
-      <Link href="/restaurants" className="hover:text-[#9A00FF]">
-        Restaurants
-      </Link>
-    </li>
-    <li>
-      <Link href="/green-energy" className="hover:text-[#9A00FF]">
-        Green Energy
-      </Link>
-    </li>
-  </ul>
-</div>
+      <h2 className="text-base md:text-lg font-semibold">Industries We Serve</h2>
+      <ul className="flex flex-col gap-4 text-sm">
+        {[
+          { href: '/healthcare', label: 'HealthCare' },
+          { href: '/e-commerce', label: 'E-Commerce' },
+          { href: '/hospitality', label: 'Hospitality' },
+          { href: '/real-estate', label: 'Real Estate' },
+          { href: '/restaurants', label: 'Restaurants' },
+          { href: '/green-energy', label: 'Green Energy' },
+        ].map((item) => (
+          <li key={item.href}>
+            <Link href={item.href}
+            className={`${
+              pathname === item.href
+                ? 'text-[#9A00FF]'
+                : 'hover:text-[#9A00FF]'
+            }`}
+            >           
+                {item.label}
+              
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
 
 
-          <div className="">
-  <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
-  <ul className="space-y-2">
-    {[
-      "Home",
-      "About",
-      "Contact",
-      "Blog",
-      "Pricing",
-      "Portfolio",
-      "Career",
-    ].map((item) => (
-      <li key={item}>
-        <Link
-          href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-          className="text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
-        >
-          {item}
-        </Link>
-      </li>
-    ))}
+    <div className="">
+      <h3 className="text-base md:text-lg font-semibold mb-4">Links</h3>
+      <ul className="space-y-2">
+        {[
+          "Home",
+          "About",
+          "Contact",
+          "Blog",
+          "Pricing",
+          "Portfolio",
+          "Career",
+        ].map((item) => (
+          <li key={item}>
+            <Link
+              href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              className={`text-xs md:text-sm transition-colors ${
+                pathname === (item === "Home" ? "/" : `/${item.toLowerCase()}`)
+                  ? "text-[#9A00FF]"
+                  : "hover:text-[#9A00FF]"
+              }`}
+            >
+              {item}
+            </Link>
+          </li>
+        ))}
 
-    {user ? (
-      <>
-        {user.role === "admin" && (
+        {user ? (
+          <>
+            {user.role === "admin" && (
+              <li>
+                <Link
+                  href="/admin"
+                  className={`flex items-center gap-2 text-xs md:text-sm transition-colors ${
+                    pathname === "/admin"
+                      ? "text-[#9A00FF]"
+                      : "hover:text-[#9A00FF]"
+                  }`}
+                >
+                  Admin
+                </Link>
+              </li>
+            )}
+            <li>
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
+              >
+                Logout
+              </button>
+            </li>
+          </>
+        ) : (
           <li>
             <Link
-              href="/admin"
-              className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
+              href="/login"
+              className={`flex items-center text-sm gap-2 transition-colors ${
+                pathname === "/login"
+                  ? "text-[#9A00FF]"
+                  : "hover:text-[#9A00FF]"
+              }`}
             >
               Admin
             </Link>
           </li>
         )}
-        <li>
-          <button
-            onClick={handleLogout}
-            className="flex items-center gap-2 text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
-          >
-            Logout
-          </button>
-        </li>
-      </>
-    ) : (
-      <li>
-        <Link
-          href="/login"
-          className="flex items-center text-sm gap-2 hover:text-[#9A00FF]"
-        >
-          Admin
-        </Link>
-      </li>
-    )}
-  </ul>
-</div>
+      </ul>
+    </div>
 
 
           <div>
@@ -367,12 +359,16 @@ const Footer: React.FC = () => {
                 },
               ].map((service) => (
                 <li key={service.name}>
-                  <Link
-                    href={service.link}
-                    className="text-xs md:text-sm hover:text-[#9A00FF] transition-colors"
-                  >
-                    {service.name}
-                  </Link>
+                  <Link href={service.link}
+            className={`${
+              pathname === service.link
+                ? 'text-[#9A00FF]'
+                : 'hover:text-[#9A00FF]'
+            }`}
+            >           
+                {service.name}
+              
+            </Link>
                 </li>
               ))}
             </ul>
@@ -432,10 +428,24 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center md:p-0 p-4 justify-around px-10 ">
-          <div className="flex gap-5">
-          <Link href="/terms-conditions" className="text-xs md:text-sm text-gray-400  hover:text-purple-600 cursor-pointer md:mt-3">Terms & Conditions</Link>
-          <Link href="/privacy-policy" className="text-xs md:text-sm text-gray-400  hover:text-purple-600 cursor-pointer md:mt-3">Privacy Policy</Link>
-          </div>
+        <div className="flex gap-5">
+      {[
+        { href: '/terms-conditions', label: 'Terms & Conditions' },
+        { href: '/privacy-policy', label: 'Privacy Policy' },
+      ].map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={`text-xs md:text-sm cursor-pointer md:mt-3 transition-colors ${
+            pathname === link.href
+              ? 'text-purple-600 '
+              : 'text-gray-400 hover:text-purple-600'
+          }`}
+        >
+          {link.label}
+        </Link>
+      ))}
+    </div>
           <p className="text-xs md:text-sm text-gray-400 mt-3 ">
             © 2025 <span className="text-[#9A00FF]">TechCreator</span>. All
             rights reserved.
