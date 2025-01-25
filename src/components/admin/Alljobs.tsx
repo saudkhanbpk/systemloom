@@ -127,19 +127,24 @@ const filteredJobs = allJobs?.filter(job =>
   return (
     <div className=" md:px-10 px-3">
       <div className="flex flex-wrap py-9 gap-5 lg:justify-start justify-center w-full">
-        {filteredJobs?.map((job) => (
-          <div key={job._id}>
-            <JobCard
-            jobId={job._id}
-              category={job.category}
-              title={job.title}
-              location={job.location}
-              type={job.employmentType}
-              company={job.company}
-              timeAgo={job.createdAt}
-            />
-          </div>
-        ))}
+        
+      {filteredJobs && filteredJobs.length > 0 ? (
+          filteredJobs.map((job) => (
+            <div key={job._id}>
+              <JobCard
+                jobId={job._id}
+                category={job.category}
+                title={job.title}
+                location={job.location}
+                type={job.employmentType}
+                company={job.company}
+                timeAgo={job.createdAt}
+              />
+            </div>
+          ))
+        ) : (
+          <p className="text-center text-gray-500 w-full">No job post available</p>
+        )}
       </div>
     </div>
   )

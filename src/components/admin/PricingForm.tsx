@@ -24,7 +24,7 @@ const PricingForm = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [data, setData] = useState<PricingItem[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  const [currentTime, setCurrentTime] = useState<string>(""); // State for real-time clock
+  const [currentTime, setCurrentTime] = useState<string>("");
 
   const itemsPerPage = 12;
 
@@ -73,13 +73,12 @@ const PricingForm = () => {
   };
 
   useEffect(() => {
-    // Function to update the current time every second
     const interval = setInterval(() => {
-      const time = new Date().toLocaleString(); // Get current date and time
+      const time = new Date().toLocaleString();
       setCurrentTime(time);
     }, 1000);
 
-    // Clear the interval on component unmount
+
     return () => clearInterval(interval);
   }, []);
 
@@ -105,8 +104,8 @@ const PricingForm = () => {
     }
   };
 
-  // Existing state and hooks remain the same
-  const modalRef = useRef<HTMLDivElement | null>(null); // Reference for the modal container
+ 
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   const openModal = (item: PricingItem) => {
     setSelectedItem(item);
@@ -159,6 +158,7 @@ const PricingForm = () => {
         <table className="min-w-full table-auto">
           <thead>
             <tr>
+            <th className="border p-2 text-center">No.</th>
               <th className="border p-2 text-left">Name</th>
               <th className="border p-2 text-left">Email</th>
               <th className="border p-2 text-left">Phone Number</th>
@@ -170,6 +170,9 @@ const PricingForm = () => {
           <tbody>
             {currentData.map((item, index) => (
               <tr key={index}>
+                <td className="border p-2 text-center">
+        {startIndex + index + 1} 
+      </td>
                 <td className="border p-2 text-nowrap">{item.name}</td>
                 <td className="border p-2 text-nowrap">{item.email}</td>
                 <td className="border p-2 text-nowrap">{item.phoneNumber}</td>
@@ -217,10 +220,10 @@ const PricingForm = () => {
               </tr>
             ))}
           </tbody>
-          <tfoot className="bg-gray-100">
+          <tfoot className="bg-gray-100 w-full">
   <tr>
-    <td colSpan={6} className="py-2 px-4">
-      <div className="flex justify-between items-center">
+    <td colSpan={7} className="py-2 px-4 ">
+      <div className="flex justify-between items-center ">
         <button
           onClick={handlePrevious}
           disabled={currentPage === 1}
@@ -252,7 +255,7 @@ const PricingForm = () => {
       {showModal && selectedItem && (
         <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center">
           <div
-            ref={modalRef} // Attach ref to the modal container
+            ref={modalRef} 
             className="bg-white  w-1/3"
           >
             <h2 className="text-2xl font-bold mb-4 text-center bg-[#9A00FF] text-white p-7">

@@ -37,10 +37,8 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const applicantsPerPage = 12;
 
-  // Calculate total pages
   const totalPages = Math.ceil(users.length / applicantsPerPage);
 
-  // Get current page applicants
   const indexOfLastApplicant = currentPage * applicantsPerPage;
   const indexOfFirstApplicant = indexOfLastApplicant - applicantsPerPage;
   const currentApplicants = users.slice(
@@ -85,7 +83,6 @@ const ApplicantsTable: React.FC<UserTableProps> = ({ users }) => {
     }
   };
 
-  // Close modal if clicked outside of it
   const handleOutsideClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       handleCloseModal();

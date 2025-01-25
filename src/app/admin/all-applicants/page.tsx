@@ -1,5 +1,4 @@
 "use client";
-
 import ApplicantsTable from "@/components/admin/ApplicantsTable";
 import AdminLayout from "@/components/shared/AdminLayout";
 import useGetAllApplicants from "@/hooks/useGetAllApplicants";
@@ -8,9 +7,6 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
-
-
-
 
 const ApplicantsPage = () => { 
   useGetAllApplicants();
@@ -27,7 +23,6 @@ const ApplicantsPage = () => {
     <AdminLayout>
       <div className="container mx-auto p-4 mt-20">
 
-        {/* Search Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-4">
   <h1 className="text-2xl font-bold mb-4 md:mb-0">Applicant List</h1>
 
@@ -43,8 +38,6 @@ const ApplicantsPage = () => {
   </div>
 </div>
 
-
-        {/* Applicants Table */}
         <ApplicantsTable users={filteredApplicants} />
       </div>
     </AdminLayout>

@@ -1,14 +1,13 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { FaSearch, FaTrash } from "react-icons/fa";
-import ProtectedRoute from '@/components/auth/ProtectedRoute';
-import AdminLayout from '@/components/shared/AdminLayout';
-import axios from 'axios';
-import { backend_url } from '@/newLayout';
-import { toast } from 'react-toastify';
-import Link from 'next/link';
+import ProtectedRoute from "@/components/auth/ProtectedRoute";
+import AdminLayout from "@/components/shared/AdminLayout";
+import axios from "axios";
+import { backend_url } from "@/newLayout";
+import { toast } from "react-toastify";
+import Link from "next/link";
 
-// Type definition for Resume data
 interface Resume {
   _id: string;
   name: string;
@@ -24,10 +23,9 @@ interface Resume {
 const Page = () => {
   const rowsPerPage = 12;
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [searchTerm, setSearchTerm] = useState<string>("");
   const [resumes, setResumes] = useState<Resume[]>([]);
 
-  // Fetch resumes from API
   useEffect(() => {
     const fetchResumes = async () => {
       try {
@@ -36,27 +34,25 @@ const Page = () => {
           setResumes(res.data.resumes);
         }
       } catch (error) {
-        console.error('Error fetching resumes:', error);
+        console.error("Error fetching resumes:", error);
       }
     };
 
-    fetchResumes(); // Call the function to fetch data when the component mounts
+    fetchResumes();
   }, []);
 
-  // Filtering resumes based on search term
   const filteredData = resumes.filter((item) => {
-    const searchTermLower = searchTerm.toLowerCase(); // Convert searchTerm to lowercase once
+    const searchTermLower = searchTerm.toLowerCase();
     return (
-      (item.name?.toLowerCase() || '').includes(searchTermLower) ||
-      (item.email?.toLowerCase() || '').includes(searchTermLower) ||
-      (item.phoneNumber?.toLowerCase() || '').includes(searchTermLower) ||
-      (item.location?.toLowerCase() || '').includes(searchTermLower) ||
-      (item.jobField?.toLowerCase() || '').includes(searchTermLower) ||
-      (item.professionalUrl?.toLowerCase() || '').includes(searchTermLower) ||
-      (item.originalFileName?.toLowerCase() || '').includes(searchTermLower)
+      (item.name?.toLowerCase() || "").includes(searchTermLower) ||
+      (item.email?.toLowerCase() || "").includes(searchTermLower) ||
+      (item.phoneNumber?.toLowerCase() || "").includes(searchTermLower) ||
+      (item.location?.toLowerCase() || "").includes(searchTermLower) ||
+      (item.jobField?.toLowerCase() || "").includes(searchTermLower) ||
+      (item.professionalUrl?.toLowerCase() || "").includes(searchTermLower) ||
+      (item.originalFileName?.toLowerCase() || "").includes(searchTermLower)
     );
   });
-  
 
   // Pagination logic
   const totalPages = Math.ceil(filteredData.length / rowsPerPage);
@@ -65,7 +61,9 @@ const Page = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      const res = await axios.delete(`${backend_url}/api/v1/resume/delete/${id}`);
+      const res = await axios.delete(
+        `${backend_url}/api/v1/resume/delete/${id}`
+      );
       if (res.data.success) {
         toast.success(res.data.message);
         setResumes(resumes.filter((resume) => resume._id !== id));
@@ -75,7 +73,6 @@ const Page = () => {
       toast.error(error?.response?.data?.message);
     }
   };
-
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -113,7 +110,7 @@ const Page = () => {
             <table className="min-w-full table-auto border-collapse border border-gray-300">
               <thead>
                 <tr>
-                <th className="border p-2 text-center">No.</th>
+                  <th className="border p-2 text-center">No.</th>
                   <th className="border p-2 text-left">Name</th>
                   <th className="border p-2 text-left">Email</th>
                   <th className="border p-2 text-left">Phone</th>
@@ -128,25 +125,32 @@ const Page = () => {
                 {currentData.map((row, index) => (
                   <tr key={row._id}>
                     <td className="border p-2 text-center">
-        {startIndex + index + 1} {/* Calculate the serial number based on pagination */}
-      </td>
+                      {startIndex + index + 1}
+                    </td>
                     <td className="border p-2 text-nowrap">{row.name}</td>
                     <td className="border p-2 text-nowrap">{row.email}</td>
-                    <td className="border p-2 text-nowrap">{row.phoneNumber}</td>
+                    <td className="border p-2 text-nowrap">
+                      {row.phoneNumber}
+                    </td>
                     <td className="border p-2 text-nowrap">{row.location}</td>
                     <td className="border p-2 text-nowrap">{row.jobField}</td>
                     <td className="border p-2">
-  <Link 
-    href={row.professionalUrl} 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="text-blue-500 hover:underline"
-  >
-    {row.professionalUrl}
-  </Link>
-</td>
+                      <Link
+                        href={row.professionalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:underline"
+                      >
+                        {row.professionalUrl}
+                      </Link>
+                    </td>
                     <td className="border p-2 text-nowrap">
-                      <a href={row.resume} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                      <a
+                        href={row.resume}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:underline"
+                      >
                         {row.originalFileName}
                       </a>
                     </td>
@@ -160,40 +164,40 @@ const Page = () => {
               </tbody>
 
               <tfoot className="bg-gray-100 w-full">
-  <tr>
-    <td colSpan={8} className="py-2 px-4">
-      <div className="flex justify-between items-center">
-        <button
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
-          className={`px-4 py-2 rounded ${
-            currentPage === 1 ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"
-          }`}
-        >
-          Previous
-        </button>
-        <span className="text-gray-700">
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          onClick={handleNextPage}
-          disabled={currentPage === totalPages}
-          className={`px-4 py-2 rounded ${
-            currentPage === totalPages ? "bg-gray-200 text-gray-500" : "bg-purple-600 text-white"
-          }`}
-        >
-          Next
-        </button>
-      </div>
-    </td>
-  </tr>
-</tfoot>
-
+                <tr>
+                  <td colSpan={8} className="py-2 px-4">
+                    <div className="flex justify-between items-center">
+                      <button
+                        onClick={handlePrevPage}
+                        disabled={currentPage === 1}
+                        className={`px-4 py-2 rounded ${
+                          currentPage === 1
+                            ? "bg-gray-200 text-gray-500"
+                            : "bg-purple-600 text-white"
+                        }`}
+                      >
+                        Previous
+                      </button>
+                      <span className="text-gray-700">
+                        Page {currentPage} of {totalPages}
+                      </span>
+                      <button
+                        onClick={handleNextPage}
+                        disabled={currentPage === totalPages}
+                        className={`px-4 py-2 rounded ${
+                          currentPage === totalPages
+                            ? "bg-gray-200 text-gray-500"
+                            : "bg-purple-600 text-white"
+                        }`}
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
             </table>
           </div>
-
-         
-
         </div>
       </AdminLayout>
     </ProtectedRoute>
