@@ -12,6 +12,7 @@ interface Blog {
 }
 
 const Blog: React.FC = () => {  
+  
   return (
     <>
         <BlogHeroSection />

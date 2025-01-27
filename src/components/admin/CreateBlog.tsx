@@ -12,16 +12,15 @@ const CreateBlogForm = () => {
   const slug = searchParams.get("slug");
   const router = useRouter();
 
- 
-
   const generateSlug = (title: string): string => {
     return title
       .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
   };
-  
+
   const [isEditMode, setIsEditMode] = useState(false);
+  const [loading, setLoading] = useState(false); 
   const [formData, setFormData] = useState({
     storyContent: "",
     altDescription: "",
@@ -85,64 +84,65 @@ const CreateBlogForm = () => {
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const title = e.target.value;
-    const slug = generateSlug(title); 
+    const slug = generateSlug(title);
     setFormData((prevData) => ({
       ...prevData,
       title,
-      slug, 
+      slug,
     }));
   };
-  
-  
+
   useEffect(() => {
     if (slug) {
       setIsEditMode(true);
       const fetchBlogData = async () => {
+        setLoading(true); 
         try {
           const res = await axios.get(`${backend_url}/api/v1/blogs/get/${slug}`);
           if (res.data.success) {
             setFormData({
               storyContent: res.data.blog.content,
-              altDescription: res.data.blog.image.altDescription, 
+              altDescription: res.data.blog.image.altDescription,
               title: res.data.blog.title,
               slug: res.data.blog.slug,
               description: res.data.blog.description,
               tags: res.data.blog.tags,
               tagInput: "",
-              image: null, 
-              imagePreview: res.data.blog.image.imageUrl || null, 
+              image: null,
+              imagePreview: res.data.blog.image.imageUrl || null,
             });
           }
         } catch (error) {
           console.error(error);
           toast.error("Failed to load blog data");
+        } finally {
+          setLoading(false);
         }
       };
       fetchBlogData();
-    }else {
+    } else {
       setIsEditMode(false);
     }
   }, [slug]);
-  
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
-    const { storyContent, altDescription, tags, description, title, slug, image } = formData; 
-  
+
+    const { storyContent, altDescription, tags, description, title, slug, image } = formData;
+
     const formDataToSubmit = new FormData();
     formDataToSubmit.append("content", storyContent);
     formDataToSubmit.append("altDescription", altDescription);
     formDataToSubmit.append("tags", JSON.stringify(tags));
     formDataToSubmit.append("description", description);
     formDataToSubmit.append("title", title);
-    formDataToSubmit.append("slug", slug); 
-  
-    
+    formDataToSubmit.append("slug", slug);
+
     if (image) {
       formDataToSubmit.append("image", image);
     }
-  
+
+    setLoading(true); // Set loading to true when submitting data
     try {
       let res;
       if (isEditMode) {
@@ -160,18 +160,24 @@ const CreateBlogForm = () => {
           toast.success(res.data.message);
         }
       }
-  
+
       router.push("/admin/all-blogs");
     } catch (error: any) {
       console.error(error);
       toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoading(false); 
     }
   };
-  
 
   return (
     <div className="max-w-5xl mx-auto bg-white p-6 rounded-lg mt-20 shadow-md">
       <form onSubmit={handleSubmit}>
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-50 bg-opacity-50 z-10">
+            <div className="spinner-border animate-spin border-t-4 border-blue-500 rounded-full w-12 h-12"></div>
+          </div>
+        )}
         <div className="border-dashed border-2 border-gray-300 p-6 text-center rounded-lg mb-6">
           <label htmlFor="imageUpload">
             <i className="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
@@ -216,7 +222,6 @@ const CreateBlogForm = () => {
             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={formData.title}
             onChange={handleTitleChange}
-            // onChange={(e) => setFormData((prevData) => ({ ...prevData, title: e.target.value }))}
           />
         </div>
 
@@ -268,7 +273,7 @@ const CreateBlogForm = () => {
         {/* Tags Section */}
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Tags</label>
-          <div className="flex  flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {formData.tags.map((tag, index) => (
               <span
                 key={index}
@@ -282,33 +287,40 @@ const CreateBlogForm = () => {
               </span>
             ))}
             <div className="relative w-full">
-  <input
-    type="text"
-    placeholder="Add tags"
-    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10" // Add padding-right to make space for the icon
-    value={formData.tagInput}
-    onChange={handleTagInputChange}
-    onKeyDown={handleKeyPress}
-  />
-  <IoIosAddCircle
-  size={32}
-    onClick={handleTagAdd}
-    className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-purple-600"
-  />
-</div>
-
+              <input
+                type="text"
+                placeholder="Add tags"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10"
+                value={formData.tagInput}
+                onChange={handleTagInputChange}
+                onKeyDown={handleKeyPress}
+              />
+              <IoIosAddCircle
+                size={32}
+                onClick={handleTagAdd}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-purple-600"
+              />
+            </div>
           </div>
         </div>
 
         {/* Submit Button */}
         <div className="mb-4 text-center">
-          <button
-            type="submit"
-            className="bg-purple-600 text-white py-2 px-6 rounded-lg hover:bg-purple-700 focus:outline-none"
-          >
-            {slug ? "Update Blog" : "Create Blog"}
-          </button>
-        </div>
+  <button
+    type="submit"
+    className="bg-purple-600 text-white py-2 px-6 rounded-lg hover:bg-purple-700 focus:outline-none relative"
+    disabled={loading}
+  >
+    {loading ? (
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="spinner-border animate-spin border-t-4 border-white rounded-full w-6 h-6"></div>
+      </div>
+    ) : (
+      <span>{slug ? "Update Blog" : "Create Blog"}</span>
+    )}
+  </button>
+</div>
+
       </form>
     </div>
   );

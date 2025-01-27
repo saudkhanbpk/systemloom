@@ -91,7 +91,7 @@ const DigitalMarketing = () => {
                 Social Media Marketing: Your Audience, Engaged
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Our personalized approach to social media marketing helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on Instagram, Facebook, and beyond to captivate and grow your audience.We promote your business digitally through engaging posts and targeted ads. We ensure your brand gets a spotlights online among your competitors. Our experts in marketing department analyze insights and adapt strategies which maximizes reach and hunt targeted audience which then turn into loyal customers.  
+                Our personalized approach to <Link href="https://www.linkedin.com/company/techcreator" className="text-blue-600 cursor-pointer">social media</Link> marketing  helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on <Link href="https://www.instagram.com/techcreatorco" className="text-blue-600 cursor-pointer">Instagram</Link>, <Link href="https://www.facebook.com/techcreatorfb" className="text-blue-600 cursor-pointer">Facebook</Link>, and beyond to captivate and grow your audience.We promote your business digitally through engaging posts and targeted ads. We ensure your brand gets a spotlights online among your competitors. Our experts in marketing department analyze insights and adapt strategies which maximizes reach and hunt targeted audience which then turn into loyal customers.  
                 </p>
               </div>
             </div>
@@ -119,7 +119,7 @@ const DigitalMarketing = () => {
 
             {/* Text */}
             <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Boost engagement with creative social media strategies and analytics.
+            Boost engagement with creative <Link href="https://www.linkedin.com/company/techcreator" className="text-blue-600 cursor-pointer">social media</Link> strategies and analytics.
             </p>
           </div>
 
@@ -162,7 +162,7 @@ const DigitalMarketing = () => {
               PPC Campaigns Designed for Maximum ROI
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-gray-700">
-              As specialists in PPC, we design campaigns that deliver high-impact results. Our team analyzes your business needs and targets the right audience with precision, ensuring your ads—whether Google or Meta Ads—generate maximum traffic and conversions.We go through a deep keyword research and competitor analysis to come up with the strategies that are data-driven and tailored to your goals. We thoroughly monitor and optimize your campaigns to ensure you stay ahead in a competitive market. 
+              As specialists in PPC, we design campaigns that deliver high-impact results. Our team analyzes your business needs and targets the right audience with precision, ensuring your ads—whether Google or Meta Ads—generate maximum traffic and conversions.We go through a deep keyword research and competitor analysis to come up with the strategies that are data-driven and tailored to your goals. We thoroughly monitor and <Link href="/services/seo-services-for-small-business" className="text-blue-600 cursor-pointer">optimize your campaigns</Link> to ensure you stay ahead in a competitive market. 
               </p>
             </div>
           </div>
@@ -207,7 +207,7 @@ const DigitalMarketing = () => {
               Strategic Branding For Your Business
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
-              Branding is more than a logo—it’s how the world perceives your business. Our experts take the time to understand your vision and values, delivering branding solutions that define your identity and leave a lasting impression on your audience.Every element of our strategy align with your business, whether it is visual aesthetics or messaging tone. We aim to connect you to your audience emotionally and your brand stand out by combining our creativity and our market research. Our strategies will make your brand trustworthy that inspires trust, loyalty and recognition across all touch points. 
+              Branding is more than <Link href="/services/affordable-graphic-design-services" className="text-blue-600 cursor-pointer">a logo</Link>—it’s how the world perceives your business. Our experts take the time to understand your vision and values, delivering branding solutions that define your identity and leave a lasting impression on your audience.Every element of our strategy align with your business, whether it is visual aesthetics or messaging tone. We aim to connect you to your audience emotionally and your brand stand out by combining our creativity and our market research. Our strategies will make your brand trustworthy that inspires trust, loyalty and recognition across all touch points. 
               </p>
             </div>
           </div>
@@ -223,7 +223,7 @@ const DigitalMarketing = () => {
               Proven Results Across Industries
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              With experience across multiple sectors, we bring personalized expertise to every project. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.Our diverse portfolio shows our excellence and the values we bring to industries such as technology, healthcare, real estate and e-commerce. Our past excellency push us to deliver more and come with the solutions for your business that not only exceed expectations but to bring dignity.
+              With experience across multiple sectors, we bring personalized expertise to <Link href="/services/project-management" className="text-blue-600 cursor-pointer">every project</Link>. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.Our diverse portfolio shows our excellence and the values we bring to industries such as technology, healthcare, real estate and e-commerce. Our past excellency push us to deliver more and come with the solutions for your business that not only exceed expectations but to bring dignity.
               </p>
             </div>
             {/* Image */}

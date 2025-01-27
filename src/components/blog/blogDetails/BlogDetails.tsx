@@ -33,7 +33,9 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
   const { slug } = params;
 
 
-  const post = (blogs as Post[]).find((p) => p.slug === slug);
+  // const post = (blogs as Post[]).find((p) => p.slug === slug);
+  const post = (blogs as unknown as Post[]).find((p) => p.slug === slug);
+
 
   if (!post) {
     return (

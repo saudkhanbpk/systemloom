@@ -53,7 +53,7 @@ const QATesting = () => {
           QA Testing Services
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          At TechCreator, Expert <strong>QA testing services</strong> ensure your software is flawless and reliable. From identifying bugs to improving functionality, we help businesses deliver top-quality applications that meet user expectations.
+          At TechCreator, Expert QA testing services ensure your software is flawless and reliable. From <Link href="/services/web-development" className="text-blue-600 cursor-pointer">identifying bugs</Link> to improving functionality, we help businesses deliver top-quality applications that meet user expectations.
           </p>
           <Buttons/>
           
@@ -91,7 +91,7 @@ const QATesting = () => {
                 Comprehensive Quality Assurance Testing
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Our quality assurance process covers every aspect of your software, from performance and usability to security. With meticulous testing techniques, we ensure that your applications function seamlessly across all platforms.Our work of nature is to identify potential issues at early stages. This helps us in reducing risks and ensure to provide easy to-go platform to users. Going through thorough testing in real-world scenarios to make sure your software is ready to make impact online, delivering high performance and seamless functionality.  
+                Our quality assurance process covers every aspect of your software, from performance and usability to security. With meticulous testing techniques, we ensure that your <Link href="/services/mobile-app-development-company" className="text-blue-600 cursor-pointer">applications function</Link> seamlessly across all platforms.Our work of nature is to identify potential issues at early stages. This helps us in reducing risks and ensure to provide easy to-go platform to users. Going through thorough testing in real-world scenarios to make sure your software is ready to make impact online, delivering high performance and seamless functionality.  
                 </p>
               </div>
             </div>
@@ -162,7 +162,7 @@ const QATesting = () => {
               Specialized For Diverse Industries
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              No matter your industry, TechCreator offers tailored QA solutions. From e-commerce to healthcare and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance.
+              No matter your industry, <Link href="/" className="text-blue-600 cursor-pointer">TechCreator</Link> offers tailored QA solutions. From <Link href="/e-commerce" className="text-blue-600 cursor-pointer">e-commerce</Link> to <Link href="/healthcare" className="text-blue-600 cursor-pointer">healthcare</Link> and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance.
               We have councilors to understand the unique requirements of each industry and make sure our testing methods align with your business end goals. Whether it's compliance for healthcare or scalability for e-commerce, we ensure your software meets the expectations you desire and get you to your targeted audience and results that support your business growth.  
               </p>
             </div>
@@ -179,7 +179,7 @@ const QATesting = () => {
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
               Our Agile QA approach integrates testing throughout the development cycle. By detecting and resolving issues early, we help you speed up delivery timelines without compromising on quality or user experience.
-              This continuous feedbacks loop makes sure that we are aware of the vulnerabilities of the system and allow us for faster and on time development. With the help our experienced and hardworking team we assist you in launching your product faster and ensure reliability.
+              This continuous feedbacks loop makes sure that we are aware of the vulnerabilities of the system and allow us for faster and on <Link href="/services/project-management" className="text-blue-600 cursor-pointer">time development</Link>. With the help our experienced and hardworking team we assist you in launching your product faster and ensure reliability.
               </p>
             </div>
             <Image
@@ -225,7 +225,7 @@ const QATesting = () => {
               Recent Work: Delivering Quality You Can Trust
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              In a recent project, our QA testing services helped a SaaS company improve their application’s stability by 40%. Our comprehensive testing approach enabled the client to deliver a seamless user experience and gain higher customer satisfaction.We already have worked with e-commerce platforms when shopping online was at its peak. We enhanced their website’s load performance along with zero downtime. This level of dedication of our team has consistently helped business to build trust and do great in competitive markets. 
+              In a recent project, our QA testing services helped a <Link href="https://patronworks.com" className="text-blue-600 cursor-pointer">SaaS company</Link> improve their application’s stability by 40%. Our comprehensive testing approach enabled the client to deliver a seamless user experience and gain higher customer satisfaction.We already have worked with e-commerce platforms when shopping online was at its peak. We enhanced their website’s load performance along with zero downtime. This level of dedication of our team has consistently helped business to build trust and do great in competitive markets. 
               </p>
             </div>
             {/* Image */}

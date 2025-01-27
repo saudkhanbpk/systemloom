@@ -53,7 +53,7 @@ const GraphicDesign = () => {
           Unique Styles for Your Business
           </h1>
           <p className="text-base lg:text-lg mt-3">
-          TechCreator is your go-to agency for graphic design, offering creative solutions that bring your ideas to life. From logos to marketing materials, our designs are crafted to communicate your brand's message effectively and captivate your audience.
+          TechCreator is your go-to agency for graphic design, offering creative solutions that bring your ideas to life. From logos to <Link href="/services/digital-marketing-for-software-companies" className="text-blue-600 cursor-pointer"> marketing materials</Link>, our designs are crafted to communicate your brand's message effectively and captivate your audience.
           </p>
           <Buttons/>
           
@@ -162,7 +162,7 @@ const GraphicDesign = () => {
               Agency for Graphic Design Tailored to Your Brand
               </h2>
               <p className="text-base md:text-base  lg:text-lg text-gray-700">
-              At TechCreator, we understand the importance of design diversity. Our expertise spans various graphic design styles, ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.We work closely and understand the needs of your business and then translating them into audience-oriented designs. We deal in different categories such as digital assets, print materials or full brand overhauls. Our designs will always resonate with your target market. 
+              At <Link href="/" className="text-blue-600 cursor-pointer">TechCreator</Link>, we understand the importance of design diversity. Our expertise spans various graphic design styles, ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.We work closely and understand the needs of your business and then translating them into audience-oriented designs. We deal in different categories such as digital assets, print materials or full brand overhauls. Our designs will always resonate with your target market. 
               </p>
             </div>
           </div>
@@ -177,7 +177,7 @@ const GraphicDesign = () => {
               Custom Designs for Every Need
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
-              We offer a wide range of services, including branding, infographics, and digital marketing assets. With our agency for graphic design, you’ll receive personalized solutions designed to stand out in today’s competitive market.Our team of experts make sure that every element in design reflect your unique identity of your brand. Along with attention-grabbing logos to engaging social media visuals we guarantee designs that not only look great but also driven results and elevate your brand’s online presence. 
+              We offer a wide range of services, including branding, infographics, and <Link href="/services/digital-marketing-for-software-companies" className="text-blue-600 cursor-pointer"> digital marketing assets</Link>. With our agency for graphic design, you’ll receive personalized solutions designed to stand out in today’s competitive market.Our team of experts make sure that every element in design reflect your unique identity of your brand. Along with attention-grabbing logos to engaging social media visuals we guarantee designs that not only look great but also driven results and elevate your <Link href="/services/seo-services-for-small-business" className="text-blue-600 cursor-pointer">brand’s online presence</Link>. 
               </p>
             </div>
             <Image
@@ -222,7 +222,7 @@ const GraphicDesign = () => {
               Recent Work: Redefining Mobile Solutions
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              Our recent projects include branding for a healthcare startup and social media graphics for a retail business. As one of the top graphic design companies, we’ve helped clients amplify their brand presence and achieve measurable success with unique graphic design styles.Our designs have already helped our clients engage their audiences and communicate their business purpose online effectively. From eye-catching logos to impactful visuals, our designs have improved businesses and they are still on their way to achieve new heights. 
+              Our recent projects include branding for a <Link href="/healthcare" className="underline cursor-pointer"> healthcare startup</Link> and social media graphics for a retail business. As one of the top graphic design companies, we’ve helped clients amplify their brand presence and achieve measurable success with unique graphic design styles.Our designs have already helped our clients engage their audiences and communicate their business purpose online effectively. From eye-catching logos to impactful visuals, our designs have improved businesses and they are still on their way to achieve new heights. 
               </p>
             </div>
             {/* Image */}

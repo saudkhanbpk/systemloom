@@ -6,6 +6,7 @@ const getAllPostTitles = async () => {
       "https://techcreator-backend.onrender.com/api/v1/blogs/all",
       {}
     );
+    console.log("response blog", response)
     return response.data.blogs.map((post) => ({
       title: post.title
         ? post.title
