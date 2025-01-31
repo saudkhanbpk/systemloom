@@ -291,6 +291,6 @@ export const metadata = {
   description:
     "TechCreator offers expert software maintenance services, including construction equipment maintenance software and support. Ensure seamless performance with our maintenance solutions.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/software-maintenance",
+    canonical: "https://www.techcreator.co/services/software-maintenance-services",
   },
 };

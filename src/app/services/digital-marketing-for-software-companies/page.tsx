@@ -292,6 +292,6 @@ export const metadata = {
   description:
     "TechCreator offers expert digital marketing services, including social media marketing, branding, and PPC campaigns. Experience personalized solutions for measurable results.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/digital-marketing",
+    canonical: "https://www.techcreator.co/services/digital-marketing-for-software-companies",
   },
 };

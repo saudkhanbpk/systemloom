@@ -291,6 +291,6 @@ export const metadata = {
   description:
     "TechCreator offers expert SEO content writing services and SEO consulting services. Partner with a leading technical SEO agency to boost visibility with a tailored SEO content strategy.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/seo-content-writing",
+    canonical: "https://www.techcreator.co/services/seo-services-for-small-business",
   },
 };

@@ -293,6 +293,6 @@ export const metadata = {
   description:
     "TechCreator offers professional QA testing services to ensure software quality. Enhance reliability with tailored quality assurance testing for seamless performance.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/qa-testing",
+    canonical: "https://www.techcreator.co/services/web-qa-tester",
   },
 };

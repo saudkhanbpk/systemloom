@@ -292,6 +292,6 @@ export const metadata = {
   description:
     "Expert UI/UX design services at TechCreator. As a top UI/UX design agency, we specialize in mobile & Desktop UI/UX design and creating user-centric digital experiences.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/ui-ux-design",
+    canonical: "https://www.techcreator.co/services/ui-ux-design-agency",
   },
 };

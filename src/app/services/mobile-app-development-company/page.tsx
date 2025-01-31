@@ -315,6 +315,6 @@ export const metadata = {
   description:
     "Explore expert mobile app design and development services at TechCreator. Specializing in Flutter, cross-platform, healthcare, and enterprise app solutions tailored to meet your business needs.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/app-development",
+    canonical: "https://www.techcreator.co/services/mobile-app-development-company",
   },
 };

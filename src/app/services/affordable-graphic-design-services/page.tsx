@@ -289,6 +289,6 @@ export const metadata = {
   description:
     "TechCreator is a top agency for graphic design offering diverse graphic design styles. Partner with one of the leading graphic design companies to elevate your brand.",
   alternates: {
-    canonical: "https://www.techcreator.co/services/digital-marketing",
+    canonical: "https://www.techcreator.co/services/affordable-graphic-design-services",
   },
 };
