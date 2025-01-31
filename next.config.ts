@@ -57,17 +57,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/blog/blogDetail/best-practices-for-seo-in-2024:-boost-your-rankings-like-a-pro",
-        destination: "/",
-        permanent: true, 
-      },
-      {
-        source: "/blog/blogDetail/mastering-remote-collaboration-with-async-video-tools",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/blog/blogDetail/exploring-the-impact-of-asynchronous-communication-on-productivity",
+        source: "/blog/blogDetail/:slug*",
         destination: "/",
         permanent: true,
       },
