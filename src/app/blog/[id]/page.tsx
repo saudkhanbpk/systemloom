@@ -11,7 +11,7 @@ interface PageProps {
 // Fetch blog data
 async function getBlogById(slug: string): Promise<{ title: string; description: string }> {
   try {
-    const response = await axios.get(`http://localhost:8000/api/v1/blogs/get/${slug}`);
+    const response = await axios.get(`https://techcreator-backend.onrender.com/api/v1/blogs/get/${slug}`);
     return response.data.blog || { title: "Blog Not Found", description: "No description available." };
   } catch (error) {
     console.error("Error fetching blog data:", error);
