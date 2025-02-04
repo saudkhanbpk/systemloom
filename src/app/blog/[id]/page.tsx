@@ -1,28 +1,49 @@
-"use client";
-import React from 'react';
-import { useParams } from 'next/navigation';
-import BlogHeroDetail from '@/components/blog/blogDetails/BlogHeroDetail';
-import BlogDetails from '@/components/blog/blogDetails/BlogDetails';
+import { Metadata } from "next";
+import BlogHeroDetail from "@/components/blog/blogDetails/BlogHeroDetail";
+import BlogDetails from "@/components/blog/blogDetails/BlogDetails";
+import axios from "axios";
 
 
-const DetailPost: React.FC = () => {
-  const params = useParams();
-  const { id } = params as { id: string | string[] }; 
+interface PageProps {
+  params: { id: string }; 
+}
 
-  // Ensure `id` is always a string
-  const postId = Array.isArray(id) ? id[0] : id;
+// Fetch blog data
+async function getBlogById(slug: string): Promise<{ title: string; description: string }> {
+  try {
+    const response = await axios.get(`http://localhost:8000/api/v1/blogs/get/${slug}`);
+    return response.data.blog || { title: "Blog Not Found", description: "No description available." };
+  } catch (error) {
+    console.error("Error fetching blog data:", error);
+    return { title: "Blog Not Found", description: "No description available." };
+  }
+}
 
-  if (!postId) {
-    return <div>Blog not available at this time. Please check back later.</div>; 
+
+export default function DetailPost({ params }: PageProps) {
+  if (!params?.id) {
+    return <div>Blog not available at this time. Please check back later.</div>;
   }
 
   return (
     <>
-      <BlogHeroDetail/>
-<BlogDetails params={{ slug: postId }} />
+      <BlogHeroDetail />
+      <BlogDetails params={{ slug: params.id }} />
     </>
-    
   );
-};
+}
 
-export default DetailPost;
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const slug = params.id; 
+
+  const blog = await getBlogById(slug); 
+
+  return {
+    title: blog?.title || "Blog Not Found", 
+    description: blog?.description || "No description available.", 
+    alternates: {
+      canonical: `https://www.techcreator.co/blog/${slug}`, 
+    },
+  };
+}
