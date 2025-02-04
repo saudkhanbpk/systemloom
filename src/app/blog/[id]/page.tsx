@@ -3,11 +3,11 @@ import BlogHeroDetail from "@/components/blog/blogDetails/BlogHeroDetail";
 import BlogDetails from "@/components/blog/blogDetails/BlogDetails";
 import axios from "axios";
 
-interface PageProps {
+type PageProps = {
   params: {
     id: string;
   };
-}
+};
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const slug = params.id;
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 async function getBlogById(slug: string) {
   try {
-    const response = await axios.get(`https://techcreator-backend.onrender.com/api/v1/blogs/get/${slug}`);  
+    const response = await axios.get(`http://localhost:8000/api/v1/blogs/get/${slug}`);  
     return response.data.blog;  
   } catch (error) {
     console.error("Error fetching blog data:", error);
