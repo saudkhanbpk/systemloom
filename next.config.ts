@@ -61,6 +61,23 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+
+      {
+        source: "/services/mobile-app-development",
+        destination: "/services/mobile-app-development-company",
+        permanent: true,
+      },
+
+      {
+        source: "/blog/how-is-saas-software-distributed-most-powerful-channels-in-2024",
+        destination: "/blog/how-is-saas-software-distributed-most-powerful-channels",
+        permanent: true,
+      },
+      {
+        source: "/blog/top-software-development-trends-in-2025",
+        destination: "/blog/top-software-development-trends/",
+        permanent: true,
+      },
     ];
   },
 };
