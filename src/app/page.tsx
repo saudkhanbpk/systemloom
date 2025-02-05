@@ -48,7 +48,7 @@ export default function Page() {
 
       <HeroSection />
       <div className="max-w-full xl:px-16 md:px-8 px-2 ">
-        <AboutSection />
+        {/* <AboutSection /> */}
       </div>
       <div className="px-2 ">
         <ServicesSection />
