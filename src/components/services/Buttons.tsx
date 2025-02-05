@@ -23,45 +23,57 @@ const Buttons = () => {
     router.push("/contact");
   };
 
-  return (
-    <div className='flex gap-4 mt-6 md:px-0 px-3 mb-4 justify-center sm:justify-start'>
-      <motion.button 
-        whileHover={{ scale: 1.1, backgroundColor: "#7E22CE" }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className='bg-purple-700 p-2 rounded-full text-white'
-        onClick={handleStrategyClick}
-        aria-label="Schedule a strategy call"
-      >
-        <AiOutlineCalendar size={30} />
-      </motion.button>
-      
-      <motion.button 
-        whileHover={{ scale: 1.1, backgroundColor: "#10B981" }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className='bg-green-600 p-2 rounded-full text-white'
-        onClick={handleWhatsappClick}
-        aria-label="Contact us on WhatsApp"
-      >
-        <FaWhatsapp size={30} />
-      </motion.button>
+ // Slow bouncing animation
+ const slowBounce = (delayTime: number) => ({
+  initial: { y: 0 },
+  animate: { 
+    y: [0, -10, 0],  // Move up slowly, then down
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse" as const, // Smooth bounce
+      duration: 1.5,  // Slow animation (was 0.6s)
+      delay: delayTime
+    }
+  },
+  whileHover: { y: 0 } // Stop animation on hover
+});
 
-      <motion.button 
-        whileHover={{ scale: 1.1, backgroundColor: "#FF5722" }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className='bg-orange-500 p-2 rounded-full text-white'
-        onClick={handleContactClick}
-        aria-label="Go to contact page"
-      >
-        <AiOutlineMail size={30} />
-      </motion.button>
-    </div>
-  );
+return (
+  <div className='flex gap-4 mt-6 md:px-0 px-3 mb-4 justify-center sm:justify-start'>
+    {/* Strategy Button */}
+    <motion.button 
+      whileTap={{ scale: 0.95 }}
+      {...slowBounce(0)} // First button starts immediately
+      className='bg-purple-700 p-2 rounded-full text-white'
+      onClick={handleStrategyClick}
+      aria-label="Schedule a strategy call"
+    >
+      <AiOutlineCalendar size={30} />
+    </motion.button>
+    
+    {/* WhatsApp Button */}
+    <motion.button 
+      whileTap={{ scale: 0.95 }}
+      {...slowBounce(0.5)} // Delayed bounce
+      className='bg-green-600 p-2 rounded-full text-white'
+      onClick={handleWhatsappClick}
+      aria-label="Contact us on WhatsApp"
+    >
+      <FaWhatsapp size={30} />
+    </motion.button>
+
+    {/* Contact Button */}
+    <motion.button 
+      whileTap={{ scale: 0.95 }}
+      {...slowBounce(1)} // Even more delay
+      className='bg-orange-500 p-2 rounded-full text-white'
+      onClick={handleContactClick}
+      aria-label="Go to contact page"
+    >
+      <AiOutlineMail size={30} />
+    </motion.button>
+  </div>
+);
 };
 
 export default Buttons;
