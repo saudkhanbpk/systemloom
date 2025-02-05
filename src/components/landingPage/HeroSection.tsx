@@ -1,114 +1,168 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa"; // React Icons for Arrows
+
+// Video Sources
+const videoSources = [
+  {
+    src: "/assets/homepage/backgroundVideo01.webm",
+    title: "Innovate Your",
+    highlight: "Business",
+    subtitle:
+      "We're inspired by new technology and have dedicated our careers to exploring and harnessing it. We are in the business of solving problems. Entrepreneurs empower us to turn ideas into lightning-fast solutions that revolutionize industries.",
+  },
+  {
+    src: "/assets/homepage/backgroundVideo02.mp4",
+    title: "Grow Your",
+    highlight: "Startup",
+    subtitle: "Build, scale, and automate with smart AI-driven strategies.",
+  },
+  {
+    src: "/assets/homepage/backgroundVideo03.mp4",
+    title: "Empower Your",
+    highlight: "Company",
+    subtitle: "Utilizing automation to accelerate success and efficiency.",
+  },
+];
 
 function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(1); // 1 for next, -1 for previous
+
+  // Auto change video every 8 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 8000); // Change video every 8 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Handle Next
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % videoSources.length);
+  };
+
+  // Handle Previous
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? videoSources.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Animation Variants for Sliding Effect
+  const videoVariants = {
+    enter: (direction:any) => ({
+      x: direction === 1 ? "100%" : "-100%", 
+      opacity: 0,
+    }),
+    center: {
+      x: 0, // Move to center
+      opacity: 1,
+      transition: { duration: 1.2, ease: "easeInOut" },
+    },
+    exit: (direction:any) => ({
+      x: direction === 1 ? "-100%" : "100%", 
+      opacity: 0,
+      transition: { duration: 1.2, ease: "easeInOut" },
+    }),
+  };
+
   return (
-    <main className="relative bg-gray-900 text-white md:pt-5 pt-16">
-    {/* Video Background */}
-    <div className="absolute inset-0 overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata" 
-        className="object-cover w-full h-full opacity-25"
-      >
-        <source src="/assets/homepage/backgroundVideo01.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  
-    {/* Content */}
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-      className="relative max-w-[1440px] mx-auto md:px-4 sm:px-6 lg:px-8 px-2 py-16 md:pt-32"
-    >
+    <main className="relative flex items-center justify-center h-screen w-full">
+      {/* Video Background with Dark Overlay */}
+      <div className="absolute inset-0 overflow-hidden w-full h-full">
+        <AnimatePresence custom={direction} mode="wait">
+          <motion.video
+            key={videoSources[currentIndex].src}
+            src={videoSources[currentIndex].src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover"
+            variants={videoVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            custom={direction}
+          />
+        </AnimatePresence>
+
+        {/* Dark Overlay for Better Text Visibility */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+      </div>
+
+      {/* Content Centered */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.0, delay: 0.1, ease: "easeInOut" }}
-        className="text-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="relative z-10 text-center text-white px-6 sm:px-12"
       >
-        {/* Heading */}
+      
+
+        {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: "easeInOut" }}
-          className="font-semibold text-3xl md:text-[57px] leading-tight md:leading-[65px] mb-6 text-center"
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
+          className="text-3xl md:text-[57px] font-semibold leading-tight md:leading-[65px] mb-6"
         >
-          Develop your{" "}
+          {videoSources[currentIndex].title}{" "}
           <motion.span
             whileHover={{ scale: 1.1, color: "#C700FF" }}
             className="text-[#9A00FF]"
           >
-            Business
+            {videoSources[currentIndex].highlight}
           </motion.span>
-          <br className="hidden md:inline" />
-          <span> to Accelerate Growth</span>
         </motion.h1>
-  
-        {/* Subheading */}
-        <motion.p
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.0, delay: 0.2, ease: "easeInOut" }}
-          className="font-normal text-base md:text-xl max-w-lg md:max-w-3xl mx-auto mb-6 md:mb-10 leading-7 md:leading-9 text-gray-300"
+
+          {/* Subtitle */}
+          <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: "easeInOut" }}
+          className="text-lg md:text-xl max-w-3xl font-medium text-gray-300 mb-2"
         >
-          We're inspired by new technology and have dedicated our careers to
-          exploring and harnessing it. We are in the business of solving problems.
-          Entrepreneurs empower us to turn ideas into lightning-fast solutions that
-          revolutionize industries.
+          {videoSources[currentIndex].subtitle}
         </motion.p>
-  
+
         {/* Call-to-Action Button */}
         <Link href="/contact">
           <motion.button
             whileHover={{ scale: 1.1, backgroundColor: "#7E22CE" }}
             whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: "easeInOut" }}
-            style={{ background: "rgba(255, 255, 255, 0.24)" }}
-            className="text-white font-bold md:py-4 md:px-8 px-2 py-2 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_rgba(154,0,255,0.6)]"
+            className="text-white font-bold mt-6 py-3 px-6 rounded-full bg-purple-500 transition duration-300 ease-in-out shadow-lg"
           >
-            Automate your Business &nbsp;&nbsp;→
+            Automate your Business →
           </motion.button>
         </Link>
-  
-        {/* Animated Arrow */}
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{ y: [0, 15, 0] }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 2,
-          }}
-          className="mt-4"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="rgb(139, 92, 246)"
-            className="w-8 h-8 mx-auto"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 3v18m0 0l6-6m-6 6l-6-6"
-            />
-          </svg>
-        </motion.div>
       </motion.div>
-    </motion.div>
-  </main>
-  
+
+      {/* Arrows for Next/Previous (Centered) */}
+      <div className="absolute left-5 top-1/2 transform -translate-y-1/2">
+        <button
+          onClick={handlePrev}
+          className="text-white bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
+        >
+          <FaArrowLeft size={24} />
+        </button>
+      </div>
+
+      <div className="absolute right-5 top-1/2 transform -translate-y-1/2">
+        <button
+          onClick={handleNext}
+          className="text-white bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-700 transition"
+        >
+          <FaArrowRight size={24} />
+        </button>
+      </div>
+    </main>
   );
 }
 
