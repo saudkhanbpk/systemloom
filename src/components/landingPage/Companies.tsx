@@ -16,13 +16,21 @@ const Companies = () => {
   const companies = [company1, company2, company3, company4, company5, company6, company7];
 
   return (
-    <div className=" overflow-x-hidden   bg-[#9A00FF]">
-      <div className=" w-[90vw">
-        <div className="  flex py-4 ">
+    <div className="overflow-x-hidden -mt-12   p-4 border rounded-md relative z-[10] bg-white shadow-sm">  
+      {/* ⬆️ Added 'relative z-[50]' to force stacking */}
+      
+      <h2 className="text-center text-2xl font-bold text-purple-600 mt-3">
+        The world's leading brands are powered by TECHCREATOR
+      </h2>
+      
+      <div className="w-[90vw] relative z-[50]">  
+        {/* ⬆️ Ensuring child elements also have z-index */}
+        
+        <div className="flex py-12">
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
             className="flex flex-shrink-0"
           >
             {companies.map((company, index) => (
@@ -40,7 +48,7 @@ const Companies = () => {
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
             className="flex flex-shrink-0"
           >
             {companies.map((company, index) => (
@@ -61,6 +69,7 @@ const Companies = () => {
 };
 
 export default Companies;
+
 
 
 

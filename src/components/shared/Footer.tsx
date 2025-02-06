@@ -129,21 +129,6 @@ const Footer: React.FC = () => {
       <div className="relative mx-auto  px-3 mt-6">
         <div className="flex flex-wrap md:gap-10 gap-9 justify-between px-5">
           <div className=" ">
-            <div className="flex items-center gap-2">
-              <Image
-                src={TechcreatorLogo}
-                alt="logo"
-                width={158}
-                height={40}
-                className=""
-              />
-            </div>
-            <p className="max-w-sm md:max-w-md text-xs md:text-sm leading-5 w-[230px] md:leading-6 mt-5">
-              We have been providing quality services since 2001. We provide our
-              clients with complete end-to-end solutions, customized according
-              to their needs.
-            </p>
-            <div></div>
             <div className="flex gap-7 mt-4 md:mt-4">
               <a
                 href="https://www.facebook.com/techcreatorfb/"

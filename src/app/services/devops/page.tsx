@@ -15,6 +15,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const Devops = () => {
   const categorySlug = "app-development";
@@ -43,6 +45,16 @@ const Devops = () => {
       link: "/services/web-qa-tester",
     },
   ];
+
+
+  const devopsFaqs = [
+    { question: "What DevOps tools do you use?", answer: "🔹 We use Docker, Kubernetes, Jenkins, Terraform, AWS, and Azure DevOps." },
+    { question: "How does DevOps improve software development?", answer: "🔹 DevOps automates deployment, enhances security, and speeds up releases." },
+    { question: "Do you offer CI/CD pipeline setup?", answer: "🔹 Yes, we set up automated CI/CD pipelines for faster, error-free deployments." },
+    { question: "How do you ensure infrastructure security?", answer: "🔹 We use firewalls, encryption, and vulnerability scanning to protect your system." },
+    { question: "Can you migrate existing infrastructure to the cloud?", answer: "🔹 Absolutely! We handle AWS, Google Cloud, and Azure cloud migrations." },
+  ];
+
 
   return (
     <>
@@ -244,7 +256,10 @@ const Devops = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={devopsFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

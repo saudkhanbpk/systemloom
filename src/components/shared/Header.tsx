@@ -34,7 +34,7 @@ const Header: React.FC = () => {
   let timer: NodeJS.Timeout;
 
   const navItems = [
-    { name: "Home", href: "/", icon: <FaHome /> },
+    // { name: "Home", href: "/", icon: <FaHome /> },
     { name: "About Us", href: "/about", icon: <FaInfoCircle /> },
     {
       name: "Services",

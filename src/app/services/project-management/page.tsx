@@ -17,6 +17,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const projectManagement = () => {
   const categorySlug = "project-management";
@@ -43,6 +45,15 @@ const projectManagement = () => {
       icon: illustrationDesignImage,
       link: "/services/web-qa-tester",
     },
+  ];
+
+
+  const projectManagementFaqs = [
+    { question: "What project management methodologies do you follow?", answer: "🔹 We use Agile, Scrum, and Kanban for efficient project delivery." },
+    { question: "How do you track project progress?", answer: "🔹 We use tools like Jira, Trello, and Asana for real-time tracking." },
+    { question: "How do you handle delays and risks in projects?", answer: "🔹 We conduct risk assessments and set buffer timelines to handle challenges." },
+    { question: "Do you offer remote project management?", answer: "🔹 Yes! We manage projects remotely with effective communication tools." },
+    { question: "Can you help manage a large-scale IT project?", answer: "🔹 Yes, we specialize in enterprise-level project management and execution." },
   ];
 
   return (
@@ -247,7 +258,10 @@ const projectManagement = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+        <ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={projectManagementFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

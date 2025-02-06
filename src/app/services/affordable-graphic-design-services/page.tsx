@@ -15,6 +15,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const GraphicDesign = () => {
   const categorySlug = "affordable-graphic-design-services";
@@ -40,6 +42,14 @@ const GraphicDesign = () => {
       icon: motionDesignImage,
       link: "/services/seo-services-for-small-business",
     },
+  ];
+
+  const graphicDesigningFaqs = [
+    { question: "What graphic design services do you offer?", answer: "🔹 We create logos, branding, UI designs, illustrations, and social media graphics." },
+    { question: "Which design tools do you use?", answer: "🔹 We work with Adobe Photoshop, Illustrator, Figma, and Canva." },
+    { question: "How long does a graphic design project take?", answer: "🔹 Simple designs take 2-5 days, while branding projects take 1-4 weeks." },
+    { question: "Do you provide custom branding packages?", answer: "🔹 Yes! We offer logo, brand identity, and social media design." },
+    { question: "Can you create designs for both digital and print?", answer: "🔹 Absolutely! We design business cards, posters, and social media graphics." },
   ];
 
   return (
@@ -243,7 +253,10 @@ const GraphicDesign = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={graphicDesigningFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

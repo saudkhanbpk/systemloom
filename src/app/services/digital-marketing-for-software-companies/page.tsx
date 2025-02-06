@@ -15,6 +15,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const DigitalMarketing = () => {
   const categorySlug = "digital-marketing-for-software-companies";
@@ -40,6 +42,14 @@ const DigitalMarketing = () => {
       icon: webDesignImage,
       link: "/services/affordable-graphic-design-services",
     },
+  ];
+
+  const digitalMarketingFaqs = [
+    { question: "What services are included in digital marketing?", answer: "🔹 We offer social media marketing, PPC ads, email marketing, and SEO." },
+    { question: "Do you manage social media accounts?", answer: "🔹 Yes, we handle Facebook, Instagram, LinkedIn, and Twitter marketing." },
+    { question: "How do you track ad campaign performance?", answer: "🔹 We provide real-time analytics and conversion tracking." },
+    { question: "Can you run paid ad campaigns?", answer: "🔹 Yes! We manage Google Ads, Facebook Ads, and LinkedIn Ads." },
+    { question: "How long does it take to see digital marketing results?", answer: "🔹 Organic marketing takes 3-6 months, while paid ads show results instantly." },
   ];
 
   return (
@@ -244,7 +254,10 @@ const DigitalMarketing = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={digitalMarketingFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

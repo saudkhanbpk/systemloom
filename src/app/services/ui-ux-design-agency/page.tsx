@@ -15,6 +15,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const UIUXDesign = () => {
   const categorySlug = "ui-ux-design-agency";
@@ -41,6 +43,14 @@ const UIUXDesign = () => {
       link: "/services/affordable-graphic-design-services",
     },
     
+  ];
+
+  const uiuxdesignFaqs = [
+    { question: "What is included in your UI/UX design process?", answer: "🔹 We follow a structured approach: user research, wireframing, prototyping, and final design." },
+    { question: "Which tools do you use for UI/UX design?", answer: "🔹 We use Figma, Adobe XD, Sketch, and InVision to create stunning interfaces." },
+    { question: "How do you ensure a good user experience (UX)?", answer: "🔹 We conduct usability testing and feedback sessions to refine designs." },
+    { question: "Do you provide UI design for mobile apps?", answer: "🔹 Yes! We create pixel-perfect UI/UX for mobile, web, and SaaS platforms." },
+    { question: "How long does UI/UX design take?", answer: "🔹 A simple design takes 2-4 weeks, while complex interfaces may take 6-8 weeks." },
   ];
 
   return (
@@ -245,7 +255,10 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={uiuxdesignFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

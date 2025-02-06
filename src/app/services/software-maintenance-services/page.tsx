@@ -15,6 +15,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const SoftwareMaintenance = () => {
   const categorySlug = "software-maintenance-services";
@@ -41,6 +43,16 @@ const SoftwareMaintenance = () => {
       link: "/services/web-qa-tester",
     },
   ];
+
+
+  const softwaremaintenanceFaqs = [
+    { question: "What type of software maintenance do you provide?", answer: "🔹 We offer bug fixes, updates, performance optimization, and security patches." },
+    { question: "Can you maintain software built by another company?", answer: "🔹 Yes, we take over legacy software and improve its efficiency." },
+    { question: "How often should software be updated?", answer: "🔹 Regular updates every 3-6 months help improve security and speed." },
+    { question: "Do you provide 24/7 support for critical systems?", answer: "🔹 Yes, we offer emergency support for mission-critical applications." },
+    { question: "Can you migrate old software to new technologies?", answer: "🔹 Yes, we modernize outdated software into scalable, cloud-based solutions." },
+  ];
+
 
   return (
     <div>
@@ -244,7 +256,10 @@ const SoftwareMaintenance = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={softwaremaintenanceFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

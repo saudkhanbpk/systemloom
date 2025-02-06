@@ -15,6 +15,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const QATesting = () => {
   const categorySlug = "web-qa-tester";
@@ -40,6 +42,14 @@ const QATesting = () => {
       icon: motionDesignImage,
       link: "/services/software-maintenance-services",
     },
+  ];
+
+  const qatestingFaqs = [
+    { question: "What types of testing do you provide?", answer: "🔹 We offer manual testing, automation, performance, and security testing." },
+    { question: "Do you test mobile applications?", answer: "🔹 Yes, we test iOS, Android, and cross-platform apps for bugs and performance." },
+    { question: "Which automation testing tools do you use?", answer: "🔹 We use Selenium, Cypress, Jest, and JMeter for automation." },
+    { question: "How do you ensure software quality?", answer: "🔹 We follow test-driven development (TDD) and continuous testing." },
+    { question: "Can you perform security testing for web applications?", answer: "🔹 Yes, we conduct penetration testing and vulnerability assessments." },
   ];
 
   return (
@@ -246,7 +256,10 @@ const QATesting = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={qatestingFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

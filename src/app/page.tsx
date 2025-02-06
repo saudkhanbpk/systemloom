@@ -1,11 +1,17 @@
 import AboutSection from "@/components/landingPage/AboutSection";
+import Benefits from "@/components/landingPage/Benefits";
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 import Companies, { CTASection } from "@/components/landingPage/Companies";
+import GetQoute from "@/components/landingPage/GetQoute";
+import Slider from "@/components/landingPage/HeroSection";
 import HeroSection from "@/components/landingPage/HeroSection";
+import PlatformInfo from "@/components/landingPage/PlatformInfo";
 import Products from "@/components/landingPage/Products";
 import ProjectsCount from "@/components/landingPage/ProjectsCount";
 import ServicesSection from "@/components/landingPage/ServicesSection";
 import TeamScalingSection from "@/components/landingPage/TeamScalingSection";
+import Technologies from "@/components/landingPage/Technologies";
+
 
 export const metadata = {
   title: "Software Development and Digital Marketing Agency | TechCreator",
@@ -46,23 +52,34 @@ export default function Page() {
         }}
       />
 
-      <HeroSection />
-      <div className="max-w-full xl:px-16 md:px-8 px-2 ">
+      <Slider />
+      
+
+      <div className="max-w-7xl mx-auto xl:px-0 px-4 ">
         {/* <AboutSection /> */}
+      <Companies />
+
       </div>
-      <div className="px-2 ">
+      <div className=" max-w-7xl mx-auto  ">
         <ServicesSection />
       </div>
-      <div className="max-w-full xl:px-16 md:px-8 px-2 ">
-        <Products />
-        <TeamScalingSection />
-        <ClientTestimonialsSection />
+      <div className="max-w-7xl mx-auto px-4 ">
+        {/* <CTASection /> */}
+        <Technologies/>
+        
       </div>
       <ProjectsCount />
-      <Companies />
-      <div className="max-w-full xl:px-16 px-4 ">
-        <CTASection />
+      <div className="max-w-7xl mx-auto px-4 ">
+        <Products />
+        <Benefits/>
+        <PlatformInfo/>
+        {/* <TeamScalingSection /> */}
+        <ClientTestimonialsSection />
+        <GetQoute/>
+
       </div>
+      
+     
     </>
   );
 }

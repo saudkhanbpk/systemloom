@@ -16,6 +16,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const SeoContentWriting = () => {
   const categorySlug = "seo-services-for-small-business";
@@ -41,6 +43,14 @@ const SeoContentWriting = () => {
       icon: motionDesignImage,
       link: "/services/affordable-graphic-design-services",
     },
+  ];
+
+  const seoFaqs = [
+    { question: "What is included in your SEO services?", answer: "🔹 We offer keyword research, on-page SEO, backlinks, and content optimization." },
+    { question: "How long does it take to see SEO results?", answer: "🔹 SEO results typically take 3-6 months, depending on competition." },
+    { question: "Do you provide blog writing and content marketing?", answer: "🔹 Yes! We create SEO-friendly blogs, articles, and website content." },
+    { question: "Can SEO help my local business?", answer: "🔹 Yes, our Local SEO strategies improve Google rankings in your area." },
+    { question: "How do you track SEO performance?", answer: "🔹 We provide monthly reports and real-time analytics dashboards." },
   ];
 
   return (
@@ -244,7 +254,10 @@ const SeoContentWriting = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={seoFaqs} />
+</div>
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">

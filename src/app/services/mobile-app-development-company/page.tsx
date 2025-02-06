@@ -15,6 +15,8 @@ import motionDesignImage from "../../../../public/assets/relatedServices/Frame 7
 import Buttons from "@/components/services/Buttons";
 import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
+import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
+import FaqSection from "@/components/services/FaqSection";
 
 const MobileAppDevelopment = () => {
   const categorySlug = "mobile-app-development-company";
@@ -43,6 +45,16 @@ const MobileAppDevelopment = () => {
       link: "/services/affordable-graphic-design-services",
     },
   ];
+
+
+  const mobileAppsFaqs = [
+    { question: "Do you develop apps for both iOS and Android?", answer: "🔹 Yes! We build native (Swift, Kotlin) and cross-platform (React Native, Flutter) apps." },
+    { question: "How much does it cost to develop a mobile app?", answer: "🔹 Cost varies based on features, but basic apps start from $5,000+, while complex apps go higher." },
+    { question: "How long does mobile app development take?", answer: "🔹 Simple apps take 3-6 months, while complex apps may take 6-12 months." },
+    { question: "Do you provide post-launch support?", answer: "🔹 Yes, we offer app maintenance, updates, and bug fixes to ensure smooth performance." },
+    { question: "Can you integrate third-party APIs into my app?", answer: "🔹 Yes, we integrate payment gateways, social media logins, analytics, and more." },
+  ];
+
 
   return (
     <div>
@@ -270,6 +282,11 @@ const MobileAppDevelopment = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
+
+        <div>
+<ClientTestimonialsSection />
+<FaqSection title="Frequently Asked Questions" faqs={mobileAppsFaqs} />
+</div>
 
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
