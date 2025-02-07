@@ -33,9 +33,9 @@ const Products = () => {
   ];
 
   return (
-    <div className="md:py-16">
+    <div className="">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-purple-600">Our Products</h2>
+        <h2 className="md:text-4xl text-3xl font-bold text-purple-600">Our Products</h2>
       </div>
 
       {/* Dynamically map through the products */}

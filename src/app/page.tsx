@@ -1,10 +1,14 @@
+import OurTeam from "@/components/about/OurTeam";
 import AboutSection from "@/components/landingPage/AboutSection";
 import Benefits from "@/components/landingPage/Benefits";
+import ClientReviews from "@/components/landingPage/ClientReviews";
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 import Companies, { CTASection } from "@/components/landingPage/Companies";
 import GetQoute from "@/components/landingPage/GetQoute";
 import Slider from "@/components/landingPage/HeroSection";
 import HeroSection from "@/components/landingPage/HeroSection";
+import IndustriesSection from "@/components/landingPage/IndustriesSection";
+import OurValues from "@/components/landingPage/OurValues";
 import PlatformInfo from "@/components/landingPage/PlatformInfo";
 import Products from "@/components/landingPage/Products";
 import ProjectsCount from "@/components/landingPage/ProjectsCount";
@@ -52,34 +56,70 @@ export default function Page() {
         }}
       />
 
-      <Slider />
-      
+     {/* 🔥 Hero Section: First Impression with Slider */}
+     <Slider />
 
-      <div className="max-w-7xl mx-auto xl:px-0 px-4 ">
-        {/* <AboutSection /> */}
-      <Companies />
+{/* 🏢 Companies We Work With (Build Trust) */}
+<div className="max-w-7xl mx-auto  px-4 ">
+  <Companies />
+</div>
 
-      </div>
-      <div className=" max-w-7xl mx-auto  ">
-        <ServicesSection />
-      </div>
-      <div className="max-w-7xl mx-auto px-4 ">
-        {/* <CTASection /> */}
-        <Technologies/>
-        
-      </div>
-      <ProjectsCount />
-      <div className="max-w-7xl mx-auto px-4 ">
-        <Products />
-        <Benefits/>
-        <PlatformInfo/>
-        {/* <TeamScalingSection /> */}
-        <ClientTestimonialsSection />
-        <GetQoute/>
+{/* 🚀 Services: What We Offer */}
+<div className="max-w-7xl mx-auto px-4 mt-16">
+  <ServicesSection />
+</div>
 
-      </div>
-      
+{/* 💎 Technologies We Use (Credibility) */}
+<div className="max-w-7xl mx-auto px-4 mt-16">
+  <Technologies />
+</div>
+
+{/* 🔥 Our Values: Why Choose Us */}
+<div className="max-w-7xl mx-auto px-4 mt-16">
+  <OurValues />
+</div>
+
+{/* 📊 Project Count: Show Achievements */}
+<div className="max-w-7xl mx-auto px-4 mt-16 text-center">
+  <ProjectsCount />
+</div>
+
+{/* 🏆 Our Best Products (Showcase) */}
+<div className="max-w-7xl mx-auto px-4 mt-16">
+  <Products />
+</div>
+
+{/* 👨‍💼 Our Team: Meet the Experts */}
+<div className="max-w-7xl mx-auto px-4 mt-16 bg-gray-100 py-12 rounded-lg">
+  <OurTeam />
+</div>
+
+{/* 🚀 Benefits: Why Clients Love Us */}
+<div className="max-w-7xl mx-auto px-4 mt-16">
+  <Benefits />
+</div>
+
+{/* 🔥 Platform Information */}
+<div className="max-w-7xl mx-auto px-4 mt-16">
+  <PlatformInfo />
+  <IndustriesSection/>
+</div>
+
+{/* ❤️ Client Testimonials (Builds Trust) */}
+<div className=" px-4 mt-16 bg-purple-600 ">
+<div className="max-w-7xl mx-auto">
+<ClientReviews/>
+<ClientTestimonialsSection />
+</div>
+</div>
+
+{/* 📞 Final CTA: Last Push to Contact */}
+<div className="max-w-7xl mx-auto px-4 text-center mt-16">
+  <GetQoute />
+</div>
      
     </>
   );
 }
+
+   

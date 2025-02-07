@@ -1,72 +1,88 @@
 'use client';
 
-import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Carousel CSS
+import React, { useState } from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Link from 'next/link';
 
+const slides = [
+  {
+    videoSrc: "/assets/homepage/backgroundVideo01.webm",
+    heading: "Your All-in-One Solution for Websites, Mobile Apps & Custom Software",
+    highlight: "Solution for Websites",
+    highlightColor: "text-purple-600",
+    description: `Empower your business with a team of experts dedicated to crafting tailor-made solutions that drive growth, efficiency, and success.`,
+    buttonText: "Automate your Business",
+    buttonColor: "bg-purple-600 hover:bg-purple-700",
+  },
+  {
+    videoSrc: "/assets/homepage/backgroundVideo02.mp4",
+    heading: "AI-Powered Growth: Transforming Ideas into Industry Disruptors",
+    highlight: "AI-Powered Growth:",
+    highlightColor: "text-purple-600",
+    description: `We use AI to drive innovation and accelerate business success. From startups to enterprises, our smart solutions transform bold ideas into game-changing technologies, ensuring smarter, faster, and more efficient results.`,
+    buttonText: "Automate your Business",
+    buttonColor: "bg-purple-600 hover:bg-purple-700",
+  },
+  {
+    videoSrc: "/assets/homepage/backgroundVideo03.mp4",
+    heading: "Shaping the Future with Innovation",
+    highlight: "Future",
+    highlightColor: "text-purple-600",
+    description: `We empower businesses to transform and lead through cutting-edge technology.`,
+    buttonText: "Automate your Business",
+    buttonColor: "bg-purple-600 hover:bg-purple-700",
+  }
+];
+
 const Slider: React.FC = () => {
+  const [loadedIndexes, setLoadedIndexes] = useState<number[]>([0]);
+
   return (
-    <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} transitionTime={1000}>
-      {/* Slide 1 - Video */}
-<div className="relative h-screen">
-  <video autoPlay loop muted className="w-full h-full object-cover ">
-    <source src="/assets/homepage/backgroundVideo01.webm" type="video/webm" />
-  </video>
-  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-75 text-white p-5">
-    <h2 className="text-6xl font-bold">Develop your <span className='text-purple-600'>Business</span><br/> to Accelerate Growth</h2>
-    <p className="text-lg mt-4 max-w-4xl">
-      We&apos;re inspired by new technology and have dedicated our careers to exploring and harnessing it.
-      We are in the business of solving problems. Entrepreneurs empower us to turn ideas into lightning-fast
-      solutions that revolutionize industries.
-    </p>
-    <Link
-      href="/contact"
-      rel="noopener noreferrer"
-      className="mt-4 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition"
+    <Carousel 
+      autoPlay 
+      infiniteLoop 
+      showThumbs={false} 
+      showStatus={false} 
+      swipeable={false}   
+  emulateTouch={false}
+      transitionTime={700} 
+      onChange={(index) => {
+        if (!loadedIndexes.includes(index)) {
+          setLoadedIndexes([...loadedIndexes, index]);
+        }
+      }}
     >
-      Automate your Business
-    </Link>
-  </div>
-</div>
+      {slides.map((slide, index) => (
+        <div key={index} className="relative h-screen">
+          {/* Lazy Load Video */}
+          {loadedIndexes.includes(index) && (
+            <video autoPlay loop muted className="w-full h-full object-cover">
+              <source src={slide.videoSrc} type="video/mp4" />
+            </video>
+          )}
 
-
-      {/* Slide 2 - Video */}
-      <div className="relative h-screen">
-        <video autoPlay loop muted className="w-full h-full object-cover">
-          <source src="/assets/homepage/backgroundVideo02.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white p-5">
-          <h2 className="text-4xl font-bold">Transform Your <span className='text-green-600'>Business</span> <br/> with a Free AI Landing Page </h2>
-          <p className="text-lg mt-4 max-w-4xl">TechCreator offers AI-powered landing pages, delivered in just 1-2 days. Our custom designs boost engagement and streamline operations at an affordable price. Join industry leaders and embrace digital transformation. Claim your free AI landing page now.</p>
-          <Link
-            href="/contact"
-            rel="noopener noreferrer"
-            className="mt-4 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition"
-          >
-            Learn More
-          </Link>
+          {/* Overlay Content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 text-white p-6">
+            <h2 className="text-xl md:text-4xl font-bold text-center  max-w-4xl">
+              {slide.heading.split(slide.highlight).map((part, i) => (
+                <span key={i}>
+                  {part}
+                  {i < slide.heading.split(slide.highlight).length - 1 && (
+                    <span className={slide.highlightColor}> {slide.highlight} </span>
+                  )}
+                </span>
+              ))}
+            </h2>
+            <p className="md:text-2xl text-lg mt-4 md:max-w-4xl text-center">{slide.description}</p>
+            <Link href="/contact" rel="noopener noreferrer">
+              <button className={`mt-4 px-6 py-3 ${slide.buttonColor} text-white font-semibold rounded-full transition`}>
+                {slide.buttonText}
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
-
-      {/* Slide 3 - Video */}
-      <div className="relative h-screen">
-        <video autoPlay loop muted className="w-full h-full object-cover">
-          <source src="/assets/homepage/backgroundVideo03.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white p-5">
-        <h2 className="text-4xl font-bold">Empower Your <span className='text-red-600'>Company</span></h2>
-<p className="text-lg mt-4 max-w-4xl">Unlock new potential and accelerate growth by optimizing operations and driving efficiency with the right solutions.</p>
-
-          <Link
-            href="/contact"
-            rel="noopener noreferrer"
-            className="mt-4 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full transition"
-          >
-            Learn More
-          </Link>
-        </div>
-      </div>
+      ))}
     </Carousel>
   );
 };

@@ -24,6 +24,7 @@ const categories: TechnologyCategory[] = [
   { id: "web-platforms", name: "Web Platforms" },
   { id: "cross-platforms", name: "Cross Platforms" },
   { id: "crm", name: "CRM" },
+  { id: "ai", name: "AI" },
   { id: "database", name: "Database" },
   { id: "cloud-devops", name: "Cloud & DevOps" },
 ];
@@ -100,6 +101,28 @@ const technologies: Record<string, Technology[]> = {
     { name: "Pipedrive", icon: "/icons/pipedrive.svg", category: "crm" },
     { name: "Monday.com", icon: "/icons/monday.svg", category: "crm" },
   ],
+
+
+    // ✅ AI Technologies
+    ai_ml: [
+      { name: "TensorFlow", icon: "/icons/tensorflow.svg", category: "ai" },
+      { name: "PyTorch", icon: "/icons/pytorch.svg", category: "ai" },
+      { name: "Scikit-Learn", icon: "/icons/scikit-learn.svg", category: "ai" },
+      { name: "Keras", icon: "/icons/keras.svg", category: "ai" },
+    ],
+    ai_nlp: [
+      { name: "GPT-4", icon: "/icons/gpt4.svg", category: "ai" },
+      { name: "BERT", icon: "/icons/bert.svg", category: "ai" },
+      { name: "SpaCy", icon: "/icons/spacy.svg", category: "ai" },
+      { name: "NLTK", icon: "/icons/nltk.svg", category: "ai" },
+    ],
+    ai_tools: [
+      { name: "OpenAI API", icon: "/icons/openai.svg", category: "ai" },
+      { name: "Hugging Face", icon: "/icons/huggingface.svg", category: "ai" },
+      { name: "IBM Watson", icon: "/icons/ibm-watson.svg", category: "ai" },
+      { name: "Google Vertex AI", icon: "/icons/vertex-ai.svg", category: "ai" },
+    ],
+  
 
   // Database
   sql: [
@@ -189,7 +212,7 @@ export default function TechnologiesSection() {
       transition={{ duration: 0.5 }}
       className="mb-12"
     >
-      <h3 className="text-2xl font-semibold mb-6">{title}</h3>
+      <h3 className="md:text-2xl text-xl font-semibold mb-6">{title}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {techs.map((tech) => (
           <motion.div
@@ -224,7 +247,7 @@ export default function TechnologiesSection() {
   };
 
   return (
-    <section className="py-24 bg-white ">
+    <section className=" bg-white ">
       <div className="">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -232,7 +255,7 @@ export default function TechnologiesSection() {
           viewport={{ once: true }}
           className=" mx-auto"
         >
-          <h2 className="text-5xl font-bold text-purple-600 mb-6">Technologies we use</h2>
+          <h2 className="md:text-5xl text-2xl font-bold text-purple-600 mb-6">Technologies we use</h2>
           <p className="text-xl text-gray-600 mb-12">
             Hire from our pool of 350+ specialized experts in web, mobile, and software
             engineering, specializing in the latest technologies and frameworks, ready to
@@ -248,7 +271,7 @@ export default function TechnologiesSection() {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveCategory(category.id)}
                 className={cn(
-                  "px-6 py-3 rounded-full  font-medium text-xl transition-all duration-200",
+                  "md:px-6 md:py-3 py-2 px-3 rounded-full  font-medium md:text-xl transition-all duration-200",
                   activeCategory === category.id
                     ? "bg-purple-600 text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"

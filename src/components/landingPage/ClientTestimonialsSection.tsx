@@ -50,7 +50,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           className="object-cover w-20 h-20"
         />
       </div>
-      <h3 className="font-bold text-xl mb-2 text-center">{name}</h3>
+      <h3 className="font-bold text-xl mb-2 text-center text-white ">{name}</h3>
       <div className="flex justify-center mb-3">
         {[...Array(5)].map((_, i) => (
           <Star
@@ -61,14 +61,14 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           />
         ))}
       </div>
-      <p className="font-normal leading-6 text-base mb-2 text-center">{`"${testimonial}"`}</p>
+      <p className="font-normal leading-6 text-base mb-2 text-center text-white">{`"${testimonial}"`}</p>
 
       {isHovered && reviewScreenshot && (
-        <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-105 flex justify-center items-center">
+        <div className="absolute top-0 left-0 w-full h-full  bg-opacity-105 flex justify-center items-center">
           <img
             src={reviewScreenshot}
             alt="Testimonial Screenshot"
-            className="object-cover max-w-[500px] max-h-[500px]"
+            className="object-cover max-w-[400px] max-h-[400px]"
           />
         </div>
       )}
@@ -119,7 +119,7 @@ const ClientTestimonialsSection: React.FC = () => {
       variants={sectionVariants}
     >
       <div className="">
-        <motion.h2
+        {/* <motion.h2
           className="text-[35px] font-bold text-center text-[#9A00FF] mb-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 0.8 } }}
@@ -132,7 +132,7 @@ const ClientTestimonialsSection: React.FC = () => {
           animate={{ opacity: 1, transition: { duration: 1 } }}
         >
           What they say about us
-        </motion.p>
+        </motion.p> */}
         <motion.div
           initial="hidden"
           animate="visible"

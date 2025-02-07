@@ -2,6 +2,7 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { FC } from "react";
+import Image from "next/image"; // ✅ Optimized Image Component
 import successCompanyImage from "../../../public/assets/homepage/our-people-our-success.webp";
 
 interface StatItemProps {
@@ -24,24 +25,31 @@ const StatItem: FC<StatItemProps> = ({ value, label }) => {
 
 const ProjectsCount: FC = () => {
   return (
-    <div
-      className="relative bg-cover bg-center bg-no-repeat md:h-[80vh] h-screen flex flex-col justify-between py-10"
-      style={{ backgroundImage: `url(${successCompanyImage.src})` }} // ✅ Full background image
-    >
+    <div className="relative md:h-[80vh] h-screen flex flex-col justify-between py-10">
+      {/* ✅ Optimized Background Image */}
+      <Image
+        src={successCompanyImage}
+        alt="Our People, Our Success"
+        layout="fill"
+        objectFit="cover"
+        quality={75} // ✅ Balanced quality (60-80 recommended)
+        priority // ✅ Load image first
+      />
+
       {/* ✅ Black Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* ✅ Heading at the Top */}
       <div className="relative z-10 text-center text-white">
         <h2 className="text-3xl md:text-5xl text-purple-600 font-bold">
-          Our People, Our Success
+        Empowered Teams, Proven Success
         </h2>
       </div>
 
       {/* ✅ Stats Section at the Bottom */}
-      <div className="relative z-10 text-center text-white md:mt-auto mb-20 mt-10 ">
-        <div className="container mx-auto px-4 ">
-          <div className="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 ">
+      <div className="relative z-10 text-center text-white md:mt-auto mb-20 mt-10">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
             <StatItem value={90} label="Clients" />
             <StatItem value={70} label="Countries" />
             <StatItem value={35} label="Products" />

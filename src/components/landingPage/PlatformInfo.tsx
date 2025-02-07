@@ -6,7 +6,7 @@ const PlatformInfo: React.FC = () => {
     <div className="">
       {/* Heading Section */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-purple-600">Welcome to Our Platform</h1>
+        <h1 className="ms:text-4xl text-2xl font-bold text-purple-600">Welcome to Our Platform</h1>
         <p className="text-lg text-gray-700 mt-2">A platform that transcends boundaries with innovation</p>
       </div>
 
@@ -14,7 +14,7 @@ const PlatformInfo: React.FC = () => {
       <div className="flex md:flex-row flex-col items-center justify-between md:p-10 p-3 bg-white rounded-xl shadow-lg">
         {/* Left section */}
         <div className="md:w-1/2 md:mb-0 mb-9">
-          <h2 className="text-3xl font-bold text-black">Our platform is now called <span className="text-purple-600">Transcend</span></h2>
+          <h2 className="ms:text-3xl text-xl font-bold text-black">Our platform is now called <span className="text-purple-600">Transcend</span></h2>
           <p className="mt-4 text-lg text-gray-700">
             A unified platform that transcends auto and asset retail and finance,
             all powered by Artificial Intelligence.

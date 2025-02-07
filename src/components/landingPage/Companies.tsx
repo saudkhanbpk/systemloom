@@ -17,15 +17,11 @@ const Companies = () => {
 
   return (
     <div className="overflow-x-hidden -mt-12   p-4 border rounded-md relative z-[10] bg-white shadow-sm">  
-      {/* ⬆️ Added 'relative z-[50]' to force stacking */}
-      
-      <h2 className="text-center text-2xl font-bold text-purple-600 mt-3">
+      <h2 className="text-center md:text-2xl text-lg font-bold text-purple-600 mt-3">
         The world's leading brands are powered by TECHCREATOR
       </h2>
       
       <div className="w-[90vw] relative z-[50]">  
-        {/* ⬆️ Ensuring child elements also have z-index */}
-        
         <div className="flex py-12">
           <motion.div
             initial={{ x: 0 }}
