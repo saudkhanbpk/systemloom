@@ -51,15 +51,15 @@ const IndustriesSection = () => {
           deliver tailored solutions that overcome them and drive meaningful impact.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 ">
         {industries.map((industry, index) => (
           <Link key={index} href={industry.link}>
-            <div className="p-6 border rounded-xl shadow-sm border-gray-300 hover:border-purple-600 hover:border-4 cursor-pointer">
-              <h3 className="text-xl font-semibold mb-2 text-purple-600">{industry.title}</h3>
-              <p className="text-gray-600 mb-4">{industry.description}</p>
+            <div className="p-6 border rounded-xl shadow-sm border-gray-300 bg-gradient-to-r from-purple-600 to-indigo-600 hover:border-purple-600 hover:border-4 cursor-pointer">
+              <h3 className="text-xl font-semibold mb-2 text-white ">{industry.title}</h3>
+              <p className="text-white mb-4">{industry.description}</p>
               <div className="flex flex-wrap gap-2">
                 {industry.tags.map((tag, idx) => (
-                  <span key={idx} className="px-3 py-1 text-sm border rounded-full text-gray-700">
+                  <span key={idx} className="px-3 py-1 text-sm border rounded-full text-white">
                     {tag}
                   </span>
                 ))}

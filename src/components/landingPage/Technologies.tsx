@@ -3,291 +3,211 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  FaDocker, FaAws,  FaBrain, FaCloud,  FaEthereum,FaMicrosoft, FaReact, FaNode, FaPython, FaJava, FaHtml5, FaCss3, FaJs, FaPhp, FaLaravel, FaWordpress, FaBootstrap, FaSass, FaApple, FaAndroid
+} from "react-icons/fa";
+import {
+  SiKotlin, SiSwift, SiFlutter,  SiTensorflow, SiPytorch, SiOpenai, SiHuggingface,  SiGooglecloud,  SiMongodb, SiPostgresql, SiMysql, SiRedis, SiFirebase, SiKubernetes, SiSolidity, SiRust, SiCsharp, SiPhp,  SiGo,   SiSvelte, SiAngular, SiTailwindcss, SiGraphql,  SiJquery, SiTypescript, SiWebpack, SiPug, SiGatsby, SiAstro, SiEleventy, SiExpress, SiFastapi, SiDjango, SiRubyonrails, SiFlask, SiNestjs,  SiStrapi, SiSanity, SiPrisma, SiNextdotjs, SiVuedotjs, SiIonic,   SiDart, SiFigma,
+  SiAdobe, SiFramer,  SiRedux, SiExpo, SiRealm, SiSupabase, SiFastlane, 
+} from "react-icons/si";
 
-// Technology category type
-type TechnologyCategory = {
-  id: string;
-  name: string;
-  isActive?: boolean;
-};
+type TechnologyCategory = { id: string; name: string; isActive?: boolean };
+type Technology = { name: string; icon: JSX.Element; category: string };
 
-// Technology item type
-type Technology = {
-  name: string;
-  icon: string;
-  category: string;
-};
-
-// Categories data
 const categories: TechnologyCategory[] = [
   { id: "mobile-apps", name: "Mobile Apps", isActive: true },
   { id: "web-platforms", name: "Web Platforms" },
-  { id: "cross-platforms", name: "Cross Platforms" },
-  { id: "crm", name: "CRM" },
-  { id: "ai", name: "AI" },
-  { id: "database", name: "Database" },
+  { id: "backend", name: "Backend Technologies" },
+  { id: "database", name: "Databases" },
+  { id: "ai-ml", name: "AI & Machine Learning" },
   { id: "cloud-devops", name: "Cloud & DevOps" },
+  { id: "blockchain", name: "Blockchain Technologies" },
 ];
 
-// Technologies data
 const technologies: Record<string, Technology[]> = {
-  // Mobile Apps
-  ios: [
-    { name: "Swift", icon: "assets/icons/swift.svg", category: "mobile-apps" },
-    { name: "UI Kit", icon: "assets/icons/uikit.svg", category: "mobile-apps" },
-    { name: "RxSwift", icon: "assets/icons/rxswift.svg", category: "mobile-apps" },
-    { name: "Combine", icon: "assets/icons/combine.svg", category: "mobile-apps" },
-    { name: "MVVM", icon: "assets/icons/mvvm.svg", category: "mobile-apps" },
-    { name: "Alamofire", icon: "assets/icons/alamofire.svg", category: "mobile-apps" },
-    { name: "Core Data", icon: "assets/icons/coredata.svg", category: "mobile-apps" },
-  ],
-  android: [
-    { name: "Kotlin", icon: "assets/icons/kotlin.svg", category: "mobile-apps" },
-    { name: "MVVM", icon: "assets/icons/mvvm.svg", category: "mobile-apps" },
-    { name: "RxJava", icon: "assets/icons/rxjava.svg", category: "mobile-apps" },
-    { name: "Java", icon: "assets/icons/java.svg", category: "mobile-apps" },
-    { name: "Retrofit", icon: "assets/icons/retrofit.svg", category: "mobile-apps" },
-    { name: "Jetpack", icon: "assets/icons/jetpack.svg", category: "mobile-apps" },
-  ],
-
-  // Web Platforms
-  frontend: [
-    { name: "React", icon: "assets/icons/react.svg", category: "web-platforms" },
-    { name: "Next.js", icon: "assets/icons/nextjs.svg", category: "web-platforms" },
-    { name: "TypeScript", icon: "assets/icons/typescript.svg", category: "web-platforms" },
-    { name: "Tailwind CSS", icon: "assets/icons/tailwind.svg", category: "web-platforms" },
-    { name: "Vue.js", icon: "assets/icons/vuejs.svg", category: "web-platforms" },
-    { name: "Angular", icon: "assets/icons/angular.svg", category: "web-platforms" },
-    { name: "Javascript", icon: "assets/icons/javascript.svg", category: "web-platforms" },
-    { name: "Rest Api", icon: "assets/icons/restapi.svg", category: "web-platforms" },
-  ],
-  backend: [
-    { name: "Node.js", icon: "assets/icons/nodejs.svg", category: "web-platforms" },
-    { name: "Express", icon: "assets/icons/express.svg", category: "web-platforms" },
-    { name: "Python", icon: "assets/icons/python.svg", category: "web-platforms" },
-    { name: "Django", icon: "assets/icons/django.svg", category: "web-platforms" },
-    { name: "GraphQL", icon: "assets/icons/graphql.svg", category: "web-platforms" },
-    { name: "PHP", icon: "assets/icons/php.svg", category: "web-platforms" },
-    { name: "Laravel", icon: "assets/icons/laravel.svg", category: "web-platforms" },
-    { name: "Ruby", icon: "assets/icons/ruby.svg", category: "web-platforms" },
-    { name: "Rails", icon: "assets/icons/rails.svg", category: "web-platforms" },
+  "mobile-apps": [
+    { name: "Swift", icon: <SiSwift className="text-orange-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Kotlin", icon: <SiKotlin className="text-purple-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Flutter", icon: <SiFlutter className="text-blue-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "React Native", icon: <FaReact className="text-blue-400 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Xamarin", icon: <FaMicrosoft className="text-blue-700 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Ionic", icon: <SiIonic className="text-gray-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Dart", icon: <SiDart className="text-blue-400 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Objective-C", icon: <FaApple className="text-gray-700 w-8 h-8" />, category: "mobile-apps" },
+    { name: "SwiftUI", icon: <SiSwift className="text-orange-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Jetpack Compose", icon: <SiKotlin className="text-purple-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Android Native", icon: <FaAndroid className="text-green-600 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Expo", icon: <SiExpo className="text-black w-8 h-8" />, category: "mobile-apps" },
+    { name: "GraphQL", icon: <SiGraphql className="text-pink-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Redux", icon: <SiRedux className="text-purple-600 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Realm DB", icon: <SiRealm className="text-green-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Firebase", icon: <SiFirebase className="text-yellow-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Supabase", icon: <SiSupabase className="text-green-400 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Fastlane", icon: <SiFastlane className="text-red-600 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Figma", icon: <SiFigma className="text-pink-400 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Adobe XD", icon: <SiAdobe className="text-red-500 w-8 h-8" />, category: "mobile-apps" },
+    { name: "Framer", icon: <SiFramer className="text-blue-600 w-8 h-8" />, category: "mobile-apps" },
   ],
 
-  // Cross Platforms
-  mobile: [
-    { name: "React Native", icon: "/icons/react-native.svg", category: "cross-platforms" },
-    { name: "Flutter", icon: "/icons/flutter.svg", category: "cross-platforms" },
-    { name: "Ionic", icon: "/icons/ionic.svg", category: "cross-platforms" },
-    { name: "Xamarin", icon: "/icons/xamarin.svg", category: "cross-platforms" },
-    { name: "Capacitor", icon: "/icons/capacitor.svg", category: "cross-platforms" },
-  ],
-  desktop: [
-    { name: "Electron", icon: "/icons/electron.svg", category: "cross-platforms" },
-    { name: "Tauri", icon: "/icons/tauri.svg", category: "cross-platforms" },
-    { name: "Qt", icon: "/icons/qt.svg", category: "cross-platforms" },
-    { name: "NW.js", icon: "/icons/nwjs.svg", category: "cross-platforms" },
+  "web-platforms": [
+    // 🌐 Frontend Frameworks & Libraries
+    { name: "React", icon: <FaReact className="text-blue-400 w-8 h-8" />, category: "web-platforms" },
+    { name: "Next.js", icon: <SiNextdotjs className="text-black w-8 h-8" />, category: "web-platforms" },
+    { name: "Vue.js", icon: <SiVuedotjs className="text-green-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Svelte", icon: <SiSvelte className="text-orange-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Angular", icon: <SiAngular className="text-red-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Gatsby", icon: <SiGatsby className="text-purple-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Astro", icon: <SiAstro className="text-yellow-400 w-8 h-8" />, category: "web-platforms" },
+    { name: "Eleventy", icon: <SiEleventy className="text-gray-600 w-8 h-8" />, category: "web-platforms" },
+
+    // 🎨 UI Frameworks
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-400 w-8 h-8" />, category: "web-platforms" },
+    { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Sass", icon: <FaSass className="text-pink-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Pug (Jade)", icon: <SiPug className="text-green-600 w-8 h-8" />, category: "web-platforms" },
+
+    // ⚡ State Management & APIs
+    { name: "Redux", icon: <SiRedux className="text-purple-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "GraphQL", icon: <SiGraphql className="text-pink-500 w-8 h-8" />, category: "web-platforms" },
+
+    // ⚙️ Web Backend Technologies
+    { name: "Node.js", icon: <FaNode className="text-green-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Express.js", icon: <SiExpress className="text-gray-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "FastAPI", icon: <SiFastapi className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Django", icon: <SiDjango className="text-green-700 w-8 h-8" />, category: "web-platforms" },
+    { name: "Ruby on Rails", icon: <SiRubyonrails className="text-red-400 w-8 h-8" />, category: "web-platforms" },
+    { name: "Flask", icon: <SiFlask className="text-gray-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "PHP", icon: <FaPhp className="text-indigo-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Laravel", icon: <FaLaravel className="text-red-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "WordPress", icon: <FaWordpress className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
+
+    // 🛠️ Headless CMS
+    { name: "Strapi", icon: <SiStrapi className="text-purple-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Sanity", icon: <SiSanity className="text-red-500 w-8 h-8" />, category: "web-platforms" },
+
+    // ⚡ Build Tools
+    { name: "Webpack", icon: <SiWebpack className="text-blue-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Vite", icon: <SiVuedotjs className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Parcel", icon: <SiVuedotjs className="text-yellow-600 w-8 h-8" />, category: "web-platforms" },
+
+    // 🏆 Programming Languages
+    { name: "HTML5", icon: <FaHtml5 className="text-orange-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "CSS3", icon: <FaCss3 className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "JavaScript", icon: <FaJs className="text-yellow-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "jQuery", icon: <SiJquery className="text-blue-700 w-8 h-8" />, category: "web-platforms" },
+
+    // ⚡ Backend Frameworks
+    { name: "NestJS", icon: <SiNestjs className="text-red-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Prisma ORM", icon: <SiPrisma className="text-blue-500 w-8 h-8" />, category: "web-platforms" },
   ],
 
-  // CRM
-  enterprise: [
-    { name: "Salesforce", icon: "/icons/salesforce.svg", category: "crm" },
-    { name: "SAP", icon: "/icons/sap.svg", category: "crm" },
-    { name: "Oracle CRM", icon: "/icons/oracle-crm.svg", category: "crm" },
-    { name: "Microsoft Dynamics", icon: "/icons/dynamics.svg", category: "crm" },
-  ],
-  cloud: [
-    { name: "HubSpot", icon: "/icons/hubspot.svg", category: "crm" },
-    { name: "Zoho", icon: "/icons/zoho.svg", category: "crm" },
-    { name: "Pipedrive", icon: "/icons/pipedrive.svg", category: "crm" },
-    { name: "Monday.com", icon: "/icons/monday.svg", category: "crm" },
+  "backend": [
+    { name: "Python", icon: <FaPython className="text-yellow-400 w-8 h-8" />, category: "backend" },
+    { name: "Java", icon: <FaJava className="text-red-600 w-8 h-8" />, category: "backend" },
+    { name: "PHP", icon: <SiPhp className="text-indigo-500 w-8 h-8" />, category: "backend" },
+    { name: "Ruby on Rails", icon: <SiRubyonrails className="text-red-400 w-8 h-8" />, category: "backend" },
+    { name: "Go", icon: <SiGo className="text-blue-500 w-8 h-8" />, category: "backend" },
+    { name: "C#", icon: <SiCsharp className="text-blue-700 w-8 h-8" />, category: "backend" },
+
+    { name: "Node.js", icon: <FaNode className="text-green-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "Express.js", icon: <SiExpress className="text-gray-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "FastAPI", icon: <SiFastapi className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Django", icon: <SiDjango className="text-green-700 w-8 h-8" />, category: "web-platforms" },
+    { name: "Ruby on Rails", icon: <SiRubyonrails className="text-red-400 w-8 h-8" />, category: "web-platforms" },
+    { name: "Flask", icon: <SiFlask className="text-gray-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "PHP", icon: <FaPhp className="text-indigo-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Laravel", icon: <FaLaravel className="text-red-500 w-8 h-8" />, category: "web-platforms" },
+    { name: "WordPress", icon: <FaWordpress className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
   ],
 
-
-    // ✅ AI Technologies
-    ai_ml: [
-      { name: "TensorFlow", icon: "/icons/tensorflow.svg", category: "ai" },
-      { name: "PyTorch", icon: "/icons/pytorch.svg", category: "ai" },
-      { name: "Scikit-Learn", icon: "/icons/scikit-learn.svg", category: "ai" },
-      { name: "Keras", icon: "/icons/keras.svg", category: "ai" },
-    ],
-    ai_nlp: [
-      { name: "GPT-4", icon: "/icons/gpt4.svg", category: "ai" },
-      { name: "BERT", icon: "/icons/bert.svg", category: "ai" },
-      { name: "SpaCy", icon: "/icons/spacy.svg", category: "ai" },
-      { name: "NLTK", icon: "/icons/nltk.svg", category: "ai" },
-    ],
-    ai_tools: [
-      { name: "OpenAI API", icon: "/icons/openai.svg", category: "ai" },
-      { name: "Hugging Face", icon: "/icons/huggingface.svg", category: "ai" },
-      { name: "IBM Watson", icon: "/icons/ibm-watson.svg", category: "ai" },
-      { name: "Google Vertex AI", icon: "/icons/vertex-ai.svg", category: "ai" },
-    ],
-  
-
-  // Database
-  sql: [
-    { name: "PostgreSQL", icon: "/icons/postgresql.svg", category: "database" },
-    { name: "MySQL", icon: "/icons/mysql.svg", category: "database" },
-    { name: "Oracle", icon: "/icons/oracle.svg", category: "database" },
-    { name: "SQLite", icon: "/icons/sqlite.svg", category: "database" },
-    { name: "SQL Server", icon: "/icons/sqlserver.svg", category: "database" },
-  ],
-  nosql: [
-    { name: "MongoDB", icon: "/icons/mongodb.svg", category: "database" },
-    { name: "Redis", icon: "/icons/redis.svg", category: "database" },
-    { name: "Cassandra", icon: "/icons/cassandra.svg", category: "database" },
-    { name: "Firebase", icon: "/icons/firebase.svg", category: "database" },
-    { name: "DynamoDB", icon: "/icons/dynamodb.svg", category: "database" },
+  "database": [
+    { name: "MongoDB", icon: <SiMongodb className="text-green-500 w-8 h-8" />, category: "database" },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600 w-8 h-8" />, category: "database" },
+    { name: "MySQL", icon: <SiMysql className="text-gray-600 w-8 h-8" />, category: "database" },
+    { name: "Redis", icon: <SiRedis className="text-red-600 w-8 h-8" />, category: "database" },
+    { name: "Firebase", icon: <SiFirebase className="text-yellow-500 w-8 h-8" />, category: "database" },
   ],
 
-  // Cloud & DevOps
-  cloud_providers: [
-    { name: "AWS", icon: "/icons/aws.svg", category: "cloud-devops" },
-    { name: "Azure", icon: "/icons/azure.svg", category: "cloud-devops" },
-    { name: "Google Cloud", icon: "/icons/gcloud.svg", category: "cloud-devops" },
-    { name: "DigitalOcean", icon: "/icons/digitalocean.svg", category: "cloud-devops" },
+  "ai-ml": [
+    { name: "TensorFlow", icon: <SiTensorflow className="text-orange-500 w-8 h-8" />, category: "ai-ml" },
+    { name: "PyTorch", icon: <SiPytorch className="text-red-500 w-8 h-8" />, category: "ai-ml" },
+    { name: "GPT-4", icon: <FaBrain className="text-purple-600 w-8 h-8" />, category: "ai-ml" },
+    { name: "OpenAI API", icon: <SiOpenai className="text-gray-600 w-8 h-8" />, category: "ai-ml" },
+    { name: "Hugging Face", icon: <SiHuggingface className="text-yellow-500 w-8 h-8" />, category: "ai-ml" },
   ],
-  devops_tools: [
-    { name: "Docker", icon: "/icons/docker.svg", category: "cloud-devops" },
-    { name: "Kubernetes", icon: "/icons/kubernetes.svg", category: "cloud-devops" },
-    { name: "Jenkins", icon: "/icons/jenkins.svg", category: "cloud-devops" },
-    { name: "GitLab CI", icon: "/icons/gitlab.svg", category: "cloud-devops" },
-    { name: "Terraform", icon: "/icons/terraform.svg", category: "cloud-devops" },
+
+  "cloud-devops": [
+    { name: "AWS", icon: <FaAws className="text-yellow-500 w-8 h-8" />, category: "cloud-devops" },
+    { name: "Google Cloud", icon: <SiGooglecloud className="text-blue-500 w-8 h-8" />, category: "cloud-devops" },
+    { name: "Docker", icon: <FaDocker className="text-blue-500 w-8 h-8" />, category: "cloud-devops" },
+    { name: "Kubernetes", icon: <SiKubernetes className="text-gray-500 w-8 h-8" />, category: "cloud-devops" },
+  ],
+
+  "blockchain": [
+    { name: "Ethereum", icon: <FaEthereum className="text-gray-700 w-8 h-8" />, category: "blockchain" },
+    { name: "Solana", icon: <SiSolidity className="text-green-500 w-8 h-8" />, category: "blockchain" },
+    { name: "Hyperledger", icon: <FaCloud className="text-blue-500 w-8 h-8" />, category: "blockchain" },
+    { name: "Rust", icon: <SiRust className="text-red-600 w-8 h-8" />, category: "blockchain" },
   ],
 };
 
-// Section titles mapping
-const sectionTitles: Record<string, { title: string; sections: Record<string, string> }> = {
-  "mobile-apps": {
-    title: "Mobile Development",
-    sections: {
-      ios: "iOS Development",
-      android: "Android Development"
-    }
-  },
-  "web-platforms": {
-    title: "Web Development",
-    sections: {
-      frontend: "Frontend Development",
-      backend: "Backend Development"
-    }
-  },
-  "cross-platforms": {
-    title: "Cross-Platform Development",
-    sections: {
-      mobile: "Mobile Solutions",
-      desktop: "Desktop Solutions"
-    }
-  },
-  "crm": {
-    title: "CRM Solutions",
-    sections: {
-      enterprise: "Enterprise CRM",
-      cloud: "Cloud CRM"
-    }
-  },
-  "database": {
-    title: "Database Technologies",
-    sections: {
-      sql: "SQL Databases",
-      nosql: "NoSQL Databases"
-    }
-  },
-  "cloud-devops": {
-    title: "Cloud & DevOps",
-    sections: {
-      cloud_providers: "Cloud Providers",
-      devops_tools: "DevOps Tools"
-    }
-  }
-};
 
 export default function TechnologiesSection() {
   const [activeCategory, setActiveCategory] = useState("mobile-apps");
 
-  const renderTechnologySection = (sectionKey: string, title: string, techs: Technology[]) => (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="mb-12"
-    >
-      <h3 className="md:text-2xl text-xl font-semibold mb-6">{title}</h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {techs.map((tech) => (
-          <motion.div
-            key={tech.name}
-            whileHover={{ scale: 1.05 }}
-            className="bg-gray-50 rounded-full p-4 hover:text-white  hover:bg-purple-600 flex items-center space-x-3 "
-          >
-            <div className="w-8 h-8 flex items-center justify-center ">
-              <img
-                src={tech.icon}
-                alt={tech.name}
-                className="w-10 h-10 object-contain "
-              />
-            </div>
-            <span className="font-medium text-xl">{tech.name}</span>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
-  );
-
-  const renderCategoryContent = () => {
-    const categoryInfo = sectionTitles[activeCategory];
-    if (!categoryInfo) return null;
-
-    return Object.entries(categoryInfo.sections).map(([sectionKey, sectionTitle]) => {
-      const sectionTechs = technologies[sectionKey];
-      if (!sectionTechs) return null;
-
-      return renderTechnologySection(sectionKey, sectionTitle, sectionTechs);
-    });
-  };
-
   return (
-    <section className=" bg-white ">
-      <div className="">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className=" mx-auto"
-        >
-          <h2 className="md:text-5xl text-2xl font-bold text-purple-600 mb-6">Technologies we use</h2>
-          <p className="text-xl text-gray-600 mb-12">
-            Hire from our pool of 350+ specialized experts in web, mobile, and software
-            engineering, specializing in the latest technologies and frameworks, ready to
-            scale your development teams effortlessly.
-          </p>
+    <section className="relative bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700 text-white py-20 px-6 md:px-16">
+      <div className="absolute inset-0 bg-black bg-opacity-40 blur-lg"></div>
 
-          {/* Categories */}
-          <div className="flex flex-wrap gap-4 mb-12">
-            {categories.map((category) => (
-              <motion.button
-                key={category.id}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveCategory(category.id)}
-                className={cn(
-                  "md:px-6 md:py-3 py-2 px-3 rounded-full  font-medium md:text-xl transition-all duration-200",
-                  activeCategory === category.id
-                    ? "bg-purple-600 text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                )}
-              >
-                {category.name}
-              </motion.button>
-            ))}
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative max-w-6xl mx-auto text-center"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-wide">
+          Technologies We Use
+        </h2>
+        <p className="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">
+          Explore our expertise in cutting-edge technologies that power the future of digital innovation.
+        </p>
 
-          {/* Technology Sections */}
-          <div className="space-y-8">
-            {renderCategoryContent()}
-          </div>
-        </motion.div>
-      </div>
+        {/* Category Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {categories.map((category) => (
+            <motion.button
+              key={category.id}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveCategory(category.id)}
+              className={cn(
+                "px-6 py-3 rounded-full font-medium text-lg transition-all duration-300 ",
+                activeCategory === category.id
+                  ? "bg-white text-purple-600 shadow-lg transform scale-105"
+                  : "bg-purple-600 text-white hover:bg-white hover:text-purple-600 shadow-md"
+              )}
+            >
+              {category.name}
+            </motion.button>
+          ))}
+        </div>
+
+        {/* Technology Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+          {technologies[activeCategory]?.map((tech) => (
+            <motion.div
+              key={tech.name}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-3 sm:p-6 text-center  shadow-lg hover:bg-opacity-20"
+            >
+              <div className="flex items-center justify-center mb-3">{tech.icon}</div>
+              <h3 className="sm:text-lg text-base font-semibold ">{tech.name}</h3>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }

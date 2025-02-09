@@ -1,45 +1,96 @@
-// components/PlatformInfo.tsx
-import React from 'react';
+"use client";
 
-const PlatformInfo: React.FC = () => {
+import { useState } from 'react';
+import { FaLinkedin } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const PlatformInfo = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
-    <div className="">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+    >
       {/* Heading Section */}
-      <div className="text-center mb-8">
-        <h1 className="ms:text-4xl text-2xl font-bold text-purple-600">Welcome to Our Platform</h1>
-        <p className="text-lg text-gray-700 mt-2">A platform that transcends boundaries with innovation</p>
-      </div>
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
+          TechCreator – Innovate Faster with AI
+        </h2>
+        <p className="text-lg md:text-xl text-gray-700 mt-4 max-w-3xl mx-auto">
+          Where Innovation Meets Efficiency
+        </p>
+      </motion.div>
 
       {/* Content Section */}
-      <div className="flex md:flex-row flex-col items-center justify-between md:p-10 p-3 bg-white rounded-xl shadow-lg">
+      <div className="grid md:grid-cols-2 gap-12 items-center bg-white rounded-2xl shadow-lg p-6 md:p-12">
         {/* Left section */}
-        <div className="md:w-1/2 md:mb-0 mb-9">
-          <h2 className="ms:text-3xl text-xl font-bold text-black">Our platform is now called <span className="text-purple-600">Transcend</span></h2>
-          <p className="mt-4 text-lg text-gray-700">
-            A unified platform that transcends auto and asset retail and finance,
-            all powered by Artificial Intelligence.
-          </p>
-          <div className="mt-4">
-            <p className="font-bold text-lg">Transcend</p>
-            <p className="text-sm text-gray-600">Def.: To rise above or go beyond the limits of.</p>
+        <motion.div
+          initial={{ x: -20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
+          <div className="space-y-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Transform Your Ideas into Reality
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              We harness the power of artificial intelligence to revolutionize software development. 
+              Build sophisticated web and mobile applications in a fraction of the time, without 
+              compromising on quality or scalability.
+            </p>
           </div>
-          <button className="mt-6 px-6 py-2 bg-purple-600 text-white rounded-full flex items-center">
-            Learn More
-            <svg className="ml-2 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 4v12M4 10l6 6 6-6" />
-            </svg>
-          </button>
-        </div>
 
-        {/* Right section with video */}
-        <div className="md:w-1/2">
-          <video autoPlay loop muted className="w-full h-auto rounded-lg">
-            <source src="/assets/homepage/backgroundVideo02.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+          <div className="space-y-2">
+            <h4 className="text-xl font-semibold text-purple-600">Why Choose TechCreator?</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li>⚡ Lightning-fast development cycles</li>
+              <li>🤖 AI-powered code optimization</li>
+              <li>💡 Innovative solutions at scale</li>
+              <li>🚀 Cost-effective development</li>
+            </ul>
+          </div>
+
+          <a
+            href="https://www.linkedin.com/in/saudkhan39"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors duration-200 group"
+          >
+            Connect on LinkedIn
+            <FaLinkedin className="ml-2 group-hover:scale-110 transition-transform duration-200" />
+          </a>
+        </motion.div>
+
+        {/* Right section with lazy-loaded video */}
+        <motion.div
+          initial={{ x: 20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
+        >
+          {!isVideoLoaded && (
+            <div className="absolute inset-0 bg-gray-100 animate-pulse" />
+          )}
+          <iframe
+            className="w-full h-full rounded-xl"
+            src="https://www.youtube.com/embed/yROV87v9sXg?autoplay=0&rel=0"
+            title="TechCreator Introduction"
+            loading="lazy"
+            onLoad={() => setIsVideoLoaded(true)}
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

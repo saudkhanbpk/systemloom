@@ -95,7 +95,7 @@ export default function Page() {
 </div>
 
 {/* 🚀 Benefits: Why Clients Love Us */}
-<div className="max-w-7xl mx-auto px-4 mt-16">
+<div className="max-w-7xl mx-auto  mt-16">
   <Benefits />
 </div>
 

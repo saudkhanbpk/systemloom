@@ -1,62 +1,128 @@
 "use client";
-import CountUp from "react-countup";
+
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FC } from "react";
-import Image from "next/image"; // ✅ Optimized Image Component
-import successCompanyImage from "../../../public/assets/homepage/our-people-our-success.webp";
+import { FC, useState } from "react";
+import Image from "next/image";
+import CountUp from "react-countup";
 
 interface StatItemProps {
   value: number;
   label: string;
+  description: string;
+  delay: number;
 }
 
-const StatItem: FC<StatItemProps> = ({ value, label }) => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+const StatItem: FC<StatItemProps> = ({ value, label, description, delay }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
 
   return (
-    <div ref={ref} className="md:text-start text-center text-white">
-      <div className="md:text-[100px] text-[50px] font-medium leading-[40px] font-inter mb-2">
-        {inView ? <CountUp start={0} end={value} duration={2.5} suffix="+" /> : `0+`}
+    <motion.div
+      ref={ref}
+      initial={{ y: 20, opacity: 0 }}
+      animate={inView ? { y: 0, opacity: 1 } : {}}
+      transition={{ duration: 0.6, delay }}
+      className="relative group"
+    >
+      <div className="text-center p-6 backdrop-blur-sm bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300">
+        <div className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tight">
+          {inView ? (
+            <CountUp
+              start={0}
+              end={value}
+              duration={2.5}
+              separator=","
+              suffix="+"
+              useEasing={true}
+            />
+          ) : (
+            "0+"
+          )}
+        </div>
+        <h3 className="text-xl md:text-2xl font-semibold text-purple-400 mb-2">
+          {label}
+        </h3>
+        <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {description}
+        </p>
       </div>
-      <div className="text-[30px] mt-8 font-medium leading-[40px] font-inter">{label}</div>
-    </div>
+    </motion.div>
   );
 };
 
 const ProjectsCount: FC = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const stats = [
+    {
+      value: 90,
+      label: "Happy Clients",
+      description: "Trusted by businesses worldwide",
+      delay: 0.2,
+    },
+    {
+      value: 70,
+      label: "Countries Reached",
+      description: "Global presence and impact",
+      delay: 0.4,
+    },
+    {
+      value: 35,
+      label: "Products Launched",
+      description: "Innovative solutions delivered",
+      delay: 0.6,
+    },
+  ];
+
   return (
-    <div className="relative md:h-[80vh] h-screen flex flex-col justify-between py-10">
-      {/* ✅ Optimized Background Image */}
-      <Image
-        src={successCompanyImage}
-        alt="Our People, Our Success"
-        layout="fill"
-        objectFit="cover"
-        quality={75} // ✅ Balanced quality (60-80 recommended)
-        priority // ✅ Load image first
-      />
-
-      {/* ✅ Black Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-
-      {/* ✅ Heading at the Top */}
-      <div className="relative z-10 text-center text-white">
-        <h2 className="text-3xl md:text-5xl text-purple-600 font-bold">
-        Empowered Teams, Proven Success
-        </h2>
+    <section className="relative min-h-[600px] md:min-h-[500px] overflow-hidden">
+      {/* Background Image with Loading State */}
+      <div className="absolute inset-0 bg-gray-900">
+        <div className={`transition-opacity duration-700 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}>
+          <Image
+            src="/assets/homepage/our-people-our-success.webp"
+            alt="Our Success Story"
+            layout="fill"
+            objectFit="cover"
+            quality={85}
+            priority
+            onLoadingComplete={() => setIsImageLoaded(true)}
+            className="transform scale-105 hover:scale-100 transition-transform duration-[2s]"
+          />
+        </div>
+        {/* Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-transparent" />
       </div>
 
-      {/* ✅ Stats Section at the Bottom */}
-      <div className="relative z-10 text-center text-white md:mt-auto mb-20 mt-10">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
-            <StatItem value={90} label="Clients" />
-            <StatItem value={70} label="Countries" />
-            <StatItem value={35} label="Products" />
-          </div>
+      <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
+        {/* Heading Section */}
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            Empowered Teams, <span className="text-purple-400">Proven Success</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+            Our global impact and dedication to excellence have helped businesses
+            achieve their digital transformation goals.
+          </p>
+        </motion.div>
+
+        {/* Stats Grid */}
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+          {stats.map((stat, index) => (
+            <StatItem key={index} {...stat} />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
