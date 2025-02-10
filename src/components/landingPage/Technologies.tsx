@@ -110,15 +110,13 @@ const technologies: Record<string, Technology[]> = {
     { name: "Go", icon: <SiGo className="text-blue-500 w-8 h-8" />, category: "backend" },
     { name: "C#", icon: <SiCsharp className="text-blue-700 w-8 h-8" />, category: "backend" },
 
-    { name: "Node.js", icon: <FaNode className="text-green-500 w-8 h-8" />, category: "web-platforms" },
-    { name: "Express.js", icon: <SiExpress className="text-gray-600 w-8 h-8" />, category: "web-platforms" },
-    { name: "FastAPI", icon: <SiFastapi className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
-    { name: "Django", icon: <SiDjango className="text-green-700 w-8 h-8" />, category: "web-platforms" },
-    { name: "Ruby on Rails", icon: <SiRubyonrails className="text-red-400 w-8 h-8" />, category: "web-platforms" },
-    { name: "Flask", icon: <SiFlask className="text-gray-500 w-8 h-8" />, category: "web-platforms" },
-    { name: "PHP", icon: <FaPhp className="text-indigo-600 w-8 h-8" />, category: "web-platforms" },
-    { name: "Laravel", icon: <FaLaravel className="text-red-500 w-8 h-8" />, category: "web-platforms" },
-    { name: "WordPress", icon: <FaWordpress className="text-blue-600 w-8 h-8" />, category: "web-platforms" },
+    { name: "Node.js", icon: <FaNode className="text-green-500 w-8 h-8" />, category: "backend" },
+    { name: "Express.js", icon: <SiExpress className="text-gray-600 w-8 h-8" />, category: "backend" },
+    { name: "FastAPI", icon: <SiFastapi className="text-blue-600 w-8 h-8" />, category: "backend" },
+    { name: "Django", icon: <SiDjango className="text-green-700 w-8 h-8" />, category: "backend" },
+    { name: "Flask", icon: <SiFlask className="text-gray-500 w-8 h-8" />, category: "backend" },
+    { name: "Laravel", icon: <FaLaravel className="text-red-500 w-8 h-8" />, category: "backend" },
+    { name: "WordPress", icon: <FaWordpress className="text-blue-600 w-8 h-8" />, category: "backend" },
   ],
 
   "database": [

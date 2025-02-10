@@ -4,37 +4,37 @@ import { FaBolt, FaBrain, FaChartLine, FaClock, FaCogs, FaRocket, FaLightbulb } 
 
 const features = [
   {
-    icon: <FaBrain size={50} className="text-white" />,
+    icon: <FaBrain size={50} className="text-yellow-400" />,
     title: "AI-First Development",
     description: "We are a fully AI-powered software company, leveraging cutting-edge AI tools to automate development, optimize workflows, and deliver solutions faster than traditional methods.",
   },
   {
-    icon: <FaBolt size={50} className="text-white" />,
+    icon: <FaBolt size={50} className="text-yellow-400" />,
     title: "Lightning-Fast Execution",
     description: "What typically takes developers months, we accomplish in minutes using AI-driven automation—delivering high-quality web and mobile applications at an unprecedented speed.",
   },
   {
-    icon: <FaLightbulb size={50} className="text-white" />,
+    icon: <FaLightbulb size={50} className="text-yellow-400" />,
     title: "Super Innovative & Future-Proof",
     description: "We don’t just follow trends; we create them. Our AI-driven approach ensures that our solutions are smarter, more efficient, and built for the future.",
   },
   {
-    icon: <FaChartLine size={50} className="text-white" />,
+    icon: <FaChartLine size={50} className="text-yellow-400" />,
     title: "Cost-Effective, High-Value Solutions",
     description: "Our AI-powered efficiency allows us to build superior software at a fraction of the cost, providing unbeatable value without compromising quality.",
   },
   {
-    icon: <FaClock size={50} className="text-white" />,
+    icon: <FaClock size={50} className="text-yellow-400" />,
     title: "Time-Saving & Scalable",
     description: "We eliminate unnecessary development cycles, ensuring rapid deployment so businesses can scale faster without delays.",
   },
   {
-    icon: <FaCogs size={50} className="text-white" />,
+    icon: <FaCogs size={50} className="text-yellow-400" />,
     title: "AI-Enhanced Customization",
     description: "Unlike traditional agencies, we use AI to create hyper-personalized solutions tailored to your exact needs—no one-size-fits-all templates.",
   },
   {
-    icon: <FaRocket size={50} className="text-white" />,
+    icon: <FaRocket size={50} className="text-yellow-400" />,
     title: "Revolutionizing Software Development",
     description: "We are redefining the industry with AI-driven innovation, making software development smarter, faster, and more cost-effective than ever before.",
   },

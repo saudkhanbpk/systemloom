@@ -15,6 +15,7 @@ import ProjectsCount from "@/components/landingPage/ProjectsCount";
 import ServicesSection from "@/components/landingPage/ServicesSection";
 import TeamScalingSection from "@/components/landingPage/TeamScalingSection";
 import Technologies from "@/components/landingPage/Technologies";
+import WorkProcess from "@/components/landingPage/WorkProcess";
 
 
 export const metadata = {
@@ -60,61 +61,62 @@ export default function Page() {
      <Slider />
 
 {/* 🏢 Companies We Work With (Build Trust) */}
-<div className="max-w-7xl mx-auto  px-4 ">
+<div className="max-w-[1450px] mx-auto  px-4 ">
   <Companies />
 </div>
 
 {/* 🚀 Services: What We Offer */}
-<div className="max-w-7xl mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 mt-16 ">
   <ServicesSection />
 </div>
 
 {/* 💎 Technologies We Use (Credibility) */}
-<div className="max-w-7xl mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 mt-16">
   <Technologies />
 </div>
 
 {/* 🔥 Our Values: Why Choose Us */}
-<div className="max-w-7xl mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 mt-16">
+  <WorkProcess/>
   <OurValues />
 </div>
 
 {/* 📊 Project Count: Show Achievements */}
-<div className="max-w-7xl mx-auto px-4 mt-16 text-center">
+<div className="max-w-[1450px] mx-auto px-4 mt-16 text-center">
   <ProjectsCount />
 </div>
 
 {/* 🏆 Our Best Products (Showcase) */}
-<div className="max-w-7xl mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 mt-16">
   <Products />
 </div>
 
 {/* 👨‍💼 Our Team: Meet the Experts */}
-<div className="max-w-7xl mx-auto px-4 mt-16 bg-gray-100 py-12 rounded-lg">
+<div className="max-w-[1450px] mx-auto px-4 mt-16 bg-gray-100 py-12 rounded-lg">
   <OurTeam />
 </div>
 
 {/* 🚀 Benefits: Why Clients Love Us */}
-<div className="max-w-7xl mx-auto  mt-16">
+<div className="max-w-[1450px] mx-auto  mt-16">
   <Benefits />
 </div>
 
 {/* 🔥 Platform Information */}
-<div className="max-w-7xl mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 mt-16">
   <PlatformInfo />
   <IndustriesSection/>
 </div>
 
 {/* ❤️ Client Testimonials (Builds Trust) */}
 <div className=" px-4 mt-16 bg-purple-600 ">
-<div className="max-w-7xl mx-auto">
+<div className="max-w-[1450px] mx-auto">
 <ClientReviews/>
 <ClientTestimonialsSection />
 </div>
 </div>
 
 {/* 📞 Final CTA: Last Push to Contact */}
-<div className="max-w-7xl mx-auto px-4 text-center mt-16">
+<div className="max-w-[1450px] mx-auto px-4 text-center mt-16">
   <GetQoute />
 </div>
      

@@ -151,7 +151,7 @@ const ServicesSection: React.FC = () => {
       id: 10,
       title: "Digital Marketing",
       des:
-        "We create good ads campaigns on Facebook, Instagram, LinkedIn, and Twitter to increase the reach of your brand. We focus on creating viral content, targeted ads, and communities. When paired with a solid branding strategy, we make sure your social presence hits home. From influencer collaborations to data-driven analytics, we empower social media platforms to be your leading tools in achieving growth and success."
+        "We create good ads campaigns on Facebook, Instagram, LinkedIn, Twitter, and Google Ads to increase the reach of your brand. We focus on creating viral content, targeted ads, and communities. When paired with a solid branding strategy, we make sure your social presence hits home. From influencer collaborations to data-driven analytics, we empower social media platforms to be your leading tools in achieving growth and success."
           .split(" ")
           .slice(0, 24)
           .join(" ") + "...",
@@ -159,6 +159,7 @@ const ServicesSection: React.FC = () => {
       link: "/services/digital-marketing",
       altText: "Digital marketing",
     },
+    
   ];
   
 

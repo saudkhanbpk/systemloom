@@ -57,7 +57,7 @@ const OurValues: React.FC = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="relative p-6 bg-gradient-to-r from-purple-600 to-indigo-600 bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-20 transition duration-300"
+              className="relative p-6 bg-gradient-to-r from-purple-600 to-indigo-600 bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-20 transition duration-300  hover:scale-105 hover:shadow-2xl"
             >
               <div className="flex items-center space-x-4">
                 <div className="text-3xl text-yellow-400">{value.icon}</div>
