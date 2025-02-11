@@ -20,7 +20,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, faqs }) => {
   };
 
   return (
-    <div className="bg-gray-100 md:p-8">
+    <div className="bg-gray-100 md:p-8 md:mt-16 mt-9">
       <h2 className="text-4xl font-bold text-purple-600 mb-6">{title}</h2>
 
       <div className="grid md:grid-cols-3 gap-6">

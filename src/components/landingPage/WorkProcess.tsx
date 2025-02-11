@@ -51,8 +51,8 @@ const steps = [
 const WorkProcess = () => {
   return (
     <section className="">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-purple-600 mb-10">How we will work on your project</h2>
+      <div className="container mx-auto text-center md:mt-16 mt-9">
+        <h2 className="text-3xl font-bold text-purple-600 mb-6">How we will work on your project</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div

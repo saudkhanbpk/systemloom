@@ -78,7 +78,7 @@ const ProjectsCount: FC = () => {
   ];
 
   return (
-    <section className="relative min-h-[600px] md:min-h-[500px] overflow-hidden">
+    <section className="relative min-h-[600px] md:min-h-[500px] overflow-hidden md:mt-16 mt-9">
       {/* Background Image with Loading State */}
       <div className="absolute inset-0 bg-gray-900">
         <div className={`transition-opacity duration-700 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}>

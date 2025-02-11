@@ -43,7 +43,7 @@ const industries = [
 
 const IndustriesSection = () => {
   return (
-    <section className="md:mt-16 mt-9">
+    <section className="md:mt-16 mt-9 ">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="md:text-5xl text-2xl font-bold text-purple-600">Industries we serve</h2>
         <p className="ms:text-lg text-base text-gray-600 mt-4">

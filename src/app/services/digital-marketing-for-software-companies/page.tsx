@@ -17,6 +17,7 @@ import Link from "next/link";
 import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjects";
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 import FaqSection from "@/components/services/FaqSection";
+import ClientReviews from "@/components/landingPage/ClientReviews";
 
 const DigitalMarketing = () => {
   const categorySlug = "digital-marketing-for-software-companies";
@@ -82,7 +83,7 @@ const DigitalMarketing = () => {
       </div>
       {/* hero section end */}
 
-      <div className="max-w-full xl:px-16 md:px-8 sm:px-3 px-2 mx-auto ">
+      <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
         {/* FeatureSection section start */}
         <div className=" ">
           <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
@@ -254,10 +255,9 @@ const DigitalMarketing = () => {
         {/* RecentWorks section start */}
         <ServicesRelatedProjects slug={categorySlug} />
         {/* RecentWorks section end */}
-        <div>
-<ClientTestimonialsSection />
+        
 <FaqSection title="Frequently Asked Questions" faqs={digitalMarketingFaqs} />
-</div>
+
         {/* RelatedServices section start */}
         <div className=" px-3 xl:px-0 py-12 sm:py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
@@ -290,8 +290,13 @@ const DigitalMarketing = () => {
             ))}
           </div>
         </div>
+        {/* RelatedServices section end */}
+        <div className=" bg-purple-600  md:mb-16 mb-9">
+<ClientReviews/>
+<ClientTestimonialsSection />
+</div>
       </div>
-      {/* RelatedServices section end */}
+      
     </div>
   );
 };

@@ -81,7 +81,7 @@ const OurTeam = () => {
 
 
   return (
-    <div className="flex lg:flex-row flex-col justify-between  gap-6 ">
+    <div className="flex lg:flex-row flex-col justify-between  gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
 <div >
       <div className="lg:w-[500px]">
         <h2 className="md:text-4xl text-xl text-purple-600 font-bold">Our Team is Your Team</h2>

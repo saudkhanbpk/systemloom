@@ -57,71 +57,30 @@ export default function Page() {
         }}
       />
 
-     {/* 🔥 Hero Section: First Impression with Slider */}
+     
      <Slider />
-
-{/* 🏢 Companies We Work With (Build Trust) */}
 <div className="max-w-[1450px] mx-auto  px-4 ">
   <Companies />
 </div>
 
-{/* 🚀 Services: What We Offer */}
-<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9 ">
-  <ServicesSection />
-</div>
-
-{/* 💎 Technologies We Use (Credibility) */}
-<div className="max-w-[1450px] mx-auto px-4 md:mt-6 mt-9">
-  <Technologies />
-</div>
-
-{/* 🔥 Our Values: Why Choose Us */}
 <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
+<ServicesSection />
+<Technologies />
   <WorkProcess/>
   <OurValues />
-</div>
-
-{/* 📊 Project Count: Show Achievements */}
-<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9 text-center">
   <ProjectsCount />
-</div>
-
-{/* 🏆 Our Best Products (Showcase) */}
-<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
   <Products />
-</div>
-
-{/* 👨‍💼 Our Team: Meet the Experts */}
-<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9 bg-gray-100 md:py-12 py-6 rounded-lg">
   <OurTeam />
-</div>
-
-{/* 🚀 Benefits: Why Clients Love Us */}
-<div className="max-w-[1450px] mx-auto md:mt-16 mt-9">
   <Benefits />
-</div>
-
-{/* 🔥 Platform Information */}
-<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
   <PlatformInfo />
   <IndustriesSection/>
-</div>
-
-{/* ❤️ Client Testimonials (Builds Trust) */}
-<div className=" px-4 md:mt-16 mt-9 bg-purple-600 ">
-<div className="max-w-[1450px] mx-auto">
+  <div className=" bg-purple-600 md:mt-16 mt-9 ">
 <ClientReviews/>
 <ClientTestimonialsSection />
 </div>
-</div>
-
-{/* 📞 Final CTA: Last Push to Contact */}
-<div className="max-w-[1450px] mx-auto px-4 text-center md:mt-16 mt-9">
-  <GetQoute />
+<GetQoute />
 </div>
      
     </>
   );
 }
-
-   

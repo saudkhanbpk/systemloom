@@ -18,7 +18,7 @@ const PlatformInfo = () => {
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        className="text-center mb-6"
+        className="text-center mb-6 md:mt-16 mt-9"
       >
         <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
           TechCreator – Innovate Faster with AI

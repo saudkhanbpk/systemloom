@@ -33,7 +33,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="">
+    <div className="md:mt-16 mt-9">
       <div className="text-center mb-10">
         <h2 className="md:text-4xl text-3xl font-bold text-purple-600">Our Products</h2>
       </div>

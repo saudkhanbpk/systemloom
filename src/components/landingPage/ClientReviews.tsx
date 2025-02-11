@@ -6,7 +6,7 @@ import linkedinstar from "../../../public/assets/aboutpage/linkedin.svg"
 
 const ClientReviews = () => {
   return (
-    <section className=" text-white py-16 text-center">
+    <section className=" text-white py-16  text-center">
       <h2 className="text-4xl font-semibold mb-4">
         Our clients simply love <span className="text-black">what we do</span>
       </h2>
