@@ -43,7 +43,7 @@ const industries = [
 
 const IndustriesSection = () => {
   return (
-    <section className="mt-16">
+    <section className="md:mt-16 mt-9">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="md:text-5xl text-2xl font-bold text-purple-600">Industries we serve</h2>
         <p className="ms:text-lg text-base text-gray-600 mt-4">
@@ -51,10 +51,10 @@ const IndustriesSection = () => {
           deliver tailored solutions that overcome them and drive meaningful impact.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:mt-12 mt-6 ">
         {industries.map((industry, index) => (
           <Link key={index} href={industry.link}>
-            <div className="p-6 border rounded-xl shadow-sm border-gray-300 bg-gradient-to-r from-purple-600 to-indigo-600 hover:border-purple-600 hover:border-4 cursor-pointer">
+            <div className="p-6 border rounded-xl shadow-sm border-gray-300 bg-gradient-to-r from-indigo-500 to-purple-500 hover:border-purple-600 hover:border-4 cursor-pointer">
               <h3 className="text-xl font-semibold mb-2 text-white ">{industry.title}</h3>
               <p className="text-white mb-4">{industry.description}</p>
               <div className="flex flex-wrap gap-2">

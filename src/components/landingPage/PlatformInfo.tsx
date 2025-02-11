@@ -18,7 +18,7 @@ const PlatformInfo = () => {
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-6"
       >
         <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
           TechCreator – Innovate Faster with AI
@@ -50,11 +50,11 @@ const PlatformInfo = () => {
 
           <div className="space-y-2">
             <h4 className="text-xl font-semibold text-purple-600">Why Choose TechCreator?</h4>
-            <ul className="space-y-2 text-gray-700">
-              <li>⚡ Lightning-fast development cycles</li>
-              <li>🤖 AI-powered code optimization</li>
-              <li>💡 Innovative solutions at scale</li>
-              <li>🚀 Cost-effective development</li>
+            <ul className="space-y-2 text-gray-700  list-disc list-inside">
+              <li> Lightning-fast development cycles</li>
+              <li> AI-powered code optimization</li>
+              <li>Innovative solutions at scale</li>
+              <li>Cost-effective development.</li>
             </ul>
           </div>
 

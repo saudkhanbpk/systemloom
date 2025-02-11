@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import ouTeamImage from "../../../public/assets/aboutpage/ourTeam.png"
+import ouTeamImage from "../../../public/assets/aboutpage/team1.jpg"
 import Image from "next/image";
 
 
@@ -158,7 +158,7 @@ const OurTeam = () => {
     </div>
 
     <div className="w-full lg:w-1/2 flex justify-center">
-      <Image src ={ouTeamImage} alt="our team"  width={500} height={400} className="rounded-lg" />
+      <Image src ={ouTeamImage} alt="our team"  width={500} height={400} className="rounded-lg object-contain" />
     </div>
     </div>
     

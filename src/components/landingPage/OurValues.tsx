@@ -47,7 +47,7 @@ const OurValues: React.FC = () => {
       {/* <div className="absolute inset-0 bg-black bg-opacity-40 blur-md"></div> */}
 
       {/* Content */}
-      <div className="relative text-center">
+      <div className="relative text-center md:mt-16 mt-9">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-wide text-purple-600">
           Our Core Values
         </h2>
@@ -57,13 +57,13 @@ const OurValues: React.FC = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="relative p-6 bg-gradient-to-r from-purple-600 to-indigo-600 bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-20 transition duration-300  hover:scale-105 hover:shadow-2xl"
+              className="relative p-6 bg-gradient-to-r from-purple-500 to-indigo-500 bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-20 transition duration-300  hover:scale-105 hover:shadow-2xl"
             >
               <div className="flex items-center space-x-4">
                 <div className="text-3xl text-yellow-400">{value.icon}</div>
                 <h3 className="text-lg font-semibold">{value.title}</h3>
               </div>
-              <p className="text-gray-200 mt-3">{value.description}</p>
+              <p className="text-white mt-3">{value.description}</p>
             </div>
           ))}
         </div>

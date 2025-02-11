@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ServiceCard from "./ServiceCard";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface Service {
   id: number;
@@ -164,45 +165,108 @@ const ServicesSection: React.FC = () => {
   
 
   return (
-    <div className="mx-auto">
-      <div className="text-center font-bold text-[#9A00FF]  md:text-[35px] text-2xl ">
-        <h2>Services we offer</h2>
-      </div>
-      <Carousel
-        swipeable={true}
-        draggable={true}
-        showDots={true}
-        arrows={false}
-        responsive={responsive}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={2000}
-        keyBoardControl={true}
-        customTransition="all .5s ease"
-        transitionDuration={800}
-        containerClass="carousel-container"
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px flex justify-center"
+    <section className=" ">
+    <div className="">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
       >
-        {servicesArr.map((item) => (
-          <div
-            key={item.id}
-            className="flex justify-center h-auto w-[333px] mx-auto lg:mx-0 mb-14 "
-          >
-            <Link href={item.link} passHref>
-              <ServiceCard
-                title={item.title}
-                description={item.des}
-                icon={item.image}
-                altText={item.altText}
-                style={false}
-              />
-            </Link>
-          </div>
-        ))}
-      </Carousel>
+        <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-900 mb-4">
+          Our Premium Services
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Empowering businesses with cutting-edge solutions and expert services
+        </p>
+      </motion.div>
+      <Carousel
+  swipeable
+  draggable
+  showDots
+  responsive={responsive}
+  infinite
+  autoPlay
+  autoPlaySpeed={3000}
+  keyBoardControl
+  customTransition="all 0.5s ease"
+  transitionDuration={500}
+  containerClass="pb-12"
+  dotListClass="custom-dot-list-style"
+  itemClass="px-4"
+  renderDotsOutside={true}
+  arrows={true}
+  customLeftArrow={
+    <button
+      className="absolute left-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg hover:bg-gray-50 transform -translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
+      style={{
+        top: '50%',
+        transform: 'translate(-0%, -0%)',
+      }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+    </button>
+  }
+  customRightArrow={
+    <button
+      className="absolute right-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg hover:bg-gray-50 transform translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
+      style={{
+        top: '50%',
+        transform: 'translate(-0%, -0%)',
+      }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </button>
+  }
+>
+  {servicesArr.map((item) => (
+    <motion.div
+      key={item.id}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+    >
+      <Link href={item.link} className="block h-full">
+        <ServiceCard
+          title={item.title}
+          description={item.des}
+          icon={item.image}
+          altText={item.altText}
+          style={false}
+        />
+      </Link>
+    </motion.div>
+  ))}
+</Carousel>
     </div>
-  );
+  </section>
+);
 };
 
 export default ServicesSection;

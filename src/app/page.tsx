@@ -66,49 +66,49 @@ export default function Page() {
 </div>
 
 {/* 🚀 Services: What We Offer */}
-<div className="max-w-[1450px] mx-auto px-4 mt-16 ">
+<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9 ">
   <ServicesSection />
 </div>
 
 {/* 💎 Technologies We Use (Credibility) */}
-<div className="max-w-[1450px] mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 md:mt-6 mt-9">
   <Technologies />
 </div>
 
 {/* 🔥 Our Values: Why Choose Us */}
-<div className="max-w-[1450px] mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
   <WorkProcess/>
   <OurValues />
 </div>
 
 {/* 📊 Project Count: Show Achievements */}
-<div className="max-w-[1450px] mx-auto px-4 mt-16 text-center">
+<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9 text-center">
   <ProjectsCount />
 </div>
 
 {/* 🏆 Our Best Products (Showcase) */}
-<div className="max-w-[1450px] mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
   <Products />
 </div>
 
 {/* 👨‍💼 Our Team: Meet the Experts */}
-<div className="max-w-[1450px] mx-auto px-4 mt-16 bg-gray-100 py-12 rounded-lg">
+<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9 bg-gray-100 md:py-12 py-6 rounded-lg">
   <OurTeam />
 </div>
 
 {/* 🚀 Benefits: Why Clients Love Us */}
-<div className="max-w-[1450px] mx-auto  mt-16">
+<div className="max-w-[1450px] mx-auto md:mt-16 mt-9">
   <Benefits />
 </div>
 
 {/* 🔥 Platform Information */}
-<div className="max-w-[1450px] mx-auto px-4 mt-16">
+<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
   <PlatformInfo />
   <IndustriesSection/>
 </div>
 
 {/* ❤️ Client Testimonials (Builds Trust) */}
-<div className=" px-4 mt-16 bg-purple-600 ">
+<div className=" px-4 md:mt-16 mt-9 bg-purple-600 ">
 <div className="max-w-[1450px] mx-auto">
 <ClientReviews/>
 <ClientTestimonialsSection />
@@ -116,7 +116,7 @@ export default function Page() {
 </div>
 
 {/* 📞 Final CTA: Last Push to Contact */}
-<div className="max-w-[1450px] mx-auto px-4 text-center mt-16">
+<div className="max-w-[1450px] mx-auto px-4 text-center md:mt-16 mt-9">
   <GetQoute />
 </div>
      

@@ -49,11 +49,11 @@ const Benefits = () => {
         </h2>
       </div>
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 mt-16 px-6 ">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 md:mt-16 mt-6 px-6 ">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 bg-gradient-to-r from-purple-600 to-indigo-600  rounded-lg shadow-lg transition-transform hover:scale-105"
+            className="flex flex-col items-center p-6 bg-gradient-to-r from-purple-500 to-indigo-500  rounded-lg shadow-lg transition-transform hover:scale-105"
           >
             {feature.icon}
             <h2 className="text-xl font-semibold mt-4 text-white">

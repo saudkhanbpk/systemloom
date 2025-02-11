@@ -155,7 +155,7 @@ export default function TechnologiesSection() {
   const [activeCategory, setActiveCategory] = useState("mobile-apps");
 
   return (
-    <section className="relative bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700 text-white py-20 px-6 md:px-16">
+    <section className="relative bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white py-20 px-6 md:px-16">
       <div className="absolute inset-0 bg-black bg-opacity-40 blur-lg"></div>
 
       <motion.div
