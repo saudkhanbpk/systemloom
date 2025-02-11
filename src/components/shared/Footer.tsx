@@ -372,14 +372,14 @@ const Footer: React.FC = () => {
               </div>
               <div className="text-xs md:text-sm">
   <a
-    href="https://wa.me/+447511801699"
+    href="https://wa.me/13214073272"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:underline"
   >
     <div className="flex gap-2 items-center text-base mt-1">
       <FaWhatsapp size={28} color="#9A00FF" />
-      <span>+44 7511 801699</span>
+      <span>+1 (321) 407-3272</span>
     </div>
   </a>
 

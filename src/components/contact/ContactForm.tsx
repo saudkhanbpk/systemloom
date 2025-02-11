@@ -95,9 +95,9 @@ const ContactForm: React.FC = () => {
           TechCreator, Florida, Orlando, USA
         </p>
         <div className="mt-2 space-y-2 text-lg">
-          <Link href="https://wa.me/+447511801699" rel="noopener noreferrer" className="flex items-center gap-2.5 text-base">
+          <Link href="https://wa.me/+13214073272" rel="noopener noreferrer" className="flex items-center gap-2.5 text-base">
             <FaWhatsapp size={28} color="#9A00FF" />
-            <span className="hover:underline">+44 7511 801699</span>
+            <span className="hover:underline">+1 (321) 407-3272</span>
           </Link>
           <Link href="tel:+13214073272" className="flex items-center gap-2.5 text-base">
             <PhoneCall color="#9A00FF" />
