@@ -183,7 +183,7 @@ const ServicesSection: React.FC = () => {
       <Carousel
   swipeable
   draggable
-  showDots
+ 
   responsive={responsive}
   infinite
   autoPlay

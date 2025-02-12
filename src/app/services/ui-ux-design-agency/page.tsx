@@ -47,11 +47,11 @@ const UIUXDesign = () => {
   ];
 
   const uiuxdesignFaqs = [
-    { question: "What is included in your UI/UX design process?", answer: "🔹 We follow a structured approach: user research, wireframing, prototyping, and final design." },
-    { question: "Which tools do you use for UI/UX design?", answer: "🔹 We use Figma, Adobe XD, Sketch, and InVision to create stunning interfaces." },
-    { question: "How do you ensure a good user experience (UX)?", answer: "🔹 We conduct usability testing and feedback sessions to refine designs." },
-    { question: "Do you provide UI design for mobile apps?", answer: "🔹 Yes! We create pixel-perfect UI/UX for mobile, web, and SaaS platforms." },
-    { question: "How long does UI/UX design take?", answer: "🔹 A simple design takes 2-4 weeks, while complex interfaces may take 6-8 weeks." },
+    { question: "What is included in your UI/UX design process?", answer: " We follow a structured approach: user research, wireframing, prototyping, and final design." },
+    { question: "Which tools do you use for UI/UX design?", answer: " We use Figma, Adobe XD, Sketch, and InVision to create stunning interfaces." },
+    { question: "How do you ensure a good user experience (UX)?", answer: " We conduct usability testing and feedback sessions to refine designs." },
+    { question: "Do you provide UI design for mobile apps?", answer: " Yes! We create pixel-perfect UI/UX for mobile, web, and SaaS platforms." },
+    { question: "How long does UI/UX design take?", answer: " A simple design takes 2-4 weeks, while complex interfaces may take 6-8 weeks." },
   ];
 
   return (

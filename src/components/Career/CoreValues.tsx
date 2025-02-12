@@ -38,10 +38,10 @@ const ValueCard: React.FC<ValueCardType> = ({ icon, title, description }) => (
 
 const CoreValues: React.FC = () => {
   return (
-    <div className=" py-16 md:mt-44 ">
+    <div className=" py-16 md:mt-24  ">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 sm:space-x-3 ">
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Our core values</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-purple-600">Our core values</h2>
           <p className=" max-w-2xl">
           Throughout everything we do at TechCreator, our core values guide us. Inspire our team, shape our culture, and ensure that our clients receive exceptional results.
           </p>

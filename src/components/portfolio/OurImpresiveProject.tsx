@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const OurImpressiveProject = () => {
   return (
-    <div className="xl:px-16 md:px-10 px-2 mt-7 ">
+    <div className="">
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-2xl md:text-4xl font-bold">

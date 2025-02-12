@@ -9,15 +9,19 @@ import React from 'react';
 const About = () => {
   return (
     <>
+
+    
       <AboutHeroSection/>
-      <div className=" ">
+      <div className='max-w-[1450px] mx-auto px-4 md:mt-16 mt-9'>
+     
       <Overview/>
+<div className='md:mt-16 mt-9'>
+<ServicesSection  />
 </div>
-      <ServicesSection/>
       <ProjectsCount/>
       <OverviewSec/>
       <ExpertTeam/>
-     
+      </div>
     </>
   );
 }

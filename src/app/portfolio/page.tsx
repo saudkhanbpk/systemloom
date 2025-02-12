@@ -1,4 +1,5 @@
 
+import ClientReviews from "@/components/landingPage/ClientReviews"
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection"
 import ServicesSection from "@/components/landingPage/ServicesSection"
 import HeroSection from "@/components/portfolio/HeroSection"
@@ -11,10 +12,13 @@ const Portfolio = () => {
     <>
       <HeroSection/>
 
-    <div className="">
+    <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
     <PortfolioSection/>
       <OurImpresiveProject/>
-      <ClientTestimonialsSection/>
+      <div className=" bg-purple-600 md:mt-16 mt-9 md:mb-16 mb-9 ">
+<ClientReviews/>
+<ClientTestimonialsSection />
+</div>
     </div>
      
     </>

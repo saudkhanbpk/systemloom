@@ -50,11 +50,11 @@ const projectManagement = () => {
 
 
   const projectManagementFaqs = [
-    { question: "What project management methodologies do you follow?", answer: "🔹 We use Agile, Scrum, and Kanban for efficient project delivery." },
-    { question: "How do you track project progress?", answer: "🔹 We use tools like Jira, Trello, and Asana for real-time tracking." },
-    { question: "How do you handle delays and risks in projects?", answer: "🔹 We conduct risk assessments and set buffer timelines to handle challenges." },
-    { question: "Do you offer remote project management?", answer: "🔹 Yes! We manage projects remotely with effective communication tools." },
-    { question: "Can you help manage a large-scale IT project?", answer: "🔹 Yes, we specialize in enterprise-level project management and execution." },
+    { question: "What project management methodologies do you follow?", answer: " We use Agile, Scrum, and Kanban for efficient project delivery." },
+    { question: "How do you track project progress?", answer: " We use tools like Jira, Trello, and Asana for real-time tracking." },
+    { question: "How do you handle delays and risks in projects?", answer: " We conduct risk assessments and set buffer timelines to handle challenges." },
+    { question: "Do you offer remote project management?", answer: " Yes! We manage projects remotely with effective communication tools." },
+    { question: "Can you help manage a large-scale IT project?", answer: " Yes, we specialize in enterprise-level project management and execution." },
   ];
 
   return (

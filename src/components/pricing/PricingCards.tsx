@@ -81,8 +81,8 @@ const PricingCards: React.FC = () => {
 
       <div>
        
-
-        <div className="flex flex-col md:flex-row justify-between  gap-16 py-10 md:py-10  md:px-8 px-3 lg:px-16 ">
+      <div className='max-w-[1450px] mx-auto px-4 md:mt-16 mt-9'>
+        <div className="flex flex-col md:flex-row justify-between  gap-16  ">
           <div className="md:w-[1900px] ">
             <h2 className="text-2xl md:text-3xl lg:text-4xl mb-2 ">
               Affordable Solutions Without Sacrificing Quality
@@ -94,8 +94,8 @@ const PricingCards: React.FC = () => {
               marketing, or app development.We know every business has different and unique requirements, which provoke us to offer flexible options that cater to different budgets.We have a team of expertise committed to deliver exceptional results and add values to your investment. 
             </p>
           </div>
-          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px]  md:h-[349.42px] mx-auto md:mx-0">
-            <div className="relative z-10 w-full h-full">
+          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px] md:h-[349.42px] mx-auto md:mx-0">
+            <div className="relative w-full h-full">
               <Image
                 src={frontImage}
                 alt="Flexible pricing for high-quality web, marketing, and app development services"
@@ -109,7 +109,7 @@ const PricingCards: React.FC = () => {
 
         
 
-        <div className="flex flex-col md:flex-row justify-between  gap-16 py-10 md:py-10  md:px-8 px-3 lg:px-16 ">
+        <div className="flex flex-col md:flex-row justify-between  gap-16 py-10 md:py-10 ">
           <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px]  md:h-[349.42px] mx-auto md:mx-0">
             <div className="relative z-10 w-full h-full">
               <Image
@@ -133,13 +133,13 @@ Our pricing is transparent and there is no hidden fees.
           
         </div>
         {/* Pricing form */}
-        <div ref={pricingFormRef}>
+        <div ref={pricingFormRef} >
           <PricingForm />
         </div>
 
         
 
-       <div className="flex flex-col md:flex-row justify-between  gap-16 py-10 md:py-10  md:px-8 px-3 lg:px-16 ">
+       <div className="flex flex-col md:flex-row justify-between  gap-16 py-10 md:py-10 ">
           <div className="md:w-[1900px] ">
             <h2 className="text-2xl md:text-3xl lg:text-4xl mb-2 ">
             Why Choose TechCreator for Your Next Project?
@@ -160,6 +160,8 @@ With TechCreator, you get more than just a service—you get a partner committed
             </div>
           </div>
         </div>
+</div>
+
       </div>
     </>
   );

@@ -47,11 +47,11 @@ const SoftwareMaintenance = () => {
 
 
   const softwaremaintenanceFaqs = [
-    { question: "What type of software maintenance do you provide?", answer: "🔹 We offer bug fixes, updates, performance optimization, and security patches." },
-    { question: "Can you maintain software built by another company?", answer: "🔹 Yes, we take over legacy software and improve its efficiency." },
-    { question: "How often should software be updated?", answer: "🔹 Regular updates every 3-6 months help improve security and speed." },
-    { question: "Do you provide 24/7 support for critical systems?", answer: "🔹 Yes, we offer emergency support for mission-critical applications." },
-    { question: "Can you migrate old software to new technologies?", answer: "🔹 Yes, we modernize outdated software into scalable, cloud-based solutions." },
+    { question: "What type of software maintenance do you provide?", answer: " We offer bug fixes, updates, performance optimization, and security patches." },
+    { question: "Can you maintain software built by another company?", answer: " Yes, we take over legacy software and improve its efficiency." },
+    { question: "How often should software be updated?", answer: " Regular updates every 3-6 months help improve security and speed." },
+    { question: "Do you provide 24/7 support for critical systems?", answer: " Yes, we offer emergency support for mission-critical applications." },
+    { question: "Can you migrate old software to new technologies?", answer: " Yes, we modernize outdated software into scalable, cloud-based solutions." },
   ];
 
 

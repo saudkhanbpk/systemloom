@@ -49,11 +49,11 @@ const MobileAppDevelopment = () => {
 
 
   const mobileAppsFaqs = [
-    { question: "Do you develop apps for both iOS and Android?", answer: "🔹 Yes! We build native (Swift, Kotlin) and cross-platform (React Native, Flutter) apps." },
-    { question: "How much does it cost to develop a mobile app?", answer: "🔹 Cost varies based on features, but basic apps start from $5,000+, while complex apps go higher." },
-    { question: "How long does mobile app development take?", answer: "🔹 Simple apps take 3-6 months, while complex apps may take 6-12 months." },
-    { question: "Do you provide post-launch support?", answer: "🔹 Yes, we offer app maintenance, updates, and bug fixes to ensure smooth performance." },
-    { question: "Can you integrate third-party APIs into my app?", answer: "🔹 Yes, we integrate payment gateways, social media logins, analytics, and more." },
+    { question: "Do you develop apps for both iOS and Android?", answer: " Yes! We build native (Swift, Kotlin) and cross-platform (React Native, Flutter) apps." },
+    { question: "How much does it cost to develop a mobile app?", answer: " Cost varies based on features, but basic apps start from $5,000+, while complex apps go higher." },
+    { question: "How long does mobile app development take?", answer: " Simple apps take 3-6 months, while complex apps may take 6-12 months." },
+    { question: "Do you provide post-launch support?", answer: " Yes, we offer app maintenance, updates, and bug fixes to ensure smooth performance." },
+    { question: "Can you integrate third-party APIs into my app?", answer: " Yes, we integrate payment gateways, social media logins, analytics, and more." },
   ];
 
 

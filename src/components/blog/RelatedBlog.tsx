@@ -29,7 +29,7 @@ const RelatedBlog: React.FC<RelatedBlogProps> = ({ excludeBlogId }) => {
   const relatedBlogs = blogs?.filter((blog: any) => blog._id !== excludeBlogId).slice(0, 3) || [];
 
   return (
-    <div className="container mb-10 mt-10 mx-auto cursor-pointer md:px-8  xl:px-16 px-4 grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
+    <div className="container mb-10 mt-10 mx-auto cursor-pointer grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
     {relatedBlogs.map((blog: any) => (
       <div key={blog._id || Math.random()} >
               <Link href={`/blog/${createSlug(blog.title || 'Untitled')}`}>

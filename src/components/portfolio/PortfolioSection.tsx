@@ -4,7 +4,7 @@ import portfolioImage from "../../../public/assets/portfoliopage/portfolioImage.
 
 const PortfolioSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center  xl:px-16 md:px-8 px-2 md:mt-4 gap-6">
+    <div className="flex flex-col md:flex-row items-center gap-6">
       {/* Image Section */}
       <div className="">
         <Image

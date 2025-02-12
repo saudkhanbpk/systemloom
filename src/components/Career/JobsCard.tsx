@@ -94,8 +94,8 @@ useGetAllJobs()
     <>
       <div className=" py-2   px-1">
         <div className=" ">
-          <p className="font-inter font-semibold text-[42px]">Open positions</p>
-          <p className="font-inter font-normal text-[22px] text-[#838696]">
+          <p className="font-inter font-semibold md:text-5xl text-3xl text-purple-600">Open positions</p>
+          <p className="font-inter font-normal text-[22px] text-[#838696] mt-2">
             Come join the team!
           </p>
         </div>

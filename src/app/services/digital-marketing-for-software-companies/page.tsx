@@ -46,11 +46,11 @@ const DigitalMarketing = () => {
   ];
 
   const digitalMarketingFaqs = [
-    { question: "What services are included in digital marketing?", answer: "🔹 We offer social media marketing, PPC ads, email marketing, and SEO." },
-    { question: "Do you manage social media accounts?", answer: "🔹 Yes, we handle Facebook, Instagram, LinkedIn, and Twitter marketing." },
-    { question: "How do you track ad campaign performance?", answer: "🔹 We provide real-time analytics and conversion tracking." },
-    { question: "Can you run paid ad campaigns?", answer: "🔹 Yes! We manage Google Ads, Facebook Ads, and LinkedIn Ads." },
-    { question: "How long does it take to see digital marketing results?", answer: "🔹 Organic marketing takes 3-6 months, while paid ads show results instantly." },
+    { question: "What services are included in digital marketing?", answer: " We offer social media marketing, PPC ads, email marketing, and SEO." },
+    { question: "Do you manage social media accounts?", answer: " Yes, we handle Facebook, Instagram, LinkedIn, and Twitter marketing." },
+    { question: "How do you track ad campaign performance?", answer: " We provide real-time analytics and conversion tracking." },
+    { question: "Can you run paid ad campaigns?", answer: " Yes! We manage Google Ads, Facebook Ads, and LinkedIn Ads." },
+    { question: "How long does it take to see digital marketing results?", answer: " Organic marketing takes 3-6 months, while paid ads show results instantly." },
   ];
 
   return (

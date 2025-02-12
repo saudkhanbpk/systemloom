@@ -84,7 +84,7 @@ const PricingForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-black pt-3 pb-3">
+    <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 pt-3 pb-3">
       <div className="flex flex-col md:flex-row gap-6 justify-between  md:px-16 mx-auto">
         {/* Left Section */}
         <div className="text-white flex md:mx-0 mx-auto flex-col mb-6 lg:mb-0">

@@ -47,11 +47,11 @@ const WebDevelopment = () => {
   ];
 
   const webDevFaqs = [
-    { question: "Which technologies do you use for web development?", answer: "🔹 We use modern technologies like React.js, Next.js, Node.js, Express.js, MongoDB, and TailwindCSS for building scalable web applications." },
-    { question: "Do you develop eCommerce websites?", answer: "🔹 Yes, we specialize in eCommerce platforms like Shopify, WooCommerce, and custom solutions with secure payment gateways." },
-    { question: "How long does it take to develop a website?", answer: "🔹 Development time depends on complexity, but typically 4-12 weeks for a complete project." },
-    { question: "Do you provide website maintenance and support?", answer: "🔹 Yes, we offer ongoing maintenance to update content, fix bugs, and improve security." },
-    { question: "Will my website be SEO-friendly and mobile-responsive?", answer: "🔹 Absolutely! We ensure your website is optimized for search engines and fully responsive on all devices." },
+    { question: "Which technologies do you use for web development?", answer: " We use modern technologies like React.js, Next.js, Node.js, Express.js, MongoDB, and TailwindCSS for building scalable web applications." },
+    { question: "Do you develop eCommerce websites?", answer: " Yes, we specialize in eCommerce platforms like Shopify, WooCommerce, and custom solutions with secure payment gateways." },
+    { question: "How long does it take to develop a website?", answer: " Development time depends on complexity, but typically 4-12 weeks for a complete project." },
+    { question: "Do you provide website maintenance and support?", answer: " Yes, we offer ongoing maintenance to update content, fix bugs, and improve security." },
+    { question: "Will my website be SEO-friendly and mobile-responsive?", answer: " Absolutely! We ensure your website is optimized for search engines and fully responsive on all devices." },
   ];
 
   return (

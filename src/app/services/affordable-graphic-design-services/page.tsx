@@ -46,11 +46,11 @@ const GraphicDesign = () => {
   ];
 
   const graphicDesigningFaqs = [
-    { question: "What graphic design services do you offer?", answer: "🔹 We create logos, branding, UI designs, illustrations, and social media graphics." },
-    { question: "Which design tools do you use?", answer: "🔹 We work with Adobe Photoshop, Illustrator, Figma, and Canva." },
-    { question: "How long does a graphic design project take?", answer: "🔹 Simple designs take 2-5 days, while branding projects take 1-4 weeks." },
-    { question: "Do you provide custom branding packages?", answer: "🔹 Yes! We offer logo, brand identity, and social media design." },
-    { question: "Can you create designs for both digital and print?", answer: "🔹 Absolutely! We design business cards, posters, and social media graphics." },
+    { question: "What graphic design services do you offer?", answer: " We create logos, branding, UI designs, illustrations, and social media graphics." },
+    { question: "Which design tools do you use?", answer: " We work with Adobe Photoshop, Illustrator, Figma, and Canva." },
+    { question: "How long does a graphic design project take?", answer: " Simple designs take 2-5 days, while branding projects take 1-4 weeks." },
+    { question: "Do you provide custom branding packages?", answer: " Yes! We offer logo, brand identity, and social media design." },
+    { question: "Can you create designs for both digital and print?", answer: " Absolutely! We design business cards, posters, and social media graphics." },
   ];
 
   return (

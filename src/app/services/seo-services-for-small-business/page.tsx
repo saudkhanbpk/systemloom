@@ -47,11 +47,11 @@ const SeoContentWriting = () => {
   ];
 
   const seoFaqs = [
-    { question: "What is included in your SEO services?", answer: "🔹 We offer keyword research, on-page SEO, backlinks, and content optimization." },
-    { question: "How long does it take to see SEO results?", answer: "🔹 SEO results typically take 3-6 months, depending on competition." },
-    { question: "Do you provide blog writing and content marketing?", answer: "🔹 Yes! We create SEO-friendly blogs, articles, and website content." },
-    { question: "Can SEO help my local business?", answer: "🔹 Yes, our Local SEO strategies improve Google rankings in your area." },
-    { question: "How do you track SEO performance?", answer: "🔹 We provide monthly reports and real-time analytics dashboards." },
+    { question: "What is included in your SEO services?", answer: " We offer keyword research, on-page SEO, backlinks, and content optimization." },
+    { question: "How long does it take to see SEO results?", answer: " SEO results typically take 3-6 months, depending on competition." },
+    { question: "Do you provide blog writing and content marketing?", answer: " Yes! We create SEO-friendly blogs, articles, and website content." },
+    { question: "Can SEO help my local business?", answer: " Yes, our Local SEO strategies improve Google rankings in your area." },
+    { question: "How do you track SEO performance?", answer: " We provide monthly reports and real-time analytics dashboards." },
   ];
 
   return (

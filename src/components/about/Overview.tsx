@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Overview: React.FC = () => {
   return (
-    <div className="md:py-10 py-6 px-2 md:px-10">
+    <div className="">
       <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-10">
         {/* Images Section */}
         <div className="flex w-full about-page justify-center md:justify-start gap-4 mb-6 md:mb-0">

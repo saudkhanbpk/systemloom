@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import ouTeamImage from "../../../public/assets/aboutpage/team1.jpg"
+import ouTeamImage from "../../../public/assets/aboutpage/teamimage.png"
 import Image from "next/image";
 
 

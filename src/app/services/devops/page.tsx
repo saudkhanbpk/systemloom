@@ -49,11 +49,11 @@ const Devops = () => {
 
 
   const devopsFaqs = [
-    { question: "What DevOps tools do you use?", answer: "🔹 We use Docker, Kubernetes, Jenkins, Terraform, AWS, and Azure DevOps." },
-    { question: "How does DevOps improve software development?", answer: "🔹 DevOps automates deployment, enhances security, and speeds up releases." },
-    { question: "Do you offer CI/CD pipeline setup?", answer: "🔹 Yes, we set up automated CI/CD pipelines for faster, error-free deployments." },
-    { question: "How do you ensure infrastructure security?", answer: "🔹 We use firewalls, encryption, and vulnerability scanning to protect your system." },
-    { question: "Can you migrate existing infrastructure to the cloud?", answer: "🔹 Absolutely! We handle AWS, Google Cloud, and Azure cloud migrations." },
+    { question: "What DevOps tools do you use?", answer: " We use Docker, Kubernetes, Jenkins, Terraform, AWS, and Azure DevOps." },
+    { question: "How does DevOps improve software development?", answer: " DevOps automates deployment, enhances security, and speeds up releases." },
+    { question: "Do you offer CI/CD pipeline setup?", answer: " Yes, we set up automated CI/CD pipelines for faster, error-free deployments." },
+    { question: "How do you ensure infrastructure security?", answer: " We use firewalls, encryption, and vulnerability scanning to protect your system." },
+    { question: "Can you migrate existing infrastructure to the cloud?", answer: " Absolutely! We handle AWS, Google Cloud, and Azure cloud migrations." },
   ];
 
 

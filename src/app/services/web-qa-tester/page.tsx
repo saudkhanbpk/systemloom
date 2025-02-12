@@ -46,11 +46,11 @@ const QATesting = () => {
   ];
 
   const qatestingFaqs = [
-    { question: "What types of testing do you provide?", answer: "🔹 We offer manual testing, automation, performance, and security testing." },
-    { question: "Do you test mobile applications?", answer: "🔹 Yes, we test iOS, Android, and cross-platform apps for bugs and performance." },
-    { question: "Which automation testing tools do you use?", answer: "🔹 We use Selenium, Cypress, Jest, and JMeter for automation." },
-    { question: "How do you ensure software quality?", answer: "🔹 We follow test-driven development (TDD) and continuous testing." },
-    { question: "Can you perform security testing for web applications?", answer: "🔹 Yes, we conduct penetration testing and vulnerability assessments." },
+    { question: "What types of testing do you provide?", answer: "We offer manual testing, automation, performance, and security testing." },
+    { question: "Do you test mobile applications?", answer: "Yes, we test iOS, Android, and cross-platform apps for bugs and performance." },
+    { question: "Which automation testing tools do you use?", answer: " We use Selenium, Cypress, Jest, and JMeter for automation." },
+    { question: "How do you ensure software quality?", answer: " We follow test-driven development (TDD) and continuous testing." },
+    { question: "Can you perform security testing for web applications?", answer: " Yes, we conduct penetration testing and vulnerability assessments." },
   ];
 
   return (

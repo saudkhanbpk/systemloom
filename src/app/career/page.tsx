@@ -9,7 +9,7 @@ const Career = () => {
     <>
       <CareerHeroSection/>
 
-    <div className='max-w-full xl:px-16 md:px-8 px-3 mx-auto border'>
+    <div className='max-w-[1450px] mx-auto px-4 md:mt-16'>
       <CoreValues/>
       <JobsCard />
       <DiversitySection/>

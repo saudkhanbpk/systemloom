@@ -37,14 +37,14 @@ const BlogCards: React.FC = () => {
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
 
   return (
-    <div>
+    <div className='max-w-[1450px] mx-auto px-4 md:mt-16 mt-9'>
     {blogs.length === 0 ? (
       <p className="text-center text-gray-600 mt-10">
         Sorry, no blogs are available at the moment. Please check back later!
       </p>
     ) : (
       <>
-        <div className="xl:px-16 px-3">
+    
         <div className="container mb-10 mt-10 cursor-pointer   mx-auto grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
         {currentBlogs.map((blog: any) => (
   <div key={blog._id}>
@@ -76,7 +76,7 @@ const BlogCards: React.FC = () => {
 ))}
 
         </div>
-        </div>
+        
         {/* Pagination Controls */}
         {blogs.length > blogsPerPage && (
           <div className="flex justify-center mb-6 items-center mt-8 space-x-4">
