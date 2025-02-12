@@ -116,7 +116,7 @@ const ExpertTeam: React.FC = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-12 xl:px-10 md:px-7 px-4 md:mb-16 mb-9">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3 md:gap-12 xl:px-10 md:px-7 px-4 md:mb-16 mb-9">
         {filteredProfiles.map((profile, index) => (
           <ProfileCard
             key={index}
