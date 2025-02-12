@@ -65,7 +65,7 @@ const ExpertTeam: React.FC = () => {
       </div>
 
       {/* Buttons to select category */}
-      <div className="flex justify-center space-x-4 py-4 mb-6">
+      <div className="flex justify-center flex-wrap text-nowrap gap-3 md:gap-0 space-x-4 py-4 mb-6">
         <button
           onClick={() => handleCategoryChange("All")}
           className={`px-6 py-2 rounded-lg ${selectedCategory === "All" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
