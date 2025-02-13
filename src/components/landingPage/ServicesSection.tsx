@@ -1,10 +1,12 @@
 "use client"
 import React from "react";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ServiceCard from "./ServiceCard";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Service {
   id: number;
@@ -12,10 +14,11 @@ interface Service {
   des: string;
   image: string;
   link: string;
-  altText: string; 
+  altText: string;
 }
 
 const ServicesSection: React.FC = () => {
+  
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1240 },
@@ -28,12 +31,12 @@ const ServicesSection: React.FC = () => {
       slidesToSlide: 1,
     },
     smallTablet: {
-      breakpoint: { max: 1024, min: 768 },
+      breakpoint: { max: 1024, min: 600 },
       items: 2,
       slidesToSlide: 1,
     },
     mobile: {
-      breakpoint: { max: 768, min: 0 },
+      breakpoint: { max: 600, min: 0 },
       items: 1,
       slidesToSlide: 1,
     },
@@ -163,114 +166,75 @@ const ServicesSection: React.FC = () => {
     
   ];
   
-
-  return (
-    <section className=" ">
-    <div className="">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
+ 
+  
+  const CustomButtonGroup = ({ next, previous }: { next?: () => void; previous?: () => void }) => (
+    <div className="absolute w-full top-1/2 -translate-y-1/2 flex justify-between px-2">
+      {/* Left Arrow */}
+      <button 
+        onClick={previous} 
+        className="bg-purple-600 shadow-md p-2 rounded-full hover:bg-black text-white transition"
+        aria-label="Previous Slide"
+        title="Previous Slide"
       >
-        <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-900 mb-4">
-          Our Premium Services
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Empowering businesses with cutting-edge solutions and expert services
-        </p>
-      </motion.div>
-      <Carousel
-  swipeable
-  draggable
-  responsive={responsive}
-  infinite
-  autoPlay
-  autoPlaySpeed={3000}
-  keyBoardControl
-  customTransition="all 0.5s ease"
-  transitionDuration={500}
-  containerClass="pb-12"
-  dotListClass="custom-dot-list-style"
-  itemClass="px-4"
-  renderDotsOutside={true}
-  arrows={true}
-  rtl={undefined} 
-  customLeftArrow={
-    <button
-      aria-label="Previous slide"
-      className="absolute left-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg  hover:bg-black transform -translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
-      style={{
-        top: '50%',
-        transform: 'translate(-0%, -0%)',
-      }}
-    >
-      <span className="sr-only">Previous slide</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
+        <ChevronLeft className="w-5 h-5" /> 
+      </button>
+  
+      {/* Right Arrow */}
+      <button 
+        onClick={next} 
+        className="bg-purple-600 shadow-md p-2 rounded-full hover:bg-black text-white transition"
+        aria-label="Next Slide"
+        title="Next Slide"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M15 19l-7-7 7-7"
-        />
-      </svg>
-    </button>
-  }
-  customRightArrow={
-    <button
-      aria-label="Next slide"
-      className="absolute right-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg hover:bg-black transform translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
-      style={{
-        top: '50%',
-        transform: 'translate(-0%, -0%)',
-      }}
-    >
-      <span className="sr-only">Next slide</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 5l7 7-7 7"
-        />
-      </svg>
-    </button>
-  }  
->
-  {servicesArr.map((item) => (
-    <motion.div
-      key={item.id}
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-    >
-      <Link href={item.link} className="block h-full">
-        <ServiceCard
-          title={item.title}
-          description={item.des}
-          icon={item.image}
-          altText={item.altText}
-          style={false}
-        />
-      </Link>
-    </motion.div>
-  ))}
-</Carousel>
+        <ChevronRight className="w-5 h-5" /> 
+      </button>
     </div>
-  </section>
-);
-};
-
-export default ServicesSection;
+  );
+  
+ 
+  
+ 
+    return (
+      <div className="relative">
+        <Carousel
+          swipeable
+          draggable
+          responsive={responsive}
+          infinite
+          autoPlay
+          autoPlaySpeed={3000}
+          keyBoardControl
+          customTransition="all 0.5s ease"
+          transitionDuration={500}
+          containerClass="pb-12"
+          dotListClass="flex justify-center space-x-2 mt-6"
+          itemClass="px-4"
+          renderDotsOutside={true}
+          customButtonGroup={<CustomButtonGroup />} // ✅ Custom Arrows
+          arrows={false} // Hide default arrows
+        >
+          {servicesArr.map((item) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <Link href={item.link} className="block h-full">
+                <ServiceCard
+                  title={item.title}
+                  description={item.des}
+                  icon={item.image}
+                  altText={item.altText}
+                  style={false}
+                />
+              </Link>
+            </motion.div>
+          ))}
+        </Carousel>
+      </div>
+    );
+  };
+  
+  export default ServicesSection;
