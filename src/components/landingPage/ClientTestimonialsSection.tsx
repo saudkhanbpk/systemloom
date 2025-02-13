@@ -41,7 +41,20 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+    
+      
+
+      {isHovered ? reviewScreenshot && (
+        <div className=" w-full h-full  bg-opacity-105 flex justify-center items-center">
+          <img
+            src={reviewScreenshot}
+            alt="Testimonial Screenshot"
+            className="object-cover max-w-[400px] max-h-[400px]"
+          />
+        </div>
+      ):(
+        <>
+          <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
         <Image
           src={image}
           alt={name}
@@ -61,16 +74,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           />
         ))}
       </div>
-      <p className="font-normal leading-6 text-base mb-2 text-center text-white">{`"${testimonial}"`}</p>
-
-      {isHovered && reviewScreenshot && (
-        <div className="absolute top-0 left-0 w-full h-full  bg-opacity-105 flex justify-center items-center">
-          <img
-            src={reviewScreenshot}
-            alt="Testimonial Screenshot"
-            className="object-cover max-w-[400px] max-h-[400px]"
-          />
-        </div>
+        <p className="font-normal leading-6 text-base mb-2 text-center text-white">{`"${testimonial}"`}</p>
+        </>
       )}
     </motion.div>
   );
@@ -118,21 +123,7 @@ const ClientTestimonialsSection: React.FC = () => {
       animate="visible"
       variants={sectionVariants}
     >
-      <div className="">
-        {/* <motion.h2
-          className="text-[35px] font-bold text-center text-[#9A00FF] mb-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.8 } }}
-        >
-          CLIENT TESTIMONIALS
-        </motion.h2>
-        <motion.p
-          className="text-2xl text-center font-medium mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1 } }}
-        >
-          What they say about us
-        </motion.p> */}
+      
         <motion.div
           initial="hidden"
           animate="visible"
@@ -160,7 +151,7 @@ const ClientTestimonialsSection: React.FC = () => {
             ))}
           </Carousel>
         </motion.div>
-      </div>
+    
     </motion.section>
   );
 };

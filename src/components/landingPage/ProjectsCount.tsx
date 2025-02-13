@@ -85,11 +85,11 @@ const ProjectsCount: FC = () => {
           <Image
             src="/assets/homepage/our-people-our-success.webp"
             alt="Our Success Story"
-            layout="fill"
-            objectFit="cover"
+            fill 
+            style={{ objectFit: "cover" }} 
             quality={85}
             priority
-            onLoadingComplete={() => setIsImageLoaded(true)}
+            onLoad={() => setIsImageLoaded(true)} 
             className="transform scale-105 hover:scale-100 transition-transform duration-[2s]"
           />
         </div>

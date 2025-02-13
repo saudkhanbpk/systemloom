@@ -8,7 +8,6 @@ import company4 from "../../../public/assets/homepage/image 152.webp";
 import company5 from "../../../public/assets/homepage/PatronPal logo.webp";
 import company6 from "../../../public/assets/homepage/image 181.webp";
 import company7 from "../../../public/assets/homepage/image 182.webp";
-import company8 from "../../../public/assets/homepage/hiredeveloper.webp";
 import Image from "next/image";
 
 const Companies = () => {
@@ -35,7 +34,7 @@ const Companies = () => {
                 key={index}
                 width={140}
                 height={48}
-                className="h-12 w-56 pr-20 object-contain"
+                className="h-auto w-auto pr-20 object-contain"
               />
             ))}
           </motion.div>
@@ -53,7 +52,7 @@ const Companies = () => {
                 key={index}
                 width={140}
                 height={48}
-                className="h-12 w-56 pr-20 object-contain"
+                className="h-auto w-auto pr-20 object-contain"
               />
             ))}
           </motion.div>

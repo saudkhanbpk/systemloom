@@ -1,9 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  
+  experimental: {
+    appDir: true, // If using Next.js 13+ App Router
+  },
+
   images: {
     domains: ['s3-alpha-sig.figma.com', 'res.cloudinary.com'],
   },
 
+  async headers() {
+    return [
+      {
+        source: "/videos/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" }
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
