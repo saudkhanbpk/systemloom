@@ -6,12 +6,21 @@ import { FaWhatsapp } from "react-icons/fa";
 import "./globals.css";
 import Link from "next/link";
 import * as Sentry from "@sentry/react";
+import {Poppins} from "next/font/google"
+
+
+
+const poppins = Poppins({
+weight : "300",
+subsets : ['latin'],
+display : 'swap'
+})
 
 // Sentry Initialization
-Sentry.init({
-  dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-  integrations: [],
-});
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [],
+// });
 
 
 
@@ -50,7 +59,7 @@ export default function RootLayout({
         
       </head>
       <body
-        className="antialiased"
+        className={`antialiased ${poppins.className}`}
       >
         {/* Google Analytics */}
         <Script

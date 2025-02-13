@@ -2,72 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'GeistSans';
-  src: url('/fonts/GeistVF.woff') format('woff');
-  font-weight: 100 900;
-  font-display: swap;
-}
+@layer base {
+  /* Custom Font Definitions */
+ 
 
-@font-face {
-  font-family: 'GeistMono';
-  src: url('/fonts/GeistMonoVF.woff') format('woff');
-  font-weight: 100 900;
-  font-display: swap;
-}
+  /* Global Styles */
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Roboto', Arial, sans-serif;
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'GeistVF', Arial, sans-serif;
-}
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
 
-
-input:-webkit-autofill,
-textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-}
-
-
-
-
-
-/* Media query for screens between 841px and 941px */
-@media screen and (max-width: 1107px) and (min-width: 1024px) {
-  .webDevtext {
-    width: 480px;
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-@media (max-width: 1107px) {
-  .image-height {
-    margin-top: 4%;
+@layer components {
+  /* You can add reusable components here if needed */
+}
+
+@layer utilities {
+  /* Responsive Utilities */
+  @media screen and (max-width: 1107px) and (min-width: 1024px) {
+    .webDevtext {
+      width: 480px;
+    }
+  }
+
+  @media (max-width: 1107px) {
+    .image-height {
+      margin-top: 4%;
+    }
+  }
+
+  @media (max-width: 1119px) {
+    .hide-at-1119 {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1130px) {
+    .hide-at-970 {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 936px) and (min-width: 768px) {
+    .hide-at-936 {
+      height: 200px;
+      width: 300px;
+    }
   }
 }
-
-
-@media (max-width: 1119px) {
-  .hide-at-1119 {
-    display: none !important;
-  }
-}
-
-@media (max-width: 1130px) {
-  .hide-at-970 {
-    display: none !important;
-  }
-}
-
-@media (max-width: 936px) and (min-width: 768px)  {
-  .hide-at-936 {
-    height: 200px;
-    width: 300px;
-  }
-}
-
-
-html {
-  scroll-behavior: smooth;
-}
-
-

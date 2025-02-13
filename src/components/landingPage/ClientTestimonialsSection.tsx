@@ -46,9 +46,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
       {isHovered ? reviewScreenshot && (
         <div className=" w-full h-full  bg-opacity-105 flex justify-center items-center">
-          <img
+          <Image
             src={reviewScreenshot}
             alt="Testimonial Screenshot"
+            width={300}
+            height={300}
             className="object-cover max-w-[400px] max-h-[400px]"
           />
         </div>

@@ -22,7 +22,8 @@ const profiles: Profile[] = [
   { name: "Imam Hussain", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/imamhussain.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
   { name: "Ihtizaz", position: "Angular Developer", imageUrl: "/assets/aboutpage/irtizaz.jpg", linkedInUrl: "https://www.linkedin.com/in/ihtizazahmad", width: 300, height: 300, category: "angular" },
   
-  { name: "Ammar", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/ammaaar.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
+  { name: "Muhammad Ammar", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/ammaar.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
+  
   { name: "Farooq", position: "Graphic designer & 3D visualizer", imageUrl: "/assets/aboutpage/farooq1.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "designer" },
   { name: "Umair Amjed", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/umair1.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
   { name: "Luqman", position: "Angular Developer", imageUrl: "/assets/aboutpage/luqman.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "angular" },
@@ -41,6 +42,7 @@ const profiles: Profile[] = [
   { name: "Adeel ahmed khan", position: "Digital Marketing", imageUrl: "/assets/aboutpage/adeel.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "designer" },
 
   { name: "Masroor Ahmad", position: "HubSpot & Content writer", imageUrl: "/assets/aboutpage/masror.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: ["SEO", "CRM"] },
+  { name: "Ishtiaq", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/ishtiaq.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
 ];
 
 const ExpertTeam: React.FC = () => {
