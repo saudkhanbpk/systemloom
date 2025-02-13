@@ -3,30 +3,17 @@ import { useEffect } from "react";
 import Script from "next/script";
 import Layout from "../newLayout";
 import { FaWhatsapp } from "react-icons/fa";
-import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
 import * as Sentry from "@sentry/react";
 
 // Sentry Initialization
-Sentry.init({
-  dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-  integrations: [],
-});
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [],
+// });
 
-// Font configurations
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-  display: "swap",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-  display: "swap",
-});
+
 
 // Google Analytics Config Function
 declare global {
@@ -63,7 +50,7 @@ export default function RootLayout({
         
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
       >
         {/* Google Analytics */}
         <Script

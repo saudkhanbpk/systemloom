@@ -9,7 +9,6 @@ import company5 from "../../../public/assets/homepage/PatronPal logo.webp";
 import company6 from "../../../public/assets/homepage/image 181.webp";
 import company7 from "../../../public/assets/homepage/image 182.webp";
 import company8 from "../../../public/assets/homepage/hiredeveloper.webp";
-import Link from "next/link";
 import Image from "next/image";
 
 const Companies = () => {
@@ -18,7 +17,7 @@ const Companies = () => {
   return (
     <div className="overflow-x-hidden -mt-12   p-4 border rounded-md relative z-[10] bg-white shadow-sm">  
       <h2 className="text-center md:text-2xl text-lg font-bold text-purple-600 mt-3">
-        The world's leading brands are powered by TECHCREATOR
+        The world's leading brands are powered by TechCreator
       </h2>
       
       <div className="w-[90vw] relative z-[50]">  
@@ -65,45 +64,3 @@ const Companies = () => {
 };
 
 export default Companies;
-
-
-
-
-
-export const CTASection = () => {
-  return (
-    <section className="md:mb-32 md:mt-16 mt-7">
-      <div className="h-auto md:h-[300px]">
-        <div className="flex flex-col gap-6 md:flex-row">
-          <div className="mb-8 md:mb-0 leading-10">
-            <h2 className="text-2xl font-inter md:text-2xl font-semibold mb-4 leading-10 text-center md:text-left">
-              "Looking for top developers and designers? Let's build something
-              great together. Get in touch today!"
-            </h2>
-            <div className="text-center md:text-left">
-              <Link href="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-[#9A00FF] text-white shadow-[0_4px_16px_-4px_#3b71ca] font-semibold p-2 rounded-[5px] w-[220px] mt-5 mx-auto md:mx-0"
-                >
-                  Hire Top Developers
-                </motion.button>
-              </Link>
-            </div>
-          </div>
-          <div className="mb-4">
-            <Image
-              src={company8}
-              alt="Team working together"
-              width={300}
-              height={280}
-              className="w-full hide-at-936 rounded-lg shadow-lg h-[280px] md:h-[330px] md:w-[700px]"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-

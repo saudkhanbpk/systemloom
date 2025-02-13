@@ -16,11 +16,11 @@ type Technology = { name: string; icon: JSX.Element; category: string };
 
 const categories: TechnologyCategory[] = [
   { id: "mobile-apps", name: "Mobile Apps", isActive: true },
-  { id: "web-platforms", name: "Web Platforms" },
-  { id: "backend", name: "Backend Technologies" },
   { id: "database", name: "Databases" },
-  { id: "ai-ml", name: "AI & Machine Learning" },
+  { id: "web-platforms", name: "Web Platforms" },
   { id: "cloud-devops", name: "Cloud & DevOps" },
+  { id: "backend", name: "Backend Technologies" },
+  { id: "ai-ml", name: "AI & Machine Learning" },
   { id: "blockchain", name: "Blockchain Technologies" },
 ];
 
@@ -180,7 +180,7 @@ export default function TechnologiesSection() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(category.id)}
               className={cn(
-                "px-6 py-3 rounded-full font-medium text-lg transition-all duration-300 ",
+                "px-6 py-3 rounded-full font-medium text-lg transition-all duration-300 text-nowrap",
                 activeCategory === category.id
                   ? "bg-white text-purple-600 shadow-lg transform scale-105"
                   : "bg-purple-600 text-white hover:bg-white hover:text-purple-600 shadow-md"

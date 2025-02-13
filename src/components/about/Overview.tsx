@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import about1 from "../../../public/assets/aboutpage/about1.webp";
-import about2 from "../../../public/assets/aboutpage/about2.webp";
-import about3 from "../../../public/assets/aboutpage/about3.webp";
+import ouTeamImage from "../../../public/assets/aboutpage/teamimage.png"
+
 import Link from "next/link";
 
 const Overview: React.FC = () => {
@@ -10,32 +9,11 @@ const Overview: React.FC = () => {
     <div className="">
       <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-10">
         {/* Images Section */}
-        <div className="flex w-full about-page justify-center md:justify-start gap-4 mb-6 md:mb-0">
-          <div>
-            <Image
-              src={about1}
-              alt="about"
-              className="w-[100px] md:w-[216px] h-auto"
-              layout="intrinsic"
-            />
-          </div>
-          <div>
-            <Image
-              src={about2}
-              alt="about"
-              className="w-[100px] md:w-[216px] mt-20 h-auto"
-              layout="intrinsic"
-            />
-          </div>
-          <div>
-            <Image
-              src={about3}
-              alt="about"
-              className="w-[100px] md:w-[216px] h-auto"
-              layout="intrinsic"
-            />
-          </div>
-        </div>
+       
+        <div className="w-full lg:w-1/2 flex justify-center">
+      <Image src ={ouTeamImage} alt="our team"  width={500} height={400} className="rounded-lg object-contain" />
+    </div>
+      
 
         {/* Text Section */}
         <div className="w-full py- md:py-16 px-2">

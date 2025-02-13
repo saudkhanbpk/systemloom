@@ -18,6 +18,7 @@ import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjec
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 import FaqSection from "@/components/services/FaqSection";
 import ClientReviews from "@/components/landingPage/ClientReviews";
+import OurTeam from "@/components/about/OurTeam";
 
 const WebDevelopment = () => {
   const categorySlug = "web-development";
@@ -277,6 +278,8 @@ const WebDevelopment = () => {
 
 
 <FaqSection title="Frequently Asked Questions" faqs={webDevFaqs} />
+<OurTeam />
+
 
 
       {/* RelatedServices section start */}

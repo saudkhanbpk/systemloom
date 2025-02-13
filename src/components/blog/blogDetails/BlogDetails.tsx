@@ -29,7 +29,7 @@ interface DetailPostProps {
 }
 
 const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
-  // useGetAllBlogs()
+  useGetAllBlogs()
   const blogs = useSelector((state: RootState) => state.blogs.blogs);
   const { slug } = params;
 

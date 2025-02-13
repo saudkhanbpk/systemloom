@@ -183,7 +183,6 @@ const ServicesSection: React.FC = () => {
       <Carousel
   swipeable
   draggable
- 
   responsive={responsive}
   infinite
   autoPlay
@@ -196,14 +195,17 @@ const ServicesSection: React.FC = () => {
   itemClass="px-4"
   renderDotsOutside={true}
   arrows={true}
+  rtl={undefined} 
   customLeftArrow={
     <button
-      className="absolute left-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg hover:bg-gray-50 transform -translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
+      aria-label="Previous slide"
+      className="absolute left-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg  hover:bg-black transform -translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
       style={{
         top: '50%',
         transform: 'translate(-0%, -0%)',
       }}
     >
+      <span className="sr-only">Previous slide</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5 text-white"
@@ -222,12 +224,14 @@ const ServicesSection: React.FC = () => {
   }
   customRightArrow={
     <button
-      className="absolute right-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg hover:bg-gray-50 transform translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
+      aria-label="Next slide"
+      className="absolute right-0 z-10 p-1.5 md:p-2.5 rounded-full bg-purple-600 shadow-lg hover:bg-black transform translate-x-1/2 transition-all duration-200 hover:scale-110 focus:outline-none"
       style={{
         top: '50%',
         transform: 'translate(-0%, -0%)',
       }}
     >
+      <span className="sr-only">Next slide</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5 text-white"
@@ -243,7 +247,7 @@ const ServicesSection: React.FC = () => {
         />
       </svg>
     </button>
-  }
+  }  
 >
   {servicesArr.map((item) => (
     <motion.div
