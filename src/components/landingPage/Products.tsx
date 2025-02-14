@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const Products = () => {
   // Array of product data
@@ -53,15 +51,11 @@ const Products = () => {
             </p>
             {/* Button with Link */}
             <Link href={product.href} className="mt-auto flex justify-center">
-              <motion.button
-                whileHover={{ scale: 1.1, backgroundColor: "#7E22CE" }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+              <button
                 className="text-white font-bold py-3 px-8 rounded-full bg-purple-600 mt-4 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_#3b71ca]"
               >
                 Schedule Demo &nbsp;→
-              </motion.button>
+              </button>
             </Link>
           </div>
         ))}

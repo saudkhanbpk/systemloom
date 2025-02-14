@@ -90,12 +90,16 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
         </div>
 
         {/* Content Text */}
+        
+        {/* Content Text */}
         <div className="text-gray-700 text-lg sm:text-xl leading-relaxed mb-12">
           <p
             className="text-sm sm:text-lg lg:text-xl"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
+
+        
       </div>
 
     </div>

@@ -44,8 +44,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     
       
 
-      {isHovered ? reviewScreenshot && (
-        <div className=" w-full h-full  bg-opacity-105 flex justify-center items-center">
+      {/* {isHovered ? reviewScreenshot && ( */}
+        {/* <div className=" w-full h-full  bg-opacity-105 flex justify-center items-center">
           <Image
             src={reviewScreenshot}
             alt="Testimonial Screenshot"
@@ -53,8 +53,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             height={300}
             className="object-cover max-w-[400px] max-h-[400px]"
           />
-        </div>
-      ):(
+        </div> */}
+      {/* ):( */}
         <>
           <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
         <Image
@@ -78,7 +78,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
         <p className="font-normal leading-6 text-base mb-2 text-center text-white">{`"${testimonial}"`}</p>
         </>
-      )}
+      {/* )} */}
     </motion.div>
   );
 };

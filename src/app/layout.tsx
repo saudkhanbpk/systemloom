@@ -7,6 +7,7 @@ import "./globals.css";
 import Link from "next/link";
 import * as Sentry from "@sentry/react";
 import {Poppins} from "next/font/google"
+import { usePathname } from "next/navigation";
 
 
 
@@ -36,6 +37,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname(); 
+
+
   useEffect(() => {
     // Set up Google Analytics tracking
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
@@ -59,7 +63,7 @@ export default function RootLayout({
         
       </head>
       <body
-        className={`antialiased ${poppins.className}`}
+       className={`antialiased ${pathname.startsWith("/blog/") ? "" : poppins.className}`}
       >
         {/* Google Analytics */}
         <Script

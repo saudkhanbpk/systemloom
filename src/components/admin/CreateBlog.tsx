@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 
 const CreateBlogForm = () => {
   const searchParams = useSearchParams();
-  const blogId = searchParams.get("blogId");
+  // const blogId = searchParams.get("blogId");
   const slug = searchParams.get("slug");
   const router = useRouter();
 
@@ -264,7 +264,7 @@ const CreateBlogForm = () => {
               toolbar:
                 "undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help | link",
               content_style:
-                "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                "body { font-family: Helvetica,Arial,sans-serif; font-size:14px }",
             }}
             onEditorChange={handleEditorChange}
           />
