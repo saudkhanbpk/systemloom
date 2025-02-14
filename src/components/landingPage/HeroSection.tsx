@@ -86,7 +86,7 @@ const Slider: React.FC = () => {
           {/* Overlay Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 text-white p-6">
             {/* ✅ Faster Text Rendering */}
-            <h2 className="text-xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl  leading-3">
+            <h2 className="text-xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl  leading-normal">
               <span>{slide.heading.split(slide.highlight)[0]}</span>
               <span className={slide.highlightColor}> {slide.highlight} </span>
               <span>{slide.heading.split(slide.highlight)[1]}</span>
