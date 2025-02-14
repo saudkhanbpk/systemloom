@@ -16,7 +16,7 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
       infiniteLoop
       showThumbs={false}
       showStatus={false}
-      swipeable={true} // ✅ Swipe enable for mobile
+      swipeable={false} 
       showIndicators={false}
       emulateTouch={true}
       transitionTime={700}
