@@ -158,7 +158,7 @@ const OurTeam = () => {
     </div>
 
     <div className="w-full lg:w-1/2 flex justify-center">
-      <Image src ={ouTeamImage} alt="our team"  width={500} height={400} className="rounded-lg object-contain" />
+      <Image src ={ouTeamImage} alt="our team"  width={500} height={400}  className="rounded-lg object-contain" />
     </div>
     </div>
     

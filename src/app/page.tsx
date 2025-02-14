@@ -15,6 +15,7 @@ import Technologies from "@/components/landingPage/Technologies";
 import WorkProcess from "@/components/landingPage/WorkProcess";
 
 
+
 export const metadata = {
   title: "Software Development and Digital Marketing Agency | TechCreator",
   description:

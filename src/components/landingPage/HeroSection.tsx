@@ -4,14 +4,10 @@ import React, { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel as ResponsiveCarousel } from 'react-responsive-carousel';
 import placeholderImage from "../../../public/assets/homepage/placeholder.jpg"
-
 import Link from 'next/link';
-
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-// ✅ Dynamically import Carousel for better performance
-const Carousel = dynamic(() => import('react-responsive-carousel').then(mod => mod.Carousel), { ssr: false });
+
 
 const slides = [
   {
@@ -71,6 +67,7 @@ const Slider: React.FC = () => {
               loop
               muted
               playsInline
+               preload="auto" 
               className="w-full h-full object-cover"
             >
               <source src={slide.videoSrc} type="video/mp4" />
@@ -89,7 +86,7 @@ const Slider: React.FC = () => {
           {/* Overlay Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 text-white p-6">
             {/* ✅ Faster Text Rendering */}
-            <h2 className="text-xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl leading-tight">
+            <h2 className="text-xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl  leading-3">
               <span>{slide.heading.split(slide.highlight)[0]}</span>
               <span className={slide.highlightColor}> {slide.highlight} </span>
               <span>{slide.heading.split(slide.highlight)[1]}</span>
