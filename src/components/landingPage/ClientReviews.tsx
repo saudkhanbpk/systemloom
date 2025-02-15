@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import upworkstar from "../../../public/assets/aboutpage/upwork.svg";
 import linkedinstar from "../../../public/assets/aboutpage/linkedin.svg";

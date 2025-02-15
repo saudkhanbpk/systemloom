@@ -1,97 +1,20 @@
-"use client";
+import PlatformInfoClient from "./PlatformInfoClient"; 
 
-import { useState } from 'react';
-import { FaLinkedin } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+// ✅ Server-Side Function (SSR)
+const getPlatformInfo = async () => {
+  return {
+    heading: "TechCreator – Innovate Faster with AI",
+    subHeading: "Where Innovation Meets Efficiency",
+    description:
+      "We harness the power of artificial intelligence to revolutionize software development. Build sophisticated web and mobile applications in a fraction of the time, without compromising on quality or scalability.",
+    youtubeEmbedUrl: "https://www.youtube.com/embed/yROV87v9sXg?autoplay=0&rel=0",
+  };
+};
 
-const PlatformInfo = () => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+const PlatformInfo = async () => {
+  const platformData = await getPlatformInfo(); // ✅ Fetch data on the server
 
-  return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-    >
-      {/* Heading Section */}
-      <motion.div 
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-center mb-6 md:mt-16 mt-9"
-      >
-        <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
-          TechCreator – Innovate Faster with AI
-        </h2>
-        <p className="text-lg md:text-xl text-gray-700 mt-4 max-w-3xl mx-auto">
-          Where Innovation Meets Efficiency
-        </p>
-      </motion.div>
-
-      {/* Content Section */}
-      <div className="grid md:grid-cols-2 gap-12 items-center bg-white rounded-2xl shadow-lg p-6 md:p-12">
-        {/* Left section */}
-        <motion.div
-          initial={{ x: -20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          className="space-y-6"
-        >
-          <div className="space-y-4">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Transform Your Ideas into Reality
-            </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We harness the power of artificial intelligence to revolutionize software development. 
-              Build sophisticated web and mobile applications in a fraction of the time, without 
-              compromising on quality or scalability.
-            </p>
-          </div>
-
-          <div className="space-y-2">
-            <h4 className="text-xl font-semibold text-purple-600">Why Choose TechCreator?</h4>
-            <ul className="space-y-2 text-gray-700  list-disc list-inside">
-              <li> Lightning-fast development cycles</li>
-              <li> AI-powered code optimization</li>
-              <li>Innovative solutions at scale</li>
-              <li>Cost-effective development.</li>
-            </ul>
-          </div>
-
-          <a
-            href="https://www.linkedin.com/in/saudkhan39"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors duration-200 group"
-          >
-            Connect on LinkedIn
-            <FaLinkedin className="ml-2 group-hover:scale-110 transition-transform duration-200" />
-          </a>
-        </motion.div>
-
-        {/* Right section with lazy-loaded video */}
-        <motion.div
-          initial={{ x: 20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
-        >
-          {!isVideoLoaded && (
-            <div className="absolute inset-0 bg-gray-100 animate-pulse" />
-          )}
-          <iframe
-            className="w-full h-full rounded-xl"
-            src="https://www.youtube.com/embed/yROV87v9sXg?autoplay=0&rel=0"
-            title="TechCreator Introduction"
-            loading="lazy"
-            onLoad={() => setIsVideoLoaded(true)}
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </motion.div>
-      </div>
-    </motion.div>
-  );
+  return <PlatformInfoClient platformData={platformData} />;
 };
 
 export default PlatformInfo;

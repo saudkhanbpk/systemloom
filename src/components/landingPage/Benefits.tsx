@@ -1,5 +1,4 @@
 import React from "react";
-import { SiCoinmarketcap } from "react-icons/si";
 import { FaBolt, FaBrain, FaChartLine, FaClock, FaCogs, FaRocket, FaLightbulb } from "react-icons/fa";
 
 const features = [
@@ -53,7 +52,7 @@ const Benefits = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 bg-gradient-to-r from-purple-500 to-indigo-500  rounded-lg shadow-lg transition-transform hover:scale-105"
+            className="flex flex-col items-center p-6 bg-gradient-to-r from-purple-500 to-indigo-500  rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:border-purple-600 hover:border-2"
           >
             {feature.icon}
             <h2 className="md:text-xl text-lg font-semibold mt-4 text-white">
