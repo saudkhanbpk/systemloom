@@ -39,7 +39,6 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
               className="w-full h-full object-cover"
             >
               <source src={slide.videoSrc} type="video/webm" />
-              <source src={slide.videoSrc} type="video/mp4" />
             </video>
           ) : (
             <Image

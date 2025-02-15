@@ -12,7 +12,7 @@ const getSlides = async () => {
       buttonColor: "bg-purple-600 hover:bg-purple-700",
     },
     {
-      videoSrc: "/videos/aibakgroundvideo.mp4",
+      videoSrc: "/videos/aibakgroundvideo.webm",
       heading: "AI-Powered Growth: Transforming Ideas into Industry Disruptors",
       highlight: "AI-Powered Growth:",
       highlightColor: "text-purple-600",
