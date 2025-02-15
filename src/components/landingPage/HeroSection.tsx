@@ -3,7 +3,7 @@ import Slider from "./Slider";
 const getSlides = async () => {
   return [
     {
-      videoSrc: "/videos/backgroundVideo01.webm",
+      videoSrc: "/videos/backgroundVideo.webm",
       heading: "Your All-in-One Solution for Websites, Mobile Apps & Custom Software",
       highlight: "Solution for Websites",
       highlightColor: "text-purple-600",
@@ -12,7 +12,7 @@ const getSlides = async () => {
       buttonColor: "bg-purple-600 hover:bg-purple-700",
     },
     {
-      videoSrc: "/videos/aibakgroundvideo.mp4",
+      videoSrc: "/videos/aibakgroundvideo.webm",
       heading: "AI-Powered Growth: Transforming Ideas into Industry Disruptors",
       highlight: "AI-Powered Growth:",
       highlightColor: "text-purple-600",
@@ -21,7 +21,7 @@ const getSlides = async () => {
       buttonColor: "bg-purple-600 hover:bg-purple-700",
     },
     {
-      videoSrc: "/videos/shapping background video.mp4",
+      videoSrc: "/videos/shapping-background-video.webm",
       heading: "Shaping the Future with Innovation",
       highlight: "Future",
       highlightColor: "text-purple-600",

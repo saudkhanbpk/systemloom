@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, PhoneCall, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,6 +32,21 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   let timer: NodeJS.Timeout;
+  const [scrolling, setScrolling] = useState(false);
+
+
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
 
   const navItems = [
     // { name: "Home", href: "/", icon: <FaHome /> },
@@ -96,6 +111,8 @@ const Header: React.FC = () => {
   //   setIsDropdownOpen(!isDropdownOpen);
   // };
 
+  
+
   const handleMouseEnter = (name: string) => {
     clearTimeout(timer); 
     setActiveDropdown(name);
@@ -107,8 +124,14 @@ const Header: React.FC = () => {
     }, 200); 
   };
 
+ 
+
   return (
-    <nav className="text-white  z-20 w-full fixed bg-black  text-nowrap">
+    <nav   className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
+      scrolling
+        ? "bg-black/50 backdrop-blur-lg shadow-lg"
+        : "bg-transparent"
+    }`}>
       <div className="md:px-9 px-2 ">
         <motion.div
          initial={{ opacity: 0, scale: 0.8 }}
@@ -224,7 +247,7 @@ const Header: React.FC = () => {
             <div className="hide-at-1119">
               <p className="flex gap-2 items-center text-base">
                 <PhoneCall color="#9A00FF" />
-                <span>
+                <span className="text-white">
                   <a href="callto:+13214073272" className="hover:underline">
                     +1 (321) 407-3272
                   </a>
@@ -236,7 +259,7 @@ const Header: React.FC = () => {
           <div className="md:hidden block">
             <p className=" flex gap-2 items-center text-sm ">
               <PhoneCall color="#9A00FF" size={15} />
-              <span>
+              <span className="text-white">
                 <a href="tel:+13214073272" className="hover:underline">
                   +1 (321) 407-3272
                 </a>
@@ -246,7 +269,7 @@ const Header: React.FC = () => {
           <div className="md:hidden flex items-center">
           <button
   onClick={() => setIsOpen(!isOpen)}
-  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+  className="inline-flex items-center justify-center p-2 rounded-md  hover:text-white hover:bg-gray-700 focus:outline-none text-white"
   aria-label={isOpen ? 'Close menu' : 'Open menu'} 
 >
   {isOpen ? (
