@@ -15,7 +15,7 @@ const Buttons = () => {
 
   // Open the WhatsApp link in the same tab
   const handleWhatsappClick = () => {
-    window.location.href = "https://wa.me/+447511801699";
+    window.location.href = "https://wa.me/13214073272";
   };
 
   // Navigate to the contact page
