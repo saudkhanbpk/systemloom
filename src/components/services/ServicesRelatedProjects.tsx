@@ -51,7 +51,7 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
           <div className=" mx-auto">
             {/* Heading Section */}
             <div className="text-center mb-12 mt-5 md:mt-0">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Recent Work</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-purple-600">Recent Work</h2>
               <p className="mt-4 text-lg text-gray-600   mx-auto">
               Explore our related work that highlights our commitment to innovation, seamless functionality, and delivering solutions tailored to meet diverse business needs. We specialize in creating responsive and user-friendly designs that yield measurable results.
 Want to bring your ideas to life? Let us help you achieve your goals with precision and creativity. Get in touch with us today to start your project!

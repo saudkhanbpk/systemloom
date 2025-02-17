@@ -129,7 +129,7 @@ const Header: React.FC = () => {
   return (
     <nav   className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
       scrolling
-        ? "bg-black/50 backdrop-blur-lg shadow-lg"
+        ? "bg-black backdrop-blur-lg shadow-lg"
         : "bg-transparent"
     }`}>
       <div className="md:px-9 px-2 ">

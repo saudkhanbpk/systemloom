@@ -19,6 +19,7 @@ import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonia
 import FaqSection from "@/components/services/FaqSection";
 import ClientReviews from "@/components/landingPage/ClientReviews";
 import OurTeam from "@/components/about/OurTeam";
+import ServiceHeroSection from "@/components/services/ServiceHeroSection";
 
 const WebDevelopment = () => {
   const categorySlug = "web-development";
@@ -54,35 +55,13 @@ const WebDevelopment = () => {
     { question: "Do you provide website maintenance and support?", answer: " Yes, we offer ongoing maintenance to update content, fix bugs, and improve security." },
     { question: "Will my website be SEO-friendly and mobile-responsive?", answer: " Absolutely! We ensure your website is optimized for search engines and fully responsive on all devices." },
   ];
+  
 
   return (
     <div className="">
 
       {/* hero section start */}
-      <div className="bg-black w-full md:px-0 px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0 justify-around items-center text-white">
-  {/* Left Section */}
-  <div className="w-full md:w-[50vw] text-center md:text-left">
-    <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
-      Empower your business with custom web development
-    </h1>
-    <p className="text-base lg:text-lg mt-3 leading-relaxed">
-      Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like <Link href="/healthcare" className="cursor-pointer text-blue-600">Healthcare</Link>, <Link href="/real-estate" className="cursor-pointer text-blue-600"> Real Estates</Link>, <Link href="/restaurants" className="cursor-pointer text-blue-600">Restaurants</Link> , <Link href="/e-commerce" className="cursor-pointer text-blue-600">E-Commerce</Link> stores—that ensure seamless functionality and innovation.
-    </p>
-    <Buttons />
-  </div>
-
-  {/* Right Section */}
-  <div className="w-full md:w-auto flex justify-center">
-  <Image
-  src={webDevelopmentImagehero}
-  alt="Web Development and Design"
-  width={300}
-  height={200}
-  priority={true} 
-  className="rounded-lg shadow-md object-cover"
-/>
-</div>
-</div>
+     <ServiceHeroSection/>
 
       {/* hero section end */}
       
@@ -118,9 +97,10 @@ const WebDevelopment = () => {
         </div>
       </div>
       {/* FeatureSection section end */}
+      
 
       {/* FeaturesList section start */}
-      <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
+      <h2 className="text-center text-3xl md:text-5xl font-bold md:mt-28 text-purple-600">Why Choose Us</h2>
       
       <div className='my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 '>
         <div className="border-r  xl:pr-3">
@@ -176,7 +156,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className=" text-center md:text-start">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2 text-purple-600">
               Custom Web App Development for Dynamic Digital Solutions
             </h2>
             <p className="text-base md:text-base xl:text-lg text-gray-700">
@@ -199,7 +179,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className=" text-center md:text-left">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2 text-purple-600">
             MERN & MEAN Web Development Services for High Performance
             </h2>
             <p className="text-base md:text-base lg:text-lg text-gray-700">
@@ -228,7 +208,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className="text-center md:text-left">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2 text-purple-600">
             React Native Development Services for Cross-Platform Excellence
             </h2>
             <p className="text-base md:text-base lg:text-lg xl:text-lg text-gray-700 ">
@@ -284,7 +264,7 @@ const WebDevelopment = () => {
 
       {/* RelatedServices section start */}
       <div className=" px-3 xl:px-0 py-12 sm:py-2 mb-8 md:mt-16 mt-9">
-  <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
+  <h2 className="text-2xl md:text-5xl font-semibold text-center mb-12 sm:mb-16 md:mb-20 text-purple-600">
     Related Services
   </h2>
 

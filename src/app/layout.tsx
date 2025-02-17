@@ -18,10 +18,10 @@ display : 'swap'
 })
 
 // Sentry Initialization
-Sentry.init({
-  dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
-  integrations: [],
-});
+// Sentry.init({
+//   dsn: "https://9d42fdd8329487e9dedc9b6bb7f46e6d@o4508575425036288.ingest.us.sentry.io/4508579252666368",
+//   integrations: [],
+// });
 
 
 
