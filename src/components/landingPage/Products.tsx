@@ -33,7 +33,7 @@ const Products = () => {
   return (
     <div className="md:mt-16 mt-9">
       <div className="text-center mb-10">
-        <h2 className="md:text-4xl text-3xl font-bold text-purple-600">Our Products</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600">Our Products</h2>
       </div>
 
       {/* Dynamically map through the products */}

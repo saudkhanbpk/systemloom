@@ -12,16 +12,16 @@ const getTeamData = async () => {
 };
 
 const OurTeam = async () => {
-  const teamData = await getTeamData(); // ✅ Fetch data on the server
+  const teamData = await getTeamData(); 
 
   return (
     <div className="flex lg:flex-row flex-col justify-between gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
       <div>
         <div className="lg:w-[500px]">
-          <h2 className="md:text-4xl text-xl text-purple-600 font-bold">{teamData.heading}</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  text-purple-600 font-bold">{teamData.heading}</h2>
           <p className="text-gray-600 mt-3">{teamData.description}</p>
         </div>
-        <OurTeamClient /> {/* ✅ Client Component for Form Handling */}
+        <OurTeamClient /> 
       </div>
 
       <div className="w-full lg:w-1/2 flex justify-center">

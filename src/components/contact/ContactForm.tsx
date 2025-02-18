@@ -82,7 +82,7 @@ const ContactForm: React.FC = () => {
   
 
   return (
-    <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+    <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24  lg:py-32">
     <form
       onSubmit={handleSubmit}
       className="flex flex-wrap justify-around items-start gap-10 mt-20"

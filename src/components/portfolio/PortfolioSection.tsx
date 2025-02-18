@@ -18,7 +18,7 @@ const PortfolioSection = () => {
 
       {/* Text Section */}
       <div className=" flex flex-col    ">
-        <h2 className="text-xl md:text-3xl font-bold mb-1 text-gray-900">
+        <h2 style={{lineHeight:1.2}} className="text-2xl md:text-4xl  font-semibold lg:max-w-4xl mb-1 text-gray-900">
         With TechCreator, Make a lasting impression of your Brand
         </h2>
         <p className="text-gray-700 md:text-lg text-sm leading-relaxed">

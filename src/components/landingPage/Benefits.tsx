@@ -43,7 +43,7 @@ const Benefits = () => {
   return (
     <div className="md:mt-16 mt-9 ">
       <div className="text-center">
-        <h2 className="md:text-4xl text-2xl font-bold text-purple-600">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-purple-600">
           What makes us unique
         </h2>
       </div>

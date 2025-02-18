@@ -1,4 +1,4 @@
-"use client"; // ✅ Client Component for Form Handling
+"use client"; 
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import CommonButton from "../common/Button";

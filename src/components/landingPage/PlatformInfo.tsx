@@ -12,7 +12,7 @@ const getPlatformInfo = async () => {
 };
 
 const PlatformInfo = async () => {
-  const platformData = await getPlatformInfo(); // ✅ Fetch data on the server
+  const platformData = await getPlatformInfo();
 
   return <PlatformInfoClient platformData={platformData} />;
 };

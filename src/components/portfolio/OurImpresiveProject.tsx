@@ -13,10 +13,10 @@ const OurImpressiveProject = () => {
     <div className="">
       {/* Heading */}
       <div className="text-center">
-        <h2 className="text-2xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl mt-16 font-bold">
           Our <span className="text-[#9A00FF]">Impressive</span> Projects
         </h2>
-        <p className="text-gray-500 mt-4">
+        <p className="text-gray-500 mt-4 text-base">
           Explore some of our outstanding projects that demonstrate innovation
           and excellence.
         </p>
