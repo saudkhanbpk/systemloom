@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const OverviewSec: React.FC = () => {
   return (
-    <div className=" md:py-10 ">
-      <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
+    <div className=" md:mt-16 mt-9 ">
+      <div className="flex flex-col md:flex-row justify-between md:gap-16 items-center">
         {/* Text Section */}
         <div className="w-full md:mb-12">
           <h2 className="text-[#9A00FF] font-inter text-3xl md:text-4xl lg:text-5xl  md:leading-[60px] font-semibold mb-4">

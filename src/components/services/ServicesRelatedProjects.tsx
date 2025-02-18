@@ -46,11 +46,10 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
   return (
     <div>
       {/* RecentWorks section start */}
-      <div className="xl:px-0 sm:px-3 px-1">
-        <div className="p-2 md:p-0 ">
-          <div className=" mx-auto">
+      
+          <div className=" mx-auto md:mt-16 mt-9">
             {/* Heading Section */}
-            <div className="text-center mb-12 mt-5 md:mt-0">
+            <div className="text-center ">
               <h2 className="text-3xl md:text-5xl font-bold text-purple-600">Recent Work</h2>
               <p className="mt-4 text-lg text-gray-600   mx-auto">
               Explore our related work that highlights our commitment to innovation, seamless functionality, and delivering solutions tailored to meet diverse business needs. We specialize in creating responsive and user-friendly designs that yield measurable results.
@@ -59,7 +58,7 @@ Want to bring your ideas to life? Let us help you achieve your goals with precis
             </div>
 
             {/* Works Section */}
-            <div className="w-full">
+            <div className="w-full mt-6">
               {filteredProjects.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredProjects.map((project) => (
@@ -105,9 +104,6 @@ Want to bring your ideas to life? Let us help you achieve your goals with precis
             </div>
           </div>
         </div>
-      </div>
-      {/* RecentWorks section end */}
-    </div>
   );
 };
 
