@@ -47,7 +47,7 @@ const ServicesRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
     <div>
       {/* RecentWorks section start */}
       
-          <div className=" mx-auto md:mt-16 mt-9">
+          <div className=" mx-auto md:mt-16 mt-9 ">
             {/* Heading Section */}
             <div className="text-center ">
               <h2 className="text-3xl md:text-5xl font-bold text-purple-600">Recent Work</h2>

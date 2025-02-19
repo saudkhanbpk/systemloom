@@ -86,10 +86,10 @@ const WebDevelopment = () => {
 
       {/* hero section end */}
       
-<div className="max-w-[1450px] mx-auto  md:mt-16 mt-9 ">
+<div className="max-w-[1450px] mx-auto  md:mt-16 mt-9 px-4">
       {/* FeatureSection section start */}
 
-        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 lg:mt-12 my-6  relative   ">
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
           <Image
         src={webimage1}
@@ -121,7 +121,7 @@ const WebDevelopment = () => {
 
       {/* FeaturesList section start */}
       
-      <div className=' flex md:flex-row flex-col xl:px-0 sm:px-3 gap-3 md:gap-7 md:mt-16 mt-9 '>
+      <div className=' flex md:flex-row flex-col xl:px-0  gap-3 md:gap-7 md:mt-16 mt-9 '>
       <h2 className="text-center text-3xl font-bold ">Why Choose Us</h2>
         <div className="border-r  xl:pr-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -198,7 +198,7 @@ const WebDevelopment = () => {
           {/* Image Section */}
 
           {/* Text Section */}
-          <div className=" text-center md:text-left">
+          <div className=" text-center md:text-left ">
             <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold ">
             MERN & MEAN Web Development Services for High Performance
             </h2>
@@ -227,7 +227,7 @@ const WebDevelopment = () => {
           />
 
           {/* Text Section */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left ">
             <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold ">
             React Native Development Services for Cross-Platform Excellence
             </h2>
