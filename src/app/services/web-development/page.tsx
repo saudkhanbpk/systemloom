@@ -86,7 +86,7 @@ const WebDevelopment = () => {
 
       {/* hero section end */}
       
-<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9 ">
+<div className="max-w-[1450px] mx-auto  md:mt-16 mt-9 ">
       {/* FeatureSection section start */}
 
         <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
@@ -120,9 +120,9 @@ const WebDevelopment = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
-      <h2 className="text-center text-3xl font-bold md:mt-28">Why Choose Us</h2>
       
-      <div className='my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 '>
+      <div className=' flex md:flex-row flex-col xl:px-0 sm:px-3 gap-3 md:gap-7 md:mt-16 mt-9 '>
+      <h2 className="text-center text-3xl font-bold ">Why Choose Us</h2>
         <div className="border-r  xl:pr-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 
@@ -162,9 +162,9 @@ const WebDevelopment = () => {
       {/* FeaturesList section end */}
 
       {/* DiagonalFeatureSection section start */}
-      <div className="mb-16 ">
+      <div className="md:mt-16 mt-9 ">
         {/* card1 */}
-        <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+        <div className="flex flex-col md:flex-row   items-center  gap-3 md:gap-12">
           {/* Image Section */}
           <Image
             src={webimage2}
@@ -176,7 +176,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className=" text-center md:text-start">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold">
               Custom Web App Development for Dynamic Digital Solutions
             </h2>
             <p className="text-base md:text-base xl:text-lg text-gray-700">
@@ -194,12 +194,12 @@ const WebDevelopment = () => {
         </div>
 
         {/* card 2 */}
-        <div className="flex flex-col-reverse md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+        <div className="flex flex-col-reverse md:flex-row  items-center  gap-3 md:gap-12 md:mt-16 mt-9">
           {/* Image Section */}
 
           {/* Text Section */}
           <div className=" text-center md:text-left">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold ">
             MERN & MEAN Web Development Services for High Performance
             </h2>
             <p className="text-base md:text-base lg:text-lg text-gray-700">
@@ -216,7 +216,7 @@ const WebDevelopment = () => {
         </div>
 
         {/* card 3 */}
-        <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row items-center px-1 sm:px-4 xl:px-0 gap-3 md:gap-12 md:mt-16 mt-9">
           {/* Image Section */}
           <Image
             src={webimage4}
@@ -228,7 +228,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className="text-center md:text-left">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-2">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold ">
             React Native Development Services for Cross-Platform Excellence
             </h2>
             <p className="text-base md:text-base lg:text-lg xl:text-lg text-gray-700 ">
@@ -240,8 +240,8 @@ const WebDevelopment = () => {
       {/* DiagonalFeatureSection section end */}
 
       {/* FramedFeatureSection section start */}
-      <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
-  <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
+      <div className="lg:relative bg-[#9A00FF] lg:h-[450px] mx-auto md:mt-16 mt-9">
+  <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-3 md:gap-10">
     {/* Text Content */}
     <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] xl:p-10  text-wrap text-center lg:text-left">
       <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
@@ -283,12 +283,12 @@ const WebDevelopment = () => {
 
 
       {/* RelatedServices section start */}
-      <div className=" px-3 xl:px-0 py-12 sm:py-2 mb-8 md:mt-16 mt-9">
-  <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
+      <div className=" md:mt-16 mt-9">
+  <h2 className="text-2xl md:text-4xl font-semibold text-center ">
     Related Services
   </h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5   lg:gap-8 justify-items-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5 mt-9  lg:gap-8 justify-items-center">
     {services.map((service, index) => (
       <Link 
         href={service.link} 

@@ -53,18 +53,20 @@ const ProjectsCountClient: React.FC<{ stats: StatItemProps[] }> = ({ stats }) =>
     <section className="relative min-h-[600px] md:min-h-[500px] overflow-hidden">
       {/* Background Image with Loading State */}
       <div className="absolute inset-0 bg-gray-900">
-        <div className={`transition-opacity duration-700 ${isImageLoaded ? "opacity-100" : "opacity-0"}`}>
-          <Image
-            src="/assets/homepage/our-people-our-success.webp"
-            alt="Our Success Story"
-            fill
-            style={{ objectFit: "cover" }}
-            quality={85}
-            priority
-            onLoad={() => setIsImageLoaded(true)}
-            className="transform scale-105 hover:scale-100 transition-transform duration-[2s]"
-          />
-        </div>
+      <div className={`transition-opacity duration-700 ${isImageLoaded ? "opacity-100" : "opacity-0"}`}>
+      <Image
+  src="/assets/homepage/our-people-our-success.webp"
+  alt="Our Success Story"
+  fill
+  loading="lazy" 
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  style={{ objectFit: "cover" }}
+  quality={75}
+  onLoadingComplete={() => setIsImageLoaded(true)}
+  className="transform scale-105 hover:scale-100 transition-transform duration-[2s]"
+/>
+
+      </div>
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-transparent" />
