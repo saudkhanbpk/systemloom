@@ -7,6 +7,8 @@ import CareerSectionImage from "../../../public/assets/careerpage/Rectangle 402.
 import axios from "axios";
 import { backend_url } from "@/newLayout";
 import { toast } from "react-toastify";
+import { motion, AnimatePresence } from "framer-motion";
+import { Upload, X } from "lucide-react";
 
 const CareerHeroSection: FC = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -93,7 +95,7 @@ const CareerHeroSection: FC = () => {
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
           <div className="mb-8 md:mb-12 md:p-10 md:mt-0 mt-14">
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
-              Be Who You Are. Do What You Love
+              Be Who You Are. <span className="text-purple-600">Do What You Love</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mb-8">
               Are you at your best in an atmosphere of trust, knowhow, freedom
@@ -110,8 +112,8 @@ const CareerHeroSection: FC = () => {
             <div className="absolute lg:left-[308px] lg:-top-20 md:left-0 md:top-0 top-5 overflow-hidden w-full md:w-auto">
               <Image
                 src={CareerSectionImage}
-                width={400}
-                height={400}
+                width={1200}
+                height={1200}
                 alt="Team collaboration"
                 className="w-full h-full rounded-[24px] md:h-96 object-cover"
               />
@@ -122,120 +124,188 @@ const CareerHeroSection: FC = () => {
 
       {/* Dialog */}
       {isDialogOpen && (
-        <div
-        className="absolute inset-0 mt-2  flex items-center justify-center  p-4 sm:p-6 z-10  "
-
+  <AnimatePresence>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="absolute inset-0 flex items-center justify-center p-4 z-50 lg:mt-32 md:mt-[360px] mt-[740px]"
+      onClick={handleDialogClose}
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.9, opacity: 0, y: 20 }}
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden relative"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close Button */}
+        <button
           onClick={handleDialogClose}
+          className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
         >
-          <div
-            className="text-white px-2 pb-2 sm:w-[400px] md:w-[600px] border-2 max-w-full relative z-10 h-fit w-full bg-white rounded-md  mt-44"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2 className="text-2xl font-semibold ">Submit Your Resume</h2>
+          <X className="w-5 h-5 text-gray-500" />
+        </button>
 
-            <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label className="block text-black">Name</label>
+        {/* Header */}
+        <div className="bg-gradient-to-r from-purple-600 to-purple-800 p-6 text-white">
+          <h2 className="text-3xl font-bold">Join Our Team</h2>
+          <p className="mt-2 opacity-90">Take the next step in your career journey</p>
+        </div>
+
+        {/* Form */}
+        <div className="p-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name and Email Row */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg  text-black outline-none"
-                  placeholder="Your name"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-200 outline-none"
+                  placeholder="John Doe"
                   required
                 />
               </div>
-              <div className="mb-4">
-                <label className="block text-black">Email</label>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black outline-none"
-                  placeholder="Your email"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-200 outline-none"
+                  placeholder="john@example.com"
                   required
                 />
               </div>
-              <div className="mb-4">
-                <label className="block text-black">Phone</label>
+            </div>
+
+            {/* Phone and Location Row */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                 <input
                   type="tel"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg  text-black outline-none"
-                  placeholder="Your phone number"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-200 outline-none"
+                  placeholder="+1 (555) 000-0000"
                   required
                 />
               </div>
-              <div className="mb-4">
-  <label className="block text-black">Location</label>
-  <input
-    type="text" 
-    name="location" 
-    value={formData.location}
-    onChange={handleChange}
-    className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black outline-none"
-    placeholder="Enter your location (Country & City)" 
-    required
-  />
-</div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-200 outline-none"
+                  placeholder="City, Country"
+                  required
+                />
+              </div>
+            </div>
 
-              <div className="mb-4">
-                <label className="block text-black">Field</label>
+            {/* Field and Professional URL Row */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Field of Expertise</label>
                 <input
                   type="text"
                   name="jobField"
                   value={formData.jobField}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black outline-none"
-                  placeholder="Your field"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-200 outline-none"
+                  placeholder="e.g., Frontend Development"
                   required
                 />
               </div>
-              <div className="mb-4">
-                <label className="block text-black">Professional URL</label>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">LinkedIn Profile</label>
                 <input
                   type="url"
                   name="professionalUrl"
                   value={formData.professionalUrl}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg  text-black outline-none"
-                  placeholder="LinkedIn or other professional link"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all duration-200 outline-none"
+                  placeholder="https://linkedin.com/in/..."
                 />
               </div>
-              <div className="mb-4">
-                <label className="block text-black">Resume</label>
-                <input
-                  type="file"
-                  name="resume"
-                  onChange={handleChange}
-                  className="w-full px-3 py-2 border border-gray-500 rounded-lg text-black"
-                  required
-                />
+            </div>
+
+            {/* Resume Upload */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Resume</label>
+              <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-purple-500 transition-colors duration-200">
+                <div className="space-y-1 text-center">
+                  <Upload className="mx-auto h-12 w-12 text-gray-400" />
+                  <div className="flex text-sm text-gray-600">
+                    <label htmlFor="resume" className="relative cursor-pointer rounded-md font-medium text-purple-600 hover:text-purple-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-purple-500">
+                      <span>Upload a file</span>
+                      <input
+                        id="resume"
+                        name="resume"
+                        type="file"
+                        className="sr-only"
+                        onChange={handleChange}
+                        required
+                      />
+                    </label>
+                    
+                    {formData.resume ? (
+      <p className="mt-2 text-sm text-gray-600">{formData.resume.name}</p>
+    ):(
+      <p className="pl-1">or drag and drop</p>
+    )}
+                  </div>
+                  <p className="text-xs text-gray-500">PDF, DOC up to 10MB</p>
+                </div>
               </div>
-              <div className="flex md:justify-end justify-start">
-                <button
-                  type="button"
-                  className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg mr-2"
-                  onClick={handleDialogClose}
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="bg-[#9A00FF] hover:bg-purple-700 text-white px-4 py-2 rounded-lg"
-                  disabled={loading}
-                >
-                  {loading ? "Submitting..." : "Submit"}
-                </button>
-              </div>
-            </form>
-          </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex justify-end space-x-4 mt-8">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="button"
+                onClick={handleDialogClose}
+                className="px-6 py-3 rounded-lg text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors duration-200 font-medium"
+              >
+                Cancel
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit"
+                disabled={loading}
+                className="px-6 py-3 rounded-lg text-white bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 transition-all duration-200 font-medium shadow-lg hover:shadow-purple-500/25"
+              >
+                {loading ? (
+                  <div className="flex items-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Submitting...
+                  </div>
+                ) : (
+                  "Submit Application"
+                )}
+              </motion.button>
+            </div>
+          </form>
         </div>
-      )}
+      </motion.div>
+    </motion.div>
+  </AnimatePresence>
+)}
     </div>
   );
 };

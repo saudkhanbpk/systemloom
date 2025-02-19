@@ -52,8 +52,8 @@ const WorkProcess = () => {
   return (
     <section className="">
       <div className="container mx-auto text-center md:mt-16 mt-9">
-        <h2 className="text-3xl font-bold text-purple-600 mb-6">How we will work on your project</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 ">How we will work on your project</h2>
+        <div className="grid md:grid-cols-3 gap-6 mt-9">
           {steps.map((step) => (
             <div
               key={step.id}

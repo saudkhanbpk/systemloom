@@ -164,7 +164,7 @@ export default function TechnologiesSection() {
         transition={{ duration: 0.6 }}
         className="relative max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-wide">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-wide">
           Technologies We Use
         </h2>
         <p className="text-lg text-gray-200 mb-10 max-w-2xl mx-auto">

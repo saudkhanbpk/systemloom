@@ -5,7 +5,7 @@ import backgroundImage from "../../../public/assets/aboutpage/backgroundImage .w
 
 const AboutHeroSection: React.FC = () => {
   return (
-    <div className="relative bg-gray-900 text-white h-[500px] md:h-[700px]">
+    <div className="relative bg-gray-900 text-white h-screen">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden ">
         <Image
@@ -22,7 +22,7 @@ const AboutHeroSection: React.FC = () => {
       {/* Content Wrapper */}
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="w-full text-center">
-          <h1 className="font-semibold text-[32px] sm:text-[48px] md:text-[58px] font-poppins leading-[1.2] mb-0">
+          <h1 className="font-semibold text-3xl md:text-5xl lg:text-6xl font-poppins leading-[1.2] mb-0">
             Together, We Drive Your Success
           </h1>
         </div>

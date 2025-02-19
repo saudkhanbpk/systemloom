@@ -43,7 +43,7 @@ const PricingCards: React.FC = () => {
 
   return (
     <>
-      <div className="relative text-white md:py-44 py-28 md:px-4 px-2">
+      <div className="relative text-white md:py-44 py-28 md:px-4 px-2 bg-black ">
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
           <Image
@@ -51,16 +51,16 @@ const PricingCards: React.FC = () => {
           height={30}
             src={backgroundImage}
             alt="Competitive pricing allows you to maximize value without compromising quality"
-            className="w-full h-full object-cover animate-fade-in"
+            className="w-full h-full object-cover animate-fade-in opacity-75"
           />
         </div>
 
         {/* Content */}
-        <div className="relative flex flex-col items-center justify-center h-full max-w-[1440px] mx-auto container">
-          <h1 className="text-2xl md:text-3xl font-semibold leading-tight mb-4 text-center animate-slide-down">
+        <div className="relative flex flex-col items-center justify-center h-full max-w-4xl mx-auto ">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl  font-semibold leading-tight mb-4 text-center animate-slide-down">
             Pricing to Your Success
           </h1>
-          <p className="text-lg md:text-xl font-normal mb-8 text-center animate-fade-in">
+          <p className="text-lg md:text-xl font-normal mb-8 text-center animate-fade-in mt-2">
             At TechCreator, we believe in providing clear and competitive
             pricing for all our services. Whether you’re a startup or an
             established business, our packages are designed to deliver maximum
@@ -82,9 +82,9 @@ const PricingCards: React.FC = () => {
       <div>
        
       <div className='max-w-[1450px] mx-auto px-4 md:mt-16 mt-9'>
-        <div className="flex flex-col md:flex-row justify-between  gap-16  ">
+        <div className="flex  md:flex-row justify-between flex-col-reverse gap-16  ">
           <div className="md:w-[1900px] ">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl mb-2 ">
+            <h2 style={{lineHeight:1.2}} className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 font-medium ">
               Affordable Solutions Without Sacrificing Quality
             </h2>
             <p className=" text-base md:text-lg lg:text-xl  mt-4 md:mt-0">
@@ -122,7 +122,7 @@ const PricingCards: React.FC = () => {
             </div>
           </div>
           <div className="md:w-[1900px] ">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl mb-2 ">
+            <h2 style={{lineHeight:1.2}} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 font-medium  ">
             Flexible Packages for All Businesses
             </h2>
             <p className=" text-base md:text-lg lg:text-xl  mt-4 md:mt-0">
@@ -141,7 +141,7 @@ Our pricing is transparent and there is no hidden fees.
 
        <div className="flex flex-col md:flex-row justify-between  gap-16 py-10 md:py-10 ">
           <div className="md:w-[1900px] ">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl mb-2 ">
+            <h2 style={{lineHeight:1.2}} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 font-medium ">
             Why Choose TechCreator for Your Next Project?
             </h2>
             <p className=" text-base md:text-lg lg:text-xl  mt-4 md:mt-0">

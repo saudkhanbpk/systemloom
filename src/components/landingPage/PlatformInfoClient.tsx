@@ -29,7 +29,7 @@ const PlatformInfoClient: React.FC<PlatformInfoProps> = ({ platformData }) => {
         viewport={{ once: true }}
         className="text-center mb-6 md:mt-16 mt-9"
       >
-        <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
           {platformData.heading}
         </h2>
         <p className="text-lg md:text-xl text-gray-700 mt-4 max-w-3xl mx-auto">

@@ -1,5 +1,4 @@
-'use client'; // ✅ Ye client component rahega
-
+'use client'; 
 import React, { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel as ResponsiveCarousel } from 'react-responsive-carousel';
@@ -31,12 +30,12 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
         <div key={index} className="relative h-screen">
           {/* ✅ Optimized Lazy Load Video */}
           {loadedIndexes.includes(index) ? (
-            <video
+            <video  
               autoPlay
               loop
               muted
               playsInline
-              preload="metadata" // ✅ Optimized Preload
+              preload="none"
               className="w-full h-full object-cover"
             >
               <source src={slide.videoSrc} type="video/webm" />

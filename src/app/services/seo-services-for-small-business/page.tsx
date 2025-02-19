@@ -61,7 +61,7 @@ const SeoContentWriting = () => {
       <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
         {/* Left Section */}
         <div className="w-full md:w-[50vw]  text-center md:text-left ">
-          <h1 className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
+          <h1 style={{lineHeight:1.2}} className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
           SEO Content Writing Services
           </h1>
           <p className="text-base lg:text-lg mt-3">

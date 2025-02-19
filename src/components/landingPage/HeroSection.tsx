@@ -33,7 +33,7 @@ const getSlides = async () => {
 };
 
 const Page = async () => {
-  const slides = await getSlides(); // ✅ Server-side fetch
+  const slides = await getSlides();
 
   return (
     <div>

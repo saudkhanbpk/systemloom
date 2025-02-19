@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 function ContactUs() {
   return (
     <div className="relative text-white ">
-      <div className="absolute inset-0 overflow-hidden bg-gray-900">
+      <div className="absolute inset-0 overflow-hidden bg-black">
         <Image
         width={300}
         height={200}

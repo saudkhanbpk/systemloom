@@ -73,7 +73,7 @@ const ProjectsCountClient: React.FC<{ stats: StatItemProps[] }> = ({ stats }) =>
       <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
         {/* Heading Section */}
         <motion.div initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-white mb-4">
             Empowered Teams, <span className="text-purple-400">Proven Success</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">

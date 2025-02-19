@@ -48,7 +48,7 @@ const OurValues: React.FC = () => {
 
       {/* Content */}
       <div className="relative text-center md:mt-16 mt-9">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-wide text-purple-600">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-12 tracking-wide text-purple-600">
           Our Core Values
         </h2>
 

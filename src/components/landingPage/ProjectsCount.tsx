@@ -25,7 +25,7 @@ const getStats = async () => {
 };
 
 const ProjectsCount = async () => {
-  const stats = await getStats(); // ✅ Fetch data on the server
+  const stats = await getStats(); 
 
   return <ProjectsCountClient stats={stats} />;
 };
