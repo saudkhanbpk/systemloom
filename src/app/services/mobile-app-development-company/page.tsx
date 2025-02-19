@@ -95,7 +95,7 @@ const MobileAppDevelopment = () => {
               alt="Bespoke Web Development to attract your audience"
               width={300}
               height={450}
-              className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+              className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-10 shadow-xl"
             />
           </div>
           <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-3 lg:mt-0 ">
@@ -174,7 +174,7 @@ const MobileAppDevelopment = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold">
                 Flutter Mobile App Development for High-Performance Solutions
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
@@ -195,7 +195,7 @@ const MobileAppDevelopment = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold ">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold ">
                 Your Choice for Multi-Device Reach
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
@@ -230,7 +230,7 @@ const MobileAppDevelopment = () => {
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold ">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold ">
                 Enhancing Efficiency while Optimizing Functionality
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">

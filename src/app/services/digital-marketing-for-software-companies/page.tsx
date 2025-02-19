@@ -86,23 +86,23 @@ const DigitalMarketing = () => {
       <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
         {/* FeatureSection section start */}
         <div className=" ">
-          <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+          <div className="flex flex-col lg:flex-row items-center relative">
             <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
               <Image
                 src={marketingImage1}
                 alt="Bespoke Web Development to attract your audience"
                 width={300}
                 height={450}
-                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-10 shadow-xl"
               />
             </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-8 lg:mt-0 ">
+            <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-3 lg:mt-0 ">
               <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
                 <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Social Media Marketing: Your Audience, Engaged
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg leading-relaxed   w-full  text-wrap">
-                Our personalized approach to <Link href="https://www.linkedin.com/company/techcreator" className="text-blue-600 cursor-pointer">social media</Link> marketing  helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on <Link href="https://www.instagram.com/techcreatorco" className="text-blue-600 cursor-pointer">Instagram</Link>, <Link href="https://www.facebook.com/techcreatorfb" className="text-blue-600 cursor-pointer">Facebook</Link>, and beyond to captivate and grow your audience.We promote your business digitally through engaging posts and targeted ads. We ensure your brand gets a spotlights online among your competitors. Our experts in marketing department analyze insights and adapt strategies which maximizes reach and hunt targeted audience which then turn into loyal customers.  
+                Our personalized approach to <Link href="https://www.linkedin.com/company/techcreator" className="underline cursor-pointer">social media</Link> marketing  helps brands foster authentic connections. With a deep understanding of platform algorithms, we craft compelling content and manage campaigns on <Link href="https://www.instagram.com/techcreatorco" className="underline cursor-pointer">Instagram</Link>, <Link href="https://www.facebook.com/techcreatorfb" className="underline cursor-pointer">Facebook</Link>, and beyond to captivate and grow your audience.We promote your business digitally through engaging posts and targeted ads. We ensure your brand gets a spotlights online among your competitors. Our experts in marketing department analyze insights and adapt strategies which maximizes reach and hunt targeted audience which then turn into loyal customers.  
                 </p>
               </div>
             </div>
@@ -111,11 +111,11 @@ const DigitalMarketing = () => {
         {/* FeatureSection section end */}
 
         {/* FeaturesList section start */}
-        <h2 className="text-center text-3xl font-bold md:mt-28">
+        <h2 className="text-center text-3xl font-bold mt-9 md:mt-16">
           Why Choose Us
         </h2>
 
-        <div className="my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 ">
+        <div className="flex md:flex-row flex-col gap-3 md:gap-7 mt-6">
           <div className="border-r  xl:pr-3">
             <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 
@@ -155,9 +155,9 @@ const DigitalMarketing = () => {
         {/* FeaturesList section end */}
 
         {/* DiagonalFeatureSection section start */}
-        <div className="mb-16 ">
+        <div className="mt-9 md:mt-16">
           {/* card1 */}
-          <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-12">
             {/* Image Section */}
             <Image
               src={marketingImage2}
@@ -169,7 +169,7 @@ const DigitalMarketing = () => {
 
             {/* Text Section */}
             <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mt-0 mt-4 md:mb-7">
+              <h2 className="text-xl md:text-3xl xl:text-4xl mb-2 font-bold">
               PPC Campaigns Designed for Maximum ROI
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-gray-700">
@@ -179,12 +179,12 @@ const DigitalMarketing = () => {
           </div>
 
           {/* card 2 */}
-          <div className="flex flex-col-reverse md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+          <div className="flex flex-col-reverse md:flex-row items-center  gap-3 md:gap-12 mt-9 md:mt-16">
             {/* Image Section */}
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-3xl xl:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-3xl xl:text-4xl mb-2 font-bold">
               Insta and FB Ads That Deliver Impact
               </h2>
               <p className="text-base md:text-lg lg:text-lg text-gray-700">
@@ -202,7 +202,7 @@ const DigitalMarketing = () => {
           </div>
 
           {/* card 3 */}
-          <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+          <div className="flex flex-col md:flex-row items-center  gap-3 md:gap-12 mt-9 md:mt-16">
             {/* Image Section */}
             <Image
               src={marketingImage4}
@@ -214,7 +214,7 @@ const DigitalMarketing = () => {
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-7">
+              <h2 className="text-xl md:text-3xl lg:text-4xl mb-2 font-bold">
               Strategic Branding For Your Business
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-gray-700 mt-3">
@@ -226,15 +226,15 @@ const DigitalMarketing = () => {
         {/* DiagonalFeatureSection section end */}
 
         {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
-          <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
+        <div className="lg:relative bg-[#9A00FF] lg:h-[450px]  mx-auto md:py-4 mt-9 md:mt-16">
+          <div className="lg:relative md:px-5 px-2 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
               Proven Results Across Industries
               </h2>
               <p className="text-base md:text-lg xl:text-lg text-white">
-              With experience across multiple sectors, we bring personalized expertise to <Link href="/services/project-management" className="text-blue-600 cursor-pointer">every project</Link>. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.Our diverse portfolio shows our excellence and the values we bring to industries such as technology, healthcare, real estate and e-commerce. Our past excellency push us to deliver more and come with the solutions for your business that not only exceed expectations but to bring dignity.
+              With experience across multiple sectors, we bring personalized expertise to <Link href="/services/project-management" className="underline cursor-pointer">every project</Link>. For a retail client, our strategic Meta Ads increase conversions by 60%. For startups, our targeted social media marketing campaigns have driven audience growth and brand loyalty.Our diverse portfolio shows our excellence and the values we bring to industries such as technology, healthcare, real estate and e-commerce. Our past excellency push us to deliver more and come with the solutions for your business that not only exceed expectations but to bring dignity.
               </p>
             </div>
             {/* Image */}
@@ -259,12 +259,12 @@ const DigitalMarketing = () => {
 <FaqSection title="Frequently Asked Questions" faqs={digitalMarketingFaqs} />
 
         {/* RelatedServices section start */}
-        <div className=" px-3 xl:px-0 py-12 sm:py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
+        <div className=" mt-9 md:mt-16">
+          <h2 className="text-2xl md:text-4xl font-semibold text-center ">
             Related Services
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5   lg:gap-8 justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5 mt-9  lg:gap-8 justify-items-center">
             {services.map((service, index) => (
               <Link
                 href={service.link}
@@ -291,7 +291,7 @@ const DigitalMarketing = () => {
           </div>
         </div>
         {/* RelatedServices section end */}
-        <div className=" bg-purple-600  md:mb-16 mb-9">
+        <div className=" bg-purple-600 mt-9 md:mt-16 md:mb-16 mb-9">
 <ClientReviews/>
 <ClientTestimonialsSection />
 </div>

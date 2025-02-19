@@ -48,7 +48,7 @@ const Benefits = () => {
         </h2>
       </div>
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 md:mt-16 mt-6 ">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-10 md:mt-9 mt-6 ">
         {features.map((feature, index) => (
           <div
             key={index}

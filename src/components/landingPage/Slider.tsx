@@ -18,8 +18,8 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
       swipeable={false} 
       showIndicators={false}
       emulateTouch={true}
-      transitionTime={1500}
-      // interval={5000}  
+      transitionTime={1000}
+      interval={7000}  
       onChange={(index) => {
         if (!loadedIndexes.includes(index)) {
           setLoadedIndexes((prev) => [...prev, index]);

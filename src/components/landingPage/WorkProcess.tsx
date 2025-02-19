@@ -53,7 +53,7 @@ const WorkProcess = () => {
     <section className="">
       <div className="container mx-auto text-center md:mt-16 mt-9">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 ">How we will work on your project</h2>
-        <div className="grid md:grid-cols-3 gap-6 mt-9">
+        <div className="grid md:grid-cols-3 gap-6 md:mt-9 mt-6">
           {steps.map((step) => (
             <div
               key={step.id}

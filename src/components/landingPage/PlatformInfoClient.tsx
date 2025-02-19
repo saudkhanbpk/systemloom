@@ -27,7 +27,7 @@ const PlatformInfoClient: React.FC<PlatformInfoProps> = ({ platformData }) => {
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        className="text-center mb-6 md:mt-16 mt-9"
+        className="text-center  md:mt-16 mt-9"
       >
         <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
           {platformData.heading}
@@ -38,7 +38,7 @@ const PlatformInfoClient: React.FC<PlatformInfoProps> = ({ platformData }) => {
       </motion.div>
 
       {/* Content Section */}
-      <div className="grid md:grid-cols-2 gap-12 items-center bg-white rounded-2xl shadow-lg p-6 md:p-12">
+      <div className="grid md:grid-cols-2 gap-6 border mt-6 md:gap-10 items-center bg-white rounded-2xl shadow-sm p-6 md:p-12">
         {/* Left section */}
         <motion.div
           initial={{ x: -20, opacity: 0 }}

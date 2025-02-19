@@ -32,12 +32,12 @@ const Products = () => {
 
   return (
     <div className="md:mt-16 mt-9">
-      <div className="text-center mb-10">
+      <div className="text-center md:mb-9 mb-6">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600">Our Products</h2>
       </div>
 
       {/* Dynamically map through the products */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
         {products.map((product, index) => (
           <div
             key={index}
