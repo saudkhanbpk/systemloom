@@ -36,7 +36,7 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
               muted
               playsInline
               preload="none"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
             >
               <source src={slide.videoSrc} type="video/webm" />
             </video>
@@ -53,7 +53,7 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
 
           {/* ✅ Optimized Overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6"
-               style={{ background: "rgba(0, 0, 0, 0.6)" }}> {/* ✅ Background Overlay */}
+               style={{ background: "rgba(0, 0, 0, 0.8)" }}> 
             <h2 className="text-xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl leading-normal">
               <span>{slide.heading.split(slide.highlight)[0]}</span>
               <span className={slide.highlightColor}> {slide.highlight} </span>

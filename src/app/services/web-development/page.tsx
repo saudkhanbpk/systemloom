@@ -120,9 +120,9 @@ const WebDevelopment = () => {
       {/* FeatureSection section end */}
 
       {/* FeaturesList section start */}
+      <h2 className="text-center text-3xl font-bold md:mt-24 mt-9">Why Choose Us</h2>
+      <div className=' flex md:flex-row flex-col xl:px-0  gap-3 md:gap-7 mt-6 '>
       
-      <div className=' flex md:flex-row flex-col xl:px-0  gap-3 md:gap-7 md:mt-16 mt-9 '>
-      <h2 className="text-center text-3xl font-bold ">Why Choose Us</h2>
         <div className="border-r  xl:pr-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 
@@ -317,7 +317,7 @@ const WebDevelopment = () => {
 
 
       {/* RelatedServices section end */}
-      <div className=" bg-purple-600 md:mt-16 mt-6 md:mb-16 mb-9">
+      <div className=" bg-purple-600 md:mt-16 mt-9 md:mb-16 mb-9">
 <ClientReviews/>
 <ClientTestimonialsSection />
 </div>

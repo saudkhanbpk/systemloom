@@ -86,7 +86,7 @@ const UIUXDesign = () => {
       <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
         {/* FeatureSection section start */}
         <div className=" ">
-        <div className="flex flex-col lg:flex-row items-center xl:px-0 lg:px-4 px-3    lg:mt-12 my-6  relative   ">
+        <div className="flex flex-col lg:flex-row items-center relative   ">
           <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[300px] z-10 ">
             <Image
               src={uxdesignimage1}
@@ -96,7 +96,7 @@ const UIUXDesign = () => {
               className=" lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-3 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
               Your Partner as a Top UI/UX Design Agency
@@ -111,11 +111,11 @@ const UIUXDesign = () => {
         {/* FeatureSection section end */}
 
         {/* FeaturesList section start */}
-        <h2 className="text-center text-3xl font-bold md:mt-28">
+        <h2 className="text-center text-3xl font-bold mt-9 md:mt-24">
           Why Choose Us
         </h2>
-
-        <div className="my-16 md:mt-20 flex md:flex-row flex-col xl:px-0 sm:px-3 px-1  gap-7 ">
+        <div className=" flex md:flex-row flex-col gap-3 md:gap-7 mt-6">
+        
           <div className="border-r  xl:pr-3">
             <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
 
@@ -155,9 +155,9 @@ const UIUXDesign = () => {
         {/* FeaturesList section end */}
 
         {/* DiagonalFeatureSection section start */}
-        <div className="mb-16 ">
+        <div className="mt-9 md:mt-16 ">
           {/* card1 */}
-          <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0  md:gap-12">
+          <div className="flex flex-col md:flex-row   items-center px-1 sm:px-4 xl:px-0 gap-3 md:gap-12">
             {/* Image Section */}
             <Image
               src={uxdesignimage2}
@@ -180,12 +180,12 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
           </div>
 
           {/* card 2 */}
-          <div className="flex flex-col-reverse md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+          <div className="flex flex-col-reverse md:flex-row items-center  gap-3 md:gap-12 mt-9 md:mt-16">
             {/* Image Section */}
 
             {/* Text Section */}
             <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-2">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
               End-to-End UI/UX Solutions for Your Business Needs
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
@@ -202,7 +202,7 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
           </div>
 
           {/* card 3 */}
-          <div className="flex flex-col md:flex-row  mt-20 items-center px-1 sm:px-4 xl:px-0 gap-8 md:gap-12">
+          <div className="flex flex-col md:flex-row items-center  gap-3 md:gap-12 mt-9 md:mt-16">
             {/* Image Section */}
             <Image
               src={uxdesignimage4}
@@ -214,7 +214,7 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
 
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-2">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold">
               Customized UI/UX for Every Industry
               </h2>
               <p className="text-base md:text-base lg:text-lg text-gray-700">
@@ -227,7 +227,7 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
         {/* DiagonalFeatureSection section end */}
 
         {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] sm:mt-0 mt-2 lg:h-[450px]  mx-auto md:py-4 md:mt-28 lg:mb-32 md:mb-6">
+        <div className="lg:relative bg-[#9A00FF]  lg:h-[450px]  mx-auto md:py-4 mt-9 md:mt-16">
           <div className="lg:relative px-5 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
             {/* Text Content */}
             <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
@@ -260,12 +260,12 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
 <FaqSection title="Frequently Asked Questions" faqs={uiuxdesignFaqs} />
 
         {/* RelatedServices section start */}
-        <div className=" px-3 xl:px-0 py-12 sm:py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-center mb-12 sm:mb-16 md:mb-20">
+        <div className=" mt-9 md:mt-16">
+          <h2 className="text-2xl md:text-4xl font-semibold text-center ">
             Related Services
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5   lg:gap-8 justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5 mt-9 lg:gap-8 justify-items-center">
             {services.map((service, index) => (
               <Link
                 href={service.link}
@@ -292,7 +292,7 @@ Our focus on simplicity and accessibility ensures a seamless experience for user
           </div>
         </div>
     
-      <div className=" bg-purple-600 md:mt-16 mt-6 md:mb-16 mb-9">
+      <div className=" bg-purple-600 md:mt-16 mt-9 md:mb-16 mb-9">
 <ClientReviews/>
 <ClientTestimonialsSection />
 </div>
