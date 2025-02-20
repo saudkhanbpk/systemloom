@@ -122,59 +122,34 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-black text-white py-4 md:py-4 w-full">
+    <footer className="relative bg-black text-white py-2 w-full">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 footer-bg"
       ></div>
       <div className="relative mx-auto  px-3 mt-6">
         <div className="flex flex-wrap md:gap-10 gap-9 justify-between px-5">
-          <div className=" ">
-            <div className="flex gap-7 mt-4 md:mt-4">
-              <a
-                href="https://www.facebook.com/techcreatorfb/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FontAwesomeIcon
-                  icon={faFacebookF}
-                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/techcreator"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FontAwesomeIcon
-                  icon={faLinkedinIn}
-                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
-                />
-              </a>
-              <a
-                href="https://www.youtube.com/@techcreator9512"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-              >
-                <FontAwesomeIcon
-                  icon={faYoutube}
-                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/techcreatorco/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="text-gray-400 hover:text-[#9A00FF] text-lg md:text-xl"
-                />
-              </a>
-            </div>
+          
+        <div className="flex flex-col">
+        <div className="flex gap-5 ">
+  {[
+    { href: "https://www.facebook.com/techcreatorfb/", icon: faFacebookF, bg: "bg-blue-600" },
+    { href: "https://www.linkedin.com/company/techcreator", icon: faLinkedinIn, bg: "bg-blue-700" },
+    { href: "https://www.youtube.com/@techcreator9512", icon: faYoutube, bg: "bg-red-600" },
+    { href: "https://www.instagram.com/techcreatorco/", icon: faInstagram, bg: "bg-pink-600" },
+  ].map(({ href, icon, bg }, index) => (
+    <Link
+      key={index}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`w-10 h-10 flex items-center justify-center rounded-full ${bg} transition duration-300 hover:opacity-80`}
+      aria-label="Social Media"
+    >
+      <FontAwesomeIcon icon={icon} className="text-white text-lg md:text-xl" />
+    </Link>
+  ))}
+</div>
+
 
             <div className="mt-6">
               <h2 className="text-2xl font-bold">Subscribe</h2>
@@ -206,7 +181,8 @@ const Footer: React.FC = () => {
                 </form>
               </div>
             </div>
-          </div>
+        </div>
+          
 
           <div className="flex flex-col gap-4">
       <h2 className="text-base md:text-lg font-semibold">Industries We Serve</h2>
@@ -360,57 +336,60 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-base md:text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <div className="text-xs md:text-sm flex items-center gap-2">
-                <span className="">
-                  <AiOutlineMail size={28} color="#9A00FF" />
-                </span>
-                <a href="mailto:contact@techcreator.co">
-                  contact@techcreator.co
-                </a>
-              </div>
-              <div className="text-xs md:text-sm">
-  <a
-    href="https://wa.me/13214073272"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline"
-  >
-    <div className="flex gap-2 items-center text-base mt-1">
-      <FaWhatsapp size={28} color="#9A00FF" />
-      <span>+1 (321) 407-3272</span>
-    </div>
-  </a>
+  <h3 className="text-base md:text-lg font-semibold mb-4">Contact</h3>
+  <div className="space-y-3">
 
-  <div className="md:hidden block">
-    <div className=" flex gap-2 items-center text-base mt-2 ">
-      <PhoneCall color="#9A00FF" />
-      <span>
-        <a href="tel:+13214073272" className="hover:underline">
-          +1 (321) 407-3272
-        </a>
-      </span>
+    {/* Email */}
+    <div className="text-xs md:text-sm flex items-center gap-3">
+      <div className="iconContainer bg-purple-600">
+        <AiOutlineMail size={20} className="text-white" />
+      </div>
+      <Link href="mailto:contact@techcreator.co" className="hover:underline">
+        contact@techcreator.co
+      </Link>
     </div>
+
+    {/* WhatsApp */}
+    <Link
+      href="https://wa.me/13214073272"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 text-xs md:text-sm hover:underline"
+    >
+      <div className="iconContainer bg-green-600">
+        <FaWhatsapp size={20} className="text-white" />
+      </div>
+      <span>+1 (321) 407-3272</span>
+    </Link>
+
+    {/* Phone Call (Mobile) */}
+    <div className="md:hidden flex items-center gap-3 text-xs md:text-sm">
+      <div className="iconContainer bg-purple-600">
+        <PhoneCall size={20} className="text-white" />
+      </div>
+      <a href="tel:+13214073272" className="hover:underline">
+        +1 (321) 407-3272
+      </a>
+    </div>
+
+    {/* Phone Call (Desktop) */}
+    <div className="hidden md:flex items-center gap-3 text-xs md:text-sm">
+      <div className="iconContainer bg-purple-600">
+        <PhoneCall size={20} className="text-white" />
+      </div>
+      <a href="tel:+13214073272" className="hover:underline">
+        +1 (321) 407-3272
+      </a>
+    </div>
+
+    {/* Appointment Section */}
+    <div>
+      <AppointmentSection />
+    </div>
+
   </div>
 </div>
 
-              <div className=" md:block hidden">
-                <div className="flex gap-2 items-center text-base ">
-                  <PhoneCall color="#9A00FF" />
-                  <span>
-                    <a href="callto:+13214073272" className="hover:underline">
-                      +1 (321) 407-3272
-                    </a>
-                  </span>
-                </div>
-              </div>
-
-              <div>
-                <AppointmentSection  />
-              </div>
-            </div>
-          </div>
         </div>
         <div className="mt-8 border-t border-gray-700  flex flex-col md:flex-row items-center md:p-0 p-4 justify-around px-10 ">
         <div className="flex gap-5">

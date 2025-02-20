@@ -72,7 +72,7 @@ const ProjectsCountClient: React.FC<{ stats: StatItemProps[] }> = ({ stats }) =>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-transparent" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
+      <div className="relative z-10 container mx-auto px-4 py-10 md:py-24">
         {/* Heading Section */}
         <motion.div initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-white mb-4">

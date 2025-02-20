@@ -99,7 +99,7 @@ const PricingForm: React.FC = () => {
            with us
           </h2>
           </div>
-          <p className="text-lg lg:text-xl mt-2">By filling this simple form</p>
+          <p className="text-lg lg:text-xl mt-2">Complete this simple form and let's create something amazing together</p>
         </div>
 
         {/* Right Section */}
@@ -149,7 +149,7 @@ const PricingForm: React.FC = () => {
 
             {/* "What can we do for you" Field */}
             <div>
-              <p className="font-bold">What can we do for you *</p>
+              <p className="font-bold mb-2">What can we do for you *</p>
               {[
                 { id: "web-development", label: "Web Development" },
                 { id: "app-development", label: "App Development" },
@@ -170,7 +170,7 @@ const PricingForm: React.FC = () => {
                     value={service.id}
                     checked={formData.service.includes(service.id)}
                     onChange={handleChange}
-                    className="hidden" // Hide the default checkbox
+                    className="hidden" 
                   />
                   <label
                     htmlFor={service.id}
@@ -228,7 +228,7 @@ const PricingForm: React.FC = () => {
                 }`}
                 disabled={loading} // Disable button while loading
               >
-                {loading ? <div>loading....</div> : "Submit"}
+                {loading ? <div>Submitting....</div> : "Get Started Now"}
               </button>
             </div>
           </form>

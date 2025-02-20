@@ -13,7 +13,7 @@ const OurImpressiveProject = () => {
     <div className="">
       {/* Heading */}
       <div className="text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl mt-16 font-bold">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl md:mt-16 mt-9 font-bold">
           Our <span className="text-[#9A00FF]">Impressive</span> Projects
         </h2>
         <p className="text-gray-500 mt-4 text-base">
@@ -23,7 +23,7 @@ const OurImpressiveProject = () => {
       </div>
 
       {/* Project Section */}
-      <div className="mt-16 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8 ">
+      <div className=" grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8 mt-6 ">
         {/* Card Component */}
         {[
           { image: healthcareImage, title: "Healthcare", link: "/healthcare" },

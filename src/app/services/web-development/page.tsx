@@ -97,10 +97,10 @@ const WebDevelopment = () => {
         width={400} 
         height={450} 
         quality={90} 
-        className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-20 shadow-xl"
+        className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-10 shadow-xl"
             />
           </div>
-          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-8 lg:mt-0 ">
+          <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-3 lg:mt-0 ">
             <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
                 Bespoke Web Development Tailored to Your Vision
@@ -121,7 +121,7 @@ const WebDevelopment = () => {
 
       {/* FeaturesList section start */}
       <h2 className="text-center text-3xl font-bold md:mt-24 mt-9">Why Choose Us</h2>
-      <div className=' flex md:flex-row flex-col xl:px-0  gap-3 md:gap-7 mt-6 '>
+      <div className=' flex md:flex-row flex-col  gap-3 md:gap-7 mt-6 '>
       
         <div className="border-r  xl:pr-3">
           <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
@@ -176,7 +176,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className=" text-center md:text-start">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl mb-2 font-bold">
               Custom Web App Development for Dynamic Digital Solutions
             </h2>
             <p className="text-base md:text-base xl:text-lg text-gray-700">
@@ -199,7 +199,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className=" text-center md:text-left ">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold ">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl mb-2 font-bold ">
             MERN & MEAN Web Development Services for High Performance
             </h2>
             <p className="text-base md:text-base lg:text-lg text-gray-700">
@@ -228,7 +228,7 @@ const WebDevelopment = () => {
 
           {/* Text Section */}
           <div className="text-center md:text-left ">
-            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl font-bold ">
+            <h2 className="text-xl md:text-xl lg:text-3xl xl:text-4xl mb-2 font-bold ">
             React Native Development Services for Cross-Platform Excellence
             </h2>
             <p className="text-base md:text-base lg:text-lg xl:text-lg text-gray-700 ">

@@ -197,7 +197,7 @@ const ServicesSection: React.FC = () => {
  
     return (
       <div className="relative">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl  text-center font-bold mb-6 md:mb-16 text-purple-600">Our Premium Services</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl  text-center font-bold mb-6 md:mb-9 text-purple-600">Our Premium Services</h2>
         <Carousel
           swipeable
           draggable

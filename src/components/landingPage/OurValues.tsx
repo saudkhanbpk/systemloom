@@ -48,12 +48,12 @@ const OurValues: React.FC = () => {
 
       {/* Content */}
       <div className="relative text-center md:mt-16 mt-9">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-12 tracking-wide text-purple-600">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold md:mb-9 mb-6 tracking-wide text-purple-600">
           Our Core Values
         </h2>
 
         {/* Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {values.map((value, index) => (
             <div
               key={index}

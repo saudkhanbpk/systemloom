@@ -88,32 +88,53 @@ const ContactForm: React.FC = () => {
       className="flex flex-wrap justify-around items-start gap-10 mt-20"
     >
       {/* Contact Information */}
-      <div className="max-w-lg">
-        <h1 className="font-semibold text-3xl sm:text-5xl text-white">Let's talk with us</h1>
-        <p className="mt-4 flex gap-2 items-center text-lg">
-          <MapPin color="#9A00FF" size={30} />
-          TechCreator, Florida, Orlando, USA
-        </p>
-        <div className="mt-2 space-y-2 text-lg">
-          <Link href="https://wa.me/+13214073272" rel="noopener noreferrer" className="flex items-center gap-2.5 text-base">
-            <FaWhatsapp size={28} color="#9A00FF" />
-            <span className="hover:underline">+1 (321) 407-3272</span>
-          </Link>
-          <Link href="tel:+13214073272" className="flex items-center gap-2.5 text-base">
-            <PhoneCall color="#9A00FF" />
-            <span className="hover:underline">+1 (321) 407-3272</span>
-          </Link>
+      <div className="max-w-lg text-white">
+      <h1 className="font-semibold text-3xl sm:text-5xl">
+        Let's Create Something Amazing
+      </h1>
+
+      {/* Location */}
+      <div className="mt-6 flex items-center gap-3 text-lg">
+        <div className=" bg-purple-600 rounded-full p-1.5">
+          <MapPin size={30} className="text-white " />
         </div>
-        <div className="mt-2 flex items-center gap-2.5">
-          <Mail size={28} color="#9A00FF" />
-          <Link href="mailto:contact@techcreator.co" className="hover:underline">
-            contact@techcreator.co
-          </Link>
-        </div>
+        <p className="text-xl">TechCreator, Florida, Orlando, USA</p>
       </div>
+
+      {/* Contact Methods */}
+      <div className="mt-3 space-y-3 text-xl">
+        <Link
+          href="https://wa.me/+13214073272"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 "
+        >
+          <div className=" bg-green-600 rounded-full p-1.5">
+            <FaWhatsapp size={28} className="text-white" />
+          </div>
+          <span className="hover:underline ">+1 (321) 407-3272</span>
+        </Link>
+
+        <Link href="tel:+13214073272" className="flex items-center gap-3 ">
+          <div className=" bg-purple-700 rounded-full p-2">
+            <PhoneCall className="text-white" />
+          </div>
+          <span className="hover:underline">+1 (321) 407-3272</span>
+        </Link>
+      </div>
+
+      {/* Email */}
+      <div className="mt-4 flex items-center gap-3">
+        <div className=" bg-blue-600 rounded-full p-1.5">
+          <Mail size={28} className="text-white" />
+        </div>
+        <Link href="mailto:contact@techcreator.co" className="hover:underline text-xl">
+          contact@techcreator.co
+        </Link>
+      </div>
+    </div>
   
       {/* Form Section */}
-      <div className="sm:w-[565px] shadow-lg p-6 sm:p-10 bg-white text-black rounded-md">
+      <div className="md:w-[565px] w-full shadow-lg p-6 sm:p-10 bg-white text-black rounded-md">
         <div className="flex flex-col sm:flex-row gap-4 mb-4">
           <input
             placeholder="First name*"
