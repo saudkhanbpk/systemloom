@@ -2,7 +2,7 @@ import Image from "next/image";
 import ouTeamImage from "../../../public/assets/aboutpage/teamimage.png";
 import OurTeamClient from "../landingPage/OurTeamClient";
 
-// ✅ Server-Side Function (SSR)
+
 const getTeamData = async () => {
   return {
     heading: "Our Team is Your Team",

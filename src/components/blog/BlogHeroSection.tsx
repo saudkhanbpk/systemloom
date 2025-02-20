@@ -1,12 +1,12 @@
 import React from 'react';
-import backgroundImage from "../../../public/assets/homepage/blogbg (convert.io).webp"
+import backgroundImage from "../../../public/assets/homepage/blog.webp"
 import Image from 'next/image';
 
 const BlogHeroSection: React.FC = () => {
   return (
     <>
       <div>
-        <div className="relative bg-gray-900 text-white ">
+        <div className="relative bg-black text-white ">
           <div className="absolute inset-0 overflow-hidden opacity-25">
             <Image
               src={backgroundImage}

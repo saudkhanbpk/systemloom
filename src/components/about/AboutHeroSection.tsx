@@ -1,11 +1,10 @@
-"use client"
 import React from 'react';
 import Image from 'next/image';
-import backgroundImage from "../../../public/assets/aboutpage/backgroundImage .webp";
+import backgroundImage from "../../../public/assets/aboutpage/backgroundImage.webp";
 
 const AboutHeroSection: React.FC = () => {
   return (
-    <div className="relative bg-gray-900 text-white h-screen">
+    <div className="relative bg-black text-white h-screen">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden ">
         <Image

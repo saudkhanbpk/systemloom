@@ -8,7 +8,6 @@ const Career = () => {
   return (
     <>
       <CareerHeroSection/>
-
     <div className='max-w-[1450px] mx-auto px-4 md:mt-16'>
       <CoreValues/>
       <JobsCard />

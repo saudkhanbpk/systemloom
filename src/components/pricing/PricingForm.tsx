@@ -1,3 +1,4 @@
+"use client";
 import { backend_url } from "@/newLayout";
 import axios from "axios";
 import React, { useState } from "react";
@@ -87,8 +88,8 @@ const PricingForm: React.FC = () => {
     <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 pt-3 pb-3">
       <div className="flex flex-col md:flex-row gap-6 justify-between  md:px-16 mx-auto">
         {/* Left Section */}
-        <div className="text-white flex md:mx-0 mx-auto flex-col mb-6 lg:mb-0">
-          <div className="flex flex-col gap-4 text-2xl lg:text-6xl font-bold ">
+        <div className="text-white flex md:mx-0 mx-auto flex-col mb-6 lg:mb-0 p-2">
+          <div className="flex flex-col md:gap-4 text-2xl lg:text-6xl font-bold ">
           <h2 className="  ">
             Share your 
           </h2>
@@ -103,9 +104,9 @@ const PricingForm: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className="bg-white p-9 shadow-lg w-full lg:w-auto rounded-md">
+        <div className="bg-white p-9 shadow-lg w-full lg:w-1/2 rounded-md">
           <form
-            className="space-y-4 md:w-[400px] lg:w-[500px] "
+            className="space-y-4  "
             onSubmit={handleSubmit}
           >
             {/* Name Field */}

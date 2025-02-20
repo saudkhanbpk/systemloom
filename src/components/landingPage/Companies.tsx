@@ -1,5 +1,4 @@
-import Image from "next/image";
-import CompaniesClient from "./CompaniesClient"; // ✅ Client Component
+import CompaniesClient from "./CompaniesClient"; 
 
 import company1 from "../../../public/assets/homepage/image 149.webp";
 import company2 from "../../../public/assets/homepage/image 150.webp";
@@ -9,7 +8,6 @@ import company5 from "../../../public/assets/homepage/PatronPal logo.webp";
 import company6 from "../../../public/assets/homepage/image 181.webp";
 import company7 from "../../../public/assets/homepage/image 182.webp";
 
-// ✅ Server Component - SSR data fetching
 const getCompanies = async () => {
   return [
     company1,
@@ -23,7 +21,7 @@ const getCompanies = async () => {
 };
 
 const Companies = async () => {
-  const companies = await getCompanies(); // ✅ Server-side fetching
+  const companies = await getCompanies(); 
 
   return <CompaniesClient companies={companies} />;
 };

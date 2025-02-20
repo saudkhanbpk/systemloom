@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { FaMapMarkedAlt, FaPaintBrush, FaCode, FaBug, FaRocket, FaUsers } from 'react-icons/fa';
 

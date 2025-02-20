@@ -10,6 +10,7 @@ const getSlides = async () => {
       description: `Empower your business with a team of experts dedicated to crafting tailor-made solutions that drive growth, efficiency, and success.`,
       buttonText: "Automate your Business",
       buttonColor: "bg-purple-600 hover:bg-purple-700",
+      imageSrc: "/assets/homepage/webapp.webp"
     },
     {
       videoSrc: "/videos/aibakgroundvideo.webm",
@@ -19,15 +20,17 @@ const getSlides = async () => {
       description: `We use AI to drive innovation and accelerate business success. From startups to enterprises, our smart solutions transform bold ideas into game-changing technologies, ensuring smarter, faster, and more efficient results.`,
       buttonText: "Automate your Business",
       buttonColor: "bg-purple-600 hover:bg-purple-700",
+      imageSrc: "/assets/homepage/aifuture.webp"
     },
     {
       videoSrc: "/videos/shapping-background-video.webm",
       heading: "Shaping the Future with Innovation",
       highlight: "Future",
-      highlightColor: "text-purple-600",
+      highlightColor: "text-purple-700",
       description: `We empower businesses to transform and lead through cutting-edge technology.`,
       buttonText: "Automate your Business",
       buttonColor: "bg-purple-600 hover:bg-purple-700",
+      imageSrc: "/assets/homepage/shapingfuture.webp"
     },
   ];
 };
