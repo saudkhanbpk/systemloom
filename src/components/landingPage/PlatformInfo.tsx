@@ -1,6 +1,6 @@
 import PlatformInfoClient from "./PlatformInfoClient"; 
 
-// ✅ Server-Side Function (SSR)
+
 const getPlatformInfo = async () => {
   return {
     heading: "TechCreator – Innovate Faster with AI",

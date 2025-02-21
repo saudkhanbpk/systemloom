@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const Products = () => {
-  // Array of product data
+
   const products = [
     {
       name: "Business Management System",
@@ -36,20 +36,16 @@ const Products = () => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600">Our Products</h2>
       </div>
 
-      {/* Dynamically map through the products */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-10">
         {products.map((product, index) => (
           <div
             key={index}
             className="bg-white border rounded-lg p-6 shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 flex flex-col h-full"
           >
-            {/* Product Title */}
             <h3 className="text-2xl font-semibold text-gray-900">{product.name}</h3>
-            {/* Product Description */}
             <p className="text-gray-600 mt-4 text-base flex-grow">
               {product.description}
             </p>
-            {/* Button with Link */}
             <Link href={product.href} className="mt-auto flex justify-center">
               <button
                 className="text-white font-bold py-3 px-8 rounded-full bg-purple-600 mt-4 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_#3b71ca]"

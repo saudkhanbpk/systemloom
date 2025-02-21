@@ -1,6 +1,6 @@
-import ProjectsCountClient from "./ProjectsCountClient"; // ✅ Client Component
+import ProjectsCountClient from "./ProjectsCountClient"; 
 
-// ✅ Server-Side Function (SSR)
+
 const getStats = async () => {
   return [
     {

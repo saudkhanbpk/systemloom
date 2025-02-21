@@ -1,167 +1,97 @@
-"use client";
 import Image from "next/image";
-import backgroundImage from "../../../public/assets/pricingpage/backgroundImage .webp";
-import React, { useRef } from "react";
+import backgroundImage from "../../../public/assets/pricingpage/pricing.webp";
+import React from "react";
 import frontImage from "../../../public/assets/pricingpage/List → Listitem.webp";
 import pricing2 from "../../../public/assets/pricingpage/pricing1 (1).webp";
 import pricing1 from "../../../public/assets/pricingpage/pricing1 (2).webp";
 import PricingForm from "./PricingForm";
 import { FaArrowDown } from "react-icons/fa";
+import Link from "next/link";
 
-interface Plan {
-  name: string;
-  price: number;
-  features: string[];
-}
 
-const PricingCards: React.FC = () => {
-  const pricingFormRef = useRef<HTMLDivElement>(null);
 
-  const scrollToForm = () => {
-    if (pricingFormRef.current) {
-      const targetPosition = pricingFormRef.current.offsetTop;
-      const startPosition = window.scrollY;
-      const distance = targetPosition - startPosition;
-      const duration = 1000;
-
-      let startTime: number | null = null;
-
-      const animateScroll = (currentTime: number) => {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-
-        window.scrollTo(0, startPosition + distance * progress);
-        if (timeElapsed < duration) {
-          requestAnimationFrame(animateScroll);
-        }
-      };
-
-      requestAnimationFrame(animateScroll);
-    }
-  };
-
+const PricingCards = () => {
   return (
     <>
-      <div className="relative text-white md:py-44 py-28 md:px-4 px-2 bg-black ">
-        {/* Background Image */}
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-          width={50}
-          height={30}
-            src={backgroundImage}
-            alt="Competitive pricing allows you to maximize value without compromising quality"
-            className="w-full h-full object-cover animate-fade-in opacity-75"
-          />
-        </div>
+      {/* ✅ Hero Section with Background Image */}
+      <div className="relative text-white h-screen">
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src={backgroundImage}
+      alt="Competitive pricing for high-quality services"
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
 
-        {/* Content */}
-        <div className="relative flex flex-col items-center justify-center h-full max-w-4xl mx-auto ">
-          <h1 className="text-2xl md:text-5xl lg:text-6xl  font-semibold leading-tight md:mb-4 text-center animate-slide-down">
-            Pricing to Your Success
-          </h1>
-          <p className="text-lg md:text-xl font-normal mb-4 text-center animate-fade-in md:mt-2 mt-3">
-            At TechCreator, we believe in providing clear and competitive
-            pricing for all our services. Whether you’re a startup or an
-            established business, our packages are designed to deliver maximum
-            value without compromising on quality.
-          </p>
-          <button
-            onClick={scrollToForm}
-            className=" bg-[#9A00FF] text-lg  text-white p-4 rounded-md mt-4 hover:bg-[#734bdf] shadow-[0_4px_16px_-4px_#3b71ca] transition flex gap-1 items-center"
-          >
-            Share Your Requirements
-            <FaArrowDown
-              className="transition-transform duration-300 group-hover:translate-y-2"
-              size={15}
-            />
-          </button>
-        </div>
+  {/* Black Overlay */}
+  <div className="absolute inset-0 bg-black opacity-75"></div>
+
+  {/* Content */}
+  <div className="relative flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-4 h-full">
+    <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+      Pricing to Your Success
+    </h1>
+    <p className="text-lg md:text-xl font-normal mt-3">
+      At TechCreator, we believe in providing clear and competitive
+      pricing for all our services. Our packages are designed to deliver
+      maximum value without compromising quality.
+    </p>
+    <Link
+      href="#pricing-form"
+      className="bg-[#9A00FF] text-lg text-white md:p-4 p-3 rounded-md mt-4 hover:bg-[#734bdf] shadow-lg transition flex gap-2 items-center"
+    >
+      Share Your Requirements <FaArrowDown size={15} />
+    </Link>
+  </div>
+</div>
+
+
+      {/* ✅ Pricing Sections */}
+      <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
+        
+        {/* First Pricing Section */}
+      <div className="flex md:flex-row flex-col-reverse justify-between md:gap-10 gap-3">
+       <div className="">
+       <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:max-w-4xl">Affordable Solutions Without Sacrificing Quality</h2>
+       <p className="text-base md:text-lg lg:text-xl mt-2 md:max-w-5xl">Our pricing is structured to suit diverse business needs. From basic plans to premium solutions, we ensure that every client gets high-quality service, whether it's web development, digital marketing, or app development.We know every business has different and unique requirements, which provoke us to offer flexible options that cater to different budgets.We have a team of expertise committed to deliver exceptional results and add values to your investment.</p>
+       </div>
+
+        <Image src={frontImage} alt="Flexible pricing for high-quality services" width={300} height={200} loading="lazy"
+        className="md:h-[50vh] md:w-[25vw] sm:w-[55vw] w-full sm:h-[60vh] h-[50vh] mx-auto md:mx-0 lg:object-cover object-contain rounded-lg"
+         />
       </div>
-
-      <div>
-       
-      <div className='max-w-[1450px] mx-auto px-4 md:mt-16 mt-9'>
-        <div className="flex  md:flex-row justify-between flex-col-reverse md:gap-16 gap-3 ">
-          <div className="md:w-[1900px] ">
-            <h2 style={{lineHeight:1.2}} className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 font-medium ">
-              Affordable Solutions Without Sacrificing Quality
-            </h2>
-            <p className=" text-base md:text-lg lg:text-xl  mt-4 md:mt-0">
-              Our pricing is structured to suit diverse business needs. From
-              basic plans to premium solutions, we ensure that every client gets
-              high-quality service, whether it's web development, digital
-              marketing, or app development.We know every business has different and unique requirements, which provoke us to offer flexible options that cater to different budgets.We have a team of expertise committed to deliver exceptional results and add values to your investment. 
-            </p>
-          </div>
-          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px] md:h-[349.42px] mx-auto md:mx-0">
-            <div className="relative w-full h-full">
-              <Image
-                src={frontImage}
-                alt="Flexible pricing for high-quality web, marketing, and app development services"
-                className="absolute inset-0 rounded-2xl lg:w-[600px]"
-                  layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          </div>
-        </div>
+        {/* Second Pricing Section */}
+        <div className="flex md:flex-row flex-col-reverse justify-between md:gap-10 gap-3 md:mt-16 mt-9 md:mb-16 mb-9">
+        <Image src={pricing2} alt="Custom pricing to fit business needs" width={300} height={200} loading="lazy"
+        className="md:h-[50vh] md:w-[25vw] sm:w-[55vw] w-full sm:h-[60vh] h-[50vh] mx-auto md:mx-0 lg:object-cover object-contain rounded-lg"
+         />
+       <div className="">
+       <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:max-w-4xl">Flexible Packages for All Businesses</h2>
+       <p className="text-base md:text-lg lg:text-xl mt-2 md:max-w-5xl">We offer customizable pricing plans to align with your goals. Whether you need comprehensive solutions or specific services, our packages are built to scale with your business as it grows.Our different packages ensure you pay for what you need, also providing with the option of upgradation or adjustment as we all know requirements evolve as time passes. We have a range of options that is suitable to any budget or project size. Our pricing is transparent and there is no hidden fees.</p>
+       </div>
 
         
+      </div>
 
-        <div className="flex flex-col md:flex-row justify-between  md:gap-16 gap-3 mt-9 md:mt-16 ">
-          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px]  md:h-[349.42px] mx-auto md:mx-0">
-            <div className="relative z-10 w-full h-full">
-              <Image
-                src={pricing2}
-                alt="Custom pricing that works around your business growth"
-                className="absolute inset-0 rounded-2xl lg:w-[600px]"
-                  layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          </div>
-          <div className="md:w-[1900px] ">
-            <h2 style={{lineHeight:1.2}} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 font-medium  ">
-            Flexible Packages for All Businesses
-            </h2>
-            <p className=" text-base md:text-lg lg:text-xl  mt-4 md:mt-0">
-            We offer customizable pricing plans to align with your goals. Whether you need comprehensive solutions or specific services, our packages are built to scale with your business as it grows.Our different packages ensure you pay for what you need, also providing with the option of upgradation or adjustment as we all know requirements evolve as time passes. We have a range of options that is suitable to any budget or project size. 
-Our pricing is transparent and there is no hidden fees.
-            </p>
-          </div>
-          
-        </div>
-        {/* Pricing form */}
-        <div ref={pricingFormRef} className="md:mt-16 mt-9" >
+        {/* ✅ Pricing Form Section */}
+        <div id="pricing-form" className="mt-16">
           <PricingForm />
         </div>
 
-        
+        {/* Third Pricing Section */}
+        <div className="flex md:flex-row flex-col-reverse justify-between md:gap-10 gap-3 md:mt-16 mt-9 md:mb-16 mb-9">
+       <div className="">
+       <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:max-w-4xl">Why Choose TechCreator for Your Next Project?</h2>
+       <p className="text-base md:text-lg lg:text-xl mt-2 md:max-w-5xl">With TechCreator, you get more than just a service—you get a partner committed to your success. Our pricing reflects our dedication to delivering the best results while staying within your budget.Understanding the market and business requirements make you to do something great. This is where TechCreator excels. We first understand your business goals and then deliver solution to tackle the challenges that come your way. We bring expertise and innovation to every project whether it is web development or app development.</p>
+       </div>
 
-       <div className="flex flex-col md:flex-row justify-between md:gap-16 gap-3 mt-9 md:mt-16 md:mb-16 mb-9">
-          <div className="md:w-[1900px] ">
-            <h2 style={{lineHeight:1.2}} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 font-medium ">
-            Why Choose TechCreator for Your Next Project?
-            </h2>
-            <p className=" text-base md:text-lg lg:text-xl  mt-4 md:mt-0">
-With TechCreator, you get more than just a service—you get a partner committed to your success. Our pricing reflects our dedication to delivering the best results while staying within your budget.Understanding the market and business requirements make you to do something great. This is where TechCreator excels. We first understand your business goals and then deliver solution to tackle the challenges that come your way. We bring expertise and innovation to every project whether it is web development or app development.
-            </p>
-          </div>
-          <div className="relative sm:w-[400px] w-full h-[300px] md:w-[900px]  md:h-[349.42px] mx-auto md:mx-0">
-            <div className="relative z-10 w-full h-full">
-              <Image
-                src={pricing1}
-                alt="TechCreator: A partner focused on your success with affordable pricing"
-                className="absolute inset-0 rounded-2xl lg:w-[600px]"
-                  layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          </div>
-        </div>
-</div>
-
+        <Image src={pricing1} alt="TechCreator: A partner focused on your success" width={300} height={200} loading="lazy"
+        className="md:h-[50vh] md:w-[25vw] sm:w-[55vw] w-full sm:h-[60vh] h-[50vh] mx-auto md:mx-0 lg:object-cover object-contain rounded-lg"
+         />
+      </div>
       </div>
     </>
   );
