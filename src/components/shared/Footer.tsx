@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="relative bg-black text-white py-2 w-full">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20 footer-bg"
+        className="absolute inset-0 bg-cover bg-center opacity-10 footer-bg"
       ></div>
       <div className="relative mx-auto  px-3 mt-6">
         <div className="flex flex-wrap md:gap-10 gap-9 justify-between px-5">

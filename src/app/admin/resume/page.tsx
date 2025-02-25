@@ -92,7 +92,7 @@ const Page = () => {
         <div className="p-4 mt-20">
           {/* Search Input */}
           <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold mb-4 md:mb-0">Resume List</h1>
+            <h1 className="text-2xl font-bold mb-4 md:mb-0">Resume List : ({filteredData.length})</h1>
             <div className="relative flex items-center w-full max-w-xs">
               <input
                 type="text"

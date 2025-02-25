@@ -21,7 +21,7 @@ interface ContactTableProps {
 const ContactTable: FC<ContactTableProps> = ({ contacts, onDelete, onView }) => {
   
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 5;
+  const rowsPerPage = 12;
 
   const totalPages = Math.ceil(contacts.length / rowsPerPage);
 

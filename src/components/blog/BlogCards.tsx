@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import useGetAllBlogs from "@/hooks/useGetAllBlogs";
+import { motion } from "framer-motion";
+
 
 // Function to create a slug from the title
 const createSlug = (title: string | undefined): string =>
@@ -22,6 +24,7 @@ const BlogCards: React.FC = () => {
   const blogs = useSelector((state: RootState) => state.blogs.blogs);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 12;
+  const [loadingBlogId, setLoadingBlogId] = useState<string | null>(null);
 
   // Calculate the index of the last and first blog on the current page
   const indexOfLastBlog = currentPage * blogsPerPage;
@@ -45,12 +48,11 @@ const BlogCards: React.FC = () => {
     ) : (
       <>
     
-        <div className="container mb-10 mt-10 cursor-pointer   mx-auto grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
+        <div className="container mb-10 mt-10 max-w-[1450px] mx-auto grid grid-cols-1 sm:grid-cols-2 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
         {currentBlogs.map((blog: any) => (
   <div key={blog._id}>
-    <Link href={`/blog/${createSlug(blog.title)}`}>
 
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:h-[390px]">
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full md:h-[450px]">
       <Image
         src={blog.image?.imageUrl || "/path/to/default-image.jpg"}
         alt={blog.image?.altDescription || blog.title}
@@ -68,10 +70,55 @@ const BlogCards: React.FC = () => {
       {blog.description}
     </p>
   </div>
+   {/* Button */}
+   <Link href={`/blog/${createSlug(blog.title)}`}
+    onClick={() => setLoadingBlogId(blog._id)}
+   >
+
+<motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        disabled={loadingBlogId === blog._id}
+                        className={`mt-6 w-full py-3 text-sm font-semibold text-white rounded-xl transition duration-300 mb-2 ${
+                          loadingBlogId === blog._id
+                            ? "bg-gray-400 cursor-not-allowed"
+                            : "bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900"
+                        }`}
+                      >
+                        {loadingBlogId === blog._id ? (
+                          <span className="flex justify-center items-center">
+                            <svg
+                              className="animate-spin h-5 w-5 mr-2 text-white"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                              ></circle>
+                              <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8v4l3.293-3.293a1 1 0 011.414 0L20 8V4a8 8 0 00-16 8z"
+                              ></path>
+                            </svg>
+                            please wait...
+                          </span>
+                        ) : (
+                          "Learn More →"
+                        )}
+                      </motion.button>
+     
+    </Link>
+
 </div>
 
     </div>
-    </Link>
   </div>
 ))}
 

@@ -160,7 +160,7 @@ const ServicesSection: React.FC = () => {
           .slice(0, 24)
           .join(" ") + "...",
       image: "/assets/homepage/digitalmarketing.webp",
-      link: "/services/digital-marketing",
+      link: "/services/digital-marketing-for-software-companies",
       altText: "Digital marketing",
     },
     

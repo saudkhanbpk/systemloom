@@ -90,7 +90,7 @@ const AllSubscriber = () => {
         <div className="p-8 mt-20">
           <div className="flex flex-col md:flex-row justify-between items-center mb-6">
             <h1 className="text-2xl font-semibold text-gray-700 mb-4 md:mb-0">
-              All Subscribers: {filteredSubscribers.length}
+              All Subscribers: ({filteredSubscribers.length})
             </h1>
             <input
               type="text"
