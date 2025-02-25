@@ -1,11 +1,9 @@
 
 import ClientReviews from "@/components/landingPage/ClientReviews"
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection"
-import ServicesSection from "@/components/landingPage/ServicesSection"
 import HeroSection from "@/components/portfolio/HeroSection"
 import OurImpresiveProject from "@/components/portfolio/OurImpresiveProject"
 import PortfolioSection from "@/components/portfolio/PortfolioSection"
-import Head from "next/head"
 
 const Portfolio = () => {
   return (
@@ -13,7 +11,7 @@ const Portfolio = () => {
       <HeroSection/>
 
     <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
-    <PortfolioSection/>
+    {/* <PortfolioSection/> */}
       <OurImpresiveProject/>
       <div className=" bg-purple-600 md:mt-16 mt-9 md:mb-16 mb-9 ">
 <ClientReviews/>

@@ -55,7 +55,7 @@ const WorkProcess = () => {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="p-6 shadow-lg rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-500 to-indigo-500 bg-opacity-10 backdrop-blur-lg hover:bg-opacity-20"
+              className="md:p-6 p-2 shadow-lg rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-500 to-indigo-500 bg-opacity-10 backdrop-blur-lg hover:bg-opacity-20"
             >
               <div className="flex justify-center  mb-4">{step.icon}</div>
               <span className="text-white text-xl font-semibold">{step.id}</span>
