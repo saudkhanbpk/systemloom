@@ -5,6 +5,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import useGetAllProjects from "@/hooks/useGetAllProjects";
+import Link from "next/link";
 
 interface IndustryProjectsProps {
   slug: string;
@@ -55,60 +56,60 @@ const IndustryRelatedProjects: React.FC<IndustryProjectsProps> = ({ slug }) => {
       
 
       {/* Projects section */}
-      <div className="grid grid-cols-1 md:grid-cols-2  md:px-8 px-3 gap-3 mx-auto my-10">
-        {currentProjects.length > 0 ? (
-          currentProjects.map((project) => (
-            <div
-              key={project._id}
-              className="flex flex-col bg-white border border-black text-gray-800 rounded-md overflow-hidden"
-            >
-              <div>
-                <Image
-                  src={project.projectScreenshot || "/path/to/fallback-image.jpg"}
-                  alt={project.title}
-                  width={400}
-                  height={250}
-                  className="object-cover w-full h-[250px]"
-                />
-              </div>
-              <div className="flex flex-col p-6 space-y-4">
-                <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
-                <p className="text-base text-gray-600">{project.description}</p>
-                <div className="flex gap-3 flex-wrap text-nowrap">
-                  {project.websiteLink && (
-                    <button
-                      onClick={() => window.open(project.websiteLink, "_blank")}
-                      className="py-2 px-5 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-all"
-                    >
-                      Website Link
-                    </button>
-                  )}
-                  {project.figmaLink && (
-                    <button
-                      onClick={() => window.open(project.figmaLink, "_blank")}
-                      className="py-2 px-5 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-all"
-                    >
-                      Figma Link
-                    </button>
-                  )}
-                  {project.githubLink && (
-                    <button
-                      onClick={() => window.open(project.githubLink, "_blank")}
-                      className="py-2 px-5 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-all"
-                    >
-                      GitHub Link
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="text-gray-600 text-lg text-center">
-            Sorry, no projects are available right now. Please check back later!
-          </p>
-        )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-10 my-10">
+  {currentProjects.length > 0 ? (
+    currentProjects.map((project) => (
+      <div
+        key={project._id}
+        className="relative flex flex-col bg-white/20 backdrop-blur-lg border border-gray-300 rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl"
+      >
+        {/* Project Image */}
+        <div className="relative w-full h-56">
+          <Image
+            src={project.projectScreenshot || "/path/to/fallback-image.jpg"}
+            alt={project.title}
+            layout="fill"
+            className="object-cover w-full h-full"
+          />
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+
+        {/* Project Details */}
+        <div className="flex flex-col md:p-6 p-2 flex-grow">
+          <h2 className="text-2xl font-bold text-black">{project.title}</h2>
+          <p className="text-gray-600 text-base mb-4">{project.description}</p>
+
+          {/* 🟢 Bottom Buttons Always at Same Position */}
+          <div className="mt-auto pt-4 flex gap-3">
+            {project.websiteLink && (
+              <Link href={project.websiteLink} target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center w-full py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:bg-blue-600 transition">
+                🌍 Website
+              </Link>
+            )}
+            {project.figmaLink && (
+              <Link href={project.figmaLink} target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center w-full py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+                🎨 Figma
+              </Link>
+            )}
+            {project.githubLink && (
+              <Link href={project.githubLink} target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center w-full py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
+                🖥 GitHub
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
+    ))
+  ) : (
+    <p className="text-gray-400 text-lg text-center">
+      Sorry, no projects are available right now. Please check back later!
+    </p>
+  )}
+</div>
+
 
       {/* Pagination */}
       {showPagination && (

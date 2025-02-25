@@ -101,7 +101,7 @@ const OurImpressiveProject = () => {
             </div>
 
             {/* Content Section */}
-            <div className="flex flex-col flex-1 md:px-6 md:py-6 py-2 text-center">
+            <div className="flex flex-col flex-1 md:px-3 md:py-6 py-2 text-center">
               <h2 className="font-semibold text-lg md:text-2xl text-gray-800">
                 {project.title}
               </h2>
@@ -119,7 +119,7 @@ const OurImpressiveProject = () => {
                 {loading === project.link ? (
                   <FaSpinner className="animate-spin" />
                 ) : (
-                  "View Project"
+                  "View Projects"
                 )}
               </button>
             </div>
