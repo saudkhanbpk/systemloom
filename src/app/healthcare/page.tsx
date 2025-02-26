@@ -24,7 +24,7 @@ const Healthcare = () => {
         </div>
 
         {/* Content Wrapper */}
-        <div className="relative md:max-w-[1440px] w-full mx-auto pt-32  md:pb-0 pb-10 px-4 sm:px-6 md:px-8 h-full flex flex-col justify-center items-center">
+        <div className="relative md:max-w-[1440px] w-full mx-auto pt-32  md:pb-0 pb-10 px-2 sm:px-6 md:px-8 h-full flex flex-col justify-center items-center">
           <div className="w-full text-center md:max-w-4xl flex flex-col justify-center gap-6 md:mx-auto">
             <h1 style={{lineHeight:1.2}} className="font-semibold text-3xl sm:text-4xl md:text-5xl">
               Custom HealthCare Software Development Solutions & Services
