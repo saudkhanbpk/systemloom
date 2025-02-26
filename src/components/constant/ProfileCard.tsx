@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Linkedin from "../../../public/assets/icons/Vector.png";
+import Link from "next/link";
 
 interface TeamProfile {
   name: string;
@@ -22,24 +23,24 @@ const ProfileCard: React.FC<TeamProfile> = ({
   return (
     <div className="relative group max-w-xs mx-auto overflow-hidden">
      <div className="relative group w-full max-w-full">
-  <Image
-    src={imageUrl}
-    alt={name}
-    width={width}
-    height={height}
-    className=" w-{200px} md:h-[250px] h-[300px] object-cover transition-transform duration-300"
-  />
+     <Image
+  src={imageUrl}
+  alt={name}
+  width={width} 
+  height={height}
+  className="w-[250px] md:h-[250px] h-[300px] object-cover transition-transform duration-300"
+/>
 
 
         <div className="absolute inset-0 flex justify-center items-center bg-[#F4F6FCD4] bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <a
+          <Link
             href={linkedInUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-3xl cursor-pointer"
           >
             <Image src={Linkedin} alt="LinkedIn" />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="mt-2 p-4 flex flex-col items-center">

@@ -75,14 +75,18 @@ const MobileAppDevelopment = () => {
 
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
-          <Image
-            src={heroappdevelopmentImage}
-            alt="Mobile App Design and development for your business"
-            width={400}
-            height={300}
-            className=" "
-          />
-        </div>
+  <Image
+    src={heroappdevelopmentImage}
+    alt="Mobile App Design and development for your business"
+    width={400}
+    height={300}
+    priority
+    quality={75} 
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+    className="rounded-lg shadow-md object-cover"
+  />
+</div>
+
       </div>
       {/* hero section end */}
 

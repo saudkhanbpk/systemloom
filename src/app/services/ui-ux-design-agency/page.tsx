@@ -72,14 +72,18 @@ const UIUXDesign = () => {
 
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
-          <Image
-            src={UIUXDesignImage}
-            alt="The TechCreator will design intuitive and engaging user interfaces and enhance UI and UX to create greater satisfaction for the user"
-            width={300}
-            height={300}
-            className=" "
-          />
-        </div>
+  <Image
+    src={UIUXDesignImage}
+    alt="The TechCreator will design intuitive and engaging user interfaces and enhance UI and UX to create greater satisfaction for the user"
+    width={300}
+    height={300}
+    priority
+    quality={75} 
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
+    className="rounded-lg shadow-md object-cover"
+  />
+</div>
+
       </div>
       {/* hero section end */}
 

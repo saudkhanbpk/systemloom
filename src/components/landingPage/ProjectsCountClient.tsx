@@ -62,7 +62,7 @@ const ProjectsCountClient: React.FC<{ stats: StatItemProps[] }> = ({ stats }) =>
   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
   style={{ objectFit: "cover" }}
   quality={75}
-  onLoadingComplete={() => setIsImageLoaded(true)}
+  onLoad={() => setIsImageLoaded(true)}
   className="transform scale-105 hover:scale-100 transition-transform duration-[2s]"
 />
 

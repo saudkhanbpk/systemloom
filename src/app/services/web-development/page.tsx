@@ -78,7 +78,8 @@ const WebDevelopment = () => {
   alt="Web Development and Design"
   width={300}
   height={200}
-  priority={true} 
+  priority
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px" // ✅ Responsive sizes
   className="rounded-lg shadow-md object-cover"
 />
 </div>

@@ -13,6 +13,7 @@ const BlogHeroSection: React.FC = () => {
               alt="Background"
               width={300}
               height={150}
+              priority
               className="w-full h-full object-cover" 
             />
           </div>

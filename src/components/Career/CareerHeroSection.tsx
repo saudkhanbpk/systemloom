@@ -114,6 +114,9 @@ const CareerHeroSection: FC = () => {
                 src={CareerSectionImage}
                 width={1200}
                 height={1200}
+                priority
+                quality={75} 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                 alt="Team collaboration"
                 className="w-full h-full rounded-[24px] md:h-96 object-cover"
               />
