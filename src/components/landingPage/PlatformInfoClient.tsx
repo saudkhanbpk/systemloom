@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface PlatformInfoProps {
   platformData: {
@@ -65,15 +66,15 @@ const PlatformInfoClient: React.FC<PlatformInfoProps> = ({ platformData }) => {
             </ul>
           </div>
 
-          <a
+          <Link
             href="https://www.linkedin.com/in/saudkhan39"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors duration-200 group"
+            className="inline-flex items-center md:px-6 md:py-3 px-2 py-2 text-lg font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors duration-200 group"
           >
             Connect on LinkedIn
-            <FaLinkedin className="ml-2 group-hover:scale-110 transition-transform duration-200" />
-          </a>
+            <FaLinkedin className="ml-2  group-hover:scale-110 transition-transform duration-200" />
+          </Link>
         </motion.div>
 
         {/* Right section with lazy-loaded video */}

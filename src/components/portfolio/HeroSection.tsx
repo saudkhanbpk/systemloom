@@ -1,24 +1,36 @@
-import staticImage from '../../../public/assets/portfoliopage/heroimage.webp';
-import Image from 'next/image';
-
+import Image from "next/image";
+import portfolioImage from "../../../public/assets/portfoliopage/herosectionimage.webp";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative bg-black text-white h-auto md:py-10 overflow-hidden">
-      <div className="relative max-w-[1440px] mx-auto mt-32 md:mt-0 md:p-0 p-2 md:py-32">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl  md:px-10 px-2 font-bold md:text-start text-center mb-6">Our Portfolio</h1>
-        <div className="flex flex-col md:flex-row  items-center">
-          <div className="md:w-2/3 md:px-10 px-2 mb-8 md:mb-0  md:pr-8">
-            <p className="text-base md:text-lg mb-4 text-center md:text-start">
-            TechCreator delivers impactful solutions customized to each client's needs. Our portfolio shows how we have helped businesses achieve their goals through innovative designs, seamless development, and strategic marketing. From Marketing to Development, we help you grow your business in every aspect.
-            </p>
-          </div>
-          <div className="md:w-2/3 relative flex  justify-center md:justify-end ">
-            <div className="relative md:absolute md:-top-56 md:-right-9 sm:-right-24 w-full sm:w-[480px]  md:w-[510px]">
-              <Image src={staticImage} width={600} height={600} alt="Tailor-made impactful solutions for your growth using design, development, and marketing" layout="intrinsic" />
-            </div>
+    <div className="relative bg-black text-white py-16 md:py-24">
+      <div className="relative  flex flex-col md:flex-row items-center px-2 md:px-12">
+        
+        {/* Left Side (Text) */}
+        <div className="md:w-1/2 text-center md:text-left md:mt-0 mt-12">
+          <h1 className="text-4xl md:text-5xl  lg:text-6xl font-bold leading-tight">
+          Our <span className="text-purple-600">Portfolio</span>
+          </h1>
+          <p className=" mt-2 md:mt-6 text-lg md:text-xl text-gray-300">
+          TechCreator delivers impactful solutions customized to each client's needs. Our portfolio shows how we have helped businesses achieve their goals through innovative designs, seamless development, and strategic marketing. From Marketing to Development, we help you grow your business in every aspect.
+          </p>
+        </div>
+
+        {/* Right Side (Image) */}
+        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative">
+          <div className="relative w-full max-w-lg">
+            {/* Stylish Image with Overlay */}
+            <div className="absolute -top-10 -left-10 w-full h-full bg-purple-600/30 rounded-lg blur-2xl"></div>
+            <Image
+              src={portfolioImage}
+              width={600}
+              height={600}
+              alt="Innovative portfolio showcasing business solutions"
+              className="rounded-lg shadow-lg transform transition-transform "
+            />
           </div>
         </div>
+
       </div>
     </div>
   );
