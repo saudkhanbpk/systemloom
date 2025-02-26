@@ -74,14 +74,18 @@ const SoftwareMaintenance = () => {
 
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
-          <Image
-            src={heroimage}
-            alt="Boost stability and growth with software solutions that improve tracking efficiency and reduce disruptions"
-            width={300}
-            height={300}
-            className=" "
-          />
-        </div>
+  <Image
+    src={heroimage}
+    alt="Boost stability and growth with software solutions that improve tracking efficiency and reduce disruptions"
+    width={300}
+    height={300}
+    priority
+    quality={75} 
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
+    className="rounded-lg shadow-md object-cover"
+  />
+</div>
+
       </div>
       {/* hero section end */}
 

@@ -25,6 +25,7 @@ const HeroSection: React.FC = () => {
               src={portfolioImage}
               width={600}
               height={600}
+              priority
               alt="Innovative portfolio showcasing business solutions"
               className="rounded-lg shadow-lg transform transition-transform "
             />

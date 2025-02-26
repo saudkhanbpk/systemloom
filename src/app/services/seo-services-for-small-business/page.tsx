@@ -73,14 +73,18 @@ const SeoContentWriting = () => {
 
         {/* Right Section */}
         <div className="w-full md:w-auto flex justify-center">
-          <Image
-            src={SEOImage}
-            alt="Improve search engine results with professional SEO content writing services, which deliver results and engage audiences"
-            width={300}
-            height={300}
-            className=" "
-          />
-        </div>
+  <Image
+    src={SEOImage}
+    alt="Improve search engine results with professional SEO content writing services, which deliver results and engage audiences"
+    width={300}
+    height={300}
+    priority
+    quality={75} 
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px"
+    className="rounded-lg shadow-md object-cover"
+  />
+</div>
+
       </div>
       {/* hero section end */}
 

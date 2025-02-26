@@ -25,7 +25,7 @@ const OurTeam = async () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex justify-center">
-        <Image src={ouTeamImage} alt="Our Team" width={500} height={400} className="rounded-lg object-contain" />
+        <Image src={ouTeamImage} alt="Our Team" width={500} height={400} style={{ width: "auto", height: "auto" }} className="rounded-lg object-contain" />
       </div>
     </div>
   );
