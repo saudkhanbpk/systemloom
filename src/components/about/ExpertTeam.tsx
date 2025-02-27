@@ -63,9 +63,9 @@ const ExpertTeam: React.FC = () => {
 
   return (
     <div>
-      <div className=" md:mt-16 mt-9 text-center">
-        <p className="font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-[#9A00FF]">Our Team</p>
-      </div>
+      
+        <p className=" text-center font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-[#9A00FF]">Our Team</p>
+     
 
       {/* Buttons to select category */}
       <div className="flex justify-center flex-wrap text-nowrap gap-3 md:gap-4  py-4 mb-6">

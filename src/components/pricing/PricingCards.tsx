@@ -14,39 +14,38 @@ const PricingCards = () => {
   return (
     <>
       {/* ✅ Hero Section with Background Image */}
-      <div className="relative text-white h-screen">
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <Image
-      src={backgroundImage}
-      alt="Competitive pricing for high-quality services"
-      fill
-      className="object-cover"
-      priority
-    />
-  </div>
+      <section className="relative h-screen flex items-center justify-center text-white text-center px-4">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src={backgroundImage} 
+          alt="Competitive pricing for high-quality services"
+          fill
+          priority
+          quality={80}
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/75"></div>
+      </div>
 
-  {/* Black Overlay */}
-  <div className="absolute inset-0 bg-black opacity-75"></div>
-
-  {/* Content */}
-  <div className="relative flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-4 h-full">
-    <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-      Pricing to Your Success
-    </h1>
-    <p className="text-lg md:text-xl font-normal mt-3">
-      At TechCreator, we believe in providing clear and competitive
-      pricing for all our services. Our packages are designed to deliver
-      maximum value without compromising quality.
-    </p>
-    <Link
-      href="#pricing-form"
-      className="bg-[#9A00FF] text-lg text-white md:p-4 p-3 rounded-md mt-4 hover:bg-[#734bdf] shadow-lg transition flex gap-2 items-center"
-    >
-      Share Your Requirements <FaArrowDown size={15} />
-    </Link>
-  </div>
-</div>
+      {/* Content */}
+      <div className="relative max-w-4xl space-y-4">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+          Pricing to Your Success
+        </h1>
+        <p className="text-lg sm:text-lg md:text-xl font-normal">
+          At TechCreator, we believe in providing clear and competitive pricing
+          for all our services. Our packages are designed to deliver maximum
+          value without compromising quality.
+        </p>
+        <Link
+          href="#pricing-form"
+          className="inline-flex items-center gap-2 bg-[#9A00FF] text-lg md:p-4 p-3 rounded-md hover:bg-[#734bdf] shadow-lg transition duration-300"
+        >
+          Share Your Requirements <FaArrowDown size={15} />
+        </Link>
+      </div>
+    </section>
 
 
       {/* ✅ Pricing Sections */}

@@ -50,7 +50,7 @@ const ProjectsCountClient: React.FC<{ stats: StatItemProps[] }> = ({ stats }) =>
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
-    <section className="relative md:mt-16 mt-9 min-h-[600px] md:min-h-[500px] overflow-hidden">
+    <section className="relative  min-h-[600px] md:min-h-[500px] overflow-hidden">
   
     {/* ✅ Background Image & Gradient Overlays (Merged) */}
     <div className="absolute inset-0 bg-gray-900">

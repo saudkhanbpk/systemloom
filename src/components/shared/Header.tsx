@@ -127,7 +127,7 @@ const Header: React.FC = () => {
  
 
   return (
-    <nav   className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
+    <nav   className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out py-2 ${
       scrolling
         ? "bg-black backdrop-blur-lg shadow-lg"
         : "bg-transparent"
@@ -142,19 +142,20 @@ const Header: React.FC = () => {
          }}
         
          className="flex items-center justify-between h-16">
-          <div>
-            <Link href="/">
-              <div className="flex-shrink-0 flex justify-center gap-2 items-center w-[100px] md:w-full   ">
-                <Image
-                  src={TechcreatorLogo}
-                  alt="techcreartor_logo"
-                  width={158}
-                  height={10}
-                />
-                {/* <span className="text-[#FFFFFF] md:text-xl font-semibold">TechCreator</span> */}
-              </div>
-            </Link>
-          </div>
+        
+        <Link href="/">
+  <div className="flex-shrink-0 flex justify-center gap-2 items-center w-[100px] md:w-full">
+    <Image
+      src={TechcreatorLogo}
+      alt="techcreartor_logo"
+      width={158}
+      height={10}
+      priority 
+    />
+  </div>
+</Link>
+
+          
 
           <div className="flex items-center gap-9">
             <div className="hidden md:block">
