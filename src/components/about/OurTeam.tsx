@@ -15,19 +15,28 @@ const OurTeam = async () => {
   const teamData = await getTeamData(); 
 
   return (
-    <div className="flex lg:flex-row flex-col justify-between gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
-      <div>
-        <div className="lg:w-[500px]">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl  text-purple-600 font-bold">{teamData.heading}</h2>
-          <p className="text-gray-600 mt-3">{teamData.description}</p>
-        </div>
-        <OurTeamClient /> 
-      </div>
-
-      <div className="w-full lg:w-1/2 flex justify-center">
-        <Image src={ouTeamImage} alt="Our Team" width={500} height={400} style={{ width: "auto", height: "auto" }} className="rounded-lg object-contain" />
-      </div>
+    <section className="flex lg:flex-row flex-col justify-between gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
+  
+    <div className="lg:w-[500px]">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl text-purple-600 font-bold">
+        {teamData.heading}
+      </h2>
+      <p className="text-gray-600 mt-3">{teamData.description}</p>
+  
+      <OurTeamClient /> 
     </div>
+  
+    <Image 
+      src={ouTeamImage} 
+      alt="Our Team" 
+      width={500} 
+      height={400} 
+      style={{ width: "auto", height: "auto" }} 
+      className="rounded-lg object-contain flex justify-center lg:w-1/2"
+    />
+    
+  </section>
+  
   );
 };
 

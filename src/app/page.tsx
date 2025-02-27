@@ -14,8 +14,6 @@ import ServicesSection from "@/components/landingPage/ServicesSection";
 import Technologies from "@/components/landingPage/Technologies";
 import WorkProcess from "@/components/landingPage/WorkProcess";
 
-
-
 export const metadata = {
   title: "Software Development and Digital Marketing Agency | TechCreator",
   description:
@@ -55,32 +53,25 @@ export default function Page() {
         }}
       />
 
-     
-     <Slider />
-<div className="max-w-[1450px] mx-auto  px-4 ">
-  <Companies />
-</div>
-
-<div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
-<ServicesSection />
-<Technologies />
-  <WorkProcess/>
-  <OurValues />
-  <div className="md:mt-16 mt-9">
-  <ProjectsCount />
-  </div>
-  <Products />
-  <OurTeam />
-  <Benefits />
-  <PlatformInfo />
-  <IndustriesSection/>
-  <div className=" bg-purple-600 md:mt-16 mt-9 ">
-<ClientReviews/>
-<ClientTestimonialsSection />
-</div>
-<GetQoute />
-</div>
-     
+      <Slider />
+      <div className="max-w-[1450px] mx-auto  px-4 ">
+        <Companies />
+      </div>
+      <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
+        <ServicesSection />
+        <Technologies />
+        <WorkProcess />
+        <OurValues />
+        <ProjectsCount />
+        <Products />
+        <OurTeam />
+        <Benefits />
+        <PlatformInfo />
+        <IndustriesSection />
+        <ClientReviews />
+        <ClientTestimonialsSection />
+        <GetQoute />
+      </div>
     </>
   );
 }

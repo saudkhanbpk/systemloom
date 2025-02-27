@@ -29,18 +29,19 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
           src={slide.imageSrc}
           alt={slide.alt || "Slide Thumbnail"}
           fill
-          priority={index === 0}
-          sizes="(max-width: 768px) 100vw"
-          quality={80}
+          priority={index === 0} 
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 75vw, 50vw" 
+          quality={75} 
           className="object-cover"
         />
+        
         ) : (
           <video  
             autoPlay
             loop
             muted
             playsInline
-            preload="auto"  
+            preload="metadata"  
             className="w-full h-full object-cover"
           >
             <source src={slide.videoSrc} type="video/webm" />
@@ -53,11 +54,12 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
         
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6"
         > 
-          <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl leading-normal">
-            <span>{slide.heading.split(slide.highlight)[0]}</span>
-            <span className={slide.highlightColor}> {slide.highlight} </span>
-            <span>{slide.heading.split(slide.highlight)[1]}</span>
-          </h2>
+         <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl leading-normal">
+  {slide.heading.split(slide.highlight).map((part: string, i: number) => 
+    i === 1 ? <span key={i} className={slide.highlightColor}> {slide.highlight} </span> : part
+  )}
+</h2>
+
           <p className="md:text-2xl text-lg mt-4 md:max-w-4xl text-center">{slide.description}</p>
           <Link href="/contact" rel="noopener noreferrer">
             <button className={`mt-4 px-6 py-3 ${slide.buttonColor} text-white font-semibold rounded-full transition`}>

@@ -42,9 +42,9 @@ const values = [
 
 const OurValues: React.FC = () => {
   return (
-    <section className="relative  text-white">
-      <div className="relative text-center md:mt-16 mt-9">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold md:mb-9 mb-6 tracking-wide text-purple-600">
+    <section className="relative  text-white md:mt-16 mt-9">
+
+        <h2 className="text-3xl text-center md:text-4xl lg:text-5xl  font-bold md:mb-9 mb-6 tracking-wide text-purple-600">
           Our Core Values
         </h2>
 
@@ -62,7 +62,6 @@ const OurValues: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
     </section>
   );
 };

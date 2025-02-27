@@ -53,10 +53,10 @@ const IndustriesSection = () => {
       {industries.map((industry, index) => (
         <Link key={index} href={industry.link}>
          <div className="p-6 border rounded-xl shadow-sm border-gray-300 bg-gradient-to-r from-indigo-500 to-purple-500 hover:border-purple-600 hover:border-2 cursor-pointer flex flex-col justify-between hover:scale-105 transition-transform duration-300 ease-in-out">
-            <div>
+            
               <h3 className="text-xl font-semibold mb-2 text-white">{industry.title}</h3>
               <p className="text-white mb-4">{industry.description}</p>
-            </div>
+           
             <div className="flex flex-wrap gap-2">
               {industry.tags.map((tag, idx) => (
                 <span key={idx} className="px-3 py-1 text-sm border rounded-full text-white">
