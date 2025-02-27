@@ -38,11 +38,7 @@ const getSlides = async () => {
 const Page = async () => {
   const slides = await getSlides();
 
-  return (
-    <div>
-      <Slider slides={slides} />
-    </div>
-  );
+  return <Slider slides={slides} />;
 };
 
 export default Page;

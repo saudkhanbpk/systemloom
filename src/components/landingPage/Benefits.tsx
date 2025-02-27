@@ -41,30 +41,29 @@ const features = [
 
 const Benefits = () => {
   return (
-    <div className="md:mt-16 mt-9 ">
-      <div className="text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-purple-600">
-          What makes us unique
-        </h2>
-      </div>
+    <section className="md:mt-16 mt-9 text-center">
+  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600">
+    What makes us unique
+  </h2>
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-10 md:mt-9 mt-6 ">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center md:p-6 p-2  bg-gradient-to-r from-purple-500 to-indigo-500  rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:border-purple-600 hover:border-2"
-          >
-            {feature.icon}
-            <h2 className="md:text-xl text-lg font-semibold mt-2 text-white">
-              {feature.title}
-            </h2>
-            <p className="mt-1 md:text-lg text-base font-medium text-white text-center">
-              {feature.description}
-            </p>
-          </div>
-        ))}
+  <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-10 md:mt-9 mt-6">
+    {features.map((feature, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center md:p-6 p-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:border-purple-600 hover:border-2"
+      >
+        {feature.icon}
+        <h2 className="md:text-xl text-lg font-semibold mt-2 text-white">
+          {feature.title}
+        </h2>
+        <p className="mt-1 md:text-lg text-base font-medium text-white text-center">
+          {feature.description}
+        </p>
       </div>
-    </div>
+    ))}
+  </div>
+</section>
+
   );
 };
 

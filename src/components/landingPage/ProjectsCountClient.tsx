@@ -50,47 +50,52 @@ const ProjectsCountClient: React.FC<{ stats: StatItemProps[] }> = ({ stats }) =>
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
-    <section className="relative min-h-[600px] md:min-h-[500px] overflow-hidden">
-      {/* Background Image with Loading State */}
-      <div className="absolute inset-0 bg-gray-900">
-      <div className={`transition-opacity duration-700 ${isImageLoaded ? "opacity-100" : "opacity-0"}`}>
+    <section className="relative md:mt-16 mt-9 min-h-[600px] md:min-h-[500px] overflow-hidden">
+  
+    {/* ✅ Background Image & Gradient Overlays (Merged) */}
+    <div className="absolute inset-0 bg-gray-900">
       <Image
-  src="/assets/homepage/our-people-our-success.webp"
-  alt="Our Success Story"
-  fill
-  loading="lazy" 
-  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  style={{ objectFit: "cover" }}
-  quality={75}
-  onLoad={() => setIsImageLoaded(true)}
-  className="transform scale-105 hover:scale-100 transition-transform duration-[2s]"
-/>
-
+        src="/assets/homepage/our-people-our-success.webp"
+        alt="Our Success Story"
+        fill
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        quality={75}
+        style={{ objectFit: "cover" }}
+        className={`transition-opacity duration-700 ${isImageLoaded ? "opacity-100" : "opacity-0"} transform scale-105 hover:scale-100 transition-transform duration-[2s]`}
+        onLoad={() => setIsImageLoaded(true)}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-transparent" />
+    </div>
+  
+    {/* ✅ Content */}
+    <div className="relative z-10 container mx-auto px-4 py-10 md:py-24 text-center">
+      
+      {/* ✅ Heading Section */}
+      <motion.h2 
+        initial={{ y: -20, opacity: 0 }} 
+        whileInView={{ y: 0, opacity: 1 }} 
+        viewport={{ once: true }} 
+        className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+      >
+        Empowered Teams, <span className="text-purple-400">Proven Success</span>
+      </motion.h2>
+      <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-16">
+        Our global impact and dedication to excellence have helped businesses achieve their digital transformation goals.
+      </p>
+  
+      {/* ✅ Stats Grid */}
+      <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+        {stats.map((stat, index) => (
+          <StatItem key={index} {...stat} />
+        ))}
       </div>
-        {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-transparent" />
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-10 md:py-24">
-        {/* Heading Section */}
-        <motion.div initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-white mb-4">
-            Empowered Teams, <span className="text-purple-400">Proven Success</span>
-          </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-            Our global impact and dedication to excellence have helped businesses achieve their digital transformation goals.
-          </p>
-        </motion.div>
-
-        {/* Stats Grid */}
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-          {stats.map((stat, index) => (
-            <StatItem key={index} {...stat} />
-          ))}
-        </div>
-      </div>
-    </section>
+  
+    </div>
+  
+  </section>
+  
   );
 };
 
