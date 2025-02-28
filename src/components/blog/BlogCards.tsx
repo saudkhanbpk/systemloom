@@ -131,7 +131,7 @@ const BlogCards: React.FC = () => {
             <button
               onClick={() => paginate(currentPage - 1)}
               disabled={currentPage === 1}
-              className="p-2 bg-gray-800 text-white rounded-md disabled:opacity-50 hover:bg-gray-700 transition duration-300"
+              className="p-2 bg-gray-800 text-white rounded-full disabled:opacity-50 hover:bg-gray-700 transition duration-300"
             >
               <AiOutlineArrowLeft size={20} />
             </button>
@@ -142,7 +142,7 @@ const BlogCards: React.FC = () => {
                 <button
                   key={index + 1}
                   onClick={() => paginate(index + 1)}
-                  className={`px-4 py-2 rounded-md ${
+                  className={`p-3 px-5 rounded-full ${
                     currentPage === index + 1
                       ? "bg-[#9A00FF] text-white"
                       : "bg-gray-200 text-gray-800 hover:bg-gray-300"
@@ -157,7 +157,7 @@ const BlogCards: React.FC = () => {
             <button
               onClick={() => paginate(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="p-2 bg-gray-800 text-white rounded-md disabled:opacity-50 hover:bg-gray-700 transition duration-300"
+              className="p-2 bg-gray-800 text-white rounded-full disabled:opacity-50 hover:bg-gray-700 transition duration-300"
             >
               <AiOutlineArrowRight size={20} />
             </button>

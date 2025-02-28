@@ -64,7 +64,7 @@ Want to bring your ideas to life? Let us help you achieve your goals with precis
                   {filteredProjects.map((project) => (
                     <div
                       key={project._id}
-                      className="relative group overflow-hidden rounded-lg border w-full   border-gray-300 shadow-md hover:shadow-lg transition-shadow duration-300"
+                      className="relative group overflow-hidden rounded-lg border w-full border-gray-300 shadow-md hover:shadow-lg transition-shadow duration-300"
                     >
                       {/* Main Feature Image */}
                       <Image
@@ -83,14 +83,14 @@ Want to bring your ideas to life? Let us help you achieve your goals with precis
 
                       {/* Eye Icon on Hover */}
                       <div
-                        className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-70 cursor-pointer"
+                        className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-80 cursor-pointer"
                         onClick={() => handleRedirect(project.websiteLink)}
                         role="button"
                         tabIndex={0}
                         onKeyDown={(e) => e.key === "Enter" && handleRedirect(project.websiteLink)}
                         aria-label={`View project: ${project.title}`}
                       >
-                        <FaEye className="text-white text-4xl" />
+                        <FaEye className=" text-4xl text-purple-600" />
                       </div>
                     </div>
                   ))}

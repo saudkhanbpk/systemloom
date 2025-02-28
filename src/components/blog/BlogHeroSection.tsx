@@ -1,32 +1,29 @@
-import React from 'react';
-import backgroundImage from "../../../public/assets/homepage/blog.webp"
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import backgroundImage from "../../../public/assets/homepage/blog.webp";
 
 const BlogHeroSection: React.FC = () => {
   return (
-    <>
-      <div>
-        <div className="relative bg-black text-white ">
-          <div className="absolute inset-0 overflow-hidden opacity-25">
-            <Image
-              src={backgroundImage}
-              alt="Background"
-              width={300}
-              height={150}
-              priority
-              className="w-full h-full object-cover" 
-            />
-          </div>
-          <div className="relative max-w-[1440px] mx-auto px-2 lg:px-8 py-24 md:py-32">
-            <div className="flex justify-center items-center h-[70vh]">
-              <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl  text-center mb-6">
-                Our latest news and updates
-              </h1>
-            </div>
-          </div>
-        </div>
+    <section className="relative flex justify-center items-center h-screen bg-black text-white">
+      {/* Background Image */}
+      <div className="absolute inset-0 opacity-25">
+        <Image
+          src={backgroundImage}
+          alt="Background"
+          priority
+          quality={80}
+          fill
+          className="object-cover"
+        />
       </div>
-    </>
+
+      {/* Content */}
+      <div className="relative text-center px-4 max-w-4xl">
+        <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl">
+          Our latest news and updates
+        </h1>
+      </div>
+    </section>
   );
 };
 

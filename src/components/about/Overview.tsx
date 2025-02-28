@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Overview: React.FC = () => {
   return (
-    <div className="">
+  
       <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center gap-10">
         {/* Images Section */}
        
@@ -16,8 +16,8 @@ const Overview: React.FC = () => {
       
 
         {/* Text Section */}
-        <div className="w-full py- md:py-16 px-2">
-          <h2 className="text-[#9A00FF] font-inter text-3xl md:text-4xl lg:text-5xl  leading-[48px] md:leading-[60px] font-semibold mb-6">
+        <div className="w-full px-2">
+          <h2 className="text-[#9A00FF] font-inter text-3xl md:text-4xl lg:text-5xl  font-semibold mb-6">
             About TechCreator
           </h2>
           <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8">
@@ -40,7 +40,6 @@ const Overview: React.FC = () => {
           </p>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -4,10 +4,10 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const ConfirmationPage: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-700 to-purple-600 text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
       {/* Icon and Title Section */}
       <div className="flex flex-col items-center space-y-4">
-        <FaCheckCircle className="text-6xl text-green-400 animate-bounce" />
+        <FaCheckCircle className="text-6xl text-purple-600 animate-bounce" />
         <h1 className="text-4xl font-extrabold tracking-wide text-center">
           Thank You!
         </h1>
@@ -19,7 +19,7 @@ const ConfirmationPage: React.FC = () => {
 
       {/* Action Buttons */}
       <div className="mt-10 flex space-x-4">
-        <Link href="/" passHref   className="bg-green-500 hover:bg-green-600 transition duration-300 px-6 py-3 rounded-full text-lg font-semibold shadow-lg">
+        <Link href="/" passHref   className="bg-purple-600 hover:bg-purple-700 transition duration-300 px-6 py-3 rounded-full text-lg font-semibold shadow-lg">
           
             Go to Home
           
