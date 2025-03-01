@@ -31,9 +31,7 @@ const ConfirmationPage: React.FC = () => {
         </Link>
       </div>
 
-      {/* Decorative Background */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-purple-600 opacity-30 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-400 opacity-30 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+     
     </div>
   );
 };

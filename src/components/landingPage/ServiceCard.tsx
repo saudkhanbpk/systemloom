@@ -1,7 +1,6 @@
 "use client";
-
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 interface ServiceCardProps {
@@ -12,6 +11,11 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, altText }) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleClick = () => {
+    setLoading(true)
+  }
   return (
     <article className="h-[400px] p-8 rounded-2xl border border-purple-100 hover:border-purple-300 bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer flex flex-col">
       
@@ -24,12 +28,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, alt
 
       {/* Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="mt-auto w-full py-3 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl hover:from-purple-700 hover:to-purple-900 transition duration-300"
-      >
-        Learn More →
-      </motion.button>
+  onClick={handleClick}
+  disabled={loading}
+  whileHover={!loading ? { scale: 1.05 } : {}}
+  whileTap={!loading ? { scale: 0.95 } : {}}
+  className={`mt-auto w-full py-3 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl transition duration-300 ${
+    loading ? "opacity-50 cursor-not-allowed" : "hover:from-purple-700 hover:to-purple-900"
+  }`}
+>
+  {loading ? "please wait..." : "Learn More →"}
+</motion.button>
       
     </article>
   );
