@@ -15,27 +15,32 @@ const OurTeam = async () => {
   const teamData = await getTeamData(); 
 
   return (
-    <section className="flex lg:flex-row flex-col justify-between gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
+    <section className="flex flex-col lg:flex-row justify-between gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
   
-    <div className="lg:w-[500px]">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl text-purple-600 font-bold">
-        {teamData.heading}
-      </h2>
-      <p className="text-gray-600 mt-3">{teamData.description}</p>
-  
-      <OurTeamClient /> 
-    </div>
-  
+  {/* Text Section */}
+  <div className="lg:w-1/2 w-full flex flex-col justify-center">
+    <h2 className="text-3xl md:text-4xl lg:text-5xl text-purple-600 font-bold">
+      {teamData.heading}
+    </h2>
+    <p className="text-gray-600 mt-3 text-base md:text-lg">{teamData.description}</p>
+
+    {/* Team Client Component */}
+    <OurTeamClient />  
+  </div>
+
+  {/* Image Section */}
+  <div className="flex justify-center lg:w-1/2 w-full">
     <Image 
       src={ouTeamImage} 
       alt="Our Team" 
       width={500} 
-      height={400} 
-      style={{ width: "auto", height: "auto" }} 
-      className="rounded-lg object-contain flex justify-center lg:w-1/2"
+      height={350} 
+      className="rounded-lg object-contain max-w-full h-auto"
     />
-    
-  </section>
+  </div>
+
+</section>
+
   
   );
 };
