@@ -62,9 +62,9 @@ const ExpertTeam: React.FC = () => {
     );
 
   return (
-    <div>
+    <div className="md:mt-16 mt-9">
       
-        <p className=" text-center font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-[#9A00FF]">Our Team</p>
+        <h2 className=" text-center font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-[#9A00FF]">Our Team</h2>
      
 
       {/* Buttons to select category */}
