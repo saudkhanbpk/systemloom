@@ -33,7 +33,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, faqs }) => {
                 onClick={() => toggleAccordion(index)}
               >
                 {faq.question}
-                <span className="text-xl font-bold">
+                <span className="text-xl font-bold text-purple-600 ">
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>
