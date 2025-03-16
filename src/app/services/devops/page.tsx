@@ -18,6 +18,13 @@ import ServicesRelatedProjects from "@/components/services/ServicesRelatedProjec
 import ClientTestimonialsSection from "@/components/landingPage/ClientTestimonialsSection";
 import FaqSection from "@/components/services/FaqSection";
 import ClientReviews from "@/components/landingPage/ClientReviews";
+import Herosection from "@/components/services/Herosection";
+import FeatureSection from "@/components/services/FeatureSection";
+import FeaturesList from "@/components/services/FeaturesList";
+import DiagonalFeatureSection from "@/components/services/DiagonalFeatureSection";
+import FramedFeatureSection from "@/components/services/FramedFeatureSection";
+import OurTeam from "@/components/about/OurTeam";
+import RelatedServices from "@/components/services/RelatedServices";
 
 const Devops = () => {
   const categorySlug = "app-development";
@@ -56,251 +63,86 @@ const Devops = () => {
     { question: "Can you migrate existing infrastructure to the cloud?", answer: " Absolutely! We handle AWS, Google Cloud, and Azure cloud migrations." },
   ];
 
+  const features = [
+    { icon: <LayoutDashboard className="w-6 h-6 text-pink-500" />, text: " Automate development and operations processes with powerful DevOps tools." },
+    { icon: <FileText className="w-6 h-6 text-purple-500" />, text: 'Optimize workflows with CI/CD pipelines and real-time monitoring.' },
+    { icon: <Zap className="w-6 h-6 text-yellow-500" />, text: "  Enhance collaboration between teams for seamless development cycles." },
+    { icon: <Clock className="w-6 h-6 text-blue-500" />, text: "Ensure smooth and efficient deployments with scalable DevOps solutions." },
+  ];
+
+
+  const sections = [
+    {
+      image: devopimage2,
+      alt: "Speed up your workflows while reducing errors through DevOps automation with shorter and more accurate outputs",
+      title: "Transform Processes with DevOps Automation",
+      content:
+        "Our DevOps automation services eliminate manual tasks and streamline workflows, reducing errors and deployment times. We utilize advanced tools to automate testing, integration, and delivery, empowering your business to operate with greater agility and precision.Automation drives consistency and accelerates time-to-market, enabling faster innovation. With optimized workflows, businesses can focus on strategic growth and customer satisfaction.",
+    },
+    {
+      image: devopimage3,
+      alt: "Aligning development with business goals for quicker time-to-market, better quality, and better performance ",
+      title: "Empowering Growth with Business",
+      content: 'Our business DevOps solutions are designed to align development practices with organizational goals. By enhancing collaboration between teams, we help businesses reduce time-to-market, improve quality, and achieve consistent performance.These solutions foster a culture of continuous improvement, ensuring agility and efficiency across every stage of the development lifecycle. With streamlined processes, your business can adapt to changes faster and drive long-term success.'
+    },
+    {
+      image: devopimage4,
+      alt: "Get personalized DevOps support for cloud migration, CI/CD pipelines, and workflow optimization",
+      title: "Get a Tailored Support",
+      content:
+        "Work with a dedicated DevOps consultant to implement strategies that cater to your unique challenges. Whether you need help with cloud migration, CI/CD pipelines, or workflow optimization, our consultants deliver results-driven guidance and ongoing support. With expert advice and personalized solutions, businesses can streamline operations and enhance performance. Continuous support ensures that your DevOps strategy evolves as your business grows and technology advances.",
+    },
+  ];
+
+ 
+
 
   return (
     <>
-      {/* hero section start */}
-      <div className="bg-black w-full px-3 pt-20 md:pt-24 lg:pt-32 flex flex-col md:flex-row md:p-4 lg:p-0  justify-around items-center text-white">
-        {/* Left Section */}
-        <div className="w-full md:w-[50vw]  text-center md:text-left ">
-          <h1 style={{lineHeight:1.2}} className=" text-2xl sm:text-3xl  lg:text-5xl font-bold">
-          Expert DevOps Consulting
-          </h1>
-          <p className="text-base lg:text-lg mt-3">
-          TechCreator provides professional DevOps consulting services to help businesses optimize their development and operations workflows. Our experienced DevOps consultants assess your current processes and implement tailored solutions to enhance efficiency, scalability, and collaboration across teams.
-          </p>
-          <Buttons/>
-          
-        </div>
+      <Herosection
+        title="Expert DevOps Consulting"
+        description={
+          <>
+            TechCreator provides professional DevOps consulting services to help businesses optimize their development and operations workflows. Our experienced DevOps consultants assess your current processes and implement tailored solutions to enhance efficiency, scalability, and collaboration across teams.
+          </>
+        }
+        image={heroimage}
+      />
 
-        {/* Right Section */}
-        <div className="w-full md:w-auto flex justify-center">
-  <Image
-    src={heroimage}
-    alt="TechCreator will help you with professional DevOps consulting services to improve workflows in efficiency, scalability, and team collaboration"
-    width={400}
-    height={300}
-    priority
-    quality={75} 
-    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-    className="rounded-lg shadow-md object-cover"
-  />
-</div>
+      <div className="max-w-[1450px] mx-auto  md:mt-16 mt-9 px-4">
+        <FeatureSection 
+        title="Partner with One of the Leading DevOps Companies" 
+        description={
+          <>
+           As one of the trusted DevOps companies, we deliver innovative solutions designed to meet your business needs. From infrastructure management to process automation, our team ensures seamless integration of {" "}
+           <Link href="/services/web-development" className="underline">development and IT operations</Link> ,  for faster and more reliable software delivery.Enhancing collaboration, efficiency, and scalability across operations drives continuous improvement. Accelerate product releases and stay ahead in the competitive market with optimized DevOps practices. 
+          </>
+        }
+           image={devopimage1}
 
-      </div>
-      {/* hero section end */}
+         />
 
-      <div className="max-w-[1450px] mx-auto px-4 md:mt-16 mt-9">
-        {/* FeatureSection section start */}
-        <div className=" ">
-          <div className="flex flex-col lg:flex-row items-center relative ">
-            <div className="relative lg:static lg:flex-shrink-0 lg:w-[200px]  lg:h-[350px] z-10">
-              <Image
-                src={devopimage1}
-                alt="Bespoke Web Development to attract your audience"
-                width={300}
-                height={450}
-                className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-10 shadow-xl"
-              />
-            </div>
-            <div className="bg-[#9A00FF] w-full  h-auto p-6 mt-3 lg:mt-0 ">
-              <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
-                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3">
-                Partner with One of the Leading DevOps Companies
-                </h2>
-                <p className="text-sm sm:text-base lg:text-lg leading-relaxed w-full text-wrap">
-                As one of the trusted DevOps companies, we deliver innovative solutions designed to meet your business needs. From infrastructure management to process automation, our team ensures seamless integration of <Link href="/services/web-development" className="cursor-pointer underline"> development and IT operations</Link> for faster and more reliable software delivery.Enhancing collaboration, efficiency, and scalability across operations drives continuous improvement. Accelerate product releases and stay ahead in the competitive market with optimized DevOps practices.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* FeatureSection section end */}
-
-        {/* FeaturesList section start */}
-        <h2 className="text-center text-3xl font-bold mt-9 md:mt-24 ">
-          Why Choose Us
-        </h2>
-        <div className=" flex md:flex-row flex-col gap-3  md:gap-7 mt-6">
-        
-          <div className="border-r  xl:pr-3">
-            <LayoutDashboard className="w-6 h-6 text-pink-500 flex-shrink-0" />
-
-            {/* Text */}
-            <p className="text-gray-700 text-sm md:text-base xl:text-lg mt-2">
-            Automate development and operations processes with powerful DevOps tools.
-            </p>
-          </div>
-
-          <div className="border-r  xl:pr-3">
-            <FileText className="w-6 h-6 text-purple-500 flex-shrink-0" />
-
-            {/* Text */}
-            <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Optimize workflows with CI/CD pipelines and real-time monitoring.
-            </p>
-          </div>
-
-          <div className="border-r  xl:pr-3">
-            <Zap className="w-6 h-6 text-yellow-500 flex-shrink-0" />
-
-            {/* Text */}
-            <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Enhance collaboration between teams for seamless development cycles.
-            </p>
-          </div>
-
-          <div className="  xl:pr-3">
-            <Clock className="w-6 h-6 text-blue-500 flex-shrink-0" />
-
-            {/* Text */}
-            <p className="text-gray-700 text-sm md:text-base xl:text-lg  mt-2">
-            Ensure smooth and efficient deployments with scalable DevOps solutions.
-            </p>
-          </div>
-        </div>
-        {/* FeaturesList section end */}
-
-        {/* DiagonalFeatureSection section start */}
-        <div className="mt-9 md:mt-16 ">
-          {/* card1 */}
-          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-12">
-            {/* Image Section */}
-            <Image
-              src={devopimage2}
-              alt="Speed up your workflows while reducing errors through DevOps automation with shorter and more accurate outputs"
-              width={300}
-              height={300}
-              className="sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
-            />
-
-            {/* Text Section */}
-            <div className=" text-center md:text-start">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold ">
-              Transform Processes with DevOps Automation
-              </h2>
-              <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Our DevOps automation services eliminate manual tasks and streamline workflows, reducing <Link href="/services/web-qa-tester" className="cursor-pointer text-blue-600"> errors and deployment times</Link>. We utilize advanced tools to automate testing, integration, and delivery, empowering your business to operate with greater agility and precision.Automation drives consistency and accelerates time-to-market, enabling faster innovation. With optimized workflows, businesses can focus on strategic growth and customer satisfaction. 
-              </p>
-            </div>
-          </div>
-
-          {/* card 2 */}
-          <div className="flex flex-col-reverse md:flex-row  items-center gap-3 md:gap-12 mt-9 md:mt-16">
-            {/* Image Section */}
-
-            {/* Text Section */}
-            <div className=" text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold ">
-              Empowering Growth with Business
-              </h2>
-              <p className="text-base md:text-lg lg:text-lg text-gray-700">
-              Our business DevOps solutions are designed to align development practices with organizational goals. By enhancing collaboration between teams, we help businesses reduce time-to-market, improve quality, and achieve consistent performance.These solutions foster a culture of continuous improvement, ensuring agility and efficiency across every stage of the <Link href="/" className="cursor-pointer text-blue-600">development lifecycle</Link>. With streamlined processes, your business can adapt to changes faster and drive long-term success.
-              </p>
-            </div>
-            <Image
-              src={devopimage3}
-              alt="Aligning development with business goals for quicker time-to-market, better quality, and better performance "
-              width={300}
-              height={300}
-              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
-            />
-          </div>
-
-          {/* card 3 */}
-          <div className="flex flex-col md:flex-row items-center  gap-3 md:gap-12 mt-9 md:mt-16">
-            {/* Image Section */}
-            <Image
-              src={devopimage4}
-              alt="Get personalized DevOps support for cloud migration, CI/CD pipelines, and workflow optimization"
-              width={300}
-              height={300}
-              className=" sm:w-[300px] md:w-[500px] lg:w-[750px] xl:w-[800px] 2xl:w-[1200px] "
-            />
-
-            {/* Text Section */}
-            <div className="text-center md:text-left">
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold">
-              Get a Tailored Support
-              </h2>
-              <p className="text-base md:text-base lg:text-lg text-gray-700">
-              Work with a dedicated DevOps consultant to implement strategies that cater to your unique challenges. Whether you need help with cloud migration, CI/CD pipelines, or workflow optimization, our consultants deliver results-driven guidance and <Link href="/services/seo-services-for-small-business" className="cursor-pointer text-blue-600">ongoing support</Link>. With expert advice and personalized solutions, businesses can streamline operations and enhance performance. Continuous support ensures that your DevOps strategy evolves as your business grows and technology advances. 
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* DiagonalFeatureSection section end */}
-
-        {/* FramedFeatureSection section start */}
-        <div className="lg:relative bg-[#9A00FF] lg:h-[450px]  mx-auto md:py-4 mt-9 md:mt-16">
-          <div className="lg:relative md:px-5 px-2 flex flex-col lg:flex-row  items-center lg:items-start gap-10">
-            {/* Text Content */}
-            <div className="lg:relative webDevtext z-10 lg:max-w-[600px] xl:max-w-[800px] lg:p-5  text-wrap text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl mt-2 font-bold text-white mb-4">
-              Driving Efficiency with DevOps Automation
-              </h2>
-              <p className="text-base md:text-lg xl:text-lg text-white">
-              We recently partnered with a tech startup to implement DevOps automation, reducing their deployment time by 60%. Additionally, our DevOps consulting services helped an enterprise migrate to a cloud-based infrastructure, enabling seamless scalability and enhanced security.These successful partnerships showcase the power of automation in driving efficiency and improving operational performance. By optimizing workflows and leveraging cloud solutions, businesses can achieve faster time-to-market and maintain a competitive edge.
-              </p>
-            </div>
-            {/* Image */}
-            <div className="relative lg:absolute lg:top-52 xl:top-52 lg:right-5 lg:transform lg:-translate-y-1/2">
-              <Image
-                src={devopimage5}
-                alt="Improved efficiency through DevOps automation cuts down time to deploy by 60% and seamless cloud migration through seamless CI/CD deployments"
-                width={400}
-                height={500}
-                className="rounded-lg mx-auto mb-2 md:mx-0"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* FramedFeatureSection section end */}
-
-        {/* RecentWorks section start */}
+        <FeaturesList title="Why Choose Us" features={features} />
+        <DiagonalFeatureSection sections={sections}  />
+        <FramedFeatureSection  
+        image={devopimage5}
+        alt="Improved efficiency through DevOps automation cuts down time to deploy by 60% and seamless cloud migration through seamless CI/CD deployments"
+        title="Driving Efficiency with DevOps Automation"
+        content={
+          <>
+           We recently partnered with a tech startup to implement DevOps automation, reducing their deployment time by 60%. Additionally, our DevOps consulting services helped an enterprise migrate to a cloud-based infrastructure, enabling seamless scalability and enhanced security.These successful partnerships showcase the power of automation in driving efficiency and improving operational performance. By optimizing workflows and leveraging cloud solutions, businesses can achieve faster time-to-market and maintain a competitive edge.
+          </>
+        }
+      />
         <ServicesRelatedProjects slug={categorySlug} />
-        {/* RecentWorks section end */}
-        
-<FaqSection title="Frequently Asked Questions" faqs={devopsFaqs} />
-
-        {/* RelatedServices section start */}
-        <div className="mt-9 md:mt-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-center">
-            Related Services
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5 mt-9  lg:gap-8 justify-items-center">
-            {services.map((service, index) => (
-              <Link
-                href={service.link}
-                key={index}
-                className="relative p-6 bg-white w-full h-[240px] rounded-tr-[48px] border-[2px] border-[#6D6D6D] hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="absolute -top-10 left-6 p-3 rounded-lg">
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={70}
-                    height={70}
-                    className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px]"
-                  />
-                </div>
-                <div className="mt-8 sm:mt-12">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
+        <FaqSection title="Frequently Asked Questions" faqs={devopsFaqs} />
+        <OurTeam />
+      <RelatedServices services={services} />
+    
         <div className=" bg-purple-600 md:mt-16 mt-9 md:mb-16 mb-9">
-<ClientReviews/>
-<ClientTestimonialsSection />
-</div>
+          <ClientReviews />
+          <ClientTestimonialsSection />
+        </div>
       </div>
     </>
   );
