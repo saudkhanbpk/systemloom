@@ -29,7 +29,7 @@ const OurTeam = async () => {
   </div>
 
   {/* Image Section */}
-  <div className="flex justify-center lg:w-1/2 w-full">
+  <div className="flex justify-center lg:w-2/5 w-full">
     <Image 
       src={ouTeamImage} 
       alt="Our Team" 
