@@ -100,14 +100,14 @@ const WebDevelopment = () => {
   return (
     <>
       <Herosection
-        title="Empower your business with custom web development"
+        title="Progressive Web Development Company"
         description={
           <>
-            Techcreator accelerates your business growth by delivering custom web solutions designed to meet your business objectives. With a team of skilled, experienced, and dedicated developers, we provide tailored websites for industries like{" "}
+            TechCreator, a Progressive Web Development Company, accelerates your business growth by delivering custom web solutions tailored to your objectives. Our team of skilled and experienced developers creates industry-specific websites for  {" "}
             <Link  href="/healthcare" className="text-blue-600">Healthcare</Link>,{" "}
-            <Link href="/real-estate" className="text-blue-600">Real Estates</Link>,{" "}
-            <Link href="/restaurants" className="text-blue-600">Restaurants</Link>,{" "}
-            <Link href="/e-commerce" className="text-blue-600">E-Commerce stores</Link>{" "}—that ensure seamless functionality and innovation.
+            <Link href="/real-estate" className="text-blue-600">Real Estates</Link>, {" "}
+            <Link href="/restaurants" className="text-blue-600">Restaurants</Link>, and {" "}
+            <Link href="/e-commerce" className="text-blue-600">E-Commerce stores</Link>{" "}. We ensure seamless functionality, innovation, and  <Link href="/services/ui-ux-design-agency" className="text-blue-600">optimal user experience</Link>{" "}, helping businesses stay ahead in the  <Link href="/services/digital-marketing-for-software-companies" className="text-blue-600">digital landscape</Link>.
           </>
         }
         image={webDevelopmentImage}

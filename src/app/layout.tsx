@@ -23,7 +23,6 @@ Sentry.init({
   integrations: [],
 });
 
-
  
 // Google Analytics Config Function
 declare global {
