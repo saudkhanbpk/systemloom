@@ -66,16 +66,18 @@ const BlogDetails: React.FC<DetailPostProps> = ({ params }) => {
       {/* Main Content Section */}
       <div className="w-full mb-12">
         {/* Image Section */}
-        <div className="w-full h-[400px] lg:h-[600px] relative mb-8">
-          {post.image?.imageUrl && (
-            <Image
-              src={post.image.imageUrl}
-              alt={post.image.altDescription}
-              layout="fill"
-              className="rounded-lg shadow-lg object-fill md:object-cover"
-            />
-          )}
-        </div>
+        <div className="max-w-7xl mx-auto h-[400px] lg:h-[650px] relative mb-8">
+  {post.image?.imageUrl && (
+   <Image
+   src={post.image.imageUrl}
+   alt={post.image.altDescription || 'Image'}
+   fill
+   className="rounded-lg border  sm:object-cover object-fill"
+ />
+ 
+  )}
+</div>
+
 
         {/* Tags Section */}
         <div className="flex flex-wrap gap-3 justify-center mb-6">
