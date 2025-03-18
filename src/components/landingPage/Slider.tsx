@@ -54,7 +54,7 @@ const Slider: React.FC<{ slides: any[] }> = ({ slides }) => {
         
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6"
         > 
-         <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl leading-normal">
+         <h2  className="text-2xl md:text-4xl lg:text-6xl font-bold text-center max-w-4xl leading-[1.5]">
   {slide.heading.split(slide.highlight).map((part: string, i: number) => 
     i === 1 ? <span key={i} className={slide.highlightColor}> {slide.highlight} </span> : part
   )}

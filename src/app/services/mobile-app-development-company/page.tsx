@@ -60,10 +60,14 @@ const MobileAppDevelopment = () => {
     {
       image: appImage3,
       alt: "Enterprise mobile app development company",
-      title: "Enhancing Efficiency while Optimizing Functionality",
-      content:
-        "Enterprise mobile app development company specializes in enhancing productivity and streamlining operations. We develop secure, scalable apps that empower businesses to manage workflows, collaborate effectively, and achieve organizational goals. Our solutions are tailored to meet the unique needs of your business, ensuring seamless integration with existing systems. With a focus on user-friendly interfaces, we deliver apps that improve performance and drive business growth.",
+      title: "Advantages of mobile app development with TechCreator",
+      content: (
+        <>
+          Mobile app development with TechCreator combines skilled talent and smart solutions. Our apps are easy to use and meet real user needs. Our apps are built to <Link href="/services/digital-marketing-for-software-companies" className="text-purple-600">grow with your business</Link> , ensuring they stay relevant over time. <Link href="/services/ui-ux-design-agency" className="text-purple-600">Advanced design</Link>  and careful coding make sure your app works smoothly and efficiently for users.
+        </>
+      ),
     },
+    
   ];
 
   const appDevServices = [
@@ -96,11 +100,11 @@ const MobileAppDevelopment = () => {
   return (
     <>
       <Herosection
-        title="Mobile App Design and Development Services"
+        title="Android and iOS Mobile App Development Services"
         description={
           <>
-            From concept to deployment, we ensure every detail is meticulously crafted just according to your business needs. At {" "}
-            <Link  href="/" className="text-blue-600">TechCreator</Link> , we specialize in mobile app development that prioritizes functionality and user engagement. Our team creates intuitive and visually appealing apps that meet your customer complex needs while delivering exceptional user experiences.
+           Your business needs a fully crafted, digitized solution to meet your customer needs at one place. At {" "} <Link  href="/" className="text-blue-600">TechCreator</Link> , we specialize in mobile app development that prioritizes functionality and user engagement. Our team creates intuitive and visually appealing apps delivering exceptional user experiences.
+           
           </>
         }
         image={heroappdevelopmentImage}
@@ -122,16 +126,30 @@ const MobileAppDevelopment = () => {
         <FeaturesList title="Why Choose Us" features={features} />
         <DiagonalFeatureSection sections={sections}  />
         <FramedFeatureSection  
-        image={appImage4}
-        alt="Feature illustration"
-        title="Recent Work: Redefining Mobile Solutions"
-        content={
-          <>
-            We recently collaborated with a leading startup to deliver a cross-platform mobile app development project, enabling them to reach users across iOS and Android seamlessly. Additionally, we developed a specialized healthcare app for a clinic, integrating appointment scheduling, patient records, and secure communication features, transforming their service delivery. Choose {" "}
-            <Link href="/" className="underline">TechCreator </Link> {" "}  to turn your mobile app ideas into reality with innovative solutions designed to meet your business objectives.
-          </>
-        }
-      />
+  image={appImage4}
+  alt="Feature illustration"
+  title="Roadmap to Create the Perfect Business App That Suits Your Business"
+  content={
+    <>
+      Creating the perfect app for your business starts with a clear roadmap.  
+      First, identify your core business needs and target audience—what problems will your app solve?  
+
+      <ul className="list-disc pl-5">
+        <li>Product discovery & planning</li>
+        <li>Product design & rapid prototyping</li>
+        <li>UI/UX design</li>
+        <li>Enhancements & customizations</li>
+        <li>In-app conversion rate optimization</li>
+        <li><Link href="/services/software-maintenance-services" className="underline">Ongoing maintenance & support</Link></li>
+        <li><Link href="/services/web-qa-tester" className="underline">QA & mobile testing</Link></li>
+        <li>Deployment & go-to-market strategy</li>
+      </ul>
+
+      A well-thought-out roadmap not only saves time and cost but also ensures your app stands out and truly adds value to your business.
+    </>
+  }
+/>
+
         <ServicesRelatedProjects slug={categorySlug} />
         <FaqSection title="Frequently Asked Questions" faqs={mobileAppsFaqs} />
         <OurTeam />

@@ -14,11 +14,11 @@ const getSlides = async () => {
     },
     {
       videoSrc: "/videos/aibakgroundvideo.webm",
-      heading: "AI-Powered Growth: Transforming Ideas into Industry Disruptors",
-      highlight: "AI-Powered Growth:",
+      heading: "We make your website live within 58 hours for your customer",
+      highlight: "within 58 hours for your customer",
       highlightColor: "text-purple-600",
-      description: `We use AI to drive innovation and accelerate business success. From startups to enterprises, our smart solutions transform bold ideas into game-changing technologies, ensuring smarter, faster, and more efficient results.`,
-      buttonText: "Automate your Business",
+      description: `100% mobile optimized site, custom or CMS development, 100% money-back guarantee.`,
+      buttonText: "Let's Discuss your web design first, Open to discuss your Site",
       buttonColor: "bg-purple-600 hover:bg-purple-700",
       imageSrc: "/assets/homepage/aifuture.webp"
     },

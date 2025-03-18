@@ -75,16 +75,35 @@ const projectManagement = () => {
   const sections = [
     {
       image: projectimage2,
-      alt: "We handel every matter professionally and precisely",
-      title: "Custom Solutions for Every Challenge",
+      alt: "Tailored project management strategies for software development",
+      title: "Personalized  Solution to every Project Development Plan",
       content:
-        "Every project is unique, and so are our solutions. We specialize in creating tailored project management strategies that address your specific needs, ensuring smooth coordination, accountability, and optimal resource utilization. By understanding your objectives, we provide flexible solutions that adapt as your project evolves . Our proactive approach ensures potential challenges are identified and addressed early, keeping your project on track for success.",
+        "Every software development project is unique, and so are our solutions. We specialize in creating tailored project management strategies that address your specific development needs, ensuring smooth coordination, accountability, and optimal resource utilization. By understanding your software project objectives, we provide flexible and scalable solutions that adapt as your project evolves.",
     },
     {
       image: projectimage3,
       alt: "Project Management Services by TechCreator",
-      title: "Streamline Operations with Agile Project Management",
-      content: 'Our expertise in Agile project management empowers businesses to adapt to change, enhance team collaboration, and deliver value quickly. By implementing Agile methodologies, we ensure flexibility without compromising on quality or deadlines.Through continuous feedback and iterative development, we improve project outcomes and align with evolving business needs. This approach fosters a culture of innovation and efficiency, helping your team stay focused and motivated throughout the project lifecycle.'
+      title: "Project Planning and Team Management Services",
+      content: (
+        <>
+          <p>
+            Our expertise in Agile software project management helps businesses stay adaptable, improve collaboration, and deliver quality software on time. We ensure flexibility while maintaining high standards and meeting deadlines.
+          </p><br/>
+          <ul className="font-bold">
+          <li>➤ Adapt to change</li>
+          <li>➤ Enhance developer collaboration</li>
+          <li>➤ Accelerate software delivery</li>
+          <li>➤ Implement Agile methodologies</li>
+          <li>➤ Maintain flexibility</li>
+          <li>➤ Ensure high code quality</li>
+          <li>➤ Leverage continuous feedback</li>
+          <li>➤ Foster innovation and efficiency</li>
+          </ul><br/>
+          <p>
+            This approach keeps teams focused, motivated, and aligned with evolving business and technology needs.
+          </p>
+        </>
+      )
     },
     {
       image: projectimage4,
@@ -101,10 +120,11 @@ const projectManagement = () => {
   return (
     <>
       <Herosection
-        title="Efficient Project Management Services"
+        title="Development Management and Complete Project Management Services"
         description={
           <>
-           <Link href="/" className="text-purple-600">TechCreator</Link> ,{" "} offers reliable project management services designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.
+           <Link href="/" className="text-purple-600">TechCreator</Link> ,{" "}  offers expert project management services for businesses, designed to optimize workflows and ensure the timely delivery of <strong className="font-bold">software development, apps or website development.</strong> Our team focuses on aligning development project objectives with your business goals, providing clarity, structure, and seamless execution for agile <strong className="font-bold">software development and IT project management.</strong>
+
           </>
         }
         image={projectManagementImage}
