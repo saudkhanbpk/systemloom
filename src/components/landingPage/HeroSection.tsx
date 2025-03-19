@@ -8,17 +8,17 @@ const getSlides = async () => {
       highlight: "Solution for Websites",
       highlightColor: "text-purple-600",
       description: `Empower your business with a team of experts dedicated to crafting tailor-made solutions that drive growth, efficiency, and success.`,
-      buttonText: "Automate your Business",
+      buttonText: "Get Your Custom Solution Now!",
       buttonColor: "bg-purple-600 hover:bg-purple-700",
       imageSrc: "/assets/homepage/webapp.webp"
     },
     {
       videoSrc: "/videos/aibakgroundvideo.webm",
-      heading: "We make your website live within 58 hours for your customer",
-      highlight: "within 58 hours for your customer",
+      heading: "Get Your Website Live in Just 58 Hours – 100% Guaranteed!",
+      highlight: "– 100% Guaranteed!",
       highlightColor: "text-purple-600",
-      description: `100% mobile optimized site, custom or CMS development, 100% money-back guarantee.`,
-      buttonText: "Let's Discuss your web design first, Open to discuss your Site",
+      description: `No delays, no stress – just a stunning, high-performance website built to impress! Mobile-friendly, SEO-optimized, and backed by a money-back guarantee for total peace of mind.`,
+      buttonText: "Get Started – Launch in 58 Hours!",
       buttonColor: "bg-purple-600 hover:bg-purple-700",
       imageSrc: "/assets/homepage/aifuture.webp"
     },
@@ -28,7 +28,7 @@ const getSlides = async () => {
       highlight: "Future",
       highlightColor: "text-purple-700",
       description: `We empower businesses to transform and lead through cutting-edge technology.`,
-      buttonText: "Automate your Business",
+      buttonText: "Transform Your Business with AI – Get Started!",
       buttonColor: "bg-purple-600 hover:bg-purple-700",
       imageSrc: "/assets/homepage/shapingfuture.webp"
     },
