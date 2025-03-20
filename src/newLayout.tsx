@@ -19,7 +19,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const pathname = usePathname();
-  const isAdminPage = pathname.startsWith("/admin");
+  const hideHeader = pathname.startsWith("/admin") || pathname === "/home";
+  const hideFooter = pathname === "/home";
 
   return (
     <Provider store={store}>
@@ -35,11 +36,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         />
 
         
-        {!isAdminPage && <Header />}
+       {!hideHeader && <Header />}
 
         <main className="flex-1">{children}</main>
 
-        <Footer />
+        {!hideFooter && <Footer />}
       </PersistGate>
     </Provider>
   );

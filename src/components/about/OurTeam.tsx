@@ -15,7 +15,7 @@ const OurTeam = async () => {
   const teamData = await getTeamData(); 
 
   return (
-    <section className="flex flex-col lg:flex-row justify-between gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
+    <section id="OurTeam" className="flex flex-col lg:flex-row justify-between gap-6 bg-gray-100 md:py-12 py-6 rounded-lg px-6 md:mt-16 mt-9">
   
   {/* Text Section */}
   <div className="lg:w-1/2 w-full flex flex-col justify-center">
