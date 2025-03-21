@@ -70,3 +70,31 @@
 .iconContainer {
   @apply w-8 h-8 flex items-center justify-center rounded-full;
 }
+
+
+
+
+.custom-phone-input .flag-dropdown {
+  background: rgba(255, 255, 255, 0.2) !important; /* Match input background */
+  border-right: 1px solid rgba(0, 123, 255, 0.5) !important; /* Optional border */
+  padding-right: 10px;
+}
+
+.custom-phone-input .selected-flag {
+  background: rgba(255, 255, 255, 0.2) !important; /* Country button background */
+  color: white !important;
+  border-radius: 0.5rem 0 0 0.5rem !important;
+}
+
+.custom-phone-input .country-list {
+  background: rgba(9, 20, 36, 0.9) !important; /* Dark dropdown */
+  color: white !important;
+}
+
+.custom-phone-input .country-list .country {
+  color: white !important;
+}
+
+.custom-phone-input .country-list .country:hover {
+  background: rgba(0, 123, 255, 0.5) !important;
+}

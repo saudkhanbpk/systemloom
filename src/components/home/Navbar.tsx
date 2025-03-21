@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import tclogo from "../../../public/assets/icons/Tclogo1.png";
 import Image from "next/image";
+import tclogo from "../../../public/assets/icons/Tclogo1.png";
 import { PhoneCall } from "lucide-react";
 
 const Navbar = () => {
@@ -17,8 +17,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-3 flex items-center justify-between transition-all duration-300 ${
-        isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-4 flex items-center justify-between transition-all duration-300 ${
+        isScrolled ? "bg-gradient-to-b from-black via-gray-900 to-black" : "bg-transparent"
       }`}
     >
       {/* Logo */}
@@ -26,19 +26,20 @@ const Navbar = () => {
         <Image 
           src={tclogo} 
           alt="Techcreator Logo" 
-          width={100} 
-          height={40} 
-          className="md:w-[150px] md:h-[60px] w-[100px] h-[40px]"
+          width={150} 
+          height={60} 
+          className="md:w-[160px] md:h-[65px] w-[120px] h-[45px] transition-all duration-300"
         />
       </div>
 
       {/* Contact Info */}
-      <div className="flex items-center md:gap-3 gap-2 bg-[#9A00FF] text-white md:px-4 px-2 py-2 rounded-full shadow-lg hover:bg-[#7a00cc] transition">
-        <PhoneCall size={18} />
-        <a href="tel:+13214073272" className="text-sm font-medium text-nowrap">
-          +1 (321) 407-3272
-        </a>
-      </div>
+      <a
+        href="tel:+13214073272"
+        className="flex items-center gap-3 bg-[#9A00FF] text-white px-5 py-2 rounded-full shadow-lg hover:bg-[#7a00cc] transition-all duration-300 transform hover:scale-105"
+      >
+        <PhoneCall size={20} className="animate-pulse" />
+        <span className="text-sm font-semibold hidden md:block">+1 (321) 407-3272</span>
+      </a>
     </nav>
   );
 };

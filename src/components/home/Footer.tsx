@@ -9,11 +9,11 @@ import AppointmentSection from "../shared/AppointmentSection";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white  px-6 md:px-14 md:mt-16 mt-9">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-col justify-between items-center gap-8 border-t border-gray-700 pt-8">
+    <footer className="bg-gradient-to-b from-black via-gray-900 to-black text-white px-6 md:px-14 py-12">
+      <div className="max-w-6xl mx-auto flex flex-col items-center  gap-8 border-t border-gray-700 pt-8">
         
         {/* Social Media Links */}
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-5">
           {[
             { href: "https://www.facebook.com/techcreatorfb/", icon: faFacebookF, bg: "bg-blue-600" },
             { href: "https://www.linkedin.com/company/techcreator", icon: faLinkedinIn, bg: "bg-blue-700" },
@@ -25,56 +25,56 @@ const Footer = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-12 h-12 flex items-center justify-center rounded-full ${bg} transition duration-300 hover:scale-110 shadow-lg`}
+              className={`w-14 h-14 flex items-center justify-center rounded-full ${bg} transition-transform duration-300 hover:scale-110 shadow-lg shadow-gray-800`}
               aria-label="Social Media"
             >
-              <FontAwesomeIcon icon={icon} className="text-white text-xl" />
+              <FontAwesomeIcon icon={icon} className="text-white text-2xl" />
             </Link>
           ))}
         </div>
 
         {/* Contact Section */}
-     
-          <div className="space-y-4 flex md:flex-row flex-col md:items-center items-start md:gap-8 gap-2 text-gray-400">
-            
-            {/* Email */}
-            <div className="flex items-center mt-3 gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-600">
-                <AiOutlineMail size={22} className="text-white" />
-              </div>
-              <Link href="mailto:contact@techcreator.co" className="hover:text-white transition">
-                contact@techcreator.co
-              </Link>
+        <div className="space-y-2  flex flex-wrap md:items-center items-start lg:gap-12 gap-4 text-gray-400">
+          
+          {/* Email */}
+          <div className="flex items-center gap-4 mt-3.5">
+            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 shadow-md shadow-purple-500">
+              <AiOutlineMail size={24} className="text-white" />
             </div>
-
-            {/* WhatsApp */}
-            <Link href="https://wa.me/13214073272" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-600">
-                <FaWhatsapp size={22} className="text-white" />
-              </div>
-              <span>+1 (321) 407-3272</span>
+            <Link href="mailto:contact@techcreator.co" className="hover:text-white transition text-lg">
+              contact@techcreator.co
             </Link>
+          </div>
 
-            {/* Phone Call */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-600">
-                <PhoneCall size={22} className="text-white" />
-              </div>
-              <a href="tel:+13214073272" className="hover:text-white transition">
-                +1 (321) 407-3272
-              </a>
+          {/* WhatsApp */}
+          <Link href="https://wa.me/13214073272" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition text-nowrap text-lg">
+            <div className="w-12 h-12 text-nowrap flex items-center justify-center rounded-full bg-green-600 shadow-md shadow-green-500">
+              <FaWhatsapp size={24} className="text-white" />
             </div>
-          </div>
+            <span>+1 (321) 407-3272</span>
+          </Link>
 
-          {/* Appointment Section */}
-          <div className="md:mt-3 md:mb-0 mb-6">
-            <AppointmentSection />
+          {/* Phone Call */}
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 shadow-md shadow-purple-500">
+              <PhoneCall size={24} className="text-white" />
+            </div>
+            <a href="tel:+13214073272" className="hover:text-white text-nowrap transition text-lg">
+              +1 (321) 407-3272
+            </a>
           </div>
-          <p className="text-base border-t p-3 text-gray-400 ">
-            © 2025 <span className="text-[#9A00FF]">TechCreator</span>. All
-            rights reserved.
-          </p>
         </div>
+
+        {/* Appointment Section */}
+        <div className="mt-6">
+          <AppointmentSection />
+        </div>
+
+        {/* Copyright Section */}
+        <p className="text-base border-t border-gray-700 pt-4 text-gray-400 text-center w-full">
+          © 2025 <span className="text-[#9A00FF] font-semibold">TechCreator</span>. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 };
