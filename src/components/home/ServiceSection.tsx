@@ -1,100 +1,129 @@
 "use client";
+import Image from 'next/image';
 import { motion } from "framer-motion";
-import { ArrowRightIcon } from "lucide-react";
-import Link from "next/link";
+import { ArrowDownIcon, CheckCircle2Icon, ShieldCheck, RefreshCw } from "lucide-react";
+import serviceImage from '../../../public/assets/homepage/homewebdev.avif';
 
-const servicesData = [
-  {
-    title: "Custom Web Development",
-    description:
-      "We craft modern, high-performance websites designed for engagement, conversions, and seamless user experience. Our expertise in React, Next.js, and cutting-edge web technologies ensures your brand stands out.",
-    icon: "🚀",
-    color: "bg-gradient-to-br from-blue-600 to-cyan-500",
-  },
-  {
-    title: "SEO & Lightning-Fast Performance",
-    description:
-      "Dominate search rankings and deliver an ultra-fast browsing experience. Our SEO-optimized, mobile-friendly websites ensure higher visibility, lower bounce rates, and increased traffic.",
-    icon: "📈",
-    color: "bg-gradient-to-br from-purple-600 to-fuchsia-500",
-  },
-  {
-    title: "Mobile-First, User-Friendly Design",
-    description:
-      "We create stunning, responsive websites that adapt perfectly to all devices. With smooth navigation, intuitive interfaces, and flawless performance, your users will enjoy a seamless experience.",
-    icon: "📲",
-    color: "bg-gradient-to-br from-pink-600 to-rose-500",
-  },
-  {
-    title: "Enterprise-Grade Security & Compliance",
-    description:
-      "Protect your website and customer data with industry-leading security. From GDPR compliance to real-time monitoring and encrypted architecture, we keep your platform safe and secure.",
-    icon: "🛡️",
-    color: "bg-gradient-to-br from-teal-600 to-emerald-500",
-  },
-];
+
+const scrollToContact = (event: React.MouseEvent) => {
+  event.preventDefault(); // Stop default anchor behavior
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 
 const ServiceSection = () => {
   return (
-    <section className="md:mt-16 mt-9 relative overflow-hidden">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
+    <section className="relative py-16 px-4 md:px-8 lg:py-20 overflow-hidden bg-gradient-to-r from-[#091424] to-[#031220]">
+      {/* Animated Background Effects */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.3, scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="absolute -top-20 -left-20 w-72 h-72 md:w-96 md:h-96 bg-blue-500/20 rounded-full blur-[100px] md:blur-[120px]"
+      />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.4, scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+        className="absolute -bottom-20 -right-20 w-72 h-72 md:w-96 md:h-96 bg-indigo-500/20 rounded-full blur-[100px] md:blur-[120px]"
+      />
+
+      {/* Section Title */}
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-6 leading-tight"
+      >
+        Elevate Your <span className='text-purple-600'>Online</span> Presence
+      </motion.h2>
+
+      <p className="text-center text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-10 md:mb-12">
+        We craft <span className="font-semibold">high-performance websites</span> using  
+        <span className="font-semibold text-purple-400"> MERN, MEAN, and Next.js</span>.
+      </p>
+
+      {/* Features & Image */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+        {/* Image Section */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center"
         >
-          <h2 className="text-3xl p-2 md:text-4xl lg:text-6xl font-bold text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
-            Elevate Your Digital Presence
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
-            Transform your online experience with cutting-edge technology, performance-driven designs, and seamless user interactions.
-          </p>
+          <Image
+            src={serviceImage}
+            alt="High-performance website services"
+            width={500}
+            height={380}
+            className="rounded-lg shadow-lg border-2 md:border-4 border-purple-500 transform hover:scale-105 transition-transform duration-500"
+          />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 ">
-          {servicesData.map((service, index) => (
+        {/* Features Section */}
+        <div className="space-y-6 md:space-y-8">
+          {[ 
+            {
+              title: "⚡ Intuitive & Fully-Optimized Site",
+              description: "Fast, optimized, and intuitive—we build sites that deliver a seamless experience to your customers.",
+              Icon: CheckCircle2Icon,
+            },
+            {
+              title: "🔄 Unlimited Alteration Support",
+              description: "We offer unlimited alteration support—so your site always stays up-to-date and perfect.",
+              Icon: RefreshCw,
+            },
+            {
+              title: "🛡️ Money-back Guarantee",
+              description: "Rest assured with a 100% money-back guarantee if our work doesn't meet your expectations.",
+              Icon: ShieldCheck,
+            },
+          ].map((feature, index) => (
             <motion.div
               key={index}
-              className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-300"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.15, type: "spring", stiffness: 120 }}
-              whileHover={{ scale: 1.02 }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.3 }}
+              className="flex items-start bg-[#0f1b2b] p-4 md:p-6 rounded-lg md:rounded-xl shadow-lg md:shadow-xl backdrop-blur-md bg-opacity-80 hover:scale-105 transition-transform duration-300 border border-purple-500"
             >
-              <div className="relative p-8 rounded-2xl overflow-hidden">
-                <motion.div 
-                  className={`w-16 h-16 rounded-2xl ${service.color} text-white flex items-center justify-center mb-6 text-3xl shadow-lg group-hover:shadow-xl transition-all`}
-                  whileHover={{ rotate: 15, scale: 1.1 }}
-                >
-                  {service.icon}
-                </motion.div>
-                <h3 className="lg:text-2xl text-base font-bold mb-4 text-gray-900 group-hover:bg-gradient-to-r from-purple-600 to-blue-500 group-hover:text-transparent bg-clip-text transition-all">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-base">
-                  {service.description}
-                </p>
+              <feature.Icon className="text-purple-400 w-10 h-10 md:w-12 md:h-12 flex-shrink-0" />
+              <div className="ml-3 md:ml-4">
+                <h3 className="text-xl md:text-2xl font-semibold text-white">{feature.title}</h3>
+                <p className="text-gray-400 text-sm md:text-base mt-1">{feature.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
+      </div>
 
-        <motion.div 
-          className="text-center md:mt-10 mt-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
-        <Link href="#OurTeam">
-        <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-12 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-shadow hover:scale-[1.02] transform duration-300">
-            Start Your Project Now
-            <ArrowRightIcon className="w-5 h-5 inline-block ml-3 -mt-1" />
-          </button>
-        </Link>
-        </motion.div>
-      
+      {/* Call to Action */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="text-center mt-14 md:mt-16"
+      >
+        
+          <motion.button
+           onClick={scrollToContact} 
+            whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(0, 123, 255, 0.6)" }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-semibold shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2 md:gap-3 mx-auto text-lg md:text-xl"
+          >
+            Get Built Your Site
+            <ArrowDownIcon className="w-5 h-5 md:w-6 md:h-6" />
+          </motion.button>
+        
+        <p className="text-sm md:text-base text-gray-400 mt-2 md:mt-3">
+          ✨ USA Exclusive: <span className="font-semibold text-blue-400">10% Off</span>
+        </p>
+      </motion.div>
     </section>
   );
 };
+
 export default ServiceSection;

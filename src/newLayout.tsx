@@ -19,8 +19,9 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const pathname = usePathname();
-  const hideHeader = pathname.startsWith("/admin") || pathname === "/home";
-  const hideFooter = pathname === "/home";
+  const hideHeader = pathname.startsWith("/admin") || pathname === "/home" || pathname === "/confirmation";
+  const hideFooter = pathname === "/home" || pathname === "/confirmation";
+
 
   return (
     <Provider store={store}>
