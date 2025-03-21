@@ -104,7 +104,7 @@ const Herosection = () => {
                   ))}
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-gray-400">
-                  150+ Websites Launched
+                  190+ Happy Clients
                 </span>
               </div>
             </div>
