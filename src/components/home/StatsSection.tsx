@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaUsers, FaProjectDiagram, FaTrophy } from "react-icons/fa";
 
 const stats = [
-  { icon: FaUsers, value: "160", label: "Happy Clients", color: "bg-[#091E36]" },
+  { icon: FaUsers, value: "190+", label: "Happy Clients", color: "bg-[#091E36]" },
   { icon: FaProjectDiagram, value: "210", label: "Projects Completed", color: "bg-[#091E36]" },
   { icon: FaTrophy, value: "50", label: "Products Launched", color: "bg-[#091E36]" },
 ];

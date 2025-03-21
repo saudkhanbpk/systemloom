@@ -15,48 +15,55 @@ const scrollToContact = (event: React.MouseEvent) => {
     contactSection.scrollIntoView({ behavior: "smooth" });
   }
 };
+
 const testimonials = [
   {
     image: "/assets/homepage/client1.jpg",
     name: "Aiden Clarke",
     company: "NextGen Tech",
     rating: 5,
-    feedback: "They crafted a stunning website that truly represents our brand!",
+    feedback:
+      "Our new website led to a **35% increase in conversions** within the first month! They understood our vision and brought it to life beautifully.",
   },
   {
     image: "/assets/homepage/client2.jpg",
     name: "Sophia Mitchell",
     company: "Web Creators",
-    rating: 4,
-    feedback: "The website is smooth, modern, and user-friendly. Great job!",
+    rating: 5,
+    feedback:
+      "A game-changer! The team delivered a **fast, SEO-friendly**, and stunning website that elevated our online presence instantly.",
   },
   {
     image: "/assets/homepage/client3.jpg",
     name: "Liam Bennett",
     company: "Design Studio",
     rating: 5,
-    feedback: "Superb development work! Highly satisfied with their service.",
+    feedback:
+      "Their attention to detail and creativity made our **brand stand out**. We saw a **40% engagement boost** after the redesign!",
   },
   {
     image: "/assets/homepage/client4.jpg",
     name: "Noah Reed",
     company: "Startup Solutions",
     rating: 5,
-    feedback: "They brought our vision to life with a sleek and responsive site!",
+    feedback:
+      "They built a **highly scalable and mobile-optimized** site for us. Our user retention improved by **50%** within three months!",
   },
   {
     image: "/assets/homepage/client5.jpg",
     name: "Zara Ellis",
     company: "Digital Edge",
-    rating: 4,
-    feedback: "Professional and creative team. Loved working with them!",
+    rating: 5,
+    feedback:
+      "Their UX/UI expertise took our **eCommerce store to the next level**, improving conversions and reducing bounce rates significantly.",
   },
   {
     image: "/assets/homepage/client6.jpg",
     name: "Ethan Foster",
     company: "Ecom Boosters",
     rating: 5,
-    feedback: "Our online store is now faster and more engaging than ever!",
+    feedback:
+      "We struggled with slow site speed. They optimized our platform, leading to a **70% faster load time and increased user retention**.",
   },
 ];
 
