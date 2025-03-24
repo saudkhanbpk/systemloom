@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import backgroundImage from "../../../public/assets/aboutpage/backgroundImage.webp";
+// import backgroundImage from "../../../public/assets/aboutpage/backgroundImage.webp";
+import backgroundImage from "../../../public/assets/homepage/homeheroimage.webp";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowDownIcon} from "lucide-react";
@@ -29,7 +31,7 @@ const Herosection = () => {
             width={1920}
             height={1080}
             priority
-            className="opacity-20 w-full h-full object-cover scale-125"
+            className="opacity-10 w-full h-full object-cover scale-125"
           />
         </div>
 

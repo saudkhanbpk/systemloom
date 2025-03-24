@@ -1,6 +1,6 @@
 import CompaniesClient from "./CompaniesClient"; 
 
-import company1 from "../../../public/assets/homepage/image 149.webp";
+// import company1 from "../../../public/assets/homepage/image 149.webp";
 import company2 from "../../../public/assets/homepage/image 150.webp";
 import company3 from "../../../public/assets/homepage/bnblogo.webp";
 import company4 from "../../../public/assets/homepage/image 152.webp";
@@ -10,7 +10,7 @@ import company7 from "../../../public/assets/homepage/image 182.webp";
 
 const getCompanies = async () => {
   return [
-    company1,
+    // company1,
     company2,
     company3,
     company4,
