@@ -1,3 +1,14 @@
+export const metadata = {
+  title: "TechCreator - A Software Company",
+  description:
+    "TechCreator is a software company offering expert services in web development, app development, DevOps, Graphic Designing, Project Management, and more.",
+  alternates: {
+    canonical: "https://www.techcreator.co/about",
+  },
+};
+
+
+
 import AboutHeroSection from "@/components/about/AboutHeroSection";
 import ExpertTeam from "@/components/about/ExpertTeam";
 import OurTeam from "@/components/about/OurTeam";
@@ -26,11 +37,4 @@ const About = () => {
 
 export default About;
 
-export const metadata = {
-  title: "TechCreator - A Software Company",
-  description:
-    "TechCreator is a software company offering expert services in web development, app development, DevOps, Graphic Designing, Project Management, and more.",
-  alternates: {
-    canonical: "https://www.techcreator.co/about",
-  },
-};
+
