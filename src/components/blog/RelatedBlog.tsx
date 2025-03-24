@@ -55,7 +55,7 @@ const RelatedBlog: React.FC<RelatedBlogProps> = ({ excludeBlogId }) => {
             </div>
           </div>
            {/* Button */}
-   <Link href={`/blog/${createSlug(blog.title || 'Untitled')}`}
+   <Link href={`/blog/${createSlug(blog.slug || 'Untitled')}`}
     onClick={() => setLoadingBlogId(blog._id)}
    >
 

@@ -21,7 +21,7 @@ const Herosection = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 to-black min-h-screen flex flex-col items-center justify-center px-6 md:px-10 overflow-hidden text-center">
+      <section className="relative bg-gradient-to-br bg-black min-h-screen flex flex-col items-center justify-center px-6 md:px-10 overflow-hidden text-center">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#4a1b6d33_0%,transparent_70%)] animate-pulse-slow" />
@@ -31,7 +31,7 @@ const Herosection = () => {
             width={1920}
             height={1080}
             priority
-            className="opacity-10 w-full h-full object-cover scale-125"
+            className="opacity-20 w-full h-full object-cover scale-125"
           />
         </div>
 
