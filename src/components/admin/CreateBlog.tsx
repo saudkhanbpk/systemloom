@@ -8,10 +8,10 @@ import { toast } from "react-toastify";
 
 const CreateBlogForm = () => {
   const searchParams = useSearchParams();
-  // const blogId = searchParams.get("blogId");
   const slug = searchParams.get("slug");
   const router = useRouter();
 
+  // Slug Generator Function
   const generateSlug = (title: string): string => {
     return title
       .toLowerCase()
@@ -19,8 +19,9 @@ const CreateBlogForm = () => {
       .replace(/^-+|-+$/g, "");
   };
 
+  // Form State
   const [isEditMode, setIsEditMode] = useState(false);
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     storyContent: "",
     altDescription: "",
@@ -31,12 +32,16 @@ const CreateBlogForm = () => {
     tagInput: "",
     image: null as File | null,
     imagePreview: null as string | null,
+    metaTitle: "",
+    metaDescription: "",
   });
 
+  // Editor Content Change
   const handleEditorChange = (content: string) => {
     setFormData((prevData) => ({ ...prevData, storyContent: content }));
   };
 
+  // Tag Input Handling
   const handleTagInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData((prevData) => ({ ...prevData, tagInput: e.target.value }));
   };
@@ -60,6 +65,7 @@ const CreateBlogForm = () => {
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleTagAdd();
     }
   };
@@ -82,6 +88,7 @@ const CreateBlogForm = () => {
     }
   };
 
+  // Title & Slug Handling
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const title = e.target.value;
     const slug = generateSlug(title);
@@ -89,14 +96,16 @@ const CreateBlogForm = () => {
       ...prevData,
       title,
       slug,
+      metaTitle: title, // Default metaTitle to title
     }));
   };
 
+  // Fetch Blog Data for Editing
   useEffect(() => {
     if (slug) {
       setIsEditMode(true);
       const fetchBlogData = async () => {
-        setLoading(true); 
+        setLoading(true);
         try {
           const res = await axios.get(`${backend_url}/api/v1/blogs/get/${slug}`);
           if (res.data.success) {
@@ -110,6 +119,8 @@ const CreateBlogForm = () => {
               tagInput: "",
               image: null,
               imagePreview: res.data.blog.image.imageUrl || null,
+              metaTitle: res.data.blog.metaTitle || res.data.blog.title,
+              metaDescription: res.data.blog.metaDescription || res.data.blog.description?.substring(0, 150),
             });
           }
         } catch (error) {
@@ -125,10 +136,11 @@ const CreateBlogForm = () => {
     }
   }, [slug]);
 
+  // Form Submit Handler
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { storyContent, altDescription, tags, description, title, slug, image } = formData;
+    const { storyContent, altDescription, tags, description, title, slug, image, metaTitle, metaDescription } = formData;
 
     const formDataToSubmit = new FormData();
     formDataToSubmit.append("content", storyContent);
@@ -137,38 +149,38 @@ const CreateBlogForm = () => {
     formDataToSubmit.append("description", description);
     formDataToSubmit.append("title", title);
     formDataToSubmit.append("slug", slug);
+    formDataToSubmit.append("metaTitle", metaTitle); // ✅ Fixed
+    formDataToSubmit.append("metaDescription", metaDescription); // ✅ Fixed
 
     if (image) {
       formDataToSubmit.append("image", image);
     }
 
-    setLoading(true); // Set loading to true when submitting data
+    setLoading(true);
     try {
       let res;
       if (isEditMode) {
         res = await axios.put(`${backend_url}/api/v1/blogs/update/${slug}`, formDataToSubmit, {
           withCredentials: true,
         });
-        if (res.data.success) {
-          toast.success(res.data.message);
-        }
       } else {
         res = await axios.post(`${backend_url}/api/v1/blogs/create`, formDataToSubmit, {
           withCredentials: true,
         });
-        if (res.data.success) {
-          toast.success(res.data.message);
-        }
       }
 
-      router.push("/admin/all-blogs");
+      if (res.data.success) {
+        toast.success(res.data.message);
+        router.push("/admin/all-blogs");
+      }
     } catch (error: any) {
       console.error(error);
       toast.error("An error occurred. Please try again.");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
+
 
   return (
     <div className="max-w-5xl mx-auto bg-white p-6 rounded-lg mt-20 shadow-md">
@@ -212,6 +224,28 @@ const CreateBlogForm = () => {
             value={formData.altDescription}
             onChange={(e) => setFormData((prevData) => ({ ...prevData, altDescription: e.target.value }))}
           />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 mb-2">Meta Title</label>
+          <input
+            type="text"
+            placeholder="Enter meta title"
+            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={formData.metaTitle}
+            onChange={(e) => setFormData((prevData) => ({ ...prevData, metaTitle: e.target.value }))}
+          />
+        </div>
+
+       {/* meta Description */}
+       <div className="mb-4">
+          <label className="block text-gray-700 mb-2">Meta Description</label>
+          <textarea
+            placeholder="Enter a meta description here..."
+            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={formData.metaDescription}
+            onChange={(e) => setFormData((prevData) => ({ ...prevData, metaDescription: e.target.value }))}
+          ></textarea>
         </div>
 
         <div className="mb-4">
