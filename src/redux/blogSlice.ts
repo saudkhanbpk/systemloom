@@ -9,6 +9,8 @@ interface Blog {
     createdAt: string;
     publish: boolean;
     title: string;
+    metaTitle: string;
+    metaDescription :string;
   }
   
   interface BlogState {
