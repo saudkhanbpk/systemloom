@@ -104,21 +104,21 @@ const ContactForm: React.FC = () => {
       {/* Contact Methods */}
       <div className="mt-3 space-y-3 text-xl">
         <Link
-          href="https://wa.me/+13214073272"
+          href="https://wa.me/+13213646803"
           rel="noopener noreferrer"
           className="flex items-center gap-3 "
         >
           <div className=" bg-green-600 rounded-full p-1.5">
             <FaWhatsapp size={28} className="text-white" />
           </div>
-          <span className="hover:underline ">+1 (321) 407-3272</span>
+          <span className="hover:underline ">+1(321)364-6803</span>
         </Link>
 
-        <Link href="tel:+13214073272" className="flex items-center gap-3 ">
+        <Link href="tel:+13213646803" className="flex items-center gap-3 ">
           <div className=" bg-purple-700 rounded-full p-2">
             <PhoneCall className="text-white" />
           </div>
-          <span className="hover:underline">+1 (321) 407-3272</span>
+          <span className="hover:underline">+1(321)364-6803</span>
         </Link>
       </div>
 

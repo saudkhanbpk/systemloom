@@ -47,11 +47,11 @@ const Footer = () => {
           </div>
 
           {/* WhatsApp */}
-          <Link href="https://wa.me/13214073272" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition text-nowrap text-lg">
+          <Link href="https://wa.me/923119265290" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:text-white transition text-nowrap text-lg">
             <div className="w-12 h-12 text-nowrap flex items-center justify-center rounded-full bg-green-600 shadow-md shadow-green-500">
               <FaWhatsapp size={24} className="text-white" />
             </div>
-            <span>+1 (321) 407-3272</span>
+            <span>+923119265290</span>
           </Link>
 
           {/* Phone Call */}
@@ -59,8 +59,8 @@ const Footer = () => {
             <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-600 shadow-md shadow-purple-500">
               <PhoneCall size={24} className="text-white" />
             </div>
-            <a href="tel:+13214073272" className="hover:text-white text-nowrap transition text-lg">
-              +1 (321) 407-3272
+            <a href="tel:+13213646803" className="hover:text-white text-nowrap transition text-lg">
+              +1(321)364-6803
             </a>
           </div>
         </div>

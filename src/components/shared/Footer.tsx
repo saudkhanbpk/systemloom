@@ -366,7 +366,7 @@ const Footer: React.FC = () => {
 
               {/* WhatsApp */}
               <Link
-                href="https://wa.me/13214073272"
+                href="https://wa.me/923119265290"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-base hover:underline"
@@ -374,7 +374,7 @@ const Footer: React.FC = () => {
                 <div className="iconContainer bg-green-600">
                   <FaWhatsapp size={20} className="text-white" />
                 </div>
-                <span>+1 (321) 407-3272</span>
+                <span>+92 311 9265290</span>
               </Link>
 
               {/* Phone Call (Mobile) */}
@@ -382,8 +382,8 @@ const Footer: React.FC = () => {
                 <div className="iconContainer bg-purple-600">
                   <PhoneCall size={20} className="text-white" />
                 </div>
-                <a href="tel:+13214073272" className="hover:underline">
-                  +1 (321) 407-3272
+                <a href="tel:+13213646803" className="hover:underline">
+                  +1(321)364-6803
                 </a>
               </div>
 
@@ -392,8 +392,8 @@ const Footer: React.FC = () => {
                 <div className="iconContainer bg-purple-600">
                   <PhoneCall size={20} className="text-white" />
                 </div>
-                <a href="tel:+13214073272" className="hover:underline">
-                  +1 (321) 407-3272
+                <a href="tel:+13213646803" className="hover:underline">
+                  +1(321)364-6803
                 </a>
               </div>
 

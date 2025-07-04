@@ -67,8 +67,8 @@ const TermsAndConditionsPage = () => {
         </p>
         <div className="md:text-lg text-base text-gray-700 mb-6">
           <strong>Email:</strong> <a href="mailto:contact@techcreator.co" className="text-blue-600">contact@techcreator.co</a><br />
-          <strong>Phone:</strong>  <a href="callto:+13214073272" className="hover:underline">
-                      +1 (321) 407-3272
+          <strong>Phone:</strong>  <a href="callto:+13213646803" className="hover:underline">
+                      +1(321)364-6803
                     </a><br />
           <strong>Address:</strong> TechCreator Software Company, 123 Tech Lane, Orlando, FL, USA
         </div>

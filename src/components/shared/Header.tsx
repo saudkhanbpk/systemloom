@@ -249,8 +249,8 @@ const Header: React.FC = () => {
               <p className="flex gap-2 items-center text-base">
                 <PhoneCall color="#9A00FF" />
                 <span className="text-white">
-                  <a href="callto:+13214073272" className="hover:underline">
-                    +1 (321) 407-3272
+                  <a href="callto:++13213646803" className="hover:underline">
+                    +1(321)364-6803
                   </a>
                 </span>
               </p>
@@ -261,8 +261,8 @@ const Header: React.FC = () => {
             <p className=" flex gap-2 items-center text-sm ">
               <PhoneCall color="#9A00FF" size={15} />
               <span className="text-white">
-                <a href="tel:+13214073272" className="hover:underline">
-                  +1 (321) 407-3272
+                <a href="tel:+13213646803" className="hover:underline">
+                  +1(321)364-6803
                 </a>
               </span>
             </p>
