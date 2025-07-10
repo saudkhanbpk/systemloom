@@ -70,7 +70,7 @@ const BlogCards: React.FC = () => {
       {blog.description}
     </p>
   </div>
-   {/* Button */}
+   
    <Link href={`/blog/${createSlug(blog.slug)}`}
     onClick={() => setLoadingBlogId(blog._id)}
    >
