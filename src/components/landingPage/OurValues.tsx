@@ -52,7 +52,7 @@ const OurValues: React.FC = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="relative md:p-6 p-2 bg-gradient-to-r from-purple-500 to-indigo-500 bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-20 transition duration-300  hover:scale-105 hover:shadow-2xl"
+              className="relative md:p-6 p-2 bg-[#5de0e6] backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-20 transition duration-300  hover:scale-105 hover:shadow-2xl"
             >
               <div className="flex flex-col items-center ">
                 <div className="text-5xl text-yellow-400  ">{value.icon}</div>

@@ -100,7 +100,7 @@ const OurTeamClient = () => {
       {/* PhoneInput */}
       <div className="w-full mb-4">
         <PhoneInput
-          country={"us"}
+          country={"gb"}
           value={formData.phoneNumber}
           onChange={handlePhoneChange}
           inputStyle={{ width: "100%" }}
