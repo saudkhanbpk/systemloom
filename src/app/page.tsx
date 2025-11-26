@@ -7,7 +7,7 @@ import GetQoute from "@/components/landingPage/GetQoute";
 import Slider from "@/components/landingPage/HeroSection";
 import IndustriesSection from "@/components/landingPage/IndustriesSection";
 import OurValues from "@/components/landingPage/OurValues";
-import PlatformInfo from "@/components/landingPage/PlatformInfo";
+// import PlatformInfo from "@/components/landingPage/PlatformInfo";
 import Products from "@/components/landingPage/Products";
 import ProjectsCount from "@/components/landingPage/ProjectsCount";
 import ServicesSection from "@/components/landingPage/ServicesSection";
@@ -92,8 +92,8 @@ export default function Page() {
               availableLanguage: "en",
             },
             sameAs: [
-              "https://www.facebook.com/techcreatorfb/",
-              "https://www.linkedin.com/company/techcreator",
+              "https://www.facebook.com/",
+              "https://www.linkedin.com/",
               "https://www.techcreator.co/",
             ],
           }),
@@ -115,7 +115,7 @@ export default function Page() {
         <Products />
         <OurTeam />
         <Benefits />
-        <PlatformInfo />
+      { /* <PlatformInfo /> */}
         <IndustriesSection />
         <ClientReviews />
         <ClientTestimonialsSection />

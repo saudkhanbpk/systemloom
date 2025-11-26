@@ -42,7 +42,7 @@ const features = [
 const Benefits = () => {
   return (
     <section className="md:mt-16 mt-9 text-center">
-  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600">
+  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5de0e6]">
     What makes us unique
   </h2>
 

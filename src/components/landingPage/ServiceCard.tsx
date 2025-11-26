@@ -32,7 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, alt
   disabled={loading}
   whileHover={!loading ? { scale: 1.05 } : {}}
   whileTap={!loading ? { scale: 0.95 } : {}}
-  className={`mt-auto w-full py-3 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl transition duration-300 ${
+  className={`mt-auto w-full py-3 text-sm font-semibold text-white bg-[#5de0e6] rounded-xl transition duration-300 ${
     loading ? "opacity-50 cursor-not-allowed" : "hover:from-purple-700 hover:to-purple-900"
   }`}
 >

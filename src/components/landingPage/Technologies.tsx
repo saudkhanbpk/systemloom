@@ -183,7 +183,7 @@ export default function TechnologiesSection() {
                 "px-6 py-3 rounded-full font-medium text-lg transition-all duration-300 text-nowrap",
                 activeCategory === category.id
                   ? "bg-white text-purple-600 shadow-lg transform scale-105"
-                  : "bg-purple-600 text-white hover:bg-white hover:text-purple-600 shadow-md"
+                  : "bg-[#5de0e6] text-white hover:bg-white hover:text-purple-600 shadow-md"
               )}
             >
               {category.name}

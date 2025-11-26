@@ -120,7 +120,7 @@ const ClientTestimonialsSection: React.FC = () => {
 
   return (
     <motion.section
-      className="md:py-10 bg-purple-600"
+      className="md:py-0 bg-white"
       initial="hidden"
       animate="visible"
       variants={sectionVariants}

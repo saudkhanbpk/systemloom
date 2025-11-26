@@ -51,7 +51,7 @@ const DiversitySection: FC = () => {
 
          
          <div className="bg-[#651FFF] rounded-2xl cursor-pointer p-8 flex flex-col items-center justify-center text-white col-span-1 sm:col-span-2 md:col-span-1">
-         <Link href="https://www.instagram.com/techcreatorco/" target="_blank" rel="noopener noreferrer">
+         <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
             <Instagram className="w-12 h-12 mb-4 mx-auto" />
             <p className="text-lg font-medium text-center mb-2">Follow us on</p>
             <p className="text-sm opacity-90 text-center">#IPPSIbrogueDeupload</p>

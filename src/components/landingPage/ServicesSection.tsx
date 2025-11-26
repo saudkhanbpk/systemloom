@@ -45,9 +45,9 @@ const ServicesSection: React.FC = () => {
   const servicesArr: Service[] = [
     {
       id: 1,
-      title: "Web Design & Development",
+      title: "Web Development",
       des:
-        "We make what you think. Whether it is through implementation, team extension, or research, we can support you. TechCreator provides web development services that are all about helping your business stand out in the digital world."
+        "Custom websites and web applications built with modern technologies and best practices."
           .split(" ")
           .slice(0, 26)
           .join(" ") + "...",
@@ -173,7 +173,7 @@ const ServicesSection: React.FC = () => {
       {/* Left Arrow */}
       <button 
         onClick={previous} 
-        className="bg-purple-600 shadow-md p-2 rounded-full hover:bg-black text-white transition"
+        className="bg-[#5de0e6] shadow-md p-2 rounded-full hover:bg-black text-white transition"
         aria-label="Previous Slide"
         title="Previous Slide"
       >
@@ -183,7 +183,7 @@ const ServicesSection: React.FC = () => {
       {/* Right Arrow */}
       <button 
         onClick={next} 
-        className="bg-purple-600 shadow-md p-2 rounded-full hover:bg-black text-white transition"
+        className="bg-[#5de0e6] shadow-md p-2 rounded-full hover:bg-black text-white transition"
         aria-label="Next Slide"
         title="Next Slide"
       >
@@ -197,7 +197,8 @@ const ServicesSection: React.FC = () => {
  
     return (
       <section>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl  text-center font-bold mb-6 md:mb-9 text-purple-600">Our Premium Services</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-6 md:mb-9 text-[#5de0e6]">Our Core Services</h2>
+        <p className="text-xl md:text-xl lg:text-xl text-center font-bold mb-6 md:mb-9 text-black"> We deliver end-to-end solutions combining technical expertise with marketing prowess </p>
         <Carousel
           swipeable
           draggable

@@ -38,7 +38,7 @@ const Products = () => {
 
   return (
     <section className="md:mt-16 mt-9">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 text-center mb-6 md:mb-9">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5de0e6] text-center mb-6 md:mb-9">
         Our Products
       </h2>
 
@@ -57,7 +57,7 @@ const Products = () => {
                 </p>
               ) : (
                 <button
-                  className="text-white font-bold py-3 px-8 rounded-full bg-purple-600 mt-4 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_#3b71ca]"
+                  className="text-white font-bold py-3 px-8 rounded-full bg-[#5de0e6] mt-4 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_#3b71ca]"
                 >
                   Schedule Demo &nbsp;→
                 </button>

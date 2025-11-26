@@ -30,7 +30,7 @@ const PlatformInfoClient: React.FC<PlatformInfoProps> = ({ platformData }) => {
         viewport={{ once: true }}
         className="text-center  md:mt-16 mt-9"
       >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold bg-clip-text text-transparent bg-[#5de0e6] ">
           {platformData.heading}
         </h2>
         <p className="text-lg md:text-xl text-gray-700 mt-4 max-w-3xl mx-auto">
@@ -47,16 +47,16 @@ const PlatformInfoClient: React.FC<PlatformInfoProps> = ({ platformData }) => {
           viewport={{ once: true }}
           className="space-y-6"
         >
-          <div className="space-y-4">
+            <div className="space-y-4">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
               Transform Your Ideas into Reality
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
               {platformData.description}
             </p>
-          </div>
+          </div> 
 
-          <div className="space-y-2">
+            <div className="space-y-2">
             <h4 className="text-xl font-semibold text-purple-600">Why Choose TechCreator?</h4>
             <ul className="space-y-2 text-gray-700 list-disc list-inside">
               <li> Lightning-fast development cycles</li>
@@ -64,13 +64,13 @@ const PlatformInfoClient: React.FC<PlatformInfoProps> = ({ platformData }) => {
               <li> Innovative solutions at scale</li>
               <li> Cost-effective development</li>
             </ul>
-          </div>
+          </div> 
 
           <Link
             href="https://www.linkedin.com/in/saudkhan39"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center md:px-6 md:py-3 px-2 py-2 text-lg font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors duration-200 group"
+            className="inline-flex items-center md:px-6 md:py-3 px-2 py-2 text-lg font-medium text-white bg-[#5de0e6] rounded-full"
           >
             Connect on LinkedIn
             <FaLinkedin className="ml-2  group-hover:scale-110 transition-transform duration-200" />

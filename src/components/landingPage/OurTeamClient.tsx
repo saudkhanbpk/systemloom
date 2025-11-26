@@ -120,7 +120,7 @@ const OurTeamClient = () => {
         title={loading ? "Sending..." : "Send Message"}
         type="submit"
         disabled={loading}
-        className={`bg-purple-600 text-white w-full h-12 rounded-full shadow-[0_4px_16px_-4px_#3b71ca] transition ${
+        className={`bg-[#5de0e6] text-white w-full h-12 rounded-full shadow-[0_4px_16px_-4px_#3b71ca] transition ${
           loading ? "opacity-50 cursor-not-allowed" : "hover:bg-purple-700"
         } focus:outline-none`}
       />

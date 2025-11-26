@@ -126,22 +126,22 @@ const Footer: React.FC = () => {
             <div className="flex gap-5 ">
               {[
                 {
-                  href: "https://www.facebook.com/techcreatorfb/",
+                  href: "https://www.facebook.com/",
                   icon: faFacebookF,
                   bg: "bg-blue-600",
                 },
                 {
-                  href: "https://www.linkedin.com/company/techcreator",
+                  href: "https://www.linkedin.com/",
                   icon: faLinkedinIn,
                   bg: "bg-blue-700",
                 },
                 {
-                  href: "https://www.youtube.com/@techcreator9512",
+                  href: "https://www.youtube.com/",
                   icon: faYoutube,
                   bg: "bg-red-600",
                 },
                 {
-                  href: "https://www.instagram.com/techcreatorco/",
+                  href: "https://www.instagram.com/",
                   icon: faInstagram,
                   bg: "bg-pink-600",
                 },
@@ -199,12 +199,12 @@ const Footer: React.FC = () => {
             </h2>
             <ul className="flex flex-col gap-2 ">
               {[
-                { href: "/healthcare", label: "HealthCare" },
-                { href: "/e-commerce", label: "E-Commerce" },
-                { href: "/hospitality", label: "Hospitality" },
-                { href: "/real-estate", label: "Real Estate" },
-                { href: "/restaurants", label: "Restaurants" },
-                { href: "/green-energy", label: "Green Energy" },
+                { href: "/healthcare", label: "Fintech" },
+                { href: "/e-commerce", label: "Retail" },
+                { href: "/hospitality", label: "Healthcare" },
+                { href: "/real-estate", label: "Travel" },
+                { href: "/restaurants", label: "Media & Entertainment" },
+               /*  { href: "/green-energy", label: "Green Energy" }, */
               ].map((item) => (
                 <li key={item.href}>
                   <Link
@@ -299,38 +299,38 @@ const Footer: React.FC = () => {
               {[
                 { name: "Web Development", link: "/services/web-development" },
                 {
-                  name: "Graphic Designing",
+                  name: "Mobile Development",
                   link: "/services/affordable-graphic-design-services",
                 },
                 {
-                  name: "Mobile App Development",
+                  name: "Digital Product Design",
                   link: "/services/mobile-app-development-company",
                 },
                 {
-                  name: "DevOps Services & Optimization",
+                  name: "End-to-End Development",
                   link: "/services/devops",
                 },
                 {
-                  name: "UI/UX Designing",
+                  name: "IT Consulting",
                   link: "/services/ui-ux-design-agency",
                 },
-                {
+                /* {
                   name: "Software Maintenance",
                   link: "/services/software-maintenance-services",
                 },
                 {
                   name: "SEO & Content Writing",
                   link: "/services/seo-services-for-small-business",
-                },
+                }, */
                 {
-                  name: "Project Management",
+                  name: "Quality Assurance",
                   link: "/services/project-management",
                 },
-                { name: "QA Testing", link: "/services/web-qa-tester" },
-                {
+                { name: "Maintenance", link: "/services/web-qa-tester" },
+                /* {
                   name: "Digital Marketing",
                   link: "/services/digital-marketing-for-software-companies",
-                },
+                }, */
               ].map((service) => (
                 <li key={service.name}>
                   <Link

@@ -25,7 +25,7 @@ import {
   FaBullhorn,
 } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
-import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png";
+import TechcreatorLogo from "../../../public/assets/icons/system2.png";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -49,55 +49,71 @@ const Header: React.FC = () => {
   
 
   const navItems = [
-    // { name: "Home", href: "/", icon: <FaHome /> },
-    { name: "About Us", href: "/about", icon: <FaInfoCircle /> },
+    { name: "Home", href: "/", /* icon: <FaHome /> */ },
+    { name: "About Us", href: "/about", /* icon: <FaInfoCircle /> */ },
     {
-      name: "Services",
+      name: "Services" ,
       href: "#",
-      icon: <FaDesktop />,
+      /* icon: <FaDesktop /> */
       dropdown: [
         {
           name: "Web Development",
           href: "/services/web-development",
-          icon: <FaDesktop />,
+          description: "For Creating custom websites and applications."
+          /* icon: <FaDesktop /> */
         },
         {
           name: "Mobile App Development",
           href: "/services/mobile-app-development-company",
-          icon: <FaMobileAlt />,
+          description: "Creating custom mobile apps for iOS and Android."
+          /* icon: <FaMobileAlt /> */
         },
         {
-          name: "UI & UX Designing",
+          name: "IT Recruitment",
           href: "/services/ui-ux-design-agency",
-          icon: <FaPaintBrush />,
+          description: "Solutions that help find the right talent."
+          /* icon: <FaPaintBrush /> */
         },
-        { name: "DevOps", href: "/services/devops", icon: <FaCogs /> },
+        { 
+          name: "IT Consulting and Digital Advisory", 
+          href: "/services/devops", 
+          description: "Provide expert advice and solutions to businesses."
+          /* icon: <FaCogs /> */ },
         {
-          name: "Project Management",
+          name: "Digital Product Design",
           href: "/services/project-management",
-          icon: <FaTasks />,
+          description: "For creating innovative user experiences."
+          /* icon: <FaTasks /> */
         },
         {
-          name: "SEO & Content Writing",
+          name: "Quality Assurance",
           href: "/services/seo-services-for-small-business",
-          icon: <FaSearch />,
+          description: "Complete and rigorous testing and analysis."
+          /* icon: <FaSearch /> */
         },
         {
-          name: "Software Maintenance",
+          name: "IT Outstaffing",
           href: "/services/software-maintenance-services",
-          icon: <FaWrench />,
+          description: "Best IT professionals to complete client requests."
+          /* icon: <FaWrench /> */
         },
         {
-          name: "Graphic Designing",
+          name: "End-to-End Development",
           href: "/services/affordable-graphic-design-services",
-          icon: <FaPencilRuler />,
+          description: "Complete project lifecycle from concept to launch."
+          /* icon: <FaPencilRuler /> */
         },
-        { name: "QA Testing", href: "/services/web-qa-tester", icon: <FaCheck /> },
-        {
+        { 
+          name: "Software Re-engineering And Maintenance", 
+          href: "/services/web-qa-tester",
+          description: "Software for improving performance and maintenance." 
+          /* icon: <FaCheck /> */ 
+        },
+        /* {
           name: "Digital Marketing ",
           href: "/services/digital-marketing-for-software-companies",
-          icon: <FaBullhorn />,
-        },
+          icon: <FaBullhorn /> 
+        }, */
       ],
     },
     { name: "Pricing", href: "/pricing", icon: <FaTags /> },
@@ -132,7 +148,7 @@ const Header: React.FC = () => {
         ? "bg-black backdrop-blur-lg shadow-lg"
         : "bg-transparent"
     }`}>
-      <div className="md:px-9 px-2 ">
+      <div className="md:px-9 px-2">
         <motion.div
          initial={{ opacity: 0, scale: 0.8 }}
          animate={{ opacity: 1, scale: 1 }}
@@ -144,20 +160,18 @@ const Header: React.FC = () => {
          className="flex items-center justify-between h-16">
         
         <Link href="/">
-  <div className="flex-shrink-0 flex justify-center gap-2 items-center w-[100px] md:w-full">
+  <div className="flex-shrink-0 flex justify-center gap-2 items-center bg-stone-50">
     <Image
       src={TechcreatorLogo}
       alt="techcreartor_logo"
-      width={158}
-      height={10}
+      width={250}
+      height={50}
       priority 
     />
   </div>
 </Link>
 
-          
-
-          <div className="flex items-center gap-9">
+          <div className="flex items-center gap-9 tex-t">
             <div className="hidden md:block">
               <div className="flex items-baseline space-x-2">
                 {navItems.map((item) =>
@@ -169,60 +183,87 @@ const Header: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                     >
                       <span
-                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF]  text-white ${
+                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#5de0e6]  text-white ${
                           pathname === item.href
-                            ? "bg-[#9A00FF] text-white"
+                            ? "bg-[#5de0e6] text-white"
                             : ""
                         }`}
                       >
                         {item.name}
                       </span>
                       {activeDropdown === item.name && (
-                        <div className="absolute bg-white text-black shadow-lg rounded-md mt-2 z-20 w-full md:w-auto">
-                          <div className="flex flex-col md:flex-row  justify-between p-4 gap-4 lg:w-[450px] text-wrap ">
+                        <div className="absolute left-1/2 -translate-x-1/2 bg-white text-black shadow-lg rounded-md mt-2 z-20 w-full md:w-auto">
+                          <div className="flex flex-col md:flex-row justify-between p-4 gap-4 lg:w-[700px] text-wrap">
                             {/* Left Column */}
-                            <ul className="flex flex-col gap-2  ">
-                              {item.dropdown.slice(0, 5).map((subItem) => (
+                            <ul className="flex flex-col gap-2">
+                              {item.dropdown.slice(0, 3).map((subItem) => (
                                 <li
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
                                       ? "text-[#9A00FF] font-semibold "
-                                      : "hover:text-[#9A00FF]"
+                                      : ""
                                   }`}
                                 >
                                   <Link
                                     href={subItem.href}
-                                    className="flex items-center gap-2"
+                                    className="flex flex-col"
                                   >
                                     <span className="text-[#9A00FF]">
-                                      {subItem.icon}
+                                      {/* {subItem.icon} */}
                                     </span>{" "}
-                                    {subItem.name}
+                                    <h2 className="font-bold hover:text-[#9A00FF]"> {subItem.name} </h2>
+                                    
                                   </Link>
+                                  <p className="text-xs"> {subItem.description} </p>
                                 </li>
                               ))}
                             </ul>
-                            {/* Right Column */}
+                            {/* Center Column */}
                             <ul className="flex flex-col gap-2 ">
-                              {item.dropdown.slice(5).map((subItem) => (
+                              {item.dropdown.slice(3,6).map((subItem) => (
                                 <li
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
                                       ? "text-[#9A00FF] font-semibold"
-                                      : "hover:text-[#9A00FF] "
+                                      : " "
                                   }`}
                                 >
                                   <Link
                                     href={subItem.href}
-                                    className="flex items-center gap-2"
+                                    className="flex flex-col"
                                   >
                                     <span className="text-[#9A00FF]">
-                                      {subItem.icon}
+                                     {/*  {subItem.icon} */}
                                     </span>{" "}
-                                    {subItem.name}
+                                    <h2 className="font-bold hover:text-[#9A00FF]"> {subItem.name} </h2>
                                   </Link>
+                                  <p className="text-xs"> {subItem.description} </p>
+                                </li>
+                              ))}
+                            </ul>
+                            {/* Right Column */}
+                            <ul className="flex flex-col gap-2 ">
+                              {item.dropdown.slice(6,9).map((subItem) => (
+                                <li
+                                  key={subItem.name}
+                                  className={`px-4 py-2 ${
+                                    pathname === subItem.href
+                                      ? "text-[#9A00FF] font-semibold"
+                                      : ""
+                                  }`}
+                                >
+                                  <Link
+                                    href={subItem.href}
+                                    className="flex flex-col"
+                                  >
+                                    <span className="text-[#9A00FF]">
+                                     {/*  {subItem.icon} */}
+                                    </span>{" "}
+                                    <h2 className="font-bold hover:text-[#9A00FF]"> {subItem.name} </h2>
+                                  </Link>
+                                  <p className="text-xs"> {subItem.description} </p>
                                 </li>
                               ))}
                             </ul>
@@ -234,8 +275,8 @@ const Header: React.FC = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#9A00FF] text-white ${
-                        pathname === item.href ? "bg-[#9A00FF] text-white" : ""
+                      className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#5de0e6] text-white ${
+                        pathname === item.href ? "bg-[#5de0e6] text-white" : ""
                       }`}
                     >
                       {item.name}
@@ -247,10 +288,10 @@ const Header: React.FC = () => {
 
             <div className="hide-at-1119">
               <p className="flex gap-2 items-center text-base">
-                <PhoneCall color="#9A00FF" />
+                <PhoneCall color="#5de0e6" />
                 <span className="text-white">
                   <a href="callto:++13213646803" className="hover:underline">
-                    +1(321)364-6803
+                    +1(000)000-0000
                   </a>
                 </span>
               </p>
@@ -317,7 +358,7 @@ const Header: React.FC = () => {
                       }}
                       className="flex items-center gap-3 text-wrap px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-600"
                     >
-                      {subItem.icon} {subItem.name}
+                      {/* {subItem.icon} */} {subItem.name}
                     </Link>
                   ))}
                 </div>

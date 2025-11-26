@@ -45,7 +45,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, faqs }) => {
         </div>
 
         {/* Contact Box */}
-        <div className="bg-purple-800 text-white p-6 rounded-lg flex flex-col justify-center items-center text-center">
+        <div className="bg-[#5de0e6] text-white p-6 rounded-lg flex flex-col justify-center items-center text-center">
           <span className="text-2xl mb-4">💬</span>
           <h3 className="text-xl font-bold mb-2">Do you have more questions?</h3>
           <p className="text-sm mb-4">Hit the button & tell us. We will try to answer your query.</p>

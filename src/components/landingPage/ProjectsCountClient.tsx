@@ -79,7 +79,7 @@ const ProjectsCountClient: React.FC<{ stats: StatItemProps[] }> = ({ stats }) =>
         viewport={{ once: true }} 
         className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
       >
-        Empowered Teams, <span className="text-purple-400">Proven Success</span>
+        Empowered Teams, <span className="text-[#5de0e6]">Proven Success</span>
       </motion.h2>
       <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-16">
         Our global impact and dedication to excellence have helped businesses achieve their digital transformation goals.

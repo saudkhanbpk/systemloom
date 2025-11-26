@@ -15,10 +15,10 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex justify-center gap-5">
           {[
-            { href: "https://www.facebook.com/techcreatorfb/", icon: faFacebookF, bg: "bg-blue-600" },
-            { href: "https://www.linkedin.com/company/techcreator", icon: faLinkedinIn, bg: "bg-blue-700" },
-            { href: "https://www.youtube.com/@techcreator9512", icon: faYoutube, bg: "bg-red-600" },
-            { href: "https://www.instagram.com/techcreatorco/", icon: faInstagram, bg: "bg-pink-600" },
+            { href: "https://www.facebook.com/", icon: faFacebookF, bg: "bg-blue-600" },
+            { href: "https://www.linkedin.com/", icon: faLinkedinIn, bg: "bg-blue-700" },
+            { href: "https://www.youtube.com/", icon: faYoutube, bg: "bg-red-600" },
+            { href: "https://www.instagram.com/", icon: faInstagram, bg: "bg-pink-600" },
           ].map(({ href, icon, bg }, index) => (
             <Link
               key={index}

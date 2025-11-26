@@ -43,7 +43,7 @@ const IndustriesSection = () => {
   return (
     <section className="md:mt-16 mt-9">
     <div className="max-w-5xl mx-auto text-center">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-purple-600">Industries we serve</h2>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-[#5de0e6]">Industries we serve</h2>
       <p className="ms:text-lg text-base text-gray-600 mt-4">
         With a wide range of services and proven experience across major industries, we understand your challenges and
         deliver tailored solutions that overcome them and drive meaningful impact.
