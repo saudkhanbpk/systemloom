@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     type="submit"
                     disabled={loading}
-                    className="bg-[#9A00FF] text-white rounded-md p-2 w-fit shadow-[0_4px_16px_-4px_#3b71ca]"
+                    className="bg-cyan-600 text-white rounded-md p-2 w-fit shadow-[0_4px_16px_-4px_#3b71ca]"
                   >
                     {loading ? "Subscribing..." : "Subscribe"}
                   </motion.button>
@@ -212,7 +212,7 @@ const Footer: React.FC = () => {
                     className={` text-base ${
                       pathname === item.href
                         ? "text-[#9A00FF]"
-                        : "hover:text-[#9A00FF]"
+                        : "hover:text-[#5de0e6]"
                     }`}
                   >
                     {item.label}
@@ -240,8 +240,8 @@ const Footer: React.FC = () => {
                     className={`text-base  transition-colors ${
                       pathname ===
                       (item === "Home" ? "/" : `/${item.toLowerCase()}`)
-                        ? "text-[#9A00FF]"
-                        : "hover:text-[#9A00FF]"
+                        ? "text-[#5de0e6]"
+                        : "hover:text-[#5de0e6]"
                     }`}
                   >
                     {item}
@@ -337,8 +337,8 @@ const Footer: React.FC = () => {
                     href={service.link}
                     className={` text-base ${ 
                       pathname === service.link
-                        ? "text-[#9A00FF]"
-                        : "hover:text-[#9A00FF]"
+                        ? "text-[#5de0e6"
+                        : "hover:text-[#5de0e6]"
                     }`}
                   >
                     {service.name}
@@ -353,14 +353,14 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               {/* Email */}
               <div className=" flex items-center gap-2 text-base">
-                <div className="iconContainer bg-purple-600">
+                <div className="iconContainer bg-[#5de0e6]">
                   <AiOutlineMail size={20} className="text-white" />
                 </div>
                 <Link
                   href="mailto:contact@techcreator.co"
                   className="hover:underline"
                 >
-                  contact@techcreator.co
+                  contact@systemloom.co
                 </Link>
               </div>
 
@@ -374,26 +374,26 @@ const Footer: React.FC = () => {
                 <div className="iconContainer bg-green-600">
                   <FaWhatsapp size={20} className="text-white" />
                 </div>
-                <span>+92 311 9265290</span>
+                <span>+44 0000 000000</span>
               </Link>
 
               {/* Phone Call (Mobile) */}
               <div className="md:hidden flex items-center gap-3 text-base">
-                <div className="iconContainer bg-purple-600">
+                <div className="iconContainer bg-[#5de0e6]">
                   <PhoneCall size={20} className="text-white" />
                 </div>
                 <a href="tel:+13213646803" className="hover:underline">
-                  +1(321)364-6803
+                  +44 0000 000000
                 </a>
               </div>
 
               {/* Phone Call (Desktop) */}
               <div className="hidden md:flex items-center gap-3 text-base">
-                <div className="iconContainer bg-purple-600">
+                <div className="iconContainer bg-[#5de0e6]">
                   <PhoneCall size={20} className="text-white" />
                 </div>
                 <a href="tel:+13213646803" className="hover:underline">
-                  +1(321)364-6803
+                  +44 0000 000000
                 </a>
               </div>
 
@@ -415,8 +415,8 @@ const Footer: React.FC = () => {
                 href={link.href}
                 className={`text-base cursor-pointer md:mt-3 transition-colors ${
                   pathname === link.href
-                    ? "text-purple-600 "
-                    : "text-gray-400 hover:text-purple-600"
+                    ? "bg-cyan-600"
+                    : "text-gray-400 hover:text-[#5de0e6]"
                 }`}
               >
                 {link.label}
@@ -424,7 +424,7 @@ const Footer: React.FC = () => {
             ))}
           </div>
           <p className="text-base text-gray-400 mt-3 ">
-            © 2025 <span className="text-[#9A00FF]">TechCreator</span>. All
+            © 2025 <span className="text-[#5de0e6]"> System Loom </span>. All
             rights reserved.
           </p>
         </div>

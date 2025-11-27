@@ -99,7 +99,7 @@ const UIUXDesign = () => {
         title="Exceptional Digital Experiences: UI/UX Design Services"
         description={
           <>
-            At TechCreator, our UI/UX design is built around delivering intuitive and visually engaging interfaces. We focus on creating user journeys that enhance interaction and improve satisfaction, ensuring your platform stands out in a competitive digital landscape.
+            At System Loom, our UI/UX design is built around delivering intuitive and visually engaging interfaces. We focus on creating user journeys that enhance interaction and improve satisfaction, ensuring your platform stands out in a competitive digital landscape.
           </>
         }
         image={UIUXDesignImage}

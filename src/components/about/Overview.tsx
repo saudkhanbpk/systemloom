@@ -17,7 +17,7 @@ const Overview: React.FC = () => {
 
         {/* Text Section */}
         <div className="w-full px-2">
-          <h2 className="text-[#9A00FF] font-inter text-3xl md:text-4xl lg:text-5xl  font-semibold mb-6">
+          <h2 className="text-[#5de0e6] font-inter text-3xl md:text-4xl lg:text-5xl  font-semibold mb-6">
             About System Loom
           </h2>
           <p className="text-[16px] md:text-[18px] text-gray-700 text-justify font-inter leading-7 md:leading-8 font-bold">

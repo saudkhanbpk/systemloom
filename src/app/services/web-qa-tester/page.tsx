@@ -74,7 +74,7 @@ const QATesting = () => {
       alt: "Customized QA solutions for different sectors toward achieving error-free working",
       title: "Specialized For Diverse Industries",
       content:
-        "No matter your industry, TechCreator offers tailored QA solutions. From e-commerce to healthcare and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance. We have councilors to understand the unique requirements of each industry and make sure our testing methods align with your business end goals. Whether it's compliance for healthcare or scalability for e-commerce, we ensure your software meets the expectations you desire and get you to your targeted audience and results that support your business growth.",
+        "No matter your industry, System Loom offers tailored QA solutions. From e-commerce to healthcare and beyond, our testing services are designed to meet the specific challenges of your domain, ensuring error-free performance. We have councilors to understand the unique requirements of each industry and make sure our testing methods align with your business end goals. Whether it's compliance for healthcare or scalability for e-commerce, we ensure your software meets the expectations you desire and get you to your targeted audience and results that support your business growth.",
     },
     {
       image: qaimage3,
@@ -100,7 +100,7 @@ const QATesting = () => {
         title="QA Testing Services"
         description={
           <>
-           At TechCreator, Expert QA testing services ensure your software is flawless and reliable. From <Link href="/services/web-development" className="text-purple-600">identifying bugs</Link> ,{" "}   to improving functionality, we help businesses deliver top-quality applications that meet user expectations.
+           At System Loom, Expert QA testing services ensure your software is flawless and reliable. From <Link href="/services/web-development" className="text-purple-600">identifying bugs</Link> ,{" "}   to improving functionality, we help businesses deliver top-quality applications that meet user expectations.
           </>
         }
         image={qatestinImage}

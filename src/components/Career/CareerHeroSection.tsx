@@ -95,7 +95,7 @@ const CareerHeroSection: FC = () => {
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
           <div className="mb-8 md:mb-12 md:p-10 md:mt-0 mt-14">
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
-              Be Who You Are. <span className="text-purple-600">Do What You Love</span>
+              Be Who You Are. <span className="text-[#5de0e6]">Do What You Love</span>
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mb-8">
               Are you at your best in an atmosphere of trust, knowhow, freedom
@@ -103,7 +103,7 @@ const CareerHeroSection: FC = () => {
               That's our working style.
             </p>
             <CommonButton
-              className="bg-[#9A00FF] hover:bg-purple-700 shadow-[0_4px_16px_-4px_#3b71ca] text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
+              className="bg-cyan-600 hover:bg-[#5de0e6] shadow-[0_4px_16px_-4px_#3b71ca] text-white px-6 py-3 rounded-[12px] transition-colors w-[228px] h-[48px]"
               title="Send your resume"
               handleClick={handleDialogOpen}
             />

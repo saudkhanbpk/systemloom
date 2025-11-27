@@ -21,7 +21,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, faqs }) => {
 
   return (
     <div className="bg-gray-100 md:p-8 md:mt-16 mt-9 px-3">
-      <h2 className="text-4xl font-bold text-purple-600 mb-6">{title}</h2>
+      <h2 className="text-4xl font-bold text-[#5de0e6] mb-6">{title}</h2>
 
       <div className="grid md:grid-cols-3 gap-6">
         {/* FAQ List */}
@@ -50,7 +50,7 @@ const FaqSection: React.FC<FaqSectionProps> = ({ title, faqs }) => {
           <h3 className="text-xl font-bold mb-2">Do you have more questions?</h3>
           <p className="text-sm mb-4">Hit the button & tell us. We will try to answer your query.</p>
           <button
-  className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-lg"
+  className="bg-cyan-600 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-lg"
   onClick={() => (window.location.href = "mailto:contact@techcreator.co")}
 >
   Shoot a Direct Mail

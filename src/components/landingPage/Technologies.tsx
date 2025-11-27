@@ -155,7 +155,7 @@ export default function TechnologiesSection() {
   const [activeCategory, setActiveCategory] = useState("mobile-apps");
 
   return (
-    <section className="relative bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 text-white md:py-20 py-10 px-3 md:px-16">
+    <section className="relative bg-gradient-to-r from-[#5de0e6] to-cyan-500 text-white md:py-20 py-10 px-3 md:px-16">
       <div className="absolute inset-0 bg-black bg-opacity-40 blur-lg"></div>
 
       <motion.div
@@ -183,7 +183,7 @@ export default function TechnologiesSection() {
                 "px-6 py-3 rounded-full font-medium text-lg transition-all duration-300 text-nowrap",
                 activeCategory === category.id
                   ? "bg-white text-purple-600 shadow-lg transform scale-105"
-                  : "bg-[#5de0e6] text-white hover:bg-white hover:text-purple-600 shadow-md"
+                  : "bg-cyan-600 text-white hover:bg-white hover:text-purple-600 shadow-md"
               )}
             >
               {category.name}

@@ -123,7 +123,7 @@ const projectManagement = () => {
         title="Development Management and Complete Project Management Services"
         description={
           <>
-           <Link href="/" className="text-purple-600">TechCreator</Link> ,{" "}  offers expert project management services for businesses, designed to optimize workflows and ensure the timely delivery of <strong className="font-bold">software development, apps or website development.</strong> Our team focuses on aligning development project objectives with your business goals, providing clarity, structure, and seamless execution for agile <strong className="font-bold">software development and IT project management.</strong>
+           <Link href="/" className="text-purple-600">System Loom</Link> ,{" "}  offers expert project management services for businesses, designed to optimize workflows and ensure the timely delivery of <strong className="font-bold">software development, apps or website development.</strong> Our team focuses on aligning development project objectives with your business goals, providing clarity, structure, and seamless execution for agile <strong className="font-bold">software development and IT project management.</strong>
 
           </>
         }
@@ -135,7 +135,7 @@ const projectManagement = () => {
         title="Efficient Project Management Services" 
         description={
           <>
-           <Link href="/" className="underline">TechCreator</Link> ,{" "} offers reliable project management services designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.With a keen focus on communication and collaboration, projects are delivered on time and within budget. Our approach minimizes risks and maximizes project success, driving growth and efficiency.
+           <Link href="/" className="underline">System Loom</Link> ,{" "} offers reliable project management services designed to streamline workflows and ensure timely delivery of projects. Our team focuses on aligning project objectives with your business goals, providing clarity, structure, and seamless execution.With a keen focus on communication and collaboration, projects are delivered on time and within budget. Our approach minimizes risks and maximizes project success, driving growth and efficiency.
           </>
         }
            image={projectimage1}

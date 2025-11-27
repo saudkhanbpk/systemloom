@@ -23,7 +23,7 @@ import {
   FaBullhorn,
 } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
-import TechcreatorLogo from "../../../public/assets/icons/Tclogo1.png";
+import systemLoomLogo from "../../../public/assets/icons/L1.png";
 
 const AdminHeader: React.FC = () => {
   const pathname = usePathname();
@@ -100,14 +100,14 @@ const AdminHeader: React.FC = () => {
 
   return (
     <nav className="text-white  z-20 w-full fixed bg-black   text-nowrap">
-      <div className="md:px-9 px-2 ">
+      <div className="md:px-9 px-2">
         <div className="flex items-center justify-between h-16">
           <div>
             <Link href="/">
-              <div className="flex-shrink-0 flex justify-center gap-2 items-center   ">
+              <div className="flex-shrink-0 flex justify-center gap-2 items-center">
                 <Image
-                  src={TechcreatorLogo}
-                  alt="techcreartor_logo"
+                  src={systemLoomLogo}
+                  alt="systemloom_logo"
                   width={158}
                   height={10}
                 />

@@ -95,10 +95,10 @@ const ContactForm: React.FC = () => {
 
       {/* Location */}
       <div className="mt-6 flex items-center gap-3 text-lg">
-        <div className=" bg-purple-600 rounded-full p-1.5">
+        <div className=" bg-cyan-600 rounded-full p-1.5">
           <MapPin size={30} className="text-white " />
         </div>
-        <p className="text-xl">TechCreator, Florida, Orlando, USA</p>
+        <p className="text-xl">System Loom, London, UK</p>
       </div>
 
       {/* Contact Methods */}
@@ -111,14 +111,14 @@ const ContactForm: React.FC = () => {
           <div className=" bg-green-600 rounded-full p-1.5">
             <FaWhatsapp size={28} className="text-white" />
           </div>
-          <span className="hover:underline ">+1(321)364-6803</span>
+          <span className="hover:underline ">+44 0000 000000</span>
         </Link>
 
         <Link href="tel:+13213646803" className="flex items-center gap-3 ">
-          <div className=" bg-purple-700 rounded-full p-2">
+          <div className=" bg-cyan-600 rounded-full p-2">
             <PhoneCall className="text-white" />
           </div>
-          <span className="hover:underline">+1(321)364-6803</span>
+          <span className="hover:underline">+44 0000 000000</span>
         </Link>
       </div>
 
@@ -128,7 +128,7 @@ const ContactForm: React.FC = () => {
           <Mail size={28} className="text-white" />
         </div>
         <Link href="mailto:contact@techcreator.co" className="hover:underline text-xl">
-          contact@techcreator.co
+          contact@systemloom.co
         </Link>
       </div>
     </div>
@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
      {/* PhoneInput  */}
      <div className="w-full mb-4">
   <PhoneInput
-    country={"us"} 
+    country={"gb"} 
     value={formData.phoneNumber}
     onChange={handlePhoneChange}
     containerClass=" rounded-lg " 
@@ -194,8 +194,8 @@ const ContactForm: React.FC = () => {
           title={loading ? "Sending..." : "Send Message"}
           type="submit"
           disabled={loading}
-          className={`bg-purple-600 text-white w-full h-12 rounded-full shadow-[0_4px_16px_-4px_#3b71ca] transition ${
-            loading ? "opacity-50 cursor-not-allowed" : "hover:bg-purple-700"
+          className={`bg-cyan-600 text-white w-full h-12 rounded-full shadow-[0_4px_16px_-4px_#3b71ca] transition ${
+            loading ? "opacity-50 cursor-not-allowed" : "hover:bg-[#5de0e6]"
           } focus:outline-none`}
         />
       </div>

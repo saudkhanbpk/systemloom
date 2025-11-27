@@ -52,7 +52,7 @@ const IndustriesSection = () => {
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:mt-9 mt-6">
       {industries.map((industry, index) => (
         <Link key={index} href={industry.link}>
-         <div className="p-6 border rounded-xl shadow-sm border-gray-300 bg-gradient-to-r from-indigo-500 to-purple-500 hover:border-purple-600 hover:border-2 cursor-pointer flex flex-col justify-between hover:scale-105 transition-transform duration-300 ease-in-out">
+         <div className="p-6 border rounded-xl shadow-sm border-gray-300 bg-[#5de0e6] hover:border-purple-600 hover:border-2 cursor-pointer flex flex-col justify-between hover:scale-105 transition-transform duration-300 ease-in-out">
             
               <h3 className="text-xl font-semibold mb-2 text-white">{industry.title}</h3>
               <p className="text-white mb-4">{industry.description}</p>

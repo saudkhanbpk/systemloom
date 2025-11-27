@@ -48,7 +48,7 @@ const AppointmentSection: React.FC = () => {
         window.Calendly.initBadgeWidget({
           url: "https://calendly.com/contact-techcreator/30min",
           text: "Schedule Free Strategy Call",
-          color: "#5de0e6",
+          color: "#0891b2",
           textColor: "#ffffff",
         });
       }
@@ -62,7 +62,7 @@ const AppointmentSection: React.FC = () => {
   return (
     <div className="appointment-section">
       <CommonButton
-        className="bg-[#9A00FF] shadow-[0_4px_16px_-4px_#3b71ca] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm flex items-center gap-2"
+        className="bg-cyan-600 shadow-[0_4px_16px_-4px_#3b71ca] text-white px-3 py-1.5 h-fit md:px-4 md:py-2 rounded-full text-xs md:text-sm flex items-center gap-2"
         title={
           <>
             <FaCalendarAlt /> Book Appointment

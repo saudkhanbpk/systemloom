@@ -94,7 +94,7 @@ useGetAllJobs()
     <>
       <div className=" mt-9 md:mt-16">
         <div className=" ">
-          <p className="font-inter font-semibold md:text-5xl text-3xl text-purple-600">Open positions</p>
+          <p className="font-inter font-semibold md:text-5xl text-3xl text-[#5de0e6]">Open positions</p>
           <p className="font-inter font-normal text-[22px] text-[#838696] mt-2">
             Come join the team!
           </p>

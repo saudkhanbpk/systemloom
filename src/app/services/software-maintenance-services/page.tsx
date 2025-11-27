@@ -82,14 +82,14 @@ const SoftwareMaintenance = () => {
       image: softwareImage3,
       alt: "Take advantage of enhanced security, efficiency, and longevity with proactive maintenance solutions",
       title: "Proactive Solutions for Long-Term Software Success",
-      content: 'Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing regular updates and monitoring, we ensure your software remains secure, efficient, and ready for future challenges.Techcreator adapt such approaches to avoid disruptions and keep your software running without any interruption. Our constant support system keeps you ahead of the trends and ensures better performance.'
+      content: 'Our proactive approach to software maintenance services focuses on identifying potential issues before they occur. By implementing regular updates and monitoring, we ensure your software remains secure, efficient, and ready for future challenges. System Loom adapt such approaches to avoid disruptions and keep your software running without any interruption. Our constant support system keeps you ahead of the trends and ensures better performance.'
     },
     {
       image: softwareImage4,
       alt: "Software maintenance plans developed to cater to unique business needs and the peculiarities of distinct industries",
       title: "Custom Maintenance Plans for Business Needs",
       content:
-        "Every business is unique, and so are its software requirements. At TechCreator, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.Before execution or practical work, we go through a proper plan in order to understand your needs that align perfectly to your business. We have expertise that analyze the basic needs and ensure your software always meet your core business objectives.",
+        "Every business is unique, and so are its software requirements. At System Loom, we craft maintenance plans tailored to your goals, whether you need ongoing software maintenance and support services or assistance with industry-specific tools like construction equipment maintenance software.Before execution or practical work, we go through a proper plan in order to understand your needs that align perfectly to your business. We have expertise that analyze the basic needs and ensure your software always meet your core business objectives.",
     },
   ];
 
@@ -102,7 +102,7 @@ const SoftwareMaintenance = () => {
         title="Reliable Software Maintenance Services"
         description={
           <>
-           At <Link href="/" className="text-purple-600">TechCreator</Link> ,{" "}, our software maintenance services are designed to keep your applications running smoothly. From  <Link href="/" className="text-purple-600">bug fixes</Link> ,{" "}, to performance optimization, we ensure your software stays updated, secure, and aligned with your evolving business
+           At <Link href="/" className="text-purple-600">System Loom</Link> ,{" "}, our software maintenance services are designed to keep your applications running smoothly. From  <Link href="/" className="text-purple-600">bug fixes</Link> ,{" "}, to performance optimization, we ensure your software stays updated, secure, and aligned with your evolving business
           </>
         }
         image={heroimage}

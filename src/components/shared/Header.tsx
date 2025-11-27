@@ -25,7 +25,7 @@ import {
   FaBullhorn,
 } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
-import TechcreatorLogo from "../../../public/assets/icons/system2.png";
+import systemLoomLogo from "../../../public/assets/icons/L1.png";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -162,8 +162,8 @@ const Header: React.FC = () => {
         <Link href="/">
   <div className="flex-shrink-0 flex justify-center gap-2 items-center bg-stone-50">
     <Image
-      src={TechcreatorLogo}
-      alt="techcreartor_logo"
+      src={systemLoomLogo}
+      alt="systemloom_logo"
       width={250}
       height={50}
       priority 
@@ -201,7 +201,7 @@ const Header: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#9A00FF] font-semibold "
+                                      ? "text-[#5de0e6] font-semibold "
                                       : ""
                                   }`}
                                 >
@@ -212,7 +212,7 @@ const Header: React.FC = () => {
                                     <span className="text-[#9A00FF]">
                                       {/* {subItem.icon} */}
                                     </span>{" "}
-                                    <h2 className="font-bold hover:text-[#9A00FF]"> {subItem.name} </h2>
+                                    <h2 className="font-bold hover:text-[#5de0e6]"> {subItem.name} </h2>
                                     
                                   </Link>
                                   <p className="text-xs"> {subItem.description} </p>
@@ -226,7 +226,7 @@ const Header: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#9A00FF] font-semibold"
+                                      ? "text-[#5de0e6] font-semibold"
                                       : " "
                                   }`}
                                 >
@@ -237,7 +237,7 @@ const Header: React.FC = () => {
                                     <span className="text-[#9A00FF]">
                                      {/*  {subItem.icon} */}
                                     </span>{" "}
-                                    <h2 className="font-bold hover:text-[#9A00FF]"> {subItem.name} </h2>
+                                    <h2 className="font-bold hover:text-[#5de0e6]"> {subItem.name} </h2>
                                   </Link>
                                   <p className="text-xs"> {subItem.description} </p>
                                 </li>
@@ -250,7 +250,7 @@ const Header: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#9A00FF] font-semibold"
+                                      ? "text-[#5de0e6] font-semibold"
                                       : ""
                                   }`}
                                 >
@@ -261,7 +261,7 @@ const Header: React.FC = () => {
                                     <span className="text-[#9A00FF]">
                                      {/*  {subItem.icon} */}
                                     </span>{" "}
-                                    <h2 className="font-bold hover:text-[#9A00FF]"> {subItem.name} </h2>
+                                    <h2 className="font-bold hover:text-[#5de0e6]"> {subItem.name} </h2>
                                   </Link>
                                   <p className="text-xs"> {subItem.description} </p>
                                 </li>
@@ -291,7 +291,7 @@ const Header: React.FC = () => {
                 <PhoneCall color="#5de0e6" />
                 <span className="text-white">
                   <a href="callto:++13213646803" className="hover:underline">
-                    +1(000)000-0000
+                    +44 0000 000000
                   </a>
                 </span>
               </p>
@@ -300,10 +300,10 @@ const Header: React.FC = () => {
 
           <div className="md:hidden block">
             <p className=" flex gap-2 items-center text-sm ">
-              <PhoneCall color="#9A00FF" size={15} />
+              <PhoneCall color="#5de0e6" size={15} />
               <span className="text-white">
                 <a href="tel:+13213646803" className="hover:underline">
-                  +1(321)364-6803
+                  +44 0000 000000
                 </a>
               </span>
             </p>
@@ -327,7 +327,7 @@ const Header: React.FC = () => {
       </div>
 
       {isOpen && (
-  <div className="lg:hidden bg-[#9A00FF] z-20 rounded-md mb-20">
+  <div className="lg:hidden bg-[#5de0e6] z-20 rounded-md mb-20">
     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       {navItems.map((item) => (
         <div key={item.name}>

@@ -74,7 +74,7 @@ const GraphicDesign = () => {
       alt: "TechCreator attracts audience to your products graphic designing",
       title: "Agency for Graphic Design Tailored to Your Brand",
       content:
-        "At TechCreator, we understand the importance of design diversity. Our expertise spans various graphic design styles, ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.We work closely and understand the needs of your business and then translating them into audience-oriented designs. We deal in different categories such as digital assets, print materials or full brand overhauls. Our designs will always resonate with your target market.",
+        "At System Loom, we understand the importance of design diversity. Our expertise spans various graphic design styles, ensuring we can create the perfect visual identity for your business, whether it’s modern, minimalistic, or vibrant and bold.We work closely and understand the needs of your business and then translating them into audience-oriented designs. We deal in different categories such as digital assets, print materials or full brand overhauls. Our designs will always resonate with your target market.",
     },
     {
       image: graphic2,
@@ -100,7 +100,7 @@ const GraphicDesign = () => {
         title="Unique Styles for Your Business"
         description={
           <>
-           <Link href="/" className="text-purple-600">TechCreator</Link> ,{" "}is your go-to agency for graphic design, offering creative solutions that bring your ideas to life. From logos to <Link href="/services/digital-marketing-for-software-companies" className="text-purple-600">marketing materials</Link> ,{" "} , our designs are crafted to communicate your brand's message effectively and captivate your audience.
+           <Link href="/" className="text-purple-600">System Loom</Link> ,{" "}is your go-to agency for graphic design, offering creative solutions that bring your ideas to life. From logos to <Link href="/services/digital-marketing-for-software-companies" className="text-purple-600">marketing materials</Link> ,{" "} , our designs are crafted to communicate your brand's message effectively and captivate your audience.
           </>
         }
         image={heroimage}

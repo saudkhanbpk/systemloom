@@ -22,7 +22,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({title, description, imag
   className="lg:w-[400px]  h-auto sm:h-[400px] lg:h-[450px] sm:w-[400px] object-cover lg:absolute lg:top-16  xl:top-10 shadow-xl"
       />
     </div>
-    <div className="bg-[#9A00FF] w-full  h-auto p-6  mt-3 lg:mt-0 ">
+    <div className="bg-[#5de0e6] w-full  h-auto p-6  mt-3 lg:mt-0 ">
       <div className="text-white xl:py-20 lg:pl-52 lg:h-[400px] ">
         <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3  ">
           {title}

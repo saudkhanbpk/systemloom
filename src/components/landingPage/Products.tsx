@@ -57,7 +57,7 @@ const Products = () => {
                 </p>
               ) : (
                 <button
-                  className="text-white font-bold py-3 px-8 rounded-full bg-[#5de0e6] mt-4 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_#3b71ca]"
+                  className="text-white font-bold py-3 px-8 rounded-full bg-cyan-600 mt-4 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_#3b71ca]"
                 >
                   Schedule Demo &nbsp;→
                 </button>

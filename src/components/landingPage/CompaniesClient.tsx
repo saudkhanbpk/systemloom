@@ -24,7 +24,7 @@ const CompaniesClient: React.FC<{ companies: any[] }> = ({ companies }) => {
   return (
     <section className="overflow-x-hidden -mt-12 p-4 border rounded-md relative z-10 bg-white shadow-sm">
       <h2 className="text-center md:text-2xl text-lg font-bold text-[#5de0e6] mt-3">
-        The world's leading brands are powered by TechCreator
+        The world's leading brands are powered by System Loom
       </h2>
 
       {/* Add key to force re-render when isMobile changes */}

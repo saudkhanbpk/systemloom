@@ -12,7 +12,7 @@ interface Profile {
   category: string | string[];
 }
 
-const profiles: Profile[] = [
+/* const profiles: Profile[] = [
   { name: "Saud Khan", position: "CEO", imageUrl: "/assets/aboutpage/ceoimage2.webp", linkedInUrl: "https://www.linkedin.com/in/saudkhan39", width: 300, height: 300, category: "Leadership" },
   { name: "Aamad Khan", position: "Admin Officer", imageUrl: "/assets/aboutpage/amad.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "Leadership" },
   { name: "Aamir Shahzad", position: "SEO & Project manager", imageUrl: "/assets/aboutpage/amir1.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "SEO" },
@@ -43,7 +43,7 @@ const profiles: Profile[] = [
 
   { name: "Masroor Ahmad", position: "HubSpot & Content writer", imageUrl: "/assets/aboutpage/masror.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: ["SEO", "CRM"] },
   { name: "Ishtiaq", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/ishtiaq.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
-];
+]; */
 
 const ExpertTeam: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -53,67 +53,67 @@ const ExpertTeam: React.FC = () => {
   };
 
   // Filter profiles based on selected category
-  const filteredProfiles = selectedCategory === "All" 
+ /*  const filteredProfiles = selectedCategory === "All" 
   ? profiles 
   : profiles.filter(profile => 
       Array.isArray(profile.category) 
         ? profile.category.includes(selectedCategory) 
         : profile.category === selectedCategory
-    );
+    ); */
 
   return (
     <div className="md:mt-16 mt-9">
       
-        <h2 className=" text-center font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-[#9A00FF]">Our Team</h2>
+        <h2 className=" text-center font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-[#5de0e6]">Our Team</h2>
      
 
       {/* Buttons to select category */}
       <div className="flex justify-center flex-wrap text-nowrap gap-3 md:gap-4  py-4 mb-6">
         <button
           onClick={() => handleCategoryChange("All")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "All" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "All" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           All
         </button>
         <button
           onClick={() => handleCategoryChange("Leadership")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "Leadership" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "Leadership" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           Leadership
         </button>
         <button
           onClick={() => handleCategoryChange("mern stack")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "mern stack" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "mern stack" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           Mern Stack Developer
         </button>
         <button
           onClick={() => handleCategoryChange("app")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "app" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "app" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           App Developer
         </button>
         <button
           onClick={() => handleCategoryChange("CRM")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "CRM" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "CRM" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           CRM
         </button>
         <button
           onClick={() => handleCategoryChange("designer")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "designer" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "designer" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           Graphic designer & Marketing
         </button>
         <button
           onClick={() => handleCategoryChange("angular")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "angular" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "angular" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           Angular Developer
         </button>
         <button
           onClick={() => handleCategoryChange("SEO")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "SEO" ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-800"}`}
+          className={`px-6 py-2 rounded-lg ${selectedCategory === "SEO" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
         >
           SEO
         </button>
@@ -124,7 +124,7 @@ const ExpertTeam: React.FC = () => {
        
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3 md:gap-12  md:mb-16 mb-9">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3 md:gap-12  md:mb-16 mb-9">
         {filteredProfiles.map((profile, index) => (
           <ProfileCard
             key={index}
@@ -136,7 +136,7 @@ const ExpertTeam: React.FC = () => {
             height={profile.height}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

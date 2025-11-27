@@ -8,7 +8,7 @@ const GetQoute = () => {
     Let’s Build Your Next <span className="text-[#5de0e6]">Software</span> Solution
     </h2>
     <Link href="/contact">
-      <button className="border p-3 px-7 rounded-full bg-[#5de0e6] hover:bg-purple-700 text-white cursor-pointer">
+      <button className="border p-3 px-7 rounded-full bg-cyan-600 hover:bg-[#5de0e6] text-white cursor-pointer">
         Get a Quote
       </button>
     </Link>

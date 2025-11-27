@@ -16,7 +16,7 @@
 
 //       <div className='flex flex-col items-center w-[280px] h-[280px]'>
 //         <Image src={hamdan} alt='saudImage' />
-//         <h2>Saud khan</h2>
+//         <h2></h2>
 //         <p>CEO</p>
 //       </div>
 
