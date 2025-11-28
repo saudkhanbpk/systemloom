@@ -23,7 +23,7 @@ import {
   FaBullhorn,
 } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
-import systemLoomLogo from "../../../public/assets/icons/L1.png";
+import systemLoomLogo from "../../../public/assets/icons/system2.png";
 
 const AdminHeader: React.FC = () => {
   const pathname = usePathname();

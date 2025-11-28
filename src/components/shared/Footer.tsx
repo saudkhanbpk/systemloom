@@ -366,7 +366,7 @@ const Footer: React.FC = () => {
 
               {/* WhatsApp */}
               <Link
-                href="https://wa.me/923119265290"
+                href="https://wa.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-base hover:underline"

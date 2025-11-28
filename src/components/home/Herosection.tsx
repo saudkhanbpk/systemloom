@@ -21,7 +21,7 @@ const Herosection = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br bg-black min-h-screen flex flex-col items-center justify-center px-6 md:px-10 overflow-hidden text-center">
+      <section className="relative bg-gradient-to-br bg-white min-h-screen flex flex-col items-center justify-center px-6 md:px-10 overflow-hidden text-center">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#4a1b6d33_0%,transparent_70%)] animate-pulse-slow" />

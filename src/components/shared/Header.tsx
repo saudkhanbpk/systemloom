@@ -25,7 +25,7 @@ import {
   FaBullhorn,
 } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
-import systemLoomLogo from "../../../public/assets/icons/L1.png";
+import systemLoomLogo from "../../../public/assets/icons/system2.png";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -157,15 +157,15 @@ const Header: React.FC = () => {
            ease: [0.6, -0.05, 0.01, 0.99],
          }}
         
-         className="flex items-center justify-between h-16">
+         className="flex items-center justify-between h-20">
         
         <Link href="/">
-  <div className="flex-shrink-0 flex justify-center gap-2 items-center bg-stone-50">
+  <div className="flex-shrink-0 flex justify-center gap-2 items-center bg-stone-50 mt-6">
     <Image
       src={systemLoomLogo}
       alt="systemloom_logo"
-      width={250}
-      height={50}
+      width={200}
+      height={30}
       priority 
     />
   </div>
@@ -183,7 +183,7 @@ const Header: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                     >
                       <span
-                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#5de0e6]  text-white ${
+                        className={`lg:px-3 px-1 py-2 md:text-sm lg:text-base rounded-md font-medium hover:bg-[#5de0e6] text-white ${
                           pathname === item.href
                             ? "bg-[#5de0e6] text-white"
                             : ""
@@ -201,7 +201,7 @@ const Header: React.FC = () => {
                                   key={subItem.name}
                                   className={`px-4 py-2 ${
                                     pathname === subItem.href
-                                      ? "text-[#5de0e6] font-semibold "
+                                      ? "text-[#5de0e6] font-semibold"
                                       : ""
                                   }`}
                                 >

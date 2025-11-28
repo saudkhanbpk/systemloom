@@ -35,7 +35,7 @@ const StatItem: React.FC<StatItemProps> = ({ value, label, description, delay })
             "0+"
           )}
         </div>
-        <h3 className="text-xl md:text-2xl font-semibold text-purple-400 mb-2">
+        <h3 className="text-xl md:text-2xl font-semibold text-[#5de0e6] mb-2">
           {label}
         </h3>
         <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
