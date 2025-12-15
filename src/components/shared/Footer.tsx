@@ -360,7 +360,7 @@ const Footer: React.FC = () => {
                   href="mailto:contact@techcreator.co"
                   className="hover:underline"
                 >
-                  contact@systemloom.co
+                  contact@systemloom.com
                 </Link>
               </div>
 
