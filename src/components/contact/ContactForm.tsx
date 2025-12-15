@@ -111,14 +111,14 @@ const ContactForm: React.FC = () => {
           <div className=" bg-green-600 rounded-full p-1.5">
             <FaWhatsapp size={28} className="text-white" />
           </div>
-          <span className="hover:underline ">+44 0000 000000</span>
+          <span className="hover:underline ">+44 0788 6554875</span>
         </Link>
 
         <Link href="tel:+13213646803" className="flex items-center gap-3 ">
           <div className=" bg-cyan-600 rounded-full p-2">
             <PhoneCall className="text-white" />
           </div>
-          <span className="hover:underline">+44 0000 000000</span>
+          <span className="hover:underline">+44 0788 6554875</span>
         </Link>
       </div>
 
@@ -128,7 +128,7 @@ const ContactForm: React.FC = () => {
           <Mail size={28} className="text-white" />
         </div>
         <Link href="mailto:contact@techcreator.co" className="hover:underline text-xl">
-          contact@systemloom.co
+          contact@systemloom.com
         </Link>
       </div>
     </div>

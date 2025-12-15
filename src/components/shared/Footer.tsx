@@ -374,7 +374,7 @@ const Footer: React.FC = () => {
                 <div className="iconContainer bg-green-600">
                   <FaWhatsapp size={20} className="text-white" />
                 </div>
-                <span>+44 0000 000000</span>
+                <span>+44 07886554875</span>
               </Link>
 
               {/* Phone Call (Mobile) */}
@@ -383,7 +383,7 @@ const Footer: React.FC = () => {
                   <PhoneCall size={20} className="text-white" />
                 </div>
                 <a href="tel:+13213646803" className="hover:underline">
-                  +44 0000 000000
+                  +44 07886554875
                 </a>
               </div>
 
@@ -393,7 +393,7 @@ const Footer: React.FC = () => {
                   <PhoneCall size={20} className="text-white" />
                 </div>
                 <a href="tel:+13213646803" className="hover:underline">
-                  +44 0000 000000
+                  +44 07886554875
                 </a>
               </div>
 
