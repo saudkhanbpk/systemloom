@@ -85,7 +85,7 @@ const PricingForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#5de0e6] pt-3 pb-3">
+    <div className="bg-[#0891B2] pt-3 pb-3">
       <div className="flex flex-col md:flex-row md:gap-3 lg:gap-6 justify-between px-2 lg:px-8 mx-auto">
         {/* Left Section */}
         <div className="text-white flex md:mx-0 mx-auto flex-col mb-6 lg:mb-0 p-2">

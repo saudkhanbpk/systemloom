@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, alt
   }
   return (
     <article className="h-[400px] p-8 rounded-2xl border border-purple-100 hover:border-purple-300 bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ease-out cursor-pointer flex flex-col">
-      
+
       {/* Icon */}
       <Image src={icon} alt={altText} width={64} height={64} className="object-contain mx-auto h-20" />
 
@@ -28,17 +28,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, alt
 
       {/* Button */}
       <motion.button
-  onClick={handleClick}
-  disabled={loading}
-  whileHover={!loading ? { scale: 1.05 } : {}}
-  whileTap={!loading ? { scale: 0.95 } : {}}
-  className={`mt-auto w-full py-3 text-sm font-semibold text-white bg-cyan-600 rounded-xl transition duration-300 ${
-    loading ? "opacity-50 cursor-not-allowed" : "hover:from-purple-700 hover:to-purple-900"
-  }`}
->
-  {loading ? "please wait..." : "Learn More →"}
-</motion.button>
-      
+        onClick={handleClick}
+        disabled={loading}
+        whileHover={!loading ? { scale: 1.05 } : {}}
+        whileTap={!loading ? { scale: 0.95 } : {}}
+        className={`mt-auto w-full py-3 text-sm font-semibold text-white bg-cyan-600 rounded-xl transition duration-300 ${loading ? "opacity-50 cursor-not-allowed" : "hover:from-purple-700 hover:to-purple-900"
+          }`}
+      >
+        {loading ? "please wait..." : "Learn More →"}
+      </motion.button>
+
     </article>
   );
 };

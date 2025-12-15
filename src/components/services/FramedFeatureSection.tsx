@@ -56,7 +56,7 @@ const FramedFeatureSection: React.FC<FramedFeatureSectionProps> = ({
   content,
 }) => {
   return (
-    <div className="relative bg-[#5de0e6] py-12 px-6 sm:px-12 lg:px-16 rounded-lg shadow-xl mx-auto md:mt-32 mt-10">
+    <div className="relative bg-[#0891B2] py-12 px-6 sm:px-12 lg:px-16 rounded-lg shadow-xl mx-auto md:mt-32 mt-10">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16">
         
         {/* 📝 Text Content */}

@@ -49,12 +49,12 @@ const steps = [
 const WorkProcess = () => {
   return (
     <section className="mx-auto text-center md:mt-16 mt-9">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5de0e6] ">How we will work on your project</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#302f2f] ">How we will work on your project</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mt-9 mt-6">
           {steps.map((step) => (
             <div
               key={step.id}
-              className="md:p-6 p-2 shadow-lg rounded-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl bg-[#5de0e6] hover:bg-opacity-20"
+              className="md:p-6 p-2 shadow-lg rounded-xl transform transition duration-300  hover:shadow-2xl bg-cyan-600"
             >
               <div className="flex justify-center  mb-4">{step.icon}</div>
               <span className="text-white text-xl font-semibold">{step.id}</span>

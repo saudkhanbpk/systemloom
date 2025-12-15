@@ -73,7 +73,7 @@ const OurImpressiveProject = () => {
       {/* Heading */}
      <div className="text-center max-w-4xl mx-auto">
      <h2 style={{lineHeight:1.2}} className="text-3xl md:text-4xl lg:text-5xl font-bold">
-  Transforming <span className="text-[#5de0e6]">Industries</span> with Innovation & Excellence
+  Transforming <span className="text-[#0891b2]">Industries</span> with Innovation & Excellence
 </h2>
 <p className="text-gray-500 mt-4 text-base md:text-lg lg:text-xl">
   We proudly serve diverse industries by delivering innovative and high-quality solutions.  

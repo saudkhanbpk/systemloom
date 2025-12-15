@@ -42,7 +42,7 @@ const features = [
 const Benefits = () => {
   return (
     <section className="md:mt-16 mt-9 text-center">
-  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5de0e6]">
+  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#302f2f]">
     What makes us unique
   </h2>
 
@@ -50,7 +50,7 @@ const Benefits = () => {
     {features.map((feature, index) => (
       <div
         key={index}
-        className="flex flex-col items-center md:p-6 p-2 bg-[#5de0e6] rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:border-purple-600 hover:border-2"
+        className="flex flex-col items-center md:p-6 p-2 bg-[#0891B2] rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105  hover:border-2"
       >
         {feature.icon}
         <h2 className="md:text-xl text-lg font-semibold mt-2 text-white">

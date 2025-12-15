@@ -18,7 +18,7 @@ const RelatedServices: React.FC<RelatedServicesProps> = ({ services }) => {
   return (
     <div className="md:mt-20 mt-12 ">
       {/* Section Title */}
-      <h2 className="text-3xl md:text-5xl font-bold text-center text-[#5de0e6] mb-12">
+      <h2 className="text-3xl md:text-5xl font-bold text-center text-[#302f2f] mb-12">
        Related Services
       </h2>
 
@@ -40,7 +40,7 @@ const RelatedServices: React.FC<RelatedServicesProps> = ({ services }) => {
 
               {/* Service Content */}
               <div className="mt-10 sm:mt-14">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-[#5de0e6] transition-all duration-300">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-black transition-all duration-300">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -50,7 +50,7 @@ const RelatedServices: React.FC<RelatedServicesProps> = ({ services }) => {
 
               {/* Bottom Arrow Indicator */}
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="text-blue-500 text-lg">→</span>
+                <span className="text-[#0891B2] text-lg">→</span>
               </div>
             </div>
           </Link>

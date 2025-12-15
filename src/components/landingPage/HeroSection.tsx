@@ -32,7 +32,7 @@ const getSlides = async () => {
         AI innovation, Creative design, and strategic digital marketing. We bring ideas 
         to life with seamless technology and future-ready creativity.`,
       buttonText: `Start Your Project`,
-      buttonColor: "bg-cyan-600 hover:bg-[#5de0e6]",
+      buttonColor: "bg-cyan-600 ",
       imageSrc: "/assets/homepage/shapingfuture.webp"
     },
   ];

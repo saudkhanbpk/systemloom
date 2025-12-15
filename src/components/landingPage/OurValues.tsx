@@ -44,7 +44,7 @@ const OurValues: React.FC = () => {
   return (
     <section className="relative  text-white md:mt-16 mt-9">
 
-        <h2 className="text-3xl text-center md:text-4xl lg:text-5xl  font-bold md:mb-9 mb-6 tracking-wide text-[#5de0e6]">
+        <h2 className="text-3xl text-center md:text-4xl lg:text-5xl  font-bold md:mb-9 mb-6 tracking-wide text-[#302f2f]">
           Our Core Values
         </h2>
 
@@ -52,7 +52,7 @@ const OurValues: React.FC = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="relative md:p-6 p-2 bg-[#5de0e6] backdrop-blur-lg rounded-lg shadow-lg hover:bg-opacity-20 transition duration-300  hover:scale-105 hover:shadow-2xl"
+              className="relative md:p-6 p-2 bg-cyan-600 backdrop-blur-lg rounded-lg shadow-lg  transition duration-300  h "
             >
               <div className="flex flex-col items-center ">
                 <div className="text-5xl text-yellow-400  ">{value.icon}</div>

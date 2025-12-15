@@ -21,7 +21,7 @@ const DiversitySection: FC = () => {
     <div>
       <div className=" mt-9 md:mt-16 mb-9 md:mb-16">
         <div className="max-w-3xl mb-6">
-          <h2 className="font-semibold  font-inter mb-4 text-3xl md:text-5xl text-[#5de0e6]">
+          <h2 className="font-semibold  font-inter mb-4 text-3xl md:text-5xl text-[#0891b2]">
             We're from everywhere
           </h2>
           <p className="text-[#838696] font-normal font-inter text-[22px] leading-[35px]">
@@ -50,7 +50,7 @@ const DiversitySection: FC = () => {
           </div>
 
          
-         <div className="bg-[#5de0e6] rounded-2xl cursor-pointer p-8 flex flex-col items-center justify-center text-white col-span-1 sm:col-span-2 md:col-span-1">
+         <div className="bg-[#0891b2] rounded-2xl cursor-pointer p-8 flex flex-col items-center justify-center text-white col-span-1 sm:col-span-2 md:col-span-1">
          <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
             <Instagram className="w-12 h-12 mb-4 mx-auto" />
             <p className="text-lg font-medium text-center mb-2">Follow us on</p>

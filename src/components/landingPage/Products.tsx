@@ -32,13 +32,13 @@ const Products = () => {
     },
   ];
 
-  const handleClick = (index:any) => {
+  const handleClick = (index: any) => {
     setLoading(index);
   };
 
   return (
     <section className="md:mt-16 mt-9">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5de0e6] text-center mb-6 md:mb-9">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#302f2f] text-center mb-6 md:mb-9">
         Our Products
       </h2>
 
@@ -49,7 +49,10 @@ const Products = () => {
             className="bg-white border rounded-lg p-6 shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105 flex flex-col h-full"
           >
             <h3 className="text-2xl font-semibold text-gray-900">{product.name}</h3>
-            <p className="text-gray-600 mt-4 text-base flex-grow">{product.description}</p>
+            <p className="text-gray-600 mt-4 text-base flex-grow text-center">
+              {product.description}
+            </p>
+
             <Link href={product.href} onClick={() => handleClick(index)} className="mt-auto flex justify-center">
               {loading === index ? (
                 <p className="text-white font-bold py-3 px-8 rounded-full bg-purple-600 mt-4 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-[0_4px_16px_-4px_#3b71ca]">

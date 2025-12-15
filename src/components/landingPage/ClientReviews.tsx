@@ -4,9 +4,9 @@ import linkedinstar from "../../../public/assets/aboutpage/linkedin.svg";
 
 const ClientReviews = () => {
   return (
-    <section className="text-white bg-[#5de0e6] md:mt-16 mt-9 md:pt-16 pt-3 px-2 md:px-0 text-center">
+    <section className="text-white bg-[#0891B2] md:mt-16 mt-9 md:pt-16 pt-3 px-2 md:px-0 text-center">
     <h2 className="text-3xl md:text-4xl lg:text-[44px] font-semibold mb-4">
-      Our clients simply love <span className="text-black">what we do</span>
+      Our clients simply love <span className="text-white ">what we do</span>
     </h2>
     <p className="text-lg text-gray-100 mb-8">
       Proud to serve as the innovation partner for industry leaders who have experienced our expertise and excellence firsthand.

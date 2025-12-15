@@ -24,7 +24,7 @@ interface Profile {
   
   { name: "Muhammad Ammar", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/ammaar.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
   
-  { name: "Farooq", position: "Graphic designer & 3D visualizer", imageUrl: "/assets/aboutpage/farooq1.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "designer" },
+  { name: "Farooq", position: "Graphic designer & 3D visualizer", imageUrl: "/assets/aboutpage/farooq1.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "designer" },
   { name: "Umair Amjed", position: "Mern Stack Developer", imageUrl: "/assets/aboutpage/umair1.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "mern stack" },
   { name: "Luqman", position: "Angular Developer", imageUrl: "/assets/aboutpage/luqman.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "angular" },
   { name: "Ali Hassan", position: "Angular Developer", imageUrl: "/assets/aboutpage/ali hassan.jpg", linkedInUrl: "https://www.linkedin.com/company/techcreator", width: 300, height: 300, category: "angular" },
@@ -61,67 +61,62 @@ const ExpertTeam: React.FC = () => {
         : profile.category === selectedCategory
     ); */
 
+  const categories = [
+    { id: "All", label: "All" },
+    { id: "Leadership", label: "Leadership" },
+    { id: "mern stack", label: "Mern Stack Developer" },
+    { id: "app", label: "App Developer" },
+    { id: "CRM", label: "CRM" },
+    { id: "designer", label: "Graphic designer & Marketing" },
+    { id: "angular", label: "Angular Developer" },
+    { id: "SEO", label: "SEO" },
+  ];
+
+  // Split categories into two rows (4 items each)
+  const firstRow = categories.slice(0, 4);
+  const secondRow = categories.slice(4);
+
   return (
     <div className="md:mt-16 mt-9">
-      
-        <h2 className=" text-center font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-2 text-[#5de0e6]">Our Team</h2>
-     
+      <h2 className="text-center font-inter font-bold text-3xl md:text-4xl lg:text-5xl mb-8 text-[#302f2f]">
+        Our Team
+      </h2>
 
-      {/* Buttons to select category */}
-      <div className="flex justify-center flex-wrap text-nowrap gap-3 md:gap-4  py-4 mb-6">
-        <button
-          onClick={() => handleCategoryChange("All")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "All" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          All
-        </button>
-        <button
-          onClick={() => handleCategoryChange("Leadership")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "Leadership" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          Leadership
-        </button>
-        <button
-          onClick={() => handleCategoryChange("mern stack")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "mern stack" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          Mern Stack Developer
-        </button>
-        <button
-          onClick={() => handleCategoryChange("app")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "app" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          App Developer
-        </button>
-        <button
-          onClick={() => handleCategoryChange("CRM")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "CRM" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          CRM
-        </button>
-        <button
-          onClick={() => handleCategoryChange("designer")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "designer" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          Graphic designer & Marketing
-        </button>
-        <button
-          onClick={() => handleCategoryChange("angular")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "angular" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          Angular Developer
-        </button>
-        <button
-          onClick={() => handleCategoryChange("SEO")}
-          className={`px-6 py-2 rounded-lg ${selectedCategory === "SEO" ? "bg-cyan-600 text-white" : "bg-gray-200 text-gray-800"}`}
-        >
-          SEO
-        </button>
-     
-        
-       
-      
-       
+      {/* Category cards in two rows with borders */}
+      <div className="max-w-6xl mx-auto px-4 mb-8">
+        {/* First Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+          {firstRow.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => handleCategoryChange(category.id)}
+              className={`p-4 rounded-lg border-2 transition-all duration-300 font-medium text-center ${
+                selectedCategory === category.id
+                  ? "bg-cyan-600 text-white border-cyan-600 shadow-lg"
+                  : "bg-white text-gray-800 border-gray-300 hover:border-cyan-400 hover:shadow-md"
+              }`}
+            >
+              {category.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Second Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {secondRow.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => handleCategoryChange(category.id)}
+              className={`p-4 rounded-lg border-2 transition-all duration-300 font-medium text-center ${
+                selectedCategory === category.id
+                  ? "bg-cyan-600 text-white border-cyan-600 shadow-lg"
+                  : "bg-white text-gray-800 border-gray-300 hover:border-cyan-400 hover:shadow-md"
+              }`}
+            >
+              {category.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-3 md:gap-12  md:mb-16 mb-9">

@@ -28,7 +28,7 @@ const About = () => {
           <ServicesSection />
         </div>
         <ProjectsCount />
-        <OverviewSec />
+        {/* <OverviewSec /> */}
         <ExpertTeam />
       </div>
     </>

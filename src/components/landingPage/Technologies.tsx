@@ -182,8 +182,8 @@ export default function TechnologiesSection() {
               className={cn(
                 "px-6 py-3 rounded-full font-medium text-lg transition-all duration-300 text-nowrap",
                 activeCategory === category.id
-                  ? "bg-white text-purple-600 shadow-lg transform scale-105"
-                  : "bg-cyan-600 text-white hover:bg-white hover:text-purple-600 shadow-md"
+                  ? "bg-white text-black shadow-lg transform scale-105"
+                  : "bg-cyan-600 text-white hover:bg-white hover:text-black shadow-md"
               )}
             >
               {category.name}
