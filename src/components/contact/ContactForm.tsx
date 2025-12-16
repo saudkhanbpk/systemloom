@@ -111,14 +111,14 @@ const ContactForm: React.FC = () => {
           <div className=" bg-green-600 rounded-full p-1.5">
             <FaWhatsapp size={28} className="text-white" />
           </div>
-          <span className="hover:underline ">+44 0788 6554875</span>
+          <span className="hover:underline ">+44 07886554875</span>
         </Link>
 
         <Link href="tel:+13213646803" className="flex items-center gap-3 ">
           <div className=" bg-cyan-600 rounded-full p-2">
             <PhoneCall className="text-white" />
           </div>
-          <span className="hover:underline">+44 0788 6554875</span>
+          <span className="hover:underline">+44 07886554875</span>
         </Link>
       </div>
 
