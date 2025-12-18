@@ -34,7 +34,7 @@ const CommonButton: React.FC<CommonButtonProps> = ({
 
 const AppointmentSection: React.FC = () => {
   const handleButtonClick = () => {
-    window.open("https://calendly.com/contact-techcreator/30min", "_blank");
+    window.open("https://calendly.com/systemloom/30min", "_blank");
   };
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const AppointmentSection: React.FC = () => {
     script.onload = () => {
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
-          url: "https://calendly.com/contact-techcreator/30min",
+          url: "https://calendly.com/systemloom/30min",
           text: "Schedule Free Strategy Call",
           color: "#0891b2",
           textColor: "#ffffff",

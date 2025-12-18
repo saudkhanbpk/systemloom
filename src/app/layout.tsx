@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Favicon */}
-        <link rel="icon" href="/assets/icons/Logo.png" type="image/png" />
+        <link rel="icon" href="/assets/icons/logo.png" type="image/png" />
 
         {/* Metadata */}
         <meta

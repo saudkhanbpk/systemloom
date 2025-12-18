@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 
-export const backend_url = process.env.NEXT_PUBLIC_BACKEND_URL;
+export const backend_url = "https://techcreator-backend.onrender.com";
 const persistor = persistStore(store);
 
 interface LayoutProps {
